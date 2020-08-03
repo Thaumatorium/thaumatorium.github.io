@@ -2,4 +2,5 @@
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
+	"html.format.wrapLineLength": 0,
 }
