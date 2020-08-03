@@ -1,9 +1,6 @@
 body>footer {
 	display: flex;
-	flex-direction: column;
-}
-
-body>footer {
+	flex-wrap: wrap;
 	border-top: 10px solid #9a2121;
 	padding: 30px;
 	box-shadow: -1px -2px 2px gray;
@@ -37,8 +34,14 @@ body>footer>nav span {
 	cursor: default;
 }
 
-@media (min-width: 720px) {
-	body>footer {
-		flex-direction: row;
-	}
+body>footer.copyright {
+	flex: 1 1;
+}
+
+body>footer>nav {
+	flex: 1 1;
+}
+
+body>footer.secret {
+	flex: 1 1;
 }
