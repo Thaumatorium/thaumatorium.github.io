@@ -2,7 +2,7 @@
 <html lang="en-GB">
 
 <head>
-	<title>Haskell&apos;s fold functions explained</title>
+	<title>Haskell's fold functions explained</title>
 	<meta name=description content="Have you ever wondered what the difference between foldl and foldr was? Why you get the answers you're getting?" />
 	<meta charset=utf-8 />
 	<meta name=theme-color content=#800 />
@@ -65,7 +65,7 @@
 			<hgroup>
 				<h2 id=haskells-fold-functions-explained>
 					<a href="#haskells-fold-functions-explained" class="self-link"></a>
-	Haskell&apos;s fold functions explained
+	Haskell's fold functions explained
 </h2>
 				<div class=article-meta>
 					<div class=article-published>Published:<br><time datetime=2019-05-01>2019-05-01</time></div>
@@ -75,10 +75,10 @@
 			<p>Protip: Use https://repl.it/ to run your own little test programs, yes they support other languages than
 				Haskell
 				too.</p>
-			<p>Haskell&apos;s fold functions are Higher Order and Recursive functions (if you&apos;ve read <a
+			<p>Haskell's fold functions are Higher Order and Recursive functions (if you've read <a
 					href=https://thaumatorium.wordpress.com/2018/10/15/types-or-classes-of-haskell-functions />Types (or classes)
 				of
-				Haskell functions</a>, you&apos;ll know what that is) where it takes a function, a first/final item (more on this
+				Haskell functions</a>, you'll know what that is) where it takes a function, a first/final item (more on this
 				later),
 				a list of things and returns a single reduces item.</p>
 			<h2 id=foldr>
@@ -99,13 +99,13 @@ foldr f z (x:xs) = f x (foldr f z xs)
 			<p>Now lets run foldr:</p>
 			<p><code>foldr (+) 0 [1,2,3,4]</code></p>
 			<p>As you notice the + operator is placed in parentheses. This is to prevent the direct application of +. When
-				you&apos;re
-				actually run command above without the parentheses you&apos;ll see you&apos;ll get an error. (try it on the pre-mentioned
+				you're
+				actually run command above without the parentheses you'll see you'll get an error. (try it on the pre-mentioned
 				https://repl.it/ website!)</p>
-			<p>The answer is 10, as 1 + 2 + 3 + 4 = 10, but what&apos;s that 0 doing there? That is the identity value for +. I
-				haven&apos;t
-				written an article about the identity value for operators (or functions), but here&apos;s what you need to know: The
-				identity value of a function means that if you put any other value in, you&apos;ll get that value back out: x + 0 =
+			<p>The answer is 10, as 1 + 2 + 3 + 4 = 10, but what's that 0 doing there? That is the identity value for +. I
+				haven't
+				written an article about the identity value for operators (or functions), but here's what you need to know: The
+				identity value of a function means that if you put any other value in, you'll get that value back out: x + 0 =
 				x.
 			</p>
 			<p>Other operators may have different values:<br>
@@ -119,8 +119,8 @@ foldr f z (x:xs) = f x (foldr f z xs)
 				parentheses (more on that below the executed code) are on the right and the identity value will be the last
 				value
 				inserted.</p>
-			<p>If I run the code by hand (if you&apos;ve ever followed a Logic course, you&apos;ll recognize this as
-				<strong>induction</strong>) we&apos;ll get the following execution:</p>
+			<p>If I run the code by hand (if you've ever followed a Logic course, you'll recognize this as
+				<strong>induction</strong>) we'll get the following execution:</p>
 			<pre>
 foldr (+) 0 [1,2,3,4]
 = { apply foldr, since the input is not an empty list we apply the general case }
@@ -148,14 +148,14 @@ foldr (+) 0 [1,2,3,4]
 			<p><code>(+) 1 ((+) 2 ((+) 3 ((+) 4 0)))</code></p>
 			<p>to</p>
 			<p><code>1 + (2 + (3 + (4 + 0)))</code></p>
-			<p>which is more readable (IMO). Now, for this instance, the order of execution doesn&apos;t matter at all, but there
+			<p>which is more readable (IMO). Now, for this instance, the order of execution doesn't matter at all, but there
 				are
 				certain operators (like subtraction and division) where the order does matter! 1/2 = .5, whereas 2/1 = 2</p>
 			<p>Lets say we execute the next line, what will the answer be?</p>
 			<p><code>foldr (-) 0 [1,2,3,4]</code></p>
 			<p>Lets simplify the executed code above to that cleaned up line right below it:</p>
 			<p><code>1 - (2 - (3 - (4 - 0)))</code></p>
-			<p>As I&apos;ve mentioned before: all grouped parentheses are grouped on the right (because fold right) and the
+			<p>As I've mentioned before: all grouped parentheses are grouped on the right (because fold right) and the
 				identity
 				value is also on the right.</p>
 			<p>When we run this code we get:</p>
@@ -204,15 +204,15 @@ foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
 = { apply the last - }
 (-10)
 </pre>
-			<p>Now, after you&apos;ve applied all foldls, we, again, can clean up that code:</p>
+			<p>Now, after you've applied all foldls, we, again, can clean up that code:</p>
 			<p><code>(-) ((-) ((-) ((-) 0 1) 2) 3) 4</code></p>
 			<p><code>(((0 - 1) - 2) - 3) - 4</code></p>
-			<p>There, much more readable! As you&apos;ll notice, the grouped parentheses are now all left (from the name fold
+			<p>There, much more readable! As you'll notice, the grouped parentheses are now all left (from the name fold
 				left),
 				ditto for the identity value.</p>
-			<p>Sometimes you have to rewrite code to make it make sense in Haskell. It&apos;s a sad fact of life. Anyway, if we
+			<p>Sometimes you have to rewrite code to make it make sense in Haskell. It's a sad fact of life. Anyway, if we
 				reduce
-				this cleaned up code we&apos;ll get:</p>
+				this cleaned up code we'll get:</p>
 			<pre>
 (((0 - 1) - 2) - 3) - 4
 = { apply most inner - }
@@ -224,12 +224,12 @@ foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
 = { apply most inner - }
 (-10)
 </pre>
-			<p>I think you&apos;ve started seeing a pattern with Foldl/Foldr right about now: all parentheses are with the identity
-				value either all left or all right – that&apos;s how I&apos;ve been able to easily write out most code by hand (I had to
+			<p>I think you've started seeing a pattern with Foldl/Foldr right about now: all parentheses are with the identity
+				value either all left or all right – that's how I've been able to easily write out most code by hand (I had to
 				use
 				VSCode with the Bracket Pair Colorizer 2 addon with the <code>foldl (-) 0 [1,2,3,4]</code> code to check my
 				parentheses :p )</p>
-			<p>If you&apos;ve got any questions (especially when you don&apos;t understand a part), let me know down below!</p>
+			<p>If you've got any questions (especially when you don't understand a part), let me know down below!</p>
 
 			<h2 id=alternative-explanation>
 				<a href="#alternative-explanation" class="self-link"></a>
