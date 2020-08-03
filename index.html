@@ -3,20 +3,16 @@
 <html lang="en-GB">
 
 <head prefix="og: http://ogp.me/ns#">
-	<!--a
-This file is UTF-8 with BOM (Byte Order Mark) - If you're using a decent editor, you can also see this in the status bar (at the bottom of the window) - 
-This means that the meta tag with charset=utf8 isn't needed.
-You could also set Content-Type in the packet header (that's something you should set in your server software)
-You can use http://validator.w3.org/i18n-checker/ to see if your header encoding to UTF-8
-For more information: https://www.w3.org/International/questions/qa-html-encoding-declarations#nonutf8
--->
+	<!-- meta charset tag comes first, so the browser knows what charset the title and description are -->
+	<!-- You can use http://validator.w3.org/i18n-checker/ to see if your header encoding to UTF-8 -->
+	<!-- For more information: https://www.w3.org/International/questions/qa-html-encoding-declarations#nonutf8 -->
+	<meta charset=utf-8 />
 	<!-- The title of the tab -->
 	<title>The Thaumatorium: NostraDavid's handcrafted articles and projects</title>
 	<!-- This description should show up in Google results -->
 	<meta name=description
 		content="This is a handcrafted blog where you can find articles and projects created by NostraDavid." />
-	<!-- I used to use UTF-8 with BOM, but not EVERY file had a BOM, so I decided to switch back to using <meta charset=utf-8 /> -->
-	<meta charset=utf-8 />
+
 	<!-- <base href="https://thaumatorium.com/" /> -->
 	<!-- Needed for Hyvor, and helps search engines reduce duplicate content "/" vs "/index.html", for example -->
 	<link rel="canonical" href="https://thaumatorium.com/">
@@ -137,12 +133,15 @@ For more information: https://www.w3.org/International/questions/qa-html-encodin
 					Top articles
 				</h2>
 				<ul>
-					<li><a href=/articles/im-sick-of-all-the-negative-content-on-reddit.html>Here is how I fixed the broken system that is Reddit</a></li>
+					<li><a href=/articles/im-sick-of-all-the-negative-content-on-reddit.html>Here is how I fixed the broken system
+							that is Reddit</a></li>
 					<li><a href=/articles/haskells-fold-functions-explained.html>Haskell's fold functions explained</a></li>
-					<li><a href=/articles/spark-files-and-taking-notes.html>Spark files and keeping track of your ideas, concepts & thoughts</a></li>
-					<li><a href=/articles/types-of-haskell-functions.html>The different types of Functional Programming functions</a></li>
+					<li><a href=/articles/spark-files-and-taking-notes.html>Spark files and keeping track of your ideas, concepts
+							& thoughts</a></li>
+					<li><a href=/articles/types-of-haskell-functions.html>The different types of Functional Programming
+							functions</a></li>
 					<li><a href=/articles/quick-n-dirty-big-o.html>Quick 'n Dirty Big O: A short introduction into Big O</a></li>
-					</ul>
+				</ul>
 			</section>
 			<section>
 				<h2 id=changelog>
