@@ -199,9 +199,11 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 			</table>
 		</details>
 
-		<!-- too lazy to format via CSS -->
-		<h2>Regex explanation</h2>
-		<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
+		<details>
+			<summary>
+				<h3>Regex explanation</h3>
+			</summary>
+			<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
 [ – ] = a range of choices; usually choices are [a-z], [A-Z], [0-9]
 [abc] = a list of choices; same as (a|b|c)
 ^ = not (this only counts if ^ exists between [ ] at the start)
@@ -210,16 +212,17 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 (?=…)	= Positive lookahead
 (?!…) =	Negative lookahead
 (?:…) =	Non-capturing group; doesn't get saves to $1-$9</code></pre>
-		<br>
-		<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want
-			all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
+			<br>
+			<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want
+				all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
+		</details>
 
 		<details>
 			<summary>
 				<h3>National 'warcry'</h3>
-				<p>Not really a 'warcry', but whenever anyone posts any of these terms other nationals will join in repeating it.</p>
-				<p>PS: Sometimes it's just an emote spam</p>
 			</summary>
+			<p>Not really a 'warcry', but whenever anyone posts any of these terms other nationals will join in repeating it.</p>
+			<p>PS: Sometimes it's just an emote spam</p>
 			<table>
 				<tbody>
 					<tr>
