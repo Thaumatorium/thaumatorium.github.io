@@ -74,12 +74,12 @@ addEventListener("install", event => {
 			"/projects/scripts/starfield.mjs",
 
 			// CSS
-			"/styles/footer.css?v=1",
-			"/styles/header.css?v=1",
-			"/styles/layout.css?v=1",
-			"/styles/main.css?v=1",
-			"/styles/nav.css?v=1",
-			"/styles/projects.css?v=1",
+			"/styles/footer.css",
+			"/styles/header.css",
+			"/styles/layout.css",
+			"/styles/main.css",
+			"/styles/nav.css",
+			"/styles/projects.css",
 		]);
 	})());
 });
