@@ -32,7 +32,6 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'UA-169207994-1');
 	</script>
 
@@ -42,103 +41,92 @@
 	</header>
 
 	<nav>
-		<a href="/">Frontpage</a>
-		<span> - </span>
-		<a href=/pages/articles.html>Articles</a>
-		<span> - </span>
-		<a href=/pages/projects.html>Projects</a>
-		<span> - </span>
-		<a href=/pages/experimentations.html>Experimentations</a>
-		<span> - </span>
-		<a href=/pages/code-of-conduct.html>Code of Conduct</a>
-		<span> - </span>
-		<a href=/pages/random-video.html>Random video</a>
-		<span> - </span>
-		<a href=/pages/hardware.html>Hardware</a>
-		<span> - </span>
-		<a href=/pages/knowledge-base.html>Knowledge Base</a>
-		<span> - </span>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/pages/articles.html>Articles</a><span> - </span>
+		<a href=/pages/projects.html>Projects</a><span> - </span>
+		<a href=/pages/experimentations.html>Experimentations</a><span> - </span>
+		<a href=/pages/code-of-conduct.html>Code of Conduct</a><span> - </span>
+		<a href=/pages/random-video.html>Random video</a><span> - </span>
+		<a href=/pages/hardware.html>Hardware</a><span> - </span>
+		<a href=/pages/knowledge-base.html>Knowledge Base</a><span> - </span>
 		<a href=/pages/about.html>About</a>
 	</nav>
 
 	<main>
-		<section>
-			<h2>NostraDavid's Knowledge Base - Javascript code snippets and regex</h2>
-			<p>For now (<time>2020-07-16</time>) it's just snippets of JS and regex that I use every now and then</p>
-			<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub
-					Gist</a> exists&hellip;</p>
-			<section>
-				<details>
-					<summary>
-						<h3>Javascript oneliners</h3>
-					</summary>
-					<table>
-						<tbody>
-							<tr>
-								<th> note
-								<th> code
-							<tr>
-								<td> Open all collapsed comments on a reddit comment page
-								<td>
-									<pre><code>document.querySelectorAll(".expand")
+		<h2>NostraDavid's Knowledge Base - Javascript code snippets and regex</h2>
+		<p>For now (<time>2020-07-16</time>) it's just snippets of JS and regex that I use every now and then</p>
+		<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub
+				Gist</a> exists…</p>
+		<details>
+			<summary>
+				<h3>Javascript oneliners</h3>
+			</summary>
+			<table>
+				<tbody>
+					<tr>
+						<th> note
+						<th> code
+					<tr>
+						<td> Open all collapsed comments on a reddit comment page
+						<td>
+							<pre><code>document.querySelectorAll(".expand")
 				.forEach(el => {
 					if (el.innerText == "[+]") {
 						el.click();
 					}
 				});</code></pre>
-							<tr>
-								<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes,
-									not codepoints
-								<td>
-									<code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code>
-							<tr>
-								<td>Remove all <code>.bighead</code> classed elements (no Array.from() needed, which is what I used
-									before, so I could use map() instead of a for loop)
-								<td>
-									<pre><code>document.querySelectorAll(".bighead")
+					<tr>
+						<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes,
+							not codepoints
+						<td><code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code>
+					<tr>
+						<td>Remove all <code>.bighead</code> classed elements (no Array.from() needed, which is what I used
+							before, so I could use map() instead of a for loop)
+						<td>
+							<pre><code>document.querySelectorAll(".bighead")
 				.forEach(el => {
 					el.parentElement
 						.removeChild(el)
 					});</code></pre>
-							<tr>
-								<td>Make console.log use colors
-								<td>
-									<pre>
+					<tr>
+						<td>Make console.log use colors
+						<td>
+							<pre>
 <code>const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
 console.log('%cService worker installing', CONSOLE_STYLE);</code>
 </pre>
-							<tr>
-								<td>This opens all <code>are you sure?</code> dialogs for comments, on a profile page of Reddit
-								<td>
-									<pre><code>let ys = Array.from(document.getElementsByClassName("score likes"))
+					<tr>
+						<td>This opens all <code>are you sure?</code> dialogs for comments, on a profile page of Reddit
+						<td>
+							<pre><code>let ys = Array.from(document.getElementsByClassName("score likes"))
 							.filter(e => parseInt(e.title) < 3)
 							.map(e => e.parentElement.parentElement.parentElement)
 							.map(el => el.querySelector(`[data-event-action*="delete"]`));
 // pick everything after the 77th comment
 ys = ys.slice(77, ys.length - 1);
 ys.map(e => e.click());</code></pre>
-							<tr>
-								<td>Removing duplicates
-								<td>
-									<pre><code>const cities = ["Den Haag","Den Haag",
+					<tr>
+						<td>Removing duplicates
+						<td>
+							<pre><code>const cities = ["Den Haag","Den Haag",
 								"Utrecht", "Utrecht",
 								"Arnhem", "Arnhem",
 								"MiddelBurg", "MiddelBurg",
 								"MiddelBurg"];
 const uniqueCities = [...new Set(cities)];
 // ["Den Haag", "Utrecht", "Arnhem", "MiddelBurg"]</code></pre>
-							<tr>
-								<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests
-									per minute)
-								<td>
-									<pre><code>let xs = document.querySelectorAll("[query goes here]");
+					<tr>
+						<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests
+							per minute)
+						<td>
+							<pre><code>let xs = document.querySelectorAll("[query goes here]");
 let i = 0;
 let id = setInterval(() => {console.log(i); xs[i].click(); i++;}, 1100);
 clearInterval(id);</code></pre>
-							<tr>
-								<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)
-								<td>
-									<pre><code>Array.from(document.getElementsByClassName("subreddit hover"))
+					<tr>
+						<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)
+						<td>
+							<pre><code>Array.from(document.getElementsByClassName("subreddit hover"))
 									 .filter(el => el.innerHTML == "TheLastOfUs2")
 									 .map(el => el.parentElement.parentElement)
 									 .map(el => {
@@ -146,10 +134,10 @@ clearInterval(id);</code></pre>
 										 el.querySelector(`[data-event-action*="delete"]`)
 									 })
 									 .map(el => el.click());</code></pre>
-							<tr>
-								<td>Use on Twitch to track the amount of currently used emotes
-								<td>
-									<pre><code>const groupBy = (xs, key) => xs.reduce((acc, x) => {
+					<tr>
+						<td>Use on Twitch to track the amount of currently used emotes
+						<td>
+							<pre><code>const groupBy = (xs, key) => xs.reduce((acc, x) => {
 	(acc[x[key]] = acc[x[key]] || []).push(x);
 	return acc;
 }, {});
@@ -169,54 +157,51 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 							 .slice(0,6)
 							 .sort((a, b) => a.length - b.length)
 							 .reduce((acc, el) => `${el.length}x ${el.key} ` + acc);</code></pre>
-						</tbody>
-					</table>
-				</details>
-			</section>
+				</tbody>
+			</table>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Regular Expressions</h3>
-					</summary>
-					<table>
-						<tbody>
-							<tr>
-								<th> note
-								<th> regex
-							<tr>
-								<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br>
-									Edit the number in between {} to find the nth comma.
-								<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code>
-							<tr>
-								<td>Every line that doesn't start with a <code>.</code> via regex;<br>
-									I was trying to filter bootstrap.css from all non-classes
-								<td><code>^((?!^\.).)*$</code>
-							<tr>
-								<td>Filter everything from a : till the end of the line
-								<td><code>[:].*$</code>
-							<tr>
-								<td>Find non-ASCII letters in vscode;<br>
-									Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your
-									comments...
-								<td>([^\x00-\x7F])
-							<tr>
-								<td>hit him up when you pay for WoW</td>
-								<td>Craizler-TarrenMill</td>
-							<tr>
-								<td>WoW BattleTag</td>
-								<td>Cyrstad#2776</td>
-							<tr>
-								<td>Find main content of HTML page
-								<td>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;
-						</tbody>
-					</table>
-				</details>
+		<details>
+			<summary>
+				<h3>Regular Expressions</h3>
+			</summary>
+			<table>
+				<tbody>
+					<tr>
+						<th> note
+						<th> regex
+					<tr>
+						<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br>
+							Edit the number in between {} to find the nth comma.
+						<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code>
+					<tr>
+						<td>Every line that doesn't start with a <code>.</code> via regex;<br>
+							I was trying to filter bootstrap.css from all non-classes
+						<td><code>^((?!^\.).)*$</code>
+					<tr>
+						<td>Filter everything from a : till the end of the line
+						<td><code>[:].*$</code>
+					<tr>
+						<td>Find non-ASCII letters in vscode;<br>
+							Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your
+							comments...
+						<td>([^\x00-\x7F])
+					<tr>
+						<td>hit him up when you pay for WoW</td>
+						<td>Craizler-TarrenMill</td>
+					<tr>
+						<td>WoW BattleTag</td>
+						<td>Cyrstad#2776</td>
+					<tr>
+						<td>Find main content of HTML page
+						<td>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;
+				</tbody>
+			</table>
+		</details>
 
-				<section>
-					<!-- too lazy to format via CSS -->
-					<h2>Regex explanation</h2>
-					<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
+		<!-- too lazy to format via CSS -->
+		<h2>Regex explanation</h2>
+		<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
 [ – ] = a range of choices; usually choices are [a-z], [A-Z], [0-9]
 [abc] = a list of choices; same as (a|b|c)
 ^ = not (this only counts if ^ exists between [ ] at the start)
@@ -225,75 +210,63 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 (?=…)	= Positive lookahead
 (?!…) =	Negative lookahead
 (?:…) =	Non-capturing group; doesn't get saves to $1-$9</code></pre>
-					<br>
-					<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want
-						all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
-				</section>
-			</section>
+		<br>
+		<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want
+			all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
 
-			<section>
-				<details>
-					<summary>
-						<h3>National 'warcry'</h3>
-						<p>Not really a 'warcry', but whenever anyone posts any of these terms other nationals will join in repeating it.</p>
-						<p>PS: Sometimes it's just an emote spam</p>
-					</summary>
-					<table>
-						<tbody>
-							<tr>
-								<th> Country
-								<th> Warcry
-							<tr>
-								<td>Dutch
-								<td>G E K O L O N I S E E R D
-							<tr>
-								<td>German
-								<td>Sprich Deutsch, du Hurensohn!
-							<tr>
-								<td>Swedish
-								<td>Skååååål
-							<tr>
-								<td>Danish
-								<td>Skååååål
-							<tr>
-								<td>Finnish
-								<td>Torille!
-							<tr>
-								<td>Bulgarian
-								<td><a href="https://cdn.betterttv.net/emote/56be9fd6d9ec6bf74424760d/3x">KKomrade</a>
-							<tr>
-								<td>Germany
-								<td><a href="https://static-cdn.jtvnw.net/emoticons/v1/111700/3.0">DatScheffe</a>
-						</tbody>
-					</table>
-				</details>
-			</section>
-		</section>
+		<details>
+			<summary>
+				<h3>National 'warcry'</h3>
+				<p>Not really a 'warcry', but whenever anyone posts any of these terms other nationals will join in repeating it.</p>
+				<p>PS: Sometimes it's just an emote spam</p>
+			</summary>
+			<table>
+				<tbody>
+					<tr>
+						<th> Country
+						<th> Warcry
+					<tr>
+						<td>Dutch
+						<td>G E K O L O N I S E E R D
+					<tr>
+						<td>German
+						<td>Sprich Deutsch, du Hurensohn!
+					<tr>
+						<td>Swedish
+						<td>Skååååål
+					<tr>
+						<td>Danish
+						<td>Skååååål
+					<tr>
+						<td>Finnish
+						<td>Torille!
+					<tr>
+						<td>Bulgarian
+						<td><a href="https://cdn.betterttv.net/emote/56be9fd6d9ec6bf74424760d/3x">KKomrade</a>
+					<tr>
+						<td>Germany
+						<td><a href="https://static-cdn.jtvnw.net/emoticons/v1/111700/3.0">DatScheffe</a>
+				</tbody>
+			</table>
+		</details>
 	</main>
 
 	<footer>
 		<div class=copyright>
-			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			&ndash; <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
-			<abbr
-				title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
-				style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 			<p><sub>Last updated: <time id=updated>2020-07-03</time></sub></p>
 		</div>
 		<nav>
-			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a>
-			<span> - </span>
-			<a href="https://twitter.com/DavidNostra">Twitter profile</a>
-			<span> - </span>
-			<a href="https://github.com/NostraDavid">GitHub (personal)</a>
-			<span> - </span>
-			<a href="https://github.com/Thaumatorium">GitHub (professional)</a>
-			<span> - </span>
+			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a><span> - </span>
+			<a href="https://twitter.com/DavidNostra">Twitter profile</a><span> - </span>
+			<a href="https://github.com/NostraDavid">GitHub (personal)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium">GitHub (professional)</a><span> - </span>
 			<a href="https://www.facebook.com/david.nostra.121">Facebook profile</a>
 		</nav>
 		<!-- Sssh - don't tell anyone! -->
-		<a class=secret onclick=specialGoto(event)
-			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
+		<a class=secret onclick=specialGoto(event) style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">π</a>
 		<div class=cookie-notification>
 			<p>This site uses cookies from Google to deliver its services and to analyze traffic.</p>
 			<button>OK</button>

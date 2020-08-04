@@ -65,7 +65,7 @@ This means the RHS is a **direct** child of LHS
 ### LHS RHS
 
 Descendant combinator
-RHS is some descendant of LHS (could be very shallow *or* very deep into the DOM &ndash; it doesn't matter)
+RHS is some descendant of LHS (could be very shallow *or* very deep into the DOM – it doesn't matter)
 
 ``` HTML
 <LHS>

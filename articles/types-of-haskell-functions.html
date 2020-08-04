@@ -32,154 +32,127 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'UA-169207994-1');
 	</script>
+
 	<header>
 		<h1 class=title>The Thaumatorium:</h1>
 		<div class=subtitle>Where the magic happens</div>
 	</header>
 
 	<nav>
-		<a href="/">Frontpage</a>
-		<span> - </span>
-		<a href=/pages/articles.html>Articles</a>
-		<span> - </span>
-		<a href=/pages/projects.html>Projects</a>
-		<span> - </span>
-		<a href=/pages/experimentations.html>Experimentations</a>
-		<span> - </span>
-		<a href=/pages/code-of-conduct.html>Code of Conduct</a>
-		<span> - </span>
-		<a href=/pages/random-video.html>Random video</a>
-		<span> - </span>
-		<a href=/pages/hardware.html>Hardware</a>
-		<span> - </span>
-		<a href=/pages/knowledge-base.html>Knowledge Base</a>
-		<span> - </span>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/pages/articles.html>Articles</a><span> - </span>
+		<a href=/pages/projects.html>Projects</a><span> - </span>
+		<a href=/pages/experimentations.html>Experimentations</a><span> - </span>
+		<a href=/pages/code-of-conduct.html>Code of Conduct</a><span> - </span>
+		<a href=/pages/random-video.html>Random video</a><span> - </span>
+		<a href=/pages/hardware.html>Hardware</a><span> - </span>
+		<a href=/pages/knowledge-base.html>Knowledge Base</a><span> - </span>
 		<a href=/pages/about.html>About</a>
 	</nav>
 
 	<main>
-		<section>
-			<hgroup>
-				<h2>The different types of Functional Programming functions</h2>
-				<div class=article-meta>
-					<div class=article-published>Published:<br><time datetime=2018-10-15>2018-10-15</time></div>
-					<div class=article-author>Author:<br>NostraDavid</div>
-				</div>
-			</hgroup>
-			<p>
-				Slightly annoying that type and class already have a certain meaning in Haskell, but I think you're smart enough
-				to understand what I mean with the Title.
-			</p>
-			<p>
-				In this context, a parser is a function accepting strings as input and returning some structure as output,
-				typically a parse tree or a set of indices representing locations in the string where parsing stopped
-				successfully.
-			</p>
-			<table>
-				<thead>
-					<th>Type</th>
-					<th>What it does</th>
-					<th>Example code</th>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Pure</td>
-						<td>Takes an input, returns an output – no side effects (data changes)</td>
-						<td><code>f :: Int -> Int
-				f x = x</code></td>
-					</tr>
-					<tr>
-						<td>Predicate</td>
-						<td>Takes an input, returns a Bool </td>
-						<td><code>f :: Int -> Bool
-					f x = x > 5</code></td>
-					</tr>
-					<tr>
-						<td>Recursive</td>
-						<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input </td>
-						<td><code>length :: [a] -> Int length (x:xs) = 1 + length xs</code></td>
-					</tr>
-					<tr>
-						<td>Curried</td>
-						<td>You can give a function a part of the input to create a new function (
-							imperative languages like C or Python always want all arguments at once)</td>
-						<td><code>timesTwo :: Int -> Int timesTwo = 2 *</code>
-							As you can see, the <code>*</code> operator only has one input – It's been partially applied!
-							When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets
-							added at the end of the function:
-							<code>timesTwo 3
-						= { apply timesTwo }
-						2 * 3
-						= { apply * }
-						6</code>
-						</td>
-					</tr>
-					<tr>
-						<td>Applicative</td>
-						<td>Can take a variable amount of inputs, returns an output </td>
-						<td>Uses a function (<code>pure</code>) and an operator (<code>&lt;*&gt;</code>), where 'pure' lifts the
-							function into a wrapped type/function and '<*>' accepts a wrapped type/function and a variable (that's
-								also
-								wrapped)
-						</td>
-					</tr>
-					<tr>
-						<td>Monadic</td>
-						<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>=
-							operator or
-							do notation</td>
-						<td>From: <a
-								href=https://wiki.haskell.org/All_About_Monads>https://wiki.haskell.org/All_About_Monads</a><code>
-					maternalGrandfather :: Sheep -> Maybe Sheep
-					maternalGrandfather s = (return s) >>= mother >>= father
-					-- alternatively
-					mothersPaternalGrandfather :: Sheep -> Maybe Sheep
-					mothersPaternalGrandfather s = do m <- mother s
-					gf <- father m
-					father gf
-					</code></td>
-					</tr>
-					<tr>
-						<td>Parser Combinator</td>
-						<td>Accepts several parsers as input and returns a new parser as its output. </td>
-						<td>From: <a
-								href=https://en.wikipedia.org/wiki/Parser_combinator>https://en.wikipedia.org/wiki/Parser_combinator</a>
-							In this context, a parser is a function accepting strings as input and returning some structure as output,
-							typically a parse tree or a set of indices representing locations in the string where parsing stopped
-							successfully.
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</section>
+		<hgroup>
+			<h2>The different types of Functional Programming functions</h2>
+			<div class=article-meta>
+				<div class=article-published>Published:<br><time datetime=2018-10-15>2018-10-15</time></div>
+				<div class=article-author>Author:<br>NostraDavid</div>
+			</div>
+		</hgroup>
+		<p>Slightly annoying that 'type' already have a certain meaning in Haskell, but I think you're smart enough to understand what I mean with the title.</p>
+		<p>In this context, a parser is a function accepting strings as input and returning some data structure as output, typically it's a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</p>
+		<table>
+			<thead>
+				<th>Type</th>
+				<th>What it does</th>
+				<th>Example code</th>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Pure</td>
+					<td>Takes an input, returns an output – no side effects (data changes)</td>
+					<td>
+						<pre><code>f :: Int -> Int
+f x = x</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Predicate</td>
+					<td>Takes an input, returns a Bool </td>
+					<td>
+						<pre><code>f :: Int -> Bool
+f x = x > 5</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Recursive</td>
+					<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input </td>
+					<td>
+						<pre><code>length :: [a] -> Int
+length (x:xs) = 1 + length xs</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Curried</td>
+					<td>You can give a function a part of the input to create a new function (imperative languages like C or Python always want all arguments at once)</td>
+					<td>
+						<pre><code>timesTwo :: Int -> Int
+timesTwo = 2 *</code></pre>
+						As you can see, the <code>*</code> operator only has one input – It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:
+						<pre><code>timesTwo 3
+= { apply timesTwo }
+2 * 3
+= { apply * }
+6</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Applicative</td>
+					<td>Can take a variable amount of inputs, returns an output </td>
+					<td>Uses a function (<code>pure</code>) and an operator (<code>&lt;*&gt;</code>), where 'pure' lifts the function into a wrapped type/function and '&lt;*&gt;' accepts a wrapped type/function and a variable (that's also wrapped)</td>
+				</tr>
+				<tr>
+					<td>Monadic</td>
+					<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>=
+						operator or
+						do notation</td>
+					<td>From: <a href=https://wiki.haskell.org/All_About_Monads>https://wiki.haskell.org/All_About_Monads</a>
+						<pre><code>maternalGrandfather :: Sheep -&gt; Maybe Sheep
+maternalGrandfather s = (return s) &gt;&gt;= mother &gt;&gt;= father
+-- alternatively
+mothersPaternalGrandfather :: Sheep -&gt; Maybe Sheep
+mothersPaternalGrandfather s = do m &lt;- mother s
+																	gf &lt;- father m
+																	father gf
+</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Parser Combinator</td>
+					<td>Accepts several parsers as input and returns a new parser as its output. </td>
+					<td>From: <a href=https://en.wikipedia.org/wiki/Parser_combinator>https://en.wikipedia.org/wiki/Parser_combinator</a> In this context, a parser is a function accepting strings as input and returning some structure as output, typically a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</td>
+				</tr>
+			</tbody>
+		</table>
 	</main>
 
 	<footer>
 		<div class=copyright>
-			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			&ndash; <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
-			<abbr
-				title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
-				style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 			<p><sub>Last updated: <time id=updated>2020-07-03</time></sub></p>
 		</div>
 		<nav>
-			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a>
-			<span> - </span>
-			<a href="https://twitter.com/DavidNostra">Twitter profile</a>
-			<span> - </span>
-			<a href="https://github.com/NostraDavid">GitHub (personal)</a>
-			<span> - </span>
-			<a href="https://github.com/Thaumatorium">GitHub (professional)</a>
-			<span> - </span>
+			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a><span> - </span>
+			<a href="https://twitter.com/DavidNostra">Twitter profile</a><span> - </span>
+			<a href="https://github.com/NostraDavid">GitHub (personal)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium">GitHub (professional)</a><span> - </span>
 			<a href="https://www.facebook.com/david.nostra.121">Facebook profile</a>
 		</nav>
 		<!-- Sssh - don't tell anyone! -->
-		<a class=secret onclick=specialGoto(event)
-			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
+		<a class=secret onclick=specialGoto(event) style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">π</a>
 		<div class=cookie-notification>
 			<p>This site uses cookies from Google to deliver its services and to analyze traffic.</p>
 			<button>OK</button>

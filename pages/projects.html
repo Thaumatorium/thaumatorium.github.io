@@ -32,7 +32,6 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'UA-169207994-1');
 	</script>
 
@@ -42,158 +41,122 @@
 	</header>
 
 	<nav>
-		<a href="/">Frontpage</a>
-		<span> - </span>
-		<a href=/pages/articles.html>Articles</a>
-		<span> - </span>
-		<a href=/pages/projects.html>Projects</a>
-		<span> - </span>
-		<a href=/pages/experimentations.html>Experimentations</a>
-		<span> - </span>
-		<a href=/pages/code-of-conduct.html>Code of Conduct</a>
-		<span> - </span>
-		<a href=/pages/random-video.html>Random video</a>
-		<span> - </span>
-		<a href=/pages/hardware.html>Hardware</a>
-		<span> - </span>
-		<a href=/pages/knowledge-base.html>Knowledge Base</a>
-		<span> - </span>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/pages/articles.html>Articles</a><span> - </span>
+		<a href=/pages/projects.html>Projects</a><span> - </span>
+		<a href=/pages/experimentations.html>Experimentations</a><span> - </span>
+		<a href=/pages/code-of-conduct.html>Code of Conduct</a><span> - </span>
+		<a href=/pages/random-video.html>Random video</a><span> - </span>
+		<a href=/pages/hardware.html>Hardware</a><span> - </span>
+		<a href=/pages/knowledge-base.html>Knowledge Base</a><span> - </span>
 		<a href=/pages/about.html>About</a>
 	</nav>
 
 	<main>
-		<section>
-			<h2>My programming projects</h2>
-			<link async rel=stylesheet href="/styles/projects.css?v=1" />
-			<section>
-				<details>
-					<summary>
-						<h3>Thaumatorium.com</h3>
-					</summary>
-					<p>This site!</p>
-					<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I
-						figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you can
-						see the first version uses <code>elm.js</code>, but I found it to be too opinionated. Not to mention I found
-						the <code>information/javascript</code> ratio to be too low.</p>
-					<p>Eventually, after reading up on <a href=https://eloquentjavascript.net />JS</a>, <a
-							href=https://html.spec.whatwg.org/dev />HTML</a> and <a href=https://www.w3.org/TR/css-2018 />CSS</a>, I
-						decided to just write everything in pure web tech. And why not? I don't need a several kilobytes of
-						javascript, just to show some articles!?</p>
-					<p>And thus this site was born! I'm as of <time datetime=2020-05-09>2020-05-09</time> still busy writing and
-						re-writing the site because I'm still building up experience, and I still have a small <a
-							href=/#todo>TODO</a> list and I'll have to finish, but it's fine.</p>
-					<p>If you want to see what this site used to look like, check out <a
-							href=https://web.archive.org/https://thaumatorium.com />archive.org</a>.</p>
-				</details>
-			</section>
+		<h2>My programming projects</h2>
+		<link async rel=stylesheet href="/styles/projects.css?v=1" />
+		<details>
+			<summary>
+				<h3>Thaumatorium.com</h3>
+			</summary>
+			<p>This site!</p>
+			<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I
+				figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you can
+				see the first version uses <code>elm.js</code>, but I found it to be too opinionated. Not to mention I found
+				the <code>information/javascript</code> ratio to be too low.</p>
+			<p>Eventually, after reading up on <a href=https://eloquentjavascript.net />JS</a>, <a href=https://html.spec.whatwg.org/dev />HTML</a> and <a href=https://www.w3.org/TR/css-2018 />CSS</a>, I
+				decided to just write everything in pure web tech. And why not? I don't need a several kilobytes of
+				javascript, just to show some articles!?</p>
+			<p>And thus this site was born! I'm as of <time datetime=2020-05-09>2020-05-09</time> still busy writing and
+				re-writing the site because I'm still building up experience, and I still have a small <a href=/#todo>TODO</a> list and I'll have to finish, but it's fine.</p>
+			<p>If you want to see what this site used to look like, check out <a href=https://web.archive.org/https://thaumatorium.com />archive.org</a>.</p>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Semantic&shy; Override&shy; Network&shy; (SON)</h3>
-					</summary>
-					<p>A news aggregator that will pierce the heavens!</p>
-					<p>For real though: I'm still busy forming ideas around this project</p>
-					<p>Every damn time I think "I got this", I usually lose it within a day or two, even after writing things
-						down.</p>
-				</details>
-			</section>
+		<details>
+			<summary>
+				<h3>Semantic&shy; Override&shy; Network&shy; (SON)</h3>
+			</summary>
+			<p>A news aggregator that will pierce the heavens!</p>
+			<p>For real though: I'm still busy forming ideas around this project</p>
+			<p>Every damn time I think "I got this", I usually lose it within a day or two, even after writing things
+				down.</p>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Starfield</h3>
-					</summary>
-					<p>It's the first type of project I've ever made! Well, other than "<code>hello world.c</code>"</p>
-					<p>The first one I ever made was in cmd.exe, with some janky-ass <code>c</code> moving <code>*</code> and
-						<code>.</code> characters as
-						different sized stars from the right to the left.</p>
-					<p>Over the years I created different versions (a 2D and even a 3D OpenGL variant!)</p>
-					<p>Now that I know some HTML/CSS/JS, I decided to recreate this project for the web with plain HTML/CSS/JS!
-						No crazy libraries needed!
-					</p>
-					<section>
-						<canvas id=starfield></canvas>
-						<script type=module src=/projects/scripts/starfield.mjs></script>
-					</section>
-				</details>
-			</section>
+		<details>
+			<summary>
+				<h3>Starfield</h3>
+			</summary>
+			<p>It's the first type of project I've ever made! Well, other than "<code>hello world.c</code>"</p>
+			<p>The first one I ever made was in cmd.exe, with some janky-ass <code>c</code> moving <code>*</code> and
+				<code>.</code> characters as
+				different sized stars from the right to the left.</p>
+			<p>Over the years I created different versions (a 2D and even a 3D OpenGL variant!)</p>
+			<p>Now that I know some HTML/CSS/JS, I decided to recreate this project for the web with plain HTML/CSS/JS!
+				No crazy libraries needed!
+			</p>
+			<canvas id=starfield></canvas>
+			<script type=module src=/projects/scripts/starfield.mjs></script>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Mocking Spongebob Text Generator (MSTG)</h3>
-					</summary>
-					<figure>
-						<img loading=lazy width=201 height=115 src=/images/mockbob.png
-							alt="A generated starfield - the stars are shown moving from right to left. They are represented by circles of different sizes, but not brightness and color (yet).">
-						<figcaption>Mocking Spongebob</figcaption>
-					</figure>
-					<h3>Mocking Spongebob Text Generator</h3>
-					<label>input:<textarea id=mstg_in></textarea></label>
-					<label>output - click to copy to clipboard:<textarea id=mstg_out readonly></textarea></label>
-					<script type=module src=/projects/scripts/mstg.mjs></script>
-				</details>
-			</section>
+		<details>
+			<summary>
+				<h3>Mocking Spongebob Text Generator (MSTG)</h3>
+			</summary>
+			<figure>
+				<img loading=lazy width=201 height=115 src=/images/mockbob.png alt="A generated starfield - the stars are shown moving from right to left. They are represented by circles of different sizes, but not brightness and color (yet).">
+				<figcaption>Mocking Spongebob</figcaption>
+			</figure>
+			<h3>Mocking Spongebob Text Generator</h3>
+			<label>input:<textarea id=mstg_in></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=mstg_out readonly></textarea></label>
+			<script type=module src=/projects/scripts/mstg.mjs></script>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>ROT13</h3>
-					</summary>
-					<p>I <em>could</em> go to <a href=https://ROT13.com>ROT13.com</a>, but why?</p>
-					<h3>ROT13</h3>
-					<label>input:<textarea id=rot13_in></textarea></label>
-					<label>output - click to copy to clipboard:<textarea id=rot13_out readonly></textarea></label>
-					<script type=module src=/projects/scripts/rot13.mjs></script>
-				</details>
-			</section>
+		<details>
+			<summary>
+				<h3>ROT13</h3>
+			</summary>
+			<p>I <em>could</em> go to <a href=https://ROT13.com>ROT13.com</a>, but why?</p>
+			<h3>ROT13</h3>
+			<label>input:<textarea id=rot13_in></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=rot13_out readonly></textarea></label>
+			<script type=module src=/projects/scripts/rot13.mjs></script>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Slugify</h3>
-					</summary>
-					<p>Turns regular text into a URL-friendly "slug"</p>
-					<blockquote cite=https://en.wikipedia.org/wiki/Clean_URL#Slug>
-						<p>Some systems define a slug as the part of a URL that identifies a page in human-readable
-							keywords.
-						</p>
-					</blockquote> &ndash; <a href=https://en.wikipedia.org/wiki/Clean_URL#Slug>wikipedia</a>
-					<section>
-						<h3>Slugify</h3>
-						<label>input:<textarea id=slugify_in></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=slugify_out readonly></textarea></label>
-						<script type=module src=/projects/scripts/slugify.mjs></script>
-					</section>
-				</details>
-			</section>
+		<details>
+			<summary>
+				<h3>Slugify</h3>
+			</summary>
+			<p>Turns regular text into a URL-friendly "slug"</p>
+			<blockquote cite=https://en.wikipedia.org/wiki/Clean_URL#Slug>
+				<p>Some systems define a slug as the part of a URL that identifies a page in human-readable
+					keywords.
+				</p>
+			</blockquote> – <a href=https://en.wikipedia.org/wiki/Clean_URL#Slug>wikipedia</a>
+			<h3>Slugify</h3>
+			<label>input:<textarea id=slugify_in></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=slugify_out readonly></textarea></label>
+			<script type=module src=/projects/scripts/slugify.mjs></script>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Base64</h3>
-					</summary>
-					<section>
-						<h3>Encode</h3>
-						<label>input:<textarea id=base64_in_encode></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=base64_out_encode readonly></textarea></label>
-						<h3>Decode</h3>
-						<label>input:<textarea id=base64_in_decode></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=base64_out_decode readonly></textarea></label>
-						<script type=module src=/projects/scripts/base64.mjs></script>
-					</section>
+		<details>
+			<summary>
+				<h3>Base64</h3>
+			</summary>
+			<h3>Encode</h3>
+			<label>input:<textarea id=base64_in_encode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=base64_out_encode readonly></textarea></label>
+			<h3>Decode</h3>
+			<label>input:<textarea id=base64_in_decode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=base64_out_decode readonly></textarea></label>
+			<script type=module src=/projects/scripts/base64.mjs></script>
+		</details>
 
-				</details>
-			</section>
-
-			<section>
-				<details>
-					<summary>
-						<h3>Timing fetch</h3>
-					</summary>
-					<section>
-						<pre>
+		<details>
+			<summary>
+				<h3>Timing fetch</h3>
+			</summary>
+			<pre>
 let d=Date.now();
 fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 	.then(response => response.json())
@@ -201,102 +164,83 @@ fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 		console.log(`${Date.now()-d}ms\t${JSON.stringify(data).length} bytes`);
 	});
 						</pre>
-						<p><strong>Example URLs:</strong></p>
-						<ul>
-							<li>https://hacker-news.firebaseio.com/v0/user/NostraDavid.json</li>
-							<li>https://old.reddit.com/user/NostraDavid.json</li>
-							<li>https://api.hnpwa.com/v0/newest.json?page=1</li>
-							<li>https://api.hnpwa.com/v0/news.json?page=1</li>
-							<li>https://api.hnpwa.com/v0/ask.json?page=1</li>
-							<li>https://api.hnpwa.com/v0/jobs.json?page=1</li>
-							<li>https://api.hnpwa.com/v0/show.json?page=1</li>
-							<li>https://old.reddit.com/r/popular.json</li>
-							<li>https://old.reddit.com/r/popular.json?after=t3_hj7vqj</li>
-							<li>https://old.reddit.com/r/all.json</li>
-							<li>https://old.reddit.com/.json</li>
-						</ul>
-						<label>url: <input type="url" id=fetch-input
-								value=https://hacker-news.firebaseio.com/v0/user/NostraDavid.json></label>
-						<button onclick="fetchOutputHN()">Run code</button>
-						<p>It took: <output id=fetch-timing>?</output>ms</p>
-						<p>The data is <output id=fetch-length>?</output> bytes long</p>
-						<script>
-							function fetchOutputHN(self) {
-								let input = document.getElementById("fetch-input");
-								let timing = document.getElementById("fetch-timing");
-								let length = document.getElementById("fetch-length");
-								let d = Date.now();
-								fetch(input.value)
-									.then(response => response.json())
-									.then(data => {
-										timing.innerHTML = Date.now() - d;
-										length.innerHTML = JSON.stringify(data).length;
-									});
-							}
-						</script>
-					</section>
-				</details>
-			</section>
+			<p><strong>Example URLs:</strong></p>
+			<ul>
+				<li>https://hacker-news.firebaseio.com/v0/user/NostraDavid.json
+				<li>https://old.reddit.com/user/NostraDavid.json
+				<li>https://api.hnpwa.com/v0/newest.json?page=1
+				<li>https://api.hnpwa.com/v0/news.json?page=1
+				<li>https://api.hnpwa.com/v0/ask.json?page=1
+				<li>https://api.hnpwa.com/v0/jobs.json?page=1
+				<li>https://api.hnpwa.com/v0/show.json?page=1
+				<li>https://old.reddit.com/r/popular.json
+				<li>https://old.reddit.com/r/popular.json?after=t3_hj7vqj
+				<li>https://old.reddit.com/r/all.json
+				<li>https://old.reddit.com/.json
+			</ul>
+			<label>url: <input type="url" id=fetch-input value=https://hacker-news.firebaseio.com/v0/user/NostraDavid.json></label>
+			<button onclick="fetchOutputHN()">Run code</button>
+			<p>It took: <output id=fetch-timing>?</output>ms</p>
+			<p>The data is <output id=fetch-length>?</output> bytes long</p>
+			<script>
+				function fetchOutputHN(self) {
+					let input = document.getElementById("fetch-input");
+					let timing = document.getElementById("fetch-timing");
+					let length = document.getElementById("fetch-length");
+					let d = Date.now();
+					fetch(input.value)
+						.then(response => response.json())
+						.then(data => {
+							timing.innerHTML = Date.now() - d;
+							length.innerHTML = JSON.stringify(data).length;
+						});
+				}
+			</script>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Text to Emoji</h3>
-					</summary>
-					<section>
-						<h3>Encode</h3>
-						<label>input:<textarea id=t2e-in-encode></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=t2e-out-encode readonly></textarea></label>
-						<h3>Decode</h3>
-						<label>input:<textarea id=t2e-in-decode></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=t2e-out-decode readonly></textarea></label>
-						<script type=module src=/projects/scripts/t2e.mjs></script>
-					</section>
-				</details>
-			</section>
+		<details>
+			<summary>
+				<h3>Text to Emoji</h3>
+			</summary>
+			<h3>Encode</h3>
+			<label>input:<textarea id=t2e-in-encode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=t2e-out-encode readonly></textarea></label>
+			<h3>Decode</h3>
+			<label>input:<textarea id=t2e-in-decode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=t2e-out-decode readonly></textarea></label>
+			<script type=module src=/projects/scripts/t2e.mjs></script>
+		</details>
 
-			<section>
-				<details>
-					<summary>
-						<h3>Germanizer</h3>
-					</summary>
-					<section>
-						<h3>Encode</h3>
-						<label>input:<textarea id=germanizer-in-encode></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=germanizer-out-encode readonly></textarea></label>
-						<h3>Decode</h3>
-						<label>input:<textarea id=germanizer-in-decode></textarea></label>
-						<label>output - click to copy to clipboard:<textarea id=germanizer-out-decode readonly></textarea></label>
-						<script type=module src=/projects/scripts/germanizer.mjs></script>
-					</section>
-				</details>
-			</section>
-		</section>
+		<details>
+			<summary>
+				<h3>Germanizer</h3>
+			</summary>
+			<h3>Encode</h3>
+			<label>input:<textarea id=germanizer-in-encode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=germanizer-out-encode readonly></textarea></label>
+			<h3>Decode</h3>
+			<label>input:<textarea id=germanizer-in-decode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=germanizer-out-decode readonly></textarea></label>
+			<script type=module src=/projects/scripts/germanizer.mjs></script>
+		</details>
 	</main>
 
 	<footer>
 		<div class=copyright>
-			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			&ndash; <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
-			<abbr
-				title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
-				style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 			<p><sub>Last updated: <time id=updated>2020-07-03</time></sub></p>
 		</div>
 		<nav>
-			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a>
-			<span> - </span>
-			<a href="https://twitter.com/DavidNostra">Twitter profile</a>
-			<span> - </span>
-			<a href="https://github.com/NostraDavid">GitHub (personal)</a>
-			<span> - </span>
-			<a href="https://github.com/Thaumatorium">GitHub (professional)</a>
-			<span> - </span>
+			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a><span> - </span>
+			<a href="https://twitter.com/DavidNostra">Twitter profile</a><span> - </span>
+			<a href="https://github.com/NostraDavid">GitHub (personal)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium">GitHub (professional)</a><span> - </span>
 			<a href="https://www.facebook.com/david.nostra.121">Facebook profile</a>
 		</nav>
 		<!-- Sssh - don't tell anyone! -->
-		<a class=secret onclick=specialGoto(event)
-			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
+		<a class=secret onclick=specialGoto(event) style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">π</a>
 		<div class=cookie-notification>
 			<p>This site uses cookies from Google to deliver its services and to analyze traffic.</p>
 			<button>OK</button>

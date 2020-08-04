@@ -32,84 +32,63 @@
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-
 		gtag('config', 'UA-169207994-1');
 	</script>
+
 	<header>
 		<h1 class=title>The Thaumatorium:</h1>
 		<div class=subtitle>Where the magic happens</div>
 	</header>
 
 	<nav>
-		<a href="/">Frontpage</a>
-		<span> - </span>
-		<a href=/pages/articles.html>Articles</a>
-		<span> - </span>
-		<a href=/pages/projects.html>Projects</a>
-		<span> - </span>
-		<a href=/pages/experimentations.html>Experimentations</a>
-		<span> - </span>
-		<a href=/pages/code-of-conduct.html>Code of Conduct</a>
-		<span> - </span>
-		<a href=/pages/random-video.html>Random video</a>
-		<span> - </span>
-		<a href=/pages/hardware.html>Hardware</a>
-		<span> - </span>
-		<a href=/pages/knowledge-base.html>Knowledge Base</a>
-		<span> - </span>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/pages/articles.html>Articles</a><span> - </span>
+		<a href=/pages/projects.html>Projects</a><span> - </span>
+		<a href=/pages/experimentations.html>Experimentations</a><span> - </span>
+		<a href=/pages/code-of-conduct.html>Code of Conduct</a><span> - </span>
+		<a href=/pages/random-video.html>Random video</a><span> - </span>
+		<a href=/pages/hardware.html>Hardware</a><span> - </span>
+		<a href=/pages/knowledge-base.html>Knowledge Base</a><span> - </span>
 		<a href=/pages/about.html>About</a>
 	</nav>
 
 	<main>
-		<section>
-			<hgroup>
-				<h2>Splitting JS/CSS into 2 or 3 files, meant for optimizing your site</h2>
-				<div class=article-meta>
-					<div class=article-published>Published:<br><time datetime=2019-11-29>2019-11-29</time></div>
-					<div class=article-author>Author:<br>NostraDavid</div>
-				</div>
-			</hgroup>
-			<p>Context: Checking Coverage with Chrome Devtools –
-				https://developers.google.com/web/tools/chrome-devtools/coverage
-			</p>
-			<p>After checking coverage, split the JS/CSS up into:</p>
-
-			<ul>
-				<li>InnerCore (inline JS/CSS, needed for when the JS/CSS files don't load on super slow connections)</li>
-				<li>OuterCore (the JS/CSS that's covered by Devtools)</li>
-				<li>Mantle (the JS/CSS that's NOT covered by Devtools, but can be potentially used by the site)</li>
-			</ul>
-
-			<p>Do all of this programmatically, because you do NOT want to do this by hand.</p>
-			<p>Names are based on Earth: https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg</p>
-
-
-		</section>
+		<hgroup>
+			<h2>Splitting JS/CSS into 2 or 3 files, meant for optimizing your site</h2>
+			<div class=article-meta>
+				<div class=article-published>Published:<br><time datetime=2019-11-29>2019-11-29</time></div>
+				<div class=article-author>Author:<br>NostraDavid</div>
+			</div>
+		</hgroup>
+		<p>Context: Checking Coverage with Chrome Devtools –
+			https://developers.google.com/web/tools/chrome-devtools/coverage
+		</p>
+		<p>After checking coverage, split the JS/CSS up into:</p>
+		<ul>
+			<li>InnerCore (inline JS/CSS, needed for when the JS/CSS files don't load on super slow connections)
+			<li>OuterCore (the JS/CSS that's covered by Devtools)
+			<li>Mantle (the JS/CSS that's NOT covered by Devtools, but can be potentially used by the site)
+		</ul>
+		<p>Do all of this programmatically, because you do NOT want to do this by hand.</p>
+		<p>Names are based on Earth: <a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Wikipedia/Earth_poster.svg</a></p>
 	</main>
 
 	<footer>
 		<div class=copyright>
-			&copy;<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			&ndash; <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
-			<abbr
-				title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'"
-				style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;"></a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 			<p><sub>Last updated: <time id=updated>2020-07-03</time></sub></p>
 		</div>
 		<nav>
-			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a>
-			<span> - </span>
-			<a href="https://twitter.com/DavidNostra">Twitter profile</a>
-			<span> - </span>
-			<a href="https://github.com/NostraDavid">GitHub (personal)</a>
-			<span> - </span>
-			<a href="https://github.com/Thaumatorium">GitHub (professional)</a>
-			<span> - </span>
+			<a href="https://www.reddit.com/user/nostradavid">Reddit profile</a><span> - </span>
+			<a href="https://twitter.com/DavidNostra">Twitter profile</a><span> - </span>
+			<a href="https://github.com/NostraDavid">GitHub (personal)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium">GitHub (professional)</a><span> - </span>
 			<a href="https://www.facebook.com/david.nostra.121">Facebook profile</a>
 		</nav>
 		<!-- Sssh - don't tell anyone! -->
-		<a class=secret onclick=specialGoto(event)
-			style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">&#960;</a>
+		<a class=secret onclick=specialGoto(event) style="text-decoration: none; color:#800; cursor: default;font-family: sans-serif; font-size: small;">π</a>
 		<div class=cookie-notification>
 			<p>This site uses cookies from Google to deliver its services and to analyze traffic.</p>
 			<button>OK</button>
