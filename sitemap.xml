@@ -3,87 +3,92 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://thaumatorium.com/</loc>
-	<lastmod>2020-07-25T23:48:51+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:24+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/about.html</loc>
-	<lastmod>2020-07-25T23:48:52+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:24+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/articles.html</loc>
-	<lastmod>2020-07-25T23:48:54+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:28+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/projects.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:28+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/experimentations.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:30+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/code-of-conduct.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:29+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/random-video.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:29+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/hardware.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:30+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/pages/knowledge-base.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/types-of-haskell-functions.html</loc>
-	<lastmod>2020-07-25T23:48:55+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/quick-n-dirty-big-o.html</loc>
-	<lastmod>2020-07-25T23:48:58+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/haskells-fold-functions-explained.html</loc>
-	<lastmod>2020-07-25T23:48:56+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/spark-files-and-taking-notes.html</loc>
-	<lastmod>2020-07-25T23:48:56+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files.html</loc>
-	<lastmod>2020-07-25T23:48:56+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/gs-programming-projects-for-n00bz.html</loc>
-	<lastmod>2020-07-25T23:48:56+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/reddit-s-t-values.html</loc>
-	<lastmod>2020-07-25T23:48:56+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:30+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/articles/im-sick-of-all-the-negative-content-on-reddit.html</loc>
-	<lastmod>2020-07-25T23:48:57+01:00</lastmod>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/haskells-fold-functions-explained.html</loc>
+	<lastmod>2020-08-04T05:44:30+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/spark-files-and-taking-notes.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/types-of-haskell-functions.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/quick-n-dirty-big-o.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/configuring-jmeter-for-neo4j.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/gs-programming-projects-for-n00bz.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/reddit-s-t-values.html</loc>
+	<lastmod>2020-08-04T05:44:31+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 </urlset>
