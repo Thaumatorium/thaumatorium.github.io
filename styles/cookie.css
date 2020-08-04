@@ -1,6 +1,6 @@
 /* cookie notification */
 
-.cookie-notification {
+#cookie-notification {
 	background: #222;
 	color: #fff;
 	border-radius: 10px;
@@ -13,14 +13,14 @@
 	flex-wrap: wrap;
 }
 
-.cookie-notification>p {
+#cookie-notification>p {
 	padding: 16px;
 	margin: 0;
 	font-size: 1.1em;
 	flex-wrap: wrap;
 }
 
-.cookie-notification>button {
+#cookie-notification>button {
 	color: #800;
 	font-size: 1.1em;
 	font-weight: bold;
@@ -30,6 +30,6 @@
 	box-sizing: border-box;
 }
 
-.cookie-notification>button:hover {
+#cookie-notification>button:hover {
 	cursor: pointer;
 }
