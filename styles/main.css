@@ -97,7 +97,6 @@ table {
 	border-collapse: collapse;
 	border: 1px solid #800;
 	font-family: Tahoma, sans-serif;
-	font-size: 12px;
 }
 
 table th {
@@ -120,9 +119,22 @@ ul {
 	padding: 10px 0 10px 30px;
 }
 
-li {
+ul>li {
 	list-style-type: '– ';
 	font-size: 1.2em;
+}
+
+ol {
+	padding: 10px 0 10px 30px;
+}
+
+ol>li {
+	font-size: 1.2em;
+}
+
+.article-list>*{
+	list-style-type: ' ';
+	padding: 0 0 10px 0;
 }
 
 .disclaimer {
