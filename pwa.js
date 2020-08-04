@@ -67,13 +67,15 @@ const getCookieValue = name => {
 }
 
 // remove cookie notification if the user already accepted the notification
-let notification = document.getElementsByClassName("cookie-notification")[0];
-if (getCookieValue('cookie-notification') === "read") {
-	notification?.parentNode.removeChild(notification);
-	console.info("cookie notification removed");
-} else {
-	notification?.addEventListener("click", () => {
-		setCookie('cookie-notification', 'read', 365);
+let notification = document.getElementById("cookie-notification");
+if (notification !== undefined) {
+	if (getCookieValue('cookie-notification') === "read") {
 		notification.parentNode.removeChild(notification);
-	});
+		console.info("cookie notification removed");
+	} else {
+		notification.addEventListener("click", () => {
+			setCookie('cookie-notification', 'read', 365);
+			notification.parentNode.removeChild(notification);
+		});
+	}
 }
