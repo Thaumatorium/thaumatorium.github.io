@@ -64,9 +64,11 @@
 		<p>In this context, a parser is a function accepting strings as input and returning some data structure as output, typically it's a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</p>
 		<table>
 			<thead>
-				<th>Type</th>
-				<th>What it does</th>
-				<th>Example code</th>
+				<tr>
+					<th>Type</th>
+					<th>What it does</th>
+					<th>Example code</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
@@ -114,9 +116,7 @@ timesTwo = 2 *</code></pre>
 				</tr>
 				<tr>
 					<td>Monadic</td>
-					<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>=
-						operator or
-						do notation</td>
+					<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>= operator or do notation</td>
 					<td>From: <a href=https://wiki.haskell.org/All_About_Monads>https://wiki.haskell.org/All_About_Monads</a>
 						<pre><code>maternalGrandfather :: Sheep -&gt; Maybe Sheep
 maternalGrandfather s = (return s) &gt;&gt;= mother &gt;&gt;= father

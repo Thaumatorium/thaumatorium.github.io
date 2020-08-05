@@ -60,6 +60,7 @@
 				<div class=article-author>Author:<br>NostraDavid</div>
 			</div>
 		</hgroup>
+
 		<h2 id=disclaimer>
 			<a href="#disclaimer" class="self-link"></a>
 			Disclaimer:
@@ -101,14 +102,15 @@
 		<p><code>n</code> is the amount of items that's fed to the algorithm, <code>c</code> is a constant number for that specific algorithm (usually it's either 2 or 3, though I don't guarantee it)</p>
 		<table>
 			<thead>
-				<th>Notation</th>
-				<th>Name</th>
+				<tr>
+					<th>Notation</th>
+					<th>Name</th>
+				</tr>
 			</thead>
 			<tbody>
 				<tr>
 					<td><code>O(1)</code></td>
-					<td><a href=https://en.wikipedia.org/wiki/Constant_time>constant</a> – Think a C array lookup, like list[2]
-					</td>
+					<td><a href=https://en.wikipedia.org/wiki/Constant_time>constant</a> – Think a C array lookup, like list[2]</td>
 				</tr>
 				<tr>
 					<td><code>O(log⁡ log⁡ n)</code></td>
@@ -116,9 +118,7 @@
 				</tr>
 				<tr>
 					<td><code>O(log ⁡n)</code></td>
-					<td><a href=https://en.wikipedia.org/wiki/Logarithmic_time>logarithmic</a> – Think a lookup in a sorted,
-						binary,
-						tree</td>
+					<td><a href=https://en.wikipedia.org/wiki/Logarithmic_time>logarithmic</a> – Think a lookup in a sorted, binary, tree</td>
 				</tr>
 				<tr>
 					<td><code>O((log⁡ n)^c)</code></td>
@@ -154,7 +154,6 @@
 				</tr>
 			</tbody>
 		</table>
-
 		<p>For the full table: <a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions">Wikipedia/Big_O_notation</a></p>
 		<p>Another great wiki article is <a href="https://en.wikipedia.org/wiki/Time_complexity">Wikipedia/Time_complexity</a></p>
 
@@ -166,8 +165,7 @@
 		<p>You can see why you should avoid anything <code>>O(n)</code> here:</p>
 		<figure>
 			<img loading=lazy height=974 width=942 src=/images/big-o.png>
-			<figcaption>Source:
-				https://en.wikipedia.org/wiki/Time_complexity#/media/File:Comparison_computational_complexity.svg</figcaption>
+			<figcaption>Source: https://en.wikipedia.org/wiki/Time_complexity#/media/File:Comparison_computational_complexity.svg</figcaption>
 		</figure>
 
 		<h2 id=a-bit-of-trivia>
@@ -183,7 +181,7 @@
 		</h2>
 		<p>I hope this short intro into Big O has been (at least a little bit) of help to you 🙂</p>
 		<p>PS: Note that there are other so called asymptotic notations (of which Big O is one), like o (little-o), Ω (Big-Omega), ω(little-omega, and Θ (theta). I have to confess that I have no idea what those represent, but I'm guessing things like average runtime and minimal runtime or something like that, but those mathematicians have to fuck everything up for me by using words I don't understand ;_;</p>
-		<p>Fucking m-athematics, how does it work?</p>
+		<p>Fucking mathematics, how does it work?</p>
 	</main>
 
 	<footer>

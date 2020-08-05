@@ -111,9 +111,7 @@ foldr (+) 0 [1,2,3,4]
 = { apply the most last + operator }
 10
 </pre>
-		<p>Now when you take a look at the moment all foldrs have been applied, you may see you can rewrite that line
-			from:
-		</p>
+		<p>Now when you take a look at the moment all foldrs have been applied, you may see you can rewrite that line from:</p>
 		<p><code>(+) 1 ((+) 2 ((+) 3 ((+) 4 0)))</code></p>
 		<p>to</p>
 		<p><code>1 + (2 + (3 + (4 + 0)))</code></p>
