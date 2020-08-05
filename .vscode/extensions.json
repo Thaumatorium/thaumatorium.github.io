@@ -9,6 +9,7 @@
 		"ritwickdey.liveserver",
 		"tabnine.tabnine-vscode",
 		"vscode-icons-team.vscode-icons",
-		"kisstkondoros.vscode-codemetrics"
+		"kisstkondoros.vscode-codemetrics",
+		"deepcode.deepcode",
 	]
 }
