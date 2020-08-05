@@ -8,7 +8,17 @@ Anything else is bloat, really (unless browser creators finally replace JS, but 
 
 ## Documentation
 
-[You might not need jQuery](http://youmightnotneedjquery.com/) - A great resource if you want to stop using jQuery (\*cough\* *bloat)*
+["You might not need jQuery"](http://youmightnotneedjquery.com/) - A great resource if you want to stop using jQuery (\*cough\* *bloat)*
+
+### Recommended IDE
+
+[vscode](https://code.visualstudio.com/ "visual studio code")
+
+### Extensions
+
+I've added an `extensions.json` file, which once you open the project in vscode, a popup will ask you to install **recommended extensions**.
+
+This enables beginners to start faster (not to mention get informed on interesting addons like [TabNine](https://marketplace.visualstudio.com/items?itemName=TabNine.tabnine-vscode) for example).
 
 ### Languages used
 
