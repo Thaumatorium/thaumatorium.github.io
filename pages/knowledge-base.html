@@ -195,6 +195,9 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 					<tr>
 						<td>Find main content of HTML page
 						<td>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;
+					<tr>
+						<td>find paragraph tags that aren't closed</td>
+						<td>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</td>
 				</tbody>
 			</table>
 		</details>
