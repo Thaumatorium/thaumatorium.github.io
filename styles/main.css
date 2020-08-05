@@ -16,19 +16,19 @@ body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main 
 }
 
 main h1 {
-	font-size: 2.5em;
-	text-overflow: ellipsis;
-	overflow: hidden;
-}
-
-main h2 {
 	font-size: 1.5em;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
 
+main h2 {
+	font-size: 1.3em;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
 main h3 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	text-overflow: ellipsis;
 	overflow: hidden;
 }
