@@ -55,19 +55,51 @@
 	<main>
 		<h1>NostraDavid's Knowledge Base - Javascript code snippets and regex</h1>
 		<p>For now (<time>2020-07-16</time>) it's just snippets of JS and regex that I use every now and then</p>
-		<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub
-				Gist</a> exists…</p>
+		<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
+
+		<details open>
+			<summary>
+				<h2>Online Tools</h2>
+				<p>These are websites/webpages that I use to optimize this site.</p>
+			</summary>
+
+			<table>
+				<thead>
+					<th>Tool name</th>
+					<th>What to use it for</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="https://jakearchibald.github.io/svgomg/">SVGOMG!</a></td>
+						<td>"<a href="https://github.com/svg/svgo"><b>SVG O</b>ptimizer</a>'s <b>M</b>issing <b>G</b>UI", an online SVG optimizer </td>
+					</tr>
+					<tr>
+						<td><a href="https://closure-compiler.appspot.com/home">Google's Closure Compiler</a></td>
+						<td>A Javascript optimizer - turns modern JS into highly optimized, yet compatible, Javascript.</td>
+					</tr>
+					<tr>
+						<td><a href="https://www.mysitemapgenerator.com/">My Sitemap Generator</a></td>
+						<td>Since this is a fully static site I have to update the sitemap manually. I use this site to automate the generation partially.</td>
+					</tr>
+					<tr>
+						<td><a href="https://www.bing.com/webmasters/robotstxttester">Bing's robot.txt Tester</a></td>
+						<td>Use this to check your robots.txt for faults.</td>
+					</tr>
+				</tbody>
+			</table>
+		</details>
+
 		<details>
 			<summary>
-				<h3>Javascript oneliners</h3>
+				<h2>Javascript oneliners</h2>
 			</summary>
 			<table>
 				<tbody>
 					<tr>
-						<th> note
-						<th> code
+						<th>note
+						<th>code
 					<tr>
-						<td> Open all collapsed comments on a reddit comment page
+						<td>Open all collapsed comments on a reddit comment page</td>
 						<td>
 							<pre><code>document.querySelectorAll(".expand")
 				.forEach(el => {
@@ -75,28 +107,31 @@
 						el.click();
 					}
 				});</code></pre>
+						</td>
 					<tr>
-						<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes,
-							not codepoints
-						<td><code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code>
+						<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes, not codepoints</td>
+						<td><code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
+					</tr>
 					<tr>
-						<td>Remove all <code>.bighead</code> classed elements (no Array.from() needed, which is what I used
-							before, so I could use map() instead of a for loop)
+						<td>Remove all <code>.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
 						<td>
 							<pre><code>document.querySelectorAll(".bighead")
 				.forEach(el => {
 					el.parentElement
 						.removeChild(el)
 					});</code></pre>
+						</td>
+					</tr>
 					<tr>
-						<td>Make console.log use colors
+						<td>Make console.log use colors</td>
 						<td>
 							<pre>
 <code>const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
-console.log('%cService worker installing', CONSOLE_STYLE);</code>
-</pre>
+console.log('%cService worker installing', CONSOLE_STYLE);</code></pre>
+						</td>
+					</tr>
 					<tr>
-						<td>This opens all <code>are you sure?</code> dialogs for comments, on a profile page of Reddit
+						<td>This opens all <code>are you sure?</code> dialogs for comments, on a profile page of Reddit</td>
 						<td>
 							<pre><code>let ys = Array.from(document.getElementsByClassName("score likes"))
 							.filter(e => parseInt(e.title) < 3)
@@ -105,8 +140,10 @@ console.log('%cService worker installing', CONSOLE_STYLE);</code>
 // pick everything after the 77th comment
 ys = ys.slice(77, ys.length - 1);
 ys.map(e => e.click());</code></pre>
+						</td>
+					</tr>
 					<tr>
-						<td>Removing duplicates
+						<td>Removing duplicates</td>
 						<td>
 							<pre><code>const cities = ["Den Haag","Den Haag",
 								"Utrecht", "Utrecht",
@@ -115,16 +152,19 @@ ys.map(e => e.click());</code></pre>
 								"MiddelBurg"];
 const uniqueCities = [...new Set(cities)];
 // ["Den Haag", "Utrecht", "Arnhem", "MiddelBurg"]</code></pre>
+						</td>
+					</tr>
 					<tr>
-						<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests
-							per minute)
+						<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)</td>
 						<td>
 							<pre><code>let xs = document.querySelectorAll("[query goes here]");
 let i = 0;
 let id = setInterval(() => {console.log(i); xs[i].click(); i++;}, 1100);
 clearInterval(id);</code></pre>
+						</td>
+					</tr>
 					<tr>
-						<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)
+						<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
 						<td>
 							<pre><code>Array.from(document.getElementsByClassName("subreddit hover"))
 									 .filter(el => el.innerHTML == "TheLastOfUs2")
@@ -134,8 +174,10 @@ clearInterval(id);</code></pre>
 										 el.querySelector(`[data-event-action*="delete"]`)
 									 })
 									 .map(el => el.click());</code></pre>
+						</td>
+					</tr>
 					<tr>
-						<td>Use on Twitch to track the amount of currently used emotes
+						<td>Use on Twitch to track the amount of currently used emotes</td>
 						<td>
 							<pre><code>const groupBy = (xs, key) => xs.reduce((acc, x) => {
 	(acc[x[key]] = acc[x[key]] || []).push(x);
@@ -157,54 +199,64 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 							 .slice(0,6)
 							 .sort((a, b) => a.length - b.length)
 							 .reduce((acc, el) => `${el.length}x ${el.key} ` + acc);</code></pre>
+						</td>
+					</tr>
 				</tbody>
 			</table>
 		</details>
 
 		<details>
 			<summary>
-				<h3>Regular Expressions</h3>
+				<h2>Regular Expressions</h2>
 			</summary>
 			<table>
+				<thead>
+					<tr>
+						<th>note </th>
+						<th>regex </th>
+					</tr>
+				</thead>
 				<tbody>
 					<tr>
-						<th> note
-						<th> regex
+						<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br> Edit the number in between {} to find the nth comma.</td>
+						<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code></td>
+					</tr>
+					</tr>
 					<tr>
-						<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br>
-							Edit the number in between {} to find the nth comma.
-						<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code>
+						<td>Every line that doesn't start with a <code>.</code> via regex;<br>I was trying to filter bootstrap.css from all non-classes</td>
+						<td><code>^((?!^\.).)*$</code></td>
+					</tr>
 					<tr>
-						<td>Every line that doesn't start with a <code>.</code> via regex;<br>
-							I was trying to filter bootstrap.css from all non-classes
-						<td><code>^((?!^\.).)*$</code>
+						<td>Filter everything from a : till the end of the line</td>
+						<td><code>[:].*$</code></td>
+					</tr>
 					<tr>
-						<td>Filter everything from a : till the end of the line
-						<td><code>[:].*$</code>
-					<tr>
-						<td>Find non-ASCII letters in vscode;<br>
-							Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your
-							comments...
-						<td>([^\x00-\x7F])
+						<td>Find non-ASCII letters in vscode;<br>Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your comments...</td>
+						<td>([^\x00-\x7F])</td>
+					</tr>
 					<tr>
 						<td>hit him up when you pay for WoW</td>
 						<td>Craizler-TarrenMill</td>
+					</tr>
 					<tr>
 						<td>WoW BattleTag</td>
 						<td>Cyrstad#2776</td>
+					</tr>
 					<tr>
-						<td>Find main content of HTML page
-						<td>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;
+						<td>Find main content of HTML page</td>
+						<td>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</td>
+					</tr>
 					<tr>
 						<td>find paragraph tags that aren't closed</td>
 						<td>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</td>
+					</tr>
 				</tbody>
 			</table>
 		</details>
 
 		<details>
 			<summary>
-				<h3>Regex explanation</h3>
+				<h2>Regex explanation</h2>
 			</summary>
 			<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
 [ – ] = a range of choices; usually choices are [a-z], [A-Z], [0-9]
@@ -216,43 +268,188 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 (?!…) =	Negative lookahead
 (?:…) =	Non-capturing group; doesn't get saves to $1-$9</code></pre>
 			<br>
-			<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want
-				all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
+			<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
 		</details>
 
 		<details>
 			<summary>
-				<h3>National 'warcry'</h3>
+				<h2>National 'warcry'</h2>
 			</summary>
 			<p>Not really a 'warcry', but whenever anyone posts any of these terms other nationals will join in repeating it.</p>
 			<p>PS: Sometimes it's just an emote spam</p>
 			<table>
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Warcry</th>
+					</tr>
+				</thead>
 				<tbody>
+
 					<tr>
-						<th> Country
-						<th> Warcry
+						<td>Dutch</td>
+						<td>G E K O L O N I S E E R D</td>
+					</tr>
 					<tr>
-						<td>Dutch
-						<td>G E K O L O N I S E E R D
+						<td>German</td>
+						<td>Sprich Deutsch, du Hurensohn!</td>
+					</tr>
 					<tr>
-						<td>German
-						<td>Sprich Deutsch, du Hurensohn!
+						<td>Swedish</td>
+						<td>Skååååål</td>
+					</tr>
 					<tr>
-						<td>Swedish
-						<td>Skååååål
+						<td>Danish</td>
+						<td>Skååååål</td>
+					</tr>
 					<tr>
-						<td>Danish
-						<td>Skååååål
+						<td>Finnish</td>
+						<td>Torille!</td>
+					</tr>
 					<tr>
-						<td>Finnish
-						<td>Torille!
+						<td>Bulgarian</td>
+						<td><a href="https://cdn.betterttv.net/emote/56be9fd6d9ec6bf74424760d/3x">KKomrade</a></td>
+					</tr>
 					<tr>
-						<td>Bulgarian
-						<td><a href="https://cdn.betterttv.net/emote/56be9fd6d9ec6bf74424760d/3x">KKomrade</a>
-					<tr>
-						<td>Germany
-						<td><a href="https://static-cdn.jtvnw.net/emoticons/v1/111700/3.0">DatScheffe</a>
+						<td>Germany</td>
+						<td><a href="https://static-cdn.jtvnw.net/emoticons/v1/111700/3.0">DatScheffe</a></td>
 				</tbody>
+			</table>
+		</details>
+
+		<details open>
+			<summary>
+				<h2>Information for a secret project</h2>
+			</summary>
+			<table>
+				<tr>
+					<th>Character</th>
+					<th>HTML code</th>
+				</tr>
+				<tr>
+					<td>𝑥</td>
+					<td><code>&amp;#119909;</code></td>
+				</tr>
+				<tr>
+					<td>ə</td>
+					<td><code>&amp;#601;</code></td>
+				</tr>
+				<tr>
+					<td>α</td>
+					<td><code>&amp;alpha;</code></td>
+				</tr>
+				<tr>
+					<td>β</td>
+					<td><code>&amp;beta;</code></td>
+				</tr>
+				<tr>
+					<td>𝔟</td>
+					<td><code>&amp;bfr;</code></td>
+				</tr>
+				<tr>
+					<td>𝔅</td>
+					<td><code>&amp;Bfr;</code></td>
+				</tr>
+				<tr>
+					<td>𝔠</td>
+					<td><code>&amp;cfr;</code></td>
+				</tr>
+				<tr>
+					<td>ℭ</td>
+					<td><code>&amp;Cfr;</code></td>
+				</tr>
+				<tr>
+					<td>†</td>
+					<td><code>&amp;dagger;</code></td>
+				</tr>
+				<tr>
+					<td>‡</td>
+					<td><code>&amp;ddagger;</code></td>
+				</tr>
+				<tr>
+					<td>𝔢</td>
+					<td><code>&amp;efr;</code></td>
+				</tr>
+				<tr>
+					<td>𝔈</td>
+					<td><code>&amp;Efr;</code></td>
+				</tr>
+				<tr>
+					<td>=</td>
+					<td><code>&amp;equals;</code></td>
+				</tr>
+				<tr>
+					<td>𝔣</td>
+					<td><code>&amp;ffr;</code></td>
+				</tr>
+				<tr>
+					<td>γ</td>
+					<td><code>&amp;gamma;</code></td>
+				</tr>
+				<tr>
+					<td>…</td>
+					<td><code>&amp;hellip;</code></td>
+				</tr>
+				<tr>
+					<td>𝔨</td>
+					<td><code>&amp;kfr;</code></td>
+				</tr>
+				<tr>
+					<td>𝔩</td>
+					<td><code>&amp;lfr;</code></td>
+				</tr>
+				<tr>
+					<td>ℳ</td>
+					<td><code>&amp;Mscr;</code></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><code>&amp;nbsp;</code></td>
+				</tr>
+				<tr>
+					<td>𝔬</td>
+					<td><code>&amp;ofr;</code></td>
+				</tr>
+				<tr>
+					<td>ö</td>
+					<td><code>&amp;ouml;</code></td>
+				</tr>
+				<tr>
+					<td>𝔭</td>
+					<td><code>&amp;pfr;</code></td>
+				</tr>
+				<tr>
+					<td>′</td>
+					<td><code>&amp;prime;</code></td>
+				</tr>
+				<tr>
+					<td>𝔮</td>
+					<td><code>&amp;qfr;</code></td>
+				</tr>
+				<tr>
+					<td>→</td>
+					<td><code>&amp;rarr;</code></td>
+				</tr>
+				<tr>
+					<td>𝔯</td>
+					<td><code>&amp;rfr;</code></td>
+				</tr>
+				<tr>
+					<td>§</td>
+					<td><code>&amp;sect;</code></td>
+				</tr>
+				<tr>
+					<td>𝔘</td>
+					<td><code>&amp;Ufr;</code></td>
+				</tr>
+				<tr>
+					<td>𝒰</td>
+					<td><code>&amp;Uscr;</code></td>
+				</tr>
+				<tr>
+					<td>Ü</td>
+					<td><code>&amp;Uuml;</code></td>
+				</tr>
 			</table>
 		</details>
 	</main>
