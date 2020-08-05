@@ -53,277 +53,288 @@
 	</nav>
 
 	<main>
-		<h2>HTML, CSS and/or Javascript experimentations go here</h2>
-		<section>
-			<h3>HTML elements that are interesting on their own</h3>
-			<p style="font-family:'Times New Roman', Times, serif">test</p>
-			<p style="font-family: monospace">test</p>
-			<time>2019-11-29</time>
-			<figure>
-				<figcaption>Using Pythagoras' theorem to solve for the hypotenuse <var>a</var> of a triangle with sides <var>b</var> and <var>c</var></figcaption>
-			</figure>
-			<p>To make George eat an apple, press <kbd><kbd>Shift</kbd>+<kbd>F3</kbd></kbd></p>
-			<p>To make George eat an apple, select<kbd><kbd><samp>File</samp></kbd>|<kbd><samp>Eat Apple...</samp></kbd></kbd></p>
-		</section>
-		<section>
-			<h3><code>&lt;details&gt;</code> animation test</h3>
-			<style>
-				details>summary {
-					transition: color 1s;
-					color: black;
+		<h1>HTML, CSS and/or Javascript experimentations go here</h1>
+		<h2>HTML elements that are interesting on their own</h2>
+		<p style="font-family:'Times New Roman', Times, serif">test</p>
+		<p style="font-family: monospace">test</p>
+		<time>2019-11-29</time>
+		<figure>
+			<figcaption>Using Pythagoras' theorem to solve for the hypotenuse <var>a</var> of a triangle with sides <var>b</var> and <var>c</var></figcaption>
+		</figure>
+		<p>To make George eat an apple, press <kbd><kbd>Shift</kbd>+<kbd>F3</kbd></kbd></p>
+		<p>To make George eat an apple, select<kbd><kbd><samp>File</samp></kbd>|<kbd><samp>Eat Apple...</samp></kbd></kbd></p>
+		<h2><code>&lt;details&gt;</code> animation test</h2>
+		<style>
+			details>summary {
+				transition: color 1s;
+				color: black;
+			}
+
+			details[open]>summary {
+				transition: color 1s;
+				color: red;
+			}
+
+			details[open] summary~* {
+				/* Change this - it looks weird, IMO */
+				animation: sweep .5s ease-in-out;
+			}
+
+			@keyframes sweep {
+				0% {
+					opacity: 0;
+					margin-left: -10px
 				}
 
-				details[open]>summary {
-					transition: color 1s;
-					color: red;
+				100% {
+					opacity: 1;
+					margin-left: 0px
+				}
+			}
+		</style>
+		<details>
+			<summary>Automated Status: Operational</summary>
+			<p>Velocity: 12m/s</p>
+			<p>Direction: North</p>
+		</details>
+
+		<h2>Copying "Really Achieving Your Childhood Dreams"</h2>
+		<details>
+			<summary>Copying... <progress max="375505392" value="97543282"></progress> 25%</summary>
+			<dl>
+				<dt>Transfer rate:</dt>
+				<dd>452KB/s</dd>
+				<dt>Local filename:</dt>
+				<dd>/home/rpausch/raycd.m4v</dd>
+				<dt>Remote filename:</dt>
+				<dd>/var/www/lectures/raycd.m4v</dd>
+				<dt>Duration:</dt>
+				<dd>01:16:27</dd>
+				<dt>Color profile:</dt>
+				<dd>SD (6-1-6)</dd>
+				<dt>Dimensions:</dt>
+				<dd>320×240</dd>
+			</dl>
+		</details>
+		<h2>Detail Element</h2>
+		<p>The following shows how a details element can be used to hide some controls by default:</p>
+		<details>
+			<summary><label for=fn>Name & Extension:</label></summary>
+			<p><input type=text id=fn name=fn value="Pillar Magazine.pdf">
+			<p><label><input type=checkbox name=ext checked> Hide extension</label>
+		</details>
+		<h2>CSS border radius</h2>
+		<style>
+			p.standout {
+				width: 13em;
+				height: 8em;
+				border: solid black .1em;
+				border-radius: 7.5em 5em
+			}
+		</style>
+		https://www.w3.org/TR/css-backgrounds-3/#the-border-radius
+		<p class=standout>Lorem ipsum dolor sit amet.</p>
+
+		<h2>Corner shaping</h2>
+		<style>
+			p.base {
+				width: 70px;
+				height: 70px;
+				border: solid 30px;
+				border-color: orange orange silver silver;
+			}
+
+			p.corner {
+				border-top-right-radius: 100%;
+			}
+
+			p.a {
+				border-width: 20px;
+				border-radius: 80px / 40px;
+			}
+
+			p.b {
+				border-width: 40px 20px;
+				border-radius: 80px / 60px;
+			}
+
+			p.c {
+				border-width: 40px 80px;
+				border-radius: 80px / 40px;
+			}
+
+			p.d {
+				border-width: 60px 20px;
+				border-radius: 80px / 40px;
+			}
+
+			p.diamond {
+				border: double orange 1em;
+				border-radius: 20px;
+				border-image: url("/images/border.png") 27 round stretch;
+				box-shadow: 20px 20px 12px 12px rgba(0, 0, 0, 0.4),
+					rgba(0, 0, 0, 0.4) 10px 10px 0 1px inset;
+			}
+
+			p.wiggles {
+				/* doesn't work ಥ_ಥ */
+				border-image-slice: 124;
+				border-image-source: url("/images/border.png");
+				border: 12px double green;
+				background-color: #c4ebec;
+				background-clip: padding-box;
+				padding: 17px;
+				border-image-outset: 31px;
+				border-image-width: auto;
+			}
+		</style>
+		<p class="base corner">Lorem ipsum dolor sit amet.</p>
+		<p class="base a">Lorem ipsum dolor sit amet.</p>
+		<p class="base b">Lorem ipsum dolor sit amet.</p>
+		<p class="base c">Lorem ipsum dolor sit amet.</p>
+		<p class="base d">Lorem ipsum dolor sit amet.</p>
+		<p class="diamond">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, et.</p>
+		<p class="wiggles">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, et.</p>
+		<h2>Image scaling</h2>
+		<style>
+			img.s {
+				image-rendering: smooth;
+			}
+
+			img.hq {
+				/* a future addition? */
+				image-rendering: high-quality;
+			}
+
+			img.ce {
+				image-rendering: crisp-edges;
+			}
+
+			img.pi {
+				image-rendering: pixelated;
+			}
+		</style>
+		<p>smooth</p>
+		<img class=s src=/images/wc1.png width=640 />
+		<p>high-quality</p>
+		<img class=hq src=/images/wc2.png width=640 />
+		<p>crisp-edges - this looks broken :(</p>
+		<img class=ce src=/images/wc3.png width=640 />
+		<p>pixelated</p>
+		<img class=pi src=/images/wc4.png width=640 />
+		<p>default</p>
+		<img src=/images/wc5.png width=640 />
+		<h2>font weirdness</h2>
+		<style>
+			p.weird {
+				font: 12pt/14pt sans-serif
+			}
+
+			p.weird {
+				font: 80% sans-serif
+			}
+
+			p.weird {
+				font: x-large/110% "new century schoolbook", serif
+			}
+
+			p.weird {
+				font: bold italic large Palatino, serif
+			}
+
+			p.weird {
+				font: normal small-caps 120%/120% fantasy
+			}
+
+			p.weird {
+				font: condensed oblique 12pt "Helvetica Neue", serif;
+			}
+		</style>
+		<p>wut</p>
+		<h2>CSS transitions</h2>
+		<style>
+			.tran1 {
+				color: black;
+				background: white;
+				transform: rotate(45deg);
+				transition-property: filter, transform;
+				transition-duration: 1s, 2s;
+			}
+
+			.tran1:hover {
+				filter: invert(100%);
+				transform: rotate(0deg);
+				transition-property: filter, transform;
+				transition-duration: 1s, 4s;
+			}
+
+			.tran2 {
+				color: black;
+				background-color: white;
+				/* transition-property: opacity, left; */
+				transition-duration: 1s, 4s;
+			}
+
+			.tran2:hover {
+				filter: blur(1px);
+			}
+		</style>
+		<div class="tran1">
+			Hover me 1
+		</div>
+		<div class="tran2">
+			Hover me 2
+		</div>
+		<h2>CSS Animations</h2>
+		<p>source: <a href="https://www.youtube.com/watch?v=zHUpx90NerM">Travery Media</a></p>
+		<style>
+			.anim {
+				background: #eee;
+				width: 200px;
+				height: 200px;
+				position: relative;
+				animation-name: myanim;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+			}
+
+			@keyframes myanim {
+				0% {
+					background-color: #eee;
+					left: 0px;
+					top: 0px;
 				}
 
-				details[open] summary~* {
-					/* Change this - it looks weird, IMO */
-					animation: sweep .5s ease-in-out;
+				25% {
+					background-color: red;
+					left: 300px;
+					top: 0px;
 				}
 
-				@keyframes sweep {
-					0% {
-						opacity: 0;
-						margin-left: -10px
-					}
-
-					100% {
-						opacity: 1;
-						margin-left: 0px
-					}
-				}
-			</style>
-			<details>
-				<summary>Automated Status: Operational</summary>
-				<p>Velocity: 12m/s</p>
-				<p>Direction: North</p>
-			</details>
-
-			<section class="progress window">
-				<h3>Copying "Really Achieving Your Childhood Dreams"</h3>
-				<details>
-					<summary>Copying... <progress max="375505392" value="97543282"></progress> 25%</summary>
-					<dl>
-						<dt>Transfer rate:</dt>
-						<dd>452KB/s</dd>
-						<dt>Local filename:</dt>
-						<dd>/home/rpausch/raycd.m4v</dd>
-						<dt>Remote filename:</dt>
-						<dd>/var/www/lectures/raycd.m4v</dd>
-						<dt>Duration:</dt>
-						<dd>01:16:27</dd>
-						<dt>Color profile:</dt>
-						<dd>SD (6-1-6)</dd>
-						<dt>Dimensions:</dt>
-						<dd>320×240</dd>
-					</dl>
-				</details>
-			</section>
-			<p>The following shows how a details element can be used to hide some controls by default:</p>
-			<details>
-				<summary><label for=fn>Name & Extension:</label></summary>
-				<p><input type=text id=fn name=fn value="Pillar Magazine.pdf">
-				<p><label><input type=checkbox name=ext checked> Hide extension</label>
-			</details>
-		</section>
-		<section>
-			<h3>CSS border radius</h3>
-			<style>
-				p.standout {
-					width: 13em;
-					height: 8em;
-					border: solid black .1em;
-					border-radius: 7.5em 5em
-				}
-			</style>
-			https://www.w3.org/TR/css-backgrounds-3/#the-border-radius
-			<p class=standout>Lorem ipsum dolor sit amet.</p>
-
-			<h3>Corner shaping</h3>
-			<style>
-				p.base {
-					width: 70px;
-					height: 70px;
-					border: solid 30px;
-					border-color: orange orange silver silver;
+				50% {
+					background-color: green;
+					left: 300px;
+					top: 300px;
 				}
 
-				p.corner {
-					border-top-right-radius: 100%;
+				75% {
+					background-color: blue;
+					left: 0px;
+					top: 300px;
 				}
 
-				p.a {
-					border-width: 20px;
-					border-radius: 80px / 40px;
+				100% {
+					background-color: #eee;
+					left: 0px;
+					top: 0px;
 				}
-
-				p.b {
-					border-width: 40px 20px;
-					border-radius: 80px / 60px;
-				}
-
-				p.c {
-					border-width: 40px 80px;
-					border-radius: 80px / 40px;
-				}
-
-				p.d {
-					border-width: 60px 20px;
-					border-radius: 80px / 40px;
-				}
-
-				p.diamond {
-					border: double orange 1em;
-					border-radius: 20px;
-					border-image: url("/images/border.png") 27 round stretch;
-					box-shadow: 20px 20px 12px 12px rgba(0, 0, 0, 0.4),
-						rgba(0, 0, 0, 0.4) 10px 10px 0 1px inset;
-				}
-
-				p.wiggles {
-					/* doesn't work ಥ_ಥ */
-					border-image-slice: 124;
-					border-image-source: url("/images/border.png");
-					border: 12px double green;
-					background-color: #c4ebec;
-					background-clip: padding-box;
-					padding: 17px;
-					border-image-outset: 31px;
-					border-image-width: auto;
-				}
-			</style>
-			<p class="base corner">Lorem ipsum dolor sit amet.</p>
-			<p class="base a">Lorem ipsum dolor sit amet.</p>
-			<p class="base b">Lorem ipsum dolor sit amet.</p>
-			<p class="base c">Lorem ipsum dolor sit amet.</p>
-			<p class="base d">Lorem ipsum dolor sit amet.</p>
-			<p class="diamond">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, et.</p>
-			<p class="wiggles">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, et.</p>
-		</section>
-		<section>
-			<h3>Image scaling</h3>
-			<style>
-				img.s {
-					image-rendering: smooth;
-				}
-
-				img.hq {
-					/* a future addition? */
-					image-rendering: high-quality;
-				}
-
-				img.ce {
-					image-rendering: crisp-edges;
-				}
-
-				img.pi {
-					image-rendering: pixelated;
-				}
-			</style>
-			<p>smooth</p>
-			<img class=s src=/images/wc1.png width=640 />
-			<p>high-quality</p>
-			<img class=hq src=/images/wc2.png width=640 />
-			<p>crisp-edges - this looks broken :(</p>
-			<img class=ce src=/images/wc3.png width=640 />
-			<p>pixelated</p>
-			<img class=pi src=/images/wc4.png width=640 />
-			<p>default</p>
-			<img src=/images/wc5.png width=640 />
-		</section>
-		<section>
-			<h3>font weirdness</h3>
-			<style>
-				p.weird {
-					font: 12pt/14pt sans-serif
-				}
-
-				p.weird {
-					font: 80% sans-serif
-				}
-
-				p.weird {
-					font: x-large/110% "new century schoolbook", serif
-				}
-
-				p.weird {
-					font: bold italic large Palatino, serif
-				}
-
-				p.weird {
-					font: normal small-caps 120%/120% fantasy
-				}
-
-				p.weird {
-					font: condensed oblique 12pt "Helvetica Neue", serif;
-				}
-			</style>
-			<p>wut</p>
-		</section>
-		<section>
-			<h3>CSS transitions</h3>
-			<style>
-				.tran1 {
-					color: black;
-					background: white;
-					transform: rotate(45deg);
-					transition-property: filter, transform;
-					transition-duration: 1s, 2s;
-				}
-
-				.tran1:hover {
-					filter: invert(100%);
-					transform: rotate(0deg);
-					transition-property: filter, transform;
-					transition-duration: 1s, 4s;
-				}
-
-				.tran2 {
-					color: black;
-					background-color: white;
-					/* transition-property: opacity, left; */
-					transition-duration: 1s, 4s;
-				}
-
-				.tran2:hover {
-					filter: blur(1px);
-				}
-			</style>
-			<div class="tran1">
-				Hover me 1
-			</div>
-			<div class="tran2">
-				Hover me 2
-			</div>
-		</section>
-		<section style="height: 600px;">
-			<h3>CSS Animations</h3>
-			<p>source: <a href="https://www.youtube.com/watch?v=zHUpx90NerM">Travery Media</a></p>
-			<style>
-				.anim {
-					background: #eee;
-					width: 200px;
-					height: 200px;
-					position: relative;
-					animation-name: myanim;
-					animation-duration: 4s;
-					animation-iteration-count: infinite;
-					animation-direction: alternate;
-					animation-timing-function: ease-in-out;
-				}
-
-				@keyframes myanim {
-					0% {background-color: #eee; left:0px; top: 0px;}
-					25% {background-color: red; left:300px; top: 0px;}
-					50% {background-color: green; left:300px; top: 300px;}
-					75% {background-color: blue; left:0px; top: 300px;}
-					100% {background-color: #eee; left:0px; top: 0px;}
-				}
-			</style>
+			}
+		</style>
+		<div style="height: 600px;">
 			<div class="anim"></div>
-		</section>
+		</div>
 	</main>
 
 	<footer>

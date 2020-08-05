@@ -4,7 +4,7 @@ document.getElementById("target-year").innerHTML = (new Date).getFullYear() + 1E
 // Filling in of "Last updated:" updated stuff at the bottom of the page
 document.getElementById("updated").innerHTML = new Date(document.lastModified).toISOString().split("T")[0];
 
-// Ssssh, don't tell anyone!
+// Sssh - don't tell anyone!
 const specialGoto = event => {
 	if (event.ctrlKey && event.shiftKey) {
 		window.location.href = "/pages/praetorianpi.html";
