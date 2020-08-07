@@ -73,8 +73,8 @@ foldr f z (x:xs) = f x (foldr f z xs)
 </pre>
 		<p>There are two cases:</p>
 		<ul>
-			<li>The base case (where the input list is empty)
-			<li>The general case (where the input list is not empty), one items gets reduced and the function is recursively called on the rest of the list.
+			<li>The base case (where the input list is empty)</li>
+			<li>The general case (where the input list is not empty), one items gets reduced and the function is recursively called on the rest of the list.</li>
 		</ul>
 		<p>Now lets run foldr:</p>
 		<p><code>foldr (+) 0 [1,2,3,4]</code></p>
@@ -82,11 +82,11 @@ foldr f z (x:xs) = f x (foldr f z xs)
 		<p>The answer is 10, as 1 + 2 + 3 + 4 = 10, but what's that 0 doing there? That is the identity value for +. I haven't written an article about the identity value for operators (or functions), but here's what you need to know: The identity value of a function means that if you put any other value in, you'll get that value back out: x + 0 = x.</p>
 		<p>Other operators may have different values:</p>
 		<ul>
-			<li>Subtraction (<code>-</code>) has <code>0 (x – 0 = x)</code> as identity
-			<li>Multiplication (<code>*</code>) has <code>1 (multiplying by 0 would always give you 0, which is unwanted behavior)</code> as identity
-			<li>Division (<code>/</code>) has 1 as identity
-			<li>Exponentiation (<code>^</code>) (aka "the power operator") also has 1 as identity value.
-			<li>f() where f outputs a list has the empty list ([]) as identity
+			<li>Subtraction (<code>-</code>) has <code>0 (x – 0 = x)</code> as identity</li>
+			<li>Multiplication (<code>*</code>) has <code>1 (multiplying by 0 would always give you 0, which is unwanted behavior)</code> as identity</li>
+			<li>Division (<code>/</code>) has 1 as identity</li>
+			<li>Exponentiation (<code>^</code>) (aka "the power operator") also has 1 as identity value.</li>
+			<li>f() where f outputs a list has the empty list ([]) as identity</li>
 		</ul>
 		<p>But how is 10 calculated? Since the function is called fold <strong>right</strong>, we know two things: all grouped parentheses (more on that below the executed code) are on the right and the identity value will be the last value inserted.</p>
 		<p>If I run the code by hand (if you've ever followed a Logic course, you'll recognize this as <strong>induction</strong>) we'll get the following execution:</p>

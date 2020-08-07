@@ -62,26 +62,26 @@
 		</hgroup>
 		<p>Watch <a href="https://www.youtube.com/watch?v=8loLHbhfyh0&list=PLhW3qG5bs-L-zox1h3eIL7CZh5zJmci4c&index=2" target="_blank" rel="noopener">these videos </a>to get a feel for JMeter if you don't know it yet (set speed to 2x and use the arrow keys to skip boring things). YES I KNOW IT'S FOR HTTP ONLY! It's just so you get familiar fast with the UI 🙂</p>
 		<ol>
-			<li>Create a Thread group
-			<li>Create a JDBC Connection Configuration via Add &gt; Config Element
-			<li>Create a JDBC Request via Add &gt; Sampler
-			<li>Create a View Result Tree (This easily shows the response data in a tab) via Add &gt; Listener
+			<li>Create a Thread group</li>
+			<li>Create a JDBC Connection Configuration via Add &gt; Config Element</li>
+			<li>Create a JDBC Request via Add &gt; Sampler</li>
+			<li>Create a View Result Tree (This easily shows the response data in a tab) via Add &gt; Listener</li>
 		</ol>
 		<p>You should have something like this:</p>
 		<img loading=lazy src=/images/u8Ppb0k.png width=344 height=278>
 		<p>Set the JDBC CC:</p>
 		<img loading=lazy src=/images/PlvrYhP.png width=554 height=694>
 		<ul>
-			<li>jdbc:neo4j:bolt://localhost:7687
-			<li>org.neo4j.jdbc.Driver
-			<li>neo4j
-			<li>neo4j
+			<li>jdbc:neo4j:bolt://localhost:7687</li>
+			<li>org.neo4j.jdbc.Driver</li>
+			<li>neo4j</li>
+			<li>neo4j</li>
 		</ul>
 		<p>And the JDBC Request: (I can't tell you what to<em>exactly</em> put in the "SQL Query" part, because I don't know your data structures)</p>
 		<img loading=lazy src=/images/NQD3BAL.png width=884 height=469>
 		<p>Now get the JDBC Driver for Neo4j (get <strong>neo4j-jdbc-driver-3.1.0.jar</strong> or something alike):</p>
 		<ul>
-			<li><a href="https://github.com/neo4j-contrib/neo4j-jdbc/releases">https://github.com/neo4j-contrib/neo4j-jdbc/releases</a>
+			<li><a href="https://github.com/neo4j-contrib/neo4j-jdbc/releases">https://github.com/neo4j-contrib/neo4j-jdbc/releases</a></li>
 		</ul>
 		<p>Add the file to the<em>Library</em> in your<strong>TestPlan</strong>:</p>
 		<img loading=lazy src=/images/6QM6dtC.png width=660 height=739>
