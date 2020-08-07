@@ -53,8 +53,14 @@
 	</nav>
 
 	<main>
-		<h1>NostraDavid's' programming projects</h1>
 		<link async rel=stylesheet href="/styles/projects.css" />
+		<h1>NostraDavid's' programming projects</h1>
+
+		<div>
+			<button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = true});">Open all chapters</button>
+			<button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = false});">Close all chapters</button>
+		</div>
+
 		<details>
 			<summary>
 				<h3>Thaumatorium.com</h3>
