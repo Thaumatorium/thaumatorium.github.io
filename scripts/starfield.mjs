@@ -1,5 +1,6 @@
 window.starfield.style = "background:black;"
 const context = window.starfield.getContext("2d");
+// width and height are overwritten when resizing the window, which is why they're not const
 let height = document.documentElement.clientHeight;
 let width = document.documentElement.clientWidth;
 const depth = 1000 * (height / width);

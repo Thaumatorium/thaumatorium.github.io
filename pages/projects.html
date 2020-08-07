@@ -58,8 +58,8 @@
 		<details>
 			<summary>
 				<h3>Thaumatorium.com</h3>
+				<p>This site!</p>
 			</summary>
-			<p>This site!</p>
 			<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you cansee the first version uses <code>elm.js</code>, but I found it to be too opinionated. Not to mention I found the <code>information/javascript</code> ratio to be too low.</p>
 			<p>Eventually, after reading up on <a href=https://eloquentjavascript.net />JS</a>, <a href=https://html.spec.whatwg.org/dev />HTML</a> and <a href=https://www.w3.org/TR/css-2018 />CSS</a>, I decided to just write everything in pure web tech. And why not? I don't need a several kilobytes of javascript, just to show some articles!?</p>
 			<p>And thus this site was born! I'm as of <time datetime=2020-05-09>2020-05-09</time> still busy writing and re-writing the site because I'm still building up experience, and I still have a small <a href=/#todo>TODO</a> list and I'll have to finish, but it's fine.</p>
@@ -69,8 +69,8 @@
 		<details>
 			<summary>
 				<h3>Semantic&shy; Override&shy; Network&shy; (SON)</h3>
+				<p>A news aggregator that will pierce the heavens!</p>
 			</summary>
-			<p>A news aggregator that will pierce the heavens!</p>
 			<p>For real though: I'm still busy forming ideas around this project</p>
 			<p>Every damn time I think "I got this", I usually lose it within a day or two, even after writing things down.</p>
 		</details>
@@ -78,8 +78,8 @@
 		<details>
 			<summary>
 				<h3>Starfield</h3>
+				<p>It's the first type of project I've ever created! Now available in an HTML Canvas element.</p>
 			</summary>
-			<p>It's the first type of project I've ever made! Well, other than "<code>hello world.c</code>"</p>
 			<p>The first one I ever made was in cmd.exe, with some janky-ass <code>c</code> moving <code>*</code> and <code>.</code> characters as different sized stars from the right to the left.</p>
 			<p>Over the years I created different versions (a 2D and even a 3D OpenGL variant!)</p>
 			<p>Now that I know some HTML/CSS/JS, I decided to recreate this project for the web with plain HTML/CSS/JS! No crazy libraries needed!</p>
@@ -87,60 +87,147 @@
 			<script type=module src=/scripts/starfield.mjs></script>
 		</details>
 
-		<details open>
+		<details>
 			<summary>
 				<h3>Mocking Spongebob Text Generator (MSTG)</h3>
+				<p><q>WhY dO wE nEeD aNoThEr MoCkInG sPoNgEbOb TeXt GeNeRaToR???</q></p>
 			</summary>
-			<figure>
-				<img loading=lazy width=201 height=115 src=/images/mockbob.png alt="A generated starfield - the stars are shown moving from right to left. They are represented by circles of different sizes, but not brightness and color (yet).">
-				<figcaption>Mocking Spongebob</figcaption>
-			</figure>
 			<label>input:<textarea id=mstg_in></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=mstg_out readonly></textarea></label>
-			<script type=module src=/scripts/mstg.mjs></script>
+			<script>
+				const input = document.getElementById("mstg_in");
+				const output = document.getElementById("mstg_out");
+				input.addEventListener('input', () => {
+					let result = "";
+					let spaces = 0;
+					for (let i = 0; i < input.value.length; i++) {
+						const letter = input.value[i];
+
+						if (letter === " ") {
+							result += letter;
+							spaces++;
+							continue;
+						}
+
+						if ((i - spaces) % 2 === 0) {
+							result += letter.toUpperCase();
+						} else {
+							result += letter.toLowerCase();
+						}
+					}
+					output.value = result;
+				});
+
+				output.addEventListener('click', () => {
+					output.select();
+					document.execCommand('copy');
+				});
+			</script>
 		</details>
 
 		<details>
 			<summary>
 				<h3>ROT13</h3>
+				<p>I <em>could</em> go to <a href=https://ROT13.com>ROT13.com</a>, but why?</p>
+
 			</summary>
-			<p>I <em>could</em> go to <a href=https://ROT13.com>ROT13.com</a>, but why?</p>
-			<h3>ROT13</h3>
 			<label>input:<textarea id=rot13_in></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=rot13_out readonly></textarea></label>
-			<script type=module src=/scripts/rot13.mjs></script>
+			<script>
+				const input = document.getElementById("rot13_in");
+				const output = document.getElementById("rot13_out");
+
+				const chr = (letter) => letter.charCodeAt(0);
+				const ord = (letterValue) => String.fromCharCode(letterValue);
+
+				input.addEventListener('input', () => {
+					output.value = input.value.replace(/[a-z]/gi, c => {
+						let result = chr(c) + 13;
+
+						if ((c <= "Z" ? 90 : 122) < result) {
+							result -= 26;
+						}
+
+						return ord(result)
+					});
+				});
+
+				output.addEventListener('click', () => {
+					output.select();
+					document.execCommand('copy');
+				});
+			</script>
 		</details>
 
-		<details open>
+		<details>
 			<summary>
 				<h3>Slugify</h3>
+				<p>Turns regular text into a URL-friendly "slug"</p>
 			</summary>
-			<p>Turns regular text into a URL-friendly "slug"</p>
-			<blockquote cite=https://en.wikipedia.org/wiki/Clean_URL#Slug>
-				<p>Some systems define a slug as the part of a URL that identifies a page in human-readable keywords.</p>
-			</blockquote> – <a href=https://en.wikipedia.org/wiki/Clean_URL#Slug>wikipedia</a>
-			<h3>Slugify</h3>
 			<label>input:<textarea id=slugify_in></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=slugify_out readonly></textarea></label>
-			<script type=module src=/scripts/slugify.mjs></script>
+			<script>
+				const input = document.getElementById("slugify_in");
+				const output = document.getElementById("slugify_out");
+
+				input.addEventListener('input', () => {
+					output.value = input.value.replace(/[^a-z0-9]/gi, _ => "-").replace(/(---*)+/gi, _ => "-");
+					output.value = output.value.toLowerCase();
+				});
+
+				output.addEventListener('click', () => {
+					output.select();
+					document.execCommand('copy');
+				});
+			</script>
 		</details>
 
 		<details>
 			<summary>
 				<h3>Base64</h3>
+				<p>encoding/decoding</p>
 			</summary>
+			<h3>Decode this</h3>
+			<p>Triple click the text to select it all</p>
+			<p style="overflow-wrap: break-word;">V2hZIGRPIHdFIG5FZUQgYU5vVGhFciBCYVNlNjQgRW5Db0RlL2RFY09kRXI/Pz8=</p>
 			<h3>Encode</h3>
 			<label>input:<textarea id=base64_in_encode></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=base64_out_encode readonly></textarea></label>
 			<h3>Decode</h3>
 			<label>input:<textarea id=base64_in_decode></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=base64_out_decode readonly></textarea></label>
-			<script type=module src=/scripts/base64.mjs></script>
+			<script>
+				const in_encode = document.getElementById("base64_in_encode");
+				const out_encode = document.getElementById("base64_out_encode");
+				const in_decode = document.getElementById("base64_in_decode");
+				const out_decode = document.getElementById("base64_out_decode");
+
+				in_encode.addEventListener('input', () => {
+					// Ascii to Base64
+					out_encode.value = window.btoa(in_encode.value);
+				});
+
+				out_encode.addEventListener('click', () => {
+					out_encode.select();
+					document.execCommand('copy');
+				});
+
+				in_decode.addEventListener('input', () => {
+					// Base64 to Ascii
+					out_decode.value = window.atob(in_decode.value);
+				});
+
+				out_decode.addEventListener('click', () => {
+					out_decode.select();
+					document.execCommand('copy');
+				});
+			</script>
 		</details>
 
 		<details>
 			<summary>
 				<h3>Timing fetch</h3>
+				<P>Test how long it takes for a URL to load</P>
 			</summary>
 			<pre>
 let d=Date.now();
@@ -187,6 +274,7 @@ fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 		<details>
 			<summary>
 				<h3>Text to Emoji</h3>
+				<p>Created because of <a href="https://www.reddit.com/r/ComedyCemetery/comments/hq2gvw/is_this_clever/">this thread on Reddit</a></p>
 			</summary>
 			<h3>Encode</h3>
 			<label>input:<textarea id=t2e-in-encode></textarea></label>
@@ -199,7 +287,8 @@ fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 
 		<details>
 			<summary>
-				<h3>Germanizer</h3>
+				<h3>𝔊𝔢𝔯𝔪𝔞𝔫𝔦𝔷𝔢𝔯</h3>
+				<p>(Germanizer)</p>
 			</summary>
 			<h3>Encode</h3>
 			<label>input:<textarea id=germanizer-in-encode></textarea></label>
