@@ -67,11 +67,11 @@ addEventListener("install", event => {
 			"/pages/random-video.html",
 
 			// Projects
-			"/projects/scripts/base64.mjs",
-			"/projects/scripts/mstg.mjs",
-			"/projects/scripts/rot13.mjs",
-			"/projects/scripts/slugify.mjs",
-			"/projects/scripts/starfield.mjs",
+			"/scripts/base64.mjs",
+			"/scripts/mstg.mjs",
+			"/scripts/rot13.mjs",
+			"/scripts/slugify.mjs",
+			"/scripts/starfield.mjs",
 
 			// CSS
 			"/styles/footer.css",
