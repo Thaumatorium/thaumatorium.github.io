@@ -40,6 +40,10 @@ body>footer>nav {
 	flex: 1 1;
 }
 
+body>footer>nav * {
+	vertical-align: middle;
+}
+
 body>footer.secret {
 	flex: 1 1;
 }
