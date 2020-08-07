@@ -194,5 +194,6 @@ h1>a.self-link::before, h2>a.self-link::before, h3>a.self-link::before, h4>a.sel
 }
 
 .crypto-address {
+	font-family: Verdana, Tahoma, sans-serif;
 	font-size: 9px
 }
