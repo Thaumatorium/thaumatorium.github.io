@@ -75,11 +75,15 @@
 					</tr>
 					<tr>
 						<td><a href="https://closure-compiler.appspot.com/home">Google's Closure Compiler</a></td>
-						<td>A Javascript optimizer - turns modern JS into highly optimized, yet compatible, Javascript.</td>
+						<td>A Javascript optimizer - turns modern JS into highly optimized, yet compatible, Javascript. I use this to improve my JS code here and there.</td>
 					</tr>
 					<tr>
 						<td><a href="https://www.mysitemapgenerator.com/">My Sitemap Generator</a></td>
 						<td>Since this is a fully static site I have to update the sitemap manually. I use this site to automate the generation partially.</td>
+					</tr>
+					<tr>
+						<td><a href="https://boxy-svg.com/app/">Boxy SVG editor</a></td>
+						<td>Usually I edit my SVG files by hand, but sometimes I need some basic shapes placed.</td>
 					</tr>
 					<tr>
 						<td><a href="https://www.bing.com/webmasters/robotstxttester">Bing's robot.txt Tester</a></td>
@@ -92,12 +96,14 @@
 		<details>
 			<summary>
 				<h2>Javascript oneliners</h2>
+				<p>Small scripts that I run in the browser to manipulate a website (like remove my reddit comments from a specific subreddit, for example)</p>
 			</summary>
 			<table>
 				<tbody>
 					<tr>
-						<th>note
-						<th>code
+						<th>note</th>
+						<th>code</th>
+					</tr>
 					<tr>
 						<td>Open all collapsed comments on a reddit comment page</td>
 						<td>
@@ -108,6 +114,7 @@
 					}
 				});</code></pre>
 						</td>
+					</tr>
 					<tr>
 						<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes, not codepoints</td>
 						<td><code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
@@ -208,6 +215,7 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 		<details>
 			<summary>
 				<h2>Regular Expressions</h2>
+				<p>Use in combination with $0/$1/$2... to find and replace text.</p>
 			</summary>
 			<table>
 				<thead>
@@ -232,7 +240,7 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 					</tr>
 					<tr>
 						<td>Find non-ASCII letters in vscode;<br>Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your comments...</td>
-						<td>([^\x00-\x7F])</td>
+						<td><code>([^\x00-\x7F])</code></td>
 					</tr>
 					<tr>
 						<td>hit him up when you pay for WoW</td>
@@ -244,11 +252,11 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 					</tr>
 					<tr>
 						<td>Find main content of HTML page</td>
-						<td>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</td>
+						<td><code>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code></td>
 					</tr>
 					<tr>
 						<td>find paragraph tags that aren't closed</td>
-						<td>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</td>
+						<td><code>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
 					</tr>
 				</tbody>
 			</table>
@@ -256,24 +264,8 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 
 		<details>
 			<summary>
-				<h2>Regex explanation</h2>
-			</summary>
-			<pre><code>( ) = grouping; use $1-$9 in the replace window to refer to this. $0 is the whole regex
-[ – ] = a range of choices; usually choices are [a-z], [A-Z], [0-9]
-[abc] = a list of choices; same as (a|b|c)
-^ = not (this only counts if ^ exists between [ ] at the start)
-\x00 = 0
-\x7F = 127
-(?=…)	= Positive lookahead
-(?!…) =	Negative lookahead
-(?:…) =	Non-capturing group; doesn't get saves to $1-$9</code></pre>
-			<br>
-			<p>0-127 is the <a href="http://www.asciitable.com/">available range of ASCII characters</a>, so since we want all NON-ASCII characters, we're using the ^ operator, thus we get all unicode (by excluding ASCII)</p>
-		</details>
-
-		<details>
-			<summary>
 				<h2>National 'warcry'</h2>
+				<p>Twitch sillyness</p>
 			</summary>
 			<p>Not really a 'warcry', but whenever anyone posts any of these terms other nationals will join in repeating it.</p>
 			<p>PS: Sometimes it's just an emote spam</p>
@@ -320,6 +312,7 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 		<details>
 			<summary>
 				<h2>Information for a secret project</h2>
+				<p>I can't show you yet. I'm halfway, but its important it's done.</p>
 			</summary>
 			<table>
 				<tr>
@@ -452,15 +445,15 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 				</tr>
 				<tr>
 					<td>“</td>
-					<td><code>>&amp;OpenCurlyDoubleQuote;</code></td>
+					<td><code>&amp;OpenCurlyDoubleQuote;</code></td>
 				</tr>
 				<tr>
 					<td>”</td>
-					<td><code>>&amp;CloseCurlyDoubleQuote;</code></td>
+					<td><code>&amp;CloseCurlyDoubleQuote;</code></td>
 				</tr>
 				<tr>
 					<td>π</td>
-					<td><code>>&amp;pi;</code></td>
+					<td><code>&amp;pi;</code></td>
 				</tr>
 			</table>
 		</details>
