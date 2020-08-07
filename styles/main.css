@@ -132,7 +132,7 @@ ol>li {
 	font-size: 1.2em;
 }
 
-.article-list>*{
+.article-list>* {
 	list-style-type: ' ';
 	padding: 0 0 10px 0;
 }
@@ -187,4 +187,12 @@ h1>a.self-link::before, h2>a.self-link::before, h3>a.self-link::before, h4>a.sel
 	body>main {
 		margin: 0 20% 0 20%;
 	}
+}
+
+.crypto {
+	display: inline-block;
+}
+
+.crypto-address {
+	font-size: 9px
 }
