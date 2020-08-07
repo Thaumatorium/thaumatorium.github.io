@@ -4,7 +4,6 @@ body>nav a {
 	margin: 0;
 	padding: 8px;
 	text-decoration: none;
-	transition-duration: 300ms;
 	display: inline-block;
 }
 
@@ -17,7 +16,6 @@ body>nav a:hover {
 body>nav {
 	background-color: #940000;
 	text-align: center;
-	transition-duration: 300ms;
 }
 
 body>nav span {

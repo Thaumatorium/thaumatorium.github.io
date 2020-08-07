@@ -12,7 +12,6 @@ body>footer>nav a {
 	margin: 0;
 	padding: 8px;
 	text-decoration: none;
-	transition-duration: 300ms;
 	display: inline-block;
 }
 
@@ -25,7 +24,6 @@ body>footer>nav a:hover {
 body>footer>nav {
 	background-color: #fff;
 	text-align: center;
-	transition-duration: 300ms;
 }
 
 body>footer>nav span {
