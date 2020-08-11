@@ -24,6 +24,8 @@
 	<!-- manifest.json is currently only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
 	<link rel=manifest href=/manifest.json />
 	<link rel=icon href=/images/favicon.svg />
+	<!-- preconnect to the href to save some time. Needed for Google Analytics -->
+	<link rel=preconnect href="https://tpc.googlesyndication.com" />
 	<!-- The reason for the ?v=1 in the CSS url is Cache Busting. This gives me control over which file version is cached on the user's end -->
 	<!-- 2020-08-05 I've removed ?v=1, because I never actually updated it. I can use it again once I ever move from raw HTML to a C# hosted site -->
 	<!-- Lets imagine a user has my first version cached, and I make a change, but the expiry date of the file is a year into the future. I can simply up the number and the browser will replace the file (no matter whether I actually made a change or not) -->
