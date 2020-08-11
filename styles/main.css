@@ -41,6 +41,10 @@ summary {
 	border-bottom: 1px dashed #800;
 }
 
+summary:hover {
+	cursor: pointer;
+}
+
 blockquote {
 	border: 1px dotted rgb(136, 0, 0, 0.2);
 	border-left: 6px solid rgb(136, 0, 0, 0.4);
