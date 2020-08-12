@@ -1,18 +1,8 @@
-/* Layout.css is for layout changes, when the window becomes smaller than a certain width, for example. */
-
-* {
-	/* show CSS' box model */
-	/* border: 1px dotted darkgray; */
-	/* outline: 1px dotted black; */
-}
-
 body {
-	/* remove weird outer margin */
 	margin: 0;
 }
 
 img {
-	/* prevent lazy loading images from reflowing the site */
 	height: auto;
 	max-width: 100%;
 }
