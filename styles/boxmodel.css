@@ -1,0 +1,10 @@
+/* This file makes the HTML box model visible by coloring the border and outline */
+/* This is great for beginners, so you can *see* each element */
+
+/* Add this in the <head> element: */
+/* <link rel="stylesheet" href="/styles/boxmodel.css"> */
+
+* {
+	border: 1px dotted darkgray;
+	outline: 1px dotted black;
+}
