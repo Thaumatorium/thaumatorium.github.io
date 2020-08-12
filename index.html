@@ -85,11 +85,16 @@
 		gtag('config', 'UA-169207994-1');
 	</script> -->
 	<script>
-		(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
-		;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
-		;c.parentNode.insertBefore(a,c)
-		})(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
-		
+		// e and a are 2 vars that arecreated to be used in the function itself
+		((w, d, n, s, u, e, a) => {
+			w[n] = w[n] || function () { (w[n].q = w[n].q || []).push(arguments) };
+			e = d.createElement(s);
+			a = d.getElementsByTagName(s)[0];
+			e.async = true;
+			e.src = u;
+			a.parentNode.insertBefore(e, a)
+		})(window, document, "galite", "script", "https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+
 		galite('create', 'UA-169207994-1', 'auto');
 		galite('send', 'pageview');
 	</script>
@@ -253,22 +258,18 @@
 			<figcaption>Why yes, that <em>is</em> a custom Ko-fi button,<br> based on one that <a href="https://www.ko-fi.com/img/githubbutton_sm.svg">Ko-fi provided</a>,<br> but optimized AF. Why do you ask?</figcaption>
 		</figure>
 
-		<figure class=crypto>
-			<h3>Want to use the same style of comments for your site?</h3>
-			<p>Use my <a href="https://talk.hyvor.com?aff=5844">referral link</a> to sign up! <em>If</em> you then pay Hyvor 30% will be passed onto me!</p>
-		</figure>
+			<h2 id=support>
+				<a href="#support" class="self-link"></a>
+				Support
+			</h2>
 
-		<figure class=crypto>
-			<img src=/images/crypto/bitcoin.png />
-			<p>Bitcoin</p>
-			<p class=crypto-address>17jBxTUX4ea3uPjHrxPv9DgAQ7y9Q5gWY1</p>
-		</figure>
+			<figure class=crypto>
+				<a href=https://ko-fi.com/J3J61VMSC rel=noopener target=_blank>
+					<img loading=lazy width=223 height=30 src="/images/ko-fi-support.svg" alt='Buy Me a Coffee at ko-fi.com' />
+				</a>
+				<figcaption>Why yes, that <em>is</em> a custom Ko-fi button,<br> based on one that <a href="https://www.ko-fi.com/img/githubbutton_sm.svg">Ko-fi provided</a>,<br> but optimized AF. Why do you ask?</figcaption>
+			</figure>
 
-		<figure class=crypto>
-			<img src=/images/crypto/ethereum.png />
-			<p>Ethereum</p>
-			<p class=crypto-address>0x673d6723fCFbEBDC97Aa481d2E45777bfab60267</p>
-		</figure>
 
 		<figure class=crypto>
 			<img src=/images/crypto/litecoin.png />
