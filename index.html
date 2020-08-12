@@ -35,12 +35,12 @@
 	<!-- 2020-08-05 I've removed ?v=1, because I never actually updated it. I can use it again once I ever move from raw HTML to a C# hosted site -->
 	<!-- Lets imagine a user has my first version cached, and I make a change, but the expiry date of the file is a year into the future. I can simply up the number and the browser will replace the file (no matter whether I actually made a change or not) -->
 	<!-- Now I'm, as of writing, hosting on github.io and I have no control over the expiry date (which is 10 minutes, IIRC), but now I can remember myself to do this in the future once I go the self-hosting route :) -->
-	<link rel="stylesheet" href="/styles/layout.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="stylesheet" href="/styles/header.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="stylesheet" href="/styles/nav.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="stylesheet" href="/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="stylesheet" href="/styles/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<link rel="stylesheet" href="/styles/cookie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel=preload href=/styles/layout.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<link rel=preload href=/styles/header.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<link rel=preload href=/styles/nav.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<link rel=preload href=/styles/footer.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<link rel=preload href=/styles/cookie.css as=style onload="this.rel='stylesheet';this.onload=null">
 	<noscript>
 		<link rel=stylesheet href="/styles/layout.css" />
 		<link rel=stylesheet href="/styles/header.css" />
@@ -73,6 +73,7 @@
 	<meta name="twitter:image:height" content="668" />
 
 	<!-- <script data-ad-client="ca-pub-7577528621475749" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+	<script async src="polyfill.js"></script>
 </head>
 
 <body>
