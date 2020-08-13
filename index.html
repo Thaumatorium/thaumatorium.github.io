@@ -256,49 +256,84 @@
 			Support
 		</h2>
 
-		<figure class=crypto>
+		<h3 id=support-ko-fi>
+			<a href="#support-ko-fi" class="self-link"></a>
+			Ko-fi
+		</h3>
+
+		<figure>
 			<a href=https://ko-fi.com/J3J61VMSC rel=noopener target=_blank>
 				<img loading=lazy width=223 height=30 src="/images/ko-fi-support.svg" alt='Buy Me a Coffee at ko-fi.com' />
 			</a>
 			<figcaption>Why yes, that <em>is</em> a custom Ko-fi button,<br> based on one that <a href="https://www.ko-fi.com/img/githubbutton_sm.svg">Ko-fi provided</a>,<br> but optimized AF. Why do you ask?</figcaption>
 		</figure>
 
-		<figure class=crypto>
-			<h3>Want to use the same style of comments for your site?</h3>
+		<h3 id=support-hyvor>
+			<a href="#support-hyvor" class="self-link"></a>
+			Hyvor comment section
+		</h3>
+
+		<figure>
+			<p>Want to use the same style of comments for your site?</p>
 			<p>Use my <a href="https://talk.hyvor.com?aff=5844">referral link</a> to sign up! <em>If</em> you then pay Hyvor 30% will be passed onto me!</p>
 		</figure>
 
-		<figure class=crypto>
+		<h3 id=support-crypto>
+			<a href="#support-crypto" class="self-link"></a>
+			Crypto
+		</h3>
+
+		<p>
+			<script>
+				const showCrypto = () => {
+					document.querySelectorAll(".crypto").forEach(el => el.style.display = "none")
+					let val = document.getElementById("cryptotype").value;
+					document.getElementById(val).style.display="";
+				}
+			</script>
+
+			<label for=cryptotype>Select cointype:</label>
+			<select id=cryptotype name=cryptotype onchange="showCrypto(this)">
+				<option value=Bitcoin selected> Bitcoin </option>
+				<option value=Ethereum> Ethereum </option>
+				<option value=Litecoin> Litecoin </option>
+				<option value=Ripple> Ripple </option>
+				<option value=Stellar> Stellar </option>
+				<option value=Doge> Doge </option>
+			</select>
+		</p>
+
+		<figure id=Bitcoin class=crypto>
 			<img loading=lazy width=200 height=200 src=/images/crypto/bitcoin.png alt="My Bitcoin address in the form of a QR code" />
 			<p>Bitcoin</p>
 			<p class=crypto-address>17jBxTUX4ea3uPjHrxPv9DgAQ7y9Q5gWY1</p>
 		</figure>
 
-		<figure class=crypto>
+		<figure id=Ethereum style="display: none" class=crypto>
 			<img loading=lazy width=200 height=200 src=/images/crypto/ethereum.png alt="My Ethereum address in the form of a QR code" />
 			<p>Ethereum</p>
 			<p class=crypto-address>0x673d6723fCFbEBDC97Aa481d2E45777bfab60267</p>
 		</figure>
 
-		<figure class=crypto>
+		<figure id=Litecoin style="display: none" class=crypto>
 			<img loading=lazy width=200 height=200 src=/images/crypto/litecoin.png alt="My Litecoin address in the form of a QR code" />
 			<p>Litecoin</p>
 			<p class=crypto-address>LVc2dcwPySpHYWgsiwmbHe8hS4THLJm1kP</p>
 		</figure>
 
-		<figure class=crypto>
+		<figure id=Ripple style="display: none" class=crypto>
 			<img loading=lazy width=200 height=200 src=/images/crypto/ripple.png alt="My Ripple address in the form of a QR code" />
 			<p>Ripple</p>
 			<p class=crypto-address>rB427Un9RbYncAxJKZeeBT2pupMqaYPj22</p>
 		</figure>
 
-		<figure class=crypto>
+		<figure id=Stellar style="display: none" class=crypto>
 			<img loading=lazy width=200 height=200 src=/images/crypto/stellar.png alt="My Stellar address in the form of a QR code" />
 			<p>Stellar</p>
 			<p class=crypto-address>GBT4ZUKC65GAHF7VBYU5ROC5JKV2BWXVD6K5H7BIN4XOT6OMGIOZLICL</p>
 		</figure>
 
-		<figure class=crypto>
+		<figure id=Doge style="display: none" class=crypto>
 			<img loading=lazy width=200 height=200 src=/images/crypto/doge.png alt="My Doge address in the form of a QR code" />
 			<p>Doge</p>
 			<p class=crypto-address>DHbW72pYTog8GnuugZ1UXib5YmEv8ws4Ba</p>
