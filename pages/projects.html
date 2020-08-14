@@ -66,7 +66,7 @@
 				<h3>Thaumatorium.com</h3>
 				<p>This site!</p>
 			</summary>
-			<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you cansee the first version uses <code>elm.js</code>, but I found it to be too opinionated. Not to mention I found the <code>information/javascript</code> ratio to be too low.</p>
+			<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you cansee the first version uses <samp>elm.js</samp>, but I found it to be too opinionated. Not to mention I found the <var>information/javascript</var> ratio to be too low.</p>
 			<p>Eventually, after reading up on <a href=https://eloquentjavascript.net />JS</a>, <a href=https://html.spec.whatwg.org/dev />HTML</a> and <a href=https://www.w3.org/TR/css-2018 />CSS</a>, I decided to just write everything in pure web tech. And why not? I don't need a several kilobytes of javascript, just to show some articles!?</p>
 			<p>And thus this site was born! I'm as of <time datetime=2020-05-09>2020-05-09</time> still busy writing and re-writing the site because I'm still building up experience, and I still have a small <a href=/#todo>TODO</a> list and I'll have to finish, but it's fine.</p>
 			<p>If you want to see what this site used to look like, check out <a href=https://web.archive.org/https://thaumatorium.com />archive.org</a>.</p>
@@ -86,7 +86,7 @@
 				<h3>Starfield</h3>
 				<p>It's the first type of project I've ever created! Now available in an HTML Canvas element.</p>
 			</summary>
-			<p>The first one I ever made was in cmd.exe, with some janky-ass <code>c</code> moving <code>*</code> and <code>.</code> characters as different sized stars from the right to the left.</p>
+			<p>The first one I ever made was in cmd.exe, with some janky-ass <samp>c</samp> moving <samp>*</samp> and <samp>.</samp> characters as different sized stars from the right to the left.</p>
 			<p>Over the years I created different versions (a 2D and even a 3D OpenGL variant!)</p>
 			<p>Now that I know some HTML/CSS/JS, I decided to recreate this project for the web with plain HTML/CSS/JS! No crazy libraries needed!</p>
 			<canvas id=starfield></canvas>
@@ -235,7 +235,7 @@
 				<h3>Timing fetch</h3>
 				<P>Test how long it takes for a URL to load</P>
 			</summary>
-			<pre><code>
+			<pre><code class=lang-javascript>
 let d=Date.now();
 fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 	.then(response => response.json())

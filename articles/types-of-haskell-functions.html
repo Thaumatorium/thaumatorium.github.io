@@ -75,7 +75,7 @@
 					<td>Pure</td>
 					<td>Takes an input, returns an output – no side effects (data changes)</td>
 					<td>
-						<pre><code>f :: Int -> Int
+						<pre><code class=lang-haskell>f :: Int -> Int
 f x = x</code></pre>
 					</td>
 				</tr>
@@ -83,7 +83,7 @@ f x = x</code></pre>
 					<td>Predicate</td>
 					<td>Takes an input, returns a Bool </td>
 					<td>
-						<pre><code>f :: Int -> Bool
+						<pre><code class=lang-haskell>f :: Int -> Bool
 f x = x > 5</code></pre>
 					</td>
 				</tr>
@@ -91,7 +91,7 @@ f x = x > 5</code></pre>
 					<td>Recursive</td>
 					<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input </td>
 					<td>
-						<pre><code>length :: [a] -> Int
+						<pre><code class=lang-haskell>length :: [a] -> Int
 length (x:xs) = 1 + length xs</code></pre>
 					</td>
 				</tr>
@@ -99,10 +99,10 @@ length (x:xs) = 1 + length xs</code></pre>
 					<td>Curried</td>
 					<td>You can give a function a part of the input to create a new function (imperative languages like C or Python always want all arguments at once)</td>
 					<td>
-						<pre><code>timesTwo :: Int -> Int
+						<pre><code class=lang-haskell>timesTwo :: Int -> Int
 timesTwo = 2 *</code></pre>
-						As you can see, the <code>*</code> operator only has one input – It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:
-						<pre><code>timesTwo 3
+						As you can see, the <samp>*</samp> operator only has one input – It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:
+						<pre><code class=lang-haskell>timesTwo 3
 = { apply timesTwo }
 2 * 3
 = { apply * }
@@ -112,13 +112,13 @@ timesTwo = 2 *</code></pre>
 				<tr>
 					<td>Applicative</td>
 					<td>Can take a variable amount of inputs, returns an output </td>
-					<td>Uses a function (<code>pure</code>) and an operator (<code>&lt;*&gt;</code>), where 'pure' lifts the function into a wrapped type/function and '&lt;*&gt;' accepts a wrapped type/function and a variable (that's also wrapped)</td>
+					<td>Uses a function (<samp>pure</samp>) and an operator (<samp>&lt;*&gt;</samp>), where 'pure' lifts the function into a wrapped type/function and '&lt;*&gt;' accepts a wrapped type/function and a variable (that's also wrapped)</td>
 				</tr>
 				<tr>
 					<td>Monadic</td>
 					<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>= operator or do notation</td>
 					<td>From: <a href=https://wiki.haskell.org/All_About_Monads>https://wiki.haskell.org/All_About_Monads</a>
-						<pre><code>maternalGrandfather :: Sheep -&gt; Maybe Sheep
+						<pre><code class=lang-haskell>maternalGrandfather :: Sheep -&gt; Maybe Sheep
 maternalGrandfather s = (return s) &gt;&gt;= mother &gt;&gt;= father
 -- alternatively
 mothersPaternalGrandfather :: Sheep -&gt; Maybe Sheep

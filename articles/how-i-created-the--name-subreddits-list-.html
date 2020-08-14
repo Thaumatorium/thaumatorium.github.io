@@ -74,12 +74,12 @@
 		<p>Now, where to find a list of names? <em>Books</em>, of course!</p>
 		<p>After a short search I found <a>Bruce Lansky's "100,000+ baby names"</a>, so I bought the Kindle version, converted it to text and got to work in my text editor to filter out most (if not all) names.</p>
 		<p>After fiddling with regex for a bit, I got left with a list of 95477 names. Not really 100k, but close enough.</p>
-		<p>While thinking about how to filter the subreddit list, I remembered that Excel had such a functionality! Quickly throwing those two lists in an Excel sheet and using <code>Conditional Formatting</code> on both lists to mark the names that were in both was a breeze, but to then <em>filter</em> those lists took quite a bit longer. This is mostly because Excel isn't made to filter lists of at least a 100k items!</p>
+		<p>While thinking about how to filter the subreddit list, I remembered that Excel had such a functionality! Quickly throwing those two lists in an Excel sheet and using <samp>Conditional Formatting</samp> on both lists to mark the names that were in both was a breeze, but to then <em>filter</em> those lists took quite a bit longer. This is mostly because Excel isn't made to filter lists of at least a 100k items!</p>
 		<p>At first I tried to filter the subreddit list (which was about a million items long), but after two hours of waiting for the list to filter out all unmarked items, I force-quit Excel and tried to do the same on the names list instead. Success!</p>
 		<p>I was left with a neat list of just a "measly" 8221 items it was time to turn to reddit to extract some information.</p>
-		<p>Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding <code>.json</code> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <code>/r/[SUBREDDIT]/about/.json</code>, instead of the normal <code>/r/[SUBREDDIT]/.json</code>, but eh, it's not the worst. </p>
+		<p>Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding <samp>.json</samp> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <samp>/r/[SUBREDDIT]/about/.json</samp>, instead of the normal <samp>/r/[SUBREDDIT]/.json</samp>, but eh, it's not the worst. </p>
 		<p>Now I was ready to extract the information I needed, but how? Well, this <em>is</em> the web, so it seems reasonable to use Javascript (even though I don't like the language for several reasons) for the task at hand, which I did.</p>
-		<p>I turned the list of name-subreddits into a list of URLs, through arcane magic called <code>regex</code>, after which I threw the list into a <code>.js</code> file.</p>
+		<p>I turned the list of name-subreddits into a list of URLs, through arcane magic called <samp>regex</samp>, after which I threw the list into a <samp>.js</samp> file.</p>
 		<pre><code>
 				const urls = ["https://old.reddit.com/r/aakash/about/.json", 
 				"https://old.reddit.com/r/aalia/about/.json", 
@@ -88,7 +88,7 @@
 				"https://old.reddit.com/r/whittaker/about/.json", 
 				"https://old.reddit.com/r/who/about/.json", 
 				"https://old.reddit.com/r/whoopee/about/.json"]
-			</code></pre>
+		</code></pre>
 		<p>And remember kids, Reddit has a rate limit of <strong>30 requests per minute!</strong> If you go over that, you'll be temporarily blocked!</p>
 	</main>
 
