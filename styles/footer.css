@@ -45,5 +45,10 @@ body>footer>nav * {
 }
 
 body>footer.secret {
+	text-decoration: none;
+	color: #800;
+	cursor: default;
+	font-family: sans-serif;
+	font-size: small;
 	flex: 1 1;
 }
