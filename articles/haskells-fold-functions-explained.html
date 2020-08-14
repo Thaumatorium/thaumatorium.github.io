@@ -82,10 +82,10 @@ foldr f z (x:xs) = f x (foldr f z xs)
 		<p>The answer is 10, as 1 + 2 + 3 + 4 = 10, but what's that 0 doing there? That is the identity value for +. I haven't written an article about the identity value for operators (or functions), but here's what you need to know: The identity value of a function means that if you put any other value in, you'll get that value back out: x + 0 = x.</p>
 		<p>Other operators may have different values:</p>
 		<ul>
-			<li>Subtraction (<code>-</code>) has <code>0 (x – 0 = x)</code> as identity</li>
-			<li>Multiplication (<code>*</code>) has <code>1 (multiplying by 0 would always give you 0, which is unwanted behavior)</code> as identity</li>
-			<li>Division (<code>/</code>) has 1 as identity</li>
-			<li>Exponentiation (<code>^</code>) (aka "the power operator") also has 1 as identity value.</li>
+			<li>Subtraction (<samp>-</samp>) has <samp>0 (x – 0 = x)</samp> as identity</li>
+			<li>Multiplication (<samp>*</samp>) has <samp>1 (multiplying by 0 would always give you 0, which is unwanted behavior)</samp> as identity</li>
+			<li>Division (<samp>/</samp>) has 1 as identity</li>
+			<li>Exponentiation (<samp>^</samp>) (aka "the power operator") also has 1 as identity value.</li>
 			<li>f() where f outputs a list has the empty list ([]) as identity</li>
 		</ul>
 		<p>But how is 10 calculated? Since the function is called fold <strong>right</strong>, we know two things: all grouped parentheses (more on that below the executed code) are on the right and the identity value will be the last value inserted.</p>

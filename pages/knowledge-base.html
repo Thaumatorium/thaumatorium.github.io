@@ -120,7 +120,7 @@
 					<tr>
 						<td>Open all collapsed comments on a reddit comment page</td>
 						<td>
-							<pre><code>document.querySelectorAll(".expand")
+							<pre><code class=lang-javascript>document.querySelectorAll(".expand")
 				.forEach(el => {
 					if (el.innerText == "[+]") {
 						el.click();
@@ -129,13 +129,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td>Manipulating Unicode strings per code point, not per byte. <code>"".split()</code> gives you bytes, not codepoints</td>
-						<td><code>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
+						<td>Manipulating Unicode strings per code point, not per byte. <code class=lang-javascript>"".split()</code> gives you bytes, not codepoints</td>
+						<td><code class=lang-javascript>Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
 					</tr>
 					<tr>
-						<td>Remove all <code>.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
+						<td>Remove all <code class=lang-css>.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
 						<td>
-							<pre><code>document.querySelectorAll(".bighead")
+							<pre><code class=lang-javascript>document.querySelectorAll(".bighead")
 				.forEach(el => {
 					el.parentElement
 						.removeChild(el)
@@ -145,14 +145,14 @@
 					<tr>
 						<td>Make console.log use colors</td>
 						<td>
-							<pre><code>const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
+							<pre><code class=lang-javascript>const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
 console.log('%cService worker installing', CONSOLE_STYLE);</code></pre>
 						</td>
 					</tr>
 					<tr>
-						<td>This opens all <code>are you sure?</code> dialogs for comments, on a profile page of Reddit</td>
+						<td>This opens all <samp>are you sure?</samp> dialogs for comments, on a profile page of Reddit</td>
 						<td>
-							<pre><code>let ys = Array.from(document.getElementsByClassName("score likes"))
+							<pre><code class=lang-javascript>let ys = Array.from(document.getElementsByClassName("score likes"))
 							.filter(e => parseInt(e.title) < 3)
 							.map(e => e.parentElement.parentElement.parentElement)
 							.map(el => el.querySelector(`[data-event-action*="delete"]`));
@@ -164,7 +164,7 @@ ys.map(e => e.click());</code></pre>
 					<tr>
 						<td>Removing duplicates</td>
 						<td>
-							<pre><code>const cities = ["Den Haag","Den Haag",
+							<pre><code class=lang-javascript>const cities = ["Den Haag","Den Haag",
 								"Utrecht", "Utrecht",
 								"Arnhem", "Arnhem",
 								"MiddelBurg", "MiddelBurg",
@@ -176,7 +176,7 @@ const uniqueCities = [...new Set(cities)];
 					<tr>
 						<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)</td>
 						<td>
-							<pre><code>let xs = document.querySelectorAll("[query goes here]");
+							<pre><code class=lang-javascript>let xs = document.querySelectorAll("[query goes here]");
 let i = 0;
 let id = setInterval(() => {console.log(i); xs[i].click(); i++;}, 1100);
 clearInterval(id);</code></pre>
@@ -185,7 +185,7 @@ clearInterval(id);</code></pre>
 					<tr>
 						<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
 						<td>
-							<pre><code>Array.from(document.getElementsByClassName("subreddit hover"))
+							<pre><code class=lang-javascript>Array.from(document.getElementsByClassName("subreddit hover"))
 									 .filter(el => el.innerHTML == "TheLastOfUs2")
 									 .map(el => el.parentElement.parentElement)
 									 .map(el => {
@@ -198,7 +198,7 @@ clearInterval(id);</code></pre>
 					<tr>
 						<td>Use on Twitch to track the amount of currently used emotes</td>
 						<td>
-							<pre><code>const groupBy = (xs, key) => xs.reduce((acc, x) => {
+							<pre><code class=lang-javascript>const groupBy = (xs, key) => xs.reduce((acc, x) => {
 	(acc[x[key]] = acc[x[key]] || []).push(x);
 	return acc;
 }, {});
@@ -239,20 +239,20 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 				<tbody>
 					<tr>
 						<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br> Edit the number in between {} to find the nth comma.</td>
-						<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code></td>
+						<td><code class=lang-regex>,(?=(?:[^,]*,){3}[^,]*$)</code></td>
 					</tr>
 					</tr>
 					<tr>
-						<td>Every line that doesn't start with a <code>.</code> via regex;<br>I was trying to filter bootstrap.css from all non-classes</td>
-						<td><code>^((?!^\.).)*$</code></td>
+						<td>Every line that doesn't start with a <samp>.</samp> via regex;<br>I was trying to filter bootstrap.css from all non-classes</td>
+						<td><code class=lang-regex>^((?!^\.).)*$</code></td>
 					</tr>
 					<tr>
 						<td>Filter everything from a : till the end of the line</td>
-						<td><code>[:].*$</code></td>
+						<td><code class=lang-regex>[:].*$</code></td>
 					</tr>
 					<tr>
 						<td>Find non-ASCII letters in vscode;<br>Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your comments...</td>
-						<td><code>([^\x00-\x7F])</code></td>
+						<td><code class=lang-regex>([^\x00-\x7F])</code></td>
 					</tr>
 					<tr>
 						<td>hit him up when you pay for WoW</td>
@@ -264,11 +264,11 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 					</tr>
 					<tr>
 						<td>Find main content of HTML page</td>
-						<td><code>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code></td>
+						<td><code class=lang-regex>&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code></td>
 					</tr>
 					<tr>
 						<td>find paragraph tags that aren't closed</td>
-						<td><code>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
+						<td><code class=lang-regex>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
 					</tr>
 				</tbody>
 			</table>
@@ -333,139 +333,139 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 				</tr>
 				<tr>
 					<td>𝑥</td>
-					<td><code>&amp;#119909;</code></td>
+					<td><code class=lang-html>&amp;#119909;</code></td>
 				</tr>
 				<tr>
 					<td>ə</td>
-					<td><code>&amp;#601;</code></td>
+					<td><code class=lang-html>&amp;#601;</code></td>
 				</tr>
 				<tr>
 					<td>α</td>
-					<td><code>&amp;alpha;</code></td>
+					<td><code class=lang-html>&amp;alpha;</code></td>
 				</tr>
 				<tr>
 					<td>β</td>
-					<td><code>&amp;beta;</code></td>
+					<td><code class=lang-html>&amp;beta;</code></td>
 				</tr>
 				<tr>
 					<td>𝔟</td>
-					<td><code>&amp;bfr;</code></td>
+					<td><code class=lang-html>&amp;bfr;</code></td>
 				</tr>
 				<tr>
 					<td>𝔅</td>
-					<td><code>&amp;Bfr;</code></td>
+					<td><code class=lang-html>&amp;Bfr;</code></td>
 				</tr>
 				<tr>
 					<td>𝔠</td>
-					<td><code>&amp;cfr;</code></td>
+					<td><code class=lang-html>&amp;cfr;</code></td>
 				</tr>
 				<tr>
 					<td>ℭ</td>
-					<td><code>&amp;Cfr;</code></td>
+					<td><code class=lang-html>&amp;Cfr;</code></td>
 				</tr>
 				<tr>
 					<td>†</td>
-					<td><code>&amp;dagger;</code></td>
+					<td><code class=lang-html>&amp;dagger;</code></td>
 				</tr>
 				<tr>
 					<td>‡</td>
-					<td><code>&amp;ddagger;</code></td>
+					<td><code class=lang-html>&amp;ddagger;</code></td>
 				</tr>
 				<tr>
 					<td>𝔢</td>
-					<td><code>&amp;efr;</code></td>
+					<td><code class=lang-html>&amp;efr;</code></td>
 				</tr>
 				<tr>
 					<td>𝔈</td>
-					<td><code>&amp;Efr;</code></td>
+					<td><code class=lang-html>&amp;Efr;</code></td>
 				</tr>
 				<tr>
 					<td>=</td>
-					<td><code>&amp;equals;</code></td>
+					<td><code class=lang-html>&amp;equals;</code></td>
 				</tr>
 				<tr>
 					<td>𝔣</td>
-					<td><code>&amp;ffr;</code></td>
+					<td><code class=lang-html>&amp;ffr;</code></td>
 				</tr>
 				<tr>
 					<td>γ</td>
-					<td><code>&amp;gamma;</code></td>
+					<td><code class=lang-html>&amp;gamma;</code></td>
 				</tr>
 				<tr>
 					<td>…</td>
-					<td><code>&amp;hellip;</code></td>
+					<td><code class=lang-html>&amp;hellip;</code></td>
 				</tr>
 				<tr>
 					<td>𝔨</td>
-					<td><code>&amp;kfr;</code></td>
+					<td><code class=lang-html>&amp;kfr;</code></td>
 				</tr>
 				<tr>
 					<td>𝔩</td>
-					<td><code>&amp;lfr;</code></td>
+					<td><code class=lang-html>&amp;lfr;</code></td>
 				</tr>
 				<tr>
 					<td>ℳ</td>
-					<td><code>&amp;Mscr;</code></td>
+					<td><code class=lang-html>&amp;Mscr;</code></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td><code>&amp;nbsp;</code></td>
+					<td><code class=lang-html>&amp;nbsp;</code></td>
 				</tr>
 				<tr>
 					<td>𝔬</td>
-					<td><code>&amp;ofr;</code></td>
+					<td><code class=lang-html>&amp;ofr;</code></td>
 				</tr>
 				<tr>
 					<td>ö</td>
-					<td><code>&amp;ouml;</code></td>
+					<td><code class=lang-html>&amp;ouml;</code></td>
 				</tr>
 				<tr>
 					<td>𝔭</td>
-					<td><code>&amp;pfr;</code></td>
+					<td><code class=lang-html>&amp;pfr;</code></td>
 				</tr>
 				<tr>
 					<td>′</td>
-					<td><code>&amp;prime;</code></td>
+					<td><code class=lang-html>&amp;prime;</code></td>
 				</tr>
 				<tr>
 					<td>𝔮</td>
-					<td><code>&amp;qfr;</code></td>
+					<td><code class=lang-html>&amp;qfr;</code></td>
 				</tr>
 				<tr>
 					<td>→</td>
-					<td><code>&amp;rarr;</code></td>
+					<td><code class=lang-html>&amp;rarr;</code></td>
 				</tr>
 				<tr>
 					<td>𝔯</td>
-					<td><code>&amp;rfr;</code></td>
+					<td><code class=lang-html>&amp;rfr;</code></td>
 				</tr>
 				<tr>
 					<td>§</td>
-					<td><code>&amp;sect;</code></td>
+					<td><code class=lang-html>&amp;sect;</code></td>
 				</tr>
 				<tr>
 					<td>𝔘</td>
-					<td><code>&amp;Ufr;</code></td>
+					<td><code class=lang-html>&amp;Ufr;</code></td>
 				</tr>
 				<tr>
 					<td>𝒰</td>
-					<td><code>&amp;Uscr;</code></td>
+					<td><code class=lang-html>&amp;Uscr;</code></td>
 				</tr>
 				<tr>
 					<td>Ü</td>
-					<td><code>&amp;Uuml;</code></td>
+					<td><code class=lang-html>&amp;Uuml;</code></td>
 				</tr>
 				<tr>
 					<td>“</td>
-					<td><code>&amp;OpenCurlyDoubleQuote;</code></td>
+					<td><code class=lang-html>&amp;OpenCurlyDoubleQuote;</code></td>
 				</tr>
 				<tr>
 					<td>”</td>
-					<td><code>&amp;CloseCurlyDoubleQuote;</code></td>
+					<td><code class=lang-html>&amp;CloseCurlyDoubleQuote;</code></td>
 				</tr>
 				<tr>
 					<td>π</td>
-					<td><code>&amp;pi;</code></td>
+					<td><code class=lang-html>&amp;pi;</code></td>
 				</tr>
 			</table>
 		</details>
