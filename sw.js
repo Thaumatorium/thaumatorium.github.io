@@ -24,6 +24,7 @@ addEventListener("install", event => {
 			"/manifest.json",
 
 			// Articles
+			"/articles/index.html",
 			"/articles/find-every-line-that-doesn-t-start-with-a-dot-via-regex.html",
 			"/articles/find-non-ascii-letters-in-vscode.html",
 			"/articles/find-the-nth-comma-via-regex.html",
@@ -59,7 +60,6 @@ addEventListener("install", event => {
 
 			// website pages
 			"/pages/about.html",
-			"/pages/articles.html",
 			"/pages/experimentations.html",
 			"/pages/praetorianpi.html",
 			"/pages/projects.html",
