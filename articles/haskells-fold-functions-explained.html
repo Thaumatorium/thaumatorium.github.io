@@ -60,6 +60,25 @@
 				<div class=article-author>Author:<br>NostraDavid</div>
 			</div>
 		</hgroup>
+		<script>
+			const enableCH = () => {
+				let defaultCSS = document.createElement('link');
+				defaultCSS.setAttribute('rel', 'stylesheet');
+				defaultCSS.setAttribute('href', "/scripts/styles/default.css")
+				document.querySelector("head").appendChild(defaultCSS);
+
+				let highlight = document.createElement('script');
+				highlight.setAttribute('type', 'text/javascript');
+				highlight.setAttribute('src', "/scripts/highlight.pack.js");
+				highlight.addEventListener('load', () => {
+					document.querySelectorAll('code[class^="lang-"]').forEach((block) => {
+						hljs.highlightBlock(block);
+					});
+				})
+				document.querySelector("head").appendChild(highlight);
+			}
+		</script>
+		<button type=button onclick="enableCH()">enable syntax highlighting on this page</button>
 		<p>Protip: Use https://repl.it/ to run your own little test programs, yes they support other languages than Haskell too.</p>
 		<p>Haskell's fold functions are Higher Order and Recursive functions (if you've read <a href=https://thaumatorium.wordpress.com/2018/10/15/types-or-classes-of-haskell-functions>Types (or classes) of Haskell functions</a>, you'll know what that is) where it takes a function, a first/final item (more on this later), a list of things and returns a single reduces item.</p>
 		<h2 id=foldr>
