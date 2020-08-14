@@ -14,13 +14,11 @@
 #cookie-notification>p {
 	padding: 16px;
 	margin: 0;
-	font-size: 1.1em;
 	flex-wrap: wrap;
 }
 
 #cookie-notification>button {
 	color: #800;
-	font-size: 1.1em;
 	font-weight: bold;
 	padding: 14px;
 	background: 0;

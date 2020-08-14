@@ -1,3 +1,7 @@
+body {
+	font-size: 1.2em;
+}
+
 body>main {
 	/* text-align: center; */
 	padding: 3vw;
@@ -56,7 +60,7 @@ blockquote {
 blockquote:before {
 	color: rgb(136, 0, 0, 0.4);
 	content: open-quote;
-	font-size: 4em;
+	font-size: 2em;
 	line-height: 0.1em;
 	margin-right: 0.01em;
 	vertical-align: -0.4em;
@@ -72,7 +76,6 @@ body a {
 
 body>main p {
 	margin: 0 0 5px 0;
-	font-size: 1.2em;
 	padding: 5px 0 10px 0;
 }
 
@@ -125,15 +128,10 @@ ul {
 
 ul>li {
 	list-style-type: '– ';
-	font-size: 1.2em;
 }
 
 ol {
 	padding: 10px 0 10px 30px;
-}
-
-ol>li {
-	font-size: 1.2em;
 }
 
 .article-list>* {
@@ -199,5 +197,5 @@ h1>a.self-link::before, h2>a.self-link::before, h3>a.self-link::before, h4>a.sel
 
 .crypto-address {
 	font-family: Verdana, Tahoma, sans-serif;
-	font-size: 9px
+	font-size: .5em
 }
