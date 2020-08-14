@@ -22,7 +22,7 @@ body>header .subtitle {
 	text-transform: uppercase;
 }
 
-body>header h2::first-letter {
+body>header .subtitle::first-letter {
 	/* Remember that em is relative to what's inherited */
 	/* This is basically 120% of the cascaded value */
 	font-size: 1.2em;
