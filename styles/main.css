@@ -155,6 +155,7 @@ ol {
 pre {
 	/* tab size 2 or death! */
 	tab-size: 2;
+	white-space: pre-wrap;
 }
 
 q {
