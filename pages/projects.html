@@ -235,14 +235,14 @@
 				<h3>Timing fetch</h3>
 				<P>Test how long it takes for a URL to load</P>
 			</summary>
-			<pre>
+			<pre><code>
 let d=Date.now();
 fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 	.then(response => response.json())
 	.then(data => {
 		console.log(`${Date.now()-d}ms\t${JSON.stringify(data).length} bytes`);
 	});
-						</pre>
+</code></pre>
 			<p><strong>Example URLs:</strong></p>
 			<ul>
 				<li>https://hacker-news.firebaseio.com/v0/user/NostraDavid.json</li>

@@ -66,11 +66,11 @@
 			<a href="#foldr" class="self-link"></a>
 			Foldr
 		</h2>
-		<pre>
+		<pre><code>
 foldr :: (a -> b -> b) -> b -> [a] -> b
 foldr f z []		 = z
 foldr f z (x:xs) = f x (foldr f z xs)
-</pre>
+</code></pre>
 		<p>There are two cases:</p>
 		<ul>
 			<li>The base case (where the input list is empty)</li>
@@ -90,7 +90,7 @@ foldr f z (x:xs) = f x (foldr f z xs)
 		</ul>
 		<p>But how is 10 calculated? Since the function is called fold <strong>right</strong>, we know two things: all grouped parentheses (more on that below the executed code) are on the right and the identity value will be the last value inserted.</p>
 		<p>If I run the code by hand (if you've ever followed a Logic course, you'll recognize this as <strong>induction</strong>) we'll get the following execution:</p>
-		<pre>
+		<pre><code>
 foldr (+) 0 [1,2,3,4]
 = { apply foldr, since the input is not an empty list we apply the general case }
 (+) 1 (foldr (+) 0 [2,3,4])
@@ -110,7 +110,7 @@ foldr (+) 0 [1,2,3,4]
 (+) 1 9
 = { apply the most last + operator }
 10
-</pre>
+</code></pre>
 		<p>Now when you take a look at the moment all foldrs have been applied, you may see you can rewrite that line from:</p>
 		<p><code>(+) 1 ((+) 2 ((+) 3 ((+) 4 0)))</code></p>
 		<p>to</p>
@@ -122,7 +122,7 @@ foldr (+) 0 [1,2,3,4]
 		<p><code>1 - (2 - (3 - (4 - 0)))</code></p>
 		<p>As I've mentioned before: all grouped parentheses are grouped on the right (because fold right) and the identity value is also on the right.</p>
 		<p>When we run this code we get:</p>
-		<pre>
+		<pre><code>
 1 - (2 - (3 - (4 - 0)))
 = { apply the most inner - }
 1 - (2 - (3 - 4))
@@ -132,20 +132,20 @@ foldr (+) 0 [1,2,3,4]
 1 - 3
 = { apply the last - }
 -2
-</pre>
+</code></pre>
 		<h2 id=foldl>
 			<a href="#foldl" class="self-link"></a>
 			Foldl
 		</h2>
 		<p>Definition (again from Wikipedia):</p>
-		<pre>
+		<pre><code>
 foldl :: (b -> a -> b) -> b -> [a] -> b
 foldl f z [] = z
 foldl f z (x:xs) = foldl f (f z x) xs
-</pre>
+</code></pre>
 		<p>What is different? The input function has its first types flipped and in the general case you can see that the application of f is moved into location of what was the identity value.</p>
 		<p>Lets run the same code we did last time:</p>
-		<pre>
+		<pre><code>
 foldl (-) 0 [1,2,3,4]
 = { apply foldl. Again the list isn't empty, so we'll apply the general case }
 foldl (-) ((-) 0 1) [2,3,4]
@@ -165,13 +165,13 @@ foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
 (-) (-6) 4
 = { apply the last - }
 (-10)
-</pre>
+</code></pre>
 		<p>Now, after you've applied all foldls, we, again, can clean up that code:</p>
 		<p><code>(-) ((-) ((-) ((-) 0 1) 2) 3) 4</code></p>
 		<p><code>(((0 - 1) - 2) - 3) - 4</code></p>
 		<p>There, much more readable! As you'll notice, the grouped parentheses are now all left (from the name fold left), ditto for the identity value.</p>
 		<p>Sometimes you have to rewrite code to make it make sense in Haskell. It's a sad fact of life. Anyway, if we reduce this cleaned up code we'll get:</p>
-		<pre>
+		<pre><code>
 (((0 - 1) - 2) - 3) - 4
 = { apply most inner - }
 (((-1) - 2) - 3) - 4
@@ -181,7 +181,7 @@ foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
 (-6) - 4
 = { apply most inner - }
 (-10)
-</pre>
+</code></pre>
 		<p>I think you've started seeing a pattern with Foldl/Foldr right about now: all parentheses are with the identity value either all left or all right – that's how I've been able to easily write out most code by hand (I had to use VSCode with the Bracket Pair Colorizer 2 addon with the <code>foldl (-) 0 [1,2,3,4]</code> code to check my parentheses :p )</p>
 		<p>If you've got any questions (especially when you don't understand a part), let me know down below!</p>
 
@@ -190,7 +190,7 @@ foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
 			Alternative explanation
 		</h2>
 		<p>With either foldl or foldr, the text of the list gets manipulated until something executable is produced:</p>
-		<pre>
+		<pre><code>
 foldl (-) 0 [1,2,3,4]
 = { add identity value to the left of the list (because fold left) }
 foldl (-) [0,1,2,3,4]
@@ -206,7 +206,7 @@ foldr (-) [1,2,3,4,0]
 foldr [1-2-3-4-0]
 = { as last, apply the parentheses, grouped to the right (because fold right). The length of the grouped parentheses is the original length of the list - 1 }
 1-(2-(3-(4-0)))
-</pre>
+</code></pre>
 	</main>
 
 	<footer>
