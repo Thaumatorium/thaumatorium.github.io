@@ -15,9 +15,9 @@ const specialGoto = event => {
 let cn = document.getElementById("cookie-notification");
 // This && is basically a shorter version of if/else, because closure compiler can't handle the ?. (Null Propagation) operator >:(
 null !== cn && (
-	("read" === document.cookie.split("; ").map(str => str.split("=")).reduce((acc, val) => acc +("cookie-notification" === val[0] ? val[1] : ""), "")) ?
+	("read" === document.cookie.split("; ").map(str => str.split("=")).reduce((acc, val) => acc + ("cookie-notification" === val[0] ? val[1] : ""), "")) ?
 		cn.remove() :
-		cn.addEventListener("click", () => {
+		document.querySelector("#cookie-notification>p>button").addEventListener("click", () => {
 			document.cookie = `cookie-notification=read;expires=${(new Date(Date.now() + 31536E6)).toUTCString()};path=/`;
 			cn.remove();
 		})

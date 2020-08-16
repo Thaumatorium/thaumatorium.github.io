@@ -278,14 +278,15 @@ img {
 	padding: 16px
 }
 
-#cookie-notification>button {
+#cookie-notification>p>button {
 	background: 0;
 	border: 0;
 	color: #800;
-	padding: 14px
+	padding: 14px;
+	font-size: large
 }
 
-#cookie-notification>button:hover {
+#cookie-notification>p>button:hover {
 	cursor: pointer
 }
 
