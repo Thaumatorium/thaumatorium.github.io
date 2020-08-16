@@ -154,7 +154,7 @@ body>main figure {
 	display: flex
 }
 
-.article-published, .article-author {
+.article-meta>.published-box, .article-meta>.author-box {
 	background-color: #6e0000;
 	border: 1px solid #800;
 	color: #fff;
