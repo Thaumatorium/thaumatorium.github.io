@@ -10,21 +10,11 @@ body>header {
 
 body>header div {
 	color: #fff;
-	margin: 0;
-	padding: 0
-}
-
-body>header .title {
 	font: 2em "Times New Roman", Times, serif;
 	text-transform: uppercase
 }
 
 body>header .subtitle {
-	font: 1.2em "Times New Roman", Times, serif;
-	text-transform: uppercase
-}
-
-body>header .subtitle::first-letter {
 	font-size: 1.2em
 }
 
@@ -39,8 +29,7 @@ body>nav {
 body>nav a {
 	color: #fff;
 	display: inline-block;
-	font: 18px Arial, sans-serif;
-	margin: 0;
+	font: large sans-serif;
 	padding: 8px;
 	text-decoration: none
 }
@@ -54,7 +43,7 @@ body>nav a:hover {
 body>nav span {
 	color: #fff;
 	cursor: default;
-	font: 18px Arial, sans-serif
+	font: large sans-serif
 }
 
 /* MAIN */
