@@ -30,12 +30,12 @@ addEventListener("install", event => {
 			"/articles/find-non-ascii-letters-in-vscode/index.html",
 			"/articles/find-the-nth-comma-via-regex/index.html",
 			"/articles/haskells-fold-functions-explained/index.html",
-			"/articles/quick-n-dirty-big-o/index.html",
-			"/articles/spark-files-and-taking-notes/index.html",
+			"/articles/big-o-beginners-guide/index.html",
+			"/articles/spark-files-and-keeping-track-of-your-ideas-concepts-thoughts/index.html",
 			"/articles/splitting-js-css-into-2-or-3-files/index.html",
 			"/articles/stache-open.svg",
-			"/articles/types-of-haskell-functions/index.html",
-			"/articles/gs-programming-projects-for-n00bz/index.html",
+			"/articles/the-different-types-of-functions-in-functional-programming/index.html",
+			"/articles/4chans-programming-projects-for-noobs/index.html",
 			"/articles/reddit-s-t-values/index.html",
 
 			// general images
