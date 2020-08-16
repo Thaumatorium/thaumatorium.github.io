@@ -93,13 +93,13 @@
 			<label>input:<textarea id=mstg_in></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=mstg_out readonly></textarea></label>
 			<script>
-				const input = document.getElementById("mstg_in");
-				const output = document.getElementById("mstg_out");
-				input.addEventListener('input', () => {
+				const mstg_in = document.getElementById("mstg_in");
+				const mstg_out = document.getElementById("mstg_out");
+				mstg_in.addEventListener('input', () => {
 					let result = "";
 					let spaces = 0;
-					for (let i = 0; i < input.value.length; i++) {
-						const letter = input.value[i];
+					for (let i = 0; i < mstg_in.value.length; i++) {
+						const letter = mstg_in.value[i];
 
 						if (letter === " ") {
 							result += letter;
@@ -113,11 +113,11 @@
 							result += letter.toLowerCase();
 						}
 					}
-					output.value = result;
+					mstg_out.value = result;
 				});
 
-				output.addEventListener('click', () => {
-					output.select();
+				mstg_out.addEventListener('click', () => {
+					mstg_out.select();
 					document.execCommand('copy');
 				});
 			</script>
@@ -132,14 +132,14 @@
 			<label>input:<textarea id=rot13_in></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=rot13_out readonly></textarea></label>
 			<script>
-				const input = document.getElementById("rot13_in");
-				const output = document.getElementById("rot13_out");
+				const rot13_in = document.getElementById("rot13_in");
+				const rot13_out = document.getElementById("rot13_out");
 
 				const chr = (letter) => letter.charCodeAt(0);
 				const ord = (letterValue) => String.fromCharCode(letterValue);
 
-				input.addEventListener('input', () => {
-					output.value = input.value.replace(/[a-z]/gi, c => {
+				rot13_in.addEventListener('input', () => {
+					rot13_out.value = rot13_in.value.replace(/[a-z]/gi, c => {
 						let result = chr(c) + 13;
 
 						if ((c <= "Z" ? 90 : 122) < result) {
@@ -150,8 +150,8 @@
 					});
 				});
 
-				output.addEventListener('click', () => {
-					output.select();
+				rot13_out.addEventListener('click', () => {
+					rot13_out.select();
 					document.execCommand('copy');
 				});
 			</script>
@@ -165,16 +165,16 @@
 			<label>input:<textarea id=slugify_in></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=slugify_out readonly></textarea></label>
 			<script>
-				const input = document.getElementById("slugify_in");
-				const output = document.getElementById("slugify_out");
+				const slugify_in = document.getElementById("slugify_in");
+				const slugify_out = document.getElementById("slugify_out");
 
-				input.addEventListener('input', () => {
-					output.value = input.value.replace(/[^a-z0-9]/gi, _ => "-").replace(/(---*)+/gi, _ => "-");
-					output.value = output.value.toLowerCase();
+				slugify_in.addEventListener('input', () => {
+					slugify_out.value = slugify_in.value.replace(/[^a-z0-9]/gi, _ => "-").replace(/(---*)+/gi, _ => "-");
+					slugify_out.value = slugify_out.value.toLowerCase();
 				});
 
-				output.addEventListener('click', () => {
-					output.select();
+				slugify_out.addEventListener('click', () => {
+					slugify_out.select();
 					document.execCommand('copy');
 				});
 			</script>
@@ -195,28 +195,28 @@
 			<label>input:<textarea id=base64_in_decode></textarea></label>
 			<label>output - click to copy to clipboard:<textarea id=base64_out_decode readonly></textarea></label>
 			<script>
-				const in_encode = document.getElementById("base64_in_encode");
-				const out_encode = document.getElementById("base64_out_encode");
-				const in_decode = document.getElementById("base64_in_decode");
-				const out_decode = document.getElementById("base64_out_decode");
+				const base64_in_encode = document.getElementById("base64_in_encode");
+				const base64_out_encode = document.getElementById("base64_out_encode");
+				const base64_in_decode = document.getElementById("base64_in_decode");
+				const base64_out_decode = document.getElementById("base64_out_decode");
 
-				in_encode.addEventListener('input', () => {
+				base64_in_encode.addEventListener('input', () => {
 					// Ascii to Base64
-					out_encode.value = window.btoa(in_encode.value);
+					base64_out_encode.value = window.btoa(base64_in_encode.value);
 				});
 
-				out_encode.addEventListener('click', () => {
-					out_encode.select();
+				base64_out_encode.addEventListener('click', () => {
+					base64_out_encode.select();
 					document.execCommand('copy');
 				});
 
-				in_decode.addEventListener('input', () => {
+				base64_in_decode.addEventListener('input', () => {
 					// Base64 to Ascii
-					out_decode.value = window.atob(in_decode.value);
+					base64_out_decode.value = window.atob(base64_in_decode.value);
 				});
 
-				out_decode.addEventListener('click', () => {
-					out_decode.select();
+				base64_out_decode.addEventListener('click', () => {
+					base64_out_decode.select();
 					document.execCommand('copy');
 				});
 			</script>
@@ -255,11 +255,11 @@ fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
 			<p>The data is <output id=fetch-length>?</output> bytes long</p>
 			<script>
 				function fetchOutputHN(self) {
-					let input = document.getElementById("fetch-input");
+					let fetchinput = document.getElementById("fetch-input");
 					let timing = document.getElementById("fetch-timing");
 					let length = document.getElementById("fetch-length");
 					let d = Date.now();
-					fetch(input.value)
+					fetch(fetchinput.value)
 						.then(response => response.json())
 						.then(data => {
 							timing.innerHTML = Date.now() - d;
