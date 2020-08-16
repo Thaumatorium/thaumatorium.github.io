@@ -350,3 +350,7 @@ body>footer .secret {
 	top: 1px;
 	left: 1px;
 }
+
+hgroup {
+	padding: 1em 0
+}
