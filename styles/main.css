@@ -1,174 +1,169 @@
 /* HEADER */
 body>header {
 	background: #800;
-	padding: 30px 0 30px 0;
-	text-align: center;
+	background: url(/images/logo-light.svg) no-repeat center #800;
+	background-size: 256px 256px;
+	padding: 30px 0;
+	text-align: center
 }
 
-body>header * {
+body>header div {
 	color: #fff;
 	margin: 0;
-	padding: 0;
+	padding: 0
 }
 
 body>header .title {
 	font: 2em "Times New Roman", Times, serif;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
 
 body>header .subtitle {
 	font: 1.2em "Times New Roman", Times, serif;
-	text-transform: uppercase;
+	text-transform: uppercase
 }
 
 body>header .subtitle::first-letter {
-	font-size: 1.2em;
-}
-
-body>header {
-	background: url(/images/logo-light.svg) no-repeat center #800;
-	background-size: 256px 256px;
+	font-size: 1.2em
 }
 
 /* NAV */
+body>nav {
+	background-color: #940000;
+	box-shadow: -1px 2px 2px gray;
+	text-align: center
+}
+
 body>nav a {
 	color: #fff;
+	display: inline-block;
 	font: 18px Arial, sans-serif;
 	margin: 0;
 	padding: 8px;
-	text-decoration: none;
-	display: inline-block;
+	text-decoration: none
 }
 
 body>nav a:hover {
 	background-color: #fff;
 	color: #800;
-	text-decoration: underline;
-}
-
-body>nav {
-	background-color: #940000;
-	text-align: center;
+	text-decoration: underline
 }
 
 body>nav span {
 	color: #fff;
-	font: 18px Arial, sans-serif;
 	cursor: default;
-}
-
-body>nav {
-	box-shadow: -1px 2px 2px gray;
+	font: 18px Arial, sans-serif
 }
 
 /* MAIN */
 body {
-	margin: 0;
 	font-size: 1.2em;
+	margin: 0
 }
 
 body>main {
-	padding: 3vw;
-	margin: 0 0 0 0;
+	margin: 0;
+	padding: 3vw
 }
 
 body>main * {
-	margin: 0;
+	margin: 0
 }
 
 body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main h6 {
 	color: #800;
 	font-family: "Times New Roman", Times, serif;
-	padding: 10px 0 0 0;
-	text-transform: uppercase;
+	padding: 10px 0 0;
+	text-transform: uppercase
 }
 
 main h1 {
 	font-size: 1.5em;
-	text-overflow: ellipsis;
 	overflow: hidden;
+	text-overflow: ellipsis
 }
 
 main h2 {
 	font-size: 1.3em;
-	text-overflow: ellipsis;
 	overflow: hidden;
+	text-overflow: ellipsis
 }
 
 main h3 {
 	font-size: 1.1em;
-	text-overflow: ellipsis;
 	overflow: hidden;
+	text-overflow: ellipsis
 }
 
 summary>h1, summary>h2, summary>h3 {
-	display: inline-block;
+	display: inline-block
 }
 
 summary {
-	border-bottom: 1px dashed #800;
+	border-bottom: 1px dashed #800
 }
 
 summary:hover {
-	cursor: pointer;
+	cursor: pointer
 }
 
 blockquote {
-	border: 1px dotted rgb(136, 0, 0, 0.2);
-	border-left: 6px solid rgb(136, 0, 0, 0.4);
+	border: 1px dotted rgba(136, 0, 0, 0.2);
+	border-left: 6px solid rgba(136, 0, 0, 0.4);
 	margin: 1.5em 10px;
-	padding: 0.5em 10px;
-	quotes: "“" "„" "‘" "‚";
+	padding: .5em 10px;
+	quotes: "“" "„" "‘" "‚"
 }
 
 blockquote:before {
-	color: rgb(136, 0, 0, 0.4);
+	color: rgba(136, 0, 0, 0.4);
 	content: open-quote;
 	font-size: 2em;
-	line-height: 0.1em;
-	margin-right: 0.01em;
-	vertical-align: -0.4em;
+	line-height: .1em;
+	margin-right: .01em;
+	vertical-align: -.4em
 }
 
 blockquote p {
-	display: inline;
+	display: inline
 }
 
 body a {
-	color: #800;
+	color: #800
 }
 
 body>main p {
-	margin: 0 0 5px 0;
-	padding: 5px 0 10px 0;
-	text-align: justify;
+	margin: 0 0 5px;
+	padding: 5px 0 10px;
+	text-align: justify
 }
 
 body>main figure {
 	border: 1px solid #800;
 	box-shadow: 1px 1px 2px gray;
+	margin: 0 0 10px;
 	padding: 10px;
-	margin: 0 0 10px 0;
-	text-align: center;
+	text-align: center
 }
 
 .article-meta {
-	display: flex;
+	display: flex
 }
 
 .article-published, .article-author {
-	color: #fff;
-	padding: 2px 10px 0 10px;
-	margin-top: 10px;
-	margin-right: 2px;
-	background-color: rgb(136, 0, 0, 0.3);
+	background-color: rgba(136, 0, 0, 0.3);
 	border: 1px solid #800;
+	color: #fff;
+	margin-right: 2px;
+	margin-top: 10px;
+	padding: 2px 10px 0
 }
 
 table {
-	border-collapse: collapse;
 	border: 1px solid #800;
-	font-family: Tahoma, sans-serif;
+	border-collapse: collapse;
+	box-shadow: 1px 1px 2px gray;
+	font-family: Tahoma, sans-serif
 }
 
 table th {
@@ -176,7 +171,7 @@ table th {
 	border: 1px solid #800;
 	color: #fff;
 	margin: 0;
-	padding: .25em;
+	padding: .25em
 }
 
 table td {
@@ -184,81 +179,71 @@ table td {
 	margin: 0;
 	padding: .25em;
 	text-align: left;
-	vertical-align: top;
-}
-
-ul {
-	padding: 10px 0 10px 30px;
+	vertical-align: top
 }
 
 ul>li {
-	list-style-type: '– ';
+	list-style-type: '– '
 }
 
-ol {
-	padding: 10px 0 10px 30px;
-}
-
-.article-list>* {
+.article-list>li {
 	list-style-type: ' ';
-	padding: 0 0 10px 0;
+	padding: 0 0 10px
 }
 
 .disclaimer {
 	background-color: rgba(136, 0, 0, 0.3);
-	color: #fff;
-	font-family: Tahoma, sans-serif;
-	padding: 20px;
-	margin: 20px;
 	border: 1px dashed #800;
 	border-left-style: solid;
 	border-left-width: 10px;
-	line-height: 150%
+	color: #fff;
+	font-family: Tahoma, sans-serif;
+	line-height: 150%;
+	margin: 20px;
+	padding: 20px
 }
 
 pre {
-	/* tab size 2 or death! */
 	tab-size: 2;
-	white-space: pre-wrap;
+	white-space: pre-wrap
 }
 
 q {
-	font-style: italic;
-}
-
-main hr {
-	color: #800;
-	margin: 10px;
+	font-style: italic
 }
 
 a.self-link {
-	opacity: 0.8;
-	text-decoration: none;
+	opacity: .8;
+	text-decoration: none
 }
 
 a.self-link:hover {
 	opacity: 1;
-	text-decoration: none;
+	text-decoration: none
 }
 
 h1>a.self-link::before, h2>a.self-link::before, h3>a.self-link::before, h4>a.self-link::before, h5>a.self-link::before, h6>a.self-link::before {
-	content: "§";
+	content: "§"
+}
+
+ul, ol {
+	padding: 10px 0 10px 30px
 }
 
 @media (min-width: 720px) {
 	body>main {
-		margin: 0 10% 0 10%;
+		margin: 0 10%
 	}
 }
 
 @media (min-width: 1200px) {
 	body>main {
-		margin: 0 20% 0 20%;
+		margin: 0 20%
 	}
 }
 
 .crypto {
-	display: inline-block;
+	display: inline-block
 }
 
 .crypto-address {
@@ -268,94 +253,75 @@ h1>a.self-link::before, h2>a.self-link::before, h3>a.self-link::before, h4>a.sel
 
 img {
 	height: auto;
-	max-width: 100%;
+	max-width: 100%
 }
 
 /* COOKIE NOTIFICATION */
 #cookie-notification {
 	background: #222;
-	color: #fff;
 	border-radius: 10px;
-	display: flex;
-	flex-direction: row;
 	bottom: 0;
+	color: #fff;
+	display: flex;
 	left: 0;
-	position: fixed;
 	margin: 0 0 20px 20px;
-	flex-wrap: wrap;
+	position: fixed
 }
 
 #cookie-notification>p {
-	padding: 16px;
-	margin: 0;
 	flex-wrap: wrap;
+	margin: 0;
+	padding: 16px
 }
 
 #cookie-notification>button {
-	color: #800;
-	font-weight: bold;
-	padding: 14px;
 	background: 0;
 	border: 0;
-	box-sizing: border-box;
+	color: #800;
+	padding: 14px
 }
 
 #cookie-notification>button:hover {
-	cursor: pointer;
+	cursor: pointer
 }
 
 /* FOOTER */
 body>footer {
+	border-top: 10px solid #9a2121;
+	box-shadow: -1px -2px 2px gray;
 	display: flex;
 	flex-wrap: wrap;
-	border-top: 10px solid #9a2121;
-	padding: 30px;
-	box-shadow: -1px -2px 2px gray;
+	padding: 30px
 }
 
 body>footer>nav a {
 	color: #800;
-	font: 18px Arial, sans-serif;
-	margin: 0;
-	padding: 8px;
-	text-decoration: none;
 	display: inline-block;
+	font: large sans-serif;
+	padding: 8px
 }
 
 body>footer>nav a:hover {
 	background-color: #800;
-	color: #fff;
-	text-decoration: underline;
+	color: #fff
 }
 
 body>footer>nav {
 	background-color: #fff;
-	text-align: center;
+	flex: 1 1;
+	text-align: center
 }
 
 body>footer>nav span {
 	color: #800;
-	font: 18px Arial, sans-serif;
 	cursor: default;
-}
-
-body>footer.copyright {
-	flex: 1 1;
-}
-
-body>footer>nav {
-	flex: 1 1;
+	font: large sans-serif
 }
 
 body>footer>nav * {
-	vertical-align: middle;
+	vertical-align: middle
 }
 
-body>footer.secret {
-	text-decoration: none;
-	color: #800;
-	cursor: default;
-	font-family: sans-serif;
-	font-size: small;
-	flex: 1 1;
+body>footer .secret {
+	font: small sans-serif
 }
