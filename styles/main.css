@@ -10,12 +10,12 @@ body>header {
 
 body>header div {
 	color: #fff;
-	font: 2em "Times New Roman", Times, serif;
+	font: xxx-large Times, serif;
 	text-transform: uppercase
 }
 
 body>header .subtitle {
-	font-size: 1.2em
+	font-size: x-large
 }
 
 /* NAV */
@@ -49,7 +49,7 @@ body>nav span {
 /* MAIN */
 
 body {
-	font-size: 1.2em;
+	font-size: larger;
 	margin: 0
 }
 
@@ -64,25 +64,25 @@ body>main * {
 
 body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main h6 {
 	color: #800;
-	font-family: "Times New Roman", Times, serif;
+	font-family: Times, serif;
 	padding: 1em 0 .3em;
 	text-transform: uppercase
 }
 
 main h1 {
-	font-size: 1.5em;
+	font-size: xx-large;
 	overflow: hidden;
 	text-overflow: ellipsis
 }
 
 main h2 {
-	font-size: 1.3em;
+	font-size: x-large;
 	overflow: hidden;
 	text-overflow: ellipsis
 }
 
 main h3 {
-	font-size: 1.1em;
+	font-size: larger;
 	overflow: hidden;
 	text-overflow: ellipsis
 }
@@ -110,7 +110,7 @@ blockquote {
 blockquote:before {
 	color: #6e0000;
 	content: open-quote;
-	font-size: 2em;
+	font-size: xx-large;
 	line-height: .1em;
 	margin-right: .01em;
 	vertical-align: -.4em
@@ -240,7 +240,7 @@ ul, ol {
 
 .crypto-address {
 	font-family: Verdana, Tahoma, sans-serif;
-	font-size: .5em
+	font-size: xx-small
 }
 
 img {
@@ -327,7 +327,7 @@ body>footer .secret {
 	border: 2px solid #6e0000;
 	color: #ffffff;
 	cursor: pointer;
-	font-size: .9em;
+	font-size: large;
 	padding: .8em 2em;
 	box-shadow: 2px 2px 5px #555;
 }
