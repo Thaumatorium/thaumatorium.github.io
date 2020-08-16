@@ -3,92 +3,87 @@
 		<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 	<loc>https://thaumatorium.com/</loc>
-	<lastmod>2020-08-14T22:18:59+01:00</lastmod>
+	<lastmod>2020-08-16T20:40:17+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://thaumatorium.com/about.html</loc>
-	<lastmod>2020-08-14T22:18:59+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/projects.html</loc>
-	<lastmod>2020-08-14T22:19:02+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/experimentations.html</loc>
-	<lastmod>2020-08-14T22:19:02+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/code-of-conduct.html</loc>
-	<lastmod>2020-08-14T22:19:02+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/random-video.html</loc>
-	<lastmod>2020-08-14T22:19:02+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/hardware.html</loc>
-	<lastmod>2020-08-14T22:19:02+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/knowledge-base.html</loc>
-	<lastmod>2020-08-14T22:19:03+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/im-sick-of-all-the-negative-content-on-reddit.html</loc>
-	<lastmod>2020-08-14T22:19:03+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/haskells-fold-functions-explained.html</loc>
-	<lastmod>2020-08-14T22:19:03+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/spark-files-and-taking-notes.html</loc>
-	<lastmod>2020-08-14T22:19:03+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/types-of-haskell-functions.html</loc>
-	<lastmod>2020-08-14T22:19:04+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>https://thaumatorium.com/articles/quick-n-dirty-big-o.html</loc>
-	<lastmod>2020-08-14T22:19:04+01:00</lastmod>
+	<loc>https://thaumatorium.com/about/</loc>
+	<lastmod>2020-08-16T20:40:23+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
 	<loc>https://thaumatorium.com/articles/</loc>
-	<lastmod>2020-08-14T22:19:04+01:00</lastmod>
+	<lastmod>2020-08-16T20:40:23+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://thaumatorium.com/articles/configuring-jmeter-for-neo4j.html</loc>
-	<lastmod>2020-08-14T22:19:05+01:00</lastmod>
+	<loc>https://thaumatorium.com/experimentations/</loc>
+	<lastmod>2020-08-16T20:40:24+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files.html</loc>
-	<lastmod>2020-08-14T22:19:05+01:00</lastmod>
+	<loc>https://thaumatorium.com/code-of-conduct/</loc>
+	<lastmod>2020-08-16T20:40:24+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://thaumatorium.com/articles/gs-programming-projects-for-n00bz.html</loc>
-	<lastmod>2020-08-14T22:19:05+01:00</lastmod>
+	<loc>https://thaumatorium.com/random-video/</loc>
+	<lastmod>2020-08-16T20:40:24+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>https://thaumatorium.com/articles/reddit-s-t-values.html</loc>
-	<lastmod>2020-08-14T22:19:05+01:00</lastmod>
+	<loc>https://thaumatorium.com/hardware/</loc>
+	<lastmod>2020-08-16T20:40:24+01:00</lastmod>
 	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/how-i-fixed-reddit/</loc>
+	<lastmod>2020-08-16T20:40:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/haskells-fold-functions-explained/</loc>
+	<lastmod>2020-08-16T20:40:24+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/spark-files-and-keeping-track-of-your-ideas-concepts-thoughts/</loc>
+	<lastmod>2020-08-16T20:40:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/the-different-types-of-functions-in-functional-programming/</loc>
+	<lastmod>2020-08-16T20:40:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/big-o-beginners-guide/</loc>
+	<lastmod>2020-08-16T20:40:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/configuring-jmeter-for-neo4j/</loc>
+	<lastmod>2020-08-16T20:40:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files/</loc>
+	<lastmod>2020-08-16T20:40:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/4chans-programming-projects-for-noobs/</loc>
+	<lastmod>2020-08-16T20:40:25+01:00</lastmod>
+	<priority>0.6</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/knowledge-base/</loc>
+	<lastmod>2020-08-16T20:40:26+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>https://thaumatorium.com/articles/reddits-t-values/</loc>
+	<lastmod>2020-08-16T20:40:26+01:00</lastmod>
+	<priority>0.6</priority>
 </url>
 </urlset>
