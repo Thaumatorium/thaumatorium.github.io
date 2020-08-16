@@ -14,6 +14,7 @@
 	<noscript>
 		<link rel=stylesheet href="/styles/main.css" />
 	</noscript>
+	<script async src=/main.js></script>
 </head>
 
 <body>
@@ -78,8 +79,10 @@
 		</nav>
 		<!-- Sssh - don't tell anyone! -->
 		<a class=secret onclick=specialGoto(event)>π</a>
-	</footer>
-	<script async src=/pwa.js></script>
+		<div id=cookie-notification>
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+</footer>
 </body>
 
 </html>

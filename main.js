@@ -21,4 +21,4 @@ null !== cn && (
 			document.cookie = `cookie-notification=read;expires=${(new Date(Date.now() + 31536E6)).toUTCString()};path=/`;
 			cn.remove();
 		})
-)
+);
