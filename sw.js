@@ -59,12 +59,12 @@ addEventListener("install", event => {
 			"/images/ko-fi-support.svg",
 
 			// website pages
-			"/pages/about.html",
-			"/pages/experimentations.html",
-			"/pages/praetorianpi.html",
-			"/pages/projects.html",
-			"/pages/code-of-conduct.html",
-			"/pages/random-video.html",
+			"/about.html",
+			"/experimentations.html",
+			"/praetorianpi.html",
+			"/projects.html",
+			"/code-of-conduct.html",
+			"/random-video.html",
 
 			// Projects
 			"/scripts/base64.mjs",
