@@ -69,20 +69,7 @@ body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main 
 	text-transform: uppercase
 }
 
-main h1 {
-	font-size: xx-large;
-	overflow: hidden;
-	text-overflow: ellipsis
-}
-
-main h2 {
-	font-size: x-large;
-	overflow: hidden;
-	text-overflow: ellipsis
-}
-
-main h3 {
-	font-size: larger;
+main h1, main h2, main h3 {
 	overflow: hidden;
 	text-overflow: ellipsis
 }
