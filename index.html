@@ -312,29 +312,28 @@
 
 		<h2><a id=comments href=#comments class=self-link>Comments</a></h2>
 		<div>
-			<button type=button onclick="showComments()">Show comments</button>
-			<button type=button onclick="hideComments()">Hide comments</button>
+			<button class=button type=button onclick="toggleComments(this)">Show comments</button>
 		</div>
-		<div id="hyvor-talk-view"></div>
+		<div id="hyvor-talk-view" style="display: none"></div>
 		<script type="text/javascript">
 			var HYVOR_TALK_WEBSITE = 1095; // DO NOT CHANGE THIS
 			var HYVOR_TALK_CONFIG = { url: false, id: false };
 
-			const comments = document.getElementById("hyvor-talk-view");
-			const showComments = () => {
-				if (comments.hidden) {
-					comments.hidden = false;
-				} else {
+			const hyvor = document.getElementById("hyvor-talk-view");
+			const toggleComments = (el) => {
+				if(hyvor.innerHTML == "") {
 					let s = document.createElement('script');
 					s.setAttribute('type', 'text/javascript');
 					s.setAttribute('src', '//talk.hyvor.com/web-api/embed');
 					document.querySelector("body>main").appendChild(s);
 				}
-			}
 
-			const hideComments = () => {
-				if (!comments.hidden) {
-					comments.hidden = true;
+				if ("none" == hyvor.style.display) {
+					el.innerText = "Hide comments"
+					hyvor.style.display = "";
+				} else {
+					el.innerText = "Show comments"
+					hyvor.style.display = "none";
 				}
 			}
 		</script>
