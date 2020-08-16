@@ -7,7 +7,7 @@ document.getElementById("updated").innerHTML = new Date(document.lastModified).t
 // Sssh - don't tell anyone!
 const specialGoto = event => {
 	if (event.ctrlKey && event.shiftKey) {
-		window.location.href = "/praetorianpi.html";
+		window.location.href = "/praetorianpi";
 	}
 }
 

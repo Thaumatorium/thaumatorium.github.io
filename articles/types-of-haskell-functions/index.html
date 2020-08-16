@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>The different types of Functional Programming functions | The Thaumatorium</title>
+	<meta name=description content="A simple table of the different types of functions that exist within the Functional Programming/Haskell world" />
+	<link rel="canonical" href="https://thaumatorium.com/articles/types-of-haskell-functions">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<noscript>
+		<link rel=stylesheet href="/styles/main.css" />
+	</noscript>
+	<script async src=/main.js></script>
+</head>
+
+<body>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-169207994-1');
+	</script>
+
+	<header>
+		<div class=title>The Thaumatorium:</div>
+		<div class=subtitle>Where the magic happens</div>
+	</header>
+
+	<nav role=navigation>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/articles>Articles</a><span> - </span>
+		<a href=/projects>Projects</a><span> - </span>
+		<a href=/experimentations>Experimentations</a><span> - </span>
+		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
+		<a href=/random-video>Random video</a><span> - </span>
+		<a href=/hardware>Hardware</a><span> - </span>
+		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
+		<a href=/about>About</a>
+	</nav>
+
+	<main>
+		<hgroup>
+			<h1>The different types of Functional Programming functions</h1>
+			<div class=article-meta>
+				<div class=published-box>Published: <time class=published datetime=2018-10-15>2018-10-15</time></div>
+				<div class=author-box>Author: <span class=author>NostraDavid</span></div>
+			</div>
+		</hgroup>
+		<p>Slightly annoying that 'type' already have a certain meaning in Haskell, but I think you're smart enough to understand what I mean with the title.</p>
+		<p>In this context, a parser is a function accepting strings as input and returning some data structure as output, typically it's a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</p>
+		<table>
+			<thead>
+				<tr>
+					<th>Type</th>
+					<th>What it does</th>
+					<th>Example code</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Pure</td>
+					<td>Takes an input, returns an output – no side effects (data changes)</td>
+					<td>
+						<pre><code class=lang-haskell>f :: Int -> Int
+f x = x</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Predicate</td>
+					<td>Takes an input, returns a Bool </td>
+					<td>
+						<pre><code class=lang-haskell>f :: Int -> Bool
+f x = x > 5</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Recursive</td>
+					<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input </td>
+					<td>
+						<pre><code class=lang-haskell>length :: [a] -> Int
+length (x:xs) = 1 + length xs</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Curried</td>
+					<td>You can give a function a part of the input to create a new function (imperative languages like C or Python always want all arguments at once)</td>
+					<td>
+						<pre><code class=lang-haskell>timesTwo :: Int -> Int
+timesTwo = 2 *</code></pre>
+						As you can see, the <samp>*</samp> operator only has one input – It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:
+						<pre><code class=lang-haskell>timesTwo 3
+= { apply timesTwo }
+2 * 3
+= { apply * }
+6</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Applicative</td>
+					<td>Can take a variable amount of inputs, returns an output </td>
+					<td>Uses a function (<samp>pure</samp>) and an operator (<samp>&lt;*&gt;</samp>), where 'pure' lifts the function into a wrapped type/function and '&lt;*&gt;' accepts a wrapped type/function and a variable (that's also wrapped)</td>
+				</tr>
+				<tr>
+					<td>Monadic</td>
+					<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>= operator or do notation</td>
+					<td>From: <a href=https://wiki.haskell.org/All_About_Monads>https://wiki.haskell.org/All_About_Monads</a>
+						<pre><code class=lang-haskell>maternalGrandfather :: Sheep -&gt; Maybe Sheep
+maternalGrandfather s = (return s) &gt;&gt;= mother &gt;&gt;= father
+-- alternatively
+mothersPaternalGrandfather :: Sheep -&gt; Maybe Sheep
+mothersPaternalGrandfather s = do m &lt;- mother s
+																	gf &lt;- father m
+																	father gf
+</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>Parser Combinator</td>
+					<td>Accepts several parsers as input and returns a new parser as its output. </td>
+					<td>From: <a href=https://en.wikipedia.org/wiki/Parser_combinator>https://en.wikipedia.org/wiki/Parser_combinator</a> In this context, a parser is a function accepting strings as input and returning some structure as output, typically a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+
+	<footer>
+		<div class=copyright>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+		</div>
+		<nav id=profiles>
+			<p>Media profiles</p>
+			<a href="https://www.reddit.com/user/nostradavid"><img src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
+			<a href="https://twitter.com/DavidNostra"><img src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
+			<a href="https://github.com/NostraDavid"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(me)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(pro)</a><span> - </span>
+			<a href="https://www.facebook.com/david.nostra.121"><img src="/images/social-media/facebook.svg" alt="Twitter's logo" width=32 height=32></a>
+		</nav>
+		<!-- Sssh - don't tell anyone! -->
+		<a class=secret onclick=specialGoto(event)>π</a>
+		<div id=cookie-notification>
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+	</footer>
+</body>
+
+</html>

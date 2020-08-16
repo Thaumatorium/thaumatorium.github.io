@@ -15,7 +15,8 @@ addEventListener("install", event => {
 		const cache = await caches.open(THAUM_CACHE);
 
 		await cache.addAll([
-			// last updated: 2020-07-07
+			// this list is sometimes half-assed updated for a potential 'return of the king'
+			// last updated: 2020-08-16
 			"/",
 
 			// Caching 404.html may break it - will need to test
@@ -25,17 +26,17 @@ addEventListener("install", event => {
 
 			// Articles
 			"/articles/index.html",
-			"/articles/find-every-line-that-doesn-t-start-with-a-dot-via-regex.html",
-			"/articles/find-non-ascii-letters-in-vscode.html",
-			"/articles/find-the-nth-comma-via-regex.html",
-			"/articles/haskells-fold-functions-explained.html",
-			"/articles/quick-n-dirty-big-o.html",
-			"/articles/spark-files-and-taking-notes.html",
-			"/articles/splitting-js-css-into-2-or-3-files.html",
+			"/articles/find-every-line-that-doesn-t-start-with-a-dot-via-regex/index.html",
+			"/articles/find-non-ascii-letters-in-vscode/index.html",
+			"/articles/find-the-nth-comma-via-regex/index.html",
+			"/articles/haskells-fold-functions-explained/index.html",
+			"/articles/quick-n-dirty-big-o/index.html",
+			"/articles/spark-files-and-taking-notes/index.html",
+			"/articles/splitting-js-css-into-2-or-3-files/index.html",
 			"/articles/stache-open.svg",
-			"/articles/types-of-haskell-functions.html",
-			"/articles/gs-programming-projects-for-n00bz.html",
-			"/articles/reddit-s-t-values.html",
+			"/articles/types-of-haskell-functions/index.html",
+			"/articles/gs-programming-projects-for-n00bz/index.html",
+			"/articles/reddit-s-t-values/index.html",
 
 			// general images
 			"/images/big-o.png",
@@ -44,9 +45,6 @@ addEventListener("install", event => {
 			"/images/favicon.svg",
 			"/images/icons-192.png",
 			"/images/icons-512.png",
-			"/images/mockbob.png",
-			"/images/starfield-thumb.webp",
-			"/images/starfield.webp",
 			"/images/logo.svg",
 			"/images/border.png",
 			"/images/wc1.png",
@@ -59,26 +57,20 @@ addEventListener("install", event => {
 			"/images/ko-fi-support.svg",
 
 			// website pages
-			"/about.html",
-			"/experimentations.html",
-			"/praetorianpi.html",
-			"/projects.html",
-			"/code-of-conduct.html",
-			"/random-video.html",
+			"/about/index.html",
+			"/experimentations/index.html",
+			"/praetorianpi/index.html",
+			"/projects/index.html",
+			"/code-of-conduct/index.html",
+			"/random-video/index.html",
 
 			// Projects
-			"/scripts/base64.mjs",
-			"/scripts/mstg.mjs",
-			"/scripts/rot13.mjs",
 			"/scripts/slugify.mjs",
 			"/scripts/starfield.mjs",
+			"/scripts/t2e.mjs",
 
 			// CSS
-			"/styles/footer.css",
-			"/styles/header.css",
-			"/styles/layout.css",
 			"/styles/main.css",
-			"/styles/nav.css",
 			"/styles/projects.css",
 		]);
 	})());

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>How I created the "name-subreddits list" | The Thaumatorium</title>
+	<meta name=description content="What I did behind the scenes: A step by step explanation of how I downloaded data and transformed it into a graph" />
+	<link rel="canonical" href="https://thaumatorium.com/articles/how-i-created-the-name-subreddits-list">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<noscript>
+		<link rel=stylesheet href="/styles/main.css" />
+	</noscript>
+	<script async src=/main.js></script>
+</head>
+
+<body>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-169207994-1');
+	</script>
+
+	<header>
+		<div class=title>The Thaumatorium:</div>
+		<div class=subtitle>Where the magic happens</div>
+	</header>
+
+	<nav role=navigation>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/articles>Articles</a><span> - </span>
+		<a href=/projects>Projects</a><span> - </span>
+		<a href=/experimentations>Experimentations</a><span> - </span>
+		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
+		<a href=/random-video>Random video</a><span> - </span>
+		<a href=/hardware>Hardware</a><span> - </span>
+		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
+		<a href=/about>About</a>
+	</nav>
+
+	<main>
+		<hgroup>
+			<h1>How I created the "name-subreddits list"</h1>
+			<div class=article-meta>
+				<div class=published-box>Published: <time class=published datetime=2020-06-14>2020-06-14</time></div>
+				<div class=author-box>Author: <span class=author>NostraDavid</span></div>
+			</div>
+		</hgroup>
+		<div class=disclaimer>
+			<p>This article contains affiliate links to amazon - that is how I can keep this site afloat. If you have a better idea, or an alternative where I can still make money but not support giant corporations, please open up an <a href=https://github.com/Thaumatorium/thaumatorium.github.io/issues>Issue</a> on Github and let me know!</p>
+		</div>
+		<p>It started in 2018 with creating a file containing all subreddit names from the site's sitemap (which has been made unavailable for unknown reasons) </p>
+		<p>I downloaded all XML files and wrote a "throw-away-script" to pull out the important bits (the names) and throw the rest of the information away, which left me with a file of about a million subreddit names.</p>
+		<p>I've had that file laying around for a while now, not really knowing what to do with it, but it's handy to keep data around every now and then!</p>
+		<p>So, after a curious search for my own name, to see if there was a subreddit of people who share my name, my brain started churning: What if there are others?</p>
+		<p>After digging around a bit I found several others: Kyle, Dan, Daniel, Dave, Michael, among others...</p>
+		<p>But why not make a giant list of <strong>all</strong> the subreddits that relate to a name?</p>
+		<p>To do this, I would need a giant list of first names and basically filter out all existing subreddits that did not exist in the names list, which would leave me list a list of subreddits that <em>did</em> exist in that list</p>
+		<p>Good thing I had that file with all those subreddits laying around!</p>
+		<p>Now, where to find a list of names? <em>Books</em>, of course!</p>
+		<p>After a short search I found <a>Bruce Lansky's "100,000+ baby names"</a>, so I bought the Kindle version, converted it to text and got to work in my text editor to filter out most (if not all) names.</p>
+		<p>After fiddling with regex for a bit, I got left with a list of 95477 names. Not really 100k, but close enough.</p>
+		<p>While thinking about how to filter the subreddit list, I remembered that Excel had such a functionality! Quickly throwing those two lists in an Excel sheet and using <samp>Conditional Formatting</samp> on both lists to mark the names that were in both was a breeze, but to then <em>filter</em> those lists took quite a bit longer. This is mostly because Excel isn't made to filter lists of at least a 100k items!</p>
+		<p>At first I tried to filter the subreddit list (which was about a million items long), but after two hours of waiting for the list to filter out all unmarked items, I force-quit Excel and tried to do the same on the names list instead. Success!</p>
+		<p>I was left with a neat list of just a "measly" 8221 items it was time to turn to reddit to extract some information.</p>
+		<p>Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding <samp>.json</samp> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <samp>/r/[SUBREDDIT]/about/.json</samp>, instead of the normal <samp>/r/[SUBREDDIT]/.json</samp>, but eh, it's not the worst. </p>
+		<p>Now I was ready to extract the information I needed, but how? Well, this <em>is</em> the web, so it seems reasonable to use Javascript (even though I don't like the language for several reasons) for the task at hand, which I did.</p>
+		<p>I turned the list of name-subreddits into a list of URLs, through arcane magic called <samp>regex</samp>, after which I threw the list into a <samp>.js</samp> file.</p>
+		<pre><code>
+				const urls = ["https://old.reddit.com/r/aakash/about/.json", 
+				"https://old.reddit.com/r/aalia/about/.json", 
+				"https://old.reddit.com/r/aarav/about/.json", 
+				...
+				"https://old.reddit.com/r/whittaker/about/.json", 
+				"https://old.reddit.com/r/who/about/.json", 
+				"https://old.reddit.com/r/whoopee/about/.json"]
+		</code></pre>
+		<p>And remember kids, Reddit has a rate limit of <strong>30 requests per minute!</strong> If you go over that, you'll be temporarily blocked!</p>
+	</main>
+
+	<footer>
+		<div class=copyright>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+		</div>
+		<nav id=profiles>
+			<p>Media profiles</p>
+			<a href="https://www.reddit.com/user/nostradavid"><img src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
+			<a href="https://twitter.com/DavidNostra"><img src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
+			<a href="https://github.com/NostraDavid"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(me)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(pro)</a><span> - </span>
+			<a href="https://www.facebook.com/david.nostra.121"><img src="/images/social-media/facebook.svg" alt="Twitter's logo" width=32 height=32></a>
+		</nav>
+		<!-- Sssh - don't tell anyone! -->
+		<a class=secret onclick=specialGoto(event)>π</a>
+		<div id=cookie-notification>
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+	</footer>
+</body>
+
+</html>

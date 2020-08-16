@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>A curated random video | The Thaumatorium</title>
+	<meta name=description content="A random video from a curated list of videos" />
+	<link rel="canonical" href="https://thaumatorium.com/random-video">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<noscript>
+		<link rel=stylesheet href="/styles/main.css" />
+	</noscript>
+	<script async src=/main.js></script>
+</head>
+
+<body>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-169207994-1');
+	</script>
+
+	<header>
+		<div class=title>The Thaumatorium:</div>
+		<div class=subtitle>Where the magic happens</div>
+	</header>
+
+	<nav role=navigation>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/articles>Articles</a><span> - </span>
+		<a href=/projects>Projects</a><span> - </span>
+		<a href=/experimentations>Experimentations</a><span> - </span>
+		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
+		<a href=/random-video>Random video</a><span> - </span>
+		<a href=/hardware>Hardware</a><span> - </span>
+		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
+		<a href=/about>About</a>
+	</nav>
+
+	<main>
+		<h1>A curated random video</h1>
+		<p id=comment>...</p>
+		<iframe id=ytvid width=100% onload="this.height=this.clientWidth*(9/16)" src=https://www.youtube-nocookie.com/embed/ZXVhOPiM4mk frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<script>
+			let videoIDs = [
+				{ url: "ZXVhOPiM4mk", comment: "Hotdog, the song" },
+				{ url: "QEzhxP-pdos", comment: "Hotdog, the jpeg meme" },
+				{ url: "4feUSTS21-8", comment: "Mixup of 'Glue70 - Casin' and 'Shake That - Nate Dogg & Eminem'" },
+				{ url: "-uAZdIJIl8o", comment: "'What you hear before an IED goes off'" },
+				{ url: "Gwn240vvKJE", comment: "PERCOCET" },
+				{ url: "5FdEzwgOmtY", comment: "William the Silent - Father thes Fatherland" },
+				{ url: "qn1PAU0awK8", comment: "William the Silent about spices. COCONUT IS NOT A SPICE!" },
+				{ url: "xaRNvJLKP1E", comment: "God damn, medieval peasants go HARD!" },
+				{ url: "IIuQM_q0IUU", comment: "A nice clash of classic and modern music" },
+				{ url: "WYeAUpvWeI8", comment: "Great voice" },
+				{ url: "Y1mtif1B8k0", comment: "French and he looks goofy, but damn what a voice!" },
+				{ url: "pok8H_KF1FA", comment: "Tik Tok meme song" },
+				{ url: "EsZbWAqU8xY", comment: "Tik Tok meme song, Japanese edition" },
+				{ url: "EsZbWAqU8xY", comment: "Tik Tok meme song, Japanese edition" },
+				{ url: "1s27A6oyEZA", comment: "This is actually made by a Polish dude called Lain Volta Trzaska known as 'shemusic'. He hires different vocalists for each song IIRC. EXCELLENT WEEB SHIT" },
+				{ url: "q4WzVSkr9yQ", comment: "This is actually made by a Polish dude called Lain Volta Trzaska known as 'shemusic'. He hires different vocalists for each song IIRC. EXCELLENT WEEB SHIT" },
+				{ url: "AAIgYbqFkro", comment: "One of the best DOS/Arcade games ever made, with great music by Alexander Brandon who also did music for Jazz Jackrabbit, Unreal, Unreal Tournament, Vigilante 8, Deus Ex, Thief: Deadly Shadows, Neverwinter Nights 2, Dust: An Elysian Tail, among many others. If you think he's shit, don't fucking talk to me." },
+				{ url: "2yDVM77lGlM", comment: "Deus Ex: Best Immersive Sim ever made" },
+				{ url: "IwunnFgfbtU", comment: "Little Big Adventure 2: Best thing to come out of France, right after 'overthrowing your incompetent kings/rulers'." },
+				{ url: "3JQkW6BgUYU", comment: "LukHash really improved Jeroen Tel's 'Supremacy', IMO" },
+				{ url: "GVWHFRdnNos", comment: "Just great chiptune by the Dutch Jeroen Tel" },
+				{ url: "4MrnC5eZp_c", comment: "ARTHUR!" },
+				{ url: "3GRSbr0EYYU", comment: "FENTOOOOOOON!" },
+				{ url: "rY-FJvRqK0E", comment: "Another meme song that's actually pretty dope too!" },
+				{ url: "qatmJtIJAPw", comment: "Original song is 'Dethklok - Face Fisted'" },
+				{ url: "I53HDr0-Qew", comment: "Original song is 'Dethklok - Murmaider'" },
+				{ url: "SDea7laHD4E", comment: "Original song is 'Dethklok - Awaken'" },
+				{ url: "JOL5e-J1btA", comment: "This is a very impressive demonstration of the Fortnite (or rather Unreal Engine 4) billboard system for Level of Detail" },
+				{ url: "7mT5x8kt3Gs", comment: "Guess Who by 장삐쭈 (check him out on YT)" },
+				// { url: "HgEUbSzOTZ8", comment: `"We Are Trained Marxists" - Patrisse Cullors, Co-Founder, #BlackLivesMatter` },
+			];
+
+			const choice = Math.floor(Math.random() * videoIDs.length)
+			let vid = document.getElementById("ytvid");
+			vid.src = `https://www.youtube-nocookie.com/embed/${videoIDs[choice].url}`
+			let comment = document.getElementById("comment");
+			comment.innerHTML = videoIDs[choice].comment;
+		</script>
+	</main>
+
+	<footer>
+		<div class=copyright>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+		</div>
+		<nav id=profiles>
+			<p>Media profiles</p>
+			<a href="https://www.reddit.com/user/nostradavid"><img src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
+			<a href="https://twitter.com/DavidNostra"><img src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
+			<a href="https://github.com/NostraDavid"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(me)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(pro)</a><span> - </span>
+			<a href="https://www.facebook.com/david.nostra.121"><img src="/images/social-media/facebook.svg" alt="Twitter's logo" width=32 height=32></a>
+		</nav>
+		<!-- Sssh - don't tell anyone! -->
+		<a class=secret onclick=specialGoto(event)>π</a>
+		<div id=cookie-notification>
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+	</footer>
+</body>
+
+</html>

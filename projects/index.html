@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>My programming projects, usually made in HTML/CSS/JS | The Thaumatorium</title>
+	<meta name=description content="A collection of my projects, small and big" />
+	<link rel="canonical" href="https://thaumatorium.com/projects">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<noscript>
+		<link rel=stylesheet href="/styles/main.css" />
+	</noscript>
+	<script async src=/main.js></script>
+</head>
+
+<body>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-169207994-1');
+	</script>
+
+	<header>
+		<div class=title>The Thaumatorium:</div>
+		<div class=subtitle>Where the magic happens</div>
+	</header>
+
+	<nav role=navigation>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/articles>Articles</a><span> - </span>
+		<a href=/projects>Projects</a><span> - </span>
+		<a href=/experimentations>Experimentations</a><span> - </span>
+		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
+		<a href=/random-video>Random video</a><span> - </span>
+		<a href=/hardware>Hardware</a><span> - </span>
+		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
+		<a href=/about>About</a>
+	</nav>
+
+	<main>
+		<link async rel=stylesheet href="/styles/projects.css" />
+		<h1>NostraDavid's' programming projects</h1>
+
+		<div>
+			<button class=button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = true});">Open all chapters</button>
+			<button class=button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = false});">Close all chapters</button>
+		</div>
+
+		<details>
+			<summary>
+				<h3>Thaumatorium.com</h3>
+				<p>This site!</p>
+			</summary>
+			<p>First I was going to create it in Angular, but then I learned React and wanted it to it in that. But then I figured out how Elm worked and created the actual <em>first</em> version in that - on archive.org you cansee the first version uses <samp>elm.js</samp>, but I found it to be too opinionated. Not to mention I found the <var>information/javascript</var> ratio to be too low.</p>
+			<p>Eventually, after reading up on <a href=https://eloquentjavascript.net />JS</a>, <a href=https://html.spec.whatwg.org/dev />HTML</a> and <a href=https://www.w3.org/TR/css-2018 />CSS</a>, I decided to just write everything in pure web tech. And why not? I don't need a several kilobytes of javascript, just to show some articles!?</p>
+			<p>And thus this site was born! I'm as of <time datetime=2020-05-09>2020-05-09</time> still busy writing and re-writing the site because I'm still building up experience, and I still have a small <a href=/#todo>TODO</a> list and I'll have to finish, but it's fine.</p>
+			<p>If you want to see what this site used to look like, check out <a href=https://web.archive.org/https://thaumatorium.com />archive.org</a>.</p>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Semantic&shy; Override&shy; Network&shy; (SON)</h3>
+				<p>A news aggregator that will pierce the heavens!</p>
+			</summary>
+			<p>For real though: I'm still busy forming ideas around this project</p>
+			<p>Every damn time I think "I got this", I usually lose it within a day or two, even after writing things down.</p>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Starfield</h3>
+				<p>It's the first type of project I've ever created! Now available in an HTML Canvas element.</p>
+			</summary>
+			<p>The first one I ever made was in cmd.exe, with some janky-ass <samp>c</samp> moving <samp>*</samp> and <samp>.</samp> characters as different sized stars from the right to the left.</p>
+			<p>Over the years I created different versions (a 2D and even a 3D OpenGL variant!)</p>
+			<p>Now that I know some HTML/CSS/JS, I decided to recreate this project for the web with plain HTML/CSS/JS! No crazy libraries needed!</p>
+			<canvas id=starfield></canvas>
+			<script type=module src=/scripts/starfield.mjs></script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Mocking Spongebob Text Generator (MSTG)</h3>
+				<p><q>WhY dO wE nEeD aNoThEr MoCkInG sPoNgEbOb TeXt GeNeRaToR???</q></p>
+			</summary>
+			<label>input:<textarea id=mstg_in></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=mstg_out readonly></textarea></label>
+			<script>
+				const input = document.getElementById("mstg_in");
+				const output = document.getElementById("mstg_out");
+				input.addEventListener('input', () => {
+					let result = "";
+					let spaces = 0;
+					for (let i = 0; i < input.value.length; i++) {
+						const letter = input.value[i];
+
+						if (letter === " ") {
+							result += letter;
+							spaces++;
+							continue;
+						}
+
+						if ((i - spaces) % 2 === 0) {
+							result += letter.toUpperCase();
+						} else {
+							result += letter.toLowerCase();
+						}
+					}
+					output.value = result;
+				});
+
+				output.addEventListener('click', () => {
+					output.select();
+					document.execCommand('copy');
+				});
+			</script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>ROT13</h3>
+				<p>I <em>could</em> go to <a href=https://ROT13.com>ROT13.com</a>, but why?</p>
+
+			</summary>
+			<label>input:<textarea id=rot13_in></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=rot13_out readonly></textarea></label>
+			<script>
+				const input = document.getElementById("rot13_in");
+				const output = document.getElementById("rot13_out");
+
+				const chr = (letter) => letter.charCodeAt(0);
+				const ord = (letterValue) => String.fromCharCode(letterValue);
+
+				input.addEventListener('input', () => {
+					output.value = input.value.replace(/[a-z]/gi, c => {
+						let result = chr(c) + 13;
+
+						if ((c <= "Z" ? 90 : 122) < result) {
+							result -= 26;
+						}
+
+						return ord(result)
+					});
+				});
+
+				output.addEventListener('click', () => {
+					output.select();
+					document.execCommand('copy');
+				});
+			</script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Slugify</h3>
+				<p>Turns regular text into a URL-friendly "slug"</p>
+			</summary>
+			<label>input:<textarea id=slugify_in></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=slugify_out readonly></textarea></label>
+			<script>
+				const input = document.getElementById("slugify_in");
+				const output = document.getElementById("slugify_out");
+
+				input.addEventListener('input', () => {
+					output.value = input.value.replace(/[^a-z0-9]/gi, _ => "-").replace(/(---*)+/gi, _ => "-");
+					output.value = output.value.toLowerCase();
+				});
+
+				output.addEventListener('click', () => {
+					output.select();
+					document.execCommand('copy');
+				});
+			</script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Base64</h3>
+				<p>encoding/decoding</p>
+			</summary>
+			<h3>Decode this</h3>
+			<p>Triple click the text to select it all</p>
+			<p style="overflow-wrap: break-word;">V2hZIGRPIHdFIG5FZUQgYU5vVGhFciBCYVNlNjQgRW5Db0RlL2RFY09kRXI/Pz8=</p>
+			<h3>Encode</h3>
+			<label>input:<textarea id=base64_in_encode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=base64_out_encode readonly></textarea></label>
+			<h3>Decode</h3>
+			<label>input:<textarea id=base64_in_decode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=base64_out_decode readonly></textarea></label>
+			<script>
+				const in_encode = document.getElementById("base64_in_encode");
+				const out_encode = document.getElementById("base64_out_encode");
+				const in_decode = document.getElementById("base64_in_decode");
+				const out_decode = document.getElementById("base64_out_decode");
+
+				in_encode.addEventListener('input', () => {
+					// Ascii to Base64
+					out_encode.value = window.btoa(in_encode.value);
+				});
+
+				out_encode.addEventListener('click', () => {
+					out_encode.select();
+					document.execCommand('copy');
+				});
+
+				in_decode.addEventListener('input', () => {
+					// Base64 to Ascii
+					out_decode.value = window.atob(in_decode.value);
+				});
+
+				out_decode.addEventListener('click', () => {
+					out_decode.select();
+					document.execCommand('copy');
+				});
+			</script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Timing fetch</h3>
+				<P>Test how long it takes for a URL to load</P>
+			</summary>
+			<pre><code class=lang-javascript>
+let d=Date.now();
+fetch('https://hacker-news.firebaseio.com/v0/user/NostraDavid.json')
+	.then(response => response.json())
+	.then(data => {
+		console.log(`${Date.now()-d}ms\t${JSON.stringify(data).length} bytes`);
+	});
+</code></pre>
+			<p><strong>Example URLs:</strong></p>
+			<ul>
+				<li>https://hacker-news.firebaseio.com/v0/user/NostraDavid.json</li>
+				<li>https://old.reddit.com/user/NostraDavid.json</li>
+				<li>https://api.hnpwa.com/v0/newest.json?page=1</li>
+				<li>https://api.hnpwa.com/v0/news.json?page=1</li>
+				<li>https://api.hnpwa.com/v0/ask.json?page=1</li>
+				<li>https://api.hnpwa.com/v0/jobs.json?page=1</li>
+				<li>https://api.hnpwa.com/v0/show.json?page=1</li>
+				<li>https://old.reddit.com/r/popular.json</li>
+				<li>https://old.reddit.com/r/popular.json?after=t3_hj7vqj</li>
+				<li>https://old.reddit.com/r/all.json</li>
+				<li>https://old.reddit.com/.json</li>
+			</ul>
+			<label>url: <input type="url" id=fetch-input value=https://hacker-news.firebaseio.com/v0/user/NostraDavid.json></label>
+			<button onclick="fetchOutputHN()">Run code</button>
+			<p>It took: <output id=fetch-timing>?</output>ms</p>
+			<p>The data is <output id=fetch-length>?</output> bytes long</p>
+			<script>
+				function fetchOutputHN(self) {
+					let input = document.getElementById("fetch-input");
+					let timing = document.getElementById("fetch-timing");
+					let length = document.getElementById("fetch-length");
+					let d = Date.now();
+					fetch(input.value)
+						.then(response => response.json())
+						.then(data => {
+							timing.innerHTML = Date.now() - d;
+							length.innerHTML = JSON.stringify(data).length;
+						});
+				}
+			</script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>Text to Emoji</h3>
+				<p>Created because of <a href="https://www.reddit.com/r/ComedyCemetery/comments/hq2gvw/is_this_clever/">this thread on Reddit</a></p>
+			</summary>
+			<h3>Encode</h3>
+			<label>input:<textarea id=t2e-in-encode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=t2e-out-encode readonly></textarea></label>
+			<h3>Decode</h3>
+			<label>input:<textarea id=t2e-in-decode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=t2e-out-decode readonly></textarea></label>
+			<script type=module src=/scripts/t2e.mjs></script>
+		</details>
+
+		<details>
+			<summary>
+				<h3>𝔊𝔢𝔯𝔪𝔞𝔫𝔦𝔷𝔢𝔯</h3>
+				<p>(Germanizer)</p>
+			</summary>
+			<h3>Encode</h3>
+			<label>input:<textarea id=germanizer-in-encode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=germanizer-out-encode readonly></textarea></label>
+			<h3>Decode</h3>
+			<label>input:<textarea id=germanizer-in-decode></textarea></label>
+			<label>output - click to copy to clipboard:<textarea id=germanizer-out-decode readonly></textarea></label>
+			<script type=module src=/scripts/germanizer.mjs></script>
+		</details>
+	</main>
+
+	<footer>
+		<div class=copyright>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+		</div>
+		<nav id=profiles>
+			<p>Media profiles</p>
+			<a href="https://www.reddit.com/user/nostradavid"><img src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
+			<a href="https://twitter.com/DavidNostra"><img src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
+			<a href="https://github.com/NostraDavid"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(me)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(pro)</a><span> - </span>
+			<a href="https://www.facebook.com/david.nostra.121"><img src="/images/social-media/facebook.svg" alt="Twitter's logo" width=32 height=32></a>
+		</nav>
+		<!-- Sssh - don't tell anyone! -->
+		<a class=secret onclick=specialGoto(event)>π</a>
+		<div id=cookie-notification>
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+	</footer>
+</body>
+
+</html>

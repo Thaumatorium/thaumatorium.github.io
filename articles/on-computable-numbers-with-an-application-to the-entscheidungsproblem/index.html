@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>On Computable Numbers, with an Application to the Entscheidungsproblem | The Thaumatorium</title>
+	<meta name=description content="Alan Turing most famous paper, in HTML instead of crappy PDF" />
+	<link rel="canonical" href="https://thaumatorium.com/articles/on-computable-numbers-with-an-application-to the-entscheidungsproblem">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+</head>
+
+<body>
+	<main>
+		<style>
+			body {
+				padding: 20px;
+			}
+
+			th {
+				font-style: italic;
+				font-weight: normal;
+			}
+
+			table {
+				width: 100%;
+				text-align: center;
+			}
+
+			.stache {
+				border-style: solid;
+				border-width: 0 0 0 15px;
+				border-image: url(stache-open.svg) 1 30 stretch;
+			}
+
+			p {
+				text-indent: 2rem;
+				text-align: justify;
+				text-justify: inter-word;
+				word-spacing: .8px;
+				margin: 0;
+			}
+
+			.head {
+				text-align: center;
+			}
+
+			h2 {
+				text-align: center;
+				font-style: italic;
+				font-weight: normal;
+				font-size: 1em;
+			}
+
+			h3 {
+				text-indent: 2rem;
+				font-style: italic;
+				font-size: 1em;
+				font-weight: normal;
+			}
+
+			aside {
+				margin: 10px 0 10px 0;
+			}
+		</style>
+		<hgroup>
+			<div class="head">ON COMPUTABLE NUMBERS, WITH AN APPLICATION TO THE ENTSCHEIDUNGSPROBLEM</div>
+			<div class="head"><em>By</em> A. M. TURING.</div>
+		</hgroup>
+		<div class="head">[Received 28 May, 1936.—Read 12 November, 1936.]</div>
+
+		<p>The “computable” numbers may be described briefly as the real numbers whose expressions as a decimal are calculable by finite means. Although the subject of this paper is ostensibly the computable <em>numbers</em>, it is almost equally easy to define and investigate computable functions of an integral variable or a real or computable variable, computable predicates, and so forth. The fundamental problems involved are, however, the same in each case, and I have chosen the computable numbers for explicit treatment as involving the least cumbrous technique. I hope shortly to give an account of the relations of the computable numbers, functions, and so forth to one another. This will include a development of the theory of functions of a real variable expressed in terms of com&shy;putable numbers. According to my definition, a number is computable if its decimal can be written down by a machine.</p>
+		<p>In §§ 9, 10 I give some arguments with the intention of showing that the computable numbers include all numbers which could naturally be regarded as computable. In particular, I show that certain large classes of numbers are computable. They include, for instance, the real parts of all algebraic numbers, the real parts of the zeros of the Bessel functions, the numbers &pi;, <em>e</em>, etc. The computable numbers do not, however, include all definable numbers, and an example is given of a definable number which is not computable.</p>
+		<p>Although the class of computable numbers is so great, and in many ways similar to the class of real numbers, it is nevertheless enumerable. In §8 I examine certain arguments which would seem to prove the contrary. By the correct application of one of these arguments, conclusions are reached which are superficially similar to those of Gödel †. These results have valuable applications. In particular, it is shown (§11) that the Hilbertian Entscheidungsproblem can have no solution.</p>
+		<aside>† Godel, “Über formal unentscheidbare Satze der Principia Mathematica und verwandter Systeme, I” . <i>Monatshefte Math. Phys.</i>, 38 (1931), 173-198.</aside>
+		<p>In a recent paper Alonzo Church † has introduced an idea of “effective calculability”, which is equivalent to my “computability”, but is very differently defined. Church also reaches similar conclusions about the Entscheidungsproblem &ddagger;. The proof of equivalence between “computability” and “effective calculability” is outlined in an appendix to the present paper.</p>
+
+		<h2>1. Computing machines.</h2>
+		<p>We have said that the computable numbers are those whose decimals are calculable by finite means. This requires rather more explicit definition. No real attempt will be made to justify the definitions given until we reach § 9. For the present I shall only say that the justification lies in the fact that the human memory is necessarily limited. </p>
+		<p>We may compare a man in the process of computing a real number to a machine which is only capable of a finite number of conditions <var>q<sub>1</sub></var>, <var>q<sub>2</sub></var>, …, <var>q<sub>R</sub></var> which will be called “<var>m</var>-configurations”. The machine is supplied with a “tape” (the analogue of paper) running through it, and divided into sections (called “squares”) each capable of bearing a “symbol”. At any moment there is just one square, say the <var>r</var>-th, bearing the symbol ℭ(<var>r</var>) which is “in the machine”. We may call this square the “scanned square”. The symbol on the scanned square may be called the “scanned symbol”. The “scanned symbol” is the only one of which the machine is, so to speak, “directly aware”. However, by altering its <var>m</var>-configuration the machine can effectively remember some of the symbols which it has “seen” (scanned) previously. The possible behaviour of the machine at any moment is determined by the <var>m</var>-configuration <var>q<sub>n</sub></var> and the scanned symbol ℭ(<var>r</var>). This pair <var>q<sub>n</sub></var>, ℭ(<var>r</var>) will be called the “configuration”: thus the configuration determines the possible behaviour of the machine. In some of the configurations in which the scanned square is blank (<em>i.e.</em> bears no symbol) the machine writes down a new symbol on the scanned square: in other configurations it erases the scanned symbol. The machine may also change the square which is being scanned, but only by shifting it one place to right or left. In addition to any of these operations the <var>m</var>-configuration may be changed. Some of the symbols written down will form the sequence of figures which is the decimal of the real number which is being computed. The others are just rough notes to “assist the memory”. It will only be these rough notes which will be liable to erasure. It is my contention that these operations include all those which are used in the computation of a number. The defence of this contention will be easier when the theory of the machines is familiar to the reader. In the next section I therefore proceed with the development of the theory and assume that it is understood what is meant by “machine”, “tape”, “scanned”, etc.</p>
+		<aside>
+			<p>† Alonzo Church, “An unsolvable problem, of elementary number theory number theory”, <var>American J. of Math.</var>, 58 (1936), 345-363.</p>
+			<p>&ddagger; Alonzo Church, “A note on the Entscheidungsproblem”, <var>J. of Symbolic Logic</var>, 1 (1936), 40-41. </p>
+		</aside>
+
+		<h2>2. Definitions.</h2>
+		<h3>Automatic machines.</h3>
+		<p>If at each stage the motion of a machine (in the sense of § 1) is completely determined by the configuration, we shall call the machine an “automatic machine” (or <var>a</var>-machine).</p>
+		<p>For some purposes we might use machines (choice machines or <var>c</var>-machines) whose motion is only partially determined by the configuration (hence the use of the word “possible” in §1). When such a machine reaches one of these ambiguous configurations, it cannot go on until some arbitrary choice has been made by an external operator. This would be the case if we were using machines to deal with axiomatic systems. In this paper I deal only with automatic machines, and will therefore often omit the prefix <var>a</var>-.</p>
+
+		<h3>Computing machines.</h3>
+
+		<p>If an <var>a</var>-machine prints two kinds of symbols, of which the first kind (called figures) consists entirely of 0 and 1 (the others being called symbols of the second kind), then the machine will be called a computing machine. If the machine is supplied with a blank tape and set in motion, starting from the correct initial ra-configuration, the subsequence of the synbols printed by it which are of the first kind will be called the <em>sequence computed by the machine</em>. The real number whose expression as a binary decimal is obtained by prefacing this sequence by a decimal point is called the <em>number computed by the machine</em>.</p>
+		<p>At any stage of the motion of the machine, the number of the scanned square, the complete sequence of all symbols on the tape, and the <var>m</var>-configuration will be said to describe the <em>complete configuration</em> at that stage. The changes of the machine and tape between successive complete configurations will be called the <em>moves</em> of the machine.</p>
+
+		<h3>Circular and circle-free machines.</h3>
+
+		<p>If a computing machine never writes down more than a finite number of symbols of the first kind, it will be called <em>circular</em>. Otherwise it is said to be <em>circle-free</em>.</p>
+		<p>A machine will be circular if it reaches a configuration from which there is no possible move, or if it goes on moving, and possibly printing symbols of the second kind, but cannot print any more symbols of the first kind. The significance of the term “circular” will be explained in §8.</p>
+
+		<h3>Computable sequences and numbers.</h3>
+
+		<p>A sequence is said to be computable if it can be computed by a circle-free machine. A number is computable if it differs by an integer from the number computed by a circle-free machine.</p>
+		<p>We shall avoid confusion by speaking more often of computable sequences than of computable numbers.</p>
+
+		<h2>3. Examples of computing machines.</h2>
+
+		<p>I. A machine can be constructed to compute the sequence 010101… . The machine is to have the four <var>m</var>-configurations “𝔟”, “𝔠”, “𝔨”, “𝔢” and is capable of printing “0” and “1”. The behaviour of the machine is described in the following table in which “<var>R</var>” means “the machine moves so that it scans the square immediately on the right of the one it was scanning previously". Similarly for “<var>L</var>”. “<var>E</var>” means “the scanned symbol is erased” and “<var>P</var>” stands for “prints". This table (and all succeeding tables of the same kind) is to be understood to mean that for a configuration described in the first two columns the operations in the third column are carried out successively, and the machine then goes over into the <var>m</var>-configuration described in the last column. When the second column is left blank, it is understood that the behaviour of the third and fourth columns applies for any symbol and for no symbol. The machine starts in the <var>m</var>-configuration 𝔟 with a blank tape.</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan=2>Configuration</th>
+					<th colspan=2>Behaviour</th>
+				</tr>
+				<tr>
+					<th>m-config.</th>
+					<th>symbol</th>
+					<th>operations</th>
+					<th>final m-config.</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>𝔟</td>
+					<td>None</td>
+					<td><var>P0</var>,<var>R</var></td>
+					<td>𝔠</td>
+				</tr>
+				<tr>
+					<td>𝔠</td>
+					<td>None</td>
+					<td><var>R</var></td>
+					<td>𝔢</td>
+				</tr>
+				<tr>
+					<td>𝔢</td>
+					<td>None</td>
+					<td><var>P</var>1,<var>R</var></td>
+					<td>𝔨</td>
+				</tr>
+				<tr>
+					<td>𝔨</td>
+					<td>None</td>
+					<td><var>R</var></td>
+					<td>𝔟</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>If (contrary to the description in §1) we allow the letters <var>L</var>, <var>R</var> to appear more than once in the operations column we can simplify the table considerably.</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th>m-config.</th>
+					<th></th>
+					<th>symbol</th>
+					<th>operations</th>
+					<th>final m-config.</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan=3>𝔟</td>
+					<td rowspan=3 class=stache></td>
+					<td>None</td>
+					<td><var>P</var>0</td>
+					<td>𝔟</td>
+				</tr>
+				<tr>
+					<td>0</td>
+					<td><var>R</var>, <var>R</var>, <var>P</var>1</td>
+					<td>𝔟</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td><var>R</var>, <var>R</var>, <var>P</var>0</td>
+					<td>𝔟</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>II. As a slightly more difficult example we can construct a machine to compute the sequence 001011011101111011111…. The machine is to be capable of five <var>m</var>-configurations, viz. “𝔬”, “𝔮”, “𝔭”, “𝔣”, “𝔟” and of printing “ə” , “𝑥”, “0” , “1” . The first three symbols on the tape will be “ə ə 0”; the other figures follow on alternate squares. On the inter&shy;mediate squares we never print anything but “𝑥”. These letters serve to “keep the place” for us and are erased when we have finished with them. We also arrange that in the sequence of figures on alternate squares there shall be no blanks.</p>
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan=3>Configuration</th>
+					<th colspan=2>Behaviour</th>
+				</tr>
+				<tr>
+					<th>m-config</th>
+					<th></th>
+					<th>symbol</th>
+					<th>operations</th>
+					<th>final m-config</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>𝔟</td>
+					<td></td>
+					<td></td>
+					<td><var>P</var>ə, <var>R</var>, <var>P</var>ə, <var>R</var>, <var>P</var>0, <var>R</var>, <var>R</var>, <var>P</var>0, <var>L</var>, <var>L</var></td>
+					<td>𝔬</td>
+				</tr>
+				<tr>
+					<td rowspan=2>𝔬</td>
+					<td rowspan=2 class=stache></td>
+					<td>1</td>
+					<td><var>R</var>, <var>P</var>𝑥, <var>L</var>, <var>L</var>, <var>L</var></td>
+					<td>𝔬</td>
+				</tr>
+				<tr>
+					<td>0</td>
+					<td></td>
+					<td>𝔮</td>
+				</tr>
+				<tr>
+					<td rowspan=2>𝔮</td>
+					<td rowspan=2 class=stache></td>
+					<td>Any (0 or 1)</td>
+					<td><var>R</var>, <var>R</var></td>
+					<td>𝔮</td>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td><var>P</var>1, <var>L</var></td>
+					<td>𝔭</td>
+				</tr>
+				<tr>
+					<td rowspan=3>𝔭</td>
+					<td rowspan=3 class=stache></td>
+					<td>𝑥</td>
+					<td><var>E</var>, <var>R</var></td>
+					<td>𝔮</td>
+				</tr>
+				<tr>
+					<td>ə</td>
+					<td><var>R</var></td>
+					<td>𝔣</td>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td><var>L</var>, <var>L</var></td>
+					<td>𝔭</td>
+				</tr>
+				<tr>
+					<td rowspan=2>𝔣</td>
+					<td rowspan=2 class=stache></td>
+					<td>Any</td>
+					<td><var>R</var>, <var>R</var></td>
+					<td>𝔣</td>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td><var>P</var>0, <var>L</var>, <var>L</var></td>
+					<td>𝔬</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>To illustrate the working of this machine a table is given below of the first few complete configurations. These complete configurations are described by writing down the sequence of symbols which are on the tape, with the <var>m</var>-configuration written below the scanned symbol. The successive complete configurations are separated by colons.</p>
+		<pre><code>
+	  : ə ə 0   0 : ə ə 0   0 : ə ə 0   0 : ə ə 0   0     : ə ə 0   0   1 :
+	𝔟       𝔬           𝔮               𝔮              𝔮              𝔭
+	ə ə 0   0   1 : ə ə 0   0   1 : ə ə 0   0   1 : ə ə 0   0   1 :
+	      𝔭           𝔭                 𝔣                    𝔣
+	ə ə 0   0   1 : ə ə 0   0   1     : ə ə 0   0   1   0 :
+	            𝔣                    𝔣               𝔬
+	ə ə 0   0   1 𝑥 0 : ….
+	        𝔬
+</code>
+</pre>
+
+		<p>This table could also be written in the form</p>
+
+		<!-- TODO: figure out something here... - this isn't acceptable -->
+		<code>𝔟 : ə ə 𝔬 0  0 : ə ə 𝔮 0  0 : … , (C)</code>
+
+		<!-- ! HIER VERDER -->
+
+		<p>in which a space has been made on the left of the scanned symbol and the <var>m</var>-configuration written in this space. This form is less easy to follow, but we shall make use of it later for theoretical purposes.</p>
+		<p>The convention of writing the figures only on alternate squares is very useful: I shall always make use of it. I shall call the one sequence of alternate squares <var>F</var>-squares and the other sequence <var>E</var>-squares. The symbols on <var>E</var>-squares will be liable to erasure. The symbols on <var>F</var>-squares form a continuous sequence. There are no blanks until the end is reached. There is no need to have more than one <var>E</var>-square between each pair of <var>F</var>-squares: an apparent need of more <var>E</var>-squares can be satisfied by having a sufficiently rich variety of symbols capable of being printed on <var>E</var>-squares. If a symbol β is on an <var>F</var>-square <var>S</var> and a symbol α is on the <var>E</var>-square next on the right of <var>S</var>, then <var>S</var>> and β will be said to be <em>marked</em> with α. The process of printing this α will be called marking β (or <var>S</var>) with α.</p>
+
+		<h2>4. Abbreviated tables.</h2>
+
+		<p>There are certain types of process used by nearly all machines, and. these, in some machines, are used in many connections. These processes include copying down sequences of symbols, comparing sequences, erasing all symbols of a given form, etc. Where such processes are concerned we can abbreviate the tables for the <var>m</var>-configurations considerably by the use of “skeleton tables". In skeleton tables there appear capital German letters and small Greek letters. These are of the nature of “variables". By replacing each capital German letter throughout by an <var>m</var>-configuration and each small Greek letter by a symbol, we obtain the table for an <var>m</var>-configuration.</p>
+		<p>The skeleton tables are to be regarded as nothing but abbreviations: they are not essential. So long as the reader understands how to obtain the complete tables from the skeleton tables, there is no need to give any exact definitions in this connection.</p>
+		<p>Let us consider an example:</p>
+		<table>
+			<thead>
+				<tr>
+					<th>m-config.</th>
+					<th></th>
+					<th>Symbol</th>
+					<th>Behavior</th>
+					<th>Final m-config.</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td rowspan=2>𝔣(ℭ, 𝔟, α)</td>
+					<td rowspan=2 class=stache></td>
+					<td>ə</td>
+					<td><var>L</var></td>
+					<td>𝔣<sub>1</sub>(ℭ, 𝔟, α)</td>
+					<td rowspan=8>
+						<p>From the <var>m</var>-configuration 𝔣(ℭ, 𝔟, α) the machine finds the symbol of form α which is farthest to the left (the “first α") and the <var>m</var>-configuration then becomes ℭ. If there is no α then the <var>m</var>-configuration becomes 𝔟</p>
+					</td>
+				</tr>
+				<tr>
+					<td>not ə</td>
+					<td><var>L</var></td>
+					<td>𝔣<sub>1</sub>(ℭ, 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td rowspan=3>𝔣<sub>1</sub>(ℭ, 𝔟, α)</td>
+					<td rowspan=3 class=stache></td>
+					</td>
+					<td>α</td>
+					<td></td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>not α</td>
+					<td><var>R</var></td>
+					<td>𝔣<sub>1</sub>(ℭ, 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td><var>R</var></td>
+					<td>𝔣<sub>2</sub>(ℭ, 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td rowspan=3>𝔣<sub>2</sub>(ℭ, 𝔟, α)</td>
+					<td rowspan=3 class=stache></td>
+					<td>α</td>
+					<td></td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>not α</td>
+					<td><var>R</var></td>
+					<td>𝔣<sub>1</sub>(ℭ, 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td><var>R</var></td>
+					<td>𝔣<sub>2</sub>(ℭ, 𝔟, α)</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>If we were to replace ℭ throughout by 𝔮 (say), 𝔟 by 𝔯, and α by 𝑥, we should have a complete table for the <var>m</var>-configuration 𝔣(𝔮, 𝔯, 𝑥). 𝔣 is called an “<var>m</var>-configuration function” or “<var>m</var>-function".</p>
+
+		<p>The only expressions which are admissible for substitution in an <var>m</var>-function are the <var>m</var>-configurations and symbols of the machine. These have to be enumerated more or less explicitly: they may include expressions such as 𝔭(𝔢, 𝑥); indeed they must if there are any <var>m</var>-functions used at all. If we did not insist on this explicit enumeration, but simply stated that the machine had certain <var>m</var>-configurations (enumerated) and all <var>m</var>-configurations obtainable by substitution of <var>m</var>-configurations in certain <var>m</var>-functions, we should usually get an infinity of <var>m</var>-configurations; e.g., we might say that the machine was to have the <var>m</var>-configuration 𝔮 and all <var>m</var>-configurations obtainable by substituting an <var>m</var>-configuration for ℭ in 𝔭(ℭ). Then it would have 𝔮, 𝔭(𝔮), 𝔭(𝔭(𝔮)) 𝔭(𝔭(𝔭(𝔮))), … as <var>m</var>-configurations.</p>
+
+		<p>Our interpretation rule then is this. We are given the names of the <var>m</var>-configurations of the machine, mostly expressed in terms of <var>m</var>-functions. We are also given skeleton tables. All we want is the complete table for the <var>m</var>-configurations of the machine. This is obtained by repeated substitution in the skeleton tables.</p>
+
+		<h3>Further examples.</h3>
+		<p>(In the explanations the symbol “→” is used to signify “the machine goes into the <var>m</var>-configuration. . . . “)</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>𝔢(ℭ, 𝔟, α)</td>
+					<td></td>
+					<td>𝔣(𝔢<sub>1</sub>(ℭ, 𝔟, α), 𝔟, α)</td>
+					<td rowspan=2>From 𝔢(ℭ, 𝔟, α) the first α is erased and →ℭ. If there is no α→𝔟.</td>
+				</tr>
+				<tr>
+					<td>𝔢<sub>1</sub>(ℭ, 𝔟, α)</td>
+					<td><var>E</var></td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>𝔢(𝔟, α)</td>
+					<td></td>
+					<td>𝔢(𝔢(𝔟, α), 𝔟, α)</td>
+					<td>From 𝔢(𝔟, α) all letters α are erased and →𝔟.</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<p>The last example seems somewhat more difficult to interpret than most. Let us suppose that in the list of <var>m</var>-configurations of some machine there appears 𝔢(𝔟, 𝑥) (=𝔮, say). The table is</p>
+		<table>
+			<tbody>
+				<tr>
+					<td></td>
+					<td>𝔢(𝔟, 𝑥)</td>
+					<td>𝔢(𝔢(𝔟, 𝑥), 𝔟, 𝑥)</td>
+				</tr>
+				<tr>
+					<td>or</td>
+					<td>𝔮</td>
+					<td>𝔢(𝔮, 𝔟, 𝑥)</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Or, in greater detail:</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>𝔮</td>
+					<td></td>
+					<td>𝔢(𝔮, 𝔟, 𝑥)</td>
+				</tr>
+				<tr>
+					<td>𝔢(𝔮, 𝔟, 𝑥)</td>
+					<td></td>
+					<td>𝔣(𝔢<sub>1</sub>(𝔮, 𝔟, 𝑥), 𝔟, 𝑥)</td>
+				</tr>
+				<tr>
+					<td>𝔢<sub>1</sub>(𝔮, 𝔟, 𝑥)</td>
+					<td><var>E</var></td>
+					<td>𝔮</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>In this we could replace 𝔢<sub>1</sub>(𝔮, 𝔟, 𝑥) by 𝔮′ and then give the table for 𝔣 (with the right substitutions) and eventually reach a table in which no <var>m</var>-functions appeared.</p>
+		<table>
+			<tbody>
+				<tr>
+					<td>𝔭𝔢(ℭ, β)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>𝔣(𝔭𝔢<sub>1</sub>(ℭ, β), ℭ, ə)</td>
+					<td rowspan=3>From 𝔭𝔢(ℭ, β) the machine prints β at the end of the sequence of symbols and →ℭ.</td>
+				</tr>
+				<tr>
+					<td rowspan=2>𝔭𝔢<sub>1</sub>(ℭ, β)</td>
+					<td rowspan=2 class=stache></td>
+					<td>Any</td>
+					<td><var>R</var>,<var>R</var></td>
+					<td>𝔭𝔢<sub>1</sub>(ℭ, β)</td>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td><var>P</var>β</td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>𝔩(ℭ)</td>
+					<td></td>
+					<td></td>
+					<td><var>L</var></td>
+					<td>ℭ</td>
+					<td rowspan=2>From 𝔣′(ℭ, 𝔟, α) it does the same as for 𝔣(ℭ, 𝔟, α) but moves to the left before →ℭ</td>
+				</tr>
+				<tr>
+					<td>𝔯(ℭ)</td>
+					<td></td>
+					<td></td>
+					<td><var>R</var></td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>𝔣′(ℭ, 𝔟, α)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>𝔣(𝔩(ℭ), 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td>𝔣′′(ℭ, 𝔟, α)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>𝔣(𝔯(ℭ), 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td>ℭ(ℭ, 𝔟, α)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>𝔣′(𝔢<sub>1</sub>(ℭ), 𝔟, α)</td>
+					<td rowspan=2>𝔢(ℭ, 𝔟, α). The machine writes at the end the first symbol markes α and →ℭ.</td>
+				</tr>
+				<tr>
+					<td>ℭ<sub>1</sub>(ℭ)</td>
+					<td>β</td>
+					<td></td>
+					<td></td>
+					<td>𝔭𝔢(ℭ, β)</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>The last line stands for the totality of lines obtainable from it by replacing β by any symbol which may occur on the tape of the machine concerned.</p>
+
+		<table>
+			<tbody>
+				<tr>
+					<td>ℭ𝔢(ℭ, 𝔟, α)</td>
+					<td></td>
+					<td>ℭ(𝔢(ℭ, 𝔟, α), 𝔟, α)</td>
+					<td rowspan=2>ℭ𝔢(𝔟, α). The machine copies down in order at the end all symbols marked α and erases the letters α;→𝔟.</td>
+				</tr>
+				<tr>
+					<td>ℭ𝔢(𝔟, α)</td>
+					<td></td>
+					<td>ℭ𝔢(ℭ𝔢(𝔟, α), 𝔟, α)</td>
+				</tr>
+				<tr>
+					<td>𝔯𝔢(ℭ, 𝔟, α, β)</td>
+					<td></td>
+					<td>𝔣(𝔯𝔢<sub>1</sub>(ℭ, 𝔟, α, β), 𝔟, α)</td>
+					<td rowspan=2>𝔯𝔢(ℭ, 𝔟, α, β). The machine replaces the first α by β and →ℭ→𝔟 if there is no α.</td>
+				</tr>
+				<tr>
+					<td>𝔯𝔢<sub>1</sub>(ℭ, 𝔟, α, β)</td>
+					<td><var>E</var>, <var>P</var>β</td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>𝔯𝔢(𝔟, α, β)</td>
+					<td></td>
+					<td>𝔯𝔢(𝔯𝔢(𝔟, α, β), 𝔟, α, β)</td>
+					<td></td>𝔯𝔢(𝔟, α, β). The machine replaces all letters α by β; →𝔟.</td>
+				</tr>
+				<tr>
+					<td>ℭ𝔯(ℭ, 𝔟, α)</td>
+					<td></td>
+					<td>ℭ(𝔯𝔢(ℭ, 𝔟, α, α), 𝔟, α)</td>
+					<td rowspan=2>ℭ𝔯(𝔟, α) differs from ℭ𝔢(𝔟, α) only in that the letters α are not erased. The m-configuration ℭ𝔯(𝔟, α) is taken up when no letters “α” are on the tape.</td>
+				</tr>
+				<tr>
+					<td>ℭ𝔯(𝔟, α)</td>
+					<td></td>
+					<td>ℭ𝔯(𝔢𝔯(𝔟, α), 𝔯𝔢(𝔟, α, α), α)</td>
+				</tr>
+				<tr>
+					<td>ℭ𝔭(ℭ,𝔘,ℭ,α,β)</td>
+					<td></td>
+					<td></td>
+					<td colspan=2>𝔣′(ℭ𝔭<sub>1</sub>(ℭ<sub>1</sub>, 𝔘, β), 𝔣(𝔘, ℭ, β), α)</td>
+				</tr>
+				<tr>
+					<td>ℭ𝔭<sub>1</sub>(ℭ,𝔘,β)</td>
+					<td></td>
+					<td>γ</td>
+					<td colspan=2>𝔣′(ℭ𝔭<sub>2</sub>(ℭ, 𝔘, γ), 𝔘, β)</td>
+				</tr>
+				<tr>
+					<td rowspan=2>ℭ𝔭<sub>2</sub>(ℭ,𝔘,γ)</td>
+					<td rowspan=2 class=stache></td>
+					<td>γ</td>
+					<td>ℭ</td>
+				</tr>
+				<tr>
+					<td>not γ</td>
+					<td>𝔘.</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>The first symbol marked α and the first marked β are compared. If there is neither α nor β,→ℭ. If there are both and the symbols are alike, →ℭ. Otherwise →𝔘.</p>
+
+		<p>ℭ𝔭𝔢(ℭ,𝔘,𝔢,α,β) ℭ𝔭(𝔢(𝔢(ℭ, ℭ, β), ℭ, α), 𝔘, 𝔢, α, β)</p>
+		<p>ℭ𝔭𝔢(ℭ,𝔘,𝔢,α,β) differs from ℭ𝔭(ℭ, 𝔘, 𝔢, α, β) in that in the case when there is similarity the first α and β are erased.</p>
+		<p>ℭ𝔭𝔢(𝔘,𝔢,α,β) ℭ𝔭𝔢(ℭ𝔭𝔢(𝔘, 𝔢, α, β), 𝔘, 𝔢, α, β), 𝔘, 𝔢, α, β).</p>
+		<p></p>ℭ𝔭𝔢(𝔘,𝔢,α,β). The sequence of symbols marked α is compared with the sequence marked β. →𝔢 if they are similar. Otherwise →𝔘. Some of the symbols α and β are erased.
+
+		<p><strong>WARNING - MISSING TABLE FROM PAGE 239!!!</strong></p>
+
+		<h2>5. Enumeration of computable sequences.</h2>
+
+		<p>A computable sequence γ is determined by a description of a machine which computes y. Thus the sequence 001011011101111… is determined by the table on p.234, and, in fact, any computable sequence is capable of being described in terms of such a table.</p>
+
+		<p>It will be useful to put these tables into a kind of standard form. In the first place let us suppose that the table is given in the same form as the first table, for example, I on p. 233. That is to say, that the entry in the operations column is always of one of the forms <var>E</var>:<var>E</var>,<var>R</var>:<var>E</var>,<var>L</var>:<var>Pa</var>:<var>Pa</var>,<var>R</var>:<var>Pa</var>,<var>L</var>:<var>R</var>:<var>L</var>: or no entry at all. The table can always be put into this form by introducing more <var>m</var>-configurations. Now let us give numbers to the <var>m</var>>-configurations, calling them <var>q<sub>1</sub></var>, …, <var>q<sub>R</sub></var>, as in §1. The initial <var>m</var>-configuration is always to be called <var>q<sub>1</sub></var>. We also give numbers to the symbols <var>S<sub>1</sub></var>,…, <var>S<sub>m</sub></var> and, in particular, blank = <var>S<sub>0</sub></var>, 0 = <var>S<sub>1</sub></var>, 1 = <var>S<sub>2</sub></var>. The lines of the table are now of form</p>
+		<table>
+			<thead>
+				<tr>
+					<th>m-config</th>
+					<th>Symbol</th>
+					<th>Operations</th>
+					<th>Final m-config.</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>PS<sub>k</sub></var>, <var>L</var></td>
+					<td><var>q<sub>m</sub></td>
+					<td>(<var>N<sub>1</sub></var>)</td>
+				</tr>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>PS<sub>k</sub></var>, <var>R</var></td>
+					<td><var>q<sub>m</sub></td>
+					<td>(<var>N<sub>2</sub></var>)</td>
+				</tr>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>PS<sub>k</sub></var></td>
+					<td><var>q<sub>m</sub></td>
+					<td>(<var>N<sub>3</sub></var>)</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Lines such as</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>E</var>, <var>R</var></td>
+					<td><var>q<sub>m</sub></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>are to be written as</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>PS<sub>0</sub></var>, <var>R</var></td>
+					<td><var>q<sub>m</sub></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>and the lines such as</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>R</var></td>
+					<td><var>q<sub>m</sub></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>to be written as</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><var>q<sub>i</sub></var></td>
+					<td><var>S<sub>j</sub></var></td>
+					<td><var>PS<sub>j</sub></var>, <var>R</var></td>
+					<td><var>q<sub>m</sub></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>In this way we reduce each line of the table to a line of one of the forms (<var>N<sub>1</sub></var>), (<var>N<sub>2</sub></var>), (<var>N<sub>3</sub></var>).</p>
+
+		<p>From each line of form (<var>N<sub>1</sub></var>) let us form an expression <var>q<sub>i</sub></var><var>S<sub>j</sub></var><var>S<sub>k</sub></var><var>L</var><var>q<sub>m</sub>; from each line of form (<var>N<sub>2</sub></var>) we form an expression <var>q<sub>i</sub></var><var>S<sub>j</sub></var><var>S<sub>k</sub></var><var>R</var><var>q<sub>m</sub>; and from each line of form (<var>N<sub>3</sub></var>) we form an expression <var>q<sub>i</sub></var><var>S<sub>j</sub></var><var>S<sub>k</sub></var><var>N</var><var>q<sub>m</sub></p>
+
+		<p>Let us write down all expressions so formed from the table for the machine and separate them by semi-colons. In this way we obtain a complete description of the machine. In this description we shall replace <var>q<sub>i</sub></var> by the letter “<var>D</var>” followed by the letter “<var>A</var>” repeated <var>i</var> times, and <var>S<sub>j</sub></var> by "<var>D</var>” followed by “<var>C</var>” repeated <var>j</var> times. This new description of the machine may be called the <em>standard description</em> (S.D). It is made up entirely from the letters “<var>A</var>”, “<var>C</var>”, “<var>D</var>”, “<var>L</var>”, “<var>R</var>”, "<var>N</var>”, and from “<var>;</var>"</p>
+
+		<p>If finally we replace “<var>A</var>” by “1” , “<var>C</var>” by “2” , “<var>D</var>” by “3” , “<var>L</var>" by “4” , “<var>R</var>” by “5” , “<var>N</var>” by “6” , and “;” by “7” we shall have a description of the machine in the form of an arabic numeral. The integer represented by this numeral may be called a <em>description number</em> (D.N) of the machine. The D.N determine the S.D and the structure of the machine uniquely. The machine whose D.N is <var>n</var> may be described as ℳ(<var>n</var>)</p>
+		<p>To each computable sequence there corresponds at least one description number, while to no description number does there correspond more than one computable sequence. The computable sequences and numbers are therefore enumerable.</p>
+		<p>Let us find a description number for the machine I of § 3. When we rename the <var>m</var>-configurations its table becomes: </p>
+		<table>
+			<tbody>
+				<tr>
+					<td><var>q<sub>1</sub></var></td>
+					<td><var>S<sub>0</sub></var></td>
+					<td><var>PS<sub>1</sub></var>, <var>R</var></td>
+					<td><var>q<sub>2</sub></td>
+				</tr>
+				<tr>
+					<td><var>q<sub>2</sub></var></td>
+					<td><var>S<sub>0</sub></var></td>
+					<td><var>PS<sub>0</sub></var>, <var>R</var></td>
+					<td><var>q<sub>3</sub></td>
+				</tr>
+				<tr>
+					<td><var>q<sub>3</sub></var></td>
+					<td><var>S<sub>0</sub></var></td>
+					<td><var>PS<sub>2</sub></var>, <var>R</var></td>
+					<td><var>q<sub>4</sub></td>
+				</tr>
+				<tr>
+					<td><var>q<sub>4</sub></var></td>
+					<td><var>S<sub>0</sub></var></td>
+					<td><var>PS<sub>0</sub></var>, <var>R</var></td>
+					<td><var>q<sub>1</sub></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Other tables could be obtained by adding irrelevant lines such as</p>
+		<table>
+			<tbody>
+				<tr>
+					<td><var>q<sub>1</sub></var></td>
+					<td><var>S<sub>1</sub></var></td>
+					<td><var>PS<sub>1</sub></var>, <var>R</var></td>
+					<td><var>q<sub>2</sub></td>
+				</tr>
+			</tbody>
+		</table>
+		<p>Our first standard form would be</p>
+
+		<p> <var>q<sub>1</sub></var><var>S<sub>0</sub></var><var>S<sub>1</sub></var><var>R</var><var>q<sub>2</sub></var>; <var>q<sub>2</sub></var><var>S<sub>0</sub></var><var>S<sub>0</sub></var><var>R</var><var>q<sub>3</sub></var>; <var>q<sub>3</sub></var><var>S<sub>0</sub></var><var>S<sub>2</sub></var><var>R</var><var>q<sub>4</sub></var>; <var>q<sub>4</sub></var><var>S<sub>0</sub></var><var>S<sub>0</sub></var><var>R</var><var>q<sub>1</sub></var> </p>
+		<p>The standard description is</p>
+		<pre>
+DADDCRDAA;DAADDRDAAA;
+								 DAAADDCCRDAAA;DAAAADDRDA;
+</pre>
+		<p>A description number is</p>
+		<pre>31332531173113353111731113322531111731111335317</pre>
+		<p>and so is</p>
+		<pre>3133253117311335311173111332253111173111133531731323253117</pre>
+
+		<p>A number which is a description number of a circle-free machine will be called a <em>satisfactory</em> number. In §8 it is shown that there can be no general process for determining whether a given number is satisfactory or not.</p>
+
+		<h2>6. The universal computing machine.</h2>
+
+		<p>It is possible to invent a single machine which can be used to compute any computable sequence. If this machine 𝒰 is supplied with a tape on the beginning of which is written the S.D of some computing machine ℳ, then 𝒰 will compute the same sequence as ℳ. In this section I explain in outline the behaviour of the machine. The next section is devoted to giving the complete table for 𝒰.</p>
+		<p>Let us first suppose that we have a machine ℳ′ which will write down on the <var>F</var>-squares the successive complete configurations of ℳ. These might be expressed in the same form as on p. 235, using the second description, (C), with all symbols on one line. Or, better, we could transform this description (as in §5) by replacing each <var>m</var>-configuration by “<var>D</var>” followed by “<var>A</var>” repeated the appropriate number of times, and by replacing each symbol by “<var>D</var>” followed by “<var>C</var>” repeated the appropriate number of times. The numbers of letters “<var>A</var>” and “<var>C</var>” are to agree with the numbers chosen in §5, so that, in particular, “0” is replaced by “<var>DC</var>”, “1” by "<var>DCC</var>”, and the blanks by “<var>D</var>” . These substitutions are to be made after the complete configurations have been put together, as in (C). Difficulties arise if we do the substitution first. In each complete configuration the blanks would all have to be replaced by "<var>D</var>”, so that the complete configuration would not be expressed as a finite sequence of symbols.</p>
+		<p>If in the description of the machine II of § 3 we replace “𝔬” by “<var>DAA</var>”, "ə” by “<var>DCCC</var>”, “𝔮” by “<var>DAAA</var>”, then the sequence (C) becomes:</p>
+
+		<pre>DA:DCCCDCCCDAADCDDC:DCCCDCCCDAAADCDDC:… (C<sub>1</sub>)</pre>
+
+		(This is the sequence of symbols on F-squares.)
+		It is not difficult to see that if ℳ can be constructed, then so can it ℳ′.
+		The manner of operation of it' could be made to depend on having the rules
+		of operation {i.e., the S.D) of il written somewhere within itself {i.e. within
+		il/); each step could be carried out by referring to these rules. We have
+		only to regard the rules as being capable of being taken out and exchanged for others and we have
+		something very akin to the universal
+		machine.
+		One thing is lacking : at present the machine it' prints no figures. We
+		may correct this by printing between each successive pair of complete
+		configurations the figures which appear in the new configuration but not
+		in the old. Then (C^) becomes
+		DDA:O:O:DCCCDCCCDAADCDDC:DCCC... (C2)
+		It is not altogether obvious that the ^-squares leave enough room for
+		the necessary “rough work”, but this is, in fact, the case.
+		The sequences of letters between the colons in expressions such as
+		(Cj) may be used as standard descriptions of the complete configurations.
+		When the letters are replaced by figures, as in § 5, we shall have a numerical
+		9
+		not 9
+		Any
+		None
+		R
+		L
+		R, E, R
+		e^onf)
+		c(anf)
+		ei(anf)
+		anf
+		1936.] ON COMPUTABLE NUMBERS. 243
+		•description of the complete configuration, which may be called its description number.
+		7. Detailed description of the universal machine.
+		A table is given below of the behaviour of this universal machine. The
+		•<var>m</var>-configurations of which the machine is capable are all those occurring in
+		the first and last columns of the table, together with all those which occur
+		when we write out the unabbreviated tables of those which appear in the
+		table in the form of <var>m</var>-functions. E.g., e(anf) appears in the table and is an
+		wi-fimction. Its unabbreviated table is (see p. 239)
+		e(anf)
+		e^anf)
+		Consequently e1(anf) is an <var>m</var>-configuration of U.
+		When \l is ready to start work the tape running through it bears on it
+		the symbol a on an .F-square and again Q on the next i£-square; after this,
+		on .F-squares only, comes the S.D of the machine followed by a double
+		colon “:: “ (a single symbol, on an .F-square). The S.D consists of a
+		number of instructions, separated by semi-colons.
+		Each instruction consists of five consecutive parts
+		(i) “D “ followed by a sequence of letters “A". This describes the
+		relevant <var>m</var>-configuration.
+		(ii) “JD” followed by a sequence of letters “ C". This describes the
+		scanned symbol.
+		(iii) “D “ followed by another sequence of letters “C". This
+		describes the symbol into which the scanned symbol is to be changed.
+		(iv) “ L “ , “i2” , or “JV”, describing whether the machine is to move
+		to left, right, or not at all.
+		(v) “D “ followed by a sequence of letters “A". This describes the
+		final <var>m</var>-configuration.
+		The machine U is to be capable of printing “A”, “0” ,
+		ctD” , “0” ,
+		•"1” , “u”, “v”, “w”, “z” , “y”, “z” . The S.D is formed from “;” ,
+		•"A”, “C”, “D” , “L” ,
+		((R"} “N".
+		244 A. M. TURING
+		Subsidiary skeleton table.
+		(Not A R, R con(£, a)
+		[Nov. 12,
+		con(@, a)
+		con^CE, a)
+		con2(§, a)
+		con(@. a). Starting from
+		an J^-square, S say, the seA L, Pa, R con^S, a) 𝔮uenc e Q o f symbol s describA R,Pa,R con^a ) ing a
+		configuration closest on
+		the right of S is marked out
+		D R, Pa, R con2(§, a) with letters a. ->@.
+		G
+		Not C R.R
+		R, Pa, R con2(£,a) con(S, ). In the final configuration the machine is
+		scanning the square which is
+		four squares to the right of the
+		last square of C. C is left
+		unmarked.
+		The table for U.
+		hx R,R,P:,R,R,PD;R,R,PA anf
+		anf
+		6. The machine prints
+		on the .F-squares after
+		->anf.
+		font
+		not z nor
+		R, Pz: L
+		L,L
+		L
+		g(anf1} :) anf. The machine marks
+		the configuration in the last
+		COn (font, y) comp i e t e configuration with
+		y. -
+		!om
+		!om
+		con (limp, x) font. The machine finds
+		the last semi-colon not
+		marked with z. It marks
+		this semi-colon with z and
+		the configuration following
+		it with x.
+		Hnr,> cpe(c(fom, x, y), iim, x, y) fmp. The machine compares the sequences marked
+		x and y. It erases all letters
+		x and y. -> Sim if they are
+		alike. Otherwise ->• font.
+		anf. Taking the long view, the last instruction relevant to the last
+		configuration is found. It can be recognised afterwards as the instruction
+		following the last semi-colon marked z. -Mim.
+		1936.] ON COMPUTABLE NUMBERS. 245
+		Sim
+		•mt
+		m?3
+		m?4
+		mh
+		A
+		not
+		not
+		A
+		A .
+		A
+		R,Pu,
+		L,
+		L,Py,
+		R, R
+		Py
+		con
+		,R
+		,R
+		(stm2,
+		Sim
+		Sim
+		e(mB,
+		Sim
+		)
+		3
+		2
+		3
+		A
+		C
+		[Any
+		[ None
+		L, L, L, L
+		, Pa;, j^ , Z',
+		con
+		P:
+		L, L, L
+		?, R, R, R
+		•R, 22
+		mf2
+		D R, Px, L, L, L m?3
+		not : R, Pv, L, L, L m!3
+		: mL
+		mf6
+		inSt, 0, :
+		xnit
+		S im. The machine marks out
+		the instructions. That part of
+		the instructions which refers to
+		operations to be carried out is
+		marked with u, and the final mconfiguration with y. The letters z are erased.
+		mi. The last complete configuration is marked out into
+		four sections. The configiiraration is left unmarked. The
+		symbol directly preceding it is
+		marked with x. The remainder
+		of the complete configuration
+		is divided into two parts, of
+		which the first is marked with
+		v and the last with w. A colon is
+		printed after the whole. -> $f;.
+		, u) Sf;. The instructions (marked
+		u) are examined. If it is found
+		that they involve “Print 0” or
+		"Print 1”, then 0: or 1: is
+		printed at the end.
+		246 A. M. TURING [NOV. 12,
+		in«t fl(t(in«1),tt) «**•
+		Th e nex t
+		complete
+		configuration is written down,.
+		a R, E in^t1(a) carrying out the marked instrucL) ce5(o»,.t>, y, x, u, w) tions -
+		Th e letter s u> v> w> x> V
+		are erased. -^anf.
+		i?) ce5(o», v, x, u, y, w)
+		\nitx{N) ec5(ot>, v, x, y, u, w)
+		co c(anf)
+		8. Application of the diagonal process.
+		It may be thought that arguments which prove that the real numbers
+		are not enumerable would also prove that the computable numbers and
+		sequences cannot be enumerable*. It might, for instance, be thought
+		that the limit of a sequence of computable numbers must be computable.
+		This is clearly only true if the sequence of computable numbers is defined
+		by some rule.
+		Or we might apply the diagonal process. “If the computable sequences
+		are enumerable, let a/( be the n-th computable sequence, and let </>;l(ra) be
+		the ?n-th figure in au. Let /? be the sequence with \—<j>n(n) as its n-th.
+			figure. Since /3 is computable, there exists a number K such that
+			l—cf)ll(n) = <f)K(n) all n. Putting n=K, we have 1=2(f>K(K), i.e. 1 is
+				even. This is impossible. The computable sequences are therefore not
+				enumerable".
+				The fallacy in this argument lies in the assumption that § is computable.
+				It would be true if we could enumerate the computable sequences by finite
+				means, but the problem of enumerating computable sequences is equivalent
+				to the problem of finding out whether a given number is the D.N of a
+				circle-free machine, and we have no general process for doing this in a finite
+				number of steps. In fact, by applying the diagonal process argument
+				correctly, we can show that there cannot be any such general process.
+				The simplest and most direct proof of this is by showing that, if this
+				general process exists, then there is a machine which computes /?. This
+				proof, although perfectly sound, has the disadvantage that it may leave
+				the reader with a feeling that “there must be something wrong". The
+				proof which I shall give has not this disadvantage, and gives a certain
+				insight into the significance of the idea “circle-free". It depends not on
+				constructing /3, but on constructing fi', whose n-th. figure is <j>n{n).
+					* Cf. Hobson, Theory of functions of a real variable (2nd ed., 1921), 87, 88.
+					1936.] ON COMPUTABLE NUMBERS. 247
+					Let us suppose that there is such a process; that is to say, that we can
+					invent a machine <D- which, when supplied with the S.D of any computing machine i l will test this S.D and if i l is circular will mark the S.D with the symbol “u” and if it is circle-free will mark it with “ s “ . By combining the machines <& and U we could construct a machine :l I- to compute the sequence j8'. The machine <O- may require a tape. We may suppose that it uses the jE'-squares beyond all symbols on .F-squares, and that when it has reached its verdict all the rough work done by l0- is erased. The machine Ji has its motion divided into sections. In the first N— 1 sections, among other things, the integers 1, 2,..., N— 1 have been written down and tested by the machine <Q>-. A certain number, say R(N— I), of
+						them have been found to be the D.N's of circle-free machines. In the N-th
+						section the machine
+						(& tests the number N. If N is satisfactory, i.e., if it
+						is the D.N of a circle-free machine, then R(N) = l-\-R(N—l) and the first
+						R{N) figures of the sequence of which a $£N is N are calculated. The
+						R(N)-th figure of this sequence is written down as one of the figures of the
+						sequence/3' computed by Ji. If N is not satisfactory, then R(N) = R(N— 1)
+						and the machine goes on to the (iV-(-l)-th section of its motion.
+						From the construction of J I- we can see that .11- is circle-free. Each
+						section of the motion of Ji comes to an end after a finite number of steps.
+						For, by our assumption about Q, the decision as to whether N is satisfactor}'
+						is reached in a finite number of steps. If N is not satisfactory, then the
+						JV-th section is finished. If N is satisfactory, this means that the machine
+						il(JV) whose D.N is N is circle-free, and therefore its J?(iV)-th figure can be
+						calculated in a finite number of steps. When this figure has been calculated
+						and written down as the R(N)-th figure of /3', the iV-th section is finished.
+						Hence il is circle-free.
+						Now let K be the D.N of Ji. What does Ji do in the K-th. section of
+						its motion 1 It must test whether K is satisfactory, giving a verdict “ 5 “
+						or “u". Since K is the D.N of JI- and since JI is circle-free, the verdict
+						cannot be “u". On the other hand the verdict cannot be “s". For if it
+						were, then in the K-th. section of its motion J I- would be bound to compute
+						the first R(K—1) + 1 = R(K) figures of the sequence computed by the
+						machine with K as its D.N and to write down the R(K)-th as a figure of the
+						sequence computed by ill. The computation of the first R(K) — l figures
+						would be carried out all right, but the instructions for calculating the
+						R(K)-th. would amount to “calculate the first R(K) figures computed by
+						H and write down the R(K)-th". This R{K)-th figure would never be
+						found. I.e., 'i-l is circular, contrary both to what we have found in the last
+						paragraph and to the verdict “s” . Thus both verdicts are impossible
+						and we conclude that there can be no machine '0-.
+						248 A. M. TURING [NOV. 12,
+						We can show further that there can be no machine £• which, when
+						supplied iviih the S.D of an arbitrary machine AV, will determine vjhether AV
+						ever prints a given symbol (0 say).
+						We will first show that, if there is a machine £, then there is a general
+						process for determining whether a given machine . U< prints 0 infinitely often. Let Jlx be a machine which prints the same sequence as A\, except that in the position where the first 0 printed by .11- stands, A\x prints 0. • U2 is to have the first two s\aribols 0 replaced by 0, and so on. Thus, if • Uwere to print ABAQlAABOQIOAB..., then A\± would print ABA01AAB0010AB... and .112 would print ABAoiAAB~00l0AB.... Xow let H; be a machine which, when supplied with the S.D of .U, will write down successively the S.D of .11, of .lll5 of • U2, ... (there is such a machine). We combine V' with I' and obtain a new machine, Xj. In the motion of (, first> is
+							used to write down the S.D of -U, and then t tests
+							it.: o: iy written if it is found that • 11 never prints 0; then ^ writes the S.D
+							of • II2, and this is tested.. : 0 : being printed if and only if • Ux never prints 0)
+							and so on. KOAV let us test .<, with ('. If it is found that X] never prints 0, then .H prints 0 infinitely often; if Xj prints 0 sometimes, then .11 does not print 0 infinitely often. Similarly there is a general process for determining whether • U- prints 1 infinitely often. By a combination of these processes we have a process for determining whether. U prints an infinity of figures, i.e. we have a process for determining whether .11 is circle-free. There can therefore be no machine i . The expression “there is a general process for determining...” has been used throughout this section as equivalent to “there is a machine which will determine ... “ . This usage can be justified if and only if we can justify our definition of “computable” . For each of these “general process: ' problems can be expressed as a problem concerning a general
+process for determining Avhether a given integer n has a property G(n) [e.g.
+G{n) might mean “ n is satisfactory” or “n is the Godel representation of
+a provable formula” ], and this is equivalent to computing a number whose n-th. figure is 1 if G (n) is true and 0 if it is false. 1936.] Otf COMPUTABLE NUMBERS. 249 9. The extent of the computable numbers. No attempt has yet been made to show that the “ computable “ numbers include all numbers which would naturally be regarded as computable. Al I arguments which can be given are bound to be, fundamentally, appeals to intuition, and for this reason rather unsatisfactory mathematically. The real 𝔮uestion at issue is “ What are the possible processes which can be
+carried out in computing a number?” The arguments which I shall use are of three kinds. (a) A direct appeal to intuition. (6) A proof of the equivalence of two definitions (in case the new definition has a greater intuitive appeal). (c) Giving examples of large classes of numbers which are computable. Once it is granted that computable numbers are all c: computable"". several other propositions of the same character follow. In particular, it follows that, if there is a general process for determining whether a formula of the Hilbert function calculus is provable, then the determination can bo carried out by a machine. I. [Type (a)]. This argument is only an elaboration of the ideas of § 1. Computing is normally done by writing certain symbols on paper. “We
+may suppose this paper is divided into squares like a child' s arithmetic book. In elementary arithmetic the two-dimensional character of the paper is sometimes used. But such a use is always avoidable, and I think that it will be agreed that the two-dimensional character of paper is no essential of computation. I assume then that the computation is carried out on one-dimensional paper, i.e. on a tape divided into squares. I shall also suppose that the number of symbols which may be printed is finite. If we were to allow an infinity of symbols, then there would be symbols differing to an arbitrarily small extent j . The effect of this restriction of the number of symbols is not very serious. It is always possible to use sequences of symbols in the place of single symbols. Thus an Arabic numeral such as f If we regard a symbol as literally printed on a square we may suppose that the square is 0 < x < 1, 0 < y < 1. The symbol is defined as a set of points in this square, viz. the set occupied by printer's ink. If these sets are restricted to be measurable, we can define the “ distance” between two symbols as the cost of transforming one symbol into the other if the cost of moving unit area of printer's ink unit distance is unity, and there is an infinite supply of ink at x=2. y=0. With this topology the symbols form a conditionally compact space. 250 A. M. TUBING [NOV. 12, 17 or 999999999999999 is normally treated as a single symbol. Similarly in any European language words are treated as single symbols (Chinese, however, attempts to have an enumerable infinity of symbols). The differences from our point of view between the single and compound symbols is that the compound symbols, if they are too lengthy, cannot be observed at one glance. This is in accordance with experience. We cannot tell at a glance whether 9999999999999999 and 999999999999999 are the same. The behaviour of the computer at any moment is determined by the symbols which he is observing, and his “ state of mind “ at that moment. We may suppose that there is a bound B to the number of symbols or squares which the computer can observe at one moment. If he wishes to observe more, he must use successive observations. We will also suppose that the number of states of mind which need be taken into account is finite. The reasons for this are of the same character as those which restrict the number of symbols. If we admitted an infinity of states of mind, some of them will be '' arbitrarily close “ and will be confused. Again, the restriction is not one which seriously affects computation, since the use of more complicated states of mind can be avoided by writing more symbols on the tape. Let us imagine the operations performed by the computer to be split up into “ simple operations” which are so elementary that it is not easy to imagine them further divided. Every such operation consists of some change of the physical system consisting of the computer and his tape. We know the state of the system if we know the sequence of symbols on the tape, which of these are observed by the computer (possibly with a special order), and the state of mind of the computer. We may suppose that in a simple operation not more than one symbol is altered. Any other changes can be split up into simple changes of this kind. The situation in regard to the squares whose symbols may be altered in this way is the same as in regard to the observed squares. We may, therefore, without loss of generality, assume that the squares whose symbols are changed are always “observed” squares. Besides these changes of symbols, the simple operations must include changes of distribution of observed squares. The new observed squares must be immediately recognisable by the computer. I think it is reasonable to suppose that they can only be squares whose distance from the closest of the immediately previously observed squares does not exceed a certain fixed amount. Let us say that each of the new observed squares is within L squares of an immediately previously observed square. In connection with “immediate recognisability “ , it may be thought that there are other kinds of square which are immediately recognisable. In particular, squares marked by special symbols might be taken as imme- 1936.] ON COMPUTABLE NUMBERS. 251 diately recognisable. Now if these squares are marked only by single symbols there can be only a finite number of them, and we should not upset our theory by adjoining these marked squares to the observed squares. If. on the other hand, they are marked by a sequence of symbols, we cannot regard the process of recognition as a simple process. This is a fundamental point and should be illustrated. In most mathematical papers the equations and theorems are numbered. Normally the numbers do not go beyond (say) 1000. It is, therefore, possible to recognise a theorem at a glance by its number. But if the paper was very long, we might reach Theorem 157767733443477 ; then, further on in the paper, we might find “... hence (applying Theorem 157767733443477) we have ... “ . In order to make sure which was the relevant theorem we should have to compare the two numbers figure by figure, possibly ticking the figures off in pencil to make sure of their not being counted twice. If in spite of this it is still thought that there are other “immediately recognisable” squares, it does not upset my contention so long as these squares can be found by some process of which my type of machine is capable. This idea is developed in III below. The simple operations must therefore include: (a) Changes of the symbol on one of the observed squares. (6) Changes of one of the squares observed to another square within L squares of one of the previously observed squares. It may be that some of these changes necessarily involve a change of state of mind. The most general single operation must therefore be taken to be one of the following: (A) A possible change (a) of symbol together with a possible change of state of mind. (B) A possible change (6) of observed squares, together with a possible change of state of mind. The operation actually performed is determined, as has been suggested on p. 250, by the state of mind of the computer and the observed symbols. In particular, they determine the state of mind of the computer after the operation is carried out. We may now construct a machine to do the work of this computer. To each state of mind of the computer corresponds an “ <var>m</var>-configuration “ of the machine. The machine scans B squares corresponding to the B squares observed by the computer. In any move the machine can change a symbol on a scanned square or can change any one of the scanned squares to another square distant not more than L squares from one of the other scanned 252 A. M. TURING [NOV. 12. squares. The move which is done, and the succeeding configuration, are determined by the scanned symbol and the <var>m
+								</var>-configuration. The
+								machines just described do not differ very essentially from computing
+								machines as defined in § 2, and corresponding to any machine of this type
+								a computing machine can be constructed to compute the same sequence,
+								that is to say the sequence computed by the computer.
+								II. [Type (6)].
+								If the notation of the Hilbert functional calculus f is modified so as to
+								be systematic, and so as to involve onty a finite number of symbols3 it
+								becomes possible to construct an automatic J machine 3C, which will find
+								all the provable formulae of the calculus§.
+								Now let a be a sequence, and let us denote by Ga(x) the proposition
+								"The rc-th figure of a is 1 “, so that1
+								' —Ga(x) means “The z-th figure of a
+								is 0 “. Suppose further that we can find a set of properties which define
+								the sequence a and which can be expressed in terms of Ga(x) and of the
+								prepositional functions N(x) meaning “x is a non-negative integer” and
+								F(x, y) meaning “y = x-\-l “. When we join all these formulae together
+								conjunctively, we shall have a formula, % say, which defines a. The terms
+								of 21 must include the necessary parts of the Peano axioms, viz.,
+								N(x)-»(3y)F(x, y)) &(F(X,
+								which we will abbreviate to P.
+								When we say “ 2( defines a”, we mean that —21 is not a provable
+								formula, and also that, for each n, one of the following formulae (A,J or
+								(BJ is provable.
+								%&Ftn
+								^Ga(uW), (AB)«T
+								where F™ stands for F{u, u') & F(u', u") & ... F^-v, u™).
+								f The expression “the functional calculus” is used throughout to mean the restricted
+								Hilbert functional calculus.
+								+ It is most natural to construct first a choice machine (§ 2) to do this. But it is
+								then easy to construct the required automatic machine. We can suppose that the choice3
+								are always choices between two possibilities 0 and 1. Each proof will then be determined
+								by a sequence of choices ilt i2, ..., •?•„ (ix = 0 or 1, u = 0 or 1, ..., in = 0 or 1), and hence
+								the number 2” + i1 2"~^-\-i22"---\-...-\-in completely determines the proof. The automatic
+								machine carries out successively proof 1, proof 2, proof 3, ....
+								§ The author has found a description of such a machine.
+								II The negation sign is written before an expression and not over it.
+								*\ A sequence of r primes is denoted by '''-1
+								.
+								1936.] ON COMPUTABLE NUMBERS. 253
+								I say that a is then a computable sequence: a machine 'JCa to compute
+								a can be obtained by a fairly simple modification of JC
+								We divide the motion of Ka into sections. The n-th section is devoted
+								to finding the n-th figure of a. After the (n— l)-th section is finished a double
+								colon :: is printed after all the symbols, and the succeeding work is done
+								wholly on the squares to the right of this double colon. The first step is to
+								write the letter “A “ followed by the formula (An) and then “ B “ followed
+								by (Bn). The machine Ka then starts to do the work of JC, but whenever
+								a provable formula is found, this formula is compared with (An) and with
+								(Bn). If it is the same formula as (An), then the figure “ 1 “ is printed, and
+								the n-th. section is finished. If it is (B,J, then “ 0 “ is printed and the section
+								is finished. If it is different from both, then the work of K is continued
+								from the point at which it had been abandoned. Sooner or later one of
+								the formulae (An) or (B?1) is reached; this follows from our hypotheses
+								about a and 21, and the known nature of JC. Hence the n-th section will
+								eventually be finished. 3CO is circle-free; a is computable.
+								It can also be shown that the numbers a definable in this way by the use
+								of axioms include all the computable numbers. This is done by describing
+								computing machines in terms of the function calculus.
+								It must be remembered that we have attached rather a special meaning
+								to the phrase “ 21 defines a “. The computable numbers do not include all.
+								(in the ordinary sense) definable numbers. Let 8 be a sequence whose
+								n-th figure is 1 or 0 according as n is or is not satisfactory. It is an immediate consequence of the
+								theorem of § 8 that 8 is not computable. It is (so
+								far as we know at present) possible that any assigned number of figures of 8
+								can be calculated, but not by a uniform process. When sufficiently many
+								figures of 8 have been calculated, an essentially new method is necessaiy in
+								order to obtain more figures.
+								III. This may be regarded as a modification of I or as a corollary of II.
+								We suppose, as in I, that the computation is carried out on a tape; but we
+								avoid introducing the “state of mind” by considering a more physical
+								and definite counterpart of it. It is always possible for the computer to
+								break off from his work, to go away and forget all about it, and later to come
+								back and go on with it. If he does this he must leave a note of instructions
+								(written in some standard form) explaining how the work is to be continued. This note is the counterpart
+								of the “state of mind". We will
+								suppose that the computer works in such a desultory manner that he never
+								does more than one step at a sitting. The note of instructions must enable
+								him to carry out one step and write the next note. Thus the state of progress
+								of the computation at any stage is completely determined by the note of
+								254 A. M. TURING [NOV. 12,
+								instructions and the symbols on the tape. That is, the state of the system
+								may be described by a single expression (sequence of symbols), consisting
+								of the symbols on the tape followed by A (which we suppose not to appear
+								elsewhere) and then by the note of instructions. This expression may be
+								called the “state formula". We know that the state formula at any
+								given stage is determined by the state formula before the last step was
+								made, and we assume that the relation of these two formulae is expressible
+								in the functional calculus. In other words, we assume that there is an
+								axiom 2( which expresses the rules governing the behaviour of the
+								computer, in terms of the relation of the state formula at any stage to the
+								state formula at the preceding stage. If this is so, we can construct a
+								machine to write down the successive state formulae, and hence to
+								compute the required number.
+								10. Examples of large classes of numbers which are computable.
+								It will be useful to begin with definitions of a computable function of
+								an integral variable and of a computable variable, etc. There are many
+								equivalent ways of defining a computable function of an integral
+								variable. The simplest is, possibly, as follows. If y is a computable
+								sequence in which 0 appears infinitely! often, and n is an integer, then let
+								us define £(y, n) to be the number of figures 1 between the n-th and the
+								(?i-\- l)-th figure 0 in y. Then <f)(n) is computable if, for all n and some y, .<f>(n) = £(y, n). An
+									equivalent definition is this. Let H(x, y) mean
+									<f)(x)=y. Then, if we can find a contradiction-free axiom 21^, such that 2^-* P, and if for each integer n there exists an integer N, such that % & and such that, if m=£<f>(n), then, for some N',
+										% &
+										then <j> may be said to be a computable function.
+											We cannot define general computable functions of a real variable, since
+											there is no general method of describing a real number, but we can define
+											a computable function of a computable variable. If n is satisfactory,
+											let yn be the number computed by ./U {n), and let
+											| If *Al computes y, then the problem whether .11 prints 0 infinitely often is of the
+											same character as the problem whether A\, is circle-free.
+											1936.] ON COMPUTABLE NUMBERS. 255
+											unless yn = 0 or yn — 1, in either of which cases an = 0. Then, as n
+											runs through the satisfactory numbers, an runs through the computable
+											numbersf. Now let <f)(n) be a computable function which can be shown to be such that for any satisfactory argument its value is satisfactory %. Then the function /, defined by f(an) — a^n), is a computable function and all computable functions of a computable variable are expressible in this form. Similar definitions may be given of computable functions of several variables, computable-valued functions of an integral variable, etc. I shall enunciate a number of theorems about computability, but I shall prove only (ii) and a theorem similar to (iii). (i) A computable function of a computable function of an integral or computable variable is computable. (ii) Any function of an integral variable defined recursively in terms of computable functions is computable. I.e. if 0(ra, n) is computable, and r is some integer, then rj(n) is computable, where (iii) If <f>
+												(m, n) is a computable function of two integral variables, then
+												<j>{n, n) is a computable function of n.
+													(iv) If (j>(n) is a computable function whose value is always 0 or 1, then
+													the sequence whose fi-th figure is <f>(n) is computable.
+														Dedekind's theorem does not hold in the ordinary form if we replace
+														*' real'' throughout by '' computable''. But it holds in the following form :
+														(v) If G(a) is a propositional function of the computable numbers and
+														(a) (3a)(3jB){G(a)&(-G(j8))},
+														(6) Q(a)
+														and there is a general process for determining the truth value of G(a), then
+														f A function an may be defined in many other ways so as to run through the
+														computable numbers.
+														J Although it is not possible to find a general process for determining whether a given
+														number is satisfactory, it is often possible to show that certain classes of numbers are
+														satisfactory.
+														256 A. M. TURING [NOV. 12r
+														there is a computable number £ such that
+														In other words, the theorem holds for any section of the computables
+														such that there is a general process for determining to which class a given
+														number belongs.
+														Owing to this restriction of Dedekind's theorem, we cannot say that a
+														computable bounded increasing sequence of computable numbers has a
+														computable limit. This may possibly be understood by considering a
+														sequence such as
+														l ± 1 I I I J
+														-5 2 ' 5 ' 8 ' io j
+														2» ••• •
+														On the other hand, (v) enables us to prove
+														(vi) If a and /? are computable and a
+														< /? and <£(a) < 0 < < />(/?), where
+														(f>(a) is a computable increasing continuous function, then there is a unique
+														computable number y, satisfying a < y < fi and <f>(y) = 0.
+															Computable convergence.
+															We shall say that a sequence fin of computable numbers converges
+															computably if there is a computable integral valued function N(e) of the
+															computable variable e, such that we can show that, if e > 0 and n > N(e)
+															and m > N(e), then \pn—j8m| < e. We can then show that (vii) A power series whose coefficients form a computable sequence of computable numbers is computably convergent at all computable points in the interior of its interval of convergence. (viii) The limit of a computably convergent sequence is computable. And with the obvious definition of “ uniformly computably convergent” : (ix) The limit of a uniformly computably convergent computable sequence of computable functions is a computable function. Hence (x) The sum of a power series whose coefficients form a computable sequence is a computable function in the interior of its interval of convergence. From (viii) and TT— 4(1—i-|--i—...) we deduce that TT is computable. From e=l + l+n-j-+»-j+... we deduce that e is computable. 1936.] OlST COMPUTABLE NUMBERS. 257 From (vi) we deduce that all real algebraic numbers are computable. From (vi) and (x) we deduce that the real zeros of the Bessel functions are computable. Proof of (ii). Let H(x, y) mean “r](x)=y” , and let K{x, y, z) mean “(f>(x, y) = z” . 21^ is the axiom for <f>(x, y). We take 31, to
+																	be
+																	% & P & (F{x, y)-*Q{x, y)) & [G{x, y) & G(y, z)->G(x, z))
+																	& (FW-*H{U, VP>)) & (J(v, w) & #(v, x) & Z(w, x} z)->H(iv, z))
+																	& [£f(w, 2) & ^(2 , <)v (?(<, z) I shall not give the proof of consistency of %n. Such a proof may be constructed by the methods used in Hilbert and Bernays, Grundlagen der Mathematik (Berlin, 1934), p. 209 et seq. The consistency is also clear from the meaning. Suppose that, for some n, N, we have shown % & then, for some M, % & & and Hence 21, Also ST, & Hence for each w some formula of the form is provable. Also, if M'^M and if'^ m and m^r)(u), then SI, & FW^G^W), u^) v G(u^m\ 8EB. 2. VOL. 42. NO. 2145. 258 A. M. TURING [NOV. 12, and 2( & FW)-^ f {G(u^n ^, w(m)) v G(u^m\ & Hence 21, & FW">
+																		-> (-H{u^ n \ u™)).
+																		The conditions of our second definition of a computable function are
+																		therefore satisfied. Consequently rj is a computable function.
+																		Proof of a modified form of (iii).
+																		Suppose that we are given a machine Tl, which, starting with a tape
+																		bearing on it 9 9 followed by a sequence of any number of letters “F” on
+																		P-squares and in the <var>m</var>-configuration b, will compute a sequence yn
+																		depending on the number n of letters “ F “. If <f>n(m) is the m-th figure of
+																			yv, then the sequence /3 whose n-th. figure is <f>n{n) is computable.
+																				We suppose that the table for Tl has been written out in such a way
+																				that in each line only one operation appears in the operations column. We
+																				also suppose that S, 0, 0, and 1 do not occur in the table, and we replace
+																				9 throughout by 0, 0 by 0, and 1 byl. Further substitutions are then
+																				made. Any line of form
+																				95
+																				te(23, u, h, k)
+																				93
+																				re(93, t>, h, k)
+																				and we add to the table the following lines:
+																				u pe(ul5 0)
+																				Uj. R, Pk, R, P0, R, P0 u2
+																				u2 re(u3, u3, k, h)
+																				u3 pe(u2, F)
+																				and similar lines with x> for u and 1 for 0 together with the following line
+																				c R, PE, R, Ph 6.
+																				We then have the table for the machine
+																				(H/ which computes jS. The
+																				initial <var>m</var>-configuration is c, and the initial scanned symbol is the
+																				second a.
+																				we
+																				and
+																				by
+																				21
+																				replace by
+																				21
+																				any line of
+																				21
+																				2(
+																				the
+																				aa
+																				form
+																				a
+																				a
+																				PO
+																				PO
+																				Pi
+																				Pi
+																				1936.] ON COMPUTABLE NUMBERS. 259
+																				11. Application to the Entscheidungsproblem.
+																				The results of § 8 have some important applications. In particular, they
+																				can be used to show that the Hilbert Entscheidungsproblem can have no
+																				solution. For the present I shall confine myself to proving this particular
+																				theorem. For the formulation of this problem I must refer the reader to
+																				Hilbert and Ackermann's Grundziige der Theoretischen Logik (Berlin,
+																				1931), chapter 3.
+																				I propose, therefore, to show that there can be no general process for
+																				determining whether a given formula 2( of the functional calculus K is
+																				provable, i.e. that there can be no machine which, supplied with any one
+																				21 of these formulae, will eventually say whether 21 is provable.
+																				It should perhaps be remarked that what I shall prove is 𝔮uite different
+																				from the well-known results of Godelf. G odel has shown that (in the formalism of
+																				Principia Mathematica) there are propositions 21 such that neither
+																				'21 nor — 21 is provable. As a consequence of this, it is shown that no proof
+																				•of consistency of Principia Mathematica (or of K) can be given within that
+																				formalism. On the other hand, I shall show that there is no general method
+																				which tells whether a given formula % is provable in K, or, what comes to
+																				the same, whether the system consisting of K with —21 adjoined as an
+																				cextra axiom is consistent.
+																				If the negation of what Godel has shown had been proved, i.e. if, for each
+																				21, either 21 or — 21 is provable, then we should have an immediate solution
+																				of the Entscheidungsproblem. For we can invent a machine JC which will
+																				prove consecutively all provable formulae. Sooner or later JC will reach
+																				either 21 or —21. If it reaches 21, then we know that 2( is provable. If it
+																				reaches — 21, then, since K is consistent (Hilbert and Ackermann, p. 65), we
+																				know that 21 is not provable.
+																				Owing to the absence of integers in K the proofs appear somewhat
+																				lengthy. The underlying ideas are 𝔮uite straightforward.
+																				Corresponding to each computing machine i t we construct a formula
+																				Un (it) and we show that, if there is a general method for determining
+																				whether Un (.11) is provable, then there is a general method for determining
+																				whether
+																				i t ever prints 0.
+																				The interpretations of the propositional functions involved are as
+																				follows :
+																				Rst(
+																				x
+																				> V) is
+																				to be interpreted as “in the complete configuration x (of
+																				J/l) the symbol on the square y is S".
+																				t Loc. cit.
+																				S2
+																				260 A. M. TURING [NOV. 12,
+																				I(x, y) is to be interpreted as “in the complete configuration x the
+																				square y is scanned".
+																				KQm(x) is to be interpreted as “in the complete configuration x the
+																				<var>m</var>-configuration is 𝔮m.
+																				F(x, y) is to be interpreted as
+																				sty is the immediate successor of x “.
+																				Inst {qt Sj 8k L 37} is to be an abbreviation for
+																				(x, y, x', y') I (BSj(x, y) k I(x, y) k K8i(x) k F(x, x') k F(y', y))
+																				f
+																				I{x'iy')kBSk{x',y)kKqi{x')
+																				k (z) \_F{y', z)v(RSj(x, z) + Rak(x', z)
+																				Inst {q{ 8, Sk R 𝔮t} and Inst {qt 8j Sk N 𝔮{]
+																				are to be abbreviations for other similarly constructed expressions.
+																				Let us put the description of .11 into the first standard form of § 6. This
+																				description consists of a number of expressions such as “q{ 8i Sk Lqt” (or
+																				with ROT N substituted for L). Let us form all the corresponding expressions such
+																				as
+																				Inst {qt $3- Sk L 𝔮t} and take their logical sum. This we call
+																				Des(.U).
+																				The formula Un(.U) is to be
+																				{3u)[N{u) &, (x)(N{x)->{3x')F(x, X'))
+																				&. (y, z)(F(y, z)->N(y) k N(z)) & (y) R>%(% y),
+																				& I(u, u) & Kqi{u) & Des(..U)l
+																				->(35) (30 [N(s) & N(t) & RSl(s, t)).
+																				[K{u)&... &Des(.U)] may be abbreviated to A(M).
+																				When we substitute the meanings suggested on p. 259-60 we find that
+																				Un(.U) has the interpretation “in some complete configuration of M, S-^
+																				(i.e. 0) appears on the tape “. Corresponding to this I prove that
+																				(a) If Sx appears on the tape in some complete configuration of • U, then
+																				Un(U) is provable.
+																				(b) If Un (• U) is provable, then 8X appears on the tape in some complete
+																				configuration of • 11.
+																				When this has been done, the remainder of the theorem is trivial.
+																				1936.] ON COMPUTABLE NUMBERS. 261
+																				LEMMA 1. / / S± appears on the tape in some complete configuration of
+																				.At, then Un(.At) is provable.
+																				We have to show how to prove Un (it). Let us suppose that in the
+																				n-th complete configuration the sequence of symbols on the tape is
+																				&r(n,o)> *^r(n,i)5 •••> $i<n,nh followed by nothing but blanks, and that the scanned symbol is the i(n)-th, and that the <var>m</var>-configuration is
+																					𝔮^n). Then
+																					we may form the proposition
+																					, u) & RSrluJvF>, u') & ... & RSr{H,Mn
+																					\
+																					which we may abbreviate to CCn.
+																					As before, F{u, u') & F{u', u") & ... & F{u^\ w(r)) is abbreviated
+																					to F<r). I shall show that all formulae of the form A{-W) & F™^- CCn (abbreviated to CFn) are provable. The meaning of CFn is “ The n-th. complete configuration of i t is so and so “ , where “so and so “ stands for the actual n-th. complete configuration of it. That CFn should be provable is therefore to be expected. CF0 is certainly provable, for in the complete configuration the symbols are all blanks, the <var>
+																						m</var>-configuration is 𝔮x, and the scanned square
+																						is u, i.e.
+																						CC0 is
+																						(y) RSo{u, y) & I(u, u) & KQl(u).
+																						A(o\i)->CC0 is then trivial.
+																						We next show that CFn^-CFn+1 is provable for each n. There are
+																						three cases to consider, according as in the move from the n-th to the
+																						(n-j-l)-th configuration the machine moves to left or to right or remains
+																						stationary. We suppose that the first case applies, i.e. the machine
+																						moves to the left. A similar argument applies in the other cases. If
+																						r[n,i(n)}=a, r(n-\-l, i(n-\-l)} = c, k(i(n)j =b, and k(i(n-\-l)) =d,
+																						then Des (it) must include Inst {qa 8b Sd L 𝔮^ as one of its terms, i.e.
+																						Hence A(.AV) & Fin
+																						+n^1nat{qa8b8dLqc} &
+																						But Inst{qa Sb 8dLqc} & ^ n +w^(CCn -
+																						is provable, and so therefore is
+																						A (• It) & F(n
+																						+»-> (CCn -» C(L .,
+																						262 A. M. TURING [NOV. 12,
+																						and (AIM) & F™^CCn) -+ (.4(it) & F<n +V^CCn+1), i.e. CFm-»CF.n+V CFn is provable for each n. Now it is the assumption of this lemma that 8± appears somewhere, in some complete configuration, in the sequence of symbols printed by M; that is, for some integers N, K, CGN has RS[(u^N \u^) as one of its terms, and therefore CCN^RSl{u{N\ u(K)) is provable. We have then and A(.M)&FW->CCN
+																							.
+																							We also have
+																							(3u)A(M)-+(3u)(3uf
+																							)...
+																							where N' — max (N, K). And so
+																							(3u) A (. U.) -> (3^7
+																							)) (3uW) RS
+																							(3u)A(M)->(3s)(3t)RSl(s,t),
+																							i.e. Un(-U) is provable.
+																							This completes the proof of Lemma 1.
+																							LEMMA 2. / / Un(-U) is provable, then S1 appears on the tape in some
+																							complete configuration of M.
+																							If we substitute any propositional functions for function variables in
+																							a provable formula, we obtain a true proposition. In particular, if we
+																							substitute the meanings tabulated on pp. 259-260 in Un(^U), we obtain a
+																							true proposition with the meaning “ S1 appears somewhere on the tape in
+																							some complete configuration of .M".
+																							We are now in a position to show that the Entscheidungsproblem cannot
+																							be solved. Let us suppose the contrary. Then there is a general
+																							(mechanical) process for determining whether Un(.tl) is provable. By
+																							Lemmas 1 and 2, this implies that there is a process for determining whether
+																							.41 ever prints 0, and this is impossible, by §8. Hence the
+																							Entscheidungsproblem cannot be solved.
+																							In view of the large number of particular cases of solutions of the
+																							Entscheidungsproblem for formulae with restricted systems of 𝔮uantors,
+																							it
+																							1936.] ON COMPUTABLE NUMBERS. 263
+																							is interesting to express Un(ii) in a form in which all 𝔮uantors are at
+																							the
+																							beginning. Un(At) is, in fact, expressible in the form
+																							{u){3x){w){3u1)...{3un)%, (I)
+																							where 95 contains no 𝔮uantors, and n = 6. By unimportant modifications
+																							we can obtain a formula, with all essential properties of Un(.it), which is
+																							of
+																							form (I) with n = 5.
+																							Added 28 August, 1936.
+																							APPENDIX.
+																							Computabiliiy and effective calculability
+																							The theorem that all effectively calculable (A-definable) sequences are
+																							computable and its converse are proved below in outline. It is assumed,
+																							that the terms “well-formed formula “ (W.F.F.) and “conversion “ as used
+																							by Church and Kleene are understood. In the second of these proofs the
+																							existence of several formulae is assumed without proof; these formulae
+																							may be constructed straightforwardly with the help of, e.g., the
+																							results of Kleene in “A theory of positive integers in formal logic'”,
+																							American Journal of Math., 57 (1935), 153-173, 219-244.
+																							The W.F.F. representing an integer n will be denoted by Nn. We shall
+																							say that a sequence y whose n-th figure is (f>y(n) is A-definable or
+																							effectively
+																							calculable if l-\-</>y(u) is a A-definable function of n, i.e. if there is a
+															W.F.F.
+															My such that, for all integers n,
+															i.e. {My} (Nn) is convertible into Xxy.x(x(y)) or into Xxy.x(y) according as
+															the n-th figure of A is 1 or 0.
+															To show that every A-definable sequence y is computable, we have to
+															show how to construct a machine to compute y. For use with machines it
+															is convenient to make a trivial modification in the calculus of conversion.
+															This alteration consists in using x, x', x”, ... as variables instead of
+															a, b, c, .... We now construct a machine JL which, when supplied with the
+															formula My, writes down the sequence y. The construction of X is somewhat similar to that
+															of
+															the machine K
+															which proves all provable formulae
+															of the functional calculus. We first construct a choice machine £-v which,
+															if supplied with a W.F.F., M say, and suitably manipulated, obtains any
+															formula into which M is convertible. £± can then be modified so as to
+															yield an automatic machine £-2 which obtains successively all the formulae
+															264 A. M. TURING [NOV. 12,
+															into which M is convertible (cf. foot-note p. 252). The machine £>
+															includes ^2
+															a s a Par^. The motion of the machine X when supplied
+															with the formula My is divided into sections of which the n-th. is
+															devoted to finding the n-th figure of y. The first stage in this n-th. section
+															is the formation of {My} {Nn). This formula is then supplied to the
+															machine £2, which converts it successively into various other formulae.
+															Each formula into which it is convertible eventually appears, and each, as
+															it is found, is compared with
+															and with Aa:|Aa;'[{a;}(a;')] |, i.e. Nv
+															If it is identical with the first of these, then the machine prints the figure 1
+															and the n-th section is finished. If it is identical with the second, then 0
+															is printed and the section is finished. If it is different from both, then the
+															work of .!!2 is resumed. By hypothesis, {My}(Nn) is convertible into one of
+															the formulae N2 or Nx; consequently the n-th section will eventually be
+															finished, i.e. the n-th. figure of y will eventually be written down.
+															To prove that every computable sequence y is A-defUiable, we must
+															show how to find a formula My such that, for all integers n,
+															{My}(Nn)c(mvN1+<j)y{n). Let .11 be a machine which computes y and let us take some description of the complete configurations of -U by means of numbers, e.g. we may take the D.N of the complete configuration as described in §6. Let £(n) be the D.N of the w-th complete configuration of M. The table for the machine ..U gives us a relation between £(n-\-l) and £(n) of the form where py is a function of very restricted, although not usually very simple, form : it is determined by the table for. U. py is A-defmable (I omit the proof of this), i.e. there is a W.F.F. Ay such that, for all integers n, Let U stand for Xu[{{u}(Ay))(Nr)],
+where r=£(0); then, for all integers n,
+{Uy}(NJ conv N,{n).
+1936.] ON COMPUTABLE NUMBERS.
+It may be proved that there is a formula V such that
+265
+conv Nx if, in going from the n-th to the (n-\- l)-th
+complete configuration, the figure 0 is
+printed.
+conv JV2 if the figure 1 is printed,
+conv N3 otherwise.
+Let Wy stand for
+so that, for each integer n,
+conv {Wy} (Nn),
+and let Q be a formula such that
+\{Q}(Wy)UNs) convNr(s),
+where r(s) is the 5-th integer 𝔮 for which {Wy} (NQ) is convertible into either
+N-L or JVa. Then, if j|f7 stands for
+it will have the required property f.
+The Graduate College,
+Princeton University,
+New Jersey, U.S.A.
+t In a complete proof of the A-definability of computable sequences it would be best to
+modify this method by replacing the numerical description of the complete configurations
+by a description which can be handled more easily with our apparatus. Let us choose
+certain integers to represent the symbols and the <var>m</var>-configurations of the machine.
+Suppose that in a certain complete configuration the numbers representing the successive
+symbols on the tape are s1s2... sn, that the m-th symbol is scanned, and that the ?n.-configurationhas the number t; then we may represent this complete configuration by the formula
+where
+etc.
+„ N» ..., #,„,_,], [Nt, NaJ, [NSM+V ..., NSlt]],
+[a, 6] stands for \u f” -{ {u} (a) )(&)]»
+[a, 6, c] stands for AM P I \ {u} (a)}(b) J (c)l,
+</main>
+</body>
+
+</html>

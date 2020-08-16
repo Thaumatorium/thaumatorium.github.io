@@ -3,8 +3,9 @@
 
 <head>
 	<meta charset=utf-8 />
-	<title>404 Not Found | The Thaumatorium</title>
-	<meta name=description content="Archival & Search available so you can find what you need" />
+	<title>Configuring JMeter for Neo4j | The Thaumatorium</title>
+	<meta name=description content="How to configure JMeter so it works with Neo4j" />
+	<link rel="canonical" href="https://thaumatorium.com/articles/configuring-jmeter-for-neo4j">
 	<meta name=theme-color content=#800 />
 	<link rel=apple-touch-icon href=/images/icons-192.png>
 	<meta name=viewport content="width=device-width, initial-scale=1">
@@ -44,22 +45,41 @@
 	</nav>
 
 	<main>
-		<h1>404 Not Found</h1>
-		<p>You've gone somewhere, where you're not supposed to be! That or I removed the page. It's likely my fault.</p>
-		<p>Give the archives a try: <a id=archive></a></p>
-		<p>Or search the site</p>
-		<!-- created via https://cse.google.com/cse/all -->
-		<script async src="https://cse.google.com/cse.js?cx=007273406661708460536:ir7f8zjh3fd"></script>
-		<div class="gcse-search"></div>
-		<footer>
-			PS: Hit me up (on one of the links in the footer) if any other search engine provides a customized search. This version is by Google, but I'd like to NOT use Google if I could. They already have enough power on the internet.
-		</footer>
-		<script>
-			const target = `https://web.archive.org/${window.location.href}`
-			let archiveLink = document.getElementById("archive");
-			archiveLink.href = target;
-			archiveLink.innerHTML = target;
-		</script>
+		<hgroup>
+			<h1>Configuring JMeter for Neo4j</h1>
+			<div class=article-meta>
+				<div class=published-box>Published: <time class=published datetime=2017-12-05T18:45:15+01:00>2017-12-05</time></div>
+				<div class=author-box>Author: <span class=author>NostraDavid</span></div>
+			</div>
+		</hgroup>
+		<p>Watch <a href="https://www.youtube.com/watch?v=8loLHbhfyh0&list=PLhW3qG5bs-L-zox1h3eIL7CZh5zJmci4c&index=2" target="_blank" rel="noopener">these videos </a>to get a feel for JMeter if you don't know it yet (set speed to 2x and use the arrow keys to skip boring things). YES I KNOW IT'S FOR HTTP ONLY! It's just so you get familiar fast with the UI 🙂</p>
+		<ol>
+			<li>Create a Thread group</li>
+			<li>Create a JDBC Connection Configuration via Add &gt; Config Element</li>
+			<li>Create a JDBC Request via Add &gt; Sampler</li>
+			<li>Create a View Result Tree (This easily shows the response data in a tab) via Add &gt; Listener</li>
+		</ol>
+		<p>You should have something like this:</p>
+		<img loading=lazy src=u8Ppb0k.png width=344 height=278>
+		<p>Set the JDBC CC:</p>
+		<img loading=lazy src=PlvrYhP.png width=554 height=694>
+		<ul>
+			<li>jdbc:neo4j:bolt://localhost:7687</li>
+			<li>org.neo4j.jdbc.Driver</li>
+			<li>neo4j</li>
+			<li>neo4j</li>
+		</ul>
+		<p>And the JDBC Request: (I can't tell you what to<em>exactly</em> put in the "SQL Query" part, because I don't know your data structures)</p>
+		<img loading=lazy src=NQD3BAL.png width=884 height=469>
+		<p>Now get the JDBC Driver for Neo4j (get <strong>neo4j-jdbc-driver-3.1.0.jar</strong> or something alike):</p>
+		<ul>
+			<li><a href="https://github.com/neo4j-contrib/neo4j-jdbc/releases">https://github.com/neo4j-contrib/neo4j-jdbc/releases</a></li>
+		</ul>
+		<p>Add the file to the<em>Library</em> in your<strong>TestPlan</strong>:</p>
+		<img loading=lazy src=6QM6dtC.png width=660 height=739>
+		<p>And when you press the Green Play button – Results! Well, sort of… Looks like JMeter has some trouble with setting up multiple connections (hence the red shield with a cross).</p>
+		<img loading=lazy src=u9gjzi0.png width=711 height=458>
+		<p>This shit should NOT have been this hard to find… (I had to find this info out all by myself. Took me 3 frustrating hours to do so. Call me Jesus, because I suffered for you) 😒</p>
 	</main>
 
 	<footer>

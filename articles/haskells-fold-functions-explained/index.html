@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>Haskell's fold functions explained | The Thaumatorium</title>
+	<meta name=description content="Have you ever wondered what the difference between foldl and foldr was? Why you get the answers you're getting?" />
+	<link rel="canonical" href="https://thaumatorium.com/articles/haskells-fold-functions-explained">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<noscript>
+		<link rel=stylesheet href="/styles/main.css" />
+	</noscript>
+	<script async src=/main.js></script>
+</head>
+
+<body>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-169207994-1');
+	</script>
+
+	<header>
+		<div class=title>The Thaumatorium:</div>
+		<div class=subtitle>Where the magic happens</div>
+	</header>
+
+	<nav role=navigation>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/articles>Articles</a><span> - </span>
+		<a href=/projects>Projects</a><span> - </span>
+		<a href=/experimentations>Experimentations</a><span> - </span>
+		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
+		<a href=/random-video>Random video</a><span> - </span>
+		<a href=/hardware>Hardware</a><span> - </span>
+		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
+		<a href=/about>About</a>
+	</nav>
+
+	<main>
+		<hgroup>
+			<h1>Haskell's fold functions explained</h1>
+			<div class=article-meta>
+				<div class=published-box>Published: <time class=published datetime=2019-05-01>2019-05-01</time></div>
+				<div class=author-box>Author: <span class=author>NostraDavid</span></div>
+			</div>
+		</hgroup>
+		<script>
+			const enableCH = () => {
+				let defaultCSS = document.createElement('link');
+				defaultCSS.setAttribute('rel', 'stylesheet');
+				defaultCSS.setAttribute('href', "/scripts/styles/default.css")
+				document.querySelector("head").appendChild(defaultCSS);
+
+				let highlight = document.createElement('script');
+				highlight.setAttribute('type', 'text/javascript');
+				highlight.setAttribute('src', "/scripts/highlight.pack.js");
+				highlight.addEventListener('load', () => {
+					document.querySelectorAll('code[class^="lang-"]').forEach((block) => {
+						hljs.highlightBlock(block);
+					});
+				})
+				document.querySelector("head").appendChild(highlight);
+			}
+		</script>
+		<button class=button type=button onclick="enableCH()">enable syntax highlighting on this page</button>
+		<p>Protip: Use <a href="https://repl.it/">https://repl.it/</a> to run your own little test programs, yes they support other languages than Haskell too.</p>
+		<p>Haskell's fold functions are Higher Order and Recursive functions (if you've read <a href=https://thaumatorium.wordpress.com/2018/10/15/types-or-classes-of-haskell-functions>Types (or classes) of Haskell functions</a>, you'll know what that is) where it takes a function, a first/final item (more on this later), a list of things and returns a single reduces item.</p>
+		<h2><a id=foldr href=#foldr class=self-link>Foldr</a></h2>
+		<pre><code class=lang-haskell>
+foldr :: (a -> b -> b) -> b -> [a] -> b
+foldr f z []		 = z
+foldr f z (x:xs) = f x (foldr f z xs)
+</code></pre>
+		<p>There are two cases:</p>
+		<ul>
+			<li>The base case (where the input list is empty)</li>
+			<li>The general case (where the input list is not empty), one items gets reduced and the function is recursively called on the rest of the list.</li>
+		</ul>
+		<p>Now lets run foldr:</p>
+		<p><code class=lang-haskell>foldr (+) 0 [1,2,3,4]</code></p>
+		<p>As you notice the + operator is placed in parentheses. This is to prevent the direct application of +. When you're actually run command above without the parentheses you'll see you'll get an error. (try it on the pre-mentioned https://repl.it/ website!)</p>
+		<p>The answer is 10, as 1 + 2 + 3 + 4 = 10, but what's that 0 doing there? That is the identity value for +. I haven't written an article about the identity value for operators (or functions), but here's what you need to know: The identity value of a function means that if you put any other value in, you'll get that value back out: x + 0 = x.</p>
+		<p>Other operators may have different values:</p>
+		<ul>
+			<li>Subtraction (<samp>-</samp>) has <samp>0 (x – 0 = x)</samp> as identity</li>
+			<li>Multiplication (<samp>*</samp>) has <samp>1 (multiplying by 0 would always give you 0, which is unwanted behavior)</samp> as identity</li>
+			<li>Division (<samp>/</samp>) has 1 as identity</li>
+			<li>Exponentiation (<samp>^</samp>) (aka "the power operator") also has 1 as identity value.</li>
+			<li>f() where f outputs a list has the empty list ([]) as identity</li>
+		</ul>
+		<p>But how is 10 calculated? Since the function is called fold <strong>right</strong>, we know two things: all grouped parentheses (more on that below the executed code) are on the right and the identity value will be the last value inserted.</p>
+		<p>If I run the code by hand (if you've ever followed a Logic course, you'll recognize this as <strong>induction</strong>) we'll get the following execution:</p>
+		<pre><code class=lang-haskell>
+foldr (+) 0 [1,2,3,4]
+= { apply foldr, since the input is not an empty list we apply the general case }
+(+) 1 (foldr (+) 0 [2,3,4])
+= { apply foldr, ditto as before }
+(+) 1 ((+) 2 (foldr (+) 0 [3,4]))
+= { apply foldr, ditto as before }
+(+) 1 ((+) 2 ((+) 3 (foldr (+) 0 [4])))
+= { apply foldr, ditto as before }
+(+) 1 ((+) 2 ((+) 3 ((+) 4 (foldr (+) 0 []))))
+= { apply foldr, but since the list is now empty, return the identity value instead! }
+(+) 1 ((+) 2 ((+) 3 ((+) 4 0)))
+= { apply the most inner + operator }
+(+) 1 ((+) 2 ((+) 3 4))
+= { apply the most inner + operator }
+(+) 1 ((+) 2 7)
+= { apply the most inner + operator }
+(+) 1 9
+= { apply the most last + operator }
+10
+</code></pre>
+		<p>Now when you take a look at the moment all foldrs have been applied, you may see you can rewrite that line from:</p>
+		<p><code class=lang-haskell>(+) 1 ((+) 2 ((+) 3 ((+) 4 0)))</code></p>
+		<p>to</p>
+		<p><code class=lang-haskell>1 + (2 + (3 + (4 + 0)))</code></p>
+		<p>which is more readable (IMO). Now, for this instance, the order of execution doesn't matter at all, but there are certain operators (like subtraction and division) where the order does matter! 1/2 = .5, whereas 2/1 = 2</p>
+		<p>Lets say we execute the next line, what will the answer be?</p>
+		<p><code class=lang-haskell>foldr (-) 0 [1,2,3,4]</code></p>
+		<p>Lets simplify the executed code above to that cleaned up line right below it:</p>
+		<p><code class=lang-haskell>1 - (2 - (3 - (4 - 0)))</code></p>
+		<p>As I've mentioned before: all grouped parentheses are grouped on the right (because fold right) and the identity value is also on the right.</p>
+		<p>When we run this code we get:</p>
+		<pre><code class=lang-haskell>
+1 - (2 - (3 - (4 - 0)))
+= { apply the most inner - }
+1 - (2 - (3 - 4))
+= { apply the most inner -. Negative values must be wrapped in parentheses }
+1 - (2 - (-1))
+= { apply the most inner -. Subtracting a negative number is the same as adding it	}
+1 - 3
+= { apply the last - }
+-2
+</code></pre>
+		<h2><a id=foldl href=#foldl class=self-link>Foldl</a></h2>
+		<p>Definition (again from Wikipedia):</p>
+		<pre><code class=lang-haskell>
+foldl :: (b -> a -> b) -> b -> [a] -> b
+foldl f z [] = z
+foldl f z (x:xs) = foldl f (f z x) xs
+</code></pre>
+		<p>What is different? The input function has its first types flipped and in the general case you can see that the application of f is moved into location of what was the identity value.</p>
+		<p>Lets run the same code we did last time:</p>
+		<pre><code class=lang-haskell>
+foldl (-) 0 [1,2,3,4]
+= { apply foldl. Again the list isn't empty, so we'll apply the general case }
+foldl (-) ((-) 0 1) [2,3,4]
+= { apply foldl. ditto }
+foldl (-) ((-) ((-) 0 1) 2) [3,4]
+= { apply foldl. ditto }
+foldl (-) ((-) ((-) ((-) 0 1) 2) 3) [4]
+= { apply foldl. ditto }
+foldl (-) ((-) ((-) ((-) ((-) 0 1) 2) 3) 4) []
+= { apply foldl. Again, the list is now empty, so apply the base case }
+(-) ((-) ((-) ((-) 0 1) 2) 3) 4
+= { apply the most inner - }
+(-) ((-) ((-) (-1) 2) 3) 4
+= { apply the most inner - }
+(-) ((-) (-3) 3) 4
+= { apply the most inner - }
+(-) (-6) 4
+= { apply the last - }
+(-10)
+</code></pre>
+		<p>Now, after you've applied all foldls, we, again, can clean up that code:</p>
+		<p><code class=lang-haskell>(-) ((-) ((-) ((-) 0 1) 2) 3) 4</code></p>
+		<p><code class=lang-haskell>(((0 - 1) - 2) - 3) - 4</code></p>
+		<p>There, much more readable! As you'll notice, the grouped parentheses are now all left (from the name fold left), ditto for the identity value.</p>
+		<p>Sometimes you have to rewrite code to make it make sense in Haskell. It's a sad fact of life. Anyway, if we reduce this cleaned up code we'll get:</p>
+		<pre><code class=lang-haskell>
+(((0 - 1) - 2) - 3) - 4
+= { apply most inner - }
+(((-1) - 2) - 3) - 4
+= { apply most inner - }
+((-3) - 3) - 4
+= { apply most inner - }
+(-6) - 4
+= { apply most inner - }
+(-10)
+</code></pre>
+		<p>I think you've started seeing a pattern with Foldl/Foldr right about now: all parentheses are with the identity value either all left or all right – that's how I've been able to easily write out most code by hand (I had to use VSCode with the Bracket Pair Colorizer 2 addon with the <code class=lang-haskell>foldl (-) 0 [1,2,3,4]</code> code to check my parentheses :p )</p>
+		<p>If you've got any questions (especially when you don't understand a part), let me know down below!</p>
+
+		<h2><a id=alternative-explanation href=#alternative-explanation class=self-link>Alternative explanation</a></h2>
+		<p>With either foldl or foldr, the text of the list gets manipulated until something executable is produced:</p>
+		<pre><code class=lang-haskell>
+foldl (-) 0 [1,2,3,4]
+= { add identity value to the left of the list (because fold left) }
+foldl (-) [0,1,2,3,4]
+= { replace all commas with the function given }
+foldl [0-1-2-3-4]
+= { as last, apply the parentheses, grouped to the left (because fold left). The length of the grouped parentheses is the original length of the list - 1 }
+(((0-1)-2)-3)-4
+
+foldr (-) 0 [1,2,3,4]
+= { add identity value to the right of the list (because fold right)
+foldr (-) [1,2,3,4,0]
+= { replace all commas with the function given }
+foldr [1-2-3-4-0]
+= { as last, apply the parentheses, grouped to the right (because fold right). The length of the grouped parentheses is the original length of the list - 1 }
+1-(2-(3-(4-0)))
+</code></pre>
+	</main>
+
+	<footer>
+		<div class=copyright>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+		</div>
+		<nav id=profiles>
+			<p>Media profiles</p>
+			<a href="https://www.reddit.com/user/nostradavid"><img src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
+			<a href="https://twitter.com/DavidNostra"><img src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
+			<a href="https://github.com/NostraDavid"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(me)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium"><img src="/images/social-media/github.svg" alt="Twitter's logo" width=32 height=32>(pro)</a><span> - </span>
+			<a href="https://www.facebook.com/david.nostra.121"><img src="/images/social-media/facebook.svg" alt="Twitter's logo" width=32 height=32></a>
+		</nav>
+		<!-- Sssh - don't tell anyone! -->
+		<a class=secret onclick=specialGoto(event)>π</a>
+		<div id=cookie-notification>
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+	</footer>
+</body>
+
+</html>
