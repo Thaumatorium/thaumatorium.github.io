@@ -32,7 +32,7 @@ body>header .subtitle::first-letter {
 
 body>nav {
 	background-color: #940000;
-	box-shadow: -1px 2px 2px gray;
+	box-shadow: 0 5px 5px #555;
 	text-align: center
 }
 
@@ -144,7 +144,7 @@ body>main p {
 body>main figure {
 	border: 1px solid #800;
 	border-radius: 4px;
-	box-shadow: 1px 1px 2px gray;
+	box-shadow: 3px 3px 5px #555;
 	margin: 0 0 10px;
 	padding: 10px;
 	text-align: center
@@ -166,7 +166,7 @@ body>main figure {
 table {
 	border: 1px solid #800;
 	border-collapse: collapse;
-	box-shadow: 1px 1px 2px gray;
+	box-shadow: 3px 3px 5px #555;
 	font-family: Tahoma, sans-serif
 }
 
@@ -293,7 +293,7 @@ img {
 
 body>footer {
 	border-top: 10px solid #9a2121;
-	box-shadow: -1px -2px 2px gray;
+	box-shadow: 0 -3px 5px #555;
 	display: flex;
 	flex-wrap: wrap;
 	padding: 30px
@@ -339,6 +339,7 @@ body>footer .secret {
 	cursor: pointer;
 	font-size: .9em;
 	padding: .8em 2em;
+	box-shadow: 2px 2px 5px #555;
 }
 
 .button:hover {
