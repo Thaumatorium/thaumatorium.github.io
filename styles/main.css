@@ -185,6 +185,7 @@ ul>li {
 
 pre {
 	tab-size: 2;
+	-moz-tab-size: 2;
 	white-space: pre-wrap
 }
 
