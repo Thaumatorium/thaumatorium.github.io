@@ -263,6 +263,10 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 						<td>find paragraph tags that aren't closed</td>
 						<td><code class=lang-regex>\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
 					</tr>
+					<tr>
+						<td>find all lines that do not contain <q>hede</q></td>
+						<td><code class="lang-regex">^((?!hede).)*$</code></td>
+					</tr>
 				</tbody>
 			</table>
 		</details>
