@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+	<meta charset=utf-8 />
+	<title>Praetorium Pi | The Thaumatorium</title>
+	<meta name=description content="You're not supposed to find this page on Google..." />
+	<link rel="canonical" href="https://thaumatorium.com/praetorianpi">
+	<meta name=theme-color content=#800 />
+	<link rel=apple-touch-icon href=/images/icons-192.png>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<link rel=manifest href=/manifest.json />
+	<link rel=icon href=/images/favicon.svg />
+	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
+	<noscript>
+		<link rel=stylesheet href="/styles/main.css" />
+	</noscript>
+</head>
+
+<body>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-169207994-1');
+	</script>
+
+	<header>
+		<div class=title>The Thaumatorium:</div>
+		<div class=subtitle>Where the magic happens</div>
+	</header>
+
+	<nav role=navigation>
+		<h5 style="display: none;">Main nav menu</h5>
+		<a href="/">Frontpage</a><span> - </span>
+		<a href=/articles>Articles</a><span> - </span>
+		<a href=/projects>Projects</a><span> - </span>
+		<a href=/experimentations>Experimentations</a><span> - </span>
+		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
+		<a href=/random-video>Random video</a><span> - </span>
+		<a href=/hardware>Hardware</a><span> - </span>
+		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
+		<a href=/about>About</a>
+	</nav>
+
+	<main>
+		<h1>Sssh - don't tell anyone!</h1>
+			<figure style="border: none; box-shadow: none;">
+				<a href="https://www.youtube.com/watch?v=pXPXMxsXT28">
+					<img loading=lazy width=540 height=960 src="clever.webp" alt="The bad guy from the 'The Net' saying 'clever girl'" /></a>
+				<figcaption>Click the image</figcaption>
+			</figure>
+	</main>
+
+	<footer>
+		<div class=copyright>
+			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
+			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+		</div>
+		<nav id=profiles>
+			<h4>Media profiles</h4>
+			<a href="https://twitter.com/NostraDavid2"><img loading=lazy src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
+			<a href="https://www.twitch.tv/nostradavid"><img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=32 height=32></a> - </span>
+			<a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA"><img loading=lazy src="/images/social-media/youtube.svg" alt="Youtube's logo" width=32 height=32></a> - </span>
+			<a href="https://www.reddit.com/user/nostradavid"><img loading=lazy src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
+			<a href="https://github.com/NostraDavid"><img loading=lazy src="/images/social-media/github.svg" alt="Github's logo" width=32 height=32>(me)</a><span> - </span>
+			<a href="https://github.com/Thaumatorium"><img loading=lazy src="/images/social-media/github.svg" alt="Github's logo" width=32 height=32>(pro)</a><span> - </span>
+		</nav>
+		<!-- Sssh - don't tell anyone! -->
+		<a class=secret onclick=specialGoto(event)>π</a>
+		<div id=cookie-notification style="display: none">
+			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
+		</div>
+	</footer>
+	<script async src=/main.js></script>
+</body>
+
+</html>
