@@ -7,10 +7,10 @@
 	<meta name=description content="Are you looking for an alternative to the biggest news aggregator and all others suck? Give SON a try!" />
 	<link rel="canonical" href="https://thaumatorium.com/SemanticOverrideNetwork">
 	<meta name=theme-color content=#800 />
-	<link rel=apple-touch-icon href=./images/icons-192.png>
+	<link rel=apple-touch-icon href=./images/reactions/icons-192.png>
 	<meta name=viewport content="width=device-width, initial-scale=1">
 	<link rel=manifest href=./manifest.json />
-	<link rel=icon href=./images/favicon.svg />
+	<link rel=icon href=./images/reactions/favicon.svg />
 	<link rel=stylesheet href="./styles/main.css" />
 
 	<!-- General OpenGraph data - shared between Facebook and Twitter -->
@@ -52,7 +52,140 @@
 
 	<main>
 		<h1>Welcome to Semantic Override Network (SON)!</h1>
-		<!-- Content goes here -->
+		<div id=posts></div>
+		<script>
+			const domain = "https://thaumatorium.com/";
+			const relation = url => {
+				// ugc == User Generated Content
+				return url.startsWith(domain) ? "ugc" : "nofollow";
+			};
+
+			fetch("/api/v1/posts")
+				.then(response => response.json())
+				.then(data => {
+					console.log(data);
+					let posts = document.getElementById("posts");
+					let post_template = document.querySelector("#post");
+					let post_label_template = document.querySelector("#post-label");
+
+					data.posts.map(post => {
+						let clone = post_template.content.cloneNode(true);
+						let post_title = clone.querySelector(".post-title");
+						let post_summary = clone.querySelector(".post-summary");
+						let post_top_comment = clone.querySelector(".post-top-comment");
+						let post_comments = clone.querySelector(".post-comments");
+						let post_posted = clone.querySelector(".post-posted");
+						let post_reactions = clone.querySelector(".post-reactions");
+						let post_published = clone.querySelector(".post-published");
+						let post_labels = clone.querySelector(".post-labels");
+						let post_image = clone.querySelector(".post-image");
+						console.log(post);
+						post_title.textContent = post.title;
+						post_title.href = post.link;
+						post_title.rel = relation(post.link);
+						post_summary.textContent = post.summary;
+						post_top_comment.textContent = post.topComment;
+						post_comments.textContent = post.commentCount;
+						post_comments.href = "";
+						post_posted.textContent = post.postedDate;
+						post_published.textContent = post.publishedDate;
+
+						post.labels.map(label => {
+							let clone = post_label_template.content.cloneNode(true);
+							clone.children[0].href = "./label/" + label;
+							clone.children[0].textcontent = label;
+							post_labels.appendChild(clone)
+							return label;
+						})
+
+						post_image.src="";
+						posts.appendChild(clone);
+						return post;
+					})
+				})
+				.catch(error => {
+					console.error('Error:', error);
+				});
+		</script>
+		<template id=post>
+			<div class="post">
+				<a class="post-title" href="[URL GOES HERE]" rel="relation([URL GOES HERE])"></a>
+				<p class="post-summary">[SUMMARY GOES HERE]</p>
+				<hr />
+				<p class="post-top-comment">[TOP COMMENT GOES HERE]</p>
+				<a class="post-comments" href="[URL TO POST GOES HERE]">
+					n comments
+				</a>
+				&nbsp;&mdash;&nbsp;
+				<span class="post-posted">posted: "2020-12-21T18:34:43.511Z"</span>
+				&nbsp;&mdash;&nbsp;
+				<span class="post-published">published: "2020-12-21T18:34:43.511Z"</span>
+				<ul class="post-reactions">
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Agree.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Artistic.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Disagree.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Dumb.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Friendly.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Funny.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Informative.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Late.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Optimistic.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/ProgrammingKing.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Useful.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Winner.png>
+						<p>10x</p>
+					</li>
+					<li class="post-reaction" style="display:inline-block">
+						<img class="post-reaction-image" src=./images/reactions/Zing.png>
+						<p>10x</p>
+					</li>
+				</ul>
+				<ul class="post-labels">
+					<!-- <li class="post-label" style="display: inline-block"><a href=./label/SON>SON</a></li>
+					<li class="post-label" style="display: inline-block"><a href=./label/history>history</a></li>
+					<li class="post-label" style="display: inline-block"><a href=./label/meta>meta</a></li>
+					<li class="post-label" style="display: inline-block"><a href=./label/screenshot>screenshot</a></li> -->
+				</ul>
+				<img class=post-image src="[URL TO POST GOES HERE]" style="max-width: 100%; height: auto">
+			</div>
+		</template>
+		<template id=post-label>
+			<li class="post-label" style="display: inline-block"><a href=./label/SON>SON</a></li>
+		</template>
 	</main>
 
 	<footer>
@@ -62,7 +195,7 @@
 			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
 		</div>
-		
+
 		<!-- Sssh - don't tell anyone! -->
 		<a class=secret onclick=specialGoto(event)>π</a>
 	</footer>
