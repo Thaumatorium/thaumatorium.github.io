@@ -1,0 +1,50 @@
+{
+	"name": "Semantic Override Network",
+	"short_name": "SON",
+	"description": "Social News Aggregate",
+	"icons": [
+		{
+			"sizes": "128x128",
+			"src": "./images/manifest/icon-128.png",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"sizes": "256x256",
+			"src": "./images/manifest/icon-256.png",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"sizes": "512x512",
+			"src": "./images/manifest/icon-512.png",
+			"type": "image/png",
+			"purpose": "any maskable"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "images/screenshots/2020-12-21.png",
+			"sizes": "1280x720",
+			"type": "image/png"
+		}
+	],
+	"categories": [
+		"education",
+		"entertainment",
+		"lifestyle",
+		"news",
+		"productivity",
+		"security",
+		"social",
+		"utilities"
+	],
+	"theme_color": "#880000",
+	"background_color": "#880000",
+	"display": "minimal-ui",
+	"scope": "/",
+	"start_url": "/index.html",
+	"lang": "en-GB",
+	"dir": "auto",
+	"orientation": "any"
+}
