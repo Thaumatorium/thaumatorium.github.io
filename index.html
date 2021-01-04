@@ -35,10 +35,8 @@
 	<!-- 2020-08-05 I've removed ?v=1, because I never actually updated it. I can use it again once I ever move from raw HTML to a C# hosted site -->
 	<!-- Lets imagine a user has my first version cached, and I make a change, but the expiry date of the file is a year into the future. I can simply up the number and the browser will replace the file (no matter whether I actually made a change or not) -->
 	<!-- Now I'm, as of writing, hosting on github.io and I have no control over the expiry date (which is 10 minutes, IIRC), but now I can remember myself to do this in the future once I go the self-hosting route :) -->
-	<link rel=preload href=/styles/main.css as=style onload="this.rel='stylesheet';this.onload=null">
-	<noscript>
-		<link rel=stylesheet href="/styles/main.css" />
-	</noscript>
+	<link rel=stylesheet href="/styles/main.css" />
+
 
 	<!-- General OpenGraph data - shared between Facebook and Twitter -->
 	<meta property="og:url" content="https://thaumatorium.com/" />
