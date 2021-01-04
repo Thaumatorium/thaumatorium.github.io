@@ -11,7 +11,6 @@
 	<title>The Thaumatorium: NostraDavid's handcrafted website | The Thaumatorium</title>
 	<!-- This description should show up in Google results -->
 	<meta name=description content="This is a handcrafted blog where you can find articles and projects created by NostraDavid." />
-	<!-- <base href="https://thaumatorium.com/" /> -->
 	<!-- Needed for Hyvor, and helps search engines reduce duplicate content "/" vs "/index.html", for example -->
 	<link rel="canonical" href="https://thaumatorium.com/">
 	<!-- Theme color for Android/iOS -->
@@ -21,21 +20,15 @@
 	<!-- meta viewport is actually CSS hidden inside your HTML -->
 	<!-- More information https://wiki.whatwg.org/wiki/MetaExtensions#viewport and https://drafts.csswg.org/css-device-adapt/#viewport-meta -->
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<!-- manifest.json is currently only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
+	<!-- manifest.json is currently (2020-05-01) only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
 	<link rel=manifest href=/manifest.json />
 	<link rel=icon href=/images/favicon.svg />
-	<!-- preconnect to the href to save some time. Needed for Google Analytics -->
-	<link rel=preconnect href="https://adservice.google.com" />
-	<link rel=preconnect href="https://adservice.google.nl" />
-	<link rel=preconnect href="https://googleads.g.doubleclick.net" />
-	<link rel=preconnect href="https://www.google-analytics.com" />
-	<link rel=preconnect href="https://www.googletagservices.com" />
-	<link rel=preconnect href="https://tpc.googlesyndication.com" />
+
 	<!-- The reason for the ?v=1 in the CSS url is Cache Busting. This gives me control over which file version is cached on the user's end -->
 	<!-- 2020-08-05 I've removed ?v=1, because I never actually updated it. I can use it again once I ever move from raw HTML to a C# hosted site -->
 	<!-- Lets imagine a user has my first version cached, and I make a change, but the expiry date of the file is a year into the future. I can simply up the number and the browser will replace the file (no matter whether I actually made a change or not) -->
 	<!-- Now I'm, as of writing, hosting on github.io and I have no control over the expiry date (which is 10 minutes, IIRC), but now I can remember myself to do this in the future once I go the self-hosting route :) -->
-	<link rel=stylesheet href="/styles/main.css" />
+	<link rel=stylesheet href="/styles/main.css?v=2" />
 
 
 	<!-- General OpenGraph data - shared between Facebook and Twitter -->
@@ -56,34 +49,9 @@
 	<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1">
 	<meta name="twitter:image:width" content="1280" />
 	<meta name="twitter:image:height" content="668" />
-
-	<!-- <script data-ad-client="ca-pub-7577528621475749" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 </head>
 
 <body>
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-169207994-1');
-	</script> -->
-	<script>
-		// e and a are 2 vars that arecreated to be used in the function itself
-		((w, d, n, s, u, e, a) => {
-			w[n] = w[n] || function () { (w[n].q = w[n].q || []).push(arguments) };
-			e = d.createElement(s);
-			a = d.getElementsByTagName(s)[0];
-			e.async = true;
-			e.src = u;
-			e.crossorigin = "anonymous";
-			a.parentNode.insertBefore(e, a)
-		})(window, document, "galite", "script", "https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
-
-		galite('create', 'UA-169207994-1', 'auto');
-		galite('send', 'pageview');
-	</script>
-
 	<header>
 		<div class=title>The Thaumatorium:</div>
 		<div class=subtitle>Where the magic happens</div>
@@ -255,7 +223,7 @@
 		<h3><a id=twitch href=#twitch class=self-link>Twitch</a></h3>
 		<figure>
 			<a href="https://www.twitch.tv/nostradavid">
-				<img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=128 height=145.12 />
+				<img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=128>
 			</a>
 			<figcaption>Come watch me livestream World of Warcraft on Twitch!</figcaption>
 		</figure>
@@ -263,7 +231,7 @@
 		<h3><a id=youtube href=#youtube class=self-link>Youtube</a></h3>
 		<figure>
 			<a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA">
-				<img loading=lazy src="/images/social-media/youtube.svg" alt="Youtube's logo" width=128 height=90.49>
+				<img loading=lazy src="/images/social-media/youtube.svg" alt="Youtube's logo" width=128>
 			</a>
 			<figcaption>Go watch some clips from previous livestreams that I've edited for Youtube</figcaption>
 		</figure>
@@ -385,9 +353,6 @@
 		</nav>
 		<!-- Sssh - don't tell anyone! -->
 		<a class=secret onclick=specialGoto(event)>π</a>
-		<div id=cookie-notification style="display: none">
-			<p>This site uses cookies from Google to deliver its services and to analyze traffic. <button>OK</button></p>
-		</div>
 	</footer>
 	<script async src=/main.js></script>
 </body>
