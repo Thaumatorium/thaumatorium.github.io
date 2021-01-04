@@ -2,7 +2,6 @@
 
 body>header {
 	background: #800;
-	background: url(/images/logo-light.svg) no-repeat center #800;
 	background-size: 256px 256px;
 	padding: 30px 0;
 	text-align: center
