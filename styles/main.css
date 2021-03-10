@@ -165,6 +165,15 @@ ul>li {
 	list-style-type: '– '
 }
 
+ul.classic>li  {
+	list-style-type: '– '
+}
+
+ul.none>li  {
+	list-style-type: ''
+}
+
+
 .article-list>li {
 	list-style-type: ' ';
 	padding: 0 0 10px
