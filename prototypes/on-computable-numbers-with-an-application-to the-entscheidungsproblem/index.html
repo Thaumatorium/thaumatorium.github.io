@@ -1087,7 +1087,7 @@ DADDCRDAA;DAADDRDAAA;
 
 		<h2>8. Application of the diagonal process.</h2>
 		<p>It may be thought that arguments which prove that the real numbers are not enumerable would also prove that the computable numbers and sequences cannot be enumerable*. It might, for instance, be thought that the limit of a sequence of computable numbers must be computable. This is clearly only true if the sequence of computable numbers is defined by some rule.</p>
-		<p>Or we might apply the diagonal process. “If the computable sequences are enumerable, let &alpha;<sub>n</sub> be the <var>n</var>-th computable sequence, and let &fcy;<sub><var>n</var></sub>(<var>m</var>) be the <var>m</var>-th figure in &alpha;<sub>n</sub>. Let /? be the sequence with \—<j>n(n) as its n-th figure. Since &beta; is computable, there exists a number <var>K</var> such that 1-&fcy;<sub><var>n</var></sub>(<var>n</var>)=&fcy;<sub><var>K</var></sub>(<var>n</var>) all <var>n</var>. Putting <var>n</var>=<var>K</var>, we have 1=2&fcy;<sub><var>K</var></sub>(<var>K</var>), i.e. 1 is even. This is impossible. The computable sequences are therefore not enumerable”.</p>
+		<p>Or we might apply the diagonal process. “If the computable sequences are enumerable, let &alpha;<sub>n</sub> be the <var>n</var>-th computable sequence, and let &fcy;<sub><var>n</var></sub>(<var>m</var>) be the <var>m</var>-th figure in &alpha;<sub>n</sub>. Let /? be the sequence with \—<j>n(n) as its <var>n</var>-th figure. Since &beta; is computable, there exists a number <var>K</var> such that 1-&fcy;<sub><var>n</var></sub>(<var>n</var>)=&fcy;<sub><var>K</var></sub>(<var>n</var>) all <var>n</var>. Putting <var>n</var>=<var>K</var>, we have 1=2&fcy;<sub><var>K</var></sub>(<var>K</var>), i.e. 1 is even. This is impossible. The computable sequences are therefore not enumerable”.</p>
 		<p>The fallacy in this argument lies in the assumption that &beta; is computable. It would be true if we could enumerate the computable sequences by finite means, but the problem of enumerating computable sequences is equivalent to the problem of finding out whether a given number is the D.N of a circle-free machine, and we have no general process for doing this in a finite number of steps. In fact, by applying the diagonal process argument correctly, we can show that there cannot be any such general process.</p>
 		<p>The simplest and most direct proof of this is by showing that, if this general process exists, then there is a machine which computes &beta;. This proof, although perfectly sound, has the disadvantage that it may leave the reader with a feeling that “there must be something wrong”. The proof which I shall give has not this disadvantage, and gives a certain insight into the significance of the idea “circle-free”. It depends not on constructing &beta;, but on constructing &beta;&prime;, whose <var>n</var>-th figure is &fcy;<sub><var>n</var></sub>(<var>n</var>).</p>
 		<aside>* Cf. Hobson, Theory of functions of a real variable (2nd ed., 1921), 87, 88.</aside>
@@ -1159,400 +1159,251 @@ DADDCRDAA;DAADDRDAAA;
 		</aside>
 		<hr>
 		<!-- ! CONTINUE HERE ! -->
-		<p>I say that &alpha; is then a computable sequence: a machine 'JCa to compute
-		a can be obtained by a fairly simple modification of JC
-		We divide the motion of Ka into sections. The n-th section is devoted
-		to finding the n-th figure of a. After the (n— l)-th section is finished a double
-		colon :: is printed after all the symbols, and the succeeding work is done
-		wholly on the squares to the right of this double colon. The first step is to
-		write the letter “A “ followed by the formula (An) and then “ B “ followed
-		by (Bn). The machine Ka then starts to do the work of JC, but whenever
-		a provable formula is found, this formula is compared with (An) and with
-		(Bn). If it is the same formula as (An), then the figure “ 1 “ is printed, and
-		the n-th. section is finished. If it is (B,J, then “ 0 “ is printed and the section
-		is finished. If it is different from both, then the work of K is continued
-		from the point at which it had been abandoned. Sooner or later one of
-		the formulae (An) or (B?1) is reached; this follows from our hypotheses
-		about a and 21, and the known nature of JC. Hence the n-th section will
-		eventually be finished. 3CO is circle-free; a is computable.
-		It can also be shown that the numbers a definable in this way by the use
-		of axioms include all the computable numbers. This is done by describing
-		computing machines in terms of the function calculus.
-		It must be remembered that we have attached rather a special meaning
-		to the phrase “ 21 defines a “. The computable numbers do not include all.
-		(in the ordinary sense) definable numbers. Let 8 be a sequence whose
-		n-th figure is 1 or 0 according as n is or is not satisfactory. It is an immediate consequence of the
-		theorem of § 8 that 8 is not computable. It is (so
-		far as we know at present) possible that any assigned number of figures of 8
-		can be calculated, but not by a uniform process. When sufficiently many
-		figures of 8 have been calculated, an essentially new method is necessaiy in
-		order to obtain more figures.
-		III. This may be regarded as a modification of I or as a corollary of II.
-		We suppose, as in I, that the computation is carried out on a tape; but we
-		avoid introducing the “state of mind” by considering a more physical
-		and definite counterpart of it. It is always possible for the computer to
-		break off from his work, to go away and forget all about it, and later to come
-		back and go on with it. If he does this he must leave a note of instructions
-		(written in some standard form) explaining how the work is to be continued. This note is the counterpart
-		of the “state of mind". We will
-		suppose that the computer works in such a desultory manner that he never
-		does more than one step at a sitting. The note of instructions must enable
-		him to carry out one step and write the next note. Thus the state of progress
-		of the computation at any stage is completely determined by the note of
-		254 A. M. TURING [NOV. 12,
-		instructions and the symbols on the tape. That is, the state of the system
-		may be described by a single expression (sequence of symbols), consisting
-		of the symbols on the tape followed by A (which we suppose not to appear
-		elsewhere) and then by the note of instructions. This expression may be
-		called the “state formula". We know that the state formula at any
-		given stage is determined by the state formula before the last step was
-		made, and we assume that the relation of these two formulae is expressible
-		in the functional calculus. In other words, we assume that there is an
-		axiom 2( which expresses the rules governing the behaviour of the
-		computer, in terms of the relation of the state formula at any stage to the
-		state formula at the preceding stage. If this is so, we can construct a
-		machine to write down the successive state formulae, and hence to
-		compute the required number.
-		10. Examples of large classes of numbers which are computable.
-		It will be useful to begin with definitions of a computable function of
-		an integral variable and of a computable variable, etc. There are many
-		equivalent ways of defining a computable function of an integral
-		variable. The simplest is, possibly, as follows. If y is a computable
-		sequence in which 0 appears infinitely! often, and n is an integer, then let
-		us define £(y, n) to be the number of figures 1 between the n-th and the
-		(?i-\- l)-th figure 0 in y. Then <f)(n) is computable if, for all n and some y, .<f>(n) = £(y, n). An
-			equivalent definition is this. Let H(x, y) mean
-			<f)(x)=y. Then, if we can find a contradiction-free axiom 21^, such that 2^-* P, and if for each integer n there exists an integer N, such that % & and such that, if m=£<f>(n), then, for some N',
-				% &
-				then <j> may be said to be a computable function.
-					We cannot define general computable functions of a real variable, since
-					there is no general method of describing a real number, but we can define
-					a computable function of a computable variable. If n is satisfactory,
-					let yn be the number computed by ./U {n), and let
-					| If *Al computes y, then the problem whether .11 prints 0 infinitely often is of the
-					same character as the problem whether A\, is circle-free.
-					<hr>
-					unless yn = 0 or yn — 1, in either of which cases an = 0. Then, as n
-					runs through the satisfactory numbers, an runs through the computable
-					numbersf. Now let <f)(n) be a computable function which can be shown to be such that for any satisfactory argument its value is satisfactory %. Then the function /, defined by f(an) — a^n), is a computable function and all computable functions of a computable variable are expressible in this form. Similar definitions may be given of computable functions of several variables, computable-valued functions of an integral variable, etc. I shall enunciate a number of theorems about computability, but I shall prove only (ii) and a theorem similar to (iii). (i) A computable function of a computable function of an integral or computable variable is computable. (ii) Any function of an integral variable defined recursively in terms of computable functions is computable. I.e. if 0(ra, n) is computable, and r is some integer, then rj(n) is computable, where (iii) If <f>
-						(m, n) is a computable function of two integral variables, then
-						<j>{n, n) is a computable function of n.
-							(iv) If (j>(n) is a computable function whose value is always 0 or 1, then
-							the sequence whose fi-th figure is <f>(n) is computable.
-								Dedekind's theorem does not hold in the ordinary form if we replace
-								*' real'' throughout by '' computable''. But it holds in the following form :
-								(v) If G(a) is a propositional function of the computable numbers and
-								(a) (3a)(3jB){G(a)&(-G(j8))},
-								(6) Q(a)
-								and there is a general process for determining the truth value of G(a), then
-								f A function an may be defined in many other ways so as to run through the
-								computable numbers.
-								J Although it is not possible to find a general process for determining whether a given
-								number is satisfactory, it is often possible to show that certain classes of numbers are
-								satisfactory.
-								256 A. M. TURING [NOV. 12r
-								there is a computable number £ such that
-								In other words, the theorem holds for any section of the computables
-								such that there is a general process for determining to which class a given
-								number belongs.
-								Owing to this restriction of Dedekind's theorem, we cannot say that a
-								computable bounded increasing sequence of computable numbers has a
-								computable limit. This may possibly be understood by considering a
-								sequence such as
-								l ± 1 I I I J
-								-5 2 ' 5 ' 8 ' io j
-								2» ••• •
-								On the other hand, (v) enables us to prove
-								(vi) If a and /? are computable and a
-								< /? and <£(a) < 0 < < />(/?), where
-								(f>(a) is a computable increasing continuous function, then there is a unique
-								computable number y, satisfying a < y < fi and <f>(y) = 0.
-									Computable convergence.
-									We shall say that a sequence fin of computable numbers converges
-									computably if there is a computable integral valued function N(e) of the
-									computable variable e, such that we can show that, if e > 0 and n > N(e)
-									and m > N(e), then \pn—j8m| < e. We can then show that (vii) A power series whose coefficients form a computable sequence of computable numbers is computably convergent at all computable points in the interior of its interval of convergence. (viii) The limit of a computably convergent sequence is computable. And with the obvious definition of “ uniformly computably convergent” : (ix) The limit of a uniformly computably convergent computable sequence of computable functions is a computable function. Hence (x) The sum of a power series whose coefficients form a computable sequence is a computable function in the interior of its interval of convergence. From (viii) and TT— 4(1—i-|--i—...) we deduce that TT is computable. From e=l + l+n-j-+»-j+... we deduce that e is computable. 1936.] OlST COMPUTABLE NUMBERS. 257 From (vi) we deduce that all real algebraic numbers are computable. From (vi) and (x) we deduce that the real zeros of the Bessel functions are computable. Proof of (ii). Let H(x, y) mean “r](x)=y” , and let K{x, y, z) mean “(f>(x, y) = z” . 21^ is the axiom for <f>(x, y). We take 31, to
-											be
-											% & P & (F{x, y)-*Q{x, y)) & [G{x, y) & G(y, z)->G(x, z))
-											& (FW-*H{U, VP>)) & (J(v, w) & #(v, x) & Z(w, x} z)->H(iv, z))
-											& [£f(w, 2) & ^(2 , <)v (?(<, z) I shall not give the proof of consistency of %n. Such a proof may be constructed by the methods used in Hilbert and Bernays, Grundlagen der Mathematik (Berlin, 1934), p. 209 et seq. The consistency is also clear from the meaning. Suppose that, for some n, N, we have shown % & then, for some M, % & & and Hence 21, Also ST, & Hence for each w some formula of the form is provable. Also, if M'^M and if'^ m and m^r)(u), then SI, & FW^G^W), u^) v G(u^m\ 8EB. 2. VOL. 42. NO. 2145. 258 A. M. TURING [NOV. 12, and 2( & FW)-^ f {G(u^n ^, w(m)) v G(u^m\ & Hence 21, & FW">
-												-> (-H{u^ n \ u™)).
-												The conditions of our second definition of a computable function are
-												therefore satisfied. Consequently rj is a computable function.
-												Proof of a modified form of (iii).
-												Suppose that we are given a machine Tl, which, starting with a tape
-												bearing on it 9 9 followed by a sequence of any number of letters “F” on
-												P-squares and in the <var>m</var>-configuration b, will compute a sequence yn
-												depending on the number n of letters “ F “. If <f>n(m) is the m-th figure of
-													yv, then the sequence /3 whose n-th. figure is <f>n{n) is computable.
-														We suppose that the table for Tl has been written out in such a way
-														that in each line only one operation appears in the operations column. We
-														also suppose that S, 0, 0, and 1 do not occur in the table, and we replace
-														9 throughout by 0, 0 by 0, and 1 byl. Further substitutions are then
-														made. Any line of form
-														95
-														te(23, u, h, k)
-														93
-														re(93, t>, h, k)
-														and we add to the table the following lines:
-														u pe(ul5 0)
-														Uj. R, Pk, R, P0, R, P0 u2
-														u2 re(u3, u3, k, h)
-														u3 pe(u2, F)
-														and similar lines with x> for u and 1 for 0 together with the following line
-														c R, PE, R, Ph 6.
-														We then have the table for the machine
-														(H/ which computes jS. The
-														initial <var>m</var>-configuration is c, and the initial scanned symbol is the
-														second a.
-														we
-														and
-														by
-														21
-														replace by
-														21
-														any line of
-														21
-														2(
-														the
-														aa
-														form
-														a
-														a
-														PO
-														PO
-														Pi
-														Pi
-														<hr>
-														11. Application to the Entscheidungsproblem.
-														The results of § 8 have some important applications. In particular, they
-														can be used to show that the Hilbert Entscheidungsproblem can have no
-														solution. For the present I shall confine myself to proving this particular
-														theorem. For the formulation of this problem I must refer the reader to
-														Hilbert and Ackermann's Grundziige der Theoretischen Logik (Berlin,
-														1931), chapter 3.
-														I propose, therefore, to show that there can be no general process for
-														determining whether a given formula 2( of the functional calculus K is
-														provable, i.e. that there can be no machine which, supplied with any one
-														21 of these formulae, will eventually say whether 21 is provable.
-														It should perhaps be remarked that what I shall prove is 𝔮uite different
-														from the well-known results of Godelf. G odel has shown that (in the formalism of
-														Principia Mathematica) there are propositions 21 such that neither
-														'21 nor — 21 is provable. As a consequence of this, it is shown that no proof
-														•of consistency of Principia Mathematica (or of K) can be given within that
-														formalism. On the other hand, I shall show that there is no general method
-														which tells whether a given formula % is provable in K, or, what comes to
-														the same, whether the system consisting of K with —21 adjoined as an
-														cextra axiom is consistent.
-														If the negation of what Godel has shown had been proved, i.e. if, for each
-														21, either 21 or — 21 is provable, then we should have an immediate solution
-														of the Entscheidungsproblem. For we can invent a machine JC which will
-														prove consecutively all provable formulae. Sooner or later JC will reach
-														either 21 or —21. If it reaches 21, then we know that 2( is provable. If it
-														reaches — 21, then, since K is consistent (Hilbert and Ackermann, p. 65), we
-														know that 21 is not provable.
-														Owing to the absence of integers in K the proofs appear somewhat
-														lengthy. The underlying ideas are 𝔮uite straightforward.
-														Corresponding to each computing machine i t we construct a formula
-														Un (it) and we show that, if there is a general method for determining
-														whether Un (.11) is provable, then there is a general method for determining
-														whether
-														i t ever prints 0.
-														The interpretations of the propositional functions involved are as
-														follows :
-														Rst(
-														x
-														> V) is
-														to be interpreted as “in the complete configuration x (of
-														J/l) the symbol on the square y is S".
-														t Loc. cit.
-														S2
-														260 A. M. TURING [NOV. 12,
-														I(x, y) is to be interpreted as “in the complete configuration x the
-														square y is scanned".
-														KQm(x) is to be interpreted as “in the complete configuration x the
-														<var>m</var>-configuration is 𝔮m.
-														F(x, y) is to be interpreted as
-														sty is the immediate successor of x “.
-														Inst {qt Sj 8k L 37} is to be an abbreviation for
-														(x, y, x', y') I (BSj(x, y) k I(x, y) k K8i(x) k F(x, x') k F(y', y))
-														f
-														I{x'iy')kBSk{x',y)kKqi{x')
-														k (z) \_F{y', z)v(RSj(x, z) + Rak(x', z)
-														Inst {q{ 8, Sk R 𝔮t} and Inst {qt 8j Sk N 𝔮{]
-														are to be abbreviations for other similarly constructed expressions.
-														Let us put the description of .11 into the first standard form of § 6. This
-														description consists of a number of expressions such as “q{ 8i Sk Lqt” (or
-														with ROT N substituted for L). Let us form all the corresponding expressions such
-														as
-														Inst {qt $3- Sk L 𝔮t} and take their logical sum. This we call
-														Des(.U).
-														The formula Un(.U) is to be
-														{3u)[N{u) &, (x)(N{x)->{3x')F(x, X'))
-														&. (y, z)(F(y, z)->N(y) k N(z)) & (y) R>%(% y),
-														& I(u, u) & Kqi{u) & Des(..U)l
-														->(35) (30 [N(s) & N(t) & RSl(s, t)).
-														[K{u)&... &Des(.U)] may be abbreviated to A(M).
-														When we substitute the meanings suggested on p. 259-60 we find that
-														Un(.U) has the interpretation “in some complete configuration of M, S-^
-														(i.e. 0) appears on the tape “. Corresponding to this I prove that
-														(a) If Sx appears on the tape in some complete configuration of • U, then
-														Un(U) is provable.
-														(b) If Un (• U) is provable, then 8X appears on the tape in some complete
-														configuration of • 11.
-														When this has been done, the remainder of the theorem is trivial.
-														<hr>
-														LEMMA 1. / / S± appears on the tape in some complete configuration of
-														.At, then Un(.At) is provable.
-														We have to show how to prove Un (it). Let us suppose that in the
-														n-th complete configuration the sequence of symbols on the tape is
-														&r(n,o)> *^r(n,i)5 •••> $i&lt;n,nh followed by nothing but blanks, and that the scanned symbol is the i(n)-th, and that the <var>m</var>-configuration is
-														𝔮^n). Then
-														we may form the proposition
-														, u) & RSrluJvF>, u') & ... & RSr{H,Mn
-														\
-														which we may abbreviate to CCn.
-														As before, F{u, u') & F{u', u") & ... & F{u^\ w(r)) is abbreviated
-														to F<r). I shall show that all formulae of the form A{-W) & F™^- CCn (abbreviated to CFn) are provable. The meaning of CFn is “ The n-th. complete configuration of i t is so and so “ , where “so and so “ stands for the actual n-th. complete configuration of it. That CFn should be provable is therefore to be expected. CF0 is certainly provable, for in the complete configuration the symbols are all blanks, the <var>
-															m</var>-configuration is 𝔮x, and the scanned square
-															is u, i.e.
-															CC0 is
-															(y) RSo{u, y) & I(u, u) & KQl(u).
-															A(o\i)->CC0 is then trivial.
-															We next show that CFn^-CFn+1 is provable for each n. There are
-															three cases to consider, according as in the move from the n-th to the
-															(n-j-l)-th configuration the machine moves to left or to right or remains
-															stationary. We suppose that the first case applies, i.e. the machine
-															moves to the left. A similar argument applies in the other cases. If
-															r[n,i(n)}=a, r(n-\-l, i(n-\-l)} = c, k(i(n)j =b, and k(i(n-\-l)) =d,
-															then Des (it) must include Inst {qa 8b Sd L 𝔮^ as one of its terms, i.e.
-															Hence A(.AV) & Fin
-															+n^1nat{qa8b8dLqc} &
-															But Inst{qa Sb 8dLqc} & ^ n +w^(CCn -
-															is provable, and so therefore is
-															A (• It) & F(n
-															+»-> (CCn -» C(L .,
-															262 A. M. TURING [NOV. 12,
-															and (AIM) & F™^CCn) -+ (.4(it) & F<n +V^CCn+1), i.e. CFm-»CF.n+V CFn is provable for each n. Now it is the assumption of this lemma that 8± appears somewhere, in some complete configuration, in the sequence of symbols printed by M; that is, for some integers N, K, CGN has RS[(u^N \u^) as one of its terms, and therefore CCN^RSl{u{N\ u(K)) is provable. We have then and A(.M)&FW->CCN
-																.
-																We also have
-																(3u)A(M)-+(3u)(3uf
-																)...
-																where N' — max (N, K). And so
-																(3u) A (. U.) -> (3^7
-																)) (3uW) RS
-																(3u)A(M)->(3s)(3t)RSl(s,t),
-																i.e. Un(-U) is provable.
-																This completes the proof of Lemma 1.
-																LEMMA 2. / / Un(-U) is provable, then S1 appears on the tape in some
-																complete configuration of M.
-																If we substitute any propositional functions for function variables in
-																a provable formula, we obtain a true proposition. In particular, if we
-																substitute the meanings tabulated on pp. 259-260 in Un(^U), we obtain a
-																true proposition with the meaning “ S1 appears somewhere on the tape in
-																some complete configuration of .M".
-																We are now in a position to show that the Entscheidungsproblem cannot
-																be solved. Let us suppose the contrary. Then there is a general
-																(mechanical) process for determining whether Un(.tl) is provable. By
-																Lemmas 1 and 2, this implies that there is a process for determining whether
-																.41 ever prints 0, and this is impossible, by §8. Hence the
-																Entscheidungsproblem cannot be solved.
-																In view of the large number of particular cases of solutions of the
-																Entscheidungsproblem for formulae with restricted systems of 𝔮uantors,
-																it
-																<hr>
-																is interesting to express Un(ii) in a form in which all 𝔮uantors are at
-																the
-																beginning. Un(At) is, in fact, expressible in the form
-																{u){3x){w){3u1)...{3un)%, (I)
-																where 95 contains no 𝔮uantors, and n = 6. By unimportant modifications
-																we can obtain a formula, with all essential properties of Un(.it), which is
-																of
-																form (I) with n = 5.
-																Added 28 August, 1936.
-																APPENDIX.
-																Computabiliiy and effective calculability
-																The theorem that all effectively calculable (A-definable) sequences are
-																computable and its converse are proved below in outline. It is assumed,
-																that the terms “well-formed formula “ (W.F.F.) and “conversion “ as used
-																by Church and Kleene are understood. In the second of these proofs the
-																existence of several formulae is assumed without proof; these formulae
-																may be constructed straightforwardly with the help of, e.g., the
-																results of Kleene in “A theory of positive integers in formal logic'”,
-																American Journal of Math., 57 (1935), 153-173, 219-244.
-																The W.F.F. representing an integer n will be denoted by Nn. We shall
-																say that a sequence y whose n-th figure is (f>y(n) is A-definable or
-																effectively
-																calculable if l-\-</>y(u) is a A-definable function of n, i.e. if there is a
-									W.F.F.
-									My such that, for all integers n,
-									i.e. {My} (Nn) is convertible into Xxy.x(x(y)) or into Xxy.x(y) according as
-									the n-th figure of A is 1 or 0.
-									To show that every A-definable sequence y is computable, we have to
-									show how to construct a machine to compute y. For use with machines it
-									is convenient to make a trivial modification in the calculus of conversion.
-									This alteration consists in using x, x', x”, ... as variables instead of
-									a, b, c, .... We now construct a machine JL which, when supplied with the
-									formula My, writes down the sequence y. The construction of X is somewhat similar to that
-									of
-									the machine K
-									which proves all provable formulae
-									of the functional calculus. We first construct a choice machine £-v which,
-									if supplied with a W.F.F., M say, and suitably manipulated, obtains any
-									formula into which M is convertible. £± can then be modified so as to
-									yield an automatic machine £-2 which obtains successively all the formulae
-									264 A. M. TURING [NOV. 12,
-									into which M is convertible (cf. foot-note p. 252). The machine £>
-									includes ^2
-									a s a Par^. The motion of the machine X when supplied
-									with the formula My is divided into sections of which the n-th. is
-									devoted to finding the n-th figure of y. The first stage in this n-th. section
-									is the formation of {My} {Nn). This formula is then supplied to the
-									machine £2, which converts it successively into various other formulae.
-									Each formula into which it is convertible eventually appears, and each, as
-									it is found, is compared with
-									and with Aa:|Aa;'[{a;}(a;')] |, i.e. Nv
-									If it is identical with the first of these, then the machine prints the figure 1
-									and the n-th section is finished. If it is identical with the second, then 0
-									is printed and the section is finished. If it is different from both, then the
-									work of .!!2 is resumed. By hypothesis, {My}(Nn) is convertible into one of
-									the formulae N2 or Nx; consequently the n-th section will eventually be
-									finished, i.e. the n-th. figure of y will eventually be written down.
-									To prove that every computable sequence y is A-defUiable, we must
-									show how to find a formula My such that, for all integers n,
-									{My}(Nn)c(mvN1+&lt;j)y{n). Let .11 be a machine which computes y and let us take some description of the complete configurations of -U by means of numbers, e.g. we may take the D.N of the complete configuration as described in §6. Let £(n) be the D.N of the w-th complete configuration of M. The table for the machine ..U gives us a relation between £(n-\-l) and £(n) of the form where py is a function of very restricted, although not usually very simple, form : it is determined by the table for. U. py is A-defmable (I omit the proof of this), i.e. there is a W.F.F. Ay such that, for all integers n, Let U stand for Xu[{{u}(Ay))(Nr)],
-									where r=£(0); then, for all integers n,
-									{Uy}(NJ conv N,{n).
-									1936.] ON COMPUTABLE NUMBERS.
-									It may be proved that there is a formula V such that
-									265
-									conv Nx if, in going from the n-th to the (n-\- l)-th
-									complete configuration, the figure 0 is
-									printed.
-									conv JV2 if the figure 1 is printed,
-									conv N3 otherwise.
-									Let Wy stand for
-									so that, for each integer n,
-									conv {Wy} (Nn),
-									and let Q be a formula such that
-									\{Q}(Wy)UNs) convNr(s),
-									where r(s) is the 5-th integer 𝔮 for which {Wy} (NQ) is convertible into either
-									N-L or JVa. Then, if j|f7 stands for
-									it will have the required property f.
-									The Graduate College,
-									Princeton University,
-									New Jersey, U.S.A.
-									<p>&dagger; In a complete proof of the &lambda;-definability of computable sequences it would be best to
-										modify this method by replacing the numerical description of the complete configurations
-										by a description which can be handled more easily with our apparatus. Let us choose
-										certain integers to represent the symbols and the <var>m</var>-configurations of the machine.
-										Suppose that in a certain complete configuration the numbers representing the successive
-										symbols on the tape are <var>s<sub>1</sub></var><var>s<sub>2</sub></var>&hellip;<var>s<sub>n</sub></var>, that the <var>m</var>-th symbol is scanned, and that the <var>m</var>-configuration has the number <var>t</var>; then we may represent this complete configuration by the formula</p>
-									<pre>[[N<sub>s<sub>1</sub></sub>, N<sub>s<sub>2</sub></sub>, &hellip;,N<sub>s<sub>m-1</sub></sub>], [N<sub>t</sub>, N<sub>s<sub>m</sub></sub>], [N<sub>s<sub>m+1</sub></sub>,&hellip;, N<sub>s<sub>n</sub></sub>]],</pre>
-									<p>where</p>
-									<pre>[a, b] stands for &lambda;u[{{u}{a}}(b)],</pre>
-									<pre>[a, b, c] stands for &lambda;u[{{u}(a)}(b)}(c)],</pre>
-									<p>etc.</p>
+		<p>I say that &alpha; is then a computable sequence: a machine &kscr;<sub>&alpha;</sub> to compute &alpha; can be obtained by a fairly simple modification of &Kscr;.</p>
+		<p>We divide the motion of &kscr;<sub>&alpha;</sub> into sections. The <var>n</var>-th section is devoted to finding the <var>n</var>-th figure of &alpha;. After the (<var>n</var>-1)-th section is finished a double colon :: is printed after all the symbols, and the succeeding work is done
+			wholly on the squares to the right of this double colon. The first step is to
+			write the letter “<var>A</var>” followed by the formula (<var>A</var><sub><var>n</var></sub>) and then “<var>B</var>” followed by (<var>B</var><sub><var>n</var></sub>). The machine &Kscr;<sub>&alpha;</sub> then starts to do the work of &Kscr;, but whenever a provable formula is found, this formula is compared with (<var>A</var><sub><var>n</var></sub>) and with (<var>B</var><sub><var>n</var></sub>). If it is the same formula as (<var>A</var><sub><var>n</var></sub>), then the figure “1” is printed, and the <var>n</var>-th. section is finished. If it is (<var>B</var><sub><var>n</var></sub>) then “0” is printed and the section is finished. If it is different from both, then the work of &Kscr; is continued from the point at which it had been abandoned. Sooner or later one ofthe formulae (<var>A</var><sub><var>n</var></sub>) or (<var>B</var><sub><var>n</var></sub>) is reached; this follows from our hypotheses about &alpha; and &Ufr;, and the known nature of &Kscr;. Hence the <var>n</var>-th section will eventually be finished. &kscr;<sub>&alpha;</sub> is circle-free; &alpha; is computable.</p>
+		<p>It can also be shown that the numbers &alpha; definable in this way by the use of axioms include all the computable numbers. This is done by describing computing machines in terms of the function calculus.</p>
+		<p>It must be remembered that we have attached rather a special meaning to the phrase “&Ufr; defines &alpha;”. The computable numbers do not include all. (in the ordinary sense) definable numbers. Let &delta; be a sequence whose <var>n</var>-th figure is 1 or 0 according as <var>n</var> is or is not satisfactory. It is an immediate consequence of the theorem of §8 that &delta; is not computable. It is (so far as we know at present) possible that any assigned number of figures of &delta; can be calculated, but not by a uniform process. When sufficiently many figures of &delta; have been calculated, an essentially new method is necessary in order to obtain more figures.</p>
+		<p>III. This may be regarded as a modification of I or as a corollary of II.</p>
+		<p>We suppose, as in I, that the computation is carried out on a tape; but we avoid introducing the “state of mind” by considering a more physical and definite counterpart of it. It is always possible for the computer to break off from his work, to go away and forget all about it, and later to come back and go on with it. If he does this he must leave a note of instructions (written in some standard form) explaining how the work is to be continued. This note is the counterpart of the “state of mind”. We will suppose that the computer works in such a desultory manner that he never does more than one step at a sitting. The note of instructions must enable him to carry out one step and write the next note. Thus the state of progress of the computation at any stage is completely determined by the note of instructions and the symbols on the tape. That is, the state of the system may be described by a single expression (sequence of symbols), consisting of the symbols on the tape followed by &Delta; (which we suppose not to appear elsewhere) and then by the note of instructions. This expression may be called the “state formula”. We know that the state formula at any given stage is determined by the state formula before the last step was made, and we assume that the relation of these two formulae is expressible in the functional calculus. In other words, we assume that there is an axiom &Ufr; which expresses the rules governing the behaviour of the computer, in terms of the relation of the state formula at any stage to the state formula at the preceding stage. If this is so, we can construct a machine to write down the successive state formulae, and hence to compute the required number.</p>
+		<p>10. Examples of large classes of numbers which are computable.</p>
+		<p>It will be useful to begin with definitions of a computable function of an integral variable and of a computable variable, etc. There are many equivalent ways of defining a computable function of an integral variable. The simplest is, possibly, as follows. If &gamma; is a computable sequence in which 0 appears infinitely&dagger; often, and <var>n</var> is an integer, then let us define &epsilon;(&gamma;, <var>n</var>) to be the number of figures 1 between the <var>n</var>-th and the (<var>n</var>+1)-th figure 0 in &gamma;. Then &fcy;(<var>n</var>) is computable if, for all <var>n</var> and some &gamma;, &fcy;(<var>n</var>) = &epsilon;(&gamma;, <var>n</var>). An equivalent definition is this. Let <var>H</var>(<var>x</var>, <var>y</var>) mean &fcy;(<var>x</var>)=<var>y</var>. Then, if we can find a contradiction-free axiom &Ufr;<sub>&fcy;</sub>, such that &Ufr;<sub>&fcy;</sub>&rarr;<var>P</var>, and if for each integer <var>n</var> there exists an integer <var>N</var>, such that</p>
+		<pre>&Ufr;<sub>&fcy;</sub> & <var>F</var><sup>(<var>N</var>)</sup> &rarr; <var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&fcy;(<var>n</var>))</sup>),</pre>
+		<p>and such that, if <var>m</var>&ne;&fcy;(<var>n</var>), then, for some <var>N</var>&prime;,</p>
+		<pre>&Ufr;<sub>&fcy;</sub> & <var>F</var><sup>(<var>N&prime;</var>)</sup> &rarr; (&mdash;<var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(<var>m</var>)</sup>),</pre>
+		<p>then &fcy; may be said to be a computable function.</p>
+		<p>We cannot define general computable functions of a real variable, since there is no general method of describing a real number, but we can define a computable function of a computable variable. If <var>n</var> is satisfactory, let &gamma;<sub><var>n</var></sub> be the number computed by &Mscr;(<var>n</var>), and let</p>
+		<!-- ! fix this pre -->
+		<pre></pre>
+		<aside>&dagger; If &Mscr; computes &gamma;, then the problem whether &Mscr; prints 0 infinitely often is of the same character as the problem whether &Mscr;, is circle-free.</aside>
+		<p>unless &gamma;<sub>n</sub>=0 or &gamma;<sub>n</sub>=1, in either of which cases &alpha;<sub>n</sub>=0. Then, as <var>n</var> runs through the satisfactory numbers, &alpha;<sub>n</sub> runs through the computable numbers&dagger;. Now let &fcy;(<var>n</var>) be a computable function which can be shown to be such that for any satisfactory argument its value is satisfactory &ddagger;. Then the function <var>f</var>, defined by <var>f</var>(&alpha;<sub><var>n</var></sub>)= &alpha;<sub>&fcy;(<var>n</var>)</sub>, is a computable function and all computable functions of a computable variable are expressible in this form.</p>
+		<p>Similar definitions may be given of computable functions of several variables, computable-valued functions of an integral variable, etc.</p>
+		<p>I shall enunciate a number of theorems about computability, but I shall prove only (ii) and a theorem similar to (iii).</p>
+		<ol>
+			<li>(i) A computable function of a computable function of an integral or computable variable is computable.</li>
+			<li>(ii) Any function of an integral variable defined recursively in terms of computable functions is computable. I.e. if &fcy;(<var>m</var>, <var>n</var>) is computable, and <var>r</var> is some integer, then &#414;(<var>n</var>) is computable, where</li>
+			<!-- ! FIX THIS PRE -->
+			<div>&#414;(0)=<var>r</var>,</div>
+			<div>&#414;(<var>n</var>)=&fcy;(<var>n</var>, &#414;(<var>n</var>-1)).</div>
+			<li>(iii) If &fcy;(<var>m</var>, <var>n</var>) is a computable function of two integral variables, then &fcy;(<var>n</var>, <var>n</var>) is a computable function of <var>n</var>.</li>
+			<li>
+				<p>(iv) If &fcy;(<var>n</var>) is a computable function whose value is always 0 or 1, then the sequence whose <var>n</var>-th figure is &fcy;(<var>n</var>) is computable.</p>
+				<p>Dedekind's theorem does not hold in the ordinary form if we replace “real” throughout by “computable”. But it holds in the following form:</p>
+			</li>
+			<li>(v) If <var>G</var>(&alpha;) is a propositional function of the computable numbers and</li>
+		</ol>
+		<div>(a) (&exist;&alpha;)(&exist;&beta;){<var>G</var>(&alpha;) & (&mdash;<var>G</var>(&beta;))},</div>
+		<div>(6) <var>G</var>(&alpha;) & (&mdash;<var>G</var>(&beta;))&rarr;(&alpha;&lt;&beta;),</div>
+		<p>and there is a general process for determining the truth value of <var>G</var>(&alpha;), then</p>
+		<hr>
+		<aside>
+			<p>&dagger; A function an may be defined in many other ways so as to run through the computable numbers.</p>
+			<p>&ddagger; Although it is not possible to find a general process for determining whether a given number is satisfactory, it is often possible to show that certain classes of numbers are satisfactory.</p>
+		</aside>
+		<p>there is a computable number <var>&epsilon;</var> such that</p>
+		<div><var>G</var>(&alpha;)&rarr;&alpha;&leq;&epsilon;,</div>
+		<div>&mdash;<var>G</var>(&alpha;)&rarr;&alpha;&geq;&epsilon;,</div>
+		<p>In other words, the theorem holds for any section of the computables such that there is a general process for determining to which class a given number belongs.</p>
+		<p>Owing to this restriction of Dedekind's theorem, we cannot say that a computable bounded increasing sequence of computable numbers has a computable limit. This may possibly be understood by considering a sequence such as</p>
+		<div>&ndash;1, &ndash;1&frasl;2, &ndash;1&frasl;4, &ndash;1&frasl;8, &ndash;1&frasl;16, 1&frasl;2, &hellip;.</div>
+		<p>On the other hand, (v) enables us to prove</p>
+		<p>(vi) If &alpha; and &beta; are computable and &alpha; &lt; &beta; and &fcy;(&alpha;) &lt; 0 &lt; &fcy;(&beta;), where &fcy;(&alpha;) is a computable increasing continuous function, then there is a unique computable number &gamma;, satisfying &alpha; &lt; &gamma; &lt; &beta; and &fcy;(&gamma;) = 0.</p>
+		<h3>Computable convergence.</h3>
+		<p>We shall say that a sequence &beta;<sub><var>n</var></sub> of computable numbers <em>converges computably</em> if there is a computable integral valued function <var>N</var>(&epsilon;) of the computable variable &epsilon;, such that we can show that, if &epsilon; &gt; 0 and <var>n</var> &gt; <var>N</var>(&epsilon;) and <var>m</var> &gt; <var>N</var>(&epsilon;), then |&beta;<sub><var>n</var></sub>&ndash;&beta;<sub><var>m</var></sub>|&lt;&epsilon;.</p>
+		<p>We can then show that</p>
+		<p>(vii) A power series whose coefficients form a computable sequence of computable numbers is computably convergent at all computable points in the interior of its interval of convergence.</p>
+		<p>(viii) The limit of a computably convergent sequence is computable. And with the obvious definition of “uniformly computably convergent”:</p>
+		<p>(ix) The limit of a uniformly computably convergent computable sequence of computable functions is a computable function. Hence</p>
+		<p>(x) The sum of a power series whose coefficients form a computable sequence is a computable function in the interior of its interval of convergence.</p>
+		<p>From (viii) and &pi;=4(1&ndash;1&frasl;3+1&frasl;5&ndash;&hellip;) we deduce that &pi; is computable.</p>
+		<p>From <var>e</var>=1+1+1&frasl;2!+1&frasl;3!&hellip; we deduce that <var>e</var> is computable.</p>
+		<p>From (vi) we deduce that all real algebraic numbers are computable.</p>
+		<p>From (vi) and (x) we deduce that the real zeros of the Bessel functions are computable.</p>
+		<h2>Proof of (ii).</h2>
+		<p>Let <var>H</var>(<var>x</var>, <var>y</var>) mean “&#414;(<var>x</var>)=<var>y</var>”, and let <var>K</var>(<var>x</var>, <var>y</var>, <var>z</var>) mean “&fcy;(<var>x</var>, <var>y</var>)=<var>z</var>”. &Ufr;<sub>&fcy;</sub> is the axiom for &fcy;(<var>x</var>, <var>y</var>). We take &Ufr;<sub>&#414;</sub>, to be</p>
+		<div>
+			&Ufr;<sub>&fcy;</sub>&<var>P</var>&(<var>F</var>(<var>x</var>, <var>y</var>)&rarr;<var>G</var>(<var>x</var>, <var>y</var>))&(<var>G</var>(<var>x</var>, <var>y</var>) & <var>G</var>(<var>y</var>, <var>z</var>)&rarr;<var>G</var>(<var>x</var>, <var>z</var>))
+			&(<var>F</var><sup><var>r</var></sup>)&rarr; <var>H</var>(<var>u</var>, <var>u</var><sup><var>r</var></sup>)) &(<var>F</var>(<var>v</var>, <var>w</var>) & <var>H</var>(<var>v</var>, <var>x</var>) & <var>K</var>(<var>w</var>, <var>x</var>, <var>z</var>) &rarr; <var>H</var>(<var>w</var>, <var>z</var>))
+			&[<var>H</var>(<var>w</var>, <var>z</var>) & <var>G</var>(<var>z</var>, <var>t</var>) v <var>G</var>(<var>t</var>, <var>z</var>) &rarr;(&ndash;<var>H</var>(<var>w</var>, <var>t</var>))].</div>
+		<p>I shall not give the proof of consistency of &Ufr;<sub>&#414;</sub>. Such a proof may be constructed by the methods used in Hilbert and Bernays, <em>Grundlagen der Mathematik</em> (Berlin, 1934), p. 209 <em>et seq</em>. The consistency is also clear from the meaning.</p>
+		<p>Suppose that, for some <var>n</var>, <var>N</var>, we have shown</p>
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>N</var>)</sup> &rarr; <var>H</var>(<var>u</var><sup>(<var>n</var>-1)</sup>, <var>u</var><sup>(&#414;(<var>n-1</var>))</sup>),</div>
+		<p>then, for some <var>M</var>,</p>
+		<div>&Ufr;<sub>&fcy;</sub> & <var>F</var><sup>(<var>M</var>)</sup> &rarr; <var>K</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>-1))</sup>, <var>u</var><sup>&#414;(<var>n</var>))</sup>),</div>
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>)</sup> &rarr; <var>F</var>(<var>u</var><sup>(<var>n</var>-1)</sup>, <var>u</var><sup>(<var>n-1</var>)</sup>) & <var>H</var>(<var>u</var><sup>(<var>n</var>-1)</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>)</div>
+		<div>& <var>K</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>-1))</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>),</div>
+		<p>and</p>
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>)</sup> &rarr; [<var>F</var>(<var>u</var><sup>(<var>n</var>-1)</sup>, <var>u</var><sup>(<var>n</var>)</sup>) & <var>H</var>(<var>u</var><sup>(<var>n</var>-1)</sup>, <var>u</var><sup>(&#414;(<var>n</var>-1))</sup>)</div>
+		<div>& <var>K</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>-1))</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>) &rarr; <var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>)].</div>
+		<p>Hence
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>)</sup> &rarr; <var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>).</div>
+		</p>
+		<p>Also
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>r</var>)</sup> &rarr; <var>H</var>(<var>u</var>, <var>u</var><sup>(&#414;(0))</sup>).</div>
+		</p>
+		<p>Hence for each <var>n</var> some formula of the form</p>
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>)</sup> &rarr; <var>H</var>(<var>u</var><sup><var>n</var></sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>)</div>
+		<p>is provable. Also, if <var>M</var>&prime;&geq;<var>M</var> and <var>M</var>&prime;&geq;<var>m</var> and <var>m</var>&ne;&#414;(<var>u</var>), then</p>
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>&prime;)</sup> &rarr; <var>G</var>(<var>u</var><sup>&#414;((<var>n</var>))</sup>, <var>u</var><sup>(<var>m</var>)</sup>) &nu; <var>G</var>(<var>u</var><sup>(<var>m</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>)</div>
+		<p>and</p>
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>&prime;)</sup> &rarr; [{<var>G</var>(<var>u</var><sup>(&#414;(<var>n</var>))</sup>, <var>u</var><sup>(<var>m</var>)</sup>) &nu; <var>G</var>(<var>u</var><sup>(<var>m</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>)</sup>)</div>
+		<div>& <var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&#414;(<var>n</var>))</sup>} &rarr; (&ndash;<var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(<var>n</var>)</sup>))].</div>
+		<p>Hence
+		<div>&Ufr;<sub>&#414;</sub> & <var>F</var><sup>(<var>M</var>&prime;)</sup> &rarr; (&ndash;<var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(<var>n</var>)</sup>))</div>
+		<p>The conditions of our second definition of a computable function are therefore satisfied. Consequently &#414; is a computable function.</p>
+		<h3>Proof of a modified form of (iii).</h3>
+		<p>Suppose that we are given a machine &Nscr;, which, starting with a tape bearing on it &#601; &#601; followed by a sequence of any number of letters “<var>F</var>” on <var>F</var>-squares and in the <var>m</var>-configuration <var>b</var>, will compute a sequence &gamma;<sub><var>n</var></sub> depending on the number <var>n</var> of letters “<var>F</var>”. If &fcy;<sub><var>n</var></sub>(<var>m</var>) is the <var>m</var>-th figure of &gamma;<sub><var>n</var></sub>, then the sequence &beta; whose <var>n</var>-th figure is &fcy;<sub><var>n</var></sub>(<var>n</var>) is computable.</p>
+		<p>We suppose that the table for &Nscr; has been written out in such a way that in each line only one operation appears in the operations column. We also suppose that &Xi;, &Theta;, <span style="text-decoration:overline;">0</span>, and <span style="text-decoration:overline;">1</span> do not occur in the table, and we replace &#601; throughout by &Theta;, 0 by <span style="text-decoration:overline;">0</span>, and 1 by <span style="text-decoration:overline;">1</span>. Further substitutions are then made. Any line of form</p>
+		<div>&Ufr; &alpha; <var>P</var><span style="text-decoration:overline;">0</span> &Bfr;</div>
+		<p>we replace by</p>
+		<div>&Ufr; &alpha; <var>P</var><span style="text-decoration:overline;">0</span> &rfr;&efr;(&Bfr;, &ufr;, <var>h</var>, <var>k</var>)</div>
+		<p>and any line of the form</p>
+		<div>&Ufr; &alpha; <var>P</var><span style="text-decoration:overline;">1</span> &Bfr;</div>
+		<p>by
+		<div>&Ufr; &alpha; <var>P</var><span style="text-decoration:overline;">1</span> &rfr;&efr;(&Bfr;, &ufr;, <var>h</var>, <var>k</var>)</div>
+		</p>
+		<p>and we add to the table the following lines</p>
+		<div>&ufr; &pfr;&efr;(&ufr;<sub>1</sub>, 0)</div>
+		<div>&ufr;<sub>1</sub> <var>R, Pk, R, P&Theta;, R, P&Theta;</var> &ufr;<sub>2</sub></div>
+		<div>&ufr;<sub>2</sub> &rfr;&efr;(&ufr;<sub>3</sub>, &ufr;<sub>3</sub>, <var>k</var>, <var>h</var>)</div>
+		<div>&ufr;<sub>3</sub> &pfr;&efr;(&ufr;<sub>2</sub>, <var>F</var>)</div>
+		<p>and similar lines with &ofr; for &ufr; and 1 for 0 together with the following line</p>
+		<div>&cfr; <var>R, P&Xi;, R, Ph</var> &bfr;</div>
+		<p>We then have the table for the machine &Nscr;&prime; which computes &beta;. The initial <var>m</var>-configuration is &cfr;, and the initial scanned symbol is the second &#601;.</p>
+		<h2>11. Application to the Entscheidungsproblem.</h2>
+		<p>The results of §8 have some important applications. In particular, they can be used to show that the Hilbert Entscheidungsproblem can have no solution. For the present I shall confine myself to proving this particular theorem. For the formulation of this problem I must refer the reader to Hilbert and Ackermann's <em>Grundzüge der Theoretischen Logik</em> (Berlin, 1931), chapter 3.</p>
+		<p>I propose, therefore, to show that there can be no general process for determining whether a given formula &Ufr; of the functional calculus <strong>K</strong> is provable, i.e. that there can be no machine which, supplied with any one &Ufr; of these formulae, will eventually say whether &Ufr; is provable.</p>
+		<p>It should perhaps be remarked that what I shall prove is 𝔮uite different from the well-known results of Gödel&dagger;. Gödel has shown that (in the formalism of Principia Mathematica) there are propositions &Ufr; such that neither &Ufr; nor &ndash; &Ufr; is provable. As a consequence of this, it is shown that no proof of consistency of Principia Mathematica (or of <strong>K</strong>) can be given within that formalism. On the other hand, I shall show that there is no general method which tells whether a given formula &Ufr; is provable in <strong>K</strong>, or, what comes to the same, whether the system consisting of <strong>K</strong> with &ndash;&Ufr; adjoined as an extra axiom is consistent.</p>
+		<p>If the negation of what Gödel has shown had been proved, i.e. if, for each &Ufr;, either &Ufr; or &ndash;&Ufr; is provable, then we should have an immediate solution of the Entscheidungsproblem. For we can invent a machine &Kscr; which will prove consecutively all provable formulae. Sooner or later &Kscr; will reach either &Ufr; or &ndash;&Ufr;. If it reaches &Ufr;, then we know that &Uscr; is provable. If it reaches &ndash;&Ufr;, then, since <strong>K</strong> is consistent (Hilbert and Ackermann, p. 65), we know that &Ufr; is not provable.</p>
+		<p>Owing to the absence of integers in <strong>K</strong> the proofs appear somewhat lengthy. The underlying ideas are 𝔮uite straightforward.</p>
+		<p>Corresponding to each computing machine &Mscr; we construct a formula Un(&Mscr;) and we show that, if there is a general method for determining whether Un(&Mscr;) is provable, then there is a general method for determining whether &Mscr; ever prints 0.</p>
+		<p>The interpretations of the propositional functions involved are as follows:</p>
+		<p><var>R</var><sub>s1</sub>(<var>x</var>, <var>y</var>) to be interpreted as “in the complete configuration <var>x</var> (of &Mscr;) the symbol on the square <var>y</var> is <var>S</var>”.</p>
+		<hr>
+		<aside>&dagger; Loc. cit.</aside>
+		<p><var>I</var>(<var>x</var>, <var>y</var>) is to be interpreted as “in the complete configuration <var>x</var> the square <var>y</var> is scanned”.</p>
+		<p><var>K</var><sub>qm</sub>(<var>x</var>) is to be interpreted as “in the complete configuration <var>x</var> the <var>m</var>-configuration is <var>q</var><sub>m</sub>.</p>
+		<p><var>F</var>(<var>x</var>, <var>y</var>) is to be interpreted as “<var>y</var> is the immediate successor of <var>x</var>”.</p>
+		<p>Inst{<var>q</var><sub>i</sub><var>S</var><sub>j</sub><var>S</var><sub>k</sub><var>Lq</var><sub>l</sub>} is to be an abbreviation for</p>
+		<div>(<var>x</var>, <var>y</var>, <var>x</var>&prime;, <var>y</var>&prime;) { (<var>R</var><sub>S<sub>j</sub></sub>(<var>x</var>, <var>y</var>) & <var>I</var>(<var>x</var>, <var>y</var>) & <var>K</var><sub>q<sub>i</sub></sub>(<var>x</var>) & <var>F</var>(<var>x</var>, <var>x</var>&prime;) & <var>F</var>(<var>y</var>&prime;, <var>y</var>))</div>
+		<div>&rarr;(<var>I</var>(<var>x</var>&prime;, <var>y</var>&prime;) & <var>R</var><sub>S<sub>k</sub></sub>(<var>x</var>&prime;, <var>y</var>) & <var>K</var><sub>q<sub>l</sub></sub>(<var>x</var>&prime;)</div>
+		<div>& (<var>z</var>) [<var>F</var>(<var>y</var>&prime;, <var>z</var>) v (<var>R</var><sub>S<sub>j</sub></sub>(<var>x</var>&prime;, <var>z</var>))])}; </div>
+		<div>Inst {<var>q</var><sub>i</sub><var>S</var><sub>j</sub><var>S</var><sub>k</sub><var>Rq</var><sub>l</sub>} and Inst {<var>q</var><sub>i</sub><var>S</var><sub>j</sub><var>S</var><sub>k</sub><var>Nq</var><sub>l</sub>}</div>
+		<p>are to be abbreviations for other similarly constructed expressions.</p>
+		<p>Let us put the description of &Mscr; into the first standard form of §6. This description consists of a number of expressions such as <var>q</var><sub>i</sub><var>S</var><sub>j</sub><var>S</var><sub>k</sub><var>Lq</var><sub>l</sub>” (or with <var>R</var> or <var>N</var> substituted for <var>L</var>). Let us form all the corresponding expressions such as Inst {<var>q</var><sub>i</sub><var>S</var><sub>j</sub><var>S</var><sub>k</sub><var>Lq</var><sub>l</sub>} and take their logical sum. This we call Des(&Mscr;).</p>
+		<p>The formula Un(&Mscr;) is to be</p>
+		<div>
+			(&exist;<var>u</var>)[<var>N</var>(<var>u</var>) & (<var>x</var>)(<var>N</var>(<var>x</var>) &rarr; (&exist;<var>x</var>&prime;) <var>F</var>(<var>x</var>, <var>x</var>&prime;))</div>
+		<div>& (<var>y</var>, <var>z</var>)(<var>F</var>(<var>y</var>, <var>z</var>) &rarr; <var>N</var>(<var>y</var>) & <var>N</var>(<var>z</var>)) & (<var>y</var>) <var>R</var><sub>S<sub>o</sub></sub>(<var>u</var>, <var>y</var>)</div>
+		<div>& <var>U</var>(<var>u</var>, <var>u</var>) & <var>K</var><sub>q<sub>l</sub></sub>(<var>u</var>) & Des(&Mscr;)]</div>
+		<div>&rarr;(&exist;<var>s</var>)(&exist;<var>t</var>)[<var>N</var>(<var>s</var>) & <var>N</var>(<var>t</var>) & <var>R</var><sub>S<sub>l</sub></sub>(<var>s</var>, <var>t</var>)].</div>
+		<div><var>N</var>(<var>u</var>) & &hellip; & Des(&Mscr;)] may be abbreviated to <var>A</var>(&Mscr;)</div>
+		<p>When we substitute the meanings suggested on p. 259-60 we find that Un(&Mscr;) has the interpretation “in some complete configuration of &Mscr;, <var>S</var><sub>1</sub> (i.e. 0) appears on the tape”. Corresponding to this I prove that</p>
+		<p>(a) If <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;, then Un(&Mscr;) is provable.</p>
+		<p>(b) If Un(&Mscr;) is provable, then <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;.</p>
+		<p>When this has been done, the remainder of the theorem is trivial.</p>
+		<hr>
+		<p>LEMMA 1. <em>If <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;, then Un(&Mscr;) is provable.</em></p>
+		<p>We have to show how to prove Un(&Mscr;). Let us suppose that in the <var>n</var>-th complete configuration the sequence of symbols on the tape is <var>S</var><sub>r(n,0)</sub>,<var>S</var><sub>r(n,1)</sub>, &hellip;, <var>S</var><sub>r(n,n)</sub>, followed by nothing but blanks, and that the scanned symbol is the <var>i</var>(<var>n</var>)-th, and that the <var>m</var>-configuration is <var>q</var><sub>k(n)</sub>. Then we may form the proposition </p>
+		<!-- ! FIX THIS FORMULA -->
+		<p>which we may abbreviate to <var>CC</var><sub>n</sub>.</p>
+		<p>As before, <var>F</var>(<var>u</var>, <var>u</var>&prime;) & <var>F</var>(<var>u</var>&prime;, <var>u</var>&prime;&prime;) & &hellip; & <var>F</var>(<var>u</var><sup>(r-1)</sup>, <var>u</var><sup>(r)</sup>) is abbreviated to <var>F</var><sup>(r)</sup>.</p>
+		<p>I shall show that all formulae of the form <var>A</var>(&Mscr;) & <var>F</var><sup>(n)</sup> &rarr; <var>CC</var><sub>n</sub> (abbreviated to <var>CF</var><sub>n</sub>) are provable. The meaning of <var>CF</var><sub>n</sub> is “The <var>n</var>-th complete configuration of &Mscr; is so and so” , where “so and so” stands for the actual <var>n</var>-th complete configuration of it. That <var>CF</var><sub>n</sub> should be provable is therefore to be expected.</p>
+		<p><var>CF</var><sub>0</sub> is certainly provable, for in the complete configuration the symbols are all blanks, the <var>m</var>-configuration is <var>q</var><sub>1</sub>, and the scanned square is <var>u</var>, i.e. <var>CC</var><sub>0</sub> is</p>
+		<div>(<var>y</var>) <var>R</var><sub>S<sub>0</sub></sub>(<var>u</var>, <var>y</var>) & <var>I</var>(<var>u</var>, <var>u</var>) & <var>K</var><sub>q1</sub>(u).</div>
+		<p><var>A</var>(&Mscr;) &rarr; <var>CC</var><sub>0</sub> is then trivial.</p>
+		<p>We next show that <var>CF</var><sub>n</sub> &rarr; <var>CF</var><sub>n+1</sub> is provable for each <var>n</var>. There are three cases to consider, according as in the move from the <var>n</var>-th to the (<var>n</var>+l)-th configuration the machine moves to left or to right or remains stationary. We suppose that the first case applies, i.e. the machine moves to the left. A similar argument applies in the other cases. If <var>r</var>(<var>n</var>,<var>i</var>(<var>n</var>))=&alpha;, <var>r</var>(<var>n</var>+1, <var>i</var>(<var>n</var>+1))=c, <var>k</var>(<var>i</var>(<var>n</var>))=b, and <var>k</var>(<var>i</var>(<var>n</var>+1))=d, then Des(&Mscr;) must include Inst {<var>q</var><sub>a</sub><var>S</var><sub>b</sub><var>S</var><sub>d</sub><var>Lq</var><sub>c</sub>} as one of its terms, i.e.</p>
+		<div>Des(&Mscr;) &rarr; Inst {<var>q</var><sub>a</sub><var>S</var><sub>b</sub><var>S</var><sub>d</sub><var>Lq</var><sub>c</sub>}.</div>
+		<p>Hence
+		<div><var>A</var>(&Mscr;) & <var>F</var><sup>(n+1)</sup> &rarr; Inst {<var>q</var><sub>a</sub><var>S</var><sub>b</sub><var>S</var><sub>d</sub><var>Lq</var><sub>c</sub>} & <var>F</var><sup>(n+1)</sup>.</div>
+		</p>
+		<p>But
+		<div>Inst {<var>q</var><sub>a</sub><var>S</var><sub>b</sub><var>S</var><sub>d</sub><var>Lq</var><sub>c</sub>} & <var>F</var><sup>(n+1)</sup> &rarr; (<var>CC</var><sub>n</sub> &rarr; <var>CC</var><sub>n+1</sub>)</div>
+		</p>
+		<p>is provable, and so therefore is</p>
+		<div><var>A</var>(&Mscr;) & <var>F</var><sup>(n+1)</sup> &rarr; (<var>CC</var><sub>n</sub> &rarr; <var>CC</var><sub>n+1</sub>)</div>
+		<p>and
+		<div>(<var>A</var>(&Mscr;) &<var>F</var><sup>(n)</sup> &rarr; <var>CC</var><sub>n</sub>) &rarr; (<var>A</var>(&Mscr;) & <var>F</var><sup>(n+1)</sup> &rarr; <var>CC</var><sub>n+1</sub>),</div>
+		</p>
+		<p>i.e.
+		<div><var>CF</var><sub>n</sub> &rarr; <var>CF</var><sub>n+1</sub></div>
+		</p>
+		<p><var>CF</var><sub>n</sub>is provable for each <var>n</var>. Now it is the assumption of this lemma that <var>S</var><sub>1</sub> appears somewhere, in some complete configuration, in the sequence of symbols printed by &Mscr;; that is, for some integers <var>N</var>, <var>K</var>, <var>CC</var><sub>N</sub> has <var>R</var><sub>S<sub>l</sub></sub>(<var>u</var><sup>(<var>N</var>)</sup>, <var>u</var><sup>(<var>K</var>)</sup>) as one of its terms, and therefore <var>CC</var><sub>N</sub> &rarr;<var>R</var><sub>S<sub>l</sub></sub>(<var>u</var><sup>(<var>N</var>)</sup>, <var>u</var><sup>(<var>K</var>)</sup>) is provable. We have then</p>
+		<div><var>CC</var><sub>N</sub> &rarr;<var>R</var><sub>S<sub>l</sub></sub>(<var>u</var><sup>(<var>N</var>)</sup>, <var>u</var><sup>(<var>K</var>)</sup>)</div>
+		<p>and
+		<div><var>A</var>(&Mscr;) & <var>F</var><sup>(N)</sup> &rarr; <var>CC</var><sup>N</sup>.</div>
+		</p>
+		<p>We also have</p>
+		<div>(&exist;<var>u</var>) <var>A</var>(&Mscr;) &rarr; (&exist;<var>u</var>)(&exist;<var>u</var>&prime;) &hellip; (&exist;<var>u</var> <sup>(N&prime;)</sup>)(<var>A</var>(&Mscr;) & <var>F</var><sup>(N)</sup>),</div>
+		<p>where <var>N</var>&prime = max(<var>N</var>, <var>K</var>). And so</p>
+		<div>(&exist;<var>u</var>) <var>A</var>(&Mscr;) &rarr; (&exist;<var>u</var>)(&exist;<var>u</var>&prime;) &hellip; (&exist;<var>u</var> <sup>(N&prime;)</sup>)<var>R</var><sub>S<sub>1</sub></sub>(<var>u</var><sup>(N)</sup>, <var>u</var><sup>(K)</sup>),</div>
+		<div>(&exist;<var>u</var>) <var>A</var>(&Mscr;) &rarr; (&exist;<var>u</var><sup>(N)</sup>)(&exist;<var>u</var><sup>(K)</sup>)<var>R</var><sub>S<sub>1</sub></sub>(<var>u</var><sup>(N)</sup>, <var>u</var><sup>(K)</sup>),</div>
+		<div>(&exist;<var>u</var>) <var>A</var>(&Mscr;) &rarr; (&exist;<var>s</var>)(&exist;<var>t</var>)<var>R</var><sub>S<sub>1</sub></sub>(<var>s</var>, <var>t</var>),</div>
+		<p>i.e. Un(&Mscr;) is provable.</p>
+		<p>This completes the proof of Lemma 1.</p>
+		<p>LEMMA 2. <em>If Un(&Mscr;) is provable, then <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;.</em></p>
+		<p>If we substitute any propositional functions for function variables in a provable formula, we obtain a true proposition. In particular, if we substitute the meanings tabulated on pp. 259-260 in Un(&Mscr;), we obtain a true proposition with the meaning “<var>S</var><sub>1</sub> appears somewhere on the tape in some complete configuration of &Mscr;”.</p>
+		<p>We are now in a position to show that the Entscheidungsproblem cannot be solved. Let us suppose the contrary. Then there is a general (mechanical) process for determining whether Un(&Mscr;) is provable. By Lemmas 1 and 2, this implies that there is a process for determining whether &Mscr; ever prints 0, and this is impossible, by §8. Hence the Entscheidungsproblem cannot be solved.</p>
+		<p>In view of the large number of particular cases of solutions of the Entscheidungsproblem for formulae with restricted systems of quantors, it</p>
+		<hr>
+		<p>is interesting to express Un(&Mscr;) in a form in which all quantors are at the beginning. Un(&Mscr;) is, in fact, expressible in the form</p>
+		<div>(<var>u</var>)(&exist;<var>x</var>)(<var>w</var>)(&exist;<var>u</var><sub>1</sub>) &hellip; (&exist;<var>u</var><sub>n</sub>)&Bfr;, (I)</div>
+		<p>where &Bfr; contains no quantors, and <var>n</var>=6. By unimportant modifications we can obtain a formula, with all essential properties of Un(&Mscr;), which is of form (I) with <var>n</var>=5.</p>
+		<p>Added 28 August, 1936.</p>
+		<h1>APPENDIX.</h1>
+		<h2>Computabiliiy and effective calculability</h2>
+		<p>The theorem that all effectively calculable (&lambda;-definable) sequences are computable and its converse are proved below in outline. It is assumed, that the terms “well-formed formula” (W.F.F.) and “conversion” as used by Church and Kleene are understood. In the second of these proofs the existence of several formulae is assumed without proof; these formulae may be constructed straightforwardly with the help of, e.g., the results of Kleene in “A theory of positive integers in formal logic”, <em>American Journal of Math.</em>, 57 (1935), 153-173, 219-244.</p>
+		<p>The W.F.F. representing an integer <var>n</var> will be denoted by <var>N</var><sub>n</sub>. We shall say that a sequence &gamma; whose <var>n</var>-th figure is &fcy;<sub>&gamma;</sub>(<var>n</var>) is &lambda;-definable or effectively calculable if 1+&fcy;<sub>&gamma;</sub>(<var>n</var>) is a &lambda;-definable function of <var>n</var>, i.e. if there is a W.F.F. <var>M</var><sub>&gamma;</sub> such that, for all integers <var>n</var>,</p>
+		<div>{<var>M</var><sub>&gamma;</sub>}{<var>N</var><sub>&gamma;</sub>} conv <var>N</var><sub>&fcy;<sub>&gamma;</sub>(<var>n</var>)+1</sub>,</div>
+		<p>i.e.{<var>M</var><sub>&gamma;</sub>}{<var>N</var><sub>&gamma;</sub>} is convertible into &lambda;<var>xy.x</var>(<var>x</var>(<var>y</var>)) or into &lambda;<var>xy.x</var>(<var>y</var>) according as the <var>n</var>-th figure of &lambda; is 1 or 0.</p>
+		<p>To show that every &lambda;-definable sequence &gamma; is computable, we have to show how to construct a machine to compute &gamma;. For use with machines it is convenient to make a trivial modification in the calculus of conversion. This alteration consists in using <var>x</var>, <var>x</var>&prime;, <var>x</var>&prime;&prime;, &hellip; as variables instead of <var>a</var>, <var>b</var>, <var>c</var>, &hellip;. We now construct a machine &Lscr; which, when supplied with the formula <var>M</var><sub>&gamma;</sub>, writes down the sequence &gamma;. The construction of &Lscr; is somewhat similar to that of the machine &Kscr; which proves all provable formulae of the functional calculus. We first construct a choice machine &Lscr;<sub>1</sub> which, if supplied with a W.F.F., <var>M</var> say, and suitably manipulated, obtains any formula into which <var>M</var> is convertible. &Lscr;<sub>1</sub> can then be modified so as to yield an automatic machine &Lscr;<sub>2</sub> which obtains successively all the formulae into which <var>M</var> is convertible (cf. foot-note p. 252). The machine &Lscr; includes &Lscr;<sub>2</sub> as a part. The motion of the machine &Lscr; when supplied with the formula <var>M</var><sub>&gamma;</sub> is divided into sections of which the <var>n</var>-th is devoted to finding the <var>n</var>-th figure of &gamma;. The first stage in this <var>n</var>-th section is the formation of {<var>M</var><sub>&gamma;</sub>}(<var>N</var><sub>n</sub>). This formula is then supplied to the machine &Lscr;<sub>2</sub>, which converts it successively into various other formulae. Each formula into which it is convertible eventually appears, and each, as it is found, is compared with</p>
+		<div>&lambda;<var>x</var>[&lambda;<var>x</var>&prime;[{<var>x</var>}({<var>x</var>}(<var>x</var>&prime;))]], i.e. <var>N</var><sub>2</sub>,</div>
+		<p>and with
+		<div>&lambda;<var>x</var>[&lambda;<var>x</var>&prime;[{<var>x</var>}(<var>x</var>&prime;)]], i.e. <var>N</var><sub>1</sub></div>
+		</p>
+		<p>If it is identical with the first of these, then the machine prints the figure 1 and the <var>n</var>-th section is finished. If it is identical with the second, then 0 is printed and the section is finished. If it is different from both, then the work of &Lscr;<sub>2</sub> is resumed. By hypothesis, {<var>M</var><sub>&gamma;</sub>}(<var>N</var><sub>n</sub>) is convertible into one of the formulae <var>N</var><sub>2</sub> or <var>N</var><sub>1</sub>; consequently the <var>n</var>-th section will eventually be finished, i.e. the <var>n</var>-th figure of &gamma; will eventually be written down.</p>
+		<p>To prove that every computable sequence &gamma; is &lambda;-definable, we must show how to find a formula <var>M</var><sub>&gamma;</sub> such that, for all integers <var>n</var>,</p>
+		<div>{<var>M</var><sub>&gamma;</sub>}(<var>N</var><sub>n</sub>) conv <var>N</var><sub>1+&fcy;<sub>&gamma;</sub>(<var>n</var>)</sub></div>
+		<p>Let &Mscr; be a machine which computes &gamma; and let us take some description of the complete configurations of &Mscr; by means of numbers, e.g. we may take the D.N of the complete configuration as described in §6. Let &epsilon;(<var>n</var>) be the D.N of the <var>n</var>-th complete configuration of &Mscr;. The table for the machine &Mscr; gives us a relation between &epsilon;(<var>n</var>+1) and &epsilon;(<var>b</var>) of the form</p>
+		<div>&epsilon;(<var>n</var>+1)=&rho;<sub>&gamma;</sub>(&epsilon;(<var>n</var>)),</div>
+		<p>where &rho;<sub>&gamma;</sub> is a function of very restricted, although not usually very simple, form: it is determined by the table for &Mscr;. &rho;<sub>&gamma;</sub> is &lambda;-definable (I omit the proof of this), i.e. there is a W.F.F. <var>A</var><sub>&gamma;</sub> such that, for all integers <var>n</var>,</p>
+		<div>{<var>A</var><sub>&gamma;</sub>} (<var>N</var><sub>&epsilon;(<var>n</var>)</sub>).</div>
+		<p>Let <var>U</var> stand for</p>
+		<div>&lambda;<var>u</var>[{{<var>u</var>}(<var>A</var><sub>&gamma;</sub>)}(<var>N</var><sub>r</sub>)],</div>
+		<p>where <var>r</var>=&epsilon;(0); then, for all integers <var>n</var>,</p>
+		<div>{<var>U</var><sub>&gamma;</sub>}(<var>N</var><sub>n</sub>) conv <var>N</var><sub>&epsilon;(<var>n</var>)</sub>.</div>
+		<p>It may be proved that there is a formula <var>V</var> such that</p>
+		<!-- ! FIX FORMULA -->
+		<div>
+			conv Nx if, in going from the <var>n</var>-th to the (n-\- l)-th
+			complete configuration, the figure 0 is
+			printed.
+			conv JV2 if the figure 1 is printed,
+			conv N3 otherwise.
+		</div>
+		<p>Let <var>W</var><sub>&gamma;</sub> stand for</p>
+		<div>&lambda;<var>u</var>[{{<var>V</var>}({<var>A</var><sub>&gamma;</sub>}({<var>U</var><sub>&gamma;</sub>}(<var>u</var>)))}({<var>U</var><sub>&gamma;</sub>}(<var>u</var>))].</div>
+		<p>so that, for each integer <var>n</var>,</p>
+		<div>{{<var>V</var>}(<var>N</var><sub>&epsilon;(<var>n</var>+1)</sub>)}(<var>N</var><sub>&epsilon;(<var>n</var>+1)</sub>) conv {<var>W</var><sub>&gamma;</sub>}(<var>N</var><sub>n</sub>).</div>
+		<p>and let <var>Q</var> be a formula such that</p>
+		<div>{{<var>Q</var>}(<var>W</var><sub>&gamma;</sub>)}(<var>N</var><sub>S</sub>) conv <var>N</var><sub>r(&epsilon;)</sub>,</div>
+		<p>where <var>r</var>(<var>s</var>) is the <var>s</var>-th integer <var>q</var> for which {<var>W</var><sub>&gamma;</sub>}(<var>N</var><sub>q</sub>) is convertible into either <var>N</var><sub>1</sub> or <var>B</var><sub>2</sub>. Then, if <var>M</var> stands for</p>
+		<!-- ! FIX FORMULA -->
+		<div>&lambda;<var>w</var>[{<var>W</var><sub>&gamma;</sub>}({{<var>Q</var>}(<var>W</var><sub>&gamma;</sub>)}(<var>w</var>))],</div>
+		<p>it will have the required property&dagger;.</p>
+		<p>The Graduate College,
+		<p>Princeton University,
+		<p>New Jersey, U.S.A.</p>
+		</p>
+		</p>
+		<p>&dagger; In a complete proof of the &lambda;-definability of computable sequences it would be best to modify this method by replacing the numerical description of the complete configurations by a description which can be handled more easily with our apparatus. Let us choose certain integers to represent the symbols and the <var>m</var>-configurations of the machine. Suppose that in a certain complete configuration the numbers representing the successive symbols on the tape are <var>s<sub>1</sub></var><var>s<sub>2</sub></var>&hellip;<var>s<sub>n</sub></var>, that the <var>m</var>-th symbol is scanned, and that the <var>m</var>-configuration has the number <var>t</var>; then we may represent this complete configuration by the formula</p>
+		<div>[[N<sub>s<sub>1</sub></sub>, N<sub>s<sub>2</sub></sub>, &hellip;,N<sub>s<sub>m-1</sub></sub>], [N<sub>t</sub>, N<sub>s<sub>m</sub></sub>], [N<sub>s<sub>m+1</sub></sub>,&hellip;, N<sub>s<sub>n</sub></sub>]],</div>
+		<p>where
+		<div>[a, b] stands for &lambda;u[{{u}{a}}(b)],</div>
+		</p>
+		<div>[a, b, c] stands for &lambda;u[{{u}(a)}(b)}(c)],</div>
+		<p>etc.</p>
 	</main>
 </body>
 
