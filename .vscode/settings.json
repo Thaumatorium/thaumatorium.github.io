@@ -5,4 +5,8 @@
 	"html.format.wrapLineLength": 0,
 	"editor.renderWhitespace": "all",
 	"liveServer.settings.port": 5501,
+	"python.linting.banditEnabled": false,
+	"python.linting.flake8Enabled": true,
+	"python.linting.mypyEnabled": false,
+	"python.linting.enabled": true,
 }
