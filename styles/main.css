@@ -61,19 +61,28 @@ body>main * {
 	margin: 0
 }
 
-body>main h1, body>main h2, body>main h3, body>main h4, body>main h5, body>main h6 {
+body>main h1,
+body>main h2,
+body>main h3,
+body>main h4,
+body>main h5,
+body>main h6 {
 	color: #800;
 	font-family: Times, serif;
 	padding: 1em 0 .3em;
 	text-transform: uppercase
 }
 
-main h1, main h2, main h3 {
+main h1,
+main h2,
+main h3 {
 	overflow: hidden;
 	text-overflow: ellipsis
 }
 
-summary>h1, summary>h2, summary>h3 {
+summary>h1,
+summary>h2,
+summary>h3 {
 	display: inline-block
 }
 
@@ -129,7 +138,8 @@ body>main figure {
 	display: flex
 }
 
-.article-meta>.published-box, .article-meta>.author-box {
+.article-meta>.published-box,
+.article-meta>.author-box {
 	background-color: #6e0000;
 	border: 1px solid #800;
 	color: #fff;
@@ -165,11 +175,11 @@ ul>li {
 	list-style-type: '– '
 }
 
-ul.classic>li  {
+ul.classic>li {
 	list-style-type: '– '
 }
 
-ul.none>li  {
+ul.none>li {
 	list-style-type: ''
 }
 
@@ -210,11 +220,17 @@ a.self-link:hover {
 	text-decoration: none
 }
 
-h1>a.self-link::before, h2>a.self-link::before, h3>a.self-link::before, h4>a.self-link::before, h5>a.self-link::before, h6>a.self-link::before {
+h1>a.self-link::before,
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
 	content: "§ "
 }
 
-ul, ol {
+ul,
+ol {
 	padding: 10px 0 10px 30px
 }
 
