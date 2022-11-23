@@ -17,3 +17,7 @@ section>canvas {
 #starfield {
 	box-shadow: 1px 1px 2px gray;
 }
+
+.highlight>pre {
+	padding: 10px;
+}

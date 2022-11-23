@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 
-<head>
+<head prefix="og: http://ogp.me/ns#">
 	<meta charset=utf-8 />
-	<title>NostraDavid's Knowledge Base - Javascript code snippets and regex | The Thaumatorium</title>
-	<meta name=description content="Little snippets of information. Usually Javascript or Regex, though I may expand this" />
-	<link rel="canonical" href="https://thaumatorium.com/knowledge-base">
+	<title>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex | The Thaumatorium</title>
+	<meta name=description content="Handy snippets that I use every now and then" />
+	<link rel="canonical" href="https://thaumatorium.com/">
 	<meta name=theme-color content=#800 />
 	<link rel=apple-touch-icon href=/images/icons-192.png>
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<link rel=manifest href=/manifest.json />
+	<link rel=webmanifest href=/manifest.json />
 	<link rel=icon href=/images/favicon.svg />
-	<link rel=stylesheet href="/styles/main.css" />
-
+	<link rel=stylesheet href="/styles/main.css?v=3" />
+	<link rel=stylesheet href="/styles/projects.css?v=3" />
+	<meta property="og:url" content="https://thaumatorium.com/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex" />
+	<meta property="og:description" content="Handy snippets that I use every now and then" />
+	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+	<meta property="og:image:width" content="1280" />
+	<meta property="og:image:height" content="668" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@NostraDavid2" />
+	<meta name="twitter:creator" content="@NostraDavid2" />
+	<meta name="twitter:title" content="NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex">
+	<meta name="twitter:description" content="Handy snippets that I use every now and then">
+	<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1">
+	<meta name="twitter:image:width" content="1280" />
+	<meta name="twitter:image:height" content="668" />
 </head>
 
 <body>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169207994-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-		gtag('config', 'UA-169207994-1');
-	</script>
-
 	<header>
 		<div class=title>The Thaumatorium:</div>
 		<div class=subtitle>Where the magic happens</div>
 	</header>
-
 	<nav>
 		<h5 style="display: none;">Main nav menu</h5>
 		<a href="/">Frontpage</a><span> - </span>
@@ -41,23 +47,25 @@
 		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
 		<a href=/about>About</a>
 	</nav>
-
 	<main>
-		<h1>NostraDavid's Knowledge Base - Javascript code snippets and regex</h1>
+		<h1>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex</h1>
+		<hr>
+		<ul>
+			<li><a href=/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges>CRYPTOCURRENCIES, EXCHANGES AND TECHNICAL ANALYSIS</a></li>
+			<li><a href=/knowledge-base/crypto-subreddits>CRYPTO SUBREDDITS</a></li>
+		</ul>
+		<hr>
 		<p>For now (<time>2020-07-16</time>) it's just snippets of JS and regex that I use every now and then</p>
 		<p>I'd use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
-
 		<div>
 			<button class=button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = true});">Open all chapters</button>
 			<button class=button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = false});">Close all chapters</button>
 		</div>
-
 		<details>
 			<summary>
 				<h2>Online Tools</h2>
 				<p>These are websites/webpages that I use to optimize this site.</p>
 			</summary>
-
 			<table>
 				<thead>
 					<th>Tool name</th>
@@ -95,7 +103,6 @@
 				</tbody>
 			</table>
 		</details>
-
 		<details>
 			<summary>
 				<h2>Javascript oneliners</h2>
@@ -111,11 +118,11 @@
 						<td>Open all collapsed comments on a reddit comment page</td>
 						<td>
 							<pre><code class=lang-javascript>document.querySelectorAll(".expand")
-				.forEach(el => {
-					if (el.innerText == "[+]") {
-						el.click();
-					}
-				});</code></pre>
+		.forEach(el => {
+			if (el.innerText == "[+]") {
+				el.click();
+			}
+		});</code></pre>
 						</td>
 					</tr>
 					<tr>
@@ -126,10 +133,10 @@
 						<td>Remove all <code class=lang-css>.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
 						<td>
 							<pre><code class=lang-javascript>document.querySelectorAll(".bighead")
-				.forEach(el => {
-					el.parentElement
-						.removeChild(el)
-					});</code></pre>
+		.forEach(el => {
+			el.parentElement
+				.removeChild(el)
+			});</code></pre>
 						</td>
 					</tr>
 					<tr>
@@ -143,9 +150,9 @@ console.log('%cService worker installing', CONSOLE_STYLE);</code></pre>
 						<td>This opens all <samp>are you sure?</samp> dialogs for comments, on a profile page of Reddit</td>
 						<td>
 							<pre><code class=lang-javascript>let ys = Array.from(document.getElementsByClassName("score likes"))
-							.filter(e => parseInt(e.title) < 3)
-							.map(e => e.parentElement.parentElement.parentElement)
-							.map(el => el.querySelector(`[data-event-action*="delete"]`));
+					.filter(e => parseInt(e.title) < 3)
+					.map(e => e.parentElement.parentElement.parentElement)
+					.map(el => el.querySelector(`[data-event-action*="delete"]`));
 // pick everything after the 77th comment
 ys = ys.slice(77, ys.length - 1);
 ys.map(e => e.click());</code></pre>
@@ -155,10 +162,10 @@ ys.map(e => e.click());</code></pre>
 						<td>Removing duplicates</td>
 						<td>
 							<pre><code class=lang-javascript>const cities = ["Den Haag","Den Haag",
-								"Utrecht", "Utrecht",
-								"Arnhem", "Arnhem",
-								"MiddelBurg", "MiddelBurg",
-								"MiddelBurg"];
+						"Utrecht", "Utrecht",
+						"Arnhem", "Arnhem",
+						"MiddelBurg", "MiddelBurg",
+						"MiddelBurg"];
 const uniqueCities = [...new Set(cities)];
 // ["Den Haag", "Utrecht", "Arnhem", "MiddelBurg"]</code></pre>
 						</td>
@@ -176,44 +183,40 @@ clearInterval(id);</code></pre>
 						<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
 						<td>
 							<pre><code class=lang-javascript>Array.from(document.getElementsByClassName("subreddit hover"))
-									 .filter(el => el.innerHTML == "TheLastOfUs2")
-									 .map(el => el.parentElement.parentElement)
-									 .map(el => {
-										 // subselection apparently works
-										 el.querySelector(`[data-event-action*="delete"]`)
-									 })
-									 .map(el => el.click());</code></pre>
+							 .filter(el => el.innerHTML == "TheLastOfUs2")
+							 .map(el => el.parentElement.parentElement)
+							 .map(el => {
+								 // subselection apparently works
+								 el.querySelector(`[data-event-action*="delete"]`)
+							 })
+							 .map(el => el.click());</code></pre>
 						</td>
 					</tr>
 					<tr>
 						<td>Use on Twitch to track the amount of currently used emotes</td>
 						<td>
 							<pre><code class=lang-javascript>const groupBy = (xs, key) => xs.reduce((acc, x) => {
-	(acc[x[key]] = acc[x[key]] || []).push(x);
-	return acc;
+(acc[x[key]] = acc[x[key]] || []).push(x);
+return acc;
 }, {});
-
 let emoticons = Array.from(document.querySelectorAll(`.chat-line__message--emote[alt]`));
 let groupedEmoticons = groupBy(emoticons, 'alt');
 let listedEmoticons = [];
-
 for (const key in groupedEmoticons) {
-	if (groupedEmoticons.hasOwnProperty(key)) {
-		const el = groupedEmoticons[key];
-		listedEmoticons.push({key: key, length: el.length});
-	}
+if (groupedEmoticons.hasOwnProperty(key)) {
+const el = groupedEmoticons[key];
+listedEmoticons.push({key: key, length: el.length});
 }
-
+}
 listedEmoticons.sort((a, b) => b.length - a.length)
-							 .slice(0,6)
-							 .sort((a, b) => a.length - b.length)
-							 .reduce((acc, el) => `${el.length}x ${el.key} ` + acc);</code></pre>
+					 .slice(0,6)
+					 .sort((a, b) => a.length - b.length)
+					 .reduce((acc, el) => `${el.length}x ${el.key} ` + acc);</code></pre>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 		</details>
-
 		<details>
 			<summary>
 				<h2>Regular Expressions</h2>
@@ -267,7 +270,6 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 				</tbody>
 			</table>
 		</details>
-
 		<details>
 			<summary>
 				<h2>National 'warcry'</h2>
@@ -283,7 +285,6 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 					</tr>
 				</thead>
 				<tbody>
-
 					<tr>
 						<td>Dutch</td>
 						<td>G E K O L O N I S E E R D</td>
@@ -314,7 +315,6 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 				</tbody>
 			</table>
 		</details>
-
 		<details>
 			<summary>
 				<h2>Information for a secret project</h2>
@@ -464,26 +464,22 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 			</table>
 		</details>
 	</main>
-
 	<footer>
 		<div class=copyright>
 			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
 			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
-			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+			<p><sub>Last updated: <time id=updated>2020-08-17</time></sub></p>
 		</div>
 		<nav id=profiles>
-			<a href="https://twitter.com/NostraDavid2"><img loading=lazy src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
-			<a href="https://www.twitch.tv/nostradavid"><img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=32 height=32></a><span> - </span>
-			<a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA"><img loading=lazy src="/images/social-media/youtube.svg" alt="Youtube's logo" width=32 height=32></a><span> - </span>
-			<a href="https://www.reddit.com/user/nostradavid"><img loading=lazy src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
-			<a href="https://github.com/NostraDavid"><img loading=lazy src="/images/social-media/github.svg" alt="Github's logo" width=32 height=32>(me)</a><span> - </span>
-			<a href="https://github.com/Thaumatorium"><img loading=lazy src="/images/social-media/github.svg" alt="Github's logo" width=32 height=32>(pro)</a><span> - </span>
 		</nav>
-		<!-- Sssh - don't tell anyone! -->
 		<a class=secret onclick=specialGoto(event)>π</a>
+		<script>
+			const specialGoto = event => {
+				if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+			}
+		</script>
 	</footer>
-	<script async src=/main.js></script>
 </body>
 
 </html>

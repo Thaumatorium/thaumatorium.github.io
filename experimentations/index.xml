@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML, CSS and/or Javascript experimentations go here on Thaumatorium</title>
+    <link>http://thaumatorium.com/experimentations/</link>
+    <description>Recent content in HTML, CSS and/or Javascript experimentations go here on Thaumatorium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 08 Nov 2021 21:37:49 +0100</lastBuildDate>
+    <atom:link href="http://thaumatorium.com/experimentations/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

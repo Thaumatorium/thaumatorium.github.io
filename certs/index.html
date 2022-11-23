@@ -23,14 +23,11 @@
 	<!-- manifest.json is currently (2020-05-01) only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
 	<link rel=manifest href=/manifest.json />
 	<link rel=icon href=/images/favicon.svg />
-
 	<!-- The reason for the ?v=1 in the CSS url is Cache Busting. This gives me control over which file version is cached on the user's end -->
 	<!-- 2020-08-05 I've removed ?v=1, because I never actually updated it. I can use it again once I ever move from raw HTML to a C# hosted site -->
 	<!-- Lets imagine a user has my first version cached, and I make a change, but the expiry date of the file is a year into the future. I can simply up the number and the browser will replace the file (no matter whether I actually made a change or not) -->
 	<!-- Now I'm, as of writing, hosting on github.io and I have no control over the expiry date (which is 10 minutes, IIRC), but now I can remember myself to do this in the future once I go the self-hosting route :) -->
 	<link rel=stylesheet href="/styles/main.css?v=2" />
-
-
 	<!-- General OpenGraph data - shared between Facebook and Twitter -->
 	<meta property="og:url" content="https://thaumatorium.com/" />
 	<meta property="og:type" content="website" />
@@ -39,7 +36,6 @@
 	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 	<meta property="og:image:width" content="1280" />
 	<meta property="og:image:height" content="668" />
-
 	<!-- Twitter-only stuff -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@NostraDavid2" />
@@ -56,7 +52,6 @@
 		<div class=title>The Thaumatorium:</div>
 		<div class=subtitle>Where the magic happens</div>
 	</header>
-
 	<nav>
 		<h5 style="display: none;">Main nav menu</h5>
 		<a href="/">Frontpage</a><span> - </span>
@@ -69,7 +64,6 @@
 		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
 		<a href=/about>About</a>
 	</nav>
-
 	<main>
 		<h1>These are certificates that I want, professionally speaking</h1>
 		<ul class=none>
@@ -95,9 +89,7 @@
 			<li><input type="checkbox"> tox</li>
 			<li></li>
 		</ul>
-
 	</main>
-
 	<footer>
 		<div class=copyright>
 			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
