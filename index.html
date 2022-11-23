@@ -1,51 +1,30 @@
 <!DOCTYPE html>
-<!-- Since I'm used to writing en-US, I'll probably make mistakes in this document. Oh well. -->
 <html lang="en-GB">
 
 <head prefix="og: http://ogp.me/ns#">
-	<!-- meta charset tag comes first, so the browser knows what charset the title and description are -->
-	<!-- You can use http://validator.w3.org/i18n-checker/ to see if your header encoding to UTF-8 -->
-	<!-- For more information: https://www.w3.org/International/questions/qa-html-encoding-declarations#nonutf8 -->
 	<meta charset=utf-8 />
-	<!-- The title of the tab -->
-	<title>The Thaumatorium: NostraDavid's handcrafted website | The Thaumatorium</title>
-	<!-- This description should show up in Google results -->
-	<meta name=description content="This is a handcrafted blog where you can find articles and projects created by NostraDavid." />
-	<!-- Needed for Hyvor, and helps search engines reduce duplicate content "/" vs "/index.html", for example -->
+	<title>NostraDavid&#39;s handcrafted website, with his articles and projects | The Thaumatorium</title>
+	<meta name=description content="A handcrafted blog where you can find articles and projects created by NostraDavid" />
 	<link rel="canonical" href="https://thaumatorium.com/">
-	<!-- Theme color for Android/iOS -->
 	<meta name=theme-color content=#800 />
-	<!-- icon for Apple's hardware -->
 	<link rel=apple-touch-icon href=/images/icons-192.png>
-	<!-- meta viewport is actually CSS hidden inside your HTML -->
-	<!-- More information https://wiki.whatwg.org/wiki/MetaExtensions#viewport and https://drafts.csswg.org/css-device-adapt/#viewport-meta -->
 	<meta name=viewport content="width=device-width, initial-scale=1">
-	<!-- manifest.json is currently (2020-05-01) only supported by Chromium based browsers, as per https://www.caniuse.com/#feat=web-app-manifest -->
-	<link rel=manifest href=/manifest.json />
+	<link rel=webmanifest href=/manifest.json />
 	<link rel=icon href=/images/favicon.svg />
-
-	<!-- The reason for the ?v=1 in the CSS url is Cache Busting. This gives me control over which file version is cached on the user's end -->
-	<!-- 2020-08-05 I've removed ?v=1, because I never actually updated it. I can use it again once I ever move from raw HTML to a C# hosted site -->
-	<!-- Lets imagine a user has my first version cached, and I make a change, but the expiry date of the file is a year into the future. I can simply up the number and the browser will replace the file (no matter whether I actually made a change or not) -->
-	<!-- Now I'm, as of writing, hosting on github.io and I have no control over the expiry date (which is 10 minutes, IIRC), but now I can remember myself to do this in the future once I go the self-hosting route :) -->
-	<link rel=stylesheet href="/styles/main.css?v=2" />
-
-
-	<!-- General OpenGraph data - shared between Facebook and Twitter -->
+	<link rel=stylesheet href="/styles/main.css?v=3" />
+	<link rel=stylesheet href="/styles/projects.css?v=3" />
 	<meta property="og:url" content="https://thaumatorium.com/" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="NostraDavid's handcrafted website, with his articles and projects" />
-	<meta property="og:description" content="A handcrafted blog where you can find articles and projects created by NostraDavid." />
+	<meta property="og:title" content="NostraDavid&#39;s handcrafted website, with his articles and projects" />
+	<meta property="og:description" content="A handcrafted blog where you can find articles and projects created by NostraDavid" />
 	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 	<meta property="og:image:width" content="1280" />
 	<meta property="og:image:height" content="668" />
-
-	<!-- Twitter-only stuff -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@NostraDavid2" />
 	<meta name="twitter:creator" content="@NostraDavid2" />
-	<meta name="twitter:title" content="NostraDavid's handcrafted website, with his articles and projects">
-	<meta name="twitter:description" content="A handcrafted blog where you can find articles and projects created by NostraDavid.">
+	<meta name="twitter:title" content="NostraDavid&#39;s handcrafted website, with his articles and projects">
+	<meta name="twitter:description" content="A handcrafted blog where you can find articles and projects created by NostraDavid">
 	<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1">
 	<meta name="twitter:image:width" content="1280" />
 	<meta name="twitter:image:height" content="668" />
@@ -56,7 +35,6 @@
 		<div class=title>The Thaumatorium:</div>
 		<div class=subtitle>Where the magic happens</div>
 	</header>
-
 	<nav>
 		<h5 style="display: none;">Main nav menu</h5>
 		<a href="/">Frontpage</a><span> - </span>
@@ -69,14 +47,12 @@
 		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
 		<a href=/about>About</a>
 	</nav>
-
 	<main>
-		<h1>Welcome to the Thaumatorium!</h1>
-		<p>This is my handcrafted website. I post <a href="/articles">articles</a>, <a href="/knowledge-base">bits of knowledge</a>, <a href="/projects">projects</a> and <a href="/experimentations">experimentations</a></p>
+		<h1>NostraDavid&#39;s handcrafted website, with his articles and projects</h1>
+		<p>This is my <del>handcrafted</del> <em>Hugo-generated</em> website. I post <a href="/articles">articles</a>, <a href="/knowledge-base">bits of knowledge</a>, <a href="/projects">projects</a> and <a href="/experimentations">experimentations</a></p>
 		<p>If you want the source of this site (the static HTML, CSS, images and JS), check out <a href="https://github.com/Thaumatorium/thaumatorium.github.io">the Github page</a></p>
 		<p>My work on the site has died down, due to a case of Empty Bank Account (don't worry, it's not contagious), not to mention I'm starting a <a href="https://www.twitch.tv/nostradavid"><img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=16 height=16></a><a href="https://www.twitch.tv/nostradavid">Twitch Channel</a></p>
 		<p>If you want to know more about this site, check out the <a href="/about">About</a> page.</p>
-
 		<h2><a id=top-articles href="#top-articles" class="self-link">Top articles</a></h2>
 		<ul class=article-list>
 			<li><a href=/articles/how-i-fixed-reddit>How I fixed Reddit</a></li>
@@ -85,12 +61,10 @@
 			<li><a href=/articles/the-different-types-of-functions-in-functional-programming>The different types of functions in Functional Programming</a></li>
 			<li><a href=/articles/big-o-beginners-guide>Big O Beginner's Guide</a></li>
 		</ul>
-
 		<h2><a id=changelog href=#changelog class=self-link>Changelog</a></h2>
 		<p>Important changes and when they happened.</p>
 		<p>Initially things changed too drastically and too fast to keep a changelog, but I think it's time for one.</p>
 		<p>Everything previous the creation of this list has been copied from the Git history.</p>
-
 		<ul>
 			<li><time>2020-08-15</time> Added (optional) syntax highlighting for Haskell in the <q>Quick 'n Dirty Big O</q> article</li>
 			<li><time>2020-08-07</time> Comment section on the front page is now hidding behind a button to improve load times.</li>
@@ -100,7 +74,6 @@
 			<li><time>2020-08-07</time> Removed <q>Regex Explanation</q>, as it was too simple for my current knowledge. Maybe I'll revive it in an article</li>
 			<li><time>2020-08-07</time> Improved <q>Slugify</q>; it now removed duplicate <samp>-</samp>'s.</li>
 		</ul>
-
 		<details>
 			<summary>
 				<h3>Older changelog</h3>
@@ -146,7 +119,6 @@
 				<li><time>2019-09-27</time> Creation of the repo that hosts this site with a very simple static <samp>index.html</samp></li>
 			</ul>
 		</details>
-
 		<h2><a id=todo href=#todo class=self-link>TODO</a></h2>
 		<p>The date you see is <q>date created</q>, not <q>edited</q> or <q>done</q></p>
 		<ul>
@@ -184,7 +156,6 @@
 				<li><time>2020-05-09</time> Gotta check out ARIA tags - they weren't really mentioned on WHATWG's Living Document</li>
 			</ul>
 		</details>
-
 		<details>
 			<summary>
 				<h3>Done</h3>
@@ -218,143 +189,23 @@
 				<li><time>2020-05-09</time> <del>Transfer my articles from my <a href=https://thaumatorium.wordpress.com>ye olde wordpress</a> site</del></li>
 			</ul>
 		</details>
-
-		<h2><a id=support href=#support class=self-link>Support</a></h2>
-		<h3><a id=twitch href=#twitch class=self-link>Twitch</a></h3>
-		<figure>
-			<a href="https://www.twitch.tv/nostradavid">
-				<img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=128>
-			</a>
-			<figcaption>Come watch me livestream World of Warcraft on Twitch!</figcaption>
-		</figure>
-
-		<h3><a id=youtube href=#youtube class=self-link>Youtube</a></h3>
-		<figure>
-			<a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA">
-				<img loading=lazy src="/images/social-media/youtube.svg" alt="Youtube's logo" width=128>
-			</a>
-			<figcaption>Go watch some clips from previous livestreams that I've edited for Youtube</figcaption>
-		</figure>
-
-		<h3><a id=support-ko-fi href=#support-ko-fi class=self-link>Ko-fi</a></h3>
-		<figure>
-			<a href=https://ko-fi.com/J3J61VMSC rel=noopener target=_blank>
-				<img loading=lazy width=223 height=30 src="/images/ko-fi-support.svg" alt='Buy Me a Coffee at ko-fi.com' />
-			</a>
-			<figcaption>Why yes, that <em>is</em> a custom Ko-fi button,<br> based on one that <a href="https://www.ko-fi.com/img/githubbutton_sm.svg">Ko-fi provided</a>,<br> but optimized AF. Why do you ask?</figcaption>
-		</figure>
-
-		<h3><a id=support-hyvor href=#support-hyvor class=self-link>Hyvor comment section</a></h3>
-		<figure>
-			<p>Want to use the same style of comments for your site?</p>
-			<p>Use my <a href="https://talk.hyvor.com?aff=5844">referral link</a> to sign up! <em>If</em> you then pay Hyvor 30% will be passed onto me!</p>
-		</figure>
-
-		<!-- <h3><a id=support-crypto href=#support-crypto class=self-link>Crypto</a></h3>
-		<p>
-			<script>
-				const showCrypto = () => {
-					document.querySelectorAll(".crypto").forEach(el => el.style.display = "none")
-					let val = document.getElementById("cryptotype").value;
-					document.getElementById(val).style.display = "";
-				}
-			</script>
-
-			<label for=cryptotype>Select cointype:</label>
-			<select id=cryptotype name=cryptotype onchange="showCrypto(this)">
-				<option value=Bitcoin selected> Bitcoin </option>
-				<option value=Ethereum> Ethereum </option>
-				<option value=Litecoin> Litecoin </option>
-				<option value=Ripple> Ripple </option>
-				<option value=Stellar> Stellar </option>
-				<option value=Doge> Doge </option>
-			</select>
-		</p>
-
-		<figure id=Bitcoin class=crypto>
-			<img loading=lazy width=200 height=200 src=/images/crypto/bitcoin.png alt="My Bitcoin address in the form of a QR code" />
-			<p>Bitcoin</p>
-			<p class=crypto-address>17jBxTUX4ea3uPjHrxPv9DgAQ7y9Q5gWY1</p>
-		</figure>
-
-		<figure id=Ethereum style="display: none" class=crypto>
-			<img loading=lazy width=200 height=200 src=/images/crypto/ethereum.png alt="My Ethereum address in the form of a QR code" />
-			<p>Ethereum</p>
-			<p class=crypto-address>0x673d6723fCFbEBDC97Aa481d2E45777bfab60267</p>
-		</figure>
-
-		<figure id=Litecoin style="display: none" class=crypto>
-			<img loading=lazy width=200 height=200 src=/images/crypto/litecoin.png alt="My Litecoin address in the form of a QR code" />
-			<p>Litecoin</p>
-			<p class=crypto-address>LVc2dcwPySpHYWgsiwmbHe8hS4THLJm1kP</p>
-		</figure>
-
-		<figure id=Ripple style="display: none" class=crypto>
-			<img loading=lazy width=200 height=200 src=/images/crypto/ripple.png alt="My Ripple address in the form of a QR code" />
-			<p>Ripple</p>
-			<p class=crypto-address>rB427Un9RbYncAxJKZeeBT2pupMqaYPj22</p>
-		</figure>
-
-		<figure id=Stellar style="display: none" class=crypto>
-			<img loading=lazy width=200 height=200 src=/images/crypto/stellar.png alt="My Stellar address in the form of a QR code" />
-			<p>Stellar</p>
-			<p class=crypto-address>GBT4ZUKC65GAHF7VBYU5ROC5JKV2BWXVD6K5H7BIN4XOT6OMGIOZLICL</p>
-		</figure>
-
-		<figure id=Doge style="display: none" class=crypto>
-			<img loading=lazy width=200 height=200 src=/images/crypto/doge.png alt="My Doge address in the form of a QR code" />
-			<p>Doge</p>
-			<p class=crypto-address>DHbW72pYTog8GnuugZ1UXib5YmEv8ws4Ba</p>
-		</figure> -->
-
-		<h2><a id=comments href=#comments class=self-link>Comments</a></h2>
-		<div>
-			<button class=button type=button onclick="toggleComments(this)">Show comments</button>
-		</div>
-		<div id="hyvor-talk-view" style="display: none"></div>
-		<script type="text/javascript">
-			var HYVOR_TALK_WEBSITE = 1095; // DO NOT CHANGE THIS
-			var HYVOR_TALK_CONFIG = { url: false, id: false };
-
-			const hyvor = document.getElementById("hyvor-talk-view");
-			const toggleComments = (el) => {
-				if (hyvor.innerHTML == "") {
-					let s = document.createElement('script');
-					s.setAttribute('type', 'text/javascript');
-					s.setAttribute('src', '//talk.hyvor.com/web-api/embed');
-					document.querySelector("body>main").appendChild(s);
-				}
-
-				if ("none" == hyvor.style.display) {
-					el.innerText = "Hide comments"
-					hyvor.style.display = "";
-				} else {
-					el.innerText = "Show comments"
-					hyvor.style.display = "none";
-				}
-			}
-		</script>
 	</main>
-
 	<footer>
 		<div class=copyright>
 			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">120__</a>,
+			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
 			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
-			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
+			<p><sub>Last updated: <time id=updated>2022-11-20</time></sub></p>
 		</div>
 		<nav id=profiles>
-			<a href="https://twitter.com/NostraDavid2"><img loading=lazy src="/images/social-media/twitter.svg" alt="Twitter's logo" width=32 height=32></a><span> - </span>
-			<a href="https://www.twitch.tv/nostradavid"><img loading=lazy src="/images/social-media/twitch.svg" alt="Twitch's logo" width=32 height=32></a><span> - </span>
-			<a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA"><img loading=lazy src="/images/social-media/youtube.svg" alt="Youtube's logo" width=32 height=32></a><span> - </span>
-			<a href="https://www.reddit.com/user/nostradavid"><img loading=lazy src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width=32 height=32></a><span> - </span>
-			<a href="https://github.com/NostraDavid"><img loading=lazy src="/images/social-media/github.svg" alt="Github's logo" width=32 height=32>(me)</a><span> - </span>
-			<a href="https://github.com/Thaumatorium"><img loading=lazy src="/images/social-media/github.svg" alt="Github's logo" width=32 height=32>(pro)</a><span> - </span>
 		</nav>
-		<!-- Sssh - don't tell anyone! -->
 		<a class=secret onclick=specialGoto(event)>π</a>
+		<script>
+			const specialGoto = event => {
+				if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+			}
+		</script>
 	</footer>
-	<script async src=/main.js></script>
 </body>
 
 </html>
