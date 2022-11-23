@@ -58,7 +58,7 @@ body>main {
 }
 
 body>main * {
-	margin: 0
+	/* margin: 0; */
 }
 
 body>main h1,
@@ -204,7 +204,7 @@ ul.none>li {
 pre {
 	tab-size: 2;
 	-moz-tab-size: 2;
-	white-space: pre-wrap
+	white-space: pre-wrap;
 }
 
 q {

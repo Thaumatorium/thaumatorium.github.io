@@ -12,7 +12,6 @@
 	<link rel=manifest href=./manifest.json />
 	<link rel=icon href=./images/reactions/favicon.svg />
 	<link rel=stylesheet href="./styles/main.css" />
-
 	<!-- General OpenGraph data - shared between Facebook and Twitter -->
 	<meta property="og:url" content="https://thaumatorium.com/" />
 	<meta property="og:type" content="website" />
@@ -21,7 +20,6 @@
 	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 	<meta property="og:image:width" content="1280" />
 	<meta property="og:image:height" content="668" />
-
 	<!-- Twitter-only stuff -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:site" content="@NostraDavid2" />
@@ -38,7 +36,6 @@
 		<div class=title>Semantic Override Network</div>
 		<div class=subtitle>Social News Aggregator</div>
 	</header>
-
 	<nav>
 		<span>Yes, the main menu is broken for now: </span>
 		<a href="/">Frontpage</a><span> - </span>
@@ -49,7 +46,6 @@
 		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
 		<a href=/about>About</a>
 	</nav>
-
 	<main>
 		<h1>Welcome to Semantic Override Network (SON)!</h1>
 		<div id=posts></div>
@@ -59,7 +55,6 @@
 				// ugc == User Generated Content
 				return url.startsWith(domain) ? "ugc" : "nofollow";
 			};
-
 			fetch("/api/v1/posts")
 				.then(response => response.json())
 				.then(data => {
@@ -67,7 +62,6 @@
 					let posts = document.getElementById("posts");
 					let post_template = document.querySelector("#post");
 					let post_label_template = document.querySelector("#post-label");
-
 					data.posts.map(post => {
 						let clone = post_template.content.cloneNode(true);
 						let post_title = clone.querySelector(".post-title");
@@ -89,7 +83,6 @@
 						post_comments.href = "";
 						post_posted.textContent = post.postedDate;
 						post_published.textContent = post.publishedDate;
-
 						post.labels.map(label => {
 							let clone = post_label_template.content.cloneNode(true);
 							clone.children[0].href = "./label/" + label;
@@ -97,7 +90,6 @@
 							post_labels.appendChild(clone)
 							return label;
 						})
-
 						post_image.src = "";
 						posts.appendChild(clone);
 						return post;
@@ -187,7 +179,6 @@
 			<li class="post-label" style="display: inline-block"><a href=./label/SON>SON</a></li>
 		</template>
 	</main>
-
 	<footer>
 		<div class=copyright>
 			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
@@ -195,7 +186,6 @@
 			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
 			<p><sub>Last updated: <time id=updated>2020-__-__</time></sub></p>
 		</div>
-
 		<!-- Sssh - don't tell anyone! -->
 		<a class=secret onclick=specialGoto(event)>π</a>
 	</footer>
