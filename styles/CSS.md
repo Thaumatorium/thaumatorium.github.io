@@ -4,10 +4,10 @@ Since I'm relatively new, I'll document some information. No guarantee I'm actua
 
 ## Glossary
 
-| Abbreviation | Description		 |
-|--------------|-----------------|
-| RHS					| Right Hand Side |
-| LHS					| Left Hand Side	|
+| Abbreviation | Description     |
+| ------------ | --------------- |
+| RHS          | Right Hand Side |
+| LHS          | Left Hand Side  |
 
 ## Attributes
 
