@@ -6,6 +6,6 @@
     WHERE THE MAGIC HAPPENS
   </text>
   <svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" x="340" y="60">
-    <path fill="none" stroke="#fff" stroke-linejoin="bevel" stroke-width="25" d="M200 0v600l400-400H0l400 400V0L0 400h600z" opacity=".2" />
+    <path fill="none" stroke="#fff" stroke-linejoin="bevel" stroke-width="25" d="M200 0v600l400-400H0l400 400V0L0 400h600z" opacity=".2"/>
   </svg>
 </svg>

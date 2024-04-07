@@ -6,7 +6,21 @@
     <description>Recent content in NostraDavid&#39;s&#39; programming projects on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://thaumatorium.com/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://thaumatorium.com/projects/canvas-projects/maze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://thaumatorium.com/projects/canvas-projects/maze/</guid>
+      <description>&#xD;Maze solver&#xD;Based on JonPizza&#39;s maze solver, but translated to Nim&#xA;I also have a version made in Nim maze.png&#xD;maze2.png&#xD;3232maze_original.png&#xD;3232maze_long.png&#xD;3232maze_longer.png&#xD;3232maze_longest.png&#xD;3232maze_longer_bigger.png&#xD;1&#xD;2&#xD;3&#xD;4&#xD;5&#xD;6&#xD;7&#xD;8&#xD;9&#xD;10&#xD;Play animation&#xD;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://thaumatorium.com/projects/fenetres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://thaumatorium.com/projects/fenetres/</guid>
+      <description>&lt;!doctype html&gt;&#xD;Fenêtres | The Thaumatorium&#xD;Auto rotation&#xD;</description>
+    </item>
   </channel>
 </rss>
