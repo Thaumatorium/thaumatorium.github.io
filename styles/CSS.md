@@ -13,9 +13,7 @@ Since I'm relatively new, I'll document some information. No guarantee I'm actua
 
 You can always prepend `[attr]` with a tag or class name. If none is provided, the `universal selector (*)` is assumed.
 
-`*[hreflang|=en]` and `[hreflang|=en]` are equivalent,
-`*.warning` and `.warning` are equivalent,
-`*#myid` and `#myid` are equivalent.
+`*[hreflang|=en]` and `[hreflang|=en]` are equivalent, `*.warning` and `.warning` are equivalent, `*#myid` and `#myid` are equivalent.
 
 ### h1[attr]
 
@@ -53,10 +51,9 @@ Can be used for grouping? At least for languages: `[attr|=en]` would encapsulate
 
 ### LHS>RHS
 
-Child combinator
-This means the RHS is a **direct** child of LHS
+Child combinator This means the RHS is a **direct** child of LHS
 
-``` HTML
+```HTML
 <LHS>
 		<RHS />
 </LHS>
@@ -64,10 +61,9 @@ This means the RHS is a **direct** child of LHS
 
 ### LHS RHS
 
-Descendant combinator
-RHS is some descendant of LHS (could be very shallow *or* very deep into the DOM – it doesn't matter)
+Descendant combinator RHS is some descendant of LHS (could be very shallow _or_ very deep into the DOM – it doesn't matter)
 
-``` HTML
+```HTML
 <LHS>
 		<one-or-more-levels-deep>
 				<RHS />
@@ -77,20 +73,18 @@ RHS is some descendant of LHS (could be very shallow *or* very deep into the DOM
 
 ### LHS+RHS
 
-Next-subling combinator
-RHS follows RHS. In other words: RHS sits *directly below* LHS.
+Next-subling combinator RHS follows RHS. In other words: RHS sits _directly below_ LHS.
 
-``` HTML
+```HTML
 <LHS></LHS>
 <RHS></RHS>
 ```
 
 ### LHS~RHS
 
-Subsequent-sibling combinator
-RHS follows RHS with more tags between. In other words: RHS sits *somewhere below* LHS.
+Subsequent-sibling combinator RHS follows RHS with more tags between. In other words: RHS sits _somewhere below_ LHS.
 
-``` HTML
+```HTML
 <RHS></RHS>
 <one-or-more-tags />
 <LHS></LHS>
@@ -102,59 +96,59 @@ RHS is a pseudo-**class** of LHS
 
 **Options:**
 
-* is()
-* not()
-* where()
-* has()
-* dir()
-* lang()
-* any-link
-* link
-* visited
-* local-link
-* target
-* target-within
-* scope
-* hover
-* active
-* focus
-* focus-visible
-* focus-within
-* current
-* past
-* future
-* playing
-* paused
-* enabled
-* disabled
-* read-only
-* read-write
-* placeholder-shown
-* default
-* checked
-* indeterminate
-* blank
-* valid
-* invalid
-* in-range
-* out-of-range
-* required
-* optional
-* user-invalid
-* root
-* empty
-* nth-child()
-* nth-last-child()
-* first-child
-* last-child
-* only-child
-* nth-of-type()
-* nth-last-of-type()
-* first-of-type
-* last-of-type
-* only-of-type
-* nth-col()
-* nth-last-col()
+- is()
+- not()
+- where()
+- has()
+- dir()
+- lang()
+- any-link
+- link
+- visited
+- local-link
+- target
+- target-within
+- scope
+- hover
+- active
+- focus
+- focus-visible
+- focus-within
+- current
+- past
+- future
+- playing
+- paused
+- enabled
+- disabled
+- read-only
+- read-write
+- placeholder-shown
+- default
+- checked
+- indeterminate
+- blank
+- valid
+- invalid
+- in-range
+- out-of-range
+- required
+- optional
+- user-invalid
+- root
+- empty
+- nth-child()
+- nth-last-child()
+- first-child
+- last-child
+- only-child
+- nth-of-type()
+- nth-last-of-type()
+- first-of-type
+- last-of-type
+- only-of-type
+- nth-col()
+- nth-last-col()
 
 \- [source](https://www.w3.org/TR/selectors-4/#combinators)
 
@@ -164,15 +158,15 @@ RHS is a pseudo-**element** of LHS
 
 **Options:**
 
-* first-line
-* first-letter
-* selection
-* inactive-selection
-* spelling-error
-* grammar-error
-* before
-* after
-* marker
-* placeholder
+- first-line
+- first-letter
+- selection
+- inactive-selection
+- spelling-error
+- grammar-error
+- before
+- after
+- marker
+- placeholder
 
 \- [source](https://www.w3.org/TR/css-pseudo-4/)

@@ -1,27 +1,3 @@
 {
-	"recommendations": [
-		"aaron-bond.better-comments",
-		"aeschli.vscode-css-formatter",
-		"bibhasdn.unique-lines",
-		"CoenraadS.bracket-pair-colorizer-2",
-		"deepcode.deepcode",
-		"eamodio.gitlens",
-		"foxundermoon.shell-format",
-		"hbenl.vscode-test-explorer",
-		"jock.svg",
-		"kisstkondoros.vscode-codemetrics",
-		"mechatroner.rainbow-csv",
-		"ms-vscode.test-adapter-converter",
-		"oderwat.indent-rainbow",
-		"ritwickdey.LiveServer",
-		"sburg.vscode-javascript-booster",
-		"shd101wyy.markdown-preview-enhanced",
-		"TabNine.tabnine-vscode",
-		"timonwong.shellcheck",
-		"VisualStudioExptTeam.vscodeintellicode",
-		"vscode-icons-team.vscode-icons",
-		"waderyan.gitblame",
-		"yzhang.markdown-all-in-one",
-		"Zignd.html-css-class-completion",
-	]
+	"recommendations": ["aaron-bond.better-comments", "aeschli.vscode-css-formatter", "bibhasdn.unique-lines", "CoenraadS.bracket-pair-colorizer-2", "deepcode.deepcode", "eamodio.gitlens", "foxundermoon.shell-format", "hbenl.vscode-test-explorer", "jock.svg", "kisstkondoros.vscode-codemetrics", "mechatroner.rainbow-csv", "ms-vscode.test-adapter-converter", "oderwat.indent-rainbow", "ritwickdey.LiveServer", "sburg.vscode-javascript-booster", "shd101wyy.markdown-preview-enhanced", "TabNine.tabnine-vscode", "timonwong.shellcheck", "VisualStudioExptTeam.vscodeintellicode", "vscode-icons-team.vscode-icons", "waderyan.gitblame", "yzhang.markdown-all-in-one", "Zignd.html-css-class-completion"]
 }
