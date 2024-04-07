@@ -8,7 +8,7 @@ Anything else is bloat, really (unless browser creators finally replace JS, but 
 
 ## Documentation
 
-["You might not need jQuery"](http://youmightnotneedjquery.com/) - A great resource if you want to stop using jQuery (\*cough\* *bloat)*
+["You might not need jQuery"](http://youmightnotneedjquery.com/) - A great resource if you want to stop using jQuery (\*cough\* _bloat)_
 
 ### Recommended IDE
 
@@ -22,9 +22,9 @@ This enables beginners to start faster (not to mention get informed on interesti
 
 ### Languages used
 
-* [HTML 5.2](https://html.spec.whatwg.org/dev/)
-* [CSS 3](https://www.w3.org/TR/css-2018/#css)
-* [JavaScript](https://eloquentjavascript.net/)
+- [HTML 5.2](https://html.spec.whatwg.org/dev/)
+- [CSS 3](https://www.w3.org/TR/css-2018/#css)
+- [JavaScript](https://eloquentjavascript.net/)
 
 ## File notes
 
@@ -32,8 +32,7 @@ In alphabetical order.
 
 ### 404.html
 
-You'll only see this one once you go to a URL that doesn't exist.
-The reason why this 404 page is superior to others is that mine has an archival service \*and\* a site-search built-in.
+You'll only see this one once you go to a URL that doesn't exist. The reason why this 404 page is superior to others is that mine has an archival service \*and\* a site-search built-in.
 
 ### CNAME
 
@@ -45,15 +44,11 @@ The frontpage of the site. The only file with a ton of comments, explaining why 
 
 ### manifest.json
 
-Contains information for sites that want to become a Progressive Web App - I used to have this funcitonality, but had to remove this functionality because it broke updating the site.
-Only works on Chromium based browsers as of writing.
+Contains information for sites that want to become a Progressive Web App - I used to have this funcitonality, but had to remove this functionality because it broke updating the site. Only works on Chromium based browsers as of writing.
 
-*Information source*:
-https://www.w3.org/TR/appmanifest/
-https://w3c.github.io/manifest/
+_Information source_: https://www.w3.org/TR/appmanifest/ https://w3c.github.io/manifest/
 
-*Support level:*
-[https://caniuse.com/#feat=web-app-manifest](https://caniuse.com/#feat=web-app-manifest)
+_Support level:_ [https://caniuse.com/#feat=web-app-manifest](https://caniuse.com/#feat=web-app-manifest)
 
 ### PWA.js
 
@@ -61,8 +56,7 @@ This used to startup the PWA functionality of the site, but now it functions as 
 
 ### robots.txt
 
-A file that tells crawlers/bots what they can and can't access (currently they're allowed to crawl everything).
-Of course crawlers could just ignore this file, but the big ones (GoogleBot, Bingbot, DuckDuckBot, etc) honor this file.
+A file that tells crawlers/bots what they can and can't access (currently they're allowed to crawl everything). Of course crawlers could just ignore this file, but the big ones (GoogleBot, Bingbot, DuckDuckBot, etc) honor this file.
 
 ## Financial Support
 

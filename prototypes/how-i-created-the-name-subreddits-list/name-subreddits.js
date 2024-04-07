@@ -8120,11 +8120,12 @@ const urls = [
 	// "https://old.reddit.com/r/whitman/about/.json",
 	// "https://old.reddit.com/r/whittaker/about/.json",
 	// "https://old.reddit.com/r/who/about/.json",
-	"https://old.reddit.com/r/whoopee/about/.json"];
+	"https://old.reddit.com/r/whoopee/about/.json",
+];
 
 const sleep = (milliseconds) => {
-	return new Promise(resolve => setTimeout(resolve, milliseconds))
-}
+	return new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
 
 // t1	comment
 // t2	account
@@ -8140,34 +8141,33 @@ const doSomething = async () => {
 	for (let i = 0; i < urls.length; i++) {
 		const element = urls[i];
 		// this sleep exists to rate the limit to 30 per minute.
-		await sleep(2000)
-		fetch(element)
-			.then(response => {
-				response.json().then(d => {
-					result.push({
-						wiki_enabled: d.data.wiki_enabled,
-						display_name: d.data.display_name,
-						active_user_count: d.data.active_user_count,
-						accounts_active: d.data.accounts_active,
-						subscribers: d.data.subscribers,
-						quarantine: d.data.quarantine,
-						emojis_enabled: d.data.emojis_enabled,
-						// * 1000 to get the accurate new Date (created).toString()
-						created: d.data.created,
-						submission_type: d.data.submission_type,
-						subreddit_type: d.data.subreddit_type,
-						over18: d.data.over18,
-						// * 1000 to get the accurate new Date (created).toString()
-						created_utc: d.data.created_utc,
-						emojis_enabled: d.data.emojis_enabled,
-					});
+		await sleep(2000);
+		fetch(element).then((response) => {
+			response.json().then((d) => {
+				result.push({
+					wiki_enabled: d.data.wiki_enabled,
+					display_name: d.data.display_name,
+					active_user_count: d.data.active_user_count,
+					accounts_active: d.data.accounts_active,
+					subscribers: d.data.subscribers,
+					quarantine: d.data.quarantine,
+					emojis_enabled: d.data.emojis_enabled,
+					// * 1000 to get the accurate new Date (created).toString()
+					created: d.data.created,
+					submission_type: d.data.submission_type,
+					subreddit_type: d.data.subreddit_type,
+					over18: d.data.over18,
+					// * 1000 to get the accurate new Date (created).toString()
+					created_utc: d.data.created_utc,
+					emojis_enabled: d.data.emojis_enabled,
 				});
 			});
+		});
 		document.getElementById("result").innerHTML = JSON.stringify(result);
 	}
 	return result;
-}
+};
 
-doSomething().then(result => {
+doSomething().then((result) => {
 	document.getElementById("result").innerHTML = JSON.stringify(result);
 });

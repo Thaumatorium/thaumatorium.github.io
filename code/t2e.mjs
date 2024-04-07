@@ -3,11 +3,11 @@ const out_encode = document.getElementById("t2e-out-encode");
 const in_decode = document.getElementById("t2e-in-decode");
 const out_decode = document.getElementById("t2e-out-decode");
 
-in_encode.addEventListener('input', () => {
+in_encode.addEventListener("input", () => {
 	let result = "";
-	Array.from(in_encode.value).map(letter => {
+	Array.from(in_encode.value).map((letter) => {
 		// turn each letter into the emoji, where the description starts with each letter
-		let emoji = unicode.filter(obj => obj.description[0].toLowerCase() == letter.toLowerCase());
+		let emoji = unicode.filter((obj) => obj.description[0].toLowerCase() == letter.toLowerCase());
 		if (emoji?.length > 0) {
 			result += emoji[0].unicode;
 		} else {
@@ -17,17 +17,17 @@ in_encode.addEventListener('input', () => {
 	out_encode.value = result;
 });
 
-out_encode.addEventListener('click', () => {
+out_encode.addEventListener("click", () => {
 	out_encode.select();
-	document.execCommand('copy');
+	document.execCommand("copy");
 });
 
-in_decode.addEventListener('input', () => {
+in_decode.addEventListener("input", () => {
 	let result = "";
 	let val = in_decode.value;
-	Array.from(val).map(emoji => {
+	Array.from(val).map((emoji) => {
 		// turn each letter into the emoji, where the description starts with each letter
-		let obj = unicode.filter(obj => obj.unicode == emoji);
+		let obj = unicode.filter((obj) => obj.unicode == emoji);
 		if (obj?.length > 0) {
 			result += obj[0].description[0].toLowerCase();
 		} else {
@@ -37,9 +37,9 @@ in_decode.addEventListener('input', () => {
 	out_decode.value = result;
 });
 
-out_decode.addEventListener('click', () => {
+out_decode.addEventListener("click", () => {
 	out_decode.select();
-	document.execCommand('copy');
+	document.execCommand("copy");
 });
 
 let unicode = JSON.parse(`[{"code": ["U+0023", "U+FE0F", "U+20E3"], "unicode": "#️⃣", "description": "keycap: #"},

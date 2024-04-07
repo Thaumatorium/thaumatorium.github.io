@@ -5,10 +5,10 @@ const getStartPoint = (imageData) => {
 		let pixel = imageData[0][i];
 		if (pixel.r == 255) {
 			// return a 2D vector
-			return { x: i, y: 0, colour: COLOUR.GREEN }
+			return { x: i, y: 0, colour: COLOUR.GREEN };
 		}
 	}
-}
+};
 
 const getEndPoint = (imageData) => {
 	for (let i = 0; i < imageData.width; i++) {
@@ -16,26 +16,17 @@ const getEndPoint = (imageData) => {
 		let pixel = imageData[imageData.height - 1][i];
 		if (pixel.r == 255) {
 			// return a 2D vector
-			return { x: i, y: imageData.height - 1 }
+			return { x: i, y: imageData.height - 1 };
 		}
 	}
-}
+};
 
 const drawPixel = (x, y, colour) => {
-	MAZE.ctx.fillStyle =
-		"rgba(" +
-		colour.r +
-		"," +
-		colour.g +
-		"," +
-		colour.b +
-		"," +
-		colour.a / 255 +
-		")";
+	MAZE.ctx.fillStyle = "rgba(" + colour.r + "," + colour.g + "," + colour.b + "," + colour.a / 255 + ")";
 	MAZE.ctx.fillRect(x, y, 1, 1);
 };
 
-const getBitmapData = HTMLImageElement => {
+const getBitmapData = (HTMLImageElement) => {
 	const canvas = document.createElement("canvas");
 	canvas.width = HTMLImageElement.width;
 	canvas.height = HTMLImageElement.height;
@@ -43,12 +34,7 @@ const getBitmapData = HTMLImageElement => {
 	const context = canvas.getContext("2d");
 	context.drawImage(HTMLImageElement, 0, 0, HTMLImageElement.width, HTMLImageElement.height);
 
-	const imageData = context.getImageData(
-		0,
-		0,
-		HTMLImageElement.width,
-		HTMLImageElement.height
-	).data;
+	const imageData = context.getImageData(0, 0, HTMLImageElement.width, HTMLImageElement.height).data;
 
 	const Uint8ClampedArrayToObjectArray = (RGBAlphaArray, width, height) => {
 		let result = [];
@@ -61,10 +47,10 @@ const getBitmapData = HTMLImageElement => {
 			for (let x = 0; x < width * 4; x += 4) {
 				const stepSize = 4;
 				const pixel = {
-					r: RGBAlphaArray[(x + 0) + (y * width * stepSize)],
-					g: RGBAlphaArray[(x + 1) + (y * width * stepSize)],
-					b: RGBAlphaArray[(x + 2) + (y * width * stepSize)],
-					a: RGBAlphaArray[(x + 3) + (y * width * stepSize)]
+					r: RGBAlphaArray[x + 0 + y * width * stepSize],
+					g: RGBAlphaArray[x + 1 + y * width * stepSize],
+					b: RGBAlphaArray[x + 2 + y * width * stepSize],
+					a: RGBAlphaArray[x + 3 + y * width * stepSize],
 				};
 				row.push(pixel);
 			}
@@ -74,11 +60,7 @@ const getBitmapData = HTMLImageElement => {
 		return result;
 	};
 
-	return Uint8ClampedArrayToObjectArray(
-		imageData,
-		HTMLImageElement.width,
-		HTMLImageElement.height
-	);
+	return Uint8ClampedArrayToObjectArray(imageData, HTMLImageElement.width, HTMLImageElement.height);
 };
 
 const MAZE = {
@@ -89,7 +71,7 @@ const MAZE = {
 	scale: 10,
 	path: [],
 	endPoint: null,
-}
+};
 
 MAZE.image.src = `mazes/maze.png`;
 MAZE.image.onload = () => {
@@ -101,7 +83,7 @@ MAZE.image.onload = () => {
 	MAZE.canvas.height *= MAZE.scale;
 	MAZE.ctx.scale(MAZE.scale, MAZE.scale);
 	MAZE.ctx.imageSmoothingEnabled = false;
-}
+};
 
 /****************************************************************
  * set events for HTML elements
@@ -109,7 +91,7 @@ MAZE.image.onload = () => {
 const selectedMaze = document.getElementById("selected-maze");
 selectedMaze.onchange = () => {
 	console.log(`You have chosen ${selectedMaze.value}`);
-	MAZE.image.src = selectedMaze.value
+	MAZE.image.src = selectedMaze.value;
 	MAZE.path = [getStartPoint(MAZE.bitmap)];
 };
 
@@ -130,7 +112,7 @@ const playAnimation = document.getElementById("play-animation");
 playAnimation.onclick = () => {
 	MAZE.path = [getStartPoint(MAZE.bitmap)];
 
-	console.log(`starting animation`)
+	console.log(`starting animation`);
 	window.requestAnimationFrame(step);
 };
 
@@ -139,7 +121,7 @@ const COLOUR = {
 	BLACK: { r: 0, g: 0, b: 0, a: 255 },
 	WHITE: { r: 255, g: 255, b: 255, a: 255 },
 	RED: { r: 255, g: 0, b: 0, a: 255 },
-	GREEN: { r: 0, g: 255, b: 0, a: 255 }
+	GREEN: { r: 0, g: 255, b: 0, a: 255 },
 };
 
 const addNewDir = (x, y) => {
@@ -177,10 +159,10 @@ const addNewDir = (x, y) => {
 			return;
 		}
 	}
-}
+};
 
 const step = (timestamp) => {
-	console.log(`step: ${timestamp}`)
+	console.log(`step: ${timestamp}`);
 	MAZE.ctx.clearRect(0, 0, MAZE.canvas.width, MAZE.canvas.height);
 	MAZE.ctx.drawImage(MAZE.image, 0, 0, MAZE.image.width, MAZE.image.height);
 
@@ -189,7 +171,7 @@ const step = (timestamp) => {
 
 	for (let i = 0; i < MAZE.path.length; i++) {
 		const pixel = MAZE.path[i];
-		drawPixel(pixel.x, pixel.y, pixel.colour)
+		drawPixel(pixel.x, pixel.y, pixel.colour);
 	}
 
 	if (currentPos.x === MAZE.endPoint.x && currentPos.y === MAZE.endPoint.y) {
@@ -197,4 +179,4 @@ const step = (timestamp) => {
 	}
 
 	window.requestAnimationFrame(step);
-}
+};
