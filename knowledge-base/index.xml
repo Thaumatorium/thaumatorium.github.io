@@ -12,16 +12,8 @@
       <title>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex</title>
       <link>http://thaumatorium.com/knowledge-base/_index-old/</link>
       <pubDate>Mon, 17 Aug 2020 16:55:37 +0100</pubDate>
-
       <guid>http://thaumatorium.com/knowledge-base/_index-old/</guid>
-      <description>For now (2020-07-16) it&amp;rsquo;s just snippets of JS and regex that I use every now and then
-I&amp;rsquo;d use GitHub for that, but I have a tendency to forget GitHub Gist exists…
-Open all chapters
-Close all chapters
-Online Tools
-These are websites/webpages that I use to optimize this site.
-Tool name What to use it for SVGOMG! &amp;ldquo;SVG Optimizer&amp;rsquo;s Missing GUI&amp;rdquo;, an online SVG optimizer Google&amp;rsquo;s Closure Compiler A Javascript optimizer - turns modern JS into highly optimized, yet compatible, Javascript.</description>
+      <description>For now (2020-07-16) it&amp;rsquo;s just snippets of JS and regex that I use every now and then&#xA;I&amp;rsquo;d use GitHub for that, but I have a tendency to forget GitHub Gist exists…&#xA;Open all chapters&#xD;Close all chapters&#xD;Online Tools&#xD;These are websites/webpages that I use to optimize this site.&#xA;Tool name What to use it for SVGOMG! &amp;ldquo;SVG Optimizer&amp;rsquo;s Missing GUI&amp;rdquo;, an online SVG optimizer Google&amp;rsquo;s Closure Compiler A Javascript optimizer - turns modern JS into highly optimized, yet compatible, Javascript.</description>
     </item>
-
   </channel>
 </rss>
