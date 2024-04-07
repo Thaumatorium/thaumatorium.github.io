@@ -6,7 +6,21 @@
     <description>Recent content in Articles on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2020 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://thaumatorium.com/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://thaumatorium.com/articles/on-computable-numbers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://thaumatorium.com/articles/on-computable-numbers/</guid>
+      <description>&lt;!doctype html&gt;&#xD;On Computable Numbers, with an Application to the Entscheidungsproblem | The Thaumatorium&#xD;ON COMPUTABLE NUMBERS, WITH AN APPLICATION TO THE ENTSCHEIDUNGSPROBLEM&#xD;By A. M. TURING.&#xD;[Received 28 May, 1936.—Read 12 November, 1936.]&#xD;The “computable” numbers may be described briefly as the real numbers whose expressions as a decimal are calculable by finite means. Although the subject of this paper is ostensibly the computable numbers, it is almost equally easy to define and investigate computable functions of an integral variable or a real or computable variable, computable predicates, and so forth.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://thaumatorium.com/articles/the-unabomber-trial-the-manifesto/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://thaumatorium.com/articles/the-unabomber-trial-the-manifesto/</guid>
+      <description>&lt;!doctype html&gt;&#xD;The Unabomber Trial: The Manifesto | The Thaumatorium&#xD;The Thaumatorium:&#xD;Where the magic happens&#xD;Last updated: Main nav menu&#xD;Frontpage - Articles - Projects - Experimentations - Code of Conduct - Random video - Hardware - Knowledge Base - About&#xD;This page is not publically accessible because people will think I support his terrorst actions, because people&#xD;are idiots.&#xA;I just want to figure out what made this man tic.</description>
+    </item>
   </channel>
 </rss>

@@ -1,86 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
-
-<head prefix="og: http://ogp.me/ns#">
-	<meta charset=utf-8 />
-	<title>404 Page not found | The Thaumatorium</title>
-	<meta name=description content="" />
-	<link rel="canonical" href="https://thaumatorium.com/">
-	<meta name=theme-color content=#800 />
-	<link rel=apple-touch-icon href=/images/icons-192.png>
-	<meta name=viewport content="width=device-width, initial-scale=1">
-	<link rel=webmanifest href=/manifest.json />
-	<link rel=icon href=/images/favicon.svg />
-	<link rel=stylesheet href="/styles/main.css?v=3" />
-	<link rel=stylesheet href="/styles/projects.css?v=3" />
-	<meta property="og:url" content="https://thaumatorium.com/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="404 Page not found" />
-	<meta property="og:description" content="" />
-	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
-	<meta property="og:image:width" content="1280" />
-	<meta property="og:image:height" content="668" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@NostraDavid2" />
-	<meta name="twitter:creator" content="@NostraDavid2" />
-	<meta name="twitter:title" content="404 Page not found">
-	<meta name="twitter:description" content="">
-	<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1">
-	<meta name="twitter:image:width" content="1280" />
-	<meta name="twitter:image:height" content="668" />
-</head>
-
-<body>
-	<header>
-		<div class=title>The Thaumatorium:</div>
-		<div class=subtitle>Where the magic happens</div>
-	</header>
-	<nav>
-		<h5 style="display: none;">Main nav menu</h5>
-		<a href="/">Frontpage</a><span> - </span>
-		<a href=/articles>Articles</a><span> - </span>
-		<a href=/projects>Projects</a><span> - </span>
-		<a href=/experimentations>Experimentations</a><span> - </span>
-		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
-		<a href=/random-video>Random video</a><span> - </span>
-		<a href=/hardware>Hardware</a><span> - </span>
-		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
-		<a href=/about>About</a>
-	</nav>
-	<main>
-		<h1>404 Not Found</h1>
-		<p>This is the new page</p>
-		<p>You've gone somewhere, where you're not supposed to be! That or I removed the page. It's likely my fault.</p>
-		<p>Give the archives a try: <a id=archive></a></p>
-		<p>Or search the site</p>
-		<script async src="https://cse.google.com/cse.js?cx=007273406661708460536:ir7f8zjh3fd"></script>
-		<div class="gcse-search"></div>
-		<footer>
-			PS: Hit me up (on one of the links in the footer) if any other search engine provides a customized search. This version is by Google, but I'd like to NOT use Google if I could. They already have enough power on the internet.
-		</footer>
-		<script>
-			const target = "https://web.archive.org/" + window.location.href;
-			let archiveLink = document.getElementById("archive");
-			archiveLink.href = target;
-			archiveLink.innerHTML = target;
-		</script>
-	</main>
-	<footer>
-		<div class=copyright>
-			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
-			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
-			<p><sub>Last updated: <time id=updated>0001-01-01</time></sub></p>
-		</div>
-		<nav id=profiles>
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>404 Page not found | The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="404 Page not found" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="404 Page not found" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ol>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ol>
 		</nav>
-		<a class=secret onclick=specialGoto(event)>π</a>
-		<script>
-			const specialGoto = event => {
-				if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
-			}
-		</script>
-	</footer>
-</body>
-
+		<main>
+			<h1>404 Not Found</h1>
+			<p>This is the new page</p>
+			<p>You've gone somewhere, where you're not supposed to be! That or I removed the page. It's likely my fault.</p>
+			<p>Give the archives a try: <a id="archive"></a></p>
+			<p>Or search the site</p>
+			<script async src="https://cse.google.com/cse.js?cx=007273406661708460536:ir7f8zjh3fd"></script>
+			<div class="gcse-search"></div>
+			<footer>PS: Hit me up (on one of the links in the footer) if any other search engine provides a customized search. This version is by Google, but I'd like to NOT use Google if I could. They already have enough power on the internet.</footer>
+			<script>
+				const target = "https://web.archive.org/" + window.location.href;
+				let archiveLink = document.getElementById("archive");
+				archiveLink.href = target;
+				archiveLink.innerHTML = target;
+			</script>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">0001-01-01</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
 </html>

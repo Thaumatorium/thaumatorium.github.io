@@ -1,25 +1,27 @@
 <header>
-	<div class=title>The Thaumatorium:</div>
-	<div class=subtitle>Where the magic happens</div>
+	<div class="title">The Thaumatorium:</div>
+	<div class="subtitle">Where the magic happens</div>
 </header>
 <nav>
-	<h5 style="display: none;">Main nav menu</h5>
-	<a href="/">Frontpage</a><span> - </span>
-	<a href=/articles>Articles</a><span> - </span>
-	<a href=/projects>Projects</a><span> - </span>
-	<a href=/experimentations>Experimentations</a><span> - </span>
-	<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
-	<a href=/random-video>Random video</a><span> - </span>
-	<a href=/hardware>Hardware</a><span> - </span>
-	<a href=/knowledge-base>Knowledge Base</a><span> - </span>
-	<a href=/about>About</a>
+	<h5 style="display: none">Main nav menu</h5>
+	<ol>
+		<li><a href="/">Frontpage</a><span> - </span></li>
+		<li><a href="/articles">Articles</a><span> - </span></li>
+		<li><a href="/projects">Projects</a><span> - </span></li>
+		<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+		<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+		<li><a href="/random-video">Random video</a><span> - </span></li>
+		<li><a href="/hardware">Hardware</a><span> - </span></li>
+		<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+		<li><a href="/about">About</a></li>
+	</ol>
 </nav>
 <h1>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex</h1>
 <p>For now (2020-07-16) it&rsquo;s just snippets of JS and regex that I use every now and then</p>
 <p>I&rsquo;d use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
 <div>
-	<button class=button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = true});">Open all chapters</button>
-	<button class=button type=button onclick="document.querySelectorAll(`details`).forEach(el => {el.open = false});">Close all chapters</button>
+	<button class="button" type="button" onclick="document.querySelectorAll(`details`).forEach(el => {el.open = true});">Open all chapters</button>
+	<button class="button" type="button" onclick="document.querySelectorAll(`details`).forEach(el => {el.open = false});">Close all chapters</button>
 </div>
 <details>
 	<summary>
@@ -36,7 +38,9 @@
 		<tbody>
 			<tr>
 				<td><a href="https://jakearchibald.github.io/svgomg/">SVGOMG!</a></td>
-				<td>&ldquo;<a href="https://github.com/svg/svgo"><strong>SVG O</strong>ptimizer</a>&rsquo;s <strong>M</strong>issing <strong>G</strong>UI&rdquo;, an online SVG optimizer</td>
+				<td>
+					&ldquo;<a href="https://github.com/svg/svgo"><strong>SVG O</strong>ptimizer</a>&rsquo;s <strong>M</strong>issing <strong>G</strong>UI&rdquo;, an online SVG optimizer
+				</td>
 			</tr>
 			<tr>
 				<td><a href="https://closure-compiler.appspot.com/home">Google&rsquo;s Closure Compiler</a></td>
@@ -80,7 +84,7 @@
 				<td>Open all collapsed comments on a reddit comment page</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.expand&#34;</span>)
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.expand&#34;</span>)
 </span></span><span style="display:flex;"><span>				.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">el</span> =&gt; {
 </span></span><span style="display:flex;"><span>					<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;[+]&#34;</span>) {
 </span></span><span style="display:flex;"><span>						<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">click</span>();
@@ -91,7 +95,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Manipulating Unicode strings per code point, not per byte. <code class=lang-javascript>"".split()</code> gives you bytes, not codepoints</td>
+				<td>Manipulating Unicode strings per code point, not per byte. <code class="lang-javascript">"".split()</code> gives you bytes, not codepoints</td>
 				<td>
 					<pre><code>```js
 Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗&quot;);
@@ -100,10 +104,10 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				</td>
 			</tr>
 			<tr>
-				<td>Remove all <code class=lang-css>.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
+				<td>Remove all <code class="lang-css">.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.bighead&#34;</span>)
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span>document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;.bighead&#34;</span>)
 </span></span><span style="display:flex;"><span>	.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">el</span> =&gt; {
 </span></span><span style="display:flex;"><span>		<span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">parentElement</span>
 </span></span><span style="display:flex;"><span>			.<span style="color:#a6e22e">removeChild</span>(<span style="color:#a6e22e">el</span>)
@@ -116,7 +120,7 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Make console.log use colors</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONSOLE_STYLE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;background: #800; color: #fff; padding: 2px&#34;</span>;
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONSOLE_STYLE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;background: #800; color: #fff; padding: 2px&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;%cService worker installing&#39;</span>, <span style="color:#a6e22e">CONSOLE_STYLE</span>);
 </span></span></code></pre>
 					</div>
@@ -126,7 +130,7 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>This opens all <samp>are you sure?</samp> dialogs for comments, on a profile page of Reddit</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ys</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;score likes&#34;</span>))
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ys</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;score likes&#34;</span>))
 </span></span><span style="display:flex;"><span>							.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">e</span> =&gt; parseInt(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">title</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>)
 </span></span><span style="display:flex;"><span>							.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">e</span> =&gt; <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">parentElement</span>.<span style="color:#a6e22e">parentElement</span>.<span style="color:#a6e22e">parentElement</span>)
 </span></span><span style="display:flex;"><span>							.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">el</span> =&gt; <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">`[data-event-action*=&#34;delete&#34;]`</span>));
@@ -141,7 +145,7 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Removing duplicates</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Den Haag&#34;</span>,<span style="color:#e6db74">&#34;Den Haag&#34;</span>,
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Den Haag&#34;</span>,<span style="color:#e6db74">&#34;Den Haag&#34;</span>,
 </span></span><span style="display:flex;"><span>								<span style="color:#e6db74">&#34;Utrecht&#34;</span>, <span style="color:#e6db74">&#34;Utrecht&#34;</span>,
 </span></span><span style="display:flex;"><span>								<span style="color:#e6db74">&#34;Arnhem&#34;</span>, <span style="color:#e6db74">&#34;Arnhem&#34;</span>,
 </span></span><span style="display:flex;"><span>								<span style="color:#e6db74">&#34;MiddelBurg&#34;</span>, <span style="color:#e6db74">&#34;MiddelBurg&#34;</span>,
@@ -156,7 +160,7 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[query goes here]&#34;</span>);
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[query goes here]&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(() =&gt; {<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#a6e22e">xs</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">click</span>(); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;}, <span style="color:#ae81ff">1100</span>);
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">id</span>);
@@ -165,10 +169,10 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				</td>
 			</tr>
 			<tr>
-				<td> Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
+				<td>Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;subreddit hover&#34;</span>))
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span>Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;subreddit hover&#34;</span>))
 </span></span><span style="display:flex;"><span>									 .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">el</span> =&gt; <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;TheLastOfUs2&#34;</span>)
 </span></span><span style="display:flex;"><span>									 .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">el</span> =&gt; <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">parentElement</span>.<span style="color:#a6e22e">parentElement</span>)
 </span></span><span style="display:flex;"><span>									 .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">el</span> =&gt; {
@@ -184,7 +188,7 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Use on Twitch to track the amount of currently used emotes</td>
 				<td>
 					<div class="highlight">
-						<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">groupBy</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">xs</span>, <span style="color:#a6e22e">key</span>) =&gt; <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">x</span>) =&gt; {
+						<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">groupBy</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">xs</span>, <span style="color:#a6e22e">key</span>) =&gt; <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">x</span>) =&gt; {
 </span></span><span style="display:flex;"><span>	(<span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">x</span>[<span style="color:#a6e22e">key</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">x</span>[<span style="color:#a6e22e">key</span>]] <span style="color:#f92672">||</span> []).<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">x</span>);
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">acc</span>;
 </span></span><span style="display:flex;"><span>}, {});
@@ -225,11 +229,14 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 		</thead>
 		<tbody>
 			<tr>
-				<td>Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br> Edit the number in between {} to find the nth comma.</td>
+				<td>
+					Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br />
+					Edit the number in between {} to find the nth comma.
+				</td>
 				<td><code>,(?=(?:[^,]*,){3}[^,]*$)</code></td>
 			</tr>
 			<tr>
-				<td>Every line that doesn&rsquo;t start with a . via regex;<br>I was trying to filter bootstrap.css from all non-classes</td>
+				<td>Every line that doesn&rsquo;t start with a . via regex;<br />I was trying to filter bootstrap.css from all non-classes</td>
 				<td><code>^((?!^\.).)*$</code></td>
 			</tr>
 			<tr>
@@ -237,7 +244,7 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td><code>[:].*$</code></td>
 			</tr>
 			<tr>
-				<td>Find non-ASCII letters in vscode;<br>Great for finding unicode characters in copied code, because Haskell can&rsquo;t handle Unicode in your comments&hellip;</td>
+				<td>Find non-ASCII letters in vscode;<br />Great for finding unicode characters in copied code, because Haskell can&rsquo;t handle Unicode in your comments&hellip;</td>
 				<td><code>([^\x00-\x7F])</code></td>
 			</tr>
 			<tr>
@@ -462,18 +469,18 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 	</table>
 </details>
 <footer>
-	<div class=copyright>
-		©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-		– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
-		<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
-		<p><sub>Last updated: <time id=updated></time></sub></p>
+	<div class="copyright">
+		©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+		<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+		<p>
+			<sub>Last updated: <time id="updated"></time></sub>
+		</p>
 	</div>
-	<nav id=profiles>
-	</nav>
-	<a class=secret onclick=specialGoto(event)>π</a>
+	<nav id="profiles"></nav>
+	<a class="secret" onclick="specialGoto(event)">π</a>
 	<script>
-		const specialGoto = event => {
+		const specialGoto = (event) => {
 			if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
-		}
+		};
 	</script>
 </footer>

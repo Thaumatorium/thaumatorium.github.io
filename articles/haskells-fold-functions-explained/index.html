@@ -1,98 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
-
-<head prefix="og: http://ogp.me/ns#">
-	<meta charset=utf-8 />
-	<title>Haskell&#39;s fold functions explained | The Thaumatorium</title>
-	<meta name=description content="It&#39;s comparable to the map function, but isn&#39;t ambigious about its direction" />
-	<link rel="canonical" href="https://thaumatorium.com/">
-	<meta name=theme-color content=#800 />
-	<link rel=apple-touch-icon href=/images/icons-192.png>
-	<meta name=viewport content="width=device-width, initial-scale=1">
-	<link rel=webmanifest href=/manifest.json />
-	<link rel=icon href=/images/favicon.svg />
-	<link rel=stylesheet href="/styles/main.css?v=3" />
-	<link rel=stylesheet href="/styles/projects.css?v=3" />
-	<meta property="og:url" content="https://thaumatorium.com/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Haskell&#39;s fold functions explained" />
-	<meta property="og:description" content="It&#39;s comparable to the map function, but isn&#39;t ambigious about its direction" />
-	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
-	<meta property="og:image:width" content="1280" />
-	<meta property="og:image:height" content="668" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@NostraDavid2" />
-	<meta name="twitter:creator" content="@NostraDavid2" />
-	<meta name="twitter:title" content="Haskell&#39;s fold functions explained">
-	<meta name="twitter:description" content="It&#39;s comparable to the map function, but isn&#39;t ambigious about its direction">
-	<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1">
-	<meta name="twitter:image:width" content="1280" />
-	<meta name="twitter:image:height" content="668" />
-</head>
-
-<body>
-	<header>
-		<div class=title>The Thaumatorium:</div>
-		<div class=subtitle>Where the magic happens</div>
-	</header>
-	<nav>
-		<h5 style="display: none;">Main nav menu</h5>
-		<a href="/">Frontpage</a><span> - </span>
-		<a href=/articles>Articles</a><span> - </span>
-		<a href=/projects>Projects</a><span> - </span>
-		<a href=/experimentations>Experimentations</a><span> - </span>
-		<a href=/code-of-conduct>Code of Conduct</a><span> - </span>
-		<a href=/random-video>Random video</a><span> - </span>
-		<a href=/hardware>Hardware</a><span> - </span>
-		<a href=/knowledge-base>Knowledge Base</a><span> - </span>
-		<a href=/about>About</a>
-	</nav>
-	<main>
-		<h1>Haskell&#39;s fold functions explained</h1>
-		<hgroup>
-			<div class=article-meta>
-				<div class=author-box>Author: <span class=author>NostraDavid</span></div>
-				<div class=published-box>Published: <time class=published datetime=2017-12-05T18:45:15+01:00>2019-05-01</time></div>
-				<div class=published-box>Updated: <time class=published datetime=2017-12-05T18:45:15+01:00>2019-05-01</time></div>
-			</div>
-		</hgroup>
-		<p>Protip: Use <a href="https://repl.it/">https://repl.it/</a> to run your own little test programs, yes they support other languages than Haskell too.</p>
-		<p>Haskell&rsquo;s fold functions are Higher Order and Recursive functions (if you&rsquo;ve read <a href="https://thaumatorium.wordpress.com/2018/10/15/types-or-classes-of-haskell-functions">Types (or classes) of Haskell functions</a>, you&rsquo;ll know what that is) where it takes a function, a first/final item (more on this later), a list of things and returns a single reduces item.</p>
-		<h2 id="foldr">
-			<a class="self-link" href="#foldr">
-				Foldr
-			</a>
-		</h2>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> <span style="color:#f92672">::</span> (a <span style="color:#f92672">-&gt;</span> b <span style="color:#f92672">-&gt;</span> b) <span style="color:#f92672">-&gt;</span> b <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> b
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Haskell&#39;s fold functions explained | The Thaumatorium</title>
+		<meta name="description" content="It&#39;s comparable to the map function, but isn&#39;t ambigious about its direction" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Haskell&#39;s fold functions explained" />
+		<meta property="og:description" content="It&#39;s comparable to the map function, but isn&#39;t ambigious about its direction" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Haskell&#39;s fold functions explained" />
+		<meta name="twitter:description" content="It&#39;s comparable to the map function, but isn&#39;t ambigious about its direction" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ol>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ol>
+		</nav>
+		<main>
+			<h1>Haskell&#39;s fold functions explained</h1>
+			<hgroup>
+				<div class="article-meta">
+					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
+					<div class="published-box">Published: <time class="published" datetime="2019-05-01T00:00:00&#43;01:00">2019-05-01</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2019-05-01T00:00:00&#43;01:00">2019-05-01</time></div>
+				</div>
+			</hgroup>
+			<p>Protip: Use <a href="https://repl.it/">https://repl.it/</a> to run your own little test programs, yes they support other languages than Haskell too.</p>
+			<p>Haskell&rsquo;s fold functions are Higher Order and Recursive functions (if you&rsquo;ve read <a href="https://thaumatorium.wordpress.com/2018/10/15/types-or-classes-of-haskell-functions">Types (or classes) of Haskell functions</a>, you&rsquo;ll know what that is) where it takes a function, a first/final item (more on this later), a list of things and returns a single reduces item.</p>
+			<h2 id="foldr">
+				<a class="self-link" href="#foldr"> Foldr </a>
+			</h2>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> <span style="color:#f92672">::</span> (a <span style="color:#f92672">-&gt;</span> b <span style="color:#f92672">-&gt;</span> b) <span style="color:#f92672">-&gt;</span> b <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> b
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> f z <span style="color:#66d9ef">[]</span>		 <span style="color:#f92672">=</span> z
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> f z (x<span style="color:#66d9ef">:</span>xs) <span style="color:#f92672">=</span> f x (foldr f z xs)
 </span></span></code></pre>
-		</div>
-		<p>There are two cases:</p>
-		<ul>
-			<li>The base case (where the input list is empty)</li>
-			<li>The general case (where the input list is not empty), one items gets reduced and the function is recursively called on the rest of the list.</li>
-		</ul>
-		<p>Now lets run foldr:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> (<span style="color:#f92672">+</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+			</div>
+			<p>There are two cases:</p>
+			<ul>
+				<li>The base case (where the input list is empty)</li>
+				<li>The general case (where the input list is not empty), one items gets reduced and the function is recursively called on the rest of the list.</li>
+			</ul>
+			<p>Now lets run foldr:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> (<span style="color:#f92672">+</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span></code></pre>
-		</div>
-		<p>As you notice the + operator is placed in parentheses. This is to prevent the direct application of +. When you&rsquo;re actually run command above without the parentheses you&rsquo;ll see you&rsquo;ll get an error. (try it on the pre-mentioned <a href="https://repl.it/">https://repl.it/</a> website!)</p>
-		<p>The answer is <code>10</code>, as <code>1 + 2 + 3 + 4 = 10</code>, but what&rsquo;s that <code>0</code> doing there? That is the identity value for <code>+</code>. I haven&rsquo;t written an article about the identity value for operators (or functions), but here&rsquo;s what you need to know: The identity value of a function means that if you put any other value in, you&rsquo;ll get that value back out: <code>x + 0 = x</code>.</p>
-		<p>Other operators may have different values:</p>
-		<ul>
-			<li>Subtraction (<code>-</code>) has <code>0</code> (<code>x – 0 = x</code>) as identity</li>
-			<li>Multiplication (<code>*</code>) has <code>1</code> (multiplying by <code>0</code> would always give you <code>0</code>, which is unwanted behavior) as identity</li>
-			<li>Division (<code>/</code>) has <code>1</code> as identity</li>
-			<li>Exponentiation (<code>^</code>) (aka &ldquo;the power operator&rdquo;) also has <code>1</code> as identity value.</li>
-			<li><code>f()</code> where <code>f</code> outputs a list has the empty list (<code>[]</code>) as identity</li>
-		</ul>
-		<p>But how is 10 calculated? Since the function is called fold <strong>right</strong>, we know two things: all grouped parentheses (more on that below the executed code) are on the right and the identity value will be the last value inserted.</p>
-		<p>If I run the code by hand (if you&rsquo;ve ever followed a Logic course, you&rsquo;ll recognize this as <strong>induction</strong>) we&rsquo;ll get the following execution:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> (<span style="color:#f92672">+</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+			</div>
+			<p>As you notice the + operator is placed in parentheses. This is to prevent the direct application of +. When you&rsquo;re actually run command above without the parentheses you&rsquo;ll see you&rsquo;ll get an error. (try it on the pre-mentioned <a href="https://repl.it/">https://repl.it/</a> website!)</p>
+			<p>The answer is <code>10</code>, as <code>1 + 2 + 3 + 4 = 10</code>, but what&rsquo;s that <code>0</code> doing there? That is the identity value for <code>+</code>. I haven&rsquo;t written an article about the identity value for operators (or functions), but here&rsquo;s what you need to know: The identity value of a function means that if you put any other value in, you&rsquo;ll get that value back out: <code>x + 0 = x</code>.</p>
+			<p>Other operators may have different values:</p>
+			<ul>
+				<li>Subtraction (<code>-</code>) has <code>0</code> (<code>x – 0 = x</code>) as identity</li>
+				<li>Multiplication (<code>*</code>) has <code>1</code> (multiplying by <code>0</code> would always give you <code>0</code>, which is unwanted behavior) as identity</li>
+				<li>Division (<code>/</code>) has <code>1</code> as identity</li>
+				<li>Exponentiation (<code>^</code>) (aka &ldquo;the power operator&rdquo;) also has <code>1</code> as identity value.</li>
+				<li><code>f()</code> where <code>f</code> outputs a list has the empty list (<code>[]</code>) as identity</li>
+			</ul>
+			<p>But how is 10 calculated? Since the function is called fold <strong>right</strong>, we know two things: all grouped parentheses (more on that below the executed code) are on the right and the identity value will be the last value inserted.</p>
+			<p>If I run the code by hand (if you&rsquo;ve ever followed a Logic course, you&rsquo;ll recognize this as <strong>induction</strong>) we&rsquo;ll get the following execution:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> (<span style="color:#f92672">+</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply foldr, since the input is not an empty list we apply the general <span style="color:#66d9ef">case</span> }
 </span></span><span style="display:flex;"><span>(<span style="color:#f92672">+</span>) <span style="color:#ae81ff">1</span> (foldr (<span style="color:#f92672">+</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>])
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply foldr, ditto as before }
@@ -112,32 +110,32 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply the most last <span style="color:#f92672">+</span> operator }
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">10</span>
 </span></span></code></pre>
-		</div>
-		<p>Now when you take a look at the moment all foldrs have been applied, you may see you can rewrite that line from:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>(<span style="color:#f92672">+</span>) <span style="color:#ae81ff">1</span> ((<span style="color:#f92672">+</span>) <span style="color:#ae81ff">2</span> ((<span style="color:#f92672">+</span>) <span style="color:#ae81ff">3</span> ((<span style="color:#f92672">+</span>) <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">0</span>)))
+			</div>
+			<p>Now when you take a look at the moment all foldrs have been applied, you may see you can rewrite that line from:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>(<span style="color:#f92672">+</span>) <span style="color:#ae81ff">1</span> ((<span style="color:#f92672">+</span>) <span style="color:#ae81ff">2</span> ((<span style="color:#f92672">+</span>) <span style="color:#ae81ff">3</span> ((<span style="color:#f92672">+</span>) <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">0</span>)))
 </span></span></code></pre>
-		</div>
-		<p>to</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>)))
+			</div>
+			<p>to</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">+</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">0</span>)))
 </span></span></code></pre>
-		</div>
-		<p>which is more readable (IMO). Now, for this instance, the order of execution doesn&rsquo;t matter at all, but there are certain operators (like subtraction and division) where the order does matter! <code>1/2 = .5</code>, whereas <code>2/1 = 2</code></p>
-		<p>Lets say we execute the next line, what will the answer be?</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> (<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+			</div>
+			<p>which is more readable (IMO). Now, for this instance, the order of execution doesn&rsquo;t matter at all, but there are certain operators (like subtraction and division) where the order does matter! <code>1/2 = .5</code>, whereas <code>2/1 = 2</code></p>
+			<p>Lets say we execute the next line, what will the answer be?</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldr</span> (<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span></code></pre>
-		</div>
-		<p>Lets simplify the executed code above to that cleaned up line right below it:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>)))
+			</div>
+			<p>Lets simplify the executed code above to that cleaned up line right below it:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>)))
 </span></span></code></pre>
-		</div>
-		<p>As I&rsquo;ve mentioned before: all grouped parentheses are grouped on the right (because fold right) and the identity value is also on the right.</p>
-		<p>When we run this code we get:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>)))
+			</div>
+			<p>As I&rsquo;ve mentioned before: all grouped parentheses are grouped on the right (because fold right) and the identity value is also on the right.</p>
+			<p>When we run this code we get:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">4</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">0</span>)))
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply the most inner <span style="color:#f92672">-</span> }
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">3</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span>))
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply the most inner <span style="color:#f92672">-.</span> <span style="color:#66d9ef">Negative</span> values must be wrapped <span style="color:#66d9ef">in</span> parentheses }
@@ -147,23 +145,21 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply the last <span style="color:#f92672">-</span> }
 </span></span><span style="display:flex;"><span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>
 </span></span></code></pre>
-		</div>
-		<h2 id="foldl">
-			<a class="self-link" href="#foldl">
-				Foldl
-			</a>
-		</h2>
-		<p>Definition (again from Wikipedia):</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> <span style="color:#f92672">::</span> (b <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">-&gt;</span> b) <span style="color:#f92672">-&gt;</span> b <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> b
+			</div>
+			<h2 id="foldl">
+				<a class="self-link" href="#foldl"> Foldl </a>
+			</h2>
+			<p>Definition (again from Wikipedia):</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> <span style="color:#f92672">::</span> (b <span style="color:#f92672">-&gt;</span> a <span style="color:#f92672">-&gt;</span> b) <span style="color:#f92672">-&gt;</span> b <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> b
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> f z <span style="color:#66d9ef">[]</span> <span style="color:#f92672">=</span> z
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> f z (x<span style="color:#66d9ef">:</span>xs) <span style="color:#f92672">=</span> foldl f (f z x) xs
 </span></span></code></pre>
-		</div>
-		<p>What is different? The input function has its first types flipped and in the general case you can see that the application of f is moved into location of what was the identity value.</p>
-		<p>Lets run the same code we did last time:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> (<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+			</div>
+			<p>What is different? The input function has its first types flipped and in the general case you can see that the application of f is moved into location of what was the identity value.</p>
+			<p>Lets run the same code we did last time:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> (<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply foldl<span style="color:#f92672">.</span> <span style="color:#66d9ef">Again</span> the list isn&#39;t empty, so we&#39;ll apply the general <span style="color:#66d9ef">case</span> }
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> (<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>) [<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply foldl<span style="color:#f92672">.</span> ditto }
@@ -183,18 +179,18 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply the last <span style="color:#f92672">-</span> }
 </span></span><span style="display:flex;"><span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>)
 </span></span></code></pre>
-		</div>
-		<p>Now, after you&rsquo;ve applied all foldls, we, again, can clean up that code:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>(<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>) <span style="color:#ae81ff">2</span>) <span style="color:#ae81ff">3</span>) <span style="color:#ae81ff">4</span>
+			</div>
+			<p>Now, after you&rsquo;ve applied all foldls, we, again, can clean up that code:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>(<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) ((<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>) <span style="color:#ae81ff">2</span>) <span style="color:#ae81ff">3</span>) <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>(((<span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span>
 </span></span></code></pre>
-		</div>
-		<p>There, much more readable! As you&rsquo;ll notice, the grouped parentheses are now all left (from the name fold left), ditto for the identity value.</p>
-		<p>Sometimes you have to rewrite code to make it make sense in Haskell. It&rsquo;s a sad fact of life. Anyway, if we reduce this cleaned up code we&rsquo;ll get:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>(((<span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span>
+			</div>
+			<p>There, much more readable! As you&rsquo;ll notice, the grouped parentheses are now all left (from the name fold left), ditto for the identity value.</p>
+			<p>Sometimes you have to rewrite code to make it make sense in Haskell. It&rsquo;s a sad fact of life. Anyway, if we reduce this cleaned up code we&rsquo;ll get:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span>(((<span style="color:#ae81ff">0</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply most inner <span style="color:#f92672">-</span> }
 </span></span><span style="display:flex;"><span>(((<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">2</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">3</span>) <span style="color:#f92672">-</span> <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply most inner <span style="color:#f92672">-</span> }
@@ -204,17 +200,15 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { apply most inner <span style="color:#f92672">-</span> }
 </span></span><span style="display:flex;"><span>(<span style="color:#f92672">-</span><span style="color:#ae81ff">10</span>)
 </span></span></code></pre>
-		</div>
-		<p>I think you&rsquo;ve started seeing a pattern with Foldl/Foldr right about now: all parentheses are with the identity value either all left or all right – that&rsquo;s how I&rsquo;ve been able to easily write out most code by hand (I had to use VSCode with the Bracket Pair Colorizer 2 addon with the <code>foldl (-) 0 [1,2,3,4]</code> code to check my parentheses :p )</p>
-		<p>If you&rsquo;ve got any questions (especially when you don&rsquo;t understand a part), let me know down below!</p>
-		<h2 id="alternative-explanation">
-			<a class="self-link" href="#alternative-explanation">
-				Alternative explanation
-			</a>
-		</h2>
-		<p>With either foldl or foldr, the text of the list gets manipulated until something executable is produced:</p>
-		<div class="highlight">
-			<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> (<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
+			</div>
+			<p>I think you&rsquo;ve started seeing a pattern with Foldl/Foldr right about now: all parentheses are with the identity value either all left or all right – that&rsquo;s how I&rsquo;ve been able to easily write out most code by hand (I had to use VSCode with the Bracket Pair Colorizer 2 addon with the <code>foldl (-) 0 [1,2,3,4]</code> code to check my parentheses :p )</p>
+			<p>If you&rsquo;ve got any questions (especially when you don&rsquo;t understand a part), let me know down below!</p>
+			<h2 id="alternative-explanation">
+				<a class="self-link" href="#alternative-explanation"> Alternative explanation </a>
+			</h2>
+			<p>With either foldl or foldr, the text of the list gets manipulated until something executable is produced:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> (<span style="color:#f92672">-</span>) <span style="color:#ae81ff">0</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { add identity value to the left <span style="color:#66d9ef">of</span> the list (because fold left) }
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">foldl</span> (<span style="color:#f92672">-</span>) [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { replace all commas with the function given }
@@ -230,24 +224,23 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> { as last, apply the parentheses, grouped to the right (because fold right)<span style="color:#f92672">.</span> <span style="color:#66d9ef">The</span> length <span style="color:#66d9ef">of</span> the grouped parentheses is the original length <span style="color:#66d9ef">of</span> the list <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> }
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>(<span style="color:#ae81ff">3</span><span style="color:#f92672">-</span>(<span style="color:#ae81ff">4</span><span style="color:#f92672">-</span><span style="color:#ae81ff">0</span>)))
 </span></span></code></pre>
-		</div>
-	</main>
-	<footer>
-		<div class=copyright>
-			©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800;">12019</a>
-			– <a id=target-year href="http://updateyourfooter.com/" style="text-decoration: none; color: #800;">12022</a>,
-			<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800;">Thaumatorium</abbr>
-			<p><sub>Last updated: <time id=updated>2019-05-01</time></sub></p>
-		</div>
-		<nav id=profiles>
-		</nav>
-		<a class=secret onclick=specialGoto(event)>π</a>
-		<script>
-			const specialGoto = event => {
-				if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
-			}
-		</script>
-	</footer>
-</body>
-
+			</div>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2019-05-01</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
 </html>
