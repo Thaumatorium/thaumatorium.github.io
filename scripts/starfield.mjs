@@ -1,4 +1,4 @@
-window.starfield.style = "background:black;"
+window.starfield.style = "background:black;";
 const context = window.starfield.getContext("2d");
 // width and height are overwritten when resizing the window, which is why they're not const
 let height = document.documentElement.clientHeight;
@@ -7,8 +7,8 @@ const depth = 1000 * (height / width);
 const stars = [];
 let max_depth = width;
 const star_count = 50;
-const star_max_size = 2
-const star_max_halo = 15
+const star_max_size = 2;
+const star_max_halo = 15;
 const star_color_range = [
 	{ r: 21, g: 117, b: 254 },
 	{ r: 183, g: 231, b: 253 },
@@ -27,7 +27,7 @@ const rand = (min, max) => Math.random() * (+max - +min) + +min;
 // Create stars
 for (let i = 0; i < star_count; i++) {
 	const size = Math.random() * star_max_size;
-	const brightness = rand((1 / 3), 1);
+	const brightness = rand(1 / 3, 1);
 	const temp = Math.floor(rand(0, star_color_range.length));
 	const rand_color = star_color_range[temp];
 	stars[i] = {
@@ -62,7 +62,7 @@ const step = (timestamp) => {
 		let star = stars[i];
 
 		// move the stars to the left, depending on their size and general speed control
-		star.x -= (star.size * speed);
+		star.x -= star.size * speed;
 
 		// move the star back to the right once it reaches the screen
 		if (star.x < 0) {

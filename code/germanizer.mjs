@@ -3,30 +3,34 @@ const out_encode = document.getElementById("germanizer-out-encode");
 const in_decode = document.getElementById("germanizer-in-decode");
 const out_decode = document.getElementById("germanizer-out-decode");
 
-in_encode.addEventListener('input', () => {
-	out_encode.value = Array.from(in_encode.value).map((m) => encode[m] !== undefined ? encode[m] : m).join("");
+in_encode.addEventListener("input", () => {
+	out_encode.value = Array.from(in_encode.value)
+		.map((m) => (encode[m] !== undefined ? encode[m] : m))
+		.join("");
 });
 
-in_encode.addEventListener('click', () => {
+in_encode.addEventListener("click", () => {
 	in_encode.select();
 });
 
-out_encode.addEventListener('click', () => {
+out_encode.addEventListener("click", () => {
 	out_encode.select();
-	document.execCommand('copy');
+	document.execCommand("copy");
 });
 
-in_decode.addEventListener('click', () => {
+in_decode.addEventListener("click", () => {
 	in_decode.select();
 });
 
-in_decode.addEventListener('input', () => {
-	out_decode.value = Array.from(in_decode.value).map((m) => decode[m] !== undefined ? decode[m] : m).join("");
+in_decode.addEventListener("input", () => {
+	out_decode.value = Array.from(in_decode.value)
+		.map((m) => (decode[m] !== undefined ? decode[m] : m))
+		.join("");
 });
 
-out_decode.addEventListener('click', () => {
+out_decode.addEventListener("click", () => {
 	out_decode.select();
-	document.execCommand('copy');
+	document.execCommand("copy");
 });
 
 const encode = JSON.parse(`{

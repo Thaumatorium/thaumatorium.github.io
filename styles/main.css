@@ -1,158 +1,160 @@
 /* HEADER */
 
-body>header {
+body > header {
 	background: #800;
 	background-size: 256px 256px;
 	padding: 30px 0;
-	text-align: center
+	text-align: center;
 }
 
-body>header div {
+body > header div {
 	color: #fff;
-	font: xxx-large Times, serif;
-	text-transform: uppercase
+	font:
+		xxx-large Times,
+		serif;
+	text-transform: uppercase;
 }
 
-body>header .subtitle {
-	font-size: x-large
+body > header .subtitle {
+	font-size: x-large;
 }
 
 /* NAV */
 
-body>nav {
+body > nav {
 	background-color: #940000;
 	box-shadow: 0 5px 5px #555;
-	text-align: center
+	text-align: center;
 }
 
-body>nav a {
+body > nav a {
 	color: #fff;
 	display: inline-block;
 	font: large sans-serif;
 	padding: 8px;
-	text-decoration: none
+	text-decoration: none;
 }
 
-body>nav a:hover {
+body > nav a:hover {
 	background-color: #fff;
 	color: #800;
-	text-decoration: underline
+	text-decoration: underline;
 }
 
-body>nav span {
+body > nav span {
 	color: #fff;
 	cursor: default;
-	font: large sans-serif
+	font: large sans-serif;
 }
 
 /* MAIN */
 
 body {
 	font-size: larger;
-	margin: 0
-}
-
-body>main {
 	margin: 0;
-	padding: 3vw
 }
 
-body>main * {
+body > main {
+	margin: 0;
+	padding: 3vw;
+}
+
+body > main * {
 	/* margin: 0; */
 }
 
-body>main h1,
-body>main h2,
-body>main h3,
-body>main h4,
-body>main h5,
-body>main h6 {
+body > main h1,
+body > main h2,
+body > main h3,
+body > main h4,
+body > main h5,
+body > main h6 {
 	color: #800;
 	font-family: Times, serif;
-	padding: 1em 0 .3em;
-	text-transform: uppercase
+	padding: 1em 0 0.3em;
+	text-transform: uppercase;
 }
 
 main h1,
 main h2,
 main h3 {
 	overflow: hidden;
-	text-overflow: ellipsis
+	text-overflow: ellipsis;
 }
 
-summary>h1,
-summary>h2,
-summary>h3 {
-	display: inline-block
+summary > h1,
+summary > h2,
+summary > h3 {
+	display: inline-block;
 }
 
 summary {
-	border-bottom: 1px dashed #800
+	border-bottom: 1px dashed #800;
 }
 
 summary:hover {
-	cursor: pointer
+	cursor: pointer;
 }
 
 blockquote {
 	border: 1px dotted #6e0000;
 	border-left: 6px solid #6e0000;
 	margin: 1.5em 10px;
-	padding: .5em 10px;
-	quotes: "“" "„" "‘" "‚"
+	padding: 0.5em 10px;
+	quotes: "“" "„" "‘" "‚";
 }
 
 blockquote:before {
 	color: #6e0000;
 	content: open-quote;
 	font-size: xx-large;
-	line-height: .1em;
-	margin-right: .01em;
-	vertical-align: -.4em
+	line-height: 0.1em;
+	margin-right: 0.01em;
+	vertical-align: -0.4em;
 }
 
 blockquote p {
-	display: inline
+	display: inline;
 }
 
 body a {
-	color: #800
+	color: #800;
 }
 
-body>main p {
+body > main p {
 	margin: 0 0 5px;
 	padding: 5px 0 10px;
-	text-align: justify
+	text-align: justify;
 }
 
-body>main figure {
+body > main figure {
 	border: 1px solid #800;
 	border-radius: 4px;
 	box-shadow: 3px 3px 5px #555;
 	margin: 0 0 10px;
 	padding: 10px;
-	text-align: center
+	text-align: center;
 }
 
 .article-meta {
-	display: flex
+	display: flex;
 }
 
-.article-meta>.published-box,
-.article-meta>.author-box {
+.article-meta > .published-box,
+.article-meta > .author-box {
 	background-color: #6e0000;
 	border: 1px solid #800;
 	color: #fff;
 	margin-right: 2px;
 	margin-top: 10px;
-	padding: 2px 10px 0
+	padding: 2px 10px 0;
 }
 
 table {
 	border: 1px solid #800;
 	border-collapse: collapse;
 	box-shadow: 3px 3px 5px #555;
-	font-family: Tahoma, sans-serif
+	font-family: Tahoma, sans-serif;
 }
 
 table th {
@@ -160,33 +162,32 @@ table th {
 	border: 1px solid #800;
 	color: #fff;
 	margin: 0;
-	padding: .25em
+	padding: 0.25em;
 }
 
 table td {
 	border: 1px solid #800;
 	margin: 0;
-	padding: .25em;
+	padding: 0.25em;
 	text-align: left;
-	vertical-align: top
+	vertical-align: top;
 }
 
-ul>li {
-	list-style-type: '– '
+ul > li {
+	list-style-type: "– ";
 }
 
-ul.classic>li {
-	list-style-type: '– '
+ul.classic > li {
+	list-style-type: "– ";
 }
 
-ul.none>li {
-	list-style-type: ''
+ul.none > li {
+	list-style-type: "";
 }
 
-
-.article-list>li {
-	list-style-type: ' ';
-	padding: 0 0 10px
+.article-list > li {
+	list-style-type: " ";
+	padding: 0 0 10px;
 }
 
 .disclaimer {
@@ -198,7 +199,7 @@ ul.none>li {
 	font-family: Tahoma, sans-serif;
 	line-height: 150%;
 	margin: 20px;
-	padding: 20px
+	padding: 20px;
 }
 
 pre {
@@ -208,56 +209,56 @@ pre {
 }
 
 q {
-	font-style: italic
+	font-style: italic;
 }
 
 a.self-link {
-	text-decoration: none
+	text-decoration: none;
 }
 
 a.self-link:hover {
 	color: #b00;
-	text-decoration: none
+	text-decoration: none;
 }
 
-h1>a.self-link::before,
-h2>a.self-link::before,
-h3>a.self-link::before,
-h4>a.self-link::before,
-h5>a.self-link::before,
-h6>a.self-link::before {
-	content: "§ "
+h1 > a.self-link::before,
+h2 > a.self-link::before,
+h3 > a.self-link::before,
+h4 > a.self-link::before,
+h5 > a.self-link::before,
+h6 > a.self-link::before {
+	content: "§ ";
 }
 
 ul,
 ol {
-	padding: 10px 0 10px 30px
+	padding: 10px 0 10px 30px;
 }
 
 @media (min-width: 720px) {
-	body>main {
-		margin: 0 10%
+	body > main {
+		margin: 0 10%;
 	}
 }
 
 @media (min-width: 1200px) {
-	body>main {
-		margin: 0 20%
+	body > main {
+		margin: 0 20%;
 	}
 }
 
 .crypto {
-	display: inline-block
+	display: inline-block;
 }
 
 .crypto-address {
 	font-family: Verdana, Tahoma, sans-serif;
-	font-size: xx-small
+	font-size: xx-small;
 }
 
 img {
 	height: auto;
-	max-width: 100%
+	max-width: 100%;
 }
 
 /* COOKIE NOTIFICATION */
@@ -270,67 +271,67 @@ img {
 	display: flex;
 	left: 0;
 	margin: 0 0 20px 20px;
-	position: fixed
+	position: fixed;
 }
 
-#cookie-notification>p {
+#cookie-notification > p {
 	flex-wrap: wrap;
 	margin: 0;
-	padding: 16px
+	padding: 16px;
 }
 
-#cookie-notification>p>button {
+#cookie-notification > p > button {
 	background: 0;
 	border: 0;
 	color: #800;
 	padding: 14px;
-	font-size: large
+	font-size: large;
 }
 
-#cookie-notification>p>button:hover {
-	cursor: pointer
+#cookie-notification > p > button:hover {
+	cursor: pointer;
 }
 
 /* FOOTER */
 
-body>footer {
+body > footer {
 	border-top: 10px solid #9a2121;
 	box-shadow: 0 -3px 5px #555;
 	display: flex;
 	flex-wrap: wrap;
-	padding: 30px
+	padding: 30px;
 }
 
-body>footer>nav a {
+body > footer > nav a {
 	color: #800;
 	display: inline-block;
 	font: large sans-serif;
-	padding: 8px
+	padding: 8px;
 }
 
-body>footer>nav a:hover {
+body > footer > nav a:hover {
 	background-color: #800;
-	color: #fff
+	color: #fff;
 }
 
-body>footer>nav {
+body > footer > nav {
 	background-color: #fff;
 	flex: 1 1;
-	text-align: center
+	text-align: center;
 }
 
-body>footer>nav span {
+body > footer > nav span {
 	color: #800;
 	cursor: default;
-	font: large sans-serif
+	font: large sans-serif;
 }
 
-body>footer>nav * {
-	vertical-align: middle
+body > footer > nav * {
+	vertical-align: middle;
 }
 
-body>footer .secret {
-	font: small sans-serif
+body > footer .secret {
+	font: small sans-serif;
 }
 
 .button {
@@ -340,7 +341,7 @@ body>footer .secret {
 	color: #ffffff;
 	cursor: pointer;
 	font-size: large;
-	padding: .8em 2em;
+	padding: 0.8em 2em;
 	box-shadow: 2px 2px 5px #555;
 }
 
@@ -355,5 +356,5 @@ body>footer .secret {
 }
 
 hgroup {
-	padding: 1em 0
+	padding: 1em 0;
 }

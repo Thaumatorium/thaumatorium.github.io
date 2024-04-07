@@ -29,16 +29,7 @@
 			"type": "image/png"
 		}
 	],
-	"categories": [
-		"education",
-		"entertainment",
-		"lifestyle",
-		"news",
-		"productivity",
-		"security",
-		"social",
-		"utilities"
-	],
+	"categories": ["education", "entertainment", "lifestyle", "news", "productivity", "security", "social", "utilities"],
 	"theme_color": "#880000",
 	"background_color": "#880000",
 	"display": "minimal-ui",
