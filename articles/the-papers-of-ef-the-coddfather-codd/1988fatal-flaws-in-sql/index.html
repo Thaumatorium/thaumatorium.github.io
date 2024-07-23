@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>| The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1></h1>
+			<h1 id="fatal-flaws-in-sql">
+				<a class="self-link" href="#fatal-flaws-in-sql"> Fatal Flaws in SQL </a>
+			</h1>
+			<p>BY E.F. CODD</p>
+			<p>It is clear that DBMS vendors are rushing to support Structured Query Language—either IBM&rsquo;s version or its weaker ANSI cousin. To an observer, this is like watching a flock of lemmings congregate on a beach in preparation for marching into the sea. With the exception of Teradata, there is no sign that any vendor, including IBM, is considering the question of which parts of SQL are technically worth supporting and which parts will get them and their customers into trouble if they are supported.</p>
+			<p>The criticisms of SQL in this article are certainly not intended to be interpreted as criticisms of the relational approach to database management. SQL departs significantly from the relational model, and, where it does, it is SQL that falls short. Neither are they intended to be interpreted as wholesale criticisms of DB2, which supports SQL, but on the whole is a good product.</p>
+			<h2 id="the-ways-in-which-sql-is-flawed">
+				<a class="self-link" href="#the-ways-in-which-sql-is-flawed"> The Ways In Which SQL Is Flawed </a>
+			</h2>
+			<p>What then are the flaws in SQL that have such grave consequences? Here are just three:</p>
+			<ul>
+				<li>Flaw No. 1: it permits duplicate rows in relations;</li>
+				<li>Flaw No. 2: it supports an inadequately defined kind of nesting of a query within a query;</li>
+				<li>Flaw No. 3: it does not adequately support three-valued logic, let alone four.</li>
+			</ul>
+			<p>In an article entitled &ldquo;Where SQL Falls Short&rdquo; by C.J. Date (see May 1, 1987, p. 83), numerous errors of omission and commission in the database language SQL were cited. I agree with the errors cited, but feel that three of the most serious errors were omitted altogether.</p>
+			<p>My position on these three flaws is as follows:</p>
+			<ul>
+				<li>duplicate rows within relations ought to be prohibited, as Teradata has done with its version of SQL;</li>
+				<li>even though I am not totally opposed to nesting, it requires precise definition and extensive investigation prior to being included in a relational language; and</li>
+				<li>four-valued logic should be fully supported within the DBMS.</li>
+			</ul>
+			<h2 id="why-duplicate-rows-cause-problems">
+				<a class="self-link" href="#why-duplicate-rows-cause-problems"> Why Duplicate Rows Cause Problems </a>
+			</h2>
+			<p>Relations in the relational model and in mathematics do not have duplicate rows. There may, of course, be duplicate values within a column. Relations in which duplicate rows are permitted will be referred to as improper relations.</p>
+			<p>At first sight, permitting relations to have duplicate rows appears to be a disarmingly simple extension. When this extension was conceived, I was asked for my position on it. I indicated that, before any such extension was made, it would be necessary for the proponents to investigate the effect of duplicate rows on the definitions of each and every relational operator, as well as on the mutual interaction of these operators. It is worth noting that the relational operators were originally defined and their mutual interactions was originally investigated assuming (as in mathematics) that relations had no duplicate rows.</p>
+			<p>This task was simply not done by IBM, Oracle, or any other vendor that later adopted SQL. Neither was it addressed by the ANSI committee X3H2. The consequences of their inactions are devastating.</p>
+			<p>The contention that the DBMS must permit duplicate rows if its statistical functions (such as SUM and AVERAGE) are to deliver correct answers is quite incorrect. Clearly, duplicate values must be permitted within columns. For example, it is impossible to rule out the following possibilities: two values of currency happen to be the same (for example, the cost of two distinct parts); or two employees happen to have the same birthday; or the inventory levels for two distinct kinds of parts happen to be identical.</p>
+			<p>The statistical functions can and should operate in the context of relations that do not have duplicate rows. This means that the relation name as well as the column name are arguments for a statistical function applied to that column.</p>
+			<p>When manipulating true relations (duplicate rows NOT permitted) using the relational operators of the relational model, there is a high degree of immunity to the specific ordering chosen for executing these operators. To illustrate this point, we consider the operators projection and equi-join. Suppose that the projection does not discard any of the columns whose values are compared in the join. Then, providing no duplicate rows are allowed, the same result is generated whether the projection is executed first and then the join or the join is executed first and then the projection.</p>
+			<p>Note that if, as usual, the projection cites the columns to be saved (instead of those to be dropped), there would need to be a change of this list of columns depending on whether the projection preceded or followed the join. If, however, the projection cites the columns to be discarded, there need be no change in the list of these columns. Both forms of projection are useful.</p>
+			<h2 id="an-example-involving-join-and-projection">
+				<a class="self-link" href="#an-example-involving-join-and-projection"> An Example Involving Join and Projection </a>
+			</h2>
+			<p>This degree of immunity to the sequence of operators is lost when duplicate rows are permitted within relations—the adverse consequences of which will be detailed later. For now, let’s examine an example involving join and projection. Suppose duplicates are allowed in the result of projection, but not in the result of join. In SQL, this means that the qualifier DISTINCT is used in the join command only.</p>
+			<pre><code>R(A B C)    S(D E)
+ a1 1 c1     d1 1
+ a2 1 c1     d2 1
+ a3 1 c2     d3 2
+ a4 2 c2
+ a5 2 c1
+</code></pre>
+			<p>Taking the projection R[B,C] first, and retaining duplicate rows, we obtain the result shown below. Then, let us take the equi-join of this relation with S comparing column B with column E, permitting duplicate rows in the operands, but not in the result.</p>
+			<pre><code>R[B,C] (B C)    R[B,C][B=E] S(B  C D  E)
+        1 c1                  1 c1 d1 1
+        1 c1                  1 c1 d2 1
+        1 c2                  1 c2 d1 1
+        2 c2                  1 c2 d2 1
+        2 c1                  2 c2 d3 2
+                              2 c1 d3 2
+</code></pre>
+			<p>Now, let us reverse the sequence of operators, executing the equi-join first to generate relation T and then executing the projection of T onto B,C,D,E.</p>
+			<pre><code>R[B=E] S(A B C D E)    T(B  C  D E)
+        a1 c1 d1 1       1 c1 d1 1
+        a2 c1 d1 1       1 c1 d1 1
+        a3 c2 d1 1       1 c2 d1 1
+        a1 c1 d2 1       1 c1 d2 1
+        a2 c1 d2 1       1 c1 d2 1
+        a3 c2 d2 1       1 c2 d2 1
+        a4 c2 d3 2       2 c2 d3 2
+        a5 c1 d3 2       2 c1 d3 2
+</code></pre>
+			<p>The final result has eight rows, including two cases of duplicate rows. Clearly, when duplicates are permitted, the result obtained by executing the projection first and then the join is different from that obtained by executing the join first and then the projection. If duplicate rows had not been permitted, the results would have been the same as one another, whichever sequence of relational operators was adopted. What this example shows is that changing the sequence in which relational operators are executed can yield different results if the DBMS permits duplicate rows within a relation.</p>
+			<h2 id="difference-in-results-is-significant">
+				<a class="self-link" href="#difference-in-results-is-significant"> Difference in Results Is Significant </a>
+			</h2>
+			<p>It is useless for an advocate of duplicate rows to dismiss the difference between these results as nothing more than two rows being duplicated, because that suggests that duplicate rows are meaningless both to users and to the DBMS. If so, why support duplicate rows, along with their penalties? Opponents of duplicate rows assert that such rows are meaningless to users and a probable cause of user errors. They also reduce the effectiveness of optimization by the DBMS. Consequently, they should be prohibited by the DBMS.</p>
+			<p>Another possible argument from the advocates of duplicate rows is, “Why not express the projection and join combined into a single SQL command? Then it will be impossible to use the qualifier DISTINCT on one of the operators without it becoming effective on the other.” A first reply to this is that one of the two operators may define a view and the other a query on that view. A second reply is that the DBMS undoubtedly does not prevent a programmer from expressing these operators in separate SQL statements, whether in a view definition or not.</p>
+			<p>It is worth noting here that, if the DBMS permits duplicate rows in results, it must also permit duplicate rows in operands due to the operational closure feature of relational database management systems. The principal relational language is mathematically closed with respect to the operators it supports. This means that, in the principal relational language, the results of manipulative operations must always be legal as operands. If improper relations are permitted, then they also must be permitted as operands. This closure feature is intended to make it possible for users to make investigative inquiries in which, from time to time, it is necessary to use as operands the results of previous queries.</p>
+			<p>In case you think this is just an isolated example, let us look at a quite different example involving three simple relations, each concerned with employees, first their names, second their qualifications, and third their ages:</p>
+			<pre><code>E1(E# ENAME) E2(E# QUAL) E3(E# AGE)
+</code></pre>
+			<p>As usual, E# stands for employee serial number. Using SQL we can find the names of employees who have the degree PhD or whose age is at least 50 (or who satisfy both conditions). One of the distinct ways in which this query can be expressed in SQL involves using logical OR. Another way involves using UNION on the serial numbers for employees that satisfy each of the conditions. These two approaches should always yield the same result, but do they? The answer is that, if one is using SQL, it depends on when and in what context the user requests that duplicate rows be retained or eliminated. If UNION ALL is used in this context, the result contains the names of employees duplicated whenever each employee satisfies both of the conditions (that is, he or she has the PhD degree and is at least 50 years old).</p>
+			<h2 id="adverse-consequences-of-duplicate-rows">
+				<a class="self-link" href="#adverse-consequences-of-duplicate-rows"> Adverse Consequences of Duplicate Rows </a>
+			</h2>
+			<p>Consider two or more rows in some improper relation that happen to be duplicates of one another. One may well ask what is the meaning of each occurrence of these duplicate rows. If they represent distinct objects (abstract or concrete), why is their distinctiveness not represented by distinct values in at least one component of the row (as required by the relational model)?</p>
+			<p>If they do not represent distinct objects, what purpose do they serve? A fact is a fact, and, in a computer, its truth is adequately claimed by one assertion—the claim of its truth is not enhanced by repeated assertions. In database management, repetition of a fact merely adds complexity, and, in the case of duplicate rows within a relation, uncontrolled redundancy.</p>
+			<p>The reduction in interchangeability of the sequence in which relational operations are executed can adversely affect both the DBMS and users of the DBMS. As we shall see, it damages the production by the DBMS of efficient target code (this process is usually called optimization) and substantially increases the user’s burden in determining the sequence of relational commands, when the user chooses to make this sequence explicit.</p>
+			<h2 id="optimizer-seeks-efficiency">
+				<a class="self-link" href="#optimizer-seeks-efficiency"> Optimizer Seeks Efficiency </a>
+			</h2>
+			<p>A relational command usually consists of a collection of basic relational operations. Part of the optimizer’s job is to examine the various alternative sequences in which these basic operations can be executed. For each such sequence, it determines the most efficient way of exploiting the existing access paths.</p>
+			<p>Finally, it determines which of the alternative sequences consumes the least resources. It should be clear, then, that any reduction in the interchangeability of ordering of the basic relational operations will reduce the alternatives that can be explored by the DBMS, and this, in turn, can be expected to reduce the overall performance attainable by the DBMS.</p>
+			<p>Occasionally, the user may (for various reasons) express in two or more relational commands what could have been expressed in just one. For example, he or she may decide to express a projection in one command and a join in another command. Because the sequence of these commands can affect the ultimate result when duplicate rows are permitted, the user must give the matter much more careful thought than would have been necessary if duplicate rows had not been permitted. One consequence will be a proliferation of unnecessary bugs in programs and in terminal activities. The extra thinking and the extra bugs will undoubtedly cause an unnecessary reduction in the productivity of users. A far more serious consequence is that undiscovered bugs may lead to poor business decisions.</p>
+			<p>The relational model is based on at least 11 fundamental laws. One of them is as follows: every row in a relational database taken together with the name of the relation in which it occurs must uniquely identify some object in the micro-world being modeled. This fundamental law is violated if duplicate rows are permitted. This is an important part of the job of maintaining the database in a state of integrity. The DBMS must help the DBA in this responsibility.</p>
+			<h2 id="the-psychological-mix-up">
+				<a class="self-link" href="#the-psychological-mix-up"> The Psychological Mix-up </a>
+			</h2>
+			<p>As used here, the term “psychological” refers to what is often called the human factor aspects of a language. The term “logical” refers to the logical power of a language, especially the power achievable without resorting to the usual programming tricks, such as iterative loops.</p>
+			<p>Normally, if proper relations are employed, a manipulative command or query expressed in terms of nesting and using the term IN can be reexpressed in terms of an equi-join. However, let us look at an example involving improper relations. Suppose we are given the relations EMP and WAREHOUSE:</p>
+			<pre><code>EMP(E# ECITY)    WAREHOUSE(WNAME WCITY)
+    E1   A                  W1     A
+    E2   B                  W1     A
+    E3   C                  W2     D
+                            W3     C
+                            W4     E
+</code></pre>
+			<p>EMP is intended to list all the employees by employee serial number and city in which the employee lives; and WAREHOUSE is intended to list all warehouses by serial number and city where located. Suppose we wish to find each employee name and the city he or she lives in whenever that city is one in which the company has a warehouse. One might reasonably expect that this query could be handled equally well either by an equi-join or by a nesting that uses the IN term as follows:</p>
+			<pre><code>Select E# ECITY    Select E# ECITY
+From EMP,          From EMP
+    WAREHOUSE      Where ECITY in
+Where                  Select WCITY
+    ECITY=WCITY        From WAREHOUSE
+</code></pre>
+			<p>The results obtained, however, are not identical:</p>
+			<pre><code>E# ECITY    E# ECITY
+-----       -----
+E1 A        E1 A
+E1 A        E3 C
+E3 C
+</code></pre>
+			<p>Once again we have a problem that arises, in part, from permitting duplicate rows.</p>
+			<p>This case, however, is somewhat more complicated. Whenever the DBMS encounters a query in nested form, it needs to transform such a query into a nonnested form in order to simplify the optimizer’s task. Some excellent work on this has been done by Won Kim, R.A. Ganski, and H.K.T. Wong. However, there appears to be two major omissions from this work: first, the question of duplicate rows is not discussed; second, even if duplicate rows were prohibited, the remaining question is whether the coverage in this is complete with respect to all nested versions permitted in SQL.</p>
+			<p>My position on the nesting of SQL is that, when conceived, about 1973, it was an attractive idea, but one needing careful scrutiny and investigation by its proponents. It was advocated by them along with other features of SQL as a replacement for predicate logic in the relational world, and as a more user-friendly language than the preceding relational database sublanguage ALPHA.</p>
+			<p>The first cited basis is simply not true. As time has progressed, the SQL advocates have found it necessary to incorporate bits of predicate logic in the language. The second had some credibility—however, in that case, SQL would be a curious mixture of the logical aspects of a relational language and the psychological aspects.</p>
+			<p>These two kinds of concern should be kept separate from one another for two reasons. First, a relational language has to be effective both as a source language and as a target language because of the myriad of subsystems expected on top (e.g., expert subsystems and natural language subsystems). Second, the relational approach is intended to serve a great variety of users, and, therefore, different users may have entirely different educations, training, and backgrounds—and that means that it is very unlikely that just one approach to psychological support will be adequate.</p>
+			<p>Accordingly, all of the statements in each of the several distinct languages providing psychological support should be translatable into the single language providing logical support. Until that translatability is demonstrated for SQL, serious problems in using that language will keep turning up.</p>
+			<p>While on the subject of nesting queries within queries, there are two features of IBM’s SQL that I feel drastically reduce both the comprehensibility and usability of SQL. To illustrate these features, let’s modify slightly the previously mentioned examples concerning employees and warehouses.</p>
+			<p>Some city names occur several times in the United States, but only once in any selected state. For example, Portland occurs both in Maine and in Oregon. Suppose to each relation (EMP and WAREHOUSE) we add a column pertaining to the state in which the city is located. Then let us try the query:</p>
+			<pre><code>Select E#, ECITY, ESTATE
+From EMP
+Where (ECITY, ESTATE) in
+    Select (WCITY, WSTATE) from WAREHOUSE
+</code></pre>
+			<p>The DBMS refuses to handle this query, even though it is just like the original, except that in this case the IN clause involves a combination of columns instead of a single column. To a user, this seems totally inappropriate behavior for a DBMS. DB2’s ability to concatenate the name of a city with the name of a state can be used to alter this query into an executable one. However, this is neither a general nor a natural solution to the problem.</p>
+			<p>Now let us return to our original relations, and merely alter the query to elicit more columns of data. Let us request:</p>
+			<pre><code>Select E#, ECITY, WNAME, WCITY
+From EMP, WAREHOUSE
+Where ECITY in
+    Select WCITY from WAREHOUSE
+</code></pre>
+			<p>This time the DBMS yields the Cartesian product of EMP with WAREHOUSE, except for rows that contain the cities that fail to qualify are excluded. This is clearly not what was requested. Like the previous example, this kind of surprise is the hallmark of a poorly designed language.</p>
+			<p>When the prototype System R was passed from IBM Research to the product developers, the question of SQL’s translatability from a nested query to a non-nested version had not been investigated. Subsequently, the product development divisions found the problem too difficult to handle in its optimizer. As a result, the first three releases of DB2 perform poorly on nested queries compared with nonnested queries. This is truly ironic, because SQL had been sold to IBM’s management on the basis of its alleged ease of use and power due to the nesting feature.</p>
+			<p>The difference in performance of nested and nonnested versions of the same query puts an unnecessary performance-oriented burden on users, which will not disappear until nesting is prohibited or the translatability problem is completely solved and incorporated into DBMS optimizers. In nested queries, as in nonnested versions, duplicate rows must be prohibited to avoid the additional burden of unexpected discrepancies in the results.</p>
+			<p>DB2 is one of the few relational DBMS products that represents missing information independent of the type of data that is missing: a requirement of the relational model and a requirement for ease of use. It uses an extra byte for any column in which missing values are permitted, and one bit of this byte tells the system whether the associated value should be taken seriously or whether that value is actually missing.</p>
+			<p>However, it completely fails to meet one more requirement of the relational model, namely, that missing information should be handled in a manner that is independent of the type of information that is missing and that the user should be relieved of the burden of devising three-valued logic. Representation is one thing, but handling is quite another.</p>
+			<p>In fact, all DBMS products that fail to go beyond the present IBM or ANSI SQL versions also fail to provide adequate support for three-valued logic.</p>
+			<p>The occurrence of cases of missing information in a practical database is in most cases unavoidable. It is a fact of life. A short story concerning Manhattan is illustrative of how some DBMSs handle missing information. Whenever I have asked a person encountered in the streets of Manhattan for directions to some specific address, that person always responds with detailed directions, no matter whether he or she knows that part of the city. More often than not, I have found the directions quite incorrect. Therefore, I have discontinued the practice of asking for directions, at least in Manhattan.</p>
+			<p>When interrogating a database for information, I believe users would prefer the DBMS to take a conservative position as its normal behavior and avoid Manhattan-type guessing regarding the correct answer. Whenever it does not know some requested fact or condition, the DBMS should admit a lack of knowledge.</p>
+			<p>It should also support (as exceptional behavior explicitly requested) the extraction of all the items that could satisfy a request if unknown values were replaced by information that yielded as many values as possible in the target list of the query.</p>
+			<p>A database retrieval may, of course, include several conditions like DATE ≥ 66-12-31 (where the DATE column has values of extended data type DATE) and AMOUNT ≤ 20,000 (where the AMOUNT column has values of extended data type U.S. CURRENCY).</p>
+			<p>The conditions may be combined in many different logical combinations, including the logical connectives AND, OR, NOT, and the quantifiers UNIVERSAL and EXISTENTIAL. Suppose, as an example, both expressions noted above participate in some condition, and suppose that both of these columns are allowed to have missing database values. How does the DBMS deal with a query involving the combination of conditions where either the date condition or the amount condition or both may evaluate to MAYBE?</p>
+			<pre><code>(DATE ≥ 66-12-31) OR (AMOUNT ≤ 20,000)
+</code></pre>
+			<p>Clearly, the DBMS needs to know what is the truth value of combinations such as MAYBE OR TRUE, TRUE OR MAYBE, and MAYBE OR MAYBE. This means that the DBMS must support at least three-valued logic. If it does not, then the user will have to</p>
+			<ul>
+				<li>request the primary key values of those orders for which the DATE ≥ 66-12-31 is TRUE;</li>
+				<li>request the primary key values of those orders for which the AMOUNT ≤ 20,000 is TRUE; and</li>
+				<li>request the union of the two sets generated by the two requests above.</li>
+			</ul>
+			<p>In the case of AND instead of OR, the user would have to request, in step three, the intersection of the two sets of primary keys. Users are liable to make numerous mistakes if they are forced to support three-valued logic mentally, because the DBMS provides no support. Who knows what crucial business decisions might be made incorrectly as a consequence? From this we see that there is a clear need in any systematic treatment by the DBMS of missing values to extend the underlying two-valued predicate logic to at least a three-valued predicate logic.</p>
+			<p>In the following truth tables for the three-valued logic of the relational model, we use P and Q to denote propositions, each of which may have any one of the truth values: t for TRUE, m for MAYBE, or f for FALSE.</p>
+			<p>In the relational model the universal and existential quantifiers are applied over finite sets only. Thus, the universal quantifier behaves like the logic operator AND, and the existential quantifier behaves like OR; both operators being extended to apply the specified condition to each and every member of the pertinent set.</p>
+			<pre><code>P | NOT P    P OR Q |   Q      P AND Q |    Q
+--+------    -------+------    --------+------
+  |                 | t m f            | t m f
+t |     f         t | t t t          t | t m f
+m |     m    P    m | t m m    P     m | m m f
+f |     t         f | t m f          f | f f f
+</code></pre>
+			<p>When an entire condition based on three-valued, first-order predicate logic is evaluated, the result can be any one of the three possibilities TRUE, MAYBE, or FALSE. If such a condition is part of a query that does not include the MAYBE qualifier, the result consists of all the cases in which the complete condition evaluates to TRUE, and no other cases.</p>
+			<p>If to this query we add the keyword MAYBE, then the result consists of all the cases in which this condition evaluates to the truth value MAYBE (m), and no other cases. The MAYBE qualifier is used only for exploring possibilities, and special authorization would be necessary if a user is to incorporate it in one of his or her programs or in a terminal interaction.</p>
+			<p>Actually, the relational model calls for the DBMS to support the attachment of the MAYBE qualifier to any truth-valued expression, since a view is normally defined not using this qualifier, while a query on the view may involve it. The normal action of combining the view condition with the query condition using logical AND would, of course, give rise to a more comprehensive condition involving the MAYBE qualifier attached to just one truth-valued expression within that condition.</p>
+			<p>One problem, of which DBMS designers and users should be aware, is that, in rare instances, the condition part of a query may be a tautology. In other words, it may have the value TRUE no matter what data are in the pertinent columns and no matter what data are missing. An example would be the condition pertaining to employees where the date is less than 66-12-31 or equal to 66-12-31 or greater than 66-12-31.</p>
+			<p>If the DBMS were to apply three-valued logic to each term and it encountered a “marked” value (a value marked as missing) in the date column, each of the terms in this query condition would receive the truth value MAYBE. However, MAYBE OR MAYBE yields the truth value MAYBE. So the condition as a whole evaluates to MAYBE, which is incorrect, but not traumatically incorrect.</p>
+			<p>To avoid this type of error, there are two options: warn users not to use tautologies, which are a waste of computer resources, as conditions in their relational language statements; and develop a DBMS which examines all conditions, not in excess of some clearly specified complexity, and determines whether each is a tautology or not.</p>
+			<p>Naturally, in this latter case, it would be necessary to place some limitation on the complexity of every query, because with predicate logic the general problem is unsolvable. It is my opinion that the first option is good enough for now, because this is not a burning issue.</p>
+			<h2 id="sqls-treatment-of-missing-values">
+				<a class="self-link" href="#sqls-treatment-of-missing-values"> SQL’s Treatment of Missing Values </a>
+			</h2>
+			<p>Flexible use of three-valued logic, let alone four-valued, is not supported in SQL commands. Their only concession to the existence of missing values is the clause IS NULL, which enables the user to pick up from any column those cases in which there are missing values.</p>
+			<p>An example of inflexibility is DB2’s action when the condition part of a query is evaluated as unknown. It simply does not retrieve the corresponding instances of the target data. In practice, this is one of the options that users need, but they need other actions as alternatives.</p>
+			<p>A somewhat separate problem is the effect of missing values on aggregate functions. The relational model supports the following options: request the missing items to be ignored, or temporarily replace each missing item by a specified value (“temporarily” means just for the execution of the pertinent command). SQL does not support these options, but instead always yields a NULL result if any case of a missing value is encountered as the argument to a function.</p>
+			<p>Overall, the SQL approach to handling missing values is quite disorganized and weak. This will lead to disorganized thinking on the part of users, an increased burden for them to bear, and many unnecessary errors. Errors that are not discovered can lead to more incorrect business decisions, based on incorrectly extracted data.</p>
+			<p>It also causes some users to wish for the old approaches like “default values” that were at least familiar, even if more disorganized. Of course, the old approaches are completely out of place in the relational approach.</p>
+			<p>In some cases, this problem is incorrectly perceived to be a problem of the relational model. In fact, it is a problem that stems from the inadequacies of SQL and its nonconformance to the relational model.</p>
+			<h2 id="corrective-steps-for-dbms-vendors">
+				<a class="self-link" href="#corrective-steps-for-dbms-vendors"> Corrective Steps for DBMS Vendors </a>
+			</h2>
+			<p>In exploring corrective steps DBMS vendors can take, the three problems discussed above and in the first part of this article will be considered in turn. Immediately putting the following corrective steps into effect could easily give them a substantial competitive advantage in the eyes of prospective customers.</p>
+			<p>The duplicate rows problem should be handled in three stages. First, warn users that support for duplicate rows is going to be phased out in about two years’ time. Second, install within the first year in some new release a “two-position switch” (in other words, a DBA-controlled bit) that permits the DBMS to operate in two modes with respect to duplicate rows: (2) accepting them, and (2) rejecting them. Third, drop support for duplicate rows within a relation altogether, and improve the optimizer accordingly.</p>
+			<p>With regard to loss of integrity from databases, it is well known that prevention is much better than cure. For this reason, the DBMS should check that duplicate rows are not being generated whenever an operator is executed that could generate duplicate rows. Three of the operators that are defined to remove duplicate rows are projection, union, and appending rows to a relation, including initial loading. Most DBMS products today fail to conform to the definitions of these operators.</p>
+			<p>There is also a need for two separately authorizable operators: the first one checks for the existence of duplicate rows in any specified base relation; the second removes duplicate rows from any specified base relation.</p>
+			<p>To correct the psychological mix-up caused by SQL’s support for inadequately defined nested queries within queries, DBMS vendors should treat the latest version of IBM’s SQL (even if the duplicate row concept has been removed) as a language that stands or falls on its psychological or ease-of-use properties. A new relational language should be created with features that are highly orthogonal to one another, that includes all of the logical properties necessary to manage a relational database, that is readily extensible and compilable, and that is convenient to use as a target language by all the software packages that interface on top of the DBMS.</p>
+			<p>Within three years, DBMS vendors should introduce support for four-valued logic, which is a sublogic of the three-valued logic cited above. Implementing the four-valued logic is not noticeably more difficult or time-consuming than implementing the three-valued logic.</p>
+			<p>Four-valued logic treats information that is missing for a second reason, namely that a property happens to be inapplicable to certain objects represented in the pertinent relation; for example, requesting the name of an employee’s spouse, if the employee happens to be unmarried. With adequate support for three-valued logic, the IS NULL clause becomes redundant and should be phased out.</p>
+			<p>Users can take their own precautionary steps (and are strongly advised to do so) until these three flaws are corrected. Then the changes in subsequent releases of their DBMS will prove to be far less traumatic.</p>
+			<p>The first such step for the user is to avoid duplicate rows within relations at all times by continued use of the DISTINCT qualifier immediately following the SQL SELECT and to totally avoid use of the word “ALL” after “UNION.” The second step is to avoid nested versions of SQL statements whenever there exists a non-nested version. The third step is to take extra care in manipulating relations that have columns that may contain missing values, and, as far as possible, to separate the handling of missing information into easily identifiable pieces of code that can be readily replaced later.</p>
+			<p>Is it too extreme to call these SQL blunders fatal flaws? I do not think so, in view of the fact that more and more business and government institutions are becoming dependent on relational DBMS products for the continued success of their operations.</p>
+			<p>In my view, the three flaws described in this article must be fixed, even though the repair may cause some users to have to change some SQL portions of their programs. All three changes advocated in SQL also represent a great opportunity for ANSI to take the lead.</p>
+			<p>How did SQL get into the undesirable state described here? It is just one more case of inadequate investigation by its developers, and, in this case, totally inadequate theoretical investigation.</p>
+			<h2 id="footnotes">
+				<a class="self-link" href="#footnotes"> Footnotes </a>
+			</h2>
+			<ol>
+				<li>E.F. Codd, “ALPHA: A Data Base Sublanguage founded on the Relational Calculus,” proceedings of the 1971 ACM SIGFIDET Workshop, San Diego. Available from ACM, New York.</li>
+				<li>E.F. Codd, “Missing Information (Applicable and Inapplicable) in Relational Databases,” ACM SIGMOD Record, December 1986; and E.F. Codd, “More Commentary on Missing Information in Relational Databases,” ACM SIGMOD Record, March 1987.</li>
+			</ol>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">0001-01-01</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://thaumatorium.com/articles/the-papers-of-edgar-f-codd/</loc>
-    <lastmod>2024-04-07T16:14:44+02:00</lastmod>
+    <loc>http://thaumatorium.com/articles/relational-algebra-operators-in-database-management/</loc>
+    <lastmod>2024-06-22T14:27:00+01:00</lastmod>
+  </url><url>
+    <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/</loc>
+    <lastmod>2024-07-23T22:52:47+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/articles/mit-courses/</loc>
     <lastmod>2023-06-09T13:10:20+02:00</lastmod>
@@ -80,6 +83,16 @@
     <loc>http://thaumatorium.com/articles/mit-courses/courses/</loc>
   </url><url>
     <loc>http://thaumatorium.com/articles/on-computable-numbers/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1969derivability-redundancy-and-consistency-of-relations-stored-in-large-data-banks/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1971b-further-normalization-of-the-data-base-relational-model/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985ais-your-dbms-really-relational/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985bdoes-your-dmbs-run-by-the-rules/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988fatal-flaws-in-sql/</loc>
   </url><url>
     <loc>http://thaumatorium.com/articles/the-unabomber-trial-the-manifesto/</loc>
   </url><url>

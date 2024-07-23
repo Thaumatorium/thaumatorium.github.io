@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>| The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1></h1>
+			<h1 id="does-your-dbms-run-by-the-rules">
+				<a class="self-link" href="#does-your-dbms-run-by-the-rules"> Does your DBMS run by the rules? </a>
+			</h1>
+			<p><em>To be &ldquo;mid-80s&rdquo; fully relational, a DBMS must support all 12 basic rules plus nine structural, 18 manipulative and all three integrity rules. There will be more requirements by the 1990s.</em></p>
+			<p>By E. F. Codd</p>
+			<p>No existing DBMS product that I know of can honestly claim to be fully relational at this time. The proposed ANSI DBMS standard does not fully comply with the relational model, so a DBMS&rsquo;s fidelity to the ANSI standard is no guarantee of relational capability. The standard could be modified, but already vendors are well advised to extend their products beyond the standard to support customers&rsquo; DBMS needs fully.</p>
+			<p>In their ads and manuals, vendors have translated the term &ldquo;minimally relational&rdquo; to &ldquo;fully relational,&rdquo; so more stringent criteria must be applied. Twelve rules (below) comprise a test to determine whether a product that is claimed to be fully relational is actually so.</p>
+			<p>A grading scheme used to measure the degree of fidelity to the relational model follows.</p>
+			<p>A DBMS advertised as relational should comply with the following 12 rules:</p>
+			<ol>
+				<li>The information rule.</li>
+				<li>The guaranteed access rule.</li>
+				<li>Systematic treatment of null values.</li>
+				<li>Active on-line catalog based on the relational model.</li>
+				<li>The comprehensive data sublanguage rule.</li>
+				<li>The view updating rule.</li>
+				<li>High-level insert, update and delete.</li>
+				<li>Physical data independence.</li>
+				<li>Logical data independence.</li>
+				<li>Integrity independence.</li>
+				<li>Distribution independence.</li>
+				<li>The nonsubversion rule.</li>
+			</ol>
+			<p>These rules are based on a single foundation rule. I call it Rule Zero:</p>
+			<p>For any system that is advertised as, or claimed to be, a relational data base management system, that system must be able to manage data base entirely through its relational capabilities.</p>
+			<p>This rule must hold whether or not the system supports any nonrelational capabilities of managing data. Any DBMS that does not satisfy this Rule Zero is not worth rating as a relational DBMS.</p>
+			<p>But compliance with Rule Zero is not enough. Failure to support the information rule, guaranteed access rule, systematic null rule and catalog rule can make integrity impossible to maintain. These four rules support significantly higher standards for data base administration and control (authorization and integrity control) than earlier DBMS supported. Users should remember that a data base managed by a relational DBMS is likely to have both experienced and inexperienced users; it must be able to serve both.</p>
+			<h2 id="rule-zero-is-not-enough">
+				<a class="self-link" href="#rule-zero-is-not-enough"> Rule Zero is not enough </a>
+			</h2>
+			<p>Rules 1 and 4, the information and catalog rules, allow people with appropriate authorization (such as executives of the company) to find out easily via terminal what information is stored in a data base. I have encountered data base administrators using nonrelational systems who were unable to determine if a specific kind of information was recorded in their data bases.</p>
+			<p>Rule 3, which calls for the inclusion of systematic support for unknown and inapplicable information by means of null values that are independent of data type, should help users to avoid foolish and possibly costly mistakes. The treatment of nulls, when aggregate functions such as total and average are applied, holds considerable interest for users. The Oracle DBMS in particular has an outstanding approach to null values. The user may specify whether the aggregate function is to ignore null values or yield a null result if any null values is encountered.</p>
+			<p>In general, controversy still surrounds the problem of missing and inapplicable information in data bases. It seems to me that those who who complain loudly about the complexities of manipulating nulls are overlooking the fact that handling missing and inapplicable information is inherently complicated. Going back to programmer-specified default values does not solve the problem.</p>
+			<p>Rule 5, the comprehensive data sublanguage rule, is important for several reasons. First, it allows programmers to debug their data base statements interactively, treating them separately from whatever nondata base statements occur in their programs—a significant contributor to productivity. Second, it means that a single tool can be used for defining relations derived from the data base, whatever the purpose. The view updating rule, Rule 6, is vital for the system to support logical data independence.</p>
+			<p>Rule 7, which requires a multiple-record-at-a-time attack on insertion, update and deletion, can help save a good portion of the total cost of intersite communication in a distributed data base. If the system includes a good optimizer (an important component in relational DBMS performance), this rule can also result in substantial savings of CPU and I/O time, whether the data base is distributed or not.</p>
+			<p>Failure to support independence (Rules 8 through 11) can, and very likely will, result in skyrocketing costs in both money and time. Developing and maintaining applications programs and terminal activities will be more expensive. Managers may even be unwilling to consider changing certain business policies simply because of the anticipated program maintenance costs.</p>
+			<p>Rule 12, the nonsubversion rule, is crucial in protecting the integrity of relational data bases. All too frequently, I have seen situations in which data base administrators with nonrelational DBMSs failed to control their data base adequatly; consequently, they could not maintain a state of integrity.</p>
+			<h2 id="domains">
+				<a class="self-link" href="#domains"> Domains </a>
+			</h2>
+			<p>Many users confuse the domain concept with the concept of attribute of a relation or column of a table. Other people (often the vendors themselves) dismiss the domain concept as &ldquo;academic.&rdquo; My reply to them is: The atom bomb was also academic!</p>
+			<p>In fact, the domain concept is very important, practical and simple. A domain consists of the whole set of legal values that occur in a column. The column draws its values from the domain. Each column of a relational data base has precisely one domain, but any number of columns may share a domain. There are several reasons why domains should be supported.</p>
+			<p>For example, in a financial data base, there may be as many as 50 distinct columns (possibly, but not necessarily, in distinct tables) defined around the U.S. currency domain. Why repeat the definition of currency 50 times? In data bases supported by nonrelational systems, I frequently observe many inconsistent declarations of value type for fields that were intended to have the same type.</p>
+			<p>It is unreasonable to expect a DBMS to store all the legal values in a domain, unless there happen to be very few. However, it is entirely reasonable — and very worthwhile — to insist that a DBMS should store certain values:</p>
+			<ul>
+				<li>For each domain, a description of the type of values in that domain. This information is global since it applies to the entire database, and it should of course be recorded in the catalog.</li>
+				<li>For each column, the name of the domain from which that column draws its values. This domain name is a reference to the global definition.</li>
+			</ul>
+			<p>Of course, the domain description can include range restrictions. For example, it could specify that quantities of parts in an inventory must not only be integers, they must also be non-negative.</p>
+			<p>Furthermore, individual columns may include additional range restrictions where these are semantically justifiable. In this example, the quantities of very expensive parts held in the inventory may be limited to some specified maximum.</p>
+			<p>One of the benefits of supporting the domain concept is that, in cases where several columns share the same domain, the declaration of the description of the legal values is largely or even completely factored out. For example, when there are 50 distinct columns defined on U.S. currency, the data base is much easier to manage and manipulate if one avoids making 50 distinct declarations for U.S. currency.</p>
+			<p>Before the relational discipline arrived, users had to make separate declarations, and as a result, many of the 50 in the example would turn out to be incompatible with one another by accident. The factoring of declaration that prevents these errors is achieved in Digital Equipment Corp.&rsquo;s RDB, which has a concept of &ldquo;global field definition.&rdquo; But RDB fails to support domain constraints on certain operations, such as join.</p>
+			<p>Another benefit of supporting the domain concept is that relational operators, such as joins and divides, that involve comparison of values between different columns can be constrained by the system. A DBMS can allow data base values to be compared only when they come from the same domain and are therefore comparable from the semantic viewpoint.</p>
+			<p>Such a constraint inhibits errors caused by interactive users of terminals who choose columns to be compared in such operations as joins. The wrong answers they obtain from these errors rarely uncover the errors themselves; meanwhile, unwise business decisions may be made based on these wrong answers.</p>
+			<p>For various reasons, it is important to support a qualifier in a command what I call &ldquo;semantic override&rdquo; — the ability to have the system ignore the usual comparison constraints. Users should be able to authorize this override qualifier separately from the operation involved and should authorize it rarely, reserving it chiefly for detective work.</p>
+			<p>Even when the domain concept is restricted to assigning types to data it should not be confused with the hardware-supported data type. Consider the example of a data base listing suppliers, parts and projects. Suppose the hardware-supported data types of supplier numbers and part serial numbers are identical; each type consists of fixed-length strings of 12 characters. The system still needs to keep these two data types distinct and remember which columns are defined on one and which columns are defined on the other.</p>
+			<p>If it can make these distinctions, then when a request comes in to delete or archive all records containing X3 as a supplier serial number, the system can handle such a transaction correctly. The system will not delete or archive any record that contains X3 as a part serial number and that also does not contain X3 as a supplier serial number.</p>
+			<p>Today, such a data type is often called an application data type. The concept is supported in Pascal but in very few other languages that enjoy current use. The Pascal support does not, of course, include constraints on selects, unions, joins and divides.</p>
+			<p>The domain concept is basically what makes all the meaningful selects, unions, joins and divides known to the DBMS. Thus, the domain makes the data base meaningfully integrated, and it does so without projecting distributability.</p>
+			<p>Contrast this with CODASYL links and IMS hierarchical links. They represent the CODASYL and IMS concept that a link &ldquo;integrates an otherwise unintegrated data base,&rdquo; but they have several unfortunate restrictions. Most importantly, they obstruct data base distribution because of the constraints and complexity their data structures introduce into decisions regarding how the data should be deployed.</p>
+			<p>A second serious drawback of links is that they are only paths. Generation of a result such as a join requires traversal of these paths by the application program. It seems superfluous to cite other difficulties with this concept.</p>
+			<p>Many relational DBMS and languages including SQL do not support the concepts of primary key and foreign key. I fail to see how these products can support the guaranteed access or the view updating rules without making the system aware of which column(s) constitute the primary key of each base table.</p>
+			<p>Furthermore, I fail to see how these products can support referential integrity or the view updating rule without offering clearer support for both primary keys and foreign keys. For example, in SQL, the CREATE TABLE command should be extended to permit the user to declare which column or columns constitute the primary key and which constitute foreign keys. In addition, there should be a new CREATE DOMAIN command in SQL.</p>
+			<h2 id="fidelity">
+				<a class="self-link" href="#fidelity"> Fidelity </a>
+			</h2>
+			<p>Figure 1 shows fidelity to the 12 rules by IBM&rsquo;s DB2, Cullinet Soft- ware, Inc.&rsquo;s IDMS/R and Applied Data Research, Inc.&rsquo;s Datacom/DB — examples chosen for their wide dif- ferences. These scores represent counts of compliance with each rule (score one for &ldquo;yes&rdquo; and zero for either &ldquo;partial&rdquo; or &ldquo;no&rdquo;).</p>
+			<p>Actually, the information rule is so fundamental to the relational approach that a system&rsquo;s compliance with this rule should receive a much higher score than one. Weighting it as high as 10 would not be excessive. However, I should avoid assigning different points for different features, just as I avoided a fractional score for partial support of a feature: It is too easy to be subjective in these matters.</p>
+			<p>DB2 scores quite well on the fidelity evaluation. Very few other DBMS score higher on the 12 rules, although some others score equally well. Both IDMS/R and Datacom/DB allow information to be represented in the order of records in storage and in repeating groups—directly violating the information rule. In the case of IDMS/R, information may also be represented in links between record types (CODASYL calls them &ldquo;owner-member sets&rdquo;) and also in &ldquo;areas.&rdquo;</p>
+			<p>Some vendors of nonrelational DBMS have quickly added a few relational features—in some cases, very few features—in order to be able to claim their systems are relational, even though they meet most single requirements for being rated &ldquo;minimally relational.&rdquo;</p>
+			<p>These &ldquo;born-again&rdquo; systems keep their high-level languages (single record-at-a-time) open to users either to support compatibility with previously developed application programs or because the vendor takes the position that relational operators are applicable to query only.</p>
+			<p>In view of this, such systems fail to support the nonsubversion rule—a heavy penalty to pay for compatibility. IDMS/R and Datacom/DB are both born-again systems, and both fail to support the nonsubversion rule for integrity.</p>
+			<h3 id="figure-1-fidelity-to-the-12-rules-by-dbms">
+				<a class="self-link" href="#figure-1-fidelity-to-the-12-rules-by-dbms"> Figure 1: Fidelity to the 12 rules (by DBMS) </a>
+			</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Rule</th>
+						<th>DB2</th>
+						<th>IDMS/R</th>
+						<th>Datacom/DB</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1.</td>
+						<td>Information rule</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>Guaranteed access rule</td>
+						<td>Partial</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>Systematic treatment of nulls</td>
+						<td>Partial</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>Active catalog based on resource management</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>Comprehensive data sublanguage</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td>View-updating rule</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>7.</td>
+						<td>High-level insert, update, delete</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>8.</td>
+						<td>Physical data independence</td>
+						<td>Yes</td>
+						<td>Partial</td>
+						<td>Partial</td>
+					</tr>
+					<tr>
+						<td>9.</td>
+						<td>Logical data independence</td>
+						<td>Partial</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>Integrity independence</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>11</td>
+						<td>Distribution independence</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>12</td>
+						<td>Nonsubversion rule</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>Score (1 for yes, 0 otherwise)</td>
+						<td>7</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 id="features-of-the-model">
+				<a class="self-link" href="#features-of-the-model"> Features of the model </a>
+			</h2>
+			<p>For a more detailed evaluation of DBMS, users can compare a system to the nine structural features, the 18 manipulative features, and the three integrity features of the relational model. Each feature is defensible on practical as well as theoretical grounds.</p>
+			<p>The nine structural features are as follows:</p>
+			<ul>
+				<li>S.1 Relations of assorted degrees — or equivalently tables with unnumbered rows, named columns, no positional concepts and no repeating groups.</li>
+				<li>S.2 Base tables representing the stored data.</li>
+				<li>S.3 Query tables — the result of any query is another table, which may be saved and later operated upon.</li>
+				<li>S.4 View tables — virtual tables that are represented internally by one or more relational commands, not by stored data. The defining commands are executed to the extent necessary when the view is invoked.</li>
+				<li>S.5 Snapshot tables — tables that are evaluated and stored in the data base, together with an entry in the catalog specifying the date and time of their creation plus a description.</li>
+				<li>S.6 Attribute — each column of each relational table is an attribute.</li>
+				<li>S.7 Domain — the set of values from which one or more columns obtain their values.</li>
+				<li>S.8 Primary key — each base table has one or more columns whose values identify each row of that table uniquely. The primary key provides the unique associative addressing property of the relational model that is implementation, software and hardware independent.</li>
+				<li>S.9 Foreign key — any column in the data base that is on the same domain as the primary key of some base relation. The foreign key serves as an important part of the support for referential integrity without introducing links into the programmer&rsquo;s or user&rsquo;s perspective.</li>
+			</ul>
+			<h2 id="manipulative-features">
+				<a class="self-link" href="#manipulative-features"> Manipulative features </a>
+			</h2>
+			<p>It is important to keep in mind that the relational model does not dictate the syntax of any DBMS language. Instead, it specifies that manipulative capability (that is, power) that a relational language should possess. At the same time, the model does not require the user to request the data base administrator to set up any special access paths, nor does it require the user to resort to iterative looping or recursion for Cartesian product.</p>
+			<p>The model also does not require the system to generate a Cartesian product as an intermediate result. In early papers, this manipulative capability was expressed in two ways: algebraic and logic-based. The two ways were then shown to be of equal power.</p>
+			<p>This article uses the algebraic method of expressing the manipulative power, for explicative reasons.</p>
+			<p>The manipulative features are as follows:</p>
+			<ul>
+				<li>
+					<p>M.1 theta select</p>
+				</li>
+				<li>
+					<p>M.2 project</p>
+				</li>
+				<li>
+					<p>M.3 theta join</p>
+				</li>
+				<li>
+					<p>M.4 outer theta join</p>
+				</li>
+				<li>
+					<p>M.5 divide</p>
+				</li>
+				<li>
+					<p>M.6 union</p>
+				</li>
+				<li>
+					<p>M.7 intersection</p>
+				</li>
+				<li>
+					<p>M.8 set difference</p>
+				</li>
+				<li>
+					<p>M.9 outer union</p>
+				</li>
+				<li>
+					<p>M.10 relational assignment</p>
+				</li>
+				<li>
+					<p>M.11 theta select maybe</p>
+				</li>
+				<li>
+					<p>M.12 theta join maybe</p>
+				</li>
+				<li>
+					<p>M.13 outer theta join maybe</p>
+				</li>
+				<li>
+					<p>M.14 divide maybe</p>
+				</li>
+				<li>
+					<p>M.15 theta select semantic override (s/o)</p>
+				</li>
+				<li>
+					<p>M.16 theta join s/o</p>
+				</li>
+				<li>
+					<p>M.17 outer theta join s/o</p>
+				</li>
+				<li>
+					<p>M.18 divide s/o</p>
+				</li>
+			</ul>
+			<p>In the list above, &ldquo;theta&rdquo; stands for any one of the comparators: equal, not equal, greater than, less than, greater than or equal to, less than or equal to.</p>
+			<p>The integrity features of the relational model must also be followed closely:</p>
+			<ul>
+				<li>I.1 Entity integrity.</li>
+				<li>I.2 Referential integrity.</li>
+				<li>I.3 User-defined integrity.</li>
+			</ul>
+			<p>The integrity features cited in I.3 are part of the comprehensive data sublanguage. They support the trigge and assertion approach those integrity constraints that are specific to the particular database. By contrast, I.1 and I.2 apply to all relational databases. Examples of these extensions have been published, although not fully implemented for both SQL and QBE.</p>
+			<h2 id="a-simple-rating-technique">
+				<a class="self-link" href="#a-simple-rating-technique"> A simple rating technique </a>
+			</h2>
+			<p>To be mid-80s fully relational, a DBMS must fully support all 12 of the basic rules, as well as all nine structural, all 18 manipulative and all three integrity features of the relational model—a total of 42 features. I use the term &ldquo;mid-80s&rdquo; because it is likely that there will be a few more requirements by the nineties.</p>
+			<p>To provide a simple method of rating any DBMS on its fidelity to the relational model, treat each rule or feature fully supported by that DBMS as contributing one to the overall score (otherwise the contribution is zero). Then double the total score to obtain a percentage fidelity rating for the system.</p>
+			<p>If a DBMS were to achieve a total score of 42 out of 42 (and I believe no such DBMS presently exists), add 8 points to that score before doubling it—as a reward for true fidelity. Thus its fidelity percentage would be calculated to be 100.</p>
+			<p>The resulting fidelity percentage is not highly accurate. In fact, if it falls between 10% and 90%, I would recommend rounding it to the nearest multiple of 10% in order to avoid misrepresenting the accuracy by displaying more than one significant digit.</p>
+			<h2 id="evaluation-against-the-model">
+				<a class="self-link" href="#evaluation-against-the-model"> Evaluation against the model </a>
+			</h2>
+			<p>By today&rsquo;s standards, 46% is a good, but improvable, fidelity percentage. Figure 2 shows the systems DB2, IDMS/R and Datacom/DB evaluated against 30 features of the relational model. Often the 12 rules are by themselves adequate for comparison purposes. But this more detailed evaluation of the three systems primarily serves expository purposes.</p>
+			<p>Sometimes users of a DBMS: &ldquo;Why should I worry about the degree of its fidelity to the relational model? Surely it is enough for me to know about its fidelity to the ANSI SQL standard.&rdquo;</p>
+			<p>Unfortunately, the ANSI standard as now proposed is quite weak. It fails to support numerous features that users really need if they are to reap all the advantages of the relational approach.</p>
+			<p>ANSI&rsquo;s proposed standard for relational system functions like a convoy, which can proceed only as fast as the slowest ship. The standard is based heavily on that portion of SQL supported by several vendors.</p>
+			<p>Listing the major differences between ANSI&rsquo;s SQL and, as an example, the SQL implemented in IBM&rsquo;s DB2 shows that ANSI&rsquo;s SQL is even less faithful to the relational model than the vendor&rsquo;s SQL.</p>
+			<ul>
+				<li>The draft ANSI SQL does not specify catalog tables and does not allow CREATE or GRANT statements to be included in application programs. Instead, it requires a &ldquo;schema&rdquo; that specifies an authorization ID and a list of definitions of tables, views and privileges.</li>
+				<li>ANSI does not support &ldquo;dynamic SQL&rdquo; — SQL statements that are computed at execute time.</li>
+				<li>The set of reserved words in ANSI is significantly smaller than that in DB2.</li>
+				<li>In ANSI, the &ldquo;unique&rdquo; attribute applies to a column or combination of columns as it should, whereas in DB2 it applies to an index (which it should not).</li>
+			</ul>
+			<p>The ANSI version, therefore, is inadequate as a tool for evaluating DBMS products. The remarks about DB2 apply to certain other vendors&rsquo; products also.</p>
+			<p>My view of these ANSI items is as follows:</p>
+			<ul>
+				<li>Omitting catalog tables was a poor judgment; the catalog needs to be standardized. The ANSI version looks like a survivor of non-dynamic CODASYL.</li>
+				<li>Failure to support dynamic SQL was another poor choice. This feature is needed and is used.</li>
+				<li>The smaller set of reserved words places vendors with relational DBMS products that go beyond the proposed ANSI standard in a potentially difficult situation. Several vendors find themselves in this category.</li>
+				<li>The ANSI treatment of the &ldquo;unique&rdquo; attribute is good in my opinion. An index is treated by ANSI as a purely performance-oriented tool, so there are no semantic consequences of dropping one.</li>
+			</ul>
+			<p>My main criticism of the ANSI Level 1 and Level 2 proposed standard for relational data bases is that inadequate attention is given to some very important areas. For example, the comprehensive, dual-mode data sublanguage capability that SQL (as implemented) already possesses is underemphasized. The entire range of SQL implementations from the large mainframes down to the micro is not adequately addressed.</p>
+			<p>Finally, ANSI ought to extend presently supported SQL to a new version that fully supports the relational model, including distributed data base. At the very least, ANSI should generate a statement of direction adequate to permit vendors to extend the fidelity of their products without risking incompatibility with some future standard.</p>
+			<p>Extensions of SQL that provide this support now can be forecast in detail and with some reliability. Any standard adopted now should not make these extensions impossible or even difficult in the future.</p>
+			<h3 id="figure-2-evaluation-against-the-relational-model-by-dbms">
+				<a class="self-link" href="#figure-2-evaluation-against-the-relational-model-by-dbms"> Figure 2: Evaluation against the relational model (by DBMS) </a>
+			</h3>
+			<table>
+				<thead>
+					<tr>
+						<th>Feature</th>
+						<th>DB2</th>
+						<th>IDMS/R</th>
+						<th>Datacom/DB</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Relations</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Base tables</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>View tables</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Query tables</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Snapshot tables</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Attributes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Domains</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Primary keys</td>
+						<td>Partial</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Foreign keys</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Theta select</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Project</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+					</tr>
+					<tr>
+						<td>Theta join</td>
+						<td>Yes</td>
+						<td>Partial</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Outer theta join</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Union</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Outer union</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Intersection</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Set difference</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Division</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Relational assignment</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Maybe theta select</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Maybe theta join</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Maybe outer theta join</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Maybe divide</td>
+						<td>Yes</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>S/O theta select</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>S/O theta join</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>S/O outer theta join</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>S/O divide</td>
+						<td>No</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Entity integrity</td>
+						<td>Partial</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>Referential integrity</td>
+						<td>No</td>
+						<td>Partial</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td>User-defined integrity</td>
+						<td>Partial</td>
+						<td>No</td>
+						<td>No</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Total score against relational model</td>
+						<td>16</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>(1 for full support, 0 otherwise)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Total score on 12 rules</td>
+						<td>7</td>
+						<td>0</td>
+						<td>0</td>
+					</tr>
+					<tr>
+						<td>Grand total score</td>
+						<td>23</td>
+						<td>4</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td>% fidelity</td>
+						<td>46</td>
+						<td>8</td>
+						<td>10</td>
+					</tr>
+				</tbody>
+			</table>
+			<h2 id="three-buying-factors">
+				<a class="self-link" href="#three-buying-factors"> Three buying factors </a>
+			</h2>
+			<p>Any buyer confronted with the decision of which DBMS to acquire should weigh three factors heavily.</p>
+			<p>The first factor is the buyer&rsquo;s performance requirements, often expressed in terms of the number of transactions that must be executed per second. The average complexity of each transaction is also an important consideration. Only if the performance requirements are extremely severe should buyers rule out present relational DBMS products on this basis. Even then buyers should design performance tests of their own, rather than rely on vendor-designed tests or vendor-declared strategies.</p>
+			<p>The second factor is reduced costs for developing new data bases and new application programs. Relational DBMS provide significant reduction in these costs, when compared with either the CODASYL or hierarchic approaches. Fourth-generation languages are no substitute, although they may provide some additional productivity.</p>
+			<p>The third factor is protecting future investment in application programs by acquiring a DBMS with a solid theoretical foundation and reliable support for high productivity and distributability. In every case, a relational DBMS wins on factors two and three. In many cases, it can win on factor one also—in spite of all the myths about performance.</p>
+			<p>Then the question arises: Which relational DBMS? The system chosen should not only be a DBMS with a good percentage of fidelity to the relational model, but should be extensible at some future time. Ideally, a good DBMS will be extended soon to provide 100% support without logically impairing the customer&rsquo;s investment in application programs.</p>
+			<p>Buyers should be cautious with vendors that make strong claims — claiming the system is &ldquo;post relational&rdquo; (especially when no definition for this term is supplied), or claiming that the DBMS choice has no importance. In fact, your choice of DBMS now may well determine how readily your organization adapts to changes in the future.</p>
+			<p>It is time vendors realize that all features of the relational model are interrelated and interdependent. Missing features leave large gaps in the integrity control and usability of a DBMS implementation.</p>
+			<p>There is nothing on the horizon right now that looks strong enough and practical enough to replace the relational approach. Moreover, because the relational approach relies on such a solid theoretical foundation, its lifetime will last much longer than the CODASYL, hierarchic or tabular approaches.</p>
+			<p>I also believe that it will be much easier for relational DBMS users to convert to whatever future approach appears to be superior, for two reasons. The relational approach insists on all information being recorded explicitly. Moreover, the approach has a close tie to first-order predicate logic—a logic on which most of mathematics is based, hence a logic which can be expected to have strength, endurance and many applications.</p>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">0001-01-01</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

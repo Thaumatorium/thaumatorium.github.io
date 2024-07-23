@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>| The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1></h1>
+			<h1 id="further-normalization-of-the-data-base-relational-model">
+				<a class="self-link" href="#further-normalization-of-the-data-base-relational-model"> FURTHER NORMALIZATION OF THE DATA BASE RELATIONAL MODEL </a>
+			</h1>
+			<p>by</p>
+			<p>
+				E. F. Codd<br />
+				IBM Research Laboratory<br />
+				San Jose, California
+			</p>
+			<h2 id="abstract">
+				<a class="self-link" href="#abstract"> ABSTRACT: </a>
+			</h2>
+			<p>In an earlier paper, the author proposed a relational model of data as a basis for protecting users of formatted data systems from the potentially disruptive changes in data representation caused by growth in the data base and changes in traffic. A first normal form for the time-varying collection of relations was introduced. In this paper, second and third normal forms are defined with the objective of making the collection of relations easier to understand and control, simpler to operate upon, and more informative to the casual user. The question &ldquo;Can application programs be kept in a viable state when data base relations are restructured?&rdquo; is discussed briefly and it is conjectured that third normal form will significantly extend the life expectancy of application programs.</p>
+			<p>
+				RJ 909 (#18557)<br />
+				August 31, 1971<br />
+				Information technology<br />
+				(IR, Documentation, etc.)
+			</p>
+			<h1 id="introduction">
+				<a class="self-link" href="#introduction"> Introduction </a>
+			</h1>
+			<h2 id="11-objectives-of-normalization">
+				<a class="self-link" href="#11-objectives-of-normalization"> 1.1 Objectives of Normalization </a>
+			</h2>
+			<p>In an earlier paper [1] the author proposed a relational model of data as a basis for protecting users of formatted data systems from the potentially disruptive changes in data representation caused by growth in the variety of data types in the data base and by statistical changes in the transaction or request traffic. Using this model, both the application programmer and the interactive user view the data base as a time-varying collection of normalized relations of assorted degrees. Definitions of these terms and of the basic relational operations of projection and natural join are given in the Appendix.</p>
+			<p>The possibility of further normalization of the data base relational model was mentioned in [1]. The objectives of this further normalization are:</p>
+			<ol>
+				<li>To free the collection of relations from undesirable insertion, update and deletion dependencies;</li>
+				<li>To reduce the need for restructuring the collection of relations as new types of data are introduced, and thus increase the life span of application programs;</li>
+				<li>To make the relational model more informative to users;</li>
+				<li>To make the collection of relations neutral to the query statistics, where these statistics are liable to change as time goes by.</li>
+			</ol>
+			<p>The rules or conventions upon which the second and third normal forms are based can be interpreted as guidelines for the data base designer. They are also of concern in the design of general purpose, relational data base systems.</p>
+			<h3 id="12-functional-dependence">
+				<a class="self-link" href="#12-functional-dependence"> 1.2 Functional Dependence </a>
+			</h3>
+			<p>When setting up a relational data base, the data base designer is confronted with many possibilities in selecting the relational schema itself, let alone the selection of its representation in storage. An important, in fact fundamental, consideration is that of identifying which attributes are functionally dependent on others. Attribute B of relation R is functionally dependent on attribute A of R if, at every instant of time, each value in A has no more than one value in B associated with it under R. In other words, the projection Π<sub>A,B</sub>(R) is at every instant of time a function from Π<sub>A</sub>(R) to Π<sub>B</sub>(R) (this function can be, and usually will be, time-varying). We write R.A → R.B if B is functionally dependent on A in R, and R.A ↛ R.B if B is <strong>not</strong> functionally dependent on A in R. If both R.A → R.B and R.B → R.A hold, then at all times R.A and R.B are in one-to-one correspondence, and we write R.A ↔ R.B.</p>
+			<p>The definition given above can be extended to collections of attributes. Thus, if D, E are distinct collections of attributes of R, E is functionally dependent on D if, at every instant of time, each D-value has no more than one E-value associated with it under R. The notation →, ↛ introduced for individual attributes is applied similarly to collections of attributes. A functional dependence of the form R.D → R.E where E is a subset of D will be called a <strong>trivial dependence</strong>.</p>
+			<p>As an example to illustrate functional dependence (both trivial and non-trivial), consider the relation</p>
+			<pre><code>U(E#, D#, V#)
+</code></pre>
+			<p>where E# = employee serial number D# = serial number of department to which employee belongs V# = serial number of division to which employee belongs.</p>
+			<p>Suppose that an employee never belongs to more than one department, that a department never belongs to more than one division, and an employee belongs to the division to which his department belongs. Then, we observe that</p>
+			<pre><code>U.E# → U.D# (1)
+U.D# → U.V# (2)
+U.E# → U.V# (3)
+U.(E#, D#) → U.V# (4)
+</code></pre>
+			<p>where (4) is a consequence of (3) (3) is a consequence of (1) and (2) together.</p>
+			<p>Suppose we are also given the following additional facts: normally, there are many employees belonging to a given department and many departments belonging to a given division. Then, we may observe that</p>
+			<pre><code>U.D# ↛ U.E#
+</code></pre>
+			<p>and</p>
+			<pre><code>U.V# ↛ U.D# .
+</code></pre>
+			<p>An example of a trivial dependence is:</p>
+			<pre><code>U.(E#, D#) → U.E#
+</code></pre>
+			<p>since E# is included in (E#, D#).</p>
+			<h3 id="13-candidate-keys">
+				<a class="self-link" href="#13-candidate-keys"> 1.3 Candidate Keys </a>
+			</h3>
+			<p>Each candidate key K of relation R is, by definition, a combination of attributes (possibly a single attribute) of R with properties P1 and P2:</p>
+			<p>P<sub>1</sub>: <strong>(Unique Identification)</strong> In each tuple of R the value of K uniquely identifies that tuple; i.e., R.K → R.Ω where Ω denotes the collection of all attributes of the specified relation;</p>
+			<p>P<sub>2</sub>: <strong>(Non-redundancy)</strong> No attribute in K can be discarded without destroying property P<sub>1</sub>.</p>
+			<p>Obviously, there always exists at least one candidate key, because the combination of <strong>all</strong> attributes of R possesses property P<sub>1</sub>. It is then a matter of looking for a subset with property P<sub>2</sub>.</p>
+			<p>Two properties of candidate keys can be deduced from P<sub>1</sub> and P<sub>2</sub>:</p>
+			<p>P<sub>3</sub>: Each attribute of R is functionally dependent on each candidate key of R;</p>
+			<p>P<sub>4</sub>: The collection of attributes of R in a candidate key K is a maximal functionally independent set (i.e., every proper subset of the attributes of K is functionally independent of every other proper subset of attributes of K, and no other attributes of R can be added without destroying this functional independence).</p>
+			<p>It is left to the reader to show that</p>
+			<ol>
+				<li>P<sub>1</sub> is logically equivalent to P<sub>3</sub></li>
+				<li>P<sub>1</sub> ∧ P<sub>2</sub> implies P<sub>4</sub></li>
+				<li>a maximal functionally independent set of attributes is not necessarily a candidate key.</li>
+			</ol>
+			<p>For each relation R in a data base, one of its candidate keys is arbitrarily designated as the <strong>primary key</strong> of R. The usual operational distinction between the primary key and other candidate keys (if any) is that no tuple is allowed to have an undefined value for any of the primary key components, whereas any other components may have an undefined value. This restriction is imposed because of the vital role played by primary keys in search algorithms. The statement &ldquo;B functionally depends on A in R&rdquo; may be expressed in the alternative form &ldquo;A identifies B in R&rdquo;, since in this case A satisfies condition P<sub>1</sub> for the relation Π<sub>A,B</sub>(R).</p>
+			<h2 id="2-the-second-normal-form">
+				<a class="self-link" href="#2-the-second-normal-form"> 2. The Second Normal Form </a>
+			</h2>
+			<h3 id="21-introductory-example">
+				<a class="self-link" href="#21-introductory-example"> 2.1 Introductory Example </a>
+			</h3>
+			<p>The basic ideas underlying the second and third normal forms are simple, but they have many subtle ramifications. The author has found that numerous examples are needed to explain and motivate the precise definitions of these normal forms. Accordingly, we begin with the simplest case of a relation in first normal form but not in second (i.e., a relation of degree 3):</p>
+			<pre><code>T(S#, P#, SC)
+</code></pre>
+			<p>where</p>
+			<pre><code>S# = supplier number
+P# = part number
+SC = supplier city.
+</code></pre>
+			<p>A triple (x, y, z) belongs to T if the supplier with serial number x supplies the part with serial number y, and supplier x has his base of operations in city z. A given part may be supplied by many suppliers, and a given supplier may supply many parts. Thus, the following time-independent conditions hold:</p>
+			<pre><code>T.S# ↛ T.P#
+T.P# ↛ T.S#
+</code></pre>
+			<p>In other words, although the attributes S#, P# are related under T, they are functionally independent of one another under T. Now, each supplier has (in this example) only one base of operations and therefore only one city. Thus,</p>
+			<pre><code>T.S# → T.SC .
+</code></pre>
+			<p>Intuitively, we can see that the only choice for the primary key of T is the attribute combination (S#, P#).</p>
+			<p>Looking at a sample instantaneous tabulation of T (Fig. 1) the undesirable properties of the T schema become immediately apparent. We observe for example that, if supplier u relocates his base of operations from Poole to Tolpuddle, more than one tuple has to be updated. Worse still, the number of tuples to be updated can, and usually will, change with time. It just happens to be 3 tuples at this instant.</p>
+			<pre><code>T(S#, P#, SC)
+  u   1   'POOLE'
+  u   2   'POOLE'
+  u   3   'POOLE'
+  v   1   'FEISTRITZ'
+  v   3   'FEISTRITZ'
+</code></pre>
+			<p>Fig. 1: <strong>A Relation not in Second Normal Form</strong></p>
+			<p>Now suppose supplier v ceases to supply parts 1 and 3, but may in the near future supply some other parts. Accordingly, we wish to retain the information that supplier v is located in Feistritz. Deletion of one of the two tuples does not cause the complete disappearance of the association of v with Feistritz, but deletion of both tuples does. This is an example of a deletion dependency which is a consequence of the relational schema itself. It is left to the reader to illustrate a corresponding insertion dependency using this example.</p>
+			<p>Conversion of T to second normal form consists of replacing T by two of its projections:</p>
+			<p>
+				T<sub>1</sub> = Π<sub>S#,P#</sub>(T)<br />
+				T<sub>2</sub> = Π<sub>S#,SC</sub>(T)
+			</p>
+			<p>We thus obtain the relations tabulated in Fig. 2.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>T<sub>1</sub>(S#, P#)</th>
+						<th>T<sub>2</sub>(S#, SC)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>u 1</td>
+						<td>u &lsquo;POOLE&rsquo;</td>
+					</tr>
+					<tr>
+						<td>u 2</td>
+						<td>v &lsquo;FEISTRITZ&rsquo;</td>
+					</tr>
+					<tr>
+						<td>u 3</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>v 1</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>v 3</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<p><em>Fig. 2: Relations in Second Normal Form</em></p>
+			<p>Note how the undesirable insertion, update and deletion dependencies have disappeared. No essential information has been lost, since at any time the original relation T may be recovered by taking the natural join of T<sub>1</sub> and T<sub>2</sub> on S#.</p>
+			<h3 id="22-more-probing-examples">
+				<a class="self-link" href="#22-more-probing-examples"> 2.2 More Probing Examples </a>
+			</h3>
+			<p>Unfortunately, the simple example above does not illustrate all of the complexities which can arise. For expository purposes we now consider five possible relations in a data base concerning suppliers, parts, and projects. In a crude sense these relations represent five alternative possibilities - it is not intended that they coexist in a single data base. Note, however, that some contain more information (in the form of additional attributes) than others. In each case the primary key is underlined.</p>
+			<p>
+				R<sub>1</sub>(S#, P#, J#)<br />
+				R<sub>2</sub>(X#, S#, P#, J#)<br />
+				R<sub>3</sub>(X#, S#, P#, J#, Q)<br />
+				R<sub>4</sub>(X#, S#, P#, J#, Q, SC)<br />
+				R<sub>5</sub>(S#, P#, J#, Q, SC)
+			</p>
+			<p>
+				where<br />
+				S# = supplier number<br />
+				P# = part number<br />
+				J# = project number<br />
+				X# = serial number<br />
+				Q = quantity supplied<br />
+				SC = supplier city
+			</p>
+			<p>A triple (x, y, z) belongs to R<sub>1</sub> if supplier x supplies part y to project z. The same interpretation holds for Π<sub>S#, P#, J#</sub>(R<sub>i</sub>) for i = 2, 3, 4, 5. In each of the five relations, a given combination of supplier and part may be associated with more than one project, a given combination of part and project may be associated with more than one supplier, and a given combination of project and supplier may be associated with more than one part. Thus, for all i</p>
+			<p>
+				R<sub>i</sub>.(S#, P#) ↛ R<sub>i</sub>.(J#)<br />
+				R<sub>i</sub>.(P#, J#) ↛ R<sub>i</sub>.(S#)<br />
+				R<sub>i</sub>.(J#, S#) ↛ R<sub>i</sub>.(P#)
+			</p>
+			<p>In each of the relations that have the attribute Q, there is only one value of Q for a given value of the attribute combination (S#, P#, J#). Thus,</p>
+			<p>R<sub>i</sub>.(S#, P#, J#) → R<sub>i</sub>.Q for i = 3, 4, 5.</p>
+			<p>However, the value of Q is not uniquely determined by any proper subset of these attributes. Thus, for i = 3, 4, 5</p>
+			<p>
+				R<sub>i</sub>.(S#, P#) ↛ R<sub>i</sub>.Q<br />
+				R<sub>i</sub>.(P#, J#) ↛ R<sub>i</sub>.Q<br />
+				R<sub>i</sub>.(J#, S#) ↛ R<sub>i</sub>.Q .
+			</p>
+			<p>In each of the relations that have the attribute SC, there is only one value of SC for a given value of S#. Thus, for i = 4, 5</p>
+			<p>R<sub>i</sub>.S# → R<sub>i</sub>.SC .</p>
+			<p>In three of the relations a serial number key X# has been introduced and selected as the primary key, even though there is already an attribute combination (S#, P#, J#) capable of acting as the primary key. Thus, for i = 2, 3, 4</p>
+			<p>R<sub>i</sub>.X# → R<sub>i</sub>.(S#, P#, J#) .</p>
+			<p>This is not at all unusual in practice (consider a purchase order number, for instance).</p>
+			<p>In what follows, we shall suppose that in the given relations there are no functional dependencies other than those itemized above together with those that can be formally deduced from them. Fig. 3 summarizes the non-trivial dependencies (but not the non-dependencies) in a parent relation R from which R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>, R<sub>5</sub> can be derived by projection.</p>
+			<p><img src="attribute-dependencies-in-r.drawio.png" alt="Fig. 3: Attribute Dependencies in R" /></p>
+			<p>In all five sample relations above, (S#, P#, J#) is a candidate key. In R<sub>1</sub> and R<sub>5</sub> it is the primary key also. X# is both a candidate key and the primary key in relations R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>.</p>
+			<h3 id="23-prime-attributes">
+				<a class="self-link" href="#23-prime-attributes"> 2.3 Prime Attributes </a>
+			</h3>
+			<p>We have observed that in a given relation there may be several distinct candidate keys* and, in this case, one is arbitrarily designated as the primary key. Let us call any attribute of R which participates in at least one candidate key of R a <strong>prime attribute</strong> of R. All other attributes of R are called <strong>non-prime</strong>. In sample relations R<sub>1</sub>, R<sub>2</sub> all attributes are prime. In R<sub>3</sub> the only non-prime attribute is Q, while in R<sub>4</sub>, R<sub>5</sub> both Q and SC are non-prime.</p>
+			<h3 id="24-full-functional-dependence">
+				<a class="self-link" href="#24-full-functional-dependence"> 2.4 Full Functional Dependence </a>
+			</h3>
+			<p>Suppose D, E are two distinct subcollections of the attributes of a relation R and</p>
+			<p>R.D → R.E</p>
+			<ul>
+				<li>Although distinct, they need not be disjoint.</li>
+			</ul>
+			<p>If, in addition, E is <strong>not</strong> functionally dependent on any subset of D (other than D itself) then E is said to be <strong>fully dependent</strong> on D in R. Intuitively, E is functionally dependent on the whole of D, but not on any part of it. An example of full dependence is:</p>
+			<p>R<sub>3</sub>.(S#, P#, J#) → R<sub>3</sub>.Q .</p>
+			<h3 id="25-definition-of-second-normal-form">
+				<a class="self-link" href="#25-definition-of-second-normal-form"> 2.5 Definition of Second Normal Form </a>
+			</h3>
+			<p>A relation R is in <strong>second normal form</strong> if it is in first normal form and every non-prime attribute of R is fully dependent on each candidate key of R.* This definition rules out both kinds of undesirable dependence of the attribute SC:</p>
+			<ol>
+				<li>The obvious functional dependence of SC in R<sub>5</sub> on a portion S# of the primary key;</li>
+				<li>The less obvious functional dependence of SC in R<sub>4</sub> on a portion S# of a candidate key that is not the primary key.</li>
+			</ol>
+			<p>Thus, R<sub>4</sub> and R<sub>5</sub> are <strong>not</strong> in second normal form.</p>
+			<p>Two special cases of the definition are worth noting. Suppose R is in first normal form and one or both of the following conditions hold:</p>
+			<p>C1: R has no non-prime attribute;</p>
+			<p>C2: Every candidate key of R consists of just a single attribute.</p>
+			<hr />
+			<p>* Although each prime attribute is fully dependent on each candidate key of which it is a component, it is possible for a prime attribute to be non-fully dependent on a candidate key of which it is <strong>not</strong> a component. Thus, this definition is changed in meaning if the term &ldquo;non-prime&rdquo; is dropped. An example which illustrates this distinction is R(A, B, C, D, E, F) where</p>
+			<pre><code>R.(A,B,C) ↔ R.(D, E) → R.F
+ R.(A,B)  → R.D
+    R.E   ↛ R.C
+</code></pre>
+			<p>Prime attribute C is not fully dependent on candidate key (D, E); neither is D on (A, B, C).</p>
+			<hr />
+			<p>Then, without further investigation, we can say that R is in second normal form. Observe that both R<sub>1</sub> and R<sub>2</sub> are in second normal form, because special case C1 applies. Relation R<sub>3</sub> is an example of a relation in second normal form, but not as a result of the special conditions C1, C2 above.</p>
+			<h3 id="26-optimal-second-normal-form">
+				<a class="self-link" href="#26-optimal-second-normal-form"> 2.6 Optimal Second Normal Form </a>
+			</h3>
+			<p>In section 2.1 a simple example of conversion from first to second normal form was discussed. The operation of projection, employed twice in that example, is adequate for the general case. However, to keep the user from being confused by unnecessary relation names (and to keep the system catalog from getting clogged by such names), projection should be applied sparingly when normalizing.</p>
+			<p>Consider the relation T(S#, P#, SN, SC) where</p>
+			<pre><code>S# → SN (supplier name)
+S# → SC (supplier city).
+</code></pre>
+			<p>If we apply projection sparingly in converting to second normal form, we obtain collection C<sub>1</sub> say:</p>
+			<blockquote>
+				<p>Π<sub>S#, P#</sub>(T), Π<sub>S#, SN, SC</sub>(T).</p>
+			</blockquote>
+			<p>On the other hand, we could apply projection liberally and obtain collection C<sub>2</sub> say:</p>
+			<blockquote>
+				<p>Π<sub>S#, P#</sub>(T), Π<sub>S#, SN</sub>(T), Π<sub>S#, SC</sub>(T),</p>
+			</blockquote>
+			<p>Both C<sub>1</sub> and C<sub>2</sub> are in second normal form and both retain all the essential information in the original relation T. However, collection C<sub>1</sub> contains the fewest possible relations, and is accordingly said to be in <strong>optimal second normal form</strong>. C<sub>2</sub> is in non-optimal second normal form.</p>
+			<h2 id="3-third-normal-form">
+				<a class="self-link" href="#3-third-normal-form"> 3. Third Normal Form </a>
+			</h2>
+			<h3 id="31-transitive-dependence">
+				<a class="self-link" href="#31-transitive-dependence"> 3.1 Transitive Dependence </a>
+			</h3>
+			<p>Suppose that A, B, C are three distinct collections of attributes of a relation R (hence R is of degree 3 or more). Suppose that all three of the following time-independent conditions hold:</p>
+			<pre><code>R.A → R.B,    R.B ↛ R.A,
+R.B → R.C .
+</code></pre>
+			<p>From this we may conclude that two other conditions must hold:</p>
+			<pre><code>R.A → R.C,    R.C ↛ R.A
+</code></pre>
+			<p>and we may represent the entire set of conditions on A, B, C as shown in Fig. 4. Note that R.C → R.B is neither prohibited nor required.</p>
+			<p><img src="transitive-dependence-of-c-on-a-under-r.drawio.png" alt="Transitive Dependence of C on A under R" /></p>
+			<p>Fig. 4: Transitive Dependence of C on A under R</p>
+			<p>In such a case we say that C is <strong>transitively dependent</strong> on A under R. In the special case where R.C → R.B also, both B and C are transitively dependent on A under R.</p>
+			<p>To illustrate transitive dependence, consider a relation W concerning employees and their departments:</p>
+			<pre><code>W(E#, JC, D#, M#, CT)
+</code></pre>
+			<p>where</p>
+			<pre><code>E# = employee serial number
+JC = employee jobcode
+D# = department number of employee
+M# = serial number of department manager
+CT = contract type (government or non-government)
+</code></pre>
+			<p>Suppose that each employee is given only one jobcode and is assigned to only one department. Each department has its own manager and is involved in work on either government or non-government contracts, not both. The non-trivial functional dependencies in W are as shown in Fig. 5 (the non-dependencies are implied).</p>
+			<p><img src="example-of-several-transitive-dependencies.drawio.png" alt="Example of Several Transitive Dependencies" /></p>
+			<p>Fig. 5: <strong>Example of Several Transitive Dependencies</strong></p>
+			<p>If M# were not present, the only transitive dependence would be that of CT on E#. With M# present, there are two additional transitive dependencies: both D# and M# are transitively dependent on E#. Note, however, that CT is not transitively dependent on either D# or M#.</p>
+			<p>Looking at a sample instantaneous tabulation of W (Fig. 6) the undesirable properties of the W schema become immediately apparent. We observe for example that, if the manager of department y should change, more than one tuple has to be updated. The actual number of tuples to be updated can, and usually will, change with time. A similar remark applies if department x is switched from government work (contract type g) to non-government work (contract type n).</p>
+			<pre><code>W(E#, JC, D#, M#, CT)
+  1   a   x   11  g
+  2   c   x   11  g
+  3   a   y   12  n
+  4   b   x   11  g
+  5   b   y   12  n
+  6   c   y   12  n
+  7   a   z   13  n
+  8   c   z   13  n
+</code></pre>
+			<p>Fig. 6: <strong>A Relation not in Third Normal Form</strong></p>
+			<p>Deletion of the tuple for an employee has two possible consequences: deletion of the corresponding department information if his tuple is the sole one remaining just prior to deletion, and non-deletion of the department information otherwise. If the data base system does not permit any primary key to have an undefined value, then D# and CT information for a new department cannot be established in relation W before people are assigned to that department. If, on the other hand, the primary key E# could have an undefined value, and if a tuple were introduced with such a value for E# together with defined values for D# (a new department) and CT, then insertion of E# and JC values for the first employee in that department involves no new tuple, whereas each subsequent assignment of an employee to that department does require a new tuple to be inserted.</p>
+			<p>Conversion of W to third normal form consists of replacing W by two of its projections:</p>
+			<blockquote>
+				<p>W<sub>1</sub> = Π<sub>E#, JC, D#</sub>(W)</p>
+				<p>W<sub>2</sub> = Π<sub>D#, M#, CT</sub>(W).</p>
+			</blockquote>
+			<p>We thus obtain the relations tabulated in Fig. 7.</p>
+			<pre><code>W1(E#, JC, D#)   W2(D#, M#, CT)
+   1   a   x        x   11  g
+   2   c   x        y   12  n
+   3   a   y        z   13  n
+   4   b   x
+   5   b   y
+   6   c   y
+   7   a   z
+   8   c   z
+</code></pre>
+			<p>Fig. 7: <strong>Relations in Third Normal Form</strong></p>
+			<p>Note how the undesirable insertion, update and deletion dependencies have disappeared with the removal of the transitive dependencies. No essential information has been lost, since at any time the original relation W may be recovered by taking the natural join of W<sub>1</sub> and W<sub>2</sub> on D#.</p>
+			<h3 id="32-nonremovable-transitive-dependence">
+				<a class="self-link" href="#32-nonremovable-transitive-dependence"> 3.2 Nonremovable Transitive Dependence </a>
+			</h3>
+			<p>It is not always possible to remove <strong>all</strong> transitive dependencies without losing information. This is illustrated by a relation R(A, B, C) in which</p>
+			<pre><code>R.(A,B) → R.C ,  R.C ↛ R.(A, B)
+   R.C  → R.B  .
+</code></pre>
+			<p>Thus, B is transitively dependent on the primary key (A, B).</p>
+			<h3 id="33-definition-of-third-normal-form">
+				<a class="self-link" href="#33-definition-of-third-normal-form"> 3.3 Definition of Third Normal Form </a>
+			</h3>
+			<p>A relation R is in <strong>third normal form</strong> if it is in second normal form and every non-prime attribute of R is non-transitively dependent on each</p>
+			<p>candidate key of R. Relations T<sub>1</sub>, T<sub>2</sub>, R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub> of section 2.1 are in third normal form. Relations R<sub>4</sub>, R<sub>5</sub> are not in third normal form, because they are not even in second. Relation U of section 1.2 is in second normal form, but not in third, because of the transitive dependence of V# on E#.</p>
+			<p>Any relation R in third normal form has the following property:</p>
+			<blockquote>
+				<p>P<sub>5</sub>: Every non-prime attribute of R is both fully dependent and non-transitively dependent on each candidate key of R.</p>
+			</blockquote>
+			<p>This property is an immediate consequence of the definition given above. Note that the definition has been so formulated that it does not prohibit transitive dependence of the kind illustrated in section 3.2.</p>
+			<h3 id="34-optimal-third-normal-form">
+				<a class="self-link" href="#34-optimal-third-normal-form"> 3.4 Optimal Third Normal Form </a>
+			</h3>
+			<p>Suppose C<sub>2</sub> is a collection of relations in optimal second normal form and projection is applied to convert to third normal form. The resulting collection of relations C<sub>3</sub> is in optimal third normal form relative to C<sub>2</sub> if both of the following conditions hold:</p>
+			<ol>
+				<li>C<sub>3</sub> must contain the fewest possible relations (as in the case of the optimal second normal form) each in third normal form;</li>
+				<li>Each relation in C<sub>3</sub> must not have any pair of attributes such that one member of the pair is strictly transitively dependent* on the other in some relation of C<sub>2</sub> (this condition forces attributes which are &ldquo;remotely related&rdquo; to be separated from one another in the normalized collection of relations).</li>
+			</ol>
+			<hr />
+			<p>*Attribute C is strictly transitively dependent on attribute A under R if there is an attribute B such that</p>
+			<pre><code>R.A → R.B ,  R.B ↛ R.A
+R.B → R.C ,  R.C ↛ R.B
+</code></pre>
+			<p>This is a special case of transitive dependence (see definition in section 3.1)</p>
+			<hr />
+			<p>Application of these conditions is illustrated in Fig. 8a, 8b using the relation W of section 3.1. Fig. 8a treats the normalization of W<sub>0</sub> (obtained from W by dropping manager number M#). Fig. 8b treats the normalization of W itself, and shows how one-to-one correspondences are forced to occur between candidate keys of the projections (instead of between non-prime attributes). Note also the non-uniqueness of the optimal third normal form in Fig. 8b.</p>
+			<h2 id="4-admissible-states">
+				<a class="self-link" href="#4-admissible-states"> 4. Admissible States </a>
+			</h2>
+			<p>When converting a time-varying data base from first normal form to second, or from second to third, certain new insertion and deletion possibilities are introduced. Let us look at the example in section 2.1 again.</p>
+			<p>In first normal form the data base B<sub>1</sub> consists of the single time-varying relation denoted by the schema</p>
+			<pre><code>T(S#, P#, SC).
+</code></pre>
+			<p>In second normal form the corresponding data base B<sub>2</sub> consists of two relations denoted by the schema</p>
+			<blockquote>
+				<p>T<sub>1</sub>(S#, P#) T<sub>2</sub>(S#, SC)</p>
+			</blockquote>
+			<p>where, for all time</p>
+			<blockquote>
+				<ol>
+					<li>T<sub>1</sub> = Π<sub>S#, P#</sub>(T)</li>
+					<li>T<sub>2</sub> = Π<sub>S#, SC</sub>(T).</li>
+				</ol>
+			</blockquote>
+			<p>As usual, the primary keys are underlined.</p>
+			<p><img src="conversion-of-w0-to-third-normal-form.drawio.png" alt="Conversion of W0 to Third Normal Form" /></p>
+			<p>
+				Fig. 8a: <strong>Conversion of W<sub>0</sub> to Third Normal Form</strong>
+			</p>
+			<h1 id="todo-continue-here">
+				<a class="self-link" href="#todo-continue-here"> TODO: CONTINUE HERE </a>
+			</h1>
+			<table>
+				<thead>
+					<tr>
+						<th>W(E#, JC, D#, M#, CT)</th>
+					</tr>
+				</thead>
+			</table>
+			<h4 id="collection-of-projections-of-w">
+				<a class="self-link" href="#collection-of-projections-of-w"> COLLECTION OF PROJECTIONS OF W </a>
+			</h4>
+			<table>
+				<thead>
+					<tr>
+						<th>E# → JC</th>
+						<th>E# → CT</th>
+						<th>E# → D#</th>
+						<th>D# → CT</th>
+						<th>M# → CT</th>
+						<th>TNF</th>
+						<th>OPTIMAL</th>
+						<th>COMMENTS</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>E# → JC</td>
+						<td>E# → CT</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>NO</td>
+						<td></td>
+						<td>D# and M# are transitively dependent on E#</td>
+					</tr>
+					<tr>
+						<td>E# → JC</td>
+						<td>E# → D#</td>
+						<td>D# → CT</td>
+						<td></td>
+						<td>M# → CT</td>
+						<td>YES</td>
+						<td>NO</td>
+						<td>VIOLATES 1)</td>
+					</tr>
+					<tr>
+						<td>E# → JC</td>
+						<td>D# → CT</td>
+						<td></td>
+						<td></td>
+						<td>M# → CT</td>
+						<td>YES</td>
+						<td>YES</td>
+						<td>VIOLATES NIL</td>
+					</tr>
+					<tr>
+						<td>E# → JC</td>
+						<td>D# → CT</td>
+						<td></td>
+						<td></td>
+						<td>M# → CT</td>
+						<td>YES</td>
+						<td>YES</td>
+						<td>VIOLATES NIL</td>
+					</tr>
+				</tbody>
+			</table>
+			<p><em>Fig. 8b: Conversion of W to Third Normal Form</em></p>
+			<p>A data base state (i.e., instantaneous snapshot) is <strong>admissible</strong> relative to a given schema if</p>
+			<ol>
+				<li>each relation named in the schema has tuples whose components belong to the specified domains;</li>
+				<li>all tuples of a relation named in the schema are distinct;</li>
+				<li>no tuple has an undefined value for its primary key (and thus no component of the primary key may have an undefined value).</li>
+			</ol>
+			<p>The last condition makes an operational distinction between that candidate key selected to act as the primary key of a relation and all other candidate keys of that relation.</p>
+			<p>Given any admissible state for B<sub>1</sub> we can produce a corresponding admissible state for B<sub>2</sub> by applying the operation of projection as in the example above. The original B<sub>1</sub> state can be recovered by taking the natural join (see Appendix for definition) of R<sub>1</sub> and R<sub>2</sub> on S#.</p>
+			<p>We now observe that the schema for B<sub>2</sub> has more admissible states than that for B<sub>1</sub>. Thus, in B<sub>2</sub> it is perfectly admissible to have a S# value appearing in T<sub>2</sub> which does not appear at all in T<sub>1</sub>, or vice versa, as in the B<sub>2</sub>-state exhibited in Fig. 9.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>T<sub>1</sub>(S#, P#)</th>
+						<th>T<sub>2</sub>(S#, SC)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>u 1</td>
+						<td>u &lsquo;POOLE&rsquo;</td>
+					</tr>
+					<tr>
+						<td>u 2</td>
+						<td>v &lsquo;FEISTRITZ&rsquo;</td>
+					</tr>
+					<tr>
+						<td>v 1</td>
+						<td>w &lsquo;SWANAGE&rsquo;</td>
+					</tr>
+					<tr>
+						<td>z 3</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>
+				<em>Fig. 9: An Admissible State for B<sub>2</sub></em>
+			</p>
+			<p>If we now take the natural join of R<sub>1</sub> and R<sub>2</sub> on S#, we obtain the state (or tabulation) of T exhibited in Fig. 10. Although this state is admissible for B<sub>1</sub>, essential information has been lost.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>T(S#, P#, SC)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>u 1 &lsquo;POOLE&rsquo;</td>
+					</tr>
+					<tr>
+						<td>u 2 &lsquo;POOLE&rsquo;</td>
+					</tr>
+					<tr>
+						<td>v 1 &lsquo;FEISTRITZ&rsquo;</td>
+					</tr>
+				</tbody>
+			</table>
+			<p><em>Fig. 10: The Natural Join of Relations in Fig. 9</em></p>
+			<p>An obvious property of the class of admissible states for a given data base schema is that by means of the operations of tuple insertion and tuple deletion all the admissible states are reachable from any given admissible state. Clearly, the schema for B<sub>2</sub> permits insertions and deletions not permitted by the schema for B<sub>1</sub>. It is accordingly reasonable to say that these schemata are not <strong>insertion-deletion equivalent</strong>.</p>
+			<h2 id="5-query-equivalence">
+				<a class="self-link" href="#5-query-equivalence"> 5. Query Equivalence </a>
+			</h2>
+			<p>A useful notion of query equivalence of data base states can be based on the algebraic view of queries. In this view retrieval of data is treated as the formation of a new relation from the data base relations by some operation of a relational algebra (see [2]).</p>
+			<p>If Θ is a relational algebra, B is a collection of relations and R is a relation which is derivable from B using operations of the algebra Θ only, then we say (as in [1]) that R is Θ-derivable from B. Suppose now that we have two data bases A, B which at time t are in states A<sub>t</sub>, B<sub>t</sub> respectively. We say that the data base states A<sub>t</sub>, B<sub>t</sub> are <strong>query-equivalent</strong></p>
+			<p>providing they are each Θ-derivable from the other and Θ is a relationally complete algebra (see [2]). The reasonableness of this definition stems from the fact that, if each of the data base states A<sub>t</sub>, B<sub>t</sub> is Θ-derivable from the other, then <strong>any</strong> relation R which is Θ-derivable from one must be Θ-derivable from the other.</p>
+			<p>Fig. 11 summarizes the observations made in section 4 on admissible states. It also illustrates the fact that the set S of all admissible states for a data base cast in first normal form is query-equivalent to a subset T<sub>1</sub> of all admissible states when this data base is cast in second normal form. Similarly, the set T<sub>1</sub> ∪ T<sub>2</sub> of all admissible states for this data base cast in second normal form is query-equivalent to a subset U<sub>1</sub> of all admissible states when the same data base is cast in third normal form.</p>
+			<h2 id="6-growth-and-restructuring">
+				<a class="self-link" href="#6-growth-and-restructuring"> 6. Growth and Restructuring </a>
+			</h2>
+			<p>One of the principal reasons for making application programs interact with an abstract collection of relations instead of their storage representations is to keep these programs from being logically impaired when the storage representations change. Now we wish to consider (but only briefly) what happens to the application programs when the collection of relations is itself changed to conform to a new schema. Simple additions of new data base domains and new relations have no effect. Outright removal of a relation R obviously cripples those programs that previously made use of R. Replacement of a relation by <strong>one</strong> of its projections will cripple those programs that previously made use of the attributes now dropped.</p>
+			<p><img src="file-IaFPoQ4RvXmLLNM6U5Ugkou7" alt="Fig. 11: Admissible States for a Data Base cast in Normal Forms #1, 2, 3." /></p>
+			<p>The really interesting type of change is replacement of a relation R by two or more of its projections such that R may be recovered by taking the natural join of these projections. We discussed this type of change in sections 2 and 3 in the context of conversion to second and third normal forms respectively. In the present context of data base growth we call this phenomenon <strong>attribute migration</strong>.</p>
+			<p>Some of the reasons why attribute migration may accompany data base growth are as follows:</p>
+			<ol>
+				<li>Through continued acquisition of additional attributes a relation has become too cumbersome in size and fuzzy in meaning;</li>
+				<li>New controls (e.g., ownership of data, access authorization, recovery, etc.) are being introduced;</li>
+				<li>There has been a change in that part of the real world which the data base reflects or models.</li>
+			</ol>
+			<p>To illustrate the effect of attribute migration on application programs, consider the splitting of data base relation U(E#, JC, D#, M#, CT) into the two projections:</p>
+			<p>
+				U<sub>1</sub> = Π<sub>E#, JC, D#</sub>(U)<br />
+				U<sub>2</sub> = Π<sub>D#, M#, CT</sub>(U)
+			</p>
+			<p>(see section 3.1 for the interpretation of U and its attributes).</p>
+			<p>We first examine a query and then an insertion. Each is expressed in the data base sublanguage ALPHA [3].</p>
+			<p>** Find the contract type (CT) for the employee whose serial number (E#)</p>
+			<p>is 1588. Place result in workspace W.</p>
+			<p>GET W U.CT:(U.E# = 1588)</p>
+			<p>When U is replaced by the two projections U<sub>1</sub>, U<sub>2</sub>, queries on U must undergo a transformation to make them work as before. If the data base system were supplied with a suitable set of substitutions it could make this transformation automatically. We do not propose to go into the details here, but merely state that the resulting transformed query would be:</p>
+			<p>GET W U2.CT: 3U1((U1.D# = U2.D#) ∧ (U1.E# = 1588))</p>
+			<p>The real difficulty arises with insertion and deletion.</p>
+			<p>** Insert from workspace W into the data base relation U a tuple for a new employee with serial number 1492 and contract type non-government (n). Values for his jobcode, department number, and manager number are not yet available.</p>
+			<p>PUT W U</p>
+			<p>When data base relation U is replaced by U1, U2 and we attempt to transform this insertion to make it work on these projections, we find that the insertion of two new tuples is necessary: one into U1, and one into U2. The insertion into U1 presents no problem, because we have a value (1492) for its primary key component (E#). In the case of U2, however, we do not have a value for its primary key component (D#). To cope with this difficulty, the system could temporarily insert a fictitious (but defined) value to represent a department (as yet undetermined) which is assigned to non-government work. Unfortunately, when the total data base is considered together with all the possible partially defined associations which may have to be temporarily remembered, the system may require a very large pool of fictitious values to call upon.</p>
+			<p>We have seen that attribute migration can logically impair an application program. Further, it may be feasible to systematically re-interpret the data base requests made by a program P so as to make P work correctly again. This problem is simpler for those programs that avoid insertion and deletion on the relations affected by attribute migration. Whether or not this special case holds, the re-interpretation is likely to cause significant system overhead. Avoidance of attribute migration is accordingly desirable. It is this author&rsquo;s thesis that, by casting the data base in third normal form at the earliest possible time and by keeping it that way an installation will reduce the incidence of attribute migration to a minimum, and consequently have less trouble keeping its application programs in a viable state.</p>
+			<h2 id="7-conclusion">
+				<a class="self-link" href="#7-conclusion"> 7. Conclusion </a>
+			</h2>
+			<p>In section 1 we introduced the notion of functional dependence within a relation - a notion that is fundamental in formatted data base design. Using this notion, two new normal forms were defined. Fig. 12 summarizes the relationship between the three normal forms introduced by this author. Notice that as a collection of relations is translated from first normal form to second, and then to third, the conditions applied are progressively more stringent.</p>
+			<p>In the past, design of records (computerized or not) for commercial, industrial and government institutions has been oriented in an ad hoc way to the needs of particular applications. For the large integrated data bases of the future, application-independent guidelines for logical</p>
+			<p>We have seen that attribute migration can logically impair an application program. Further, it may be feasible to systematically re-interpret the data base requests made by a program P so as to make P work correctly again. This problem is simpler for those programs that avoid insertion and deletion on the relations affected by attribute migration. Whether or not this special case holds, the re-interpretation is likely to cause significant system overhead. Avoidance of attribute migration is accordingly desirable. It is this author&rsquo;s thesis that, by casting the data base in third normal form at the earliest possible time and by keeping it that way an installation will reduce the incidence of attribute migration to a minimum, and consequently have less trouble keeping its application programs in a viable state.</p>
+			<h2 id="7-conclusion-1">
+				<a class="self-link" href="#7-conclusion-1"> 7. Conclusion </a>
+			</h2>
+			<p>In section 1 we introduced the notion of functional dependence within a relation - a notion that is fundamental in formatted data base design. Using this notion, two new normal forms were defined. Fig. 12 summarizes the relationship between the three normal forms introduced by this author. Notice that as a collection of relations is translated from first normal form to second, and then to third, the conditions applied are progressively more stringent.</p>
+			<p>In the past, design of records (computerized or not) for commercial, industrial and government institutions has been oriented in an ad hoc way to the needs of particular applications. For the large integrated data bases of the future, application-independent guidelines for logical</p>
+			<p>record design are sorely needed. This paper is intended to provide such guidelines.</p>
+			<p>It is also conjectured that physical records in optimal third normal form will prove to be highly economical in space consumed. In some cases a further saving in space can be obtained by factoring (see [2]) relations in third normal form.</p>
+			<p>
+				Although the three normal forms are query equivalent in the sense that the set of queries answerable by a collection C in first normal form is transformable into queries yielding the same information from the second and third normal forms of C, there is a difference in information content of the three forms. The second is more informative than the first, and the third is more informative than the second. The increased information lies in the data description (rather than in the data described) as a consequence of the underlying conventions. Like the declarations of redundancies and combinational possibilities within the relational model (see [1]), the normal forms described above tend to capture some aspects of the semantics (minor, of course). Thus, a relational model in second normal form, and more especially, one in third normal form is likely to be more readily understood by people who are not everyday users of the data. It is also likely to be better tuned to the
+				authorization requirements of installations.
+			</p>
+			<p>Compared with first normal form, the second and third do carry with them the penalty of extra names. In the many data bases that have relations of high degree, this name penalty will not be nearly as severe as that</p>
+			<p>associated with a complete conversion to nested binary relations.</p>
+			<p>Some queries will also need to employ more join terms for cross-referencing between relations than might otherwise be the case. This potential burden on the user can be eased by user-declared (and possibly pooled) cross-referencing for heavily used types of queries.</p>
+			<h2 id="8-acknowledgments">
+				<a class="self-link" href="#8-acknowledgments"> 8. Acknowledgments </a>
+			</h2>
+			<p>The author is indebted to Claude Delobel of the Conservatoire National des Arts et Metiers, Paris for indicating an inadequacy in the treatment of one-to-one correspondences in an early draft of this paper. Working from this draft, C. J. Date, I. J. Heath and P. Hopewell of the IBM Development Laboratory in Hursley, England have developed some theoretical and practical applications of the third normal form, which will be published soon [4,5]. Their interest in and enthusiasm for the third normal form encouraged the author to produce a more detailed paper than the original version. Thanks are also due to F. P. Palermo and J. J. Rissanen of IBM Research, San Jose for suggesting changes which improved the clarity.</p>
+			<h2 id="references">
+				<a class="self-link" href="#references"> References </a>
+			</h2>
+			<ol>
+				<li>E. F. Codd, &ldquo;A Relational Model of Data for Large Shared Data Banks&rdquo;, Comm. ACM 13 6, June 1970, 377-387.</li>
+				<li>E. F. Codd, &ldquo;Relational Completeness of Data Base Sublanguages&rdquo;, Courant Computer Science Symposia 6 &ldquo;Data Base Systems&rdquo;, New York City, May 24-25, 1971, to be published by Prentice-Hall.</li>
+				<li>E. F. Codd, &ldquo;A Data Base Sublanguage founded on the Relational Calculus&rdquo;, IBM Research Report RJ893, San Jose, California, July 26, 1971.</li>
+				<li>I. J. Heath, &ldquo;Unacceptable File Operations in a Relational Data Base&rdquo;, Proc. 1971 ACM-SIGFIDET Workshop on Data Description, Access and Control, to be available from ACM HQ, 1972.</li>
+				<li>C. J. Date, P. Hopewell, &ldquo;File Definition and Logical Data Independence&rdquo;, Proc. 1971 ACM-SIGFIDET Workshop on Data Description, Access and Control, to be available from ACM HQ, 1972.</li>
+			</ol>
+			<h2 id="appendix">
+				<a class="self-link" href="#appendix"> APPENDIX </a>
+			</h2>
+			<h3 id="a1-basic-definitions">
+				<a class="self-link" href="#a1-basic-definitions"> A1. Basic Definitions </a>
+			</h3>
+			<p>Given sets (D_1, D_2, \ldots, D_n) (not necessarily distinct), R is a relation on these n sets if it is a set of elements of the form ((d_1, d_2, \ldots, d_n)) where (d_j \in D_j) for each (j = 1, 2, \ldots, n). More concisely, R is a subset of the Cartesian product (D_1 \times D_2 \times \ldots \times D_n). We refer to (D_j) as the jth domain of R. The elements of a relation of degree n are called n-tuples or tuples. A relation is in first normal form if it has the property that none of its domains has elements which are themselves sets. An unnormalized relation is one which is not in first normal form.</p>
+			<p>A data base B is a finite collection of time-varying relations defined on a finite collection of domains, say (D_1, D_2, \ldots, D_p). Suppose relation R is one of the relations in B, and is of degree n. To declare R to a data base system we need to cite n of the p data base domains as those on which R is defined.</p>
+			<p>Now, not all these n cited domains need be distinct. Instead of using an ordering to distinguish these n citations from one another (as is common in mathematics), we shall use a distinct name for each citation and call this the attribute name for that particular use of a data base domain. Each distinct use (or citation) of a data base domain in defining R is accordingly called an attribute of R. For example, a relation R of degree 3 might have attributes ((A_1, A_2, A_3)) while the corresponding data base domains are ((D_5, D_7, D_5)). Attribute names provide an effective means of protecting the user from having to know domain positions.</p>
+			<h3 id="a2-projection">
+				<a class="self-link" href="#a2-projection"> A2. Projection </a>
+			</h3>
+			<p>Suppose ( r ) is a tuple of relation ( R ) and ( A ) is an attribute of ( R ). We adopt the notation ( r.A ) to designate the ( A )-component of ( r ). Now suppose ( A ) is instead a list ((A_1, A_2, \ldots, A_k)) of attributes of ( R ). We extend the notation ( r.A ) so that, in this case:</p>
+			<p>[ r.A = (r.A_1, r.A_2, \ldots, r.A_k) ]</p>
+			<p>When the list ( A ) is empty, ( r.A = r ).</p>
+			<p>Let ( C = (C_1, C_2, \ldots, C_n) ) be a list of all the attributes of ( R ). Let ( A ) be a sublist (length ( k )) of ( C ) and ( r ) a tuple of ( R ). Then, we adopt the notation ( r.\bar{A} ) to designate the ((n-k))-tuple ( r.B ) where ( B ) is the complementary list of attributes obtained by deleting from ( C ) those listed in ( A ).</p>
+			<p>The projection of ( R ) on the attribute list ( A ) is defined by</p>
+			<p>[ \Pi_A(R) = { r.A: r \in R } ]</p>
+			<p>A more informal definition is given in [1].</p>
+			<h3 id="a3-natural-join">
+				<a class="self-link" href="#a3-natural-join"> A3. Natural Join </a>
+			</h3>
+			<p>Suppose ( R, S ) are two relations and ( A = (A_1, \ldots, A_k) ), ( B = (B_1, \ldots, B_k) ) are equal-length lists of the attributes of ( R, S ) respectively. Suppose that for ( i = 1, 2, \ldots, k ) attributes ( A_i, B_i ) are comparable: that is, for every ( r \in R ), ( s \in S ):</p>
+			<p>[ r.A_i = s.B_i ]</p>
+			<p>is either true or false (not undefined). We say that</p>
+			<p>[ r.A = s.B ]</p>
+			<p>if ((r.A_1 = s.B_1) \land \ldots \land (r.A_k = s.B_k) ).</p>
+			<p>Then, the natural join of ( R ) on ( A ) with ( S ) on ( B ) is defined by:</p>
+			<p>[ R * S = {(r, s.B): r \in R \land s \in S \land (r.A = s.B) } ]</p>
+			<p>This definition is the same as that given in [1] except that there is no requirement that</p>
+			<p>[ \Pi_A(R) = \Pi_B(S) ]</p>
+			<p>for relations ( R, S ) to be joinable. This condition was imposed in [1] solely for the purposes of treating redundancy and consistency.</p>
+			<h3 id="a4-notation-for-functional-dependence">
+				<a class="self-link" href="#a4-notation-for-functional-dependence"> A4. Notation for Functional Dependence </a>
+			</h3>
+			<p>We have deliberately employed the redundant notation ( R.A \rightarrow R.B ) (instead of ( A \xrightarrow{R} B ), for example), because the redundancy pertains only to the intra-relation functional dependencies examined in this paper. The author is now investigating inter-relation functional dependencies of the form ( R.A \rightarrow S.B ).</p>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">0001-01-01</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
