@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Articles | The Thaumatorium</title>
+		<meta name="description" content="Relational Algebra Operators in Database Management" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Articles" />
+		<meta property="og:description" content="Relational Algebra Operators in Database Management" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Articles" />
+		<meta name="twitter:description" content="Relational Algebra Operators in Database Management" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Articles</h1>
+			<p>This article contains the symbols I've found in a video from CMU Database Group, a YT channel from Carnegie Mellon University.</p>
+			<h2>Basic Relational Algebra Operators</h2>
+			<dl>
+				<dt>&sigma; (Selection)</dt>
+				<dd>
+					<strong>Symbol:</strong> &sigma; (Sigma)<br />
+					<strong>Description:</strong> The Selection operator is used to filter rows based on a specified condition.<br />
+					<strong>Example:</strong> &sigma;(condition)(relation)
+				</dd>
+				<dt>&pi; (Projection)</dt>
+				<dd>
+					<strong>Symbol:</strong> &pi; (Pi)<br />
+					<strong>Description:</strong> The Projection operator selects specific columns from a table.<br />
+					<strong>Example:</strong> &pi;(column1, column2, ...)(relation)
+				</dd>
+				<dt>&cup; (Union)</dt>
+				<dd>
+					<strong>Symbol:</strong> &cup; (Union)<br />
+					<strong>Description:</strong> The Union operator combines the results of two tables, removing duplicates.<br />
+					<strong>Example:</strong> relation1 &cup; relation2
+				</dd>
+				<dt>&cap; (Intersection)</dt>
+				<dd>
+					<strong>Symbol:</strong> &cap; (Intersection)<br />
+					<strong>Description:</strong> The Intersection operator returns only the rows that are present in both tables.<br />
+					<strong>Example:</strong> relation1 &cap; relation2
+				</dd>
+				<dt>&minus; (Difference)</dt>
+				<dd>
+					<strong>Symbol:</strong> &minus; (Minus or Difference)<br />
+					<strong>Description:</strong> The Difference operator returns the rows present in the first table but not in the second.<br />
+					<strong>Example:</strong> relation1 &minus; relation2
+				</dd>
+				<dt>&times; (Cartesian Product)</dt>
+				<dd>
+					<strong>Symbol:</strong> &times; (Cross or Cartesian Product)<br />
+					<strong>Description:</strong> The Cartesian Product operator returns the Cartesian product of two tables.<br />
+					<strong>Example:</strong> relation1 &times; relation2
+				</dd>
+				<dt>&#x2A1D; (Join)</dt>
+				<dd>
+					<strong>Symbol:</strong> &#x2A1D; (Join)<br />
+					<strong>Description:</strong> The Join operator combines rows from two tables based on a related column.<br />
+					<strong>Example:</strong> relation1 &#x2A1D; relation2
+				</dd>
+			</dl>
+			<h2>Additional Relational Algebra Operators</h2>
+			<dl>
+				<dt>&rho; (Rename)</dt>
+				<dd>
+					<strong>Symbol:</strong> &rho; (Rho)<br />
+					<strong>Description:</strong> The Rename operator is used to rename the relation or attributes.<br />
+					<strong>Example:</strong> &rho;(new_name)(relation)
+				</dd>
+				<dt>&ShortLeftArrow; (Assignment)</dt>
+				<dd>
+					<strong>Symbol:</strong> R &ShortLeftArrow; S (Assignment)<br />
+					<strong>Description:</strong> The Assignment operator is used to assign the result of a query to a relation variable.<br />
+					<strong>Example:</strong> R &ShortLeftArrow; &sigma;(condition)(relation)
+				</dd>
+				<dt>&delta; (Duplicate Elimination)</dt>
+				<dd>
+					<strong>Symbol:</strong> &delta; (Delta)<br />
+					<strong>Description:</strong> The Duplicate Elimination operator removes duplicate rows from a relation.<br />
+					<strong>Example:</strong> &delta;(relation)
+				</dd>
+				<dt>&gamma; (Aggregation)</dt>
+				<dd>
+					<strong>Symbol:</strong> &gamma; (Gamma)<br />
+					<strong>Description:</strong> The Aggregation operator is used for aggregate functions such as SUM, COUNT, AVG, etc.<br />
+					<strong>Example:</strong> &gamma;(attribute, SUM(attribute))(relation)
+				</dd>
+				<dt>&tau; (Sorting)</dt>
+				<dd>
+					<strong>Symbol:</strong> &tau; (Tau)<br />
+					<strong>Description:</strong> The Sorting operator sorts the relation by specified attributes.<br />
+					<strong>Example:</strong> &tau;(attribute)(relation)
+				</dd>
+				<dt>&div; (Division)</dt>
+				<dd>
+					<strong>Symbol:</strong> &div; (Division)<br />
+					<strong>Description:</strong> The Division operator is used to find tuples in one relation that are related to all tuples in another relation.<br />
+					<strong>Example:</strong> relation1 &div; relation2
+				</dd>
+			</dl>
+			<h2>Sources</h2>
+			<p><em>"F2023 #01 - Relational Model & Algebra (CMU Intro to Database Systems)"</em> by <em>CMU Database Group</em>:</p>
+			<ul>
+				<li><a href="https://youtu.be/XGMoq-D_mao?t=2731">Basic Relational Algebra Operators</a></li>
+				<li><a href="https://youtu.be/XGMoq-D_mao?t=3564">Additional Relational Algebra Operators</a></li>
+			</ul>
+			<h2>Addendum</h2>
+			<p>I'm reading "E. F. Codd and Relational Theory (revised edition)" by C. J. Date, and he has a few more operators, but no symbols.</p>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2024-06-22</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
