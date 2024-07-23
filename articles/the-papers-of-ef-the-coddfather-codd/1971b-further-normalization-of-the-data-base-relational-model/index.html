@@ -2,7 +2,7 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>| The Thaumatorium</title>
+		<title>FURTHER NORMALIZATION OF THE DATA BASE RELATIONAL MODEL | The Thaumatorium</title>
 		<meta name="description" content="" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="" />
+		<meta property="og:title" content="FURTHER NORMALIZATION OF THE DATA BASE RELATIONAL MODEL" />
 		<meta property="og:description" content="" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
@@ -22,7 +22,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="" />
+		<meta name="twitter:title" content="FURTHER NORMALIZATION OF THE DATA BASE RELATIONAL MODEL" />
 		<meta name="twitter:description" content="" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
@@ -48,26 +48,17 @@
 			</ul>
 		</nav>
 		<main>
-			<h1></h1>
+			<h1>FURTHER NORMALIZATION OF THE DATA BASE RELATIONAL MODEL</h1>
 			<h1 id="further-normalization-of-the-data-base-relational-model">
 				<a class="self-link" href="#further-normalization-of-the-data-base-relational-model"> FURTHER NORMALIZATION OF THE DATA BASE RELATIONAL MODEL </a>
 			</h1>
 			<p>by</p>
-			<p>
-				E. F. Codd<br />
-				IBM Research Laboratory<br />
-				San Jose, California
-			</p>
+			<p>E. F. Codd IBM Research Laboratory San Jose, California</p>
 			<h2 id="abstract">
 				<a class="self-link" href="#abstract"> ABSTRACT: </a>
 			</h2>
 			<p>In an earlier paper, the author proposed a relational model of data as a basis for protecting users of formatted data systems from the potentially disruptive changes in data representation caused by growth in the data base and changes in traffic. A first normal form for the time-varying collection of relations was introduced. In this paper, second and third normal forms are defined with the objective of making the collection of relations easier to understand and control, simpler to operate upon, and more informative to the casual user. The question &ldquo;Can application programs be kept in a viable state when data base relations are restructured?&rdquo; is discussed briefly and it is conjectured that third normal form will significantly extend the life expectancy of application programs.</p>
-			<p>
-				RJ 909 (#18557)<br />
-				August 31, 1971<br />
-				Information technology<br />
-				(IR, Documentation, etc.)
-			</p>
+			<p>RJ 909 (#18557) August 31, 1971 Information technology (IR, Documentation, etc.)</p>
 			<h1 id="introduction">
 				<a class="self-link" href="#introduction"> Introduction </a>
 			</h1>
@@ -159,10 +150,7 @@ T.P# ↛ T.S#
 			<p>Fig. 1: <strong>A Relation not in Second Normal Form</strong></p>
 			<p>Now suppose supplier v ceases to supply parts 1 and 3, but may in the near future supply some other parts. Accordingly, we wish to retain the information that supplier v is located in Feistritz. Deletion of one of the two tuples does not cause the complete disappearance of the association of v with Feistritz, but deletion of both tuples does. This is an example of a deletion dependency which is a consequence of the relational schema itself. It is left to the reader to illustrate a corresponding insertion dependency using this example.</p>
 			<p>Conversion of T to second normal form consists of replacing T by two of its projections:</p>
-			<p>
-				T<sub>1</sub> = Π<sub>S#,P#</sub>(T)<br />
-				T<sub>2</sub> = Π<sub>S#,SC</sub>(T)
-			</p>
+			<p>T<sub>1</sub> = Π<sub>S#,P#</sub>(T) T<sub>2</sub> = Π<sub>S#,SC</sub>(T)</p>
 			<p>We thus obtain the relations tabulated in Fig. 2.</p>
 			<table>
 				<thead>
@@ -200,36 +188,14 @@ T.P# ↛ T.S#
 				<a class="self-link" href="#22-more-probing-examples"> 2.2 More Probing Examples </a>
 			</h3>
 			<p>Unfortunately, the simple example above does not illustrate all of the complexities which can arise. For expository purposes we now consider five possible relations in a data base concerning suppliers, parts, and projects. In a crude sense these relations represent five alternative possibilities - it is not intended that they coexist in a single data base. Note, however, that some contain more information (in the form of additional attributes) than others. In each case the primary key is underlined.</p>
-			<p>
-				R<sub>1</sub>(S#, P#, J#)<br />
-				R<sub>2</sub>(X#, S#, P#, J#)<br />
-				R<sub>3</sub>(X#, S#, P#, J#, Q)<br />
-				R<sub>4</sub>(X#, S#, P#, J#, Q, SC)<br />
-				R<sub>5</sub>(S#, P#, J#, Q, SC)
-			</p>
-			<p>
-				where<br />
-				S# = supplier number<br />
-				P# = part number<br />
-				J# = project number<br />
-				X# = serial number<br />
-				Q = quantity supplied<br />
-				SC = supplier city
-			</p>
+			<p>R<sub>1</sub>(S#, P#, J#) R<sub>2</sub>(X#, S#, P#, J#) R<sub>3</sub>(X#, S#, P#, J#, Q) R<sub>4</sub>(X#, S#, P#, J#, Q, SC) R<sub>5</sub>(S#, P#, J#, Q, SC)</p>
+			<p>where S# = supplier number P# = part number J# = project number X# = serial number Q = quantity supplied SC = supplier city</p>
 			<p>A triple (x, y, z) belongs to R<sub>1</sub> if supplier x supplies part y to project z. The same interpretation holds for Π<sub>S#, P#, J#</sub>(R<sub>i</sub>) for i = 2, 3, 4, 5. In each of the five relations, a given combination of supplier and part may be associated with more than one project, a given combination of part and project may be associated with more than one supplier, and a given combination of project and supplier may be associated with more than one part. Thus, for all i</p>
-			<p>
-				R<sub>i</sub>.(S#, P#) ↛ R<sub>i</sub>.(J#)<br />
-				R<sub>i</sub>.(P#, J#) ↛ R<sub>i</sub>.(S#)<br />
-				R<sub>i</sub>.(J#, S#) ↛ R<sub>i</sub>.(P#)
-			</p>
+			<p>R<sub>i</sub>.(S#, P#) ↛ R<sub>i</sub>.(J#) R<sub>i</sub>.(P#, J#) ↛ R<sub>i</sub>.(S#) R<sub>i</sub>.(J#, S#) ↛ R<sub>i</sub>.(P#)</p>
 			<p>In each of the relations that have the attribute Q, there is only one value of Q for a given value of the attribute combination (S#, P#, J#). Thus,</p>
 			<p>R<sub>i</sub>.(S#, P#, J#) → R<sub>i</sub>.Q for i = 3, 4, 5.</p>
 			<p>However, the value of Q is not uniquely determined by any proper subset of these attributes. Thus, for i = 3, 4, 5</p>
-			<p>
-				R<sub>i</sub>.(S#, P#) ↛ R<sub>i</sub>.Q<br />
-				R<sub>i</sub>.(P#, J#) ↛ R<sub>i</sub>.Q<br />
-				R<sub>i</sub>.(J#, S#) ↛ R<sub>i</sub>.Q .
-			</p>
+			<p>R<sub>i</sub>.(S#, P#) ↛ R<sub>i</sub>.Q R<sub>i</sub>.(P#, J#) ↛ R<sub>i</sub>.Q R<sub>i</sub>.(J#, S#) ↛ R<sub>i</sub>.Q .</p>
 			<p>In each of the relations that have the attribute SC, there is only one value of SC for a given value of S#. Thus, for i = 4, 5</p>
 			<p>R<sub>i</sub>.S# → R<sub>i</sub>.SC .</p>
 			<p>In three of the relations a serial number key X# has been introduced and selected as the primary key, even though there is already an attribute combination (S#, P#, J#) capable of acting as the primary key. Thus, for i = 2, 3, 4</p>
@@ -558,10 +524,7 @@ R.B → R.C ,  R.C ↛ R.B
 				<li>There has been a change in that part of the real world which the data base reflects or models.</li>
 			</ol>
 			<p>To illustrate the effect of attribute migration on application programs, consider the splitting of data base relation U(E#, JC, D#, M#, CT) into the two projections:</p>
-			<p>
-				U<sub>1</sub> = Π<sub>E#, JC, D#</sub>(U)<br />
-				U<sub>2</sub> = Π<sub>D#, M#, CT</sub>(U)
-			</p>
+			<p>U<sub>1</sub> = Π<sub>E#, JC, D#</sub>(U) U<sub>2</sub> = Π<sub>D#, M#, CT</sub>(U)</p>
 			<p>(see section 3.1 for the interpretation of U and its attributes).</p>
 			<p>We first examine a query and then an insertion. Each is expressed in the data base sublanguage ALPHA [3].</p>
 			<p>** Find the contract type (CT) for the employee whose serial number (E#)</p>
@@ -650,7 +613,7 @@ R.B → R.C ,  R.C ↛ R.B
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">0001-01-01</time></sub>
+					<sub>Last updated: <time id="updated">1971-01-01</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>
