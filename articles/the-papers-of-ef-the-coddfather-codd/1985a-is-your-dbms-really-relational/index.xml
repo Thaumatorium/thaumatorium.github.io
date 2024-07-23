@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thaumatorium</title>
-    <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988fatal-flaws-in-sql/</link>
+    <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/</link>
     <description>Recent content on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <atom:link href="http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988fatal-flaws-in-sql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
