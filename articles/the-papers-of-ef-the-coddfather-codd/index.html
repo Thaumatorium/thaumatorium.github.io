@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>The Papers of E.F. &#34;The Coddfather&#34; Codd | The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="The Papers of E.F. &#34;The Coddfather&#34; Codd" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="The Papers of E.F. &#34;The Coddfather&#34; Codd" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>The Papers of E.F. &#34;The Coddfather&#34; Codd</h1>
+			<p>Edgar Frank &ldquo;Ted&rdquo; Codd, also known as &ldquo;The Coddfather&rdquo;, or more generally as &ldquo;The Father of the Relational Model&rdquo;.</p>
+			<p>I&rsquo;ve gathered these papers here, as a) they were very hard to find, and b) there was no central place where all his Relational papers were gathered together. Some places had some papers, other places mentioned others. It was time this man got the respect he deserves and make his famous papers easier to find.</p>
+			<p>While reading these, do keep in mind that they are <em>old</em>. For example: The first paper writes about using an <em>index</em> to select the needed domains/columns, a concept Codd changed his mind on around 1990 - Codd switched to using &ldquo;column names&rdquo; - as he found out some people were creating tables of 100s of columns wide, something not forseen by him when he invented the Relational Model, which would make it completely infeasable to using indices. Ain&rsquo;t no one going to refer to columns by their index number.</p>
+			<p>Then also, in his 1988 &ldquo;Fatal Flaws in SQL&rdquo; articles, Codd writes about the lack of uniqueness in SQL. This has been mitigated (though not fixed) by the use of DISTINCT (introduced in SQL-86) and using PRIMARY KEYs (introduced in SQL-92). Little things like that make some of the papers a little outdated, even if they&rsquo;re still not wrong.</p>
+			<h3 id="notes">
+				<a class="self-link" href="#notes"> Notes </a>
+			</h3>
+			<ul>
+				<li>All &ldquo;RJ[0-9]{3-4}&rdquo; papers are all from IBM;</li>
+				<li>Papers that do not have a link I could not find any source for; Do note that most papers without link ended up being included in the book &ldquo;<a href="https://dl.acm.org/doi/pdf/10.5555/77708">The Relational Model for Database Management: Version 2</a>&rdquo;</li>
+			</ul>
+			<table>
+				<thead>
+					<tr>
+						<th>Year</th>
+						<th>Paper/Article/Book</th>
+						<th>IBM Code</th>
+						<th>Starting page</th>
+						<th>Note</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>(1969)</td>
+						<td><a href="https://technology.amis.nl/wp-content/uploads/images/RJ599.pdf">Derivability, Redundancy, and Consistency of Relations Stored in Large Data Banks</a></td>
+						<td>RJ599</td>
+						<td></td>
+						<td>The first actual paper on the Relational Model</td>
+					</tr>
+					<tr>
+						<td>(1970)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/362384.362685">A Relational Model of Data for Large Shared Data Banks</a></td>
+						<td></td>
+						<td></td>
+						<td>The first <em>popular</em> paper on the Relational Model. Defines what a Relation is, what primary, foreign and compound keys are, it defines the first Normal Form, etc.</td>
+					</tr>
+					<tr>
+						<td>(1971a)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/1734714.1734718">ALPHA: A Data Base Sublanguage Founded on the Relational Calculus</a></td>
+						<td></td>
+						<td></td>
+						<td>ALPHA is Codd&rsquo;s not-implemented version of a potential query language. He did not want to lord over how a query language should look like, but he did want to give some handles for people to hold on to, which they promptly ignored when they created SQL 😑 - SQL can return things that are not a Relation (a <em>set</em> of <em>tuples</em>), like a table with duplciate rows, or a column, or a single cell&hellip;</td>
+					</tr>
+					<tr>
+						<td>(1971b)</td>
+						<td><a href="https://forum.thethirdmanifesto.com/wp-content/uploads/asgarosforum/987737/00-efc-further-normalization.pdf">Further Normalization of the Data Base Relational Model</a></td>
+						<td>RJ909</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1971c)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/1734714.1734716">Normalized Data Base Structure: A Brief Tutorial</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1971d)</td>
+						<td><a href="https://www.inf.unibz.it/~franconi/teaching/2006/kbdb/Codd72a.pdf">Relational Completeness of Data Base Sublanguages</a></td>
+						<td>RJ987</td>
+						<td></td>
+						<td>He basically proves that the Relational Algebra and Relational Calculus have the same query power as one another, which implies it&rsquo;s fine to base your query language on either (or both)</td>
+					</tr>
+					<tr>
+						<td>(1973a)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/7311/pdfs/983061.fm.pdf">Understanding Relations (Installment #1)</a></td>
+						<td></td>
+						<td>page 7/9</td>
+						<td>Installment #2 is missing</td>
+					</tr>
+					<tr>
+						<td>(1973c)</td>
+						<td><em>&ldquo;The GAMMA-0 n-ary Relational Data Base Interface Specifications of Objects and Operations.&rdquo;</em> IBM Research Report RJ1200: (1973)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1974a)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/800297.811529">Interactive Support for Non-Programmers: The Relational and Network approaches</a></td>
+						<td></td>
+						<td></td>
+						<td>First collab between E.F. Codd and C.J. Date?</td>
+					</tr>
+					<tr>
+						<td>(1974b)</td>
+						<td><a href="https://stacks.stanford.edu/file/ys277xx1104/ys277xx1104.pdf">Recent Investigations in Relational Data Base Systems</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1974c)</td>
+						<td><em>&ldquo;The Relational Approach to Data Base Management: An Overview.&rdquo;</em> Third Annual Texas Conference on Computing Systems (Austin, November 7–8).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1974d)</td>
+						<td><a href="https://stacks.stanford.edu/file/cp353fq9623/cp353fq9623.pdf">Seven steps to rendevous with the casual user</a></td>
+						<td>RJ1333</td>
+						<td></td>
+						<td>RENDEVOUS was a system meant to provide users a way to query in straight up English. The system would parse the question, turn it into a query, and execute it. A neat idea that never seems to have left the lab 😢</td>
+					</tr>
+					<tr>
+						<td>(1974e)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/800297.811532">The Relational and Network Approaches: Comparison of the Application Programming Interfaces</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1974f)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/7406/pdfs/983070.fm.pdf">Understanding Relations (Installment #3)</a></td>
+						<td></td>
+						<td>page 3/34</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1974g)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/7409/pdfs/983076.983079.pdf">Understanding Relations (Installment #4)</a></td>
+						<td></td>
+						<td>page 1/3</td>
+						<td>Installment #5 is missing</td>
+					</tr>
+					<tr>
+						<td>(1975a)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/1499949.1500022">Data base management</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1975b)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/7503/pdfs/984328.fm.pdf">Understanding Relations (Installment #6)</a></td>
+						<td></td>
+						<td>page 3/6</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1975c)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/7509/pdfs/984403.fm.pdf">Understanding Relations (Installment #7)</a></td>
+						<td></td>
+						<td>page 25/53</td>
+						<td>This is the last Installment I could find.</td>
+					</tr>
+					<tr>
+						<td>(1977)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/1045283.1045298">Access to Relational Data Bases for a Casual User</a></td>
+						<td></td>
+						<td></td>
+						<td>The request to work on RENDEZVOUS (see next papers)</td>
+					</tr>
+					<tr>
+						<td>(1978)</td>
+						<td><a href="https://dominoweb.draco.res.ibm.com/reports/RJ2144.pdf">Rendezvous Version 1: An experimental English-Language Query Formulation System for casual users of Relational Data Bases</a></td>
+						<td>RJ2144</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1979)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/320107.320109">Extending the database relational model to capture more meaning</a></td>
+						<td></td>
+						<td></td>
+						<td>First paper by The Coddfather where he starts integrating semantics into the Relational Model. This introduces NULL (as an ω), as well as Aggregation and Generalization. First versioned model, named RM/T - Relational Model/Tasmania</td>
+					</tr>
+					<tr>
+						<td>(1980)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/8102/pdfs/960126.806891.pdf">Data Models in Database Management</a></td>
+						<td></td>
+						<td></td>
+						<td>The first mention of &ldquo;Data Model&rdquo; - yes, The Coddfather defined &ldquo;Data Model&rdquo; as well.</td>
+					</tr>
+					<tr>
+						<td>(1981a)</td>
+						<td><em>&ldquo;The Significance of the SQL/Data System Announcement.&rdquo;</em> Computerworld 15(7): 27-30(1981)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1981b)</td>
+						<td><em>&ldquo;The Capabilities of Relational Database Management Systems.&rdquo;</em> <em>Proc. Convencio Informatica Latiana</em> (Barcelona, June 9–12).</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1982)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/358396.358400">Relational database: a practical foundation for productivity</a></td>
+						<td></td>
+						<td></td>
+						<td>The 1981 ACM Turing Award Lecture! Props to the man!</td>
+					</tr>
+					<tr>
+						<td>(1985a)</td>
+						<td><a href="./%5B1985a%5Dis-your-dbms-really-relational/">Is your DBMS really relational?</a>, <a href="https://archive.org/details/sim_computerworld_1985-10-14_19_41/page/n73/mode/2up">original source</a></td>
+						<td></td>
+						<td></td>
+						<td>This and the next article are also known as &ldquo;How Relational Is Your Database Management System?&rdquo; - they&rsquo;re known for the infamous &ldquo;12 rules&rdquo;; these rules were created because a LOT of people were claiming to have a relational DB when they really didn&rsquo;t.</td>
+					</tr>
+					<tr>
+						<td>(1985b)</td>
+						<td><a href="./%5B1985b%5Ddoes-your-dmbs-run-by-the-rules/">Does your DBMS run by the rules?</a>, <a href="https://archive.org/details/sim_computerworld_1985-10-21_19_42/page/n49/mode/2up">original source</a></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1986a)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.1145/16301.16303">Missing Information (Applicable and Inapplicable) in Relational Databases</a></td>
+						<td></td>
+						<td></td>
+						<td>Here&rsquo;s a wild idea that <em>still</em> hasn&rsquo;t been implemented: Instead of using 2-valued (binary) logic (2VL; <code>true</code> and <code>false</code>) or 3-valued (trinary) logic (3VL; <code>true</code>, <code>maybe</code> and <code>false</code>), lets use 4-valued (quaterny) logic (4VL; <code>T</code> for true, <code>F</code> for false, <code>M</code> for missing-but-applicable and <code>I</code> for missing-but-inapplicable). Tony Hoare did nothing wrong. In fact, he did not go far enough! 😤</td>
+					</tr>
+					<tr>
+						<td>(1986b)</td>
+						<td><em>&ldquo;The Twelve Rules for Relational DBMS.&rdquo;</em> San Jose, The Relational Institute, Technical Report EFC-6.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1987a)</td>
+						<td><em>&ldquo;The Beginning of a New Era in Data Processing&rdquo; (review of Tandem’s NonStop SQL).</em> <em>InfoWeek</em>, May 4</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1987b)</td>
+						<td><em>&ldquo;Fundamental Laws in Database Management.&rdquo;</em> San Jose, The Relational Institute, Technical Report EFC-27</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1987c)</td>
+						<td><a href="https://sigmodrecord.org/publications/sigmodRecord/8703/pdfs/24820.24823.pdf">More Commentary on Missing Information in Relational Databases (Applicable and Inapplicable Information)</a></td>
+						<td></td>
+						<td></td>
+						<td>We&rsquo;re doubling down on 4VL, lets gooooooo!</td>
+					</tr>
+					<tr>
+						<td>(1987d)</td>
+						<td><em>&ldquo;Principles of Design of Database Management Systems.&rdquo;</em> San Jose, The Relational Institute, Technical Report EFC-18</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1987e)</td>
+						<td><em>&ldquo;View Updatability in Relational Databases: Algorithm VU-1.&rdquo;</em> Unpublished paper</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1988a)</td>
+						<td><em>&ldquo;Domains, Primary Keys, Foreign Keys, and Referential Integrity.&rdquo;</em> <em>Info DB</em>, May.</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1988b)</td>
+						<td><a href="./%5B1988%5Dfatal-flaws-in-sql/">Fatal Flaws in SQL (this HTML version is combined from the two PDFs)</a> (<a href="http://www.bitsavers.org/magazines/Datamation/19880815.pdf">original source, part 1</a> <a href="http://www.bitsavers.org/magazines/Datamation/Datamation_V34_N17_19880901.pdf">original source, part 2</a>)</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>(1990)</td>
+						<td><a href="https://dl.acm.org/doi/pdf/10.5555/77708">The Relational Model for Database Management: Version 2</a></td>
+						<td></td>
+						<td></td>
+						<td>As far as I care, this book (yes, book, not a paper) is the magnum opus on the Relational Model. RM/2 is the numbered successor to RM/T.</td>
+					</tr>
+					<tr>
+						<td>(1993)</td>
+						<td><a href="http://www.estgv.ipv.pt/paginaspessoais/jloureiro/esi_aid2007_2008/fichas/codd.pdf">Providing OLAP to User-Analysts: An IT Mandate</a>, <a href="https://archive.org/details/sim_computerworld_1993-07-26_27_30/page/86/mode/2up">original source</a></td>
+						<td></td>
+						<td></td>
+						<td>Codd&rsquo;s biggest miss, since this was basically a paid ad, using Codd&rsquo;s name to pull in views for Arbor Software (later Hyperion, aquired by Oracle). Also these new 12 rules feels kinda weak.</td>
+					</tr>
+				</tbody>
+			</table>
+			<h3 id="sources">
+				<a class="self-link" href="#sources"> Sources </a>
+			</h3>
+			<p>To find these papers, this page was very helpful: <a href="https://dblp.org/pid/c/EFCodd.html">dblp computer science bibliography about Edgar F. Codd</a> (DBLP - indirectly ACM), as was this one: <a href="https://dl.acm.org/profile/81100425534/publications?Role=author&amp;startPage=0&amp;sortBy=EpubDate_asc">Edgar Frank &ldquo;Ted&rdquo; Codd &gt; Publications</a> (ACM), as was this one: <a href="https://dominoweb.draco.res.ibm.com/">Technical Paper Archive - Research Reports</a> (IBM)</p>
+			<h3 id="bonus">
+				<a class="self-link" href="#bonus"> Bonus </a>
+			</h3>
+			<p>
+				<a href="https://www.nae.edu/187653/EDGAR-F-CODD-19232003">RIP E.F. &ldquo;Ted&rdquo; Codd, by C.J. Date</a> <a href="https://dl.acm.org/doi/pdf/10.1145/320434.320440">The Entity-Relationship Model - Toward a Unified View of Data</a>. The origin of the Entity-Relationship Diagram (ERD) <a href="https://web.archive.org/web/20070926212100/http://www.almaden.ibm.com/cs/people/chamberlin/sequel-1974.pdf">SEQUEL: A Structured English QUEry Language</a> - the original SQL paper <a href="https://sigmodrecord.org/issues/">SIGMOD Records</a> - DB related articles since 1969 (back when it was called SIGFIDET) <a href="https://dl.acm.org/doi/pdf/10.1145/320473.320476">The design and implementation of INGRES</a> - Michael Stonebreaker is another legend
+				<a href="https://dsf.berkeley.edu/papers/ERL-M85-95.pdf">The Design of Postgres</a>
+				<a href="https://dl.acm.org/doi/pdf/10.1145/1499949.1500034">Query-by-Example</a> - I couldn&rsquo;t believe QBE was this old!
+				<a href="https://sci-hub.se/10.1147/sj.164.0324">Query-by-Example: a data base language</a>
+				<a href="https://dl.acm.org/doi/pdf/10.1145/320544.320546">Data base Abstractions: Aggregation and Generalization</a> - probably had an influence on &ldquo;Extending the database relational model to capture more meaning&rdquo;
+			</p>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2024-07-23</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
