@@ -2,8 +2,8 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>Reddit&#39;s T values and what they mean | The Thaumatorium</title>
-		<meta name="description" content="Not a lot of into available on these puppies" />
+		<title>Understanding Reddit&#39;s T Values | The Thaumatorium</title>
+		<meta name="description" content="A guide to the different T values used in Reddit&#39;s HTML structure" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Reddit&#39;s T values and what they mean" />
-		<meta property="og:description" content="Not a lot of into available on these puppies" />
+		<meta property="og:title" content="Understanding Reddit&#39;s T Values" />
+		<meta property="og:description" content="A guide to the different T values used in Reddit&#39;s HTML structure" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="Reddit&#39;s T values and what they mean" />
-		<meta name="twitter:description" content="Not a lot of into available on these puppies" />
+		<meta name="twitter:title" content="Understanding Reddit&#39;s T Values" />
+		<meta name="twitter:description" content="A guide to the different T values used in Reddit&#39;s HTML structure" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
@@ -39,8 +39,8 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
 				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
-				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
 				<li><a href="/hardware">Hardware</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
@@ -48,55 +48,55 @@
 			</ul>
 		</nav>
 		<main>
-			<h1>Reddit&#39;s T values and what they mean</h1>
+			<h1>Understanding Reddit&#39;s T Values</h1>
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
 					<div class="published-box">Published: <time class="published" datetime="2020-07-01T00:00:00&#43;01:00">2020-07-01</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2020-07-01T00:00:00&#43;01:00">2020-07-01</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T19:09:00&#43;02:00">2024-07-24</time></div>
 				</div>
 			</hgroup>
-			<p>So, if you have ever dug around Reddit's HTML, you may have noticed some <var>t1_[ALPHANUMERIC]</var> values</p>
-			<p>Here's a list of all I call "<strong>t values</strong>":</p>
+			<p>If you have ever inspected Reddit's HTML structure, you might have come across various <var>t1_[ALPHANUMERIC]</var> values. These values, commonly referred to as "<strong>t values</strong>," are identifiers used by Reddit to categorize different types of content and user interactions on the platform.</p>
+			<p>Below is a comprehensive list of these <strong>t values</strong> and their corresponding explanations:</p>
 			<table>
 				<thead>
 					<tr>
-						<th>t value</th>
-						<th>explanation</th>
+						<th>T Value</th>
+						<th>Explanation</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>t1</td>
-						<td>Comment</td>
+						<td>Comment: Represents a comment made by a user on a post.</td>
 					</tr>
 					<tr>
 						<td>t2</td>
-						<td>Account</td>
+						<td>Account: Represents a user's account.</td>
 					</tr>
 					<tr>
 						<td>t3</td>
-						<td>Link</td>
+						<td>Link: Represents a post that contains a link.</td>
 					</tr>
 					<tr>
 						<td>t4</td>
-						<td>Message</td>
+						<td>Message: Represents a private message sent between users.</td>
 					</tr>
 					<tr>
 						<td>t5</td>
-						<td>Subreddit</td>
+						<td>Subreddit: Represents a subreddit, which is a community dedicated to a specific topic.</td>
 					</tr>
 					<tr>
 						<td>t6</td>
-						<td>Award</td>
+						<td>Award: Represents an award given to a user or content.</td>
 					</tr>
 					<tr>
 						<td>t7</td>
-						<td>DOES NOT EXIST AFAIK</td>
+						<td>Not Used: There is no known t7 value.</td>
 					</tr>
 					<tr>
 						<td>t8</td>
-						<td>PromoCampaign</td>
+						<td>PromoCampaign: Represents a promotional campaign.</td>
 					</tr>
 				</tbody>
 			</table>
@@ -106,7 +106,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2020-07-01</time></sub>
+					<sub>Last updated: <time id="updated">2024-07-24</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

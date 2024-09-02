@@ -1,73 +1,131 @@
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Document pages recreated in HTML5" />
-		<title>Document Recreation</title>
-		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet" />
-		<link rel="stylesheet" href="styles.css" />
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS | The Thaumatorium</title>
+		<meta name="description" content="The OG Relational Model paper; the foundation of Relational Databases" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS" />
+		<meta property="og:description" content="The OG Relational Model paper; the foundation of Relational Databases" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS" />
+		<meta name="twitter:description" content="The OG Relational Model paper; the foundation of Relational Databases" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
 	</head>
 	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
+				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/hardware">Hardware</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
 		<main>
-			<section id="page1" aria-label="Page 1">
-				<h1>DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS</h1>
-				<br />
-				<address>
-					E. F. Codd<br />
-					Research Division<br />
-					San Jose, California
-				</address>
-				<br />
-				<br />
-				<p class="no-indent">ABSTRACT: The large, integrated data banks of the future will contain many relations of various degrees in stored form. It will not be unusual for this set of stored relations to be redundant. Two types of redundancy are defined and discussed. One type may be employed to improve accessibility of certain kinds of information which happen to be in great demand. When either type of redundancy exists, those responsible for control of the data bank should know about it and have some means of detecting any &quot;logical&quot; inconsistencies in the total set of stored relations. Consistency checking might be helpful in tracking down unauthorized (and possibly fraudulent) changes in the data bank contents.</p>
-				<p class="no-indent">RJ 599(# 12343) August 19, 1969</p>
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<br />
-				<p class="no-indent">LIMITED DISTRIBUTION NOTICE - This report has been submitted for publication elsewhere and has been issued as a Research Report for early dissemination of its contents. As a courtesy to the intended publisher, it should not be widely distributed until after the date of outside publication.</p>
-				<p class="no-indent smaller-text">Copies may be requested from IBM Thomas J. Watson Research Center, Post Office Box 218, Yorktown Heights, New York 10598</p>
-			</section>
-			<section id="page2" aria-label="Page 2">
-				<h2>CONTENTS</h2>
-				<ol>
-					<li>A Relational View of Data <span>1</span></li>
-					<li>Some Linguistic Aspects <span>4</span></li>
-					<li>Operations on Relations <span>5</span></li>
-					<ol>
-						<li>Permutation <span>5</span></li>
-						<li>Projection <span>5</span></li>
-						<li>Join <span>6</span></li>
-						<li>Composition <span>9</span></li>
-					</ol>
-					<li>Expressible, Named and Stored Relations <span>10</span></li>
-					<li>Derivability, Redundancy and Consistency <span>11</span></li>
-					<li>Data Bank Control <span>13</span></li>
-				</ol>
-			</section>
-			<section id="page3" aria-label="Page 3">
-				<h2>INTRODUCTION</h2>
-				<p>
-					The first part of this paper is concerned with an explanation of a relational view of data. This view (or model) of data appears to be superior in several respects to the graph or network model [1, 2] presently in vogue. It provides a means describing data with its natural structure only: that is, without superimposing any additional structure for machine representation purposes. Accordingly, it provides a basis for a high level retrieval language which will yield maximal independence between programs on the one hand, and machine presentation and organization of data on the other. A further advantage of the relational view is that it forms a sound basis for treating derivability, redundancy, and consistency of relations -- these are discussed in the second part of this paper. The network model, on the other hand, has spawned a number of confusions, not the least of which is mistaking the derivation of connections for the derivation of relations. Finally, the
-					relational view permits a clearer evaluation of the scope and logical limitations of present management information systems, and also the relative merits (from a logical standpoint) of competing representations of data within a single system.
-				</p>
-				<h3>1. A Relational View of Data</h3>
-				<p>The term <u>relation</u> is used here in its accepted mathematical sense. Given sets S<sub>1</sub>, S<sub>2</sub>, ..., S<sub>n</sub> (not necessarily distinct), R is a relation on these n sets if it is a set of n-tuples, each of which has its first element from S<sub>1</sub>, its second element from S<sub>2</sub>, and so on. We shall refer to S<sub>j</sub> as the j<sup>th</sup> domain of R. As defined above, R is said to have degree n. Relations of degree 1 are often called <u>unary</u>, degree 2 <u>binary</u>, degree 3 <u>ternary</u>, and degree n <u>n-ary</u>.</p>
-				<p>For expository reasons, we shall frequently make use of an array representation of relations, but it must be remembered that this particular representation is not an essential part of the relational view being expounded. An array which represents an n-ary relation R has the following properties:</p>
-				<ul>
-					<li>(1) Each row represents an n-tuple of R;</li>
-					<li>(2) The ordering of rows is immaterial;</li>
-					<li>(3) All rows are distinct;</li>
-					<li>(4) The ordering of columns is significant - it corresponds to the ordering S<sub>1</sub>, S<sub>2</sub>, ... S<sub>n</sub> of the domains on which R is defined;</li>
-					<li>(5) The significance of each column is partially conveyed by labeling it with the name of the corresponding domain.</li>
-				</ul>
-			</section>
-			<section id="page4" aria-label="Page 4">
-				<p>The example in Figure 1 illustrates a relation of degree 4 called <u>ship</u> which reflects the shipments-in-progress of parts from specified suppliers to specified projects in specified quantities.</p>
-				<pre>
+			<h1>DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS</h1>
+			<hgroup>
+				<div class="article-meta">
+					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
+					<div class="published-box">Published: <time class="published" datetime="1969-08-19T00:00:00Z">1969-08-19</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="1969-08-19T00:00:00Z">1969-08-19</time></div>
+				</div>
+			</hgroup>
+			<!doctype html>
+			<html lang="en">
+				<head>
+					<meta charset="UTF-8" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+					<meta name="description" content="Document pages recreated in HTML5" />
+					<title>Document Recreation</title>
+					<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet" />
+					<link rel="stylesheet" href="styles.css" />
+				</head>
+				<body>
+					<main>
+						<section id="page1" aria-label="Page 1">
+							<h1>DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS</h1>
+							<br />
+							<address>
+								E. F. Codd<br />
+								Research Division<br />
+								San Jose, California
+							</address>
+							<br />
+							<br />
+							<p class="no-indent">ABSTRACT: The large, integrated data banks of the future will contain many relations of various degrees in stored form. It will not be unusual for this set of stored relations to be redundant. Two types of redundancy are defined and discussed. One type may be employed to improve accessibility of certain kinds of information which happen to be in great demand. When either type of redundancy exists, those responsible for control of the data bank should know about it and have some means of detecting any &quot;logical&quot; inconsistencies in the total set of stored relations. Consistency checking might be helpful in tracking down unauthorized (and possibly fraudulent) changes in the data bank contents.</p>
+							<p class="no-indent">RJ 599(# 12343) August 19, 1969</p>
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<br />
+							<p class="no-indent">LIMITED DISTRIBUTION NOTICE - This report has been submitted for publication elsewhere and has been issued as a Research Report for early dissemination of its contents. As a courtesy to the intended publisher, it should not be widely distributed until after the date of outside publication.</p>
+							<p class="no-indent smaller-text">Copies may be requested from IBM Thomas J. Watson Research Center, Post Office Box 218, Yorktown Heights, New York 10598</p>
+						</section>
+						<section id="page2" aria-label="Page 2">
+							<h2>CONTENTS</h2>
+							<ol>
+								<li>A Relational View of Data <span>1</span></li>
+								<li>Some Linguistic Aspects <span>4</span></li>
+								<li>Operations on Relations <span>5</span></li>
+								<ol>
+									<li>Permutation <span>5</span></li>
+									<li>Projection <span>5</span></li>
+									<li>Join <span>6</span></li>
+									<li>Composition <span>9</span></li>
+								</ol>
+								<li>Expressible, Named and Stored Relations <span>10</span></li>
+								<li>Derivability, Redundancy and Consistency <span>11</span></li>
+								<li>Data Bank Control <span>13</span></li>
+							</ol>
+						</section>
+						<section id="page3" aria-label="Page 3">
+							<h2>INTRODUCTION</h2>
+							<p>
+								The first part of this paper is concerned with an explanation of a relational view of data. This view (or model) of data appears to be superior in several respects to the graph or network model [1, 2] presently in vogue. It provides a means describing data with its natural structure only: that is, without superimposing any additional structure for machine representation purposes. Accordingly, it provides a basis for a high level retrieval language which will yield maximal independence between programs on the one hand, and machine presentation and organization of data on the other. A further advantage of the relational view is that it forms a sound basis for treating derivability, redundancy, and consistency of relations -- these are discussed in the second part of this paper. The network model, on the other hand, has spawned a number of confusions, not the least of which is mistaking the derivation of connections for the derivation of relations.
+								Finally, the relational view permits a clearer evaluation of the scope and logical limitations of present management information systems, and also the relative merits (from a logical standpoint) of competing representations of data within a single system.
+							</p>
+							<h3>1. A Relational View of Data</h3>
+							<p>The term <u>relation</u> is used here in its accepted mathematical sense. Given sets S<sub>1</sub>, S<sub>2</sub>, ..., S<sub>n</sub> (not necessarily distinct), R is a relation on these n sets if it is a set of n-tuples, each of which has its first element from S<sub>1</sub>, its second element from S<sub>2</sub>, and so on. We shall refer to S<sub>j</sub> as the j<sup>th</sup> domain of R. As defined above, R is said to have degree n. Relations of degree 1 are often called <u>unary</u>, degree 2 <u>binary</u>, degree 3 <u>ternary</u>, and degree n <u>n-ary</u>.</p>
+							<p>For expository reasons, we shall frequently make use of an array representation of relations, but it must be remembered that this particular representation is not an essential part of the relational view being expounded. An array which represents an n-ary relation R has the following properties:</p>
+							<ul>
+								<li>(1) Each row represents an n-tuple of R;</li>
+								<li>(2) The ordering of rows is immaterial;</li>
+								<li>(3) All rows are distinct;</li>
+								<li>(4) The ordering of columns is significant - it corresponds to the ordering S<sub>1</sub>, S<sub>2</sub>, ... S<sub>n</sub> of the domains on which R is defined;</li>
+								<li>(5) The significance of each column is partially conveyed by labeling it with the name of the corresponding domain.</li>
+							</ul>
+						</section>
+						<section id="page4" aria-label="Page 4">
+							<p>The example in Figure 1 illustrates a relation of degree 4 called <u>ship</u> which reflects the shipments-in-progress of parts from specified suppliers to specified projects in specified quantities.</p>
+							<pre>
 <u>ship</u> ( <u>supplier</u> <u>part</u> <u>project</u> <u>quantity</u> )
          1       2      5       17
          1       3      5       23
@@ -75,9 +133,9 @@
          2       7      5       4
          4       1      1       12
             </pre>
-				<p class="figure-text">Figure 1: A Relation of Degree 4</p>
-				<p>One might ask: If the columns are labeled by the name of the corresponding domains, why should the ordering of columns matter? As the example in Figure 2 shows, two columns may have identical headings (indicating identical domains), but possess distinct meanings with respect to the relation. The relation depicted is called <u>component</u>. It is a binary relation, each of whose two domains is called <u>part</u>. The meaning of <u>component</u> (x, y) is that part x is an immediate component (or subassembly) of part y.</p>
-				<pre>
+							<p class="figure-text">Figure 1: A Relation of Degree 4</p>
+							<p>One might ask: If the columns are labeled by the name of the corresponding domains, why should the ordering of columns matter? As the example in Figure 2 shows, two columns may have identical headings (indicating identical domains), but possess distinct meanings with respect to the relation. The relation depicted is called <u>component</u>. It is a binary relation, each of whose two domains is called <u>part</u>. The meaning of <u>component</u> (x, y) is that part x is an immediate component (or subassembly) of part y.</p>
+							<pre>
 <u>component</u> ( <u>part</u> <u>part</u> )
              1    5
              2    5
@@ -87,98 +145,98 @@
              4    7
              6    7
             </pre>
-				<p class="figure-text">Figure 2: A Relation with Two Identical Domains</p>
-				<p>We now assert that a data bank is a collection of time-varying relations. These relations are of assorted degrees. As time progresses, each n-ary relation may be subject to insertion of additional n-tuples, deletion of existing ones, and alteration of components of any of its existing n-tuples.</p>
-				<p>Consider, for example, a data bank which contains information about parts, projects, and suppliers. The individual description for an individual object (such as a particular part) is called an <u>entity</u> [3]. The prototype description for a class of objects is called an <u>entity type</u>. The set of entities of a given entity type can be viewed as a relation, and we shall call such a relation an <u>entity type relation</u>. In the example under consideration, there might be an entity type relation called part defined on the following domains:</p>
-			</section>
-			<section id="page5" aria-label="Page 5">
-				<ul>
-					<li>(1) part number</li>
-					<li>(2) part name</li>
-					<li>(3) part color</li>
-					<li>(4) part weight</li>
-					<li>(5) quantity on hand</li>
-					<li>(6) quantity on order</li>
-				</ul>
-				<p class="no-indent">and possibly other domains as well. Each of these domains is, in effect, a pool of values, some or all of which may be represented in the data bank at any instant. While it is conceivable that, at some instant, all part colors are present, it is unlikely that all possible part weights, part names, and part numbers are. The domains listed above correspond to what are commonly called the attributes of the entity type part.</p>
-				<p>Normally, one attribute (or combination of attributes) of a given entity type has values which uniquely identify each entity. Such an attribute (or combination) is called a <u>key</u>. In the example above, part number would be a key, while part color would not be. A key is <u>non-redundant</u> if it is either a simple attribute (not a combination) or a combination such that none of the participating attributes is superfluous in uniquely identifying each entity. An entity type may possess more than one non-redundant key. This would be the case in the example, if different parts were always given distinct names.</p>
-				<p>The remaining relations in a data bank are between entity types, and are, therefore, called <u>inter-entity relations</u>. An essential property of every inter-entity relation is that its domains include at least two keys which either refer to distinct entity types or refer to a common entity type serving distinct roles.</p>
-				<p>The examples in Figures 1 and 2 will help clarify this. The relation exhibited in Figure 1 involves three keys, one for each of the entity types <u>supplier</u>, <u>part</u>, <u>project</u>. The relation exhibited in Figure 2 involves two keys referring to the common entity type part, the first key serving to identify a component, the second to identify an assembly containing that component. Both of these relations are inter-entity relations.</p>
-				<p>So far, we have discussed examples of relations which are defined on simple domains - domains whose elements are atomic (non-decomposable) values. Non-atomic values can be discussed within the relational framework. Thus, some domains may have relations as elements. These relations may, in turn, be defined on non-simple domains, and so on. For example, one of the domains on which the entity type relation <u>employee</u> is defined might be <u>salary history</u>. An element of the salary history domain is a binary relation defined on the domain <u>date</u> and the domain <u>salary</u>. The salary history domain is the set of all such binary relations.</p>
-			</section>
-			<section id="page6" aria-label="Page 6">
-				<h3>2. Some Linguistic Aspects</h3>
-				<p>The adoption of a relational view of data, as described above, permits the development of a universal retrieval sublanguage based on the second-order predicate calculus.&ast; Such a language would provide a yardstick of linguistic power for all other proposed retrieval languages, and would itself be a strong candidate for embedding (with appropriate syntactic modification) in a variety of host languages (programming, command or problem oriented). While it is not the purpose of this paper to describe such a language in detail, its salient features would be as follows.</p>
-				<p>Let us denote the retrieval sublanguage by R and the host language by H. R permits the declaration of domains, together with relations of various degrees on those domains. H permits supporting declarations which indicate, perhaps less permanently, how these relations are represented in storage. R permits the specification for retrieval of any subset of data from the data bank. Action on such a retrieval request is subject to security constraints.</p>
-				<p>The class of qualification expressions which can be used in a set specification is in a precisely specified one-to-one correspondence with the class of well-formed formulas of the predicate calculus in prenex normal form [4]. Any arithmetic functions needed can be defined in H and invoked in R. A set so specified may be fetched for query purposes only or it may be held for possible changes. Insertions take the form of adding new elements to declared relations without regard to any ordering that may be present in their machine representation. Deletions which are effective for the community (as opposed to the individual user or sub-communities) take the form of removing elements from declared relations. Some deletions may be triggered by others, if deletion dependencies between specified relations are declared in R.</p>
-				<p>One important effect that the view adopted toward data has on the language used to retrieve it is in the naming of data elements and sets. With the usual network view, users will often be burdened with coining and using more relation names than are absolutely necessary, since names are associated with directed paths rather than with relations. Two such paths are needed to support symmetric exploitation&ast;&ast; of a single binary relation. For a relation of degree n, the number of paths to be named and controlled is factorial n.</p>
-				<p>Again, if a relational view is adopted in which every n-ary relation (n &gt; 2) has to be expressed by the user as a nested</p>
-				<div class="hr-container">
-					<hr class="dashed" />
-				</div>
-				<p class="no-indent smaller-text">&ast;The second-order predicate calculus (rather than first-order) is needed because the domains on which relations are defined may themselves have relations as elements (see section 1).</p>
-				<div class="hr-container">
-					<hr class="dashed" />
-				</div>
-				<p class="no-indent smaller-text">&ast;&ast;Once a user is aware that a certain relation is stored, he will expect to be able to exploit it using any combination of its arguments as "knowns" and the remaining arguments as "unknowns," because the information (like Everest) is there. This is a system feature (missing from many current information systems), which we shall call (logically) symmetric exploitation of relations.</p>
-			</section>
-			<section id="page7" aria-label="Page 7">
-				<p class="no-indent">expression involving only binary relations, then 2n-1 names have to be coined instead of only n+1 with direct n-ary notation as described in Section 1. For example, the 4-ary relation <u>ship</u> of Figure 1, which entails 5 names in n-ary notation, would be represented in the form</p>
-				<pre>
+							<p class="figure-text">Figure 2: A Relation with Two Identical Domains</p>
+							<p>We now assert that a data bank is a collection of time-varying relations. These relations are of assorted degrees. As time progresses, each n-ary relation may be subject to insertion of additional n-tuples, deletion of existing ones, and alteration of components of any of its existing n-tuples.</p>
+							<p>Consider, for example, a data bank which contains information about parts, projects, and suppliers. The individual description for an individual object (such as a particular part) is called an <u>entity</u> [3]. The prototype description for a class of objects is called an <u>entity type</u>. The set of entities of a given entity type can be viewed as a relation, and we shall call such a relation an <u>entity type relation</u>. In the example under consideration, there might be an entity type relation called part defined on the following domains:</p>
+						</section>
+						<section id="page5" aria-label="Page 5">
+							<ul>
+								<li>(1) part number</li>
+								<li>(2) part name</li>
+								<li>(3) part color</li>
+								<li>(4) part weight</li>
+								<li>(5) quantity on hand</li>
+								<li>(6) quantity on order</li>
+							</ul>
+							<p class="no-indent">and possibly other domains as well. Each of these domains is, in effect, a pool of values, some or all of which may be represented in the data bank at any instant. While it is conceivable that, at some instant, all part colors are present, it is unlikely that all possible part weights, part names, and part numbers are. The domains listed above correspond to what are commonly called the attributes of the entity type part.</p>
+							<p>Normally, one attribute (or combination of attributes) of a given entity type has values which uniquely identify each entity. Such an attribute (or combination) is called a <u>key</u>. In the example above, part number would be a key, while part color would not be. A key is <u>non-redundant</u> if it is either a simple attribute (not a combination) or a combination such that none of the participating attributes is superfluous in uniquely identifying each entity. An entity type may possess more than one non-redundant key. This would be the case in the example, if different parts were always given distinct names.</p>
+							<p>The remaining relations in a data bank are between entity types, and are, therefore, called <u>inter-entity relations</u>. An essential property of every inter-entity relation is that its domains include at least two keys which either refer to distinct entity types or refer to a common entity type serving distinct roles.</p>
+							<p>The examples in Figures 1 and 2 will help clarify this. The relation exhibited in Figure 1 involves three keys, one for each of the entity types <u>supplier</u>, <u>part</u>, <u>project</u>. The relation exhibited in Figure 2 involves two keys referring to the common entity type part, the first key serving to identify a component, the second to identify an assembly containing that component. Both of these relations are inter-entity relations.</p>
+							<p>So far, we have discussed examples of relations which are defined on simple domains - domains whose elements are atomic (non-decomposable) values. Non-atomic values can be discussed within the relational framework. Thus, some domains may have relations as elements. These relations may, in turn, be defined on non-simple domains, and so on. For example, one of the domains on which the entity type relation <u>employee</u> is defined might be <u>salary history</u>. An element of the salary history domain is a binary relation defined on the domain <u>date</u> and the domain <u>salary</u>. The salary history domain is the set of all such binary relations.</p>
+						</section>
+						<section id="page6" aria-label="Page 6">
+							<h3>2. Some Linguistic Aspects</h3>
+							<p>The adoption of a relational view of data, as described above, permits the development of a universal retrieval sublanguage based on the second-order predicate calculus.&ast; Such a language would provide a yardstick of linguistic power for all other proposed retrieval languages, and would itself be a strong candidate for embedding (with appropriate syntactic modification) in a variety of host languages (programming, command or problem oriented). While it is not the purpose of this paper to describe such a language in detail, its salient features would be as follows.</p>
+							<p>Let us denote the retrieval sublanguage by R and the host language by H. R permits the declaration of domains, together with relations of various degrees on those domains. H permits supporting declarations which indicate, perhaps less permanently, how these relations are represented in storage. R permits the specification for retrieval of any subset of data from the data bank. Action on such a retrieval request is subject to security constraints.</p>
+							<p>The class of qualification expressions which can be used in a set specification is in a precisely specified one-to-one correspondence with the class of well-formed formulas of the predicate calculus in prenex normal form [4]. Any arithmetic functions needed can be defined in H and invoked in R. A set so specified may be fetched for query purposes only or it may be held for possible changes. Insertions take the form of adding new elements to declared relations without regard to any ordering that may be present in their machine representation. Deletions which are effective for the community (as opposed to the individual user or sub-communities) take the form of removing elements from declared relations. Some deletions may be triggered by others, if deletion dependencies between specified relations are declared in R.</p>
+							<p>One important effect that the view adopted toward data has on the language used to retrieve it is in the naming of data elements and sets. With the usual network view, users will often be burdened with coining and using more relation names than are absolutely necessary, since names are associated with directed paths rather than with relations. Two such paths are needed to support symmetric exploitation&ast;&ast; of a single binary relation. For a relation of degree n, the number of paths to be named and controlled is factorial n.</p>
+							<p>Again, if a relational view is adopted in which every n-ary relation (n &gt; 2) has to be expressed by the user as a nested</p>
+							<div class="hr-container">
+								<hr class="dashed" />
+							</div>
+							<p class="no-indent smaller-text">&ast;The second-order predicate calculus (rather than first-order) is needed because the domains on which relations are defined may themselves have relations as elements (see section 1).</p>
+							<div class="hr-container">
+								<hr class="dashed" />
+							</div>
+							<p class="no-indent smaller-text">&ast;&ast;Once a user is aware that a certain relation is stored, he will expect to be able to exploit it using any combination of its arguments as "knowns" and the remaining arguments as "unknowns," because the information (like Everest) is there. This is a system feature (missing from many current information systems), which we shall call (logically) symmetric exploitation of relations.</p>
+						</section>
+						<section id="page7" aria-label="Page 7">
+							<p class="no-indent">expression involving only binary relations, then 2n-1 names have to be coined instead of only n+1 with direct n-ary notation as described in Section 1. For example, the 4-ary relation <u>ship</u> of Figure 1, which entails 5 names in n-ary notation, would be represented in the form</p>
+							<pre>
     P ( <u>supplier</u>, Q ( <u>part</u>, R ( <u>project</u>, <u>quantity</u> ) ) )
             </pre
-				>
-				<p class="no-indent">in nested binary notation and, thus, employ 7 names.</p>
-				<h3>3. Operations on Relations</h3>
-				<p>Since relations are sets, all of the usual set operations are applicable to them. Nevertheless, the result may not be a relation; for example, the union of a binary relation and a ternary relation is not a relation.</p>
-				<p>The operations discussed below are specifically for relations. These operations are introduced because of their key role in deriving relations from other relations. Most users would not be directly concerned with these operations. Information systems designers and people concerned with data bank control should, however, be thoroughly familiar with these operations.</p>
-				<h4>3.1 Permutation</h4>
-				<p>A binary relation has an array representation with two columns. Interchanging these two columns yields the converse relation. More generally, if a permutation is applied to the columns of an n-ary relation, the resulting relation is said to be a <u>permutation</u> of the given relation. There are, for example, 4! = 24 permutations of the relation ship in Figure 1, if we include the identity permutation which leaves the ordering of columns unchanged.</p>
-				<p>In a system which provides symmetric exploitation of relations, the set of queries answerable by a stored relation is identical to the set answerable by any permutation of that relation. Although it is logically unnecessary to store both a relation and some permutation of it, performance could make it advisable.</p>
-				<h4>3.2 Projection</h4>
-				<p>Suppose now we select certain columns of a relation (striking out the others) and then remove from the resulting array any duplication in the rows. The final array represents a relation which is said to be a <u>projection</u> of the given relation.</p>
-				<p>A selection operator <span class="math">&Pi;</span> is used to obtain any desired permutation, projection, or combination of the two operations. Thus, if L is a list of k indices</p>
-				<pre>
+							>
+							<p class="no-indent">in nested binary notation and, thus, employ 7 names.</p>
+							<h3>3. Operations on Relations</h3>
+							<p>Since relations are sets, all of the usual set operations are applicable to them. Nevertheless, the result may not be a relation; for example, the union of a binary relation and a ternary relation is not a relation.</p>
+							<p>The operations discussed below are specifically for relations. These operations are introduced because of their key role in deriving relations from other relations. Most users would not be directly concerned with these operations. Information systems designers and people concerned with data bank control should, however, be thoroughly familiar with these operations.</p>
+							<h4>3.1 Permutation</h4>
+							<p>A binary relation has an array representation with two columns. Interchanging these two columns yields the converse relation. More generally, if a permutation is applied to the columns of an n-ary relation, the resulting relation is said to be a <u>permutation</u> of the given relation. There are, for example, 4! = 24 permutations of the relation ship in Figure 1, if we include the identity permutation which leaves the ordering of columns unchanged.</p>
+							<p>In a system which provides symmetric exploitation of relations, the set of queries answerable by a stored relation is identical to the set answerable by any permutation of that relation. Although it is logically unnecessary to store both a relation and some permutation of it, performance could make it advisable.</p>
+							<h4>3.2 Projection</h4>
+							<p>Suppose now we select certain columns of a relation (striking out the others) and then remove from the resulting array any duplication in the rows. The final array represents a relation which is said to be a <u>projection</u> of the given relation.</p>
+							<p>A selection operator <span class="math">&Pi;</span> is used to obtain any desired permutation, projection, or combination of the two operations. Thus, if L is a list of k indices</p>
+							<pre>
         L = i<sub>1</sub>, i<sub>2</sub>, ..., i<sub>k</sub>
             </pre
-				>
-				<p class="no-indent">and R is an n-ary relation (n &ge; k), then <span class="math">&Pi;</span><sub>L</sub>(R) is the k-ary relation whose j<sup>th</sup> column is column i<sub>j</sub> of R (j = 1, 2, ..., k) except that duplication in resulting rows is removed. Consider</p>
-			</section>
-			<section id="page8" aria-label="Page 8">
-				<p class="no-indent">the relation ship of Figure 1. A projection of this relation is exhibited in Figure 3.</p>
-				<pre>
+							>
+							<p class="no-indent">and R is an n-ary relation (n &ge; k), then <span class="math">&Pi;</span><sub>L</sub>(R) is the k-ary relation whose j<sup>th</sup> column is column i<sub>j</sub> of R (j = 1, 2, ..., k) except that duplication in resulting rows is removed. Consider</p>
+						</section>
+						<section id="page8" aria-label="Page 8">
+							<p class="no-indent">the relation ship of Figure 1. A projection of this relation is exhibited in Figure 3.</p>
+							<pre>
     <span class="math">&Pi;</span><sub>1,3</sub> ( <u>ship</u> ) ( <u>project</u> <u>supplier</u> )
                        5       1
                        5       2
                        1       4
                        7       2
             </pre>
-				<p class="figure-text">Figure 3: A Permuted Projection of the Relation in Figure 1</p>
-				<p class="no-indent">Note that, in this particular case, the projection has fewer n-tuples than the relation from which it is derived.</p>
-				<h4>3.3 Join</h4>
-				<p>Suppose we are given two binary relations, which have some domain in common. Under what circumstances can we combine these relations to form a ternary relation which preserves all of the information in the given relations?</p>
-				<p>The example in Figure 4 shows two relations R, S, which are joinable without loss of information, while Figure 5 shows a join of R with S. A binary relation R is <u>joinable</u> with a binary relation S if there exists a ternary relation U such that <span class="math">&Pi;</span><sub>12</sub>(U) = R and <span class="math">&Pi;</span><sub>23</sub>(U) = S. Any such ternary relation is called a join of R with S. If R, S are binary relations such that <span class="math">&Pi;</span><sub>2</sub>(R) = <span class="math">&Pi;</span><sub>1</sub>(S), then R is joinable with S. One join that always exists in such a case is the <u>natural join</u> of R with S defined by</p>
-				<pre>
+							<p class="figure-text">Figure 3: A Permuted Projection of the Relation in Figure 1</p>
+							<p class="no-indent">Note that, in this particular case, the projection has fewer n-tuples than the relation from which it is derived.</p>
+							<h4>3.3 Join</h4>
+							<p>Suppose we are given two binary relations, which have some domain in common. Under what circumstances can we combine these relations to form a ternary relation which preserves all of the information in the given relations?</p>
+							<p>The example in Figure 4 shows two relations R, S, which are joinable without loss of information, while Figure 5 shows a join of R with S. A binary relation R is <u>joinable</u> with a binary relation S if there exists a ternary relation U such that <span class="math">&Pi;</span><sub>12</sub>(U) = R and <span class="math">&Pi;</span><sub>23</sub>(U) = S. Any such ternary relation is called a join of R with S. If R, S are binary relations such that <span class="math">&Pi;</span><sub>2</sub>(R) = <span class="math">&Pi;</span><sub>1</sub>(S), then R is joinable with S. One join that always exists in such a case is the <u>natural join</u> of R with S defined by</p>
+							<pre>
         R&lowast;S = { (a, b, c):R(a, b) &and; S(b, c) }
             </pre
-				>
-				<p>where R(a, b) has the value <u>true</u> if (a, b) is a member of R and similarly for S(b, c). It is immediate that</p>
-				<pre>
+							>
+							<p>where R(a, b) has the value <u>true</u> if (a, b) is a member of R and similarly for S(b, c). It is immediate that</p>
+							<pre>
         <span class="math">&Pi;</span><sub>12</sub>(R&lowast;S) = R
         <span class="math">&Pi;</span><sub>23</sub>(R&lowast;S) = S
             </pre>
-				<p>Note that the join shown in Figure 5 is the natural join of R with S from Figure 4. However, this join is not the only one of R with S. Figure 6 shows another possible join of the relations in Figure 4.</p>
-				<pre>
+							<p>Note that the join shown in Figure 5 is the natural join of R with S from Figure 4. However, this join is not the only one of R with S. Figure 6 shows another possible join of the relations in Figure 4.</p>
+							<pre>
 R ( <u>supplier</u> <u>part</u> )     S ( <u>part</u> <u>project</u> )
        1      1              1      1
        2      1              1      2
        2      2              2      1
             </pre
-				>
-				<p class="figure-text">Figure 4: Two Joinable Relations</p>
-			</section>
-			<section id="page9" aria-label="Page 9">
-				<pre>
+							>
+							<p class="figure-text">Figure 4: Two Joinable Relations</p>
+						</section>
+						<section id="page9" aria-label="Page 9">
+							<pre>
 R&lowast;S ( <u>supplier</u> <u>part</u> <u>project</u> )
           1      1      1
           1      1      2
@@ -186,114 +244,114 @@ R&lowast;S ( <u>supplier</u> <u>part</u> <u>project</u> )
           2      1      2
           2      2      1
             </pre
-				>
-				<p class="figure-text">Figure 5: The Natural Join of R with S (from Figure 4)</p>
-				<pre>
+							>
+							<p class="figure-text">Figure 5: The Natural Join of R with S (from Figure 4)</p>
+							<pre>
 U ( <u>supplier</u> <u>part</u> <u>project</u> )
         1      1      2
         2      1      1
         2      2      1
             </pre
-				>
-				<p class="figure-text">Figure 6: Another Join of R with S (from Figure 4)</p>
-				<p>Inspection of these relations reveals an element (element 1) of the domain part (the domain on which the join is to be made) with the property that it possesses more than one relative under R and also under S. It is this element which gives rise to the plurality of joins. Such an element in the joining domain is called a point of ambiguity with respect to the joining of R with S.</p>
-				<p>
-					If either <span class="math">&Pi;</span><sub>21</sub>(R) or S is a function&ast;, no point of ambiguity can occur in joining R with S. In such a case, the natural join of R with S is the only join of R with S. Note that the reiterated qualification "of R with S" is necessary, because S might be joinable with R (as well as with S), and this join would be an entirely separate consideration. In Figure 4, none of the relations R, <span class="math">&Pi;<sub>21</sub></span
-					>(R), S, <span class="math">&Pi;</span><sub>21</sub>(S) is a function.
-				</p>
-				<p>Ambiguity in the joining of R with S can sometimes be resolved by means of other relations. Suppose we are given, or can derive from sources independent of R and S, a relation T on the domains <u>project</u> and <u>supplier</u> with the following properties:</p>
-				<ul>
-					<li>(1) <span class="math">&Pi;</span><sub class="sub-math">1</sub>(T) = <span class="math">&Pi;</span><sub class="sub-math">2</sub>(S)</li>
-					<li>(2) <span class="math">&Pi;</span><sub class="sub-math">2</sub>(T) = <span class="math">&Pi;</span><sub class="sub-math">1</sub>(R)</li>
-					<li>(3) T(j, s) &rarr; &exist;p R(s, p) &and; S(p, j)</li>
-					<li>(4) R(s, p) &rarr; &exist;j (S(p, j) &and; T(j, s))</li>
-					<li>(5) S(p, j) &rarr; &exist;s (T(j, s) &and; R(s, p))</li>
-				</ul>
-				<p class="no-indent">then we may form a three-way join of R, S, T; that is, a ternary relation such that</p>
-				<pre>
+							>
+							<p class="figure-text">Figure 6: Another Join of R with S (from Figure 4)</p>
+							<p>Inspection of these relations reveals an element (element 1) of the domain part (the domain on which the join is to be made) with the property that it possesses more than one relative under R and also under S. It is this element which gives rise to the plurality of joins. Such an element in the joining domain is called a point of ambiguity with respect to the joining of R with S.</p>
+							<p>
+								If either <span class="math">&Pi;</span><sub>21</sub>(R) or S is a function&ast;, no point of ambiguity can occur in joining R with S. In such a case, the natural join of R with S is the only join of R with S. Note that the reiterated qualification "of R with S" is necessary, because S might be joinable with R (as well as with S), and this join would be an entirely separate consideration. In Figure 4, none of the relations R, <span class="math">&Pi;<sub>21</sub></span
+								>(R), S, <span class="math">&Pi;</span><sub>21</sub>(S) is a function.
+							</p>
+							<p>Ambiguity in the joining of R with S can sometimes be resolved by means of other relations. Suppose we are given, or can derive from sources independent of R and S, a relation T on the domains <u>project</u> and <u>supplier</u> with the following properties:</p>
+							<ul>
+								<li>(1) <span class="math">&Pi;</span><sub class="sub-math">1</sub>(T) = <span class="math">&Pi;</span><sub class="sub-math">2</sub>(S)</li>
+								<li>(2) <span class="math">&Pi;</span><sub class="sub-math">2</sub>(T) = <span class="math">&Pi;</span><sub class="sub-math">1</sub>(R)</li>
+								<li>(3) T(j, s) &rarr; &exist;p R(s, p) &and; S(p, j)</li>
+								<li>(4) R(s, p) &rarr; &exist;j (S(p, j) &and; T(j, s))</li>
+								<li>(5) S(p, j) &rarr; &exist;s (T(j, s) &and; R(s, p))</li>
+							</ul>
+							<p class="no-indent">then we may form a three-way join of R, S, T; that is, a ternary relation such that</p>
+							<pre>
         <span class="math">&Pi;</span><sub>12</sub>(U) = R
         <span class="math">&Pi;</span><sub>23</sub>(U) = S
         <span class="math">&Pi;</span><sub>31</sub>(U) = T
             </pre>
-				<div class="hr-container">
-					<hr class="dashed" />
-				</div>
-				<p class="no-indent smaller-text">&ast;A function is a many-one binary relation.</p>
-			</section>
-			<section id="page10" aria-label="Page 10">
-				<p>Such a join will be called a cyclic 3-join to distinguish it from a linear 3-join which would be a quaternary relation V such that</p>
-				<pre>
+							<div class="hr-container">
+								<hr class="dashed" />
+							</div>
+							<p class="no-indent smaller-text">&ast;A function is a many-one binary relation.</p>
+						</section>
+						<section id="page10" aria-label="Page 10">
+							<p>Such a join will be called a cyclic 3-join to distinguish it from a linear 3-join which would be a quaternary relation V such that</p>
+							<pre>
         <span class="math">&Pi;</span><sub>12</sub>(V) = R
         <span class="math">&Pi;</span><sub>23</sub>(V) = S
         <span class="math">&Pi;</span><sub>34</sub>(V) = T
             </pre>
-				<p>While it is possible for more than one cyclic 3-join to exist (see Figures 7, 8 for an example), the circumstances under which this can occur entail much more severe constraints than those for a plurality of 2-joins. To be specific, the relations R, S, T must possess points of ambiguity with respect to joining R with S (say point x), S with T (say y), and T with R (say z), and, furthermore, y must be a relative of x under S, z a relative of y under T, and x a relative of z under R. Note that in Figure 7 the points</p>
-				<pre>x = a; y = d; z = 2</pre>
-				<p class="no-indent">have this property.</p>
-				<pre>
+							<p>While it is possible for more than one cyclic 3-join to exist (see Figures 7, 8 for an example), the circumstances under which this can occur entail much more severe constraints than those for a plurality of 2-joins. To be specific, the relations R, S, T must possess points of ambiguity with respect to joining R with S (say point x), S with T (say y), and T with R (say z), and, furthermore, y must be a relative of x under S, z a relative of y under T, and x a relative of z under R. Note that in Figure 7 the points</p>
+							<pre>x = a; y = d; z = 2</pre>
+							<p class="no-indent">have this property.</p>
+							<pre>
     R ( <u>s</u> <u>p</u> )     S ( <u>p</u> <u>j</u> )     T ( <u>j</u> <u>s</u> )
         1 a           a d           d 1
         2 a           a e           d 2
         2 b           b e           e 2
             </pre
-				>
-				<p class="figure-text">Figure 7: Binary Relations with a Plurality of Cyclic 3-Joins</p>
-				<pre>
+							>
+							<p class="figure-text">Figure 7: Binary Relations with a Plurality of Cyclic 3-Joins</p>
+							<pre>
     U ( <u>s</u> <u>p</u> <u>j</u> )     U&prime; ( <u>s</u> <u>p</u> <u>j</u> )
         1 a d            1 a d
         2 a e            2 a e
         2 b d            2 b e
         2 b e            2 b d
             </pre
-				>
-				<p class="figure-text">Figure 8: Two Cyclic 3-Joins of the Relations in Figure 7</p>
-				<p>The natural linear 3-join of three binary relations R, S, T is given by</p>
-				<pre>
+							>
+							<p class="figure-text">Figure 8: Two Cyclic 3-Joins of the Relations in Figure 7</p>
+							<p>The natural linear 3-join of three binary relations R, S, T is given by</p>
+							<pre>
     R&lowast;S&lowast;T = {(a, b, e, d):R(a, b) &and; S(b, c) &and; T(c, d)}
             </pre
-				>
-				<p class="no-indent">where parentheses are not needed on the left hand side because the natural 2-join (&lowast;) is associative. To obtain the cyclic counterpart, we introduce the operator &gamma; which produces a relation of degree n-1 from a relation of degree n by tying its ends together. Thus, if R is an n-ary relation</p>
-				<pre>
+							>
+							<p class="no-indent">where parentheses are not needed on the left hand side because the natural 2-join (&lowast;) is associative. To obtain the cyclic counterpart, we introduce the operator &gamma; which produces a relation of degree n-1 from a relation of degree n by tying its ends together. Thus, if R is an n-ary relation</p>
+							<pre>
 &gamma;(R) = { (a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n-1</sub>):R(a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n-1</sub>, a<sub>n</sub>) &and; a<sub>n</sub> = a<sub>1</sub> }
             </pre
-				>
-				<p class="no-indent">We may now represent the natural cyclic 3-join of R, S, T by the expression</p>
-				<pre>
+							>
+							<p class="no-indent">We may now represent the natural cyclic 3-join of R, S, T by the expression</p>
+							<pre>
         &gamma;(R&lowast;S&lowast;T)
             </pre
-				>
-			</section>
-			<section id="page11" aria-label="Page 11">
-				<p>Extension of the notions of linear and cyclic 3-join and their natural counterparts to the joining of n binary relations (where n &ge; 3) is obvious. A few words may be appropriate, however, regarding the joining of relations which are not necessarily binary. Consider the case of two relations R (degree r), S (degree s) which are to be joined on p of their domains (p &lt; r, p &lt; s). For simplicity, suppose these p domains are the last p of the r domains of R, and the first p of the s domains of S. If this were not so, we could always apply appropriate permutations to make it so. Now, take the Cartesian product of the first r-p domains of R, and call this new domain A. Take the Cartesian product of the last p domains of R and call this B. Take the Cartesian product of the last s-p domains of S and call this C.</p>
-				<p>We can treat R as if it were a binary relation on the domains A, B. Similarly, we can treat S as if it were a binary relation on the domains B, C. The notions of linear and cyclic 3-join are now directly applicable. A similar approach can be taken with the linear and cyclic n-joins of n relations of assorted degrees.</p>
-				<h4>3.4 Composition</h4>
-				<p>The reader is probably familiar with the notion of composition applied to functions. We shall discuss a generalization of that concept and apply it first to binary relations. Our definitions of composition and composability are based very directly on the definitions of join and joinability given above.</p>
-				<p>Suppose we are given two relations R, S. T is a composition of R with S if there exists a join U of R with S such that T = <span class="math">&Pi;</span><sub>13</sub>(U). Thus, two relations are composable if and only if they are joinable. However, the existence of more than one join of R with S does not imply the existence of more than one composition of R with S.</p>
-				<p>Corresponding to the natural join of R with S is the <u>natural composition</u> of R with S defined by</p>
-				<pre>
+							>
+						</section>
+						<section id="page11" aria-label="Page 11">
+							<p>Extension of the notions of linear and cyclic 3-join and their natural counterparts to the joining of n binary relations (where n &ge; 3) is obvious. A few words may be appropriate, however, regarding the joining of relations which are not necessarily binary. Consider the case of two relations R (degree r), S (degree s) which are to be joined on p of their domains (p &lt; r, p &lt; s). For simplicity, suppose these p domains are the last p of the r domains of R, and the first p of the s domains of S. If this were not so, we could always apply appropriate permutations to make it so. Now, take the Cartesian product of the first r-p domains of R, and call this new domain A. Take the Cartesian product of the last p domains of R and call this B. Take the Cartesian product of the last s-p domains of S and call this C.</p>
+							<p>We can treat R as if it were a binary relation on the domains A, B. Similarly, we can treat S as if it were a binary relation on the domains B, C. The notions of linear and cyclic 3-join are now directly applicable. A similar approach can be taken with the linear and cyclic n-joins of n relations of assorted degrees.</p>
+							<h4>3.4 Composition</h4>
+							<p>The reader is probably familiar with the notion of composition applied to functions. We shall discuss a generalization of that concept and apply it first to binary relations. Our definitions of composition and composability are based very directly on the definitions of join and joinability given above.</p>
+							<p>Suppose we are given two relations R, S. T is a composition of R with S if there exists a join U of R with S such that T = <span class="math">&Pi;</span><sub>13</sub>(U). Thus, two relations are composable if and only if they are joinable. However, the existence of more than one join of R with S does not imply the existence of more than one composition of R with S.</p>
+							<p>Corresponding to the natural join of R with S is the <u>natural composition</u> of R with S defined by</p>
+							<pre>
         R&#9679;S = <span class="math">&Pi;</span><sub>13</sub>(R&lowast;S)
             </pre>
-				<p class="no-indent">Taking the relations R, S from Figure 4, their natural composition is exhibited in Figure 9 and another composition is exhibited in Figure 10 (derived from the join exhibited in Figure 6).</p>
-				<pre>
+							<p class="no-indent">Taking the relations R, S from Figure 4, their natural composition is exhibited in Figure 9 and another composition is exhibited in Figure 10 (derived from the join exhibited in Figure 6).</p>
+							<pre>
         R&#9679;S ( <u>project</u> <u>supplier</u> )
                  1        1
                  1        2
                  2        1
                  2        2
             </pre
-				>
-				<p class="figure-text">Figure 9: The Natural Composition of R with S (from Figure 4)</p>
-			</section>
-			<section id="page12" aria-label="Page 12">
-				<pre>
+							>
+							<p class="figure-text">Figure 9: The Natural Composition of R with S (from Figure 4)</p>
+						</section>
+						<section id="page12" aria-label="Page 12">
+							<pre>
     T ( <u>project</u> <u>supplier</u> )
            1       2
            2       1
             </pre
-				>
-				<p class="figure-text">Figure 10: Another Composition of R with S (from Figure 4)</p>
-				<p>When two or more joins exist, the number of distinct compositions may be as few as one or as many as the number of distinct joins. Figure 11 shows an example of two relations which have several joins but only one composition. Note that the ambiguity of point c is lost in composing R with S, because of unambiguous associations made via the points a, b, d, e.</p>
-				<pre>
+							>
+							<p class="figure-text">Figure 10: Another Composition of R with S (from Figure 4)</p>
+							<p>When two or more joins exist, the number of distinct compositions may be as few as one or as many as the number of distinct joins. Figure 11 shows an example of two relations which have several joins but only one composition. Note that the ambiguity of point c is lost in composing R with S, because of unambiguous associations made via the points a, b, d, e.</p>
+							<pre>
     R ( <u>supplier</u> <u>part</u> )     S ( <u>part</u> <u>project</u> )
            1      a              a      g
            1      b              b      f
@@ -301,36 +359,37 @@ U ( <u>supplier</u> <u>part</u> <u>project</u> )
            2      c              c      g
            2      d              d      g
            2      e              e      f
-                </pre>
-				<p class="figure-text">Figure 11: Many Joins, Only One Composition</p>
-				<p>Extension of composition to pairs of relations which are not necessarily binary (and which may be of different degrees) follows the same patterns as extenion of pairwise joining to such relations. We now proceed to make use of these operations on relations in considering what relations need to be actually stored.</p>
-				<h3>4. Expressible, Named and Stored Relations</h3>
-				<p>Associated with a data bank are three collections of relations:</p>
-				<ul>
-					<li>(1) the expressible set</li>
-					<li>(2) the named set</li>
-					<li>(3) the stored set</li>
-				</ul>
-				<p>The expressible set is the collection of relations which can be designated by expressions in the retrieval language for the purpose of defining sets of data to be retrieved. Such expressions are constructed from simple names of relations, relational operators such as &equals;, logical connectives and the quantifiers of the predicate calculus.</p>
-				<p>The named set is the collection of all relations in the data bank which the user can identify by means of simple public names. This set is a subset of the expressible set &dash; usually a very small subset.</p>
-				<p>The stored set is the collection of all relations whose values are actually stored in the data bank. This set would normally be a subset of the named set, and we assume that it is. If the traffic on some unnamed but expressible relation grows to such proportions that such a relation should be included in the stored set, then it should be given a public name and thereby included in the named set.</p>
-			</section>
-			<section id="page13" aria-label="Page 13">
-				<p>Those relations which are in the named set and not in the stored set are defined by expressions (independent of time) involving names of relations in the stored set, together with the permutation-projection, natural composition, natural join and tie operators (<span class="math">&Pi;</span>, &#9679;, &lowast;, &gamma;). Such definitions by expressions must be within the scope of the retrieval language R.</p>
-				<p>Decisions regarding which relations belong in the named set are based mainly on the logical needs of the community of users, and particularly on the ever&dash;increasing investment in programs using relations by name as a result of past membership of these relations in the named set. On the other hand, decisions regarding which relations belong in the stored set are based mainly on the transaction and interaction loads, the performance requirements of the users, and changes that take place in these factors.</p>
-				<h3>5. Derivability, Redundancy and Consistency</h3>
-				<p>A relation R is <u>derivable</u> from a set S of relations if there exists a sequence&ast; of permutations, projections, natural joins, and ties which yields R from members of S. This sequence of operations yields a correct value for R at virtually any time (for the stored set, we must exclude times at which changes are actually being made to the values of R and S). Note that, because natural join is specified, there is no question as to which join to take.</p>
-				<p>A set of relations is <u>strongly redundant</u> if it contains at least one relation which is derivable from the rest of the members. While the named set of relations is likely to be redundant in this sense for user convenience, the stored set will often be non&dash;strongly&dash;redundant in order to save storage space as well as time to perform updates, insertions, and deletions. Only in an environment with a heavy load of queries relative to the other kinds of interaction with the data bank would strong redundancy be justified in the stored set of relations.</p>
-				<p>A set of relations is <u>weakly redundant</u> if it contains at least one relation which is not derivable from other members of the set, but is at all times a projection of some join of other members of the set. The join in question might be the natural one at some time and an unnatural one at some other time.</p>
-				<p>Generally speaking, weak redundancies are inherent in the logical needs of the community of users. They are not removable by the system or data base administrator. If they appear at all, they appear in both the named and stored sets. Strong redundancies, on the other hand, are removable from the stored set, providing the resulting performance changes are acceptable.</p>
-				<div class="hr-container">
-					<hr class="dashed" />
-				</div>
-				<p class="no-indent smaller-text">&ast;We can omit natural composition in the list of operations, because it is a combination of a join and a projection.</p>
-			</section>
-			<section id="page14" aria-label="Page 14">
-				<p>As an example of a weak redundancy, consider the case cited previously in which there are binary relations R, S, T with meanings as follows:</p>
-				<pre>
+                </pre
+							>
+							<p class="figure-text">Figure 11: Many Joins, Only One Composition</p>
+							<p>Extension of composition to pairs of relations which are not necessarily binary (and which may be of different degrees) follows the same patterns as extenion of pairwise joining to such relations. We now proceed to make use of these operations on relations in considering what relations need to be actually stored.</p>
+							<h3>4. Expressible, Named and Stored Relations</h3>
+							<p>Associated with a data bank are three collections of relations:</p>
+							<ul>
+								<li>(1) the expressible set</li>
+								<li>(2) the named set</li>
+								<li>(3) the stored set</li>
+							</ul>
+							<p>The expressible set is the collection of relations which can be designated by expressions in the retrieval language for the purpose of defining sets of data to be retrieved. Such expressions are constructed from simple names of relations, relational operators such as &equals;, logical connectives and the quantifiers of the predicate calculus.</p>
+							<p>The named set is the collection of all relations in the data bank which the user can identify by means of simple public names. This set is a subset of the expressible set &dash; usually a very small subset.</p>
+							<p>The stored set is the collection of all relations whose values are actually stored in the data bank. This set would normally be a subset of the named set, and we assume that it is. If the traffic on some unnamed but expressible relation grows to such proportions that such a relation should be included in the stored set, then it should be given a public name and thereby included in the named set.</p>
+						</section>
+						<section id="page13" aria-label="Page 13">
+							<p>Those relations which are in the named set and not in the stored set are defined by expressions (independent of time) involving names of relations in the stored set, together with the permutation-projection, natural composition, natural join and tie operators (<span class="math">&Pi;</span>, &#9679;, &lowast;, &gamma;). Such definitions by expressions must be within the scope of the retrieval language R.</p>
+							<p>Decisions regarding which relations belong in the named set are based mainly on the logical needs of the community of users, and particularly on the ever&dash;increasing investment in programs using relations by name as a result of past membership of these relations in the named set. On the other hand, decisions regarding which relations belong in the stored set are based mainly on the transaction and interaction loads, the performance requirements of the users, and changes that take place in these factors.</p>
+							<h3>5. Derivability, Redundancy and Consistency</h3>
+							<p>A relation R is <u>derivable</u> from a set S of relations if there exists a sequence&ast; of permutations, projections, natural joins, and ties which yields R from members of S. This sequence of operations yields a correct value for R at virtually any time (for the stored set, we must exclude times at which changes are actually being made to the values of R and S). Note that, because natural join is specified, there is no question as to which join to take.</p>
+							<p>A set of relations is <u>strongly redundant</u> if it contains at least one relation which is derivable from the rest of the members. While the named set of relations is likely to be redundant in this sense for user convenience, the stored set will often be non&dash;strongly&dash;redundant in order to save storage space as well as time to perform updates, insertions, and deletions. Only in an environment with a heavy load of queries relative to the other kinds of interaction with the data bank would strong redundancy be justified in the stored set of relations.</p>
+							<p>A set of relations is <u>weakly redundant</u> if it contains at least one relation which is not derivable from other members of the set, but is at all times a projection of some join of other members of the set. The join in question might be the natural one at some time and an unnatural one at some other time.</p>
+							<p>Generally speaking, weak redundancies are inherent in the logical needs of the community of users. They are not removable by the system or data base administrator. If they appear at all, they appear in both the named and stored sets. Strong redundancies, on the other hand, are removable from the stored set, providing the resulting performance changes are acceptable.</p>
+							<div class="hr-container">
+								<hr class="dashed" />
+							</div>
+							<p class="no-indent smaller-text">&ast;We can omit natural composition in the list of operations, because it is a combination of a join and a projection.</p>
+						</section>
+						<section id="page14" aria-label="Page 14">
+							<p>As an example of a weak redundancy, consider the case cited previously in which there are binary relations R, S, T with meanings as follows:</p>
+							<pre>
         R(s, p)  supplier s supplies part p
                  to at least one project
         S(p, j)  part p is supplied by at least
@@ -338,41 +397,60 @@ U ( <u>supplier</u> <u>part</u> <u>project</u> )
         T(j, s)  project j is supplied at least
                  one kind of part by supplier s
             </pre
-				>
-				<p>All three relations are complex&ast; relations with the possibility of points of ambiguity occurring from time to time in the potential joining of any two. Hence, none of them is derivable from the other two. However, constraints do exist between them, since each is a projection of some cyclic join of the three of them. Thus, this set of relations possesses a weak redundancy.</p>
-				<p>Whenever a set of relations is redundant in either sense, we shall associate with that set a collection of statements which define all of the redundancies which hold independent of time between the member relations. If the information system lacks - and it most probably will - detailed semantic information about each named relation, it cannot deduce the redundancies applicable to the named set. It might, over a period of time, make attempts to induce the redundancies, but such attempts would be fallible.</p>
-				<p>Given a collection C of relations and an associated set of constraint statements, we shall call C consistent or inconsistent according as it does or does not comply with the stated redundancies. For example, given stored relations R, S, T together with the constraint statement</p>
-				<pre>
+							>
+							<p>All three relations are complex&ast; relations with the possibility of points of ambiguity occurring from time to time in the potential joining of any two. Hence, none of them is derivable from the other two. However, constraints do exist between them, since each is a projection of some cyclic join of the three of them. Thus, this set of relations possesses a weak redundancy.</p>
+							<p>Whenever a set of relations is redundant in either sense, we shall associate with that set a collection of statements which define all of the redundancies which hold independent of time between the member relations. If the information system lacks - and it most probably will - detailed semantic information about each named relation, it cannot deduce the redundancies applicable to the named set. It might, over a period of time, make attempts to induce the redundancies, but such attempts would be fallible.</p>
+							<p>Given a collection C of relations and an associated set of constraint statements, we shall call C consistent or inconsistent according as it does or does not comply with the stated redundancies. For example, given stored relations R, S, T together with the constraint statement</p>
+							<pre>
     "<span class="math">&Pi;</span><sub>12</sub>(T) is a composition of <span class="math">&Pi;</span><sub>12</sub>(R) with <span class="math">&Pi;</span><sub>12</sub>(S)",
             </pre>
-				<p class="no-indent">we may check from time to time that the values stored for R, S, T satisfy this constraint. An algorithm for making this check would examine the first two columns of each of R, S, T (in whatever way they are represented in the system) and determine whether</p>
-				<ul>
-					<li>(1) <span class="math">&Pi;</span><sub>1</sub>(T) = <span class="math">&Pi;</span><sub>1</sub>(R)</li>
-					<li>(2) <span class="math">&Pi;</span><sub>2</sub>(T) = <span class="math">&Pi;</span><sub>2</sub>(S)</li>
-					<li>(3) for every element pair (a, c) in the relation <span class="math">&Pi;</span><sub>12</sub>(T) there is an element b such that (a, b) is in <span class="math">&Pi;</span><sub>12</sub>(R) and (b, c) is in <span class="math">&Pi;</span><sub>12</sub>(S).</li>
-				</ul>
-				<p class="no-indent">There are practical problems (which we shall not discuss here) in taking an instantaneous snapshot of a collection of relations, some of which may be very large and highly variable.</p>
-				<div class="hr-container">
-					<hr class="dashed" />
-				</div>
-				<p class="no-indent smaller-text">&ast;A binary relation is complex if neither it nor its converse is a function.</p>
-			</section>
-			<section id="page15" aria-label="Page 15">
-				<h3>6. Data Bank Control</h3>
-				<p>Inconsistencies in a collection of relations may arise due to inadequate or faulty input. An example of inadequate input is the insertion of a new element, say (2, 5) in the relation S (<u>part</u>, <u>project</u>) when part 2 has no supplier who supplies project 5 (see previous section). The generation of an inconsistency of this kind could be logged internally, so that if it were not remedied within some reasonable time interval by appropriate insertions in the relations R, T the system could notify the security officer. Alternatively, the system could assist the user in making insertions and deletions by informing him that such and such relations now need to be changed to restore consistency in the collection. Ideally, it should be possible to make different selections of system reaction to inconsistency for different subcollections of relations in an individual data bank.</p>
-				<h2>Acknowledgment</h2>
-				<p class="no-indent">The author wishes to thank Dr. F. P. Palermo and Dr. E. B. Altman of the San Jose Research Laboratory for helpful discussions.</p>
-				<h2>References</h2>
-				<ol style="padding-left: 60px; padding-right: 100px">
-					<li>C. W. Bachman, "Software for Random Access Processing," Datamation, April 1965.</li>
-					<br />
-					<li>W. C. McGee, "Generalized File Processing," Annual Review in Automatic Programming 5, 13, pp. 77-149, Pergamon Press, 1969.</li>
-					<br />
-					<li>G. H. Mealy, "Another Look at Data," Proceedings Fall Joint Computer Conference, 1967.</li>
-					<br />
-					<li>A. Church, "An Introduction to Mathematical Logic I," Princeton, 1956.</li>
-				</ol>
-			</section>
+							<p class="no-indent">we may check from time to time that the values stored for R, S, T satisfy this constraint. An algorithm for making this check would examine the first two columns of each of R, S, T (in whatever way they are represented in the system) and determine whether</p>
+							<ul>
+								<li>(1) <span class="math">&Pi;</span><sub>1</sub>(T) = <span class="math">&Pi;</span><sub>1</sub>(R)</li>
+								<li>(2) <span class="math">&Pi;</span><sub>2</sub>(T) = <span class="math">&Pi;</span><sub>2</sub>(S)</li>
+								<li>(3) for every element pair (a, c) in the relation <span class="math">&Pi;</span><sub>12</sub>(T) there is an element b such that (a, b) is in <span class="math">&Pi;</span><sub>12</sub>(R) and (b, c) is in <span class="math">&Pi;</span><sub>12</sub>(S).</li>
+							</ul>
+							<p class="no-indent">There are practical problems (which we shall not discuss here) in taking an instantaneous snapshot of a collection of relations, some of which may be very large and highly variable.</p>
+							<div class="hr-container">
+								<hr class="dashed" />
+							</div>
+							<p class="no-indent smaller-text">&ast;A binary relation is complex if neither it nor its converse is a function.</p>
+						</section>
+						<section id="page15" aria-label="Page 15">
+							<h3>6. Data Bank Control</h3>
+							<p>Inconsistencies in a collection of relations may arise due to inadequate or faulty input. An example of inadequate input is the insertion of a new element, say (2, 5) in the relation S (<u>part</u>, <u>project</u>) when part 2 has no supplier who supplies project 5 (see previous section). The generation of an inconsistency of this kind could be logged internally, so that if it were not remedied within some reasonable time interval by appropriate insertions in the relations R, T the system could notify the security officer. Alternatively, the system could assist the user in making insertions and deletions by informing him that such and such relations now need to be changed to restore consistency in the collection. Ideally, it should be possible to make different selections of system reaction to inconsistency for different subcollections of relations in an individual data bank.</p>
+							<h2>Acknowledgment</h2>
+							<p class="no-indent">The author wishes to thank Dr. F. P. Palermo and Dr. E. B. Altman of the San Jose Research Laboratory for helpful discussions.</p>
+							<h2>References</h2>
+							<ol style="padding-left: 60px; padding-right: 100px">
+								<li>C. W. Bachman, "Software for Random Access Processing," Datamation, April 1965.</li>
+								<br />
+								<li>W. C. McGee, "Generalized File Processing," Annual Review in Automatic Programming 5, 13, pp. 77-149, Pergamon Press, 1969.</li>
+								<br />
+								<li>G. H. Mealy, "Another Look at Data," Proceedings Fall Joint Computer Conference, 1967.</li>
+								<br />
+								<li>A. Church, "An Introduction to Mathematical Logic I," Princeton, 1956.</li>
+							</ol>
+						</section>
+					</main>
+				</body>
+			</html>
 		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">1969-08-19</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
 	</body>
 </html>

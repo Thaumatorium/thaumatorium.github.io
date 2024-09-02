@@ -2,8 +2,8 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>The different types of functions in Functional Programming | The Thaumatorium</title>
-		<meta name="description" content="There are no explanations such as these available anywhere else" />
+		<title>The Different Types of Functions in Functional Programming | The Thaumatorium</title>
+		<meta name="description" content="Comprehensive explanations of various function types in functional programming" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="The different types of functions in Functional Programming" />
-		<meta property="og:description" content="There are no explanations such as these available anywhere else" />
+		<meta property="og:title" content="The Different Types of Functions in Functional Programming" />
+		<meta property="og:description" content="Comprehensive explanations of various function types in functional programming" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="The different types of functions in Functional Programming" />
-		<meta name="twitter:description" content="There are no explanations such as these available anywhere else" />
+		<meta name="twitter:title" content="The Different Types of Functions in Functional Programming" />
+		<meta name="twitter:description" content="Comprehensive explanations of various function types in functional programming" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
@@ -39,8 +39,8 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
 				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
-				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
 				<li><a href="/hardware">Hardware</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
@@ -48,87 +48,92 @@
 			</ul>
 		</nav>
 		<main>
-			<h1>The different types of functions in Functional Programming</h1>
+			<h1>The Different Types of Functions in Functional Programming</h1>
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2018-10-15T00:00:00&#43;01:00">2018-10-15</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2018-10-15T00:00:00&#43;01:00">2018-10-15</time></div>
+					<div class="published-box">Published: <time class="published" datetime="2018-10-15T00:00:00&#43;02:00">2018-10-15</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T20:21:00&#43;02:00">2024-07-24</time></div>
 				</div>
 			</hgroup>
-			<p>Slightly annoying that 'type' already have a certain meaning in Haskell, but I think you're smart enough to understand what I mean with the title.</p>
-			<p>In this context, a parser is a function accepting strings as input and returning some data structure as output, typically it's a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</p>
+			<p>In functional programming, the term "type" can be somewhat overloaded, especially in languages like Haskell. However, in this context, we are referring to different kinds of functions and their behaviors. A parser, for example, is a function that accepts strings as input and returns some data structure as output, typically a parse tree or a set of indices representing where parsing stopped successfully.</p>
+			<h2>Types of Functions</h2>
 			<table>
 				<thead>
 					<tr>
 						<th>Type</th>
-						<th>What it does</th>
-						<th>Example code</th>
+						<th>Description</th>
+						<th>Example Code</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
 						<td>Pure</td>
-						<td>Takes an input, returns an output – no side effects (data changes)</td>
+						<td>Takes an input, returns an output – no side effects (data changes).</td>
 						<td>
-							<pre><code class=lang-haskell>f :: Int -> Int
+							<pre><code class="lang-haskell">f :: Int -> Int
 f x = x</code></pre>
 						</td>
 					</tr>
 					<tr>
 						<td>Predicate</td>
-						<td>Takes an input, returns a Bool</td>
+						<td>Takes an input, returns a Bool.</td>
 						<td>
-							<pre><code class=lang-haskell>f :: Int -> Bool
+							<pre><code class="lang-haskell">f :: Int -> Bool
 f x = x > 5</code></pre>
 						</td>
 					</tr>
 					<tr>
 						<td>Recursive</td>
-						<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input</td>
+						<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input.</td>
 						<td>
-							<pre><code class=lang-haskell>length :: [a] -> Int
+							<pre><code class="lang-haskell">length :: [a] -> Int
 length (x:xs) = 1 + length xs</code></pre>
 						</td>
 					</tr>
 					<tr>
 						<td>Curried</td>
-						<td>You can give a function a part of the input to create a new function (imperative languages like C or Python always want all arguments at once)</td>
+						<td>"Partial Application" means that a function receives only a part of the input, which makes it return a <em>new</em> function that still wants the rest of the input (imperative languages like C or Python always want all arguments at once)</td>
 						<td>
-							<pre><code class=lang-haskell>timesTwo :: Int -> Int
-timesTwo = 2 *</code></pre>
-							As you can see, the <samp>*</samp> operator only has one input – It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:
-							<pre><code class=lang-haskell>timesTwo 3
-= { apply timesTwo }
+							<pre><code class="lang-haskell">timesTwo :: Int -> Int
+timesTwo = (2 *)</code></pre>
+							<p>Example usage: As you can see, the <samp>*</samp> operator only has one input - It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:</p>
+							<pre><code class="lang-haskell">timesTwo 3
+-- { apply timesTwo }
 2 * 3
-= { apply * }
+-- { apply * }
 6</code></pre>
 						</td>
 					</tr>
 					<tr>
 						<td>Applicative</td>
-						<td>Can take a variable amount of inputs, returns an output</td>
-						<td>Uses a function (<samp>pure</samp>) and an operator (<samp>&lt;*&gt;</samp>), where 'pure' lifts the function into a wrapped type/function and '&lt;*&gt;' accepts a wrapped type/function and a variable (that's also wrapped)</td>
+						<td>Can take a variable amount of inputs and return an output. Uses the <code>pure</code> function and the <code>&lt;*&gt;</code> operator.</td>
+						<td>
+							<p><code>pure</code> lifts a function into a wrapped type, and <code>&lt;*&gt;</code> accepts a wrapped type and a variable (also wrapped).</p>
+						</td>
 					</tr>
 					<tr>
 						<td>Monadic</td>
-						<td>Takes an input, returns an output – has side effects (data changes) and uses either the bind >>= operator or do notation</td>
+						<td>Takes an input, returns an output - can have side effects and uses either the bind <code>&gt;&gt;=</code> operator or <code>do</code> notation.</td>
 						<td>
-							From: <a http="https://wiki.haskell.org/All_About_Monads">https://wiki.haskell.org/All_About_Monads</a>
-							<pre><code class=lang-haskell>maternalGrandfather :: Sheep -&gt; Maybe Sheep
-maternalGrandfather s = (return s) &gt;&gt;= mother &gt;&gt;= father
--- alternatively
-mothersPaternalGrandfather :: Sheep -&gt; Maybe Sheep
-mothersPaternalGrandfather s = do m &lt;- mother s
-															gf &lt;- father m
-															father gf
+							<p>From: <a href="https://wiki.haskell.org/All_About_Monads">Haskell Wiki: All About Monads</a></p>
+							<pre><code class="lang-haskell">maternalGrandfather :: Sheep -> Maybe Sheep
+maternalGrandfather s = (return s) >>= mother >>= father
+-- Alternatively
+mothersPaternalGrandfather :: Sheep -> Maybe Sheep
+mothersPaternalGrandfather s = do m  <- mother s
+                                  gf <- father m
+                                  father gf
 </code></pre>
 						</td>
 					</tr>
 					<tr>
 						<td>Parser Combinator</td>
-						<td>Accepts several parsers as input and returns a new parser as its output.</td>
-						<td>From: <a http="https://en.wikipedia.org/wiki/Parser_combinator">https://en.wikipedia.org/wiki/Parser_combinator</a> In this context, a parser is a function accepting strings as input and returning some structure as output, typically a parse tree or a set of indices representing locations in the string where parsing stopped successfully.</td>
+						<td>Accepts several parsers as input and returns a new parser as output.</td>
+						<td>
+							<p>From: <a href="https://en.wikipedia.org/wiki/Parser_combinator">Wikipedia: Parser Combinator</a></p>
+							<p>A parser is a function accepting strings as input and returning some structure as output, typically a parse tree or a set of indices representing where parsing stopped successfully in the string.</p>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -138,7 +143,7 @@ mothersPaternalGrandfather s = do m &lt;- mother s
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2018-10-15</time></sub>
+					<sub>Last updated: <time id="updated">2024-07-24</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

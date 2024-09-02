@@ -39,8 +39,8 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
 				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
-				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
 				<li><a href="/hardware">Hardware</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
@@ -53,109 +53,125 @@
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
 					<div class="published-box">Published: <time class="published" datetime="2019-03-16T00:00:00&#43;01:00">2019-03-16</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2019-03-16T00:00:00&#43;01:00">2019-03-16</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T18:27:00&#43;02:00">2024-07-24</time></div>
 				</div>
 			</hgroup>
 			<h2><a id="disclaimer" href="#disclaimer" class="self-link">Disclaimer</a></h2>
-			<p>I'm not a mathematician, so it's not going to be exact, but I'll try to give you an intuitive understanding of Big O</p>
+			<p>I'm not a mathematician, so this won't be exact, but I'll try to give you an intuitive understanding of Big O.</p>
 			<p>
-				Big O (usually written as <i>O(x)</i>, where <i>x</i> is a mathematical equation like <i>1</i>, <i>n</i>, <i>n^2</i> or <i>2^n</i>, for example) is a mathematical expression which expresses <em>how many steps an algorithm <strong>maximally</strong> will take to run.</em>
+				Big O (usually written as <em>O(x)</em>, where <em>x</em> is a mathematical equation like <em>1</em>, <em>n</em>, <em>n²</em>, or <em>2ⁿ</em>, for example) is a mathematical expression that describes <em>how many steps an algorithm <strong>maximally</strong> will take to run.</em>
 			</p>
-			<h2><a id="example1" href="#example1" class="self-link">Example 1</a></h2>
-			<p>If you have an array or list and want to lookup the nth item, it will maximally take a so-called "constant time", expressed as <i>O(1)</i>. This does not mean it literally takes 1 step, but it means that no matter how many items you have in your data structure, the amount of steps it takes to retrieve the nth item is always a constant amount (whether it's actually 1 step or 10 does not matter in practice).</p>
-			<h2><a id="example2" href="#example2" class="self-link">Example 2</a></h2>
-			<p>A lookup for a Tree structure takes up <i>O(log n)</i> steps, because you can (assuming the tree is sorted) eliminate the other branch every time you go left or right in the tree (see image below – If you choose 9, instead of 3, you won't need to check the 1 and 4)</p>
+			<h2><a id="example1" href="#example1" class="self-link">Example 1: Constant Time - O(1)</a></h2>
+			<p>If you have an array or list and want to look up the nth item, it will maximally take a so-called "constant time", expressed as <em>O(1)</em>. This does not mean it literally takes one step, but it means that no matter how many items you have in your data structure, the number of steps it takes to retrieve the nth item is always a constant amount (whether it's actually 1 step or 10 does not matter in practice).</p>
+			<h2><a id="example2" href="#example2" class="self-link">Example 2: Logarithmic Time - O(log n)</a></h2>
+			<p>A lookup for a tree structure takes <em>O(log n)</em> steps, assuming the tree is sorted. You can eliminate half of the remaining items at each step (e.g., in a binary tree).</p>
 			<figure>
-				<img loading="lazy" width="420" height="264" src="binary-trees.png" />
-				<figcaption>Image nicked from <a http="http://cslibrary.stanford.edu/110/BinaryTrees.html">http://cslibrary.stanford.edu/110/BinaryTrees.html</a></figcaption>
+				<img loading="lazy" width="420" height="264" src="binary-trees.png" alt="Binary Tree" />
+				<figcaption>Image sourced from <a href="http://cslibrary.stanford.edu/110/BinaryTrees.html">Stanford's Binary Trees</a></figcaption>
 			</figure>
-			<p>Note that you may execute a few constant steps before that (like creating a variable to save the answer in, so you can return that), but since <i>O(log n)</i>'s runtime overshadows that of any <i>O(1)</i> code, we only note the <i>O(log n)</i> part.</p>
-			<h2><a id="example3" href="#example3" class="self-link">Example 3</a></h2>
-			<p>If you want to find whether your array or list contains an a certain item (assuming it's an unsorted list), it will take <i>O(n)</i> steps, because each item has to be checked <em>once</em> to see if that's the item you're looking for.</p>
+			<p>Note that you may execute a few constant steps before that (like creating a variable to save the answer in), but since <em>O(log n)</em>'s runtime overshadows any <em>O(1)</em> code, we only note the <em>O(log n)</em> part.</p>
+			<h2><a id="example3" href="#example3" class="self-link">Example 3: Linear Time - O(n)</a></h2>
+			<p>If you want to find whether your array or list contains a certain item (assuming it's an unsorted list), it will take <em>O(n)</em> steps, because each item has to be checked once to see if it's the item you're looking for.</p>
 			<p>
-				If you have a list with 10 items and the last item is the one you're looking for, it will take 10 steps. This is obviously not every time the case, but it's the <em>worst</em> case: Big O is <em>how many steps an algorithm <strong>maximally</strong> will take to run.</em>
+				If you have a list with 10 items and the last item is the one you're looking for, it will take 10 steps. This represents the <em>worst case</em> scenario: Big O describes <em>how many steps an algorithm <strong>maximally</strong> will take to run.</em>
 			</p>
-			<p>Again, if your algorithm has a part that happens to be <i>O(1)</i> or <i>O(log n)</i> (just as an example), you still note it down as <i>O(n)</i>, because <i>O(n)</i> overshadows the runtime of <i>O(1)</i> and <i>O(log n)</i>. Say you do, for some unknown reason, want to jot down the exact Big O, you'd write it down as <i>O(log n + n)</i>, but that's not what you'll see in practice. You can see what I mean, visually speaking, under the "Visually speaking" paragraph. :^)</p>
-			<h2><a id="most-of-the-big-o-notations" href="#most-of-the-big-o-notations" class="self-link">Most of the Big O notations</a></h2>
-			<p>Now that you're getting the gist: I've copied a small, <em>simplified</em>, list of possible Big O expressions from Wikipedia. It's sorted from shortest to longest runtime. The italic rows are the ones I've seen most common.</p>
-			<p><i>n</i> is the amount of items that's fed to the algorithm, <i>c</i> is a constant number for that specific algorithm (usually it's either 2 or 3, though I don't guarantee it)</p>
+			<p>If your algorithm has a part that happens to be <em>O(1)</em> or <em>O(log n)</em>, you still note it down as <em>O(n)</em>, because <em>O(n)</em> overshadows the runtime of <em>O(1)</em> and <em>O(log n)</em>.</p>
+			<h2><a id="example4" href="#example4" class="self-link">Example 4: Quadratic Time - O(n²)</a></h2>
+			<p>If you have a nested loop, where for each element you go through all elements again (like in bubble sort), it will take <em>O(n²)</em> steps. This is because for each of the n elements, you perform n operations.</p>
+			<p>For example, if you have a list of 10 items, it might take up to 100 steps to complete.</p>
+			<h2><a id="example5" href="#example5" class="self-link">Example 5: Exponential Time - O(2ⁿ)</a></h2>
+			<p>Some algorithms, like the naive solution for the traveling salesman problem, take <em>O(2ⁿ)</em> time. This means the number of steps doubles with each additional element.</p>
+			<p>For example, with 10 items, it could take up to 1024 steps.</p>
+			<h2><a id="most-of-the-big-o-notations" href="#most-of-the-big-o-notations" class="self-link">Most Common Big O Notations</a></h2>
+			<p>Now that you understand the basics, here's a simplified list of possible Big O expressions, sorted from shortest to longest runtime. The <em>italic</em> rows are the most common.</p>
 			<table>
 				<thead>
 					<tr>
 						<th>Notation</th>
 						<th>Name</th>
+						<th>Example</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td><i>O(1)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Constant_time">constant</a> – An array lookup, like <code class="lang-c">list[2]</code></td>
+						<td><em>O(1)</em></td>
+						<td><a href="https://en.wikipedia.org/wiki/Constant_time">Constant</a></td>
+						<td>Array lookup like <code class="lang-c">list[2]</code></td>
 					</tr>
 					<tr>
-						<td><i>O(log⁡ log⁡ n)</i></td>
-						<td>double logarithmic</td>
+						<td>O(log log n)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Double_logarithm">Double Logarithmic</a></td>
+						<td></td>
 					</tr>
 					<tr>
-						<td><i>O(log ⁡n)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Logarithmic_time">logarithmic</a> – Lookup in a sorted, binary tree</td>
+						<td><em>O(log n)</em></td>
+						<td><a href="https://en.wikipedia.org/wiki/Logarithmic_time">Logarithmic</a></td>
+						<td>Lookup in a sorted binary tree</td>
 					</tr>
 					<tr>
-						<td><i>O((log⁡ n)^c)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Polylogarithmic_time">polylogarithmic</a></td>
+						<td>O((log n)ᶜ)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Polylogarithmic_time">Polylogarithmic</a></td>
+						<td></td>
 					</tr>
 					<tr>
-						<td><i>O(n^c)</i></td>
-						<td>fractional power</td>
+						<td>O(nᶜ)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Computational_complexity_theory#Complexity_classes">Fractional Power</a></td>
+						<td></td>
 					</tr>
 					<tr>
-						<td><i>O(n)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Linear_time">linear</a> – for-loops</td>
+						<td><em>O(n)</em></td>
+						<td><a href="https://en.wikipedia.org/wiki/Linear_time">Linear</a></td>
+						<td>For-loops</td>
 					</tr>
 					<tr>
-						<td><i>O(n log ⁡n) = O(log ⁡n!)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Linearithmic_time">linearithmic</a>, loglinear, or quasilinear</td>
+						<td>O(n log n) = O(log n!)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Linearithmic_time">Linearithmic or Quasilinear</a></td>
+						<td>Merge sort, quicksort</td>
 					</tr>
 					<tr>
-						<td><i>O(n^2)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Quadratic_time">quadratic</a> – 'double for' loop, or "a for-loop in a for-loop"</td>
+						<td><em>O(n²)</em></td>
+						<td><a href="https://en.wikipedia.org/wiki/Quadratic_time">Quadratic</a></td>
+						<td>Bubble sort, insertion sort</td>
 					</tr>
 					<tr>
-						<td><i>O(n^c)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Polynomial_time">polynomial</a> or algebraic</td>
+						<td>O(nᶜ)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Polynomial_time">Polynomial</a></td>
+						<td>Matrix multiplication</td>
 					</tr>
 					<tr>
-						<td><i>O(c^n)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Exponential_time">exponential</a></td>
+						<td>O(2ⁿ)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Exponential_time">Exponential</a></td>
+						<td>Naive recursive Fibonacci</td>
 					</tr>
 					<tr>
-						<td><i>O(n!)</i></td>
-						<td><a href="https://en.wikipedia.org/wiki/Factorial">factorial</a></td>
+						<td>O(n!)</td>
+						<td><a href="https://en.wikipedia.org/wiki/Factorial">Factorial</a></td>
+						<td>Brute-force solutions</td>
 					</tr>
 				</tbody>
 			</table>
-			<p>For the full table: <a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions">Wikipedia/Big_O_notation</a></p>
-			<p>Another great wiki article is <a href="https://en.wikipedia.org/wiki/Time_complexity">Wikipedia/Time_complexity</a></p>
-			<h2><a id="visually-speaking" href="#visually-speaking" class="self-link">Visually speaking</a></h2>
-			<p>Anything after <i>O(n)</i> should be tried to be avoided (though some algorithms, like turning two lists into Cartesian product/table, or perhaps a naive implementation of generating Fibonacci number for example) are currently not faster than say <i>2^n</i> (though there are faster implementations known for the Fibonacci number generator), which means you can't always avoid it. As far as I know, we don't mathematically know if it's provable to find a faster algorithm for current algorithms.</p>
-			<p>You can see why you should avoid anything <i>>O(n)</i> here, as the rate of growth just shoots off the chart:</p>
+			<p>For the full table: <a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions">Wikipedia - Big O Notation</a></p>
+			<p>Another great article: <a href="https://en.wikipedia.org/wiki/Time_complexity">Wikipedia - Time Complexity</a></p>
+			<h2><a id="visually-speaking" href="#visually-speaking" class="self-link">Visually Speaking</a></h2>
+			<p>Anything after <em>O(n)</em> should be avoided when possible, though some algorithms (like generating a Cartesian product of two lists, or a naive Fibonacci number generator) are not faster than, say, <em>2ⁿ</em>.</p>
+			<p>You can see why avoiding anything greater than <em>O(n)</em> is essential here, as the rate of growth increases dramatically:</p>
 			<figure>
-				<img loading="lazy" height="974" width="942" src="big-o.png" />
-				<figcaption>Source: <a href="https://en.wikipedia.org/wiki/Time_complexity#/media/File:Comparison_computational_complexity.svg">Comparison_computational_complexity.svg</a></figcaption>
+				<img loading="lazy" height="974" width="942" src="big-o.png" alt="Big O Complexity" />
+				<figcaption>Source: <a href="https://en.wikipedia.org/wiki/Time_complexity#/media/File:Comparison_computational_complexity.svg">Comparison Computational Complexity</a></figcaption>
 			</figure>
-			<h2><a id="a-bit-of-trivia" href="#a-bit-of-trivia" class="self-link">A bit of trivia</a></h2>
-			<p>There's a thing in the mathematical world called <i>P=NP</i>, which states "It asks whether every problem whose solution can be quickly verified can also be solved quickly". In concrete form: A Sudoku puzzle can be verified to be correct in a relatively short time, yet not solved in a relatively short time. P basically means "polynomial" and NP "exponential" or even "factorial". Do note that this is not mathematically correct, but I'm not also going into what the hell "nondeterministic polynomial time" is. That's a bit out of the scope of this tutorial.</p>
-			<p>Anyway, this <i>P=NP</i> thing is currently still a mathematically unsolved problem within Computer Science, so maybe (if you're smarter than me) you can possibly solve this in the future.</p>
-			<h2><a id="closing-words" href="#closing-words" class="self-link">Closing words</a></h2>
-			<p>I hope this short intro into Big O has been of help to you 🙂</p>
-			<p>PS: Note that there are other so called asymptotic notations (of which Big O is one), like o (little-o), Ω (Big-Omega), ω(little-omega, and Θ (theta). I have to confess that I have no idea what those represent, but I'm guessing things like average runtime and minimal runtime or something like that, but those mathematicians have to fuck everything up for me by using words I don't understand ;_;</p>
-			<p>Fucking mathematics, how does it work?</p>
+			<h2><a id="a-bit-of-trivia" href="#a-bit-of-trivia" class="self-link">A Bit of Trivia</a></h2>
+			<p>There's a concept in mathematics called <em>P=NP</em>, which questions whether every problem whose solution can be quickly verified can also be quickly solved. For instance, verifying a Sudoku solution is quick, but solving it is not.</p>
+			<p>This problem is currently unsolved in Computer Science, so maybe (if you're smarter than me) you can solve it in the future.</p>
+			<h2><a id="closing-words" href="#closing-words" class="self-link">Closing Words</a></h2>
+			<p>I hope this short intro into Big O has been helpful to you. 😊</p>
+			<p>PS: Note that there are other asymptotic notations (like little-o, Big-Omega, little-omega, and Theta). These represent different aspects of algorithm performance, but that's outside the scope of this tutorial.</p>
 		</main>
 		<footer>
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2019-03-16</time></sub>
+					<sub>Last updated: <time id="updated">2024-07-24</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

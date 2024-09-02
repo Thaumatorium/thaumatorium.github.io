@@ -39,8 +39,8 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
 				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
-				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
 				<li><a href="/hardware">Hardware</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
@@ -58,108 +58,35 @@
 			</div>
 			<script src="d3.js"></script>
 			<script>
-				// import "./d3-collection.js";
-				// import "./d3-selection.js";
-				// import "./d3-tip.js";
 				const MARGIN = { LEFT: 100, RIGHT: 10, TOP: 10, BOTTOM: 100 };
 				const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT;
 				const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM;
 				const FORCE_MANYBODY_STRENGTH = -0.1;
 				const FORCE_COLLIDE = 1;
 				const FORCE_COLLIDE_STRENGTH = 0.01;
-				const NODE_SIZE = 2;
-				let time = 0;
-				let interval;
-				// const svg = d3.select("#warcraft_diagram")
-				// 	.append("svg")
-				// 	.attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
-				// 	.attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM);
-				// const g = svg.append("g")
-				// 	.attr("transform", `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
-				// const tip = d3.tip()
-				//     .attr('class', 'd3-tip')
-				//     .html(person => {
-				//         let text = `<strong>Name:</strong> <span style='color:red;text-transform:capitalize'>${person.name}</span><br>`
-				//         text += `<strong>Role:</strong> <span style='color:red;text-transform:capitalize'>${person.role}</span><br>`
-				//         return text
-				//     })
-				// g.call(tip)
-				// labels
-				// const game1selectionLabel = g.append("text")
-				// 	.attr("class", "game1 axisLabel")
-				// 	.attr("y", HEIGHT / 2)
-				// 	.attr("x", WIDTH * (1 / 12))
-				// 	.attr("font-size", "20px")
-				// 	.attr("text-anchor", "middle")
-				// 	.text("Warcraft1") // dynamically update this text
-				// const game2Label = g.append("text")
-				// 	.attr("class", "game2 axisLabel")
-				// 	.attr("y", HEIGHT / 2)
-				// 	.attr("x", WIDTH * (10 / 12))
-				// 	.attr("font-size", "20px")
-				// 	.attr("text-anchor", "middle")
-				// 	.text("Warcraft2") // dynamically update this text
-				// scales
-				// const colour = d3.scaleOrdinal(d3.schemeCategory10);
-				// forces
-				// Add "forces" to the simulation here
-				// let simulation = d3.forceSimulation()
-				// 	.force("center", d3.forceCenter(WIDTH / 2, HEIGHT / 2))
-				// 	.force("charge", d3.forceManyBody().strength(FORCE_MANYBODY_STRENGTH))
-				// 	.force("collide", d3.forceCollide(FORCE_COLLIDE).strength(FORCE_COLLIDE_STRENGTH))
-				// 	.force("link", d3.forceLink().id(d => d.id));
-				// DONE
-				// create list of full_title (Title: Subtitle)
-				// in `credits`, filter out everything with "role in non_employee roles"
-				// count the amount of roles so I know how many colours I need for the ordinalScale for roles
-				// TODO
-				// give each person a status of fired (worked only on old game), hired (worked on both) and appliered/applyered (?) for new hires.
-				// come up with better names for fired/hired/applyered
-				// create two labels for each game
-				// create the lines between a person and the game(s)
-				// draw each person as a circle with a color according to role
-				// gravitate the largest groups to the bottom, but all in the center
-				// create axes?
-				// create labels?
-				// two choice boxes, one play button for animation
-				// tooltip for when you hover on a person; show their name and role
-				// note: raw data, dirty data
-				const mode = (list) => {
-					r = { str: "", int: 0 };
-					list.reduce((obj, str) => {
-						obj[str] ? obj[str]++ : (obj[str] = 1);
-						if (r.int < obj[str]) {
-							r.str = str;
-							r.int = obj[str];
-						}
-						return obj;
-					}, {});
-					return r;
-				};
-				const uniq = (list) => {
-					return new Set(list);
-				};
+				const NODE_SIZE = 5; // Default node size
+				const GAME_NODE_SIZE = 20; // Larger size for game nodes
 				let clean_data;
 				const game1Elem = d3.select("#game1selection");
 				const game2Elem = d3.select("#game2selection");
 				d3.json("wow_credits.json")
 					.then((raw_data) => {
-						let n = 0;
 						raw_data.forEach((game) => {
-							// transform data
+							// Transform data
 							game.full_title = `${game.title}: ${game.subtitle}`;
 							game.credits = game.credits ? game.credits.filter((person) => !game.non_employee_roles.includes(person.role)) : [];
 							const roles = game.credits.reduce((list, item) => {
 								list.push(item.role);
 								return list;
 							}, []);
-							game.roles = uniq(roles);
-							game.role_count = uniq(roles).size;
-							game.most_role_count = mode(roles).int;
-							// fill in selection options
+							game.roles = new Set(roles);
+							game.role_count = new Set(roles).size;
+							game.most_role_count = roles.reduce((acc, role) => {
+								acc[role] = (acc[role] || 0) + 1;
+								return acc;
+							}, {});
 							game1Elem.append("option").attr("value", game.full_title).text(game.full_title);
 							game2Elem.append("option").attr("value", game.full_title).text(game.full_title);
-							n++;
 						});
 						clean_data = raw_data;
 						update();
@@ -168,79 +95,77 @@
 				const update = () => {
 					const game1 = clean_data.find((game) => game.full_title == game1selection.value);
 					const game2 = clean_data.find((game) => game.full_title == game2selection.value);
-					console.log(game1.non_employee_roles);
-					console.log(game2.non_employee_roles);
-					// create clean nodes
+					// Remove existing SVG if it exists
+					d3.select("#warcraft_diagram").select("svg").remove();
+					// Create clean nodes and links
 					let nodes = [];
-					const person_filtered_node_push = (new_person) => {
-						if (!nodes.filter((existing_person) => existing_person.name === new_person.name && existing_person.role === new_person.role).length && !game1.non_employee_roles.includes(new_person.group) && !game2.non_employee_roles.includes(new_person.group)) {
-							nodes.push({ id: new_person.name, group: new_person.role });
+					let links = [];
+					let personNodes = new Map();
+					// Add the selected games as nodes (to point to)
+					nodes.push({ id: game1.full_title, group: "game", size: GAME_NODE_SIZE });
+					if (game1.full_title !== game2.full_title) {
+						nodes.push({ id: game2.full_title, group: "game", size: GAME_NODE_SIZE });
+					}
+					const addPersonNode = (person) => {
+						if (!personNodes.has(person.name)) {
+							personNodes.set(person.name, { id: person.name, group: "person", roles: new Set([person.role]) });
+						} else {
+							personNodes.get(person.name).roles.add(person.role);
 						}
 					};
-					// add the selected games as a node (to point to)
-					nodes.push({ id: game1.full_title, group: "game" });
-					nodes.push({ id: game2.full_title, group: "game" });
-					// *now* add all the persons
-					game1.credits.forEach(person_filtered_node_push);
-					game2.credits.forEach(person_filtered_node_push);
-					// console.log(nodes);
-					let links = [];
-					const person_filtered_link_push = (gameselection) => {
-						return (new_person) => {
-							links.push({ source: new_person.name, target: gameselection });
-						};
+					const addPersonLinks = (person, gameTitle) => {
+						links.push({ source: person.name, target: gameTitle, role: person.role });
 					};
-					game1.credits.forEach(person_filtered_link_push(game1selection.value));
-					game2.credits.forEach(person_filtered_link_push(game2selection.value));
-					// console.log(links);
-					// helper functions
-					const nodeId = (d) => d.id;
-					const linkSource = ({ source }) => source;
-					const linkTarget = ({ target }) => target;
-					const intern = (value) => (value !== null && typeof value === "object" ? value.valueOf() : value);
-					// const nodeTitle = null
-					const nodeTitle = (_, i) => `${nodes[i].id}, ${nodes[i].group}`;
-					// const nodeGroup = null
-					const nodeGroup = (d) => d.group;
-					const colors = d3.schemeTableau10;
-					let nodeStrength;
-					let linkStrength;
+					// Process credits for both games
+					game1.credits.forEach((person) => {
+						addPersonNode(person);
+						addPersonLinks(person, game1.full_title);
+					});
+					game2.credits.forEach((person) => {
+						addPersonNode(person);
+						addPersonLinks(person, game2.full_title);
+					});
+					nodes = nodes.concat(Array.from(personNodes.values()));
 					const width = 1920 * 2;
 					const height = 1080 * 2;
 					const nodeStroke = "#fff";
 					const nodeStrokeWidth = 1.5;
 					const nodeStrokeOpacity = 1;
-					const nodeRadius = 5;
 					const linkStroke = "#999";
 					const linkStrokeOpacity = 0.6;
 					const linkStrokeWidth = 1.5;
 					const linkStrokeLinecap = "round";
 					const nodeFill = "currentColor";
+					const colors = d3.schemeTableau10;
+					const nodeId = (d) => d.id;
+					const linkSource = ({ source }) => source;
+					const linkTarget = ({ target }) => target;
+					const intern = (value) => (value !== null && typeof value === "object" ? value.valueOf() : value);
+					const nodeTitle = (_, i) => `${nodes[i].id}, ${nodes[i].group}`;
+					const nodeGroup = (d) => d.group;
+					const nodeSize = (d) => d.size || NODE_SIZE;
 					let nodeGroups;
 					const N = d3.map(nodes, nodeId).map(intern);
 					const LS = d3.map(links, linkSource).map(intern);
 					const LT = d3.map(links, linkTarget).map(intern);
-					if (nodeTitle === undefined) nodeTitle = (_, i) => N[i];
 					const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
 					const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
-					const W = typeof linkStrokeWidth !== "function" ? null : d3.map(links, linkStrokeWidth);
-					console.log(nodes);
-					console.log(links);
-					// replace input with mutable objects
-					nodes = d3.map(nodes, (_, i) => ({ id: N[i] }));
-					links = d3.map(links, (_, i) => ({ source: LS[i], target: LT[i] }));
-					// console.log(nodes)
-					// console.log(links)
-					// domains
+					nodes = d3.map(nodes, (_, i) => ({ id: N[i], group: G[i], size: nodeSize(nodes[i]) }));
+					links = d3.map(links, (_, i) => ({ source: LS[i], target: LT[i], role: links[i].role }));
 					if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
-					// scales
 					const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
-					// forces
-					const forceNode = d3.forceManyBody();
+					const forceNode = d3.forceManyBody().strength(FORCE_MANYBODY_STRENGTH);
 					const forceLink = d3.forceLink(links).id(({ index: i }) => N[i]);
-					if (nodeStrength !== undefined) forceNode.strength(nodeStrength);
-					if (linkStrength !== undefined) forceLink.strength(linkStrength);
-					const simulation = d3.forceSimulation(nodes).force("link", forceLink).force("charge", forceNode).force("center", d3.forceCenter()).on("tick", ticked);
+					const simulation = d3
+						.forceSimulation(nodes)
+						.force("link", forceLink)
+						.force("charge", forceNode)
+						.force("center", d3.forceCenter())
+						.force(
+							"collision",
+							d3.forceCollide().radius((d) => d.size)
+						)
+						.on("tick", ticked);
 					const svg = d3
 						.select("#warcraft_diagram")
 						.append("svg")
@@ -257,11 +182,19 @@
 						.selectAll("line")
 						.data(links)
 						.join("line");
-					const node = svg.append("g").attr("fill", nodeFill).attr("stroke", nodeStroke).attr("stroke-opacity", nodeStrokeOpacity).attr("stroke-width", nodeStrokeWidth).selectAll("circle").data(nodes).join("circle").attr("r", nodeRadius).call(drag(simulation));
-					if (W) link.attr("stroke-width", ({ index: i }) => W[i]);
+					const node = svg
+						.append("g")
+						.attr("fill", nodeFill)
+						.attr("stroke", nodeStroke)
+						.attr("stroke-opacity", nodeStrokeOpacity)
+						.attr("stroke-width", nodeStrokeWidth)
+						.selectAll("circle")
+						.data(nodes)
+						.join("circle")
+						.attr("r", (d) => d.size)
+						.call(drag(simulation));
 					if (G) node.attr("fill", ({ index: i }) => color(G[i]));
 					if (T) node.append("title").text(({ index: i }) => T[i]);
-					// if (invalidation != null) invalidation.then(() => simulation.stop());
 					function ticked() {
 						link.attr("x1", (d) => d.source.x)
 							.attr("y1", (d) => d.source.y)
@@ -292,162 +225,6 @@
 				game2Elem.on("change", update);
 			</script>
 			<hr />
-			<h2>These are the most often used elements by beginners:</h2>
-			<!-- Not to be confused with head or header elements -->
-			<h1>Heading 1</h1>
-			<h2>Heading 2</h2>
-			<h3>Heading 3</h3>
-			<h4>Heading 4</h4>
-			<h5>Heading 5</h5>
-			<h6>Heading 6</h6>
-			<p>This is a normal paragraph</p>
-			<p style="font-family: &quot;Times New Roman&quot;, Times, serif">This paragrph is explicitly Times New Roman</p>
-			<p style="font-family: monospace">This paragraph is explicitly monospaced</p>
-			<p>This date is surrounded by a time element: <time>2019-11-29</time></p>
-			<p>You can get all <var>time</var> elements in <em>Javascript</em> by pressing <kbd>ctrl-shift-i</kbd> or <kbd>F12</kbd> and putting <code>document.querySelectorAll("time")</code> into the console</p>
-			<!-- The hr element represents a paragraph-level thematic break -->
-			<hr />
-			<h2>Here are some fancier HTML elements</h2>
-			<figure>
-				<figcaption>Using Pythagoras' theorem to solve for the hypotenuse <var>a</var> of a triangle with sides <var>b</var> and <var>c</var></figcaption>
-			</figure>
-			<!-- kbd = keyboard -->
-			<!-- samp = sample -->
-			<p>
-				To make George eat an apple, select<kbd
-					><kbd><samp>File</samp></kbd
-					>|<kbd><samp>Eat Apple...</samp></kbd></kbd
-				>
-			</p>
-			<!-- since you can't show < and > on an HTML page (depending on the context), using &lgt; and &gt; are the only alternative -->
-			<!-- lt = lesser than -->
-			<!-- gt = greater than -->
-			<h2><code>&lt;details&gt;</code> animation test</h2>
-			<style>
-				details > summary {
-					transition: color 1s;
-					color: black;
-				}
-				details[open] > summary {
-					transition: color 1s;
-					color: red;
-				}
-				details[open] summary ~ * {
-					/* Change this - it looks weird, IMO */
-					animation: sweep 0.5s ease-in-out;
-				}
-				details[close] summary ~ * {
-					/* Change this - it looks weird, IMO */
-					animation: sweep 0.5s ease-in-out;
-				}
-				@keyframes sweep {
-					0% {
-						opacity: 0;
-						margin-left: -10px;
-					}
-					100% {
-						opacity: 1;
-						margin-left: 0px;
-					}
-				}
-			</style>
-			<details>
-				<summary>Automated Status: Operational</summary>
-				<p>Velocity: 12m/s</p>
-				<p>Direction: North</p>
-			</details>
-			<h2>Copying "Really Achieving Your Childhood Dreams"</h2>
-			<details>
-				<summary>Copying... <progress max="375505392" value="97543282"></progress> 25%</summary>
-				<dl>
-					<dt>Transfer rate:</dt>
-					<dd>452KB/s</dd>
-					<dt>Local filename:</dt>
-					<dd>/home/rpausch/raycd.m4v</dd>
-					<dt>Remote filename:</dt>
-					<dd>/var/www/lectures/raycd.m4v</dd>
-					<dt>Duration:</dt>
-					<dd>01:16:27</dd>
-					<dt>Color profile:</dt>
-					<dd>SD (6-1-6)</dd>
-					<dt>Dimensions:</dt>
-					<dd>320×240</dd>
-				</dl>
-			</details>
-			<h2>Detail Element</h2>
-			<p>The following shows how a details element can be used to hide some controls by default:</p>
-			<details>
-				<summary><label for="fn">Name & Extension:</label></summary>
-				<p><input type="text" id="fn" name="fn" value="Pillar Magazine.pdf" /></p>
-				<p>
-					<label><input type="checkbox" name="ext" checked /> Hide extension</label>
-				</p>
-			</details>
-			<h2>CSS border radius</h2>
-			<style>
-				p.standout {
-					width: 13em;
-					height: 8em;
-					border: solid black 0.1em;
-					border-radius: 7.5em 5em;
-				}
-			</style>
-			https://www.w3.org/TR/css-backgrounds-3/#the-border-radius
-			<p class="standout">Lorem ipsum dolor sit amet.</p>
-			<h2>Corner shaping</h2>
-			<style>
-				p.base {
-					width: 70px;
-					height: 70px;
-					border: solid 30px;
-					border-color: orange orange silver silver;
-				}
-				p.corner {
-					border-top-right-radius: 100%;
-				}
-				p.a {
-					border-width: 20px;
-					border-radius: 80px / 40px;
-				}
-				p.b {
-					border-width: 40px 20px;
-					border-radius: 80px / 60px;
-				}
-				p.c {
-					border-width: 40px 80px;
-					border-radius: 80px / 40px;
-				}
-				p.d {
-					border-width: 60px 20px;
-					border-radius: 80px / 40px;
-				}
-				p.diamond {
-					border: double orange 1em;
-					border-radius: 20px;
-					border-image: url("border.png") 27 round stretch;
-					box-shadow:
-						20px 20px 12px 12px rgba(0, 0, 0, 0.4),
-						rgba(0, 0, 0, 0.4) 10px 10px 0 1px inset;
-				}
-				p.wiggles {
-					/* doesn't work ಥ_ಥ */
-					border-image-slice: 124;
-					border-image-source: url("border.png");
-					border: 12px double green;
-					background-color: #c4ebec;
-					background-clip: padding-box;
-					padding: 17px;
-					border-image-outset: 31px;
-					border-image-width: auto;
-				}
-			</style>
-			<p class="base corner">Lorem ipsum dolor sit amet.</p>
-			<p class="base a">Lorem ipsum dolor sit amet.</p>
-			<p class="base b">Lorem ipsum dolor sit amet.</p>
-			<p class="base c">Lorem ipsum dolor sit amet.</p>
-			<p class="base d">Lorem ipsum dolor sit amet.</p>
-			<p class="diamond">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, et.</p>
-			<p class="wiggles">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, et.</p>
 			<h2>Image scaling</h2>
 			<style>
 				img.s {
@@ -474,106 +251,6 @@
 			<img loading="lazy" class="pi" src="wc4.png" width="640" />
 			<p>default</p>
 			<img loading="lazy" src="wc5.png" width="640" />
-			<h2>font weirdness</h2>
-			<style>
-				p.weird {
-					font: 12pt/14pt sans-serif;
-				}
-				p.weird {
-					font: 80% sans-serif;
-				}
-				p.weird {
-					font:
-						x-large/110% "new century schoolbook",
-						serif;
-				}
-				p.weird {
-					font:
-						bold italic large Palatino,
-						serif;
-				}
-				p.weird {
-					font: normal small-caps 120%/120% fantasy;
-				}
-				p.weird {
-					font:
-						condensed oblique 12pt "Helvetica Neue",
-						serif;
-				}
-			</style>
-			<p>wut</p>
-			<h2>CSS transitions</h2>
-			<style>
-				.tran1 {
-					color: black;
-					background: white;
-					transform: rotate(45deg);
-					transition-property: filter, transform;
-					transition-duration: 1s, 2s;
-				}
-				.tran1:hover {
-					filter: invert(100%);
-					transform: rotate(0deg);
-					transition-property: filter, transform;
-					transition-duration: 1s, 4s;
-				}
-				.tran2 {
-					color: black;
-					background-color: white;
-					/* transition-property: opacity, left; */
-					transition-duration: 1s, 4s;
-				}
-				.tran2:hover {
-					filter: blur(1px);
-				}
-			</style>
-			<div class="tran1">Hover me 1</div>
-			<div class="tran2">Hover me 2</div>
-			<h2>CSS Animations</h2>
-			<p>source: <a href="https://www.youtube.com/watch?v=zHUpx90NerM">Travery Media</a></p>
-			<style>
-				.anim {
-					background: #eee;
-					width: 200px;
-					height: 200px;
-					position: relative;
-					animation-name: myanim;
-					animation-duration: 4s;
-					animation-iteration-count: infinite;
-					animation-direction: alternate;
-					animation-timing-function: ease-in-out;
-				}
-				@keyframes myanim {
-					0% {
-						background-color: #eee;
-						left: 0px;
-						top: 0px;
-					}
-					25% {
-						background-color: red;
-						left: 300px;
-						top: 0px;
-					}
-					50% {
-						background-color: green;
-						left: 300px;
-						top: 300px;
-					}
-					75% {
-						background-color: blue;
-						left: 0px;
-						top: 300px;
-					}
-					100% {
-						background-color: #eee;
-						left: 0px;
-						top: 0px;
-					}
-				}
-			</style>
-			<div style="height: 600px">
-				<div class="anim"></div>
-			</div>
 		</main>
 		<footer>
 			<div class="copyright">

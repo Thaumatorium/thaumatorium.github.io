@@ -1,0 +1,396 @@
+[
+    {
+        "title": "Warcraft",
+        "subtitle": "Orcs & Humans",
+        "game_number": 1,
+        "non_employee_roles": [
+            "Special Thanks"
+        ],
+        "credits": [
+            {
+                "role": "Executive Producer",
+                "name": "Allen Adham"
+            },
+            {
+                "role": "Producer",
+                "name": "Patrick Wyatt"
+            },
+            {
+                "role": "Programmer",
+                "name": "Patrick Wyatt"
+            },
+            {
+                "role": "Programmer",
+                "name": "Bob Fitch"
+            },
+            {
+                "role": "Programmer",
+                "name": "Mike Morhaime"
+            },
+            {
+                "role": "Programmer",
+                "name": "Jesse McReynolds"
+            },
+            {
+                "role": "Artist",
+                "name": "Stuart Rose"
+            },
+            {
+                "role": "Artist",
+                "name": "Samwise Didier"
+            },
+            {
+                "role": "Artist",
+                "name": "Ron Millar"
+            },
+            {
+                "role": "Artist",
+                "name": "Mickey Neilson"
+            },
+            {
+                "role": "Artist",
+                "name": "Brian Sousa"
+            },
+            {
+                "role": "Artist",
+                "name": "David Berggren"
+            },
+            {
+                "role": "Artist",
+                "name": "Roman Kenney"
+            },
+            {
+                "role": "3D Artist",
+                "name": "Joeyray Hall"
+            },
+            {
+                "role": "3D Artist",
+                "name": "Ron Millar"
+            },
+            {
+                "role": "3D Artist",
+                "name": "Duane Stinett"
+            },
+            {
+                "role": "Music & Sound",
+                "name": "Glenn Stafford"
+            },
+            {
+                "role": "Music & Sound",
+                "name": "Gregory Alper"
+            },
+            {
+                "role": "Music & Sound",
+                "name": "Rick Jackson"
+            },
+            {
+                "role": "Music & Sound",
+                "name": "Chris Palmer"
+            },
+            {
+                "role": "Voices",
+                "name": "Bill Roper"
+            },
+            {
+                "role": "Manual Design",
+                "name": "Bill Roper"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Stuart Rose"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Samwise Didier"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Roman Kenney"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Brian Sousa"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Mickey Neilson"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "David Berggren"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Chris Metzen"
+            },
+            {
+                "role": "Manual Illustrations",
+                "name": "Nick Carpenter"
+            },
+            {
+                "role": "Public Relations",
+                "name": "Susan Wooley"
+            },
+            {
+                "role": "Public Relations",
+                "name": "Linda Duttenhaver"
+            },
+            {
+                "role": "Marketing",
+                "name": "Kathey Carter"
+            },
+            {
+                "role": "Marketing",
+                "name": "Steve Huot"
+            },
+            {
+                "role": "Marketing",
+                "name": "Burkley Hanes"
+            },
+            {
+                "role": "Marketing",
+                "name": "Debbie Caton"
+            },
+            {
+                "role": "Marketing",
+                "name": "Fernando Paez"
+            },
+            {
+                "role": "Sales",
+                "name": "Russel Nishida"
+            },
+            {
+                "role": "Sales",
+                "name": "Aprile Penhall"
+            },
+            {
+                "role": "Sales",
+                "name": "Helen Moriyama"
+            },
+            {
+                "role": "Quality Assurance",
+                "name": "Robert Louden"
+            },
+            {
+                "role": "Quality Assurance",
+                "name": "Tymothi Loving"
+            },
+            {
+                "role": "Quality Assurance",
+                "name": "Mark Menter"
+            },
+            {
+                "role": "Quality Assurance",
+                "name": "Larry Smith"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Derek Arasi"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "David Bevik"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Jeff Cassens"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Shane Dabiri"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Robert Djorjevich"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Doug Gauss"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Sina Ghaboussi"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Tim Gossard"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Mark Pearce"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Vic Larson"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Issac Matarasso"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "John Teichrow"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Andy Thorson"
+            },
+            {
+                "role": "Registered Beta Tester",
+                "name": "Stuart Venable Jr."
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Bob & Jan Davidson"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "John Patrick"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "John Goodman"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Jeff Beaumont"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Ralph Becker"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Mike Albanese"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "John Sosoka"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Pam Drake"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Jenny Toney"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "James Phinney"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Bobo the Wonder Orc"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Suzanne States"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Ronald Millar Sr."
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Private Pabst"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Bunchy"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Eskhandar"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Salty Dog"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Rider"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "The \"Batman\""
+            },
+            {
+                "role": "Special Thanks",
+                "name": "M.B."
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Frank Pearce"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Shannon and her white chocolate grapes"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Pretty Princess Gwendolyn"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Susan Bezzina"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Darlene & her hair"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "The Memphis Blues"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Christina Cade"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Jason \"God of Thunder\" Thor"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "\"Dangerous\" Damian Russel"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Shahram Dabiri"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "The Mang Mang"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Vic's Car"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "The Poxy Boggards"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Ray the Soda Man"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Lala"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "Endicott"
+            },
+            {
+                "role": "Special Thanks",
+                "name": "C.W."
+            },
+            {
+                "role": "Special Thanks",
+                "name": "The Kitchen Sink & you for reading this"
+            }
+        ]
+    }
+]

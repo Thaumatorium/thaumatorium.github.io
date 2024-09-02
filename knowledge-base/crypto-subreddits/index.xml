@@ -6,14 +6,6 @@
     <description>Recent content in Crypto subreddits on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://thaumatorium.com/knowledge-base/crypto-subreddits/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/knowledge-base/crypto-subreddits/cryptos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/knowledge-base/crypto-subreddits/cryptos/</guid>
-      <description>A giant table with all current (current meaning 2021-06-07) cryptos available on coinmarketcap.com&#xD;RankNameSymbolMarket CapPriceCirculating SupplyVolume(24h)% 1h% 24h% 7d&#xD;1BitcoinBTC€ 549,787,348,474€ 29,354.5318,729,218 BTC$29,512,971,718-0.23%-0.98%-2.98%&#xD;2EthereumETH€ 260,518,519,683€ 2,242.07116,195,396 ETH$26,431,584,512-1.29%1.09%5.14%&#xD;3TetherUSDT€ 51,077,107,917€ 0.8262,246,255,385 USDT *$59,501,859,000-0.02%-0.01%-0.05%&#xD;4Binance CoinBNB€ 48,830,772,505€ 318.25153,432,897 BNB *$2,339,087,615-0.92%-1.03%12.55%&#xD;5CardanoADA€ 44,060,036,475€ 1.3931,788,529,034 ADA$1,957,630,927-0.51%0.44%2.22%&#xD;6DogecoinDOGE€ 38,137,283,429€ 0.29129,925,434,207 DOGE$2,146,690,563-0.44%-3.66%14.48%&#xD;7XRPXRP€ 35,458,871,875€ 0.7746,151,013,329 XRP *$2,580,269,576-0.49%-0.40%-5.51%&#xD;8USD CoinUSDC€ 18,951,288,824€ 0.8223,095,396,207 USDC *$1,552,470,8770.00%0.02%0.01%&#xD;9PolkadotDOT€ 18,757,577,635€ 19.84945,632,308 DOT *$1,422,899,796-1.87%-0.57%9.96%&#xD;10UniswapUNI€ 12,312,671,731€ 21.79564,972,521 UNI *$413,650,810-0.87%2.45%-1.68%&#xD;11Internet ComputerICP€ 10,327,687,841€ 83.</description>
-    </item>
+    <lastBuildDate>Mon, 07 Jun 2021 00:00:00 +0100</lastBuildDate><atom:link href="http://thaumatorium.com/knowledge-base/crypto-subreddits/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
