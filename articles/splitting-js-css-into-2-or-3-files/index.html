@@ -2,8 +2,8 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>Splitting JS/CSS into 2 or 3 files, meant for optimizing your site | The Thaumatorium</title>
-		<meta name="description" content="Just a little spark of an idea" />
+		<title>Optimizing Your Site by Splitting JS/CSS into Multiple Files | The Thaumatorium</title>
+		<meta name="description" content="A spark of an idea to enhance site performance" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Splitting JS/CSS into 2 or 3 files, meant for optimizing your site" />
-		<meta property="og:description" content="Just a little spark of an idea" />
+		<meta property="og:title" content="Optimizing Your Site by Splitting JS/CSS into Multiple Files" />
+		<meta property="og:description" content="A spark of an idea to enhance site performance" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="Splitting JS/CSS into 2 or 3 files, meant for optimizing your site" />
-		<meta name="twitter:description" content="Just a little spark of an idea" />
+		<meta name="twitter:title" content="Optimizing Your Site by Splitting JS/CSS into Multiple Files" />
+		<meta name="twitter:description" content="A spark of an idea to enhance site performance" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
@@ -39,8 +39,8 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
 				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
-				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
 				<li><a href="/hardware">Hardware</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
@@ -48,33 +48,58 @@
 			</ul>
 		</nav>
 		<main>
-			<h1>Splitting JS/CSS into 2 or 3 files, meant for optimizing your site</h1>
+			<h1>Optimizing Your Site by Splitting JS/CSS into Multiple Files</h1>
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2019-11-29T00:00:00&#43;01:00">2019-11-29</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2019-11-29T00:00:00&#43;01:00">2019-11-29</time></div>
+					<div class="published-box">Published: <time class="published" datetime="2019-11-29T00:00:00&#43;02:00">2019-11-29</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T19:54:00&#43;02:00">2024-07-24</time></div>
 				</div>
 			</hgroup>
-			<p>Context: Checking Coverage with <a href="https://developers.google.com/web/tools/chrome-devtools/coverage">Chrome Devtools</a></p>
-			<p>After checking coverage, split the JS/CSS up into:</p>
+			<p>Optimizing the performance of your website can be significantly enhanced by splitting your JavaScript (JS) and Cascading Style Sheets (CSS) into multiple files. This idea emerged from analyzing coverage using <a href="https://developers.google.com/web/tools/chrome-devtools/coverage">Chrome DevTools</a>.</p>
+			<h3 id="steps-to-optimize">
+				<a class="self-link" href="#steps-to-optimize"> Steps to Optimize </a>
+			</h3>
+			<ol>
+				<li>
+					<p><strong>Check Coverage with Chrome DevTools:</strong> Use the coverage tool in Chrome DevTools to identify which parts of your JS/CSS are actually used by your site.</p>
+				</li>
+				<li>
+					<p><strong>Split the Files Programmatically:</strong> After analyzing coverage, split the JS/CSS files into three categories:</p>
+					<ul>
+						<li><strong>InnerCore:</strong> Inline JS/CSS that is essential for when JS/CSS files fail to load, particularly on very slow connections.</li>
+						<li><strong>OuterCore:</strong> JS/CSS that is actively covered (used) as identified by DevTools.</li>
+						<li><strong>Mantle:</strong> JS/CSS that is not currently covered but may be used by the site under certain conditions.</li>
+					</ul>
+				</li>
+			</ol>
+			<h3 id="why-split-files">
+				<a class="self-link" href="#why-split-files"> Why Split Files? </a>
+			</h3>
+			<p>Splitting JS/CSS files helps in optimizing load times and improving the overall performance of your website. By ensuring that only essential code is loaded initially, you can enhance the user experience, especially for users with slower internet connections.</p>
+			<h3 id="how-to-implement">
+				<a class="self-link" href="#how-to-implement"> How to Implement </a>
+			</h3>
+			<p>Do this programmatically, as manually splitting files can be error-prone and time-consuming. Use scripts or build tools that automate the process based on the coverage data from DevTools.</p>
+			<h3 id="naming-convention">
+				<a class="self-link" href="#naming-convention"> Naming Convention </a>
+			</h3>
+			<p>The naming convention for these splits is inspired by Earth&rsquo;s structure:</p>
 			<ul>
-				<li>InnerCore (inline JS/CSS, needed for when the JS/CSS files don&rsquo;t load on super slow connections)</li>
-				<li>OuterCore (the JS/CSS that&rsquo;s covered by Devtools)</li>
-				<li>Mantle (the JS/CSS that&rsquo;s NOT covered by Devtools, but can be potentially used by the site)</li>
+				<li><strong>InnerCore:</strong> Essential inline code</li>
+				<li><strong>OuterCore:</strong> Covered code</li>
+				<li><strong>Mantle:</strong> Uncovered but potentially useful code</li>
 			</ul>
-			<p>Do all of this programmatically, because you do NOT want to do this by hand.</p>
-			<p>Names are based on Earth:</p>
-			<ul>
-				<li><a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Wikipedia/Earth_poster.svg</a></li>
-			</ul>
+			<p>For a visual reference, see the <a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Earth poster on Wikipedia</a>:</p>
+			<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Earth_poster.svg/2880px-Earth_poster.svg.png" alt="Earth poster on Wikipedia" /></p>
+			<p>By following these steps, you can ensure that your website is both efficient and effective, providing a better experience for your users.</p>
 		</main>
 		<footer>
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2019-11-29</time></sub>
+					<sub>Last updated: <time id="updated">2024-07-24</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

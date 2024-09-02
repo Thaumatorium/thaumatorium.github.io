@@ -1,0 +1,1051 @@
+role,name
+Executive Producer,Frank Pearce
+Art Director,Justin Thavirat
+Creative Director,Chris Metzen
+Lead Game Programmer,John Cash
+Lead Server Programmer,Joe Rumsey
+Lead Designers,Tom Chilton
+Lead Designers,Jeffrey Kaplan
+Lead Designers,Rob Pardo
+Lead Producer,Shane Dabiri
+Lead Character Artist,Chris Robinson
+Lead Exterior Artist,Gary Platner
+Lead Interior Artist,Brian Morrisroe
+Lead Level Designer,Cory Stockton
+Lead Quest Designer,Alex Afrasiabi
+Producers,J. Allen Brack
+Producers,Robert Foote
+Producers,Carlos Guerrero
+Producers,Jason Hutchins
+Producers,John Lagrave
+Producers,Alex Mayberry
+Producers,John Schwartz
+Producers,Lee Sparks
+Producers,Alex Tsang
+Programming,Brian Birmingham
+Programming,Wes Bigelow
+Programming,Jesse Blomberg
+Programming,Patrick Dawson
+Programming,Jason De Arte
+Programming,Tony Garcia
+Programming,Bryan Gibson-Winge
+Programming,Omar Gonzalez
+Programming,Scott Hartin
+Programming,Sam Lantinga
+Programming,Patrick Magruder
+Programming,Collin Murray
+Programming,Ron Nakada
+Programming,Irena Pereira
+Programming,David Ray
+Programming,Derek Sakamoto
+Programming,Jeremy Wood
+Additional Programming,Russell Bernau
+Additional Programming,Jeremy Chernobieff
+Additional Programming,Alec Dun
+Additional Programming,Mike Elliott
+Additional Programming,Bob Fitch
+Additional Programming,Monte Krol
+Additional Programming,John Lafleur
+Additional Programming,Chris MacDonald
+Additional Programming,Pat MacKellar
+Additional Programming,Nate Miller
+Additional Programming,Aimee Pi
+Additional Programming,Kyle Radue
+Additional Programming,Dan Reed
+Additional Programming,Pete Sandrene
+Additional Programming,Michael Starich
+Additional Programming,Tom Thompson
+Macintosh Programming,Rob Barris
+Macintosh Programming,John Mikros
+Macintosh Programming,Daniel Pageau
+Macintosh Programming,John Stiles
+Animators,Steve Aguilar
+Animators,Carman Cheung
+Animators,Bryan Gillingham
+Animators,Mauricio Hoffman
+Animators,Chris Luckenbach
+Animators,Corey Pelton
+Animators,Jason Zirpolo
+Dungeon/City Artists,"Jose Aello, Jr."
+Dungeon/City Artists,Eric Browning
+Dungeon/City Artists,Jamie Chang
+Dungeon/City Artists,Jeff Chang
+Dungeon/City Artists,Wendy Davis
+Dungeon/City Artists,Rutherford Gong
+Dungeon/City Artists,Jeremy “Faceless” Graves
+Dungeon/City Artists,Kevin Griffith
+Dungeon/City Artists,Kevin K. Griffith
+Dungeon/City Artists,Jimmy “Lo-Tek” Lo
+Dungeon/City Artists,Andrew Matthews
+Dungeon/City Artists,Chris Ryder
+Dungeon/City Artists,Tiffany Sirignano
+Dungeon/City Artists,Rhett &#34;Stash&#34; Torgoley
+Dungeon/City Artists,Holly Wilson
+Exterior Environment Artists,Dave Berggren
+Exterior Environment Artists,Terrie Denman
+Exterior Environment Artists,Justin Kunz
+Exterior Environment Artists,Dan Moore
+Exterior Environment Artists,Jason Morris
+Exterior Environment Artists,Dion Rogers
+Exterior Environment Artists,Jamin Shoulet
+Character Artists,Roman Kenney
+Character Artists,Hun Kevin Lee
+Character Artists,Kevin Maginnis
+Character Artists,John Polidora
+Character Artists,Eddie Rainwater
+Character Artists,Danny Saint-Hilaire
+Character Artists,Robert Sevilla
+Additional Art,Shimon Cohen
+Additional Art,Stephen Crow
+Additional Art,Samwise Didier
+Additional Art,Allen Dilling
+Additional Art,Brett Dixon
+Additional Art,Roger Eberhart
+Additional Art,Sam Fung
+Additional Art,Phill Gonzales
+Additional Art,Jay Hathaway
+Additional Art,Brian Hsu
+Additional Art,Trevor Jacobs
+Additional Art,Dana Jan
+Additional Art,Aaron Keller
+Additional Art,Michael McInerney
+Additional Art,Matt Milizia
+Additional Art,Matt Mocarski
+Additional Art,Ted Park
+Additional Art,Bill Petras
+Additional Art,Robb Shoberg
+Additional Art,Brian Silva
+Concept Artist,Trent Kaniuga
+Concept Artist,Peter C. Lee
+Technical Artists,Thomas Blue
+Technical Artists,Jon Jelinek
+Technical Artists,Rob McNaughton
+Level Designers,Sarah Boulian
+Level Designers,James Chadwick
+Level Designers,Victor Chong
+Level Designers,Matt Gotcher
+Level Designers,Ed Hanes
+Level Designers,Jesse McCree
+Level Designers,Julian Morris
+Level Designers,Matthew Morris
+Level Designers,John Staats
+Game Designers,Luis Barriga
+Game Designers,Alexander Brazie
+Game Designers,Shawn Carnes
+Game Designers,Paul Cazarez
+Game Designers,Travis Day
+Game Designers,Kristen DeMeza
+Game Designers,Eric Dodds
+Game Designers,Geoff Goodman
+Game Designers,Kevin Jordan
+Game Designers,Jonathan LeCraft
+Game Designers,Eric Maloof
+Game Designers,Scott Mercer
+Game Designers,Pat Nagle
+Game Designers,Steven Pierce
+Game Designers,Brianna Schneider
+Game Designers,Joe Shely
+Game Designers,Kris Zierhut
+Additional Design,David M. Adams
+Additional Design,Justin Z. Bartlett
+Additional Design,Dustin Browder
+Additional Design,Steve Burke
+Additional Design,Ely Cannon
+Additional Design,Michael Chu
+Additional Design,Dave Hale
+Additional Design,Michael Heiberg
+Additional Design,Dave Maldonado
+Additional Design,Matt Sanders
+Additional Design,Dean Shipley
+Additional Design,Wyatt Cheng
+Localization Producer,Andrew Vestal
+Install/Patch/Distribution Lead Programmer,Brian Fitzgerald
+Install/Patch/Distribution Programming,Jay Baxter
+Install/Patch/Distribution Programming,Travis Chen
+Install/Patch/Distribution Programming,Huong Grey
+Install/Patch/Distribution Programming,Nate Gross
+Install/Patch/Distribution Programming,Randall Hyde
+Install/Patch/Distribution Programming,Robert Lin
+Install/Patch/Distribution Programming,JC Park
+Install/Patch/Distribution Programming,John Stiles
+Install/Patch/Distribution Programming,Tony Tribelli
+Install/Patch/Distribution Programming,Casey Yelland
+Install/Patch/Distribution Producer,Melissa Meyer
+Director of Global Online Technologies,Robert Bridenbecker
+Online Technologies Producers,Jason Leu
+Online Technologies Producers,Kim Phan
+Online Technologies Software Engineers,Neil Chopra
+Online Technologies Software Engineers,Chulwoong Choi
+Online Technologies Software Engineers,David Nguyen
+Online Technologies Software Engineers,Teddy Pao
+Web Team Leads,Mike Hein
+Web Team Leads,Ali Vatani
+Web Team,Qi Ming Chen
+Web Team,Randal Dumoret
+Web Team,Geoff Fraizer
+Web Team,Victor Gonzalez
+Web Team,Jr.
+Web Team,Martin Leidenfrost
+Web Team,Jeff Liu
+Web Team,Steve McGarrity
+Web Team,Mike Schweitzer
+Web Team,Alex Sun
+Web Team,Blaine Whittle
+Battle.net Lead,Matthew Versluys
+Battle.net Programming,Bryan Cleveland
+Battle.net Programming,Jeff Mears
+Battle.net Programming,Brian Morin
+Battle.net Programming,Hanlong Wang
+Battle.net Research,Micah Caldwell
+Battle.net Research,Norman Harms
+Cinematic Intro Director,Jeff Chamberlain
+Cinematics Executive Producer,Matt Samia
+Cinematics Creative Director,Nick Carpenter
+Cinematics Producers,Scott Abeyta
+Cinematics Producers,Taka Yasuda
+Cinematics Producers,Angela Young
+Cinematic Writers,Jeff Chamberlain
+Cinematic Writers,Chris Metzen
+Cinematic Writers,Matt Samia 
+Cinematic Editor,Matthew Mead
+Lead Cinematic Animator,James McCoy
+Lead Cinematic Finisher,Jeff Chamberlain
+Lead Cinematic Modeler,Fausto De Martini
+Lead Cinematic Technical Artist,Jared Keller
+Cinematic Artists,Jonathan Berube
+Cinematic Artists,Aaron Chan
+Cinematic Artists,Ben Dai
+Cinematic Artists,Joe Frayne
+Cinematic Artists,Hunter Grant
+Cinematic Artists,Jason Hill
+Cinematic Artists,Brian Huang
+Cinematic Artists,Tyler Hunter
+Cinematic Artists,Sheng Jin
+Cinematic Artists,Jeramiah Johnson
+Cinematic Artists,Chung Kan
+Cinematic Artists,Bernie Kang
+Cinematic Artists,Ronny Kim
+Cinematic Artists,Yonghyun Kim
+Cinematic Artists,Mark Lai
+Cinematic Artists,Jon Lanz
+Cinematic Artists,Ting Lo
+Cinematic Artists,Matthew Mead
+Cinematic Artists,Tuan Ngo
+Cinematic Artists,Reo Andrew Prendergast
+Cinematic Artists,Dennis Price
+Cinematic Artists,Jarett Riva
+Cinematic Artists,Chris Rock
+Cinematic Artists,Seth Thompson
+Cinematic Artists,Chris Thunig
+Cinematic Artists,Graven Tung
+Cinematic Artists,Xin Wang
+Cinematic Artists,Kenson Yu
+Cinematic Technical Artists,Scott Goffman
+Cinematic Technical Artists,Steeg Haskell
+Cinematic Technical Artists,Sean Laverty
+Cinematic Technical Artists,Hung Le
+Cinematic Technical Artists,Wei Qiao
+Cinematic Technical Artists,Eric A. Soulvie
+Cinematic Technical Artists,Nelson Wang
+Cinematic Studio Technical Engineers,Mike Kramer
+Cinematic Studio Technical Engineers,Sean Laverty
+Additional Matte Painting,Alp Altiner
+Additional Matte Painting,Dylan Cole
+Additional Cinematic Artists,John Burnett
+Additional Cinematic Artists,Harley Huggins
+Additional Cinematic Artists,Peter Lee
+Additional Cinematic Artists,Joe Peterson
+Audio Director,Russell Brower
+Lead Sound Designer,Brian Farr
+Audio Producer,Keith Landes
+Assistant Audio Producer,Dennis Crabtree
+Sound Design,Jonas Laster
+Sound Design,Joseph Lawrence
+Music,Russell Brower
+Music,Derek Duke
+Music,Matt Uelmen
+Additional Music,Brian Farr
+Additional Music,David Arkenstone
+Voice Casting,Bill Black
+Voice Direction,Micky Neilson
+Field SFX Recording,Bill Black
+Field SFX Recording,Joseph Lawrence
+Field SFX Recording,John Fasal
+Creative Development Production,Ben Brode
+Creative Development Production,Joanna Cleland
+Creative Development Production,Gloria Soto
+Creative Development Historian,Evelyn Fredericksen 
+Creative Development Illustrators,Glenn Rane
+Creative Development Illustrators,Wang Wei
+Video Production Manager,Joeyray Hall
+Video Production Team ,Terran Gregory
+Video Production Team ,Tristan Pope
+Video Production Team ,Brandan Vanderpool
+Quality Assurance Manager,Michael Gilmartin
+Quality Assurance Assistant Managers,Kelly Chun
+Quality Assurance Assistant Managers,John Herndon
+Quality Assurance Assistant Managers,Edward Kang
+Quality Assurance Assistant Managers,Jonathan Mankin
+Quality Assurance Assistant Managers,Mark Moser
+Quality Assurance Assistant Managers,Nicholas Pisani
+QA Lead Tester (Expansion),Shawn Su
+QA Lead Tester (Live),Michele Arko
+QA Assistant Leads (Expansion),Timothy Ismay
+QA Assistant Leads (Expansion),Michael Schwan Jr.
+QA Assistant Leads (Expansion),Clint Walls 
+QA Assistant Leads (Live),Paul Carver
+QA Assistant Leads (Live),Clayton Dubin
+QA Assistant Leads (Live),Sean Wang
+QA Automation Lead,Shane S Cargilo
+QA Automated Test Engineers,Evan Calder
+QA Automated Test Engineers,Patrick Elia
+QA Automated Test Engineers,Marius Jivan
+QA Automated Test Engineers,Justin Klinchuch
+QA Automated Test Engineers,Michael Murphy
+QA Automated Test Engineers,Craig Steele
+QA Compatibility Testers,Jason Kwan
+QA Compatibility Testers,Ray Laubach
+QA Compatibility Testers,Hector Melendres
+QA Compatibility Testers,Brice Petibas
+QA Compatibility Testers,William Roseman
+QA Compatibility Testers,Elaine Fu Yang
+QA Content Specialists,Daniel Bendt
+QA Content Specialists,Robert Boxeth
+QA Content Specialists,Jack Chen
+QA Content Specialists,James Cho
+QA Content Specialists,Ian Combs
+QA Content Specialists,Tim Daniels
+QA Content Specialists,Morgan Day
+QA Content Specialists,Foster M. Elmendorf
+QA Content Specialists,Edgar Flores
+QA Content Specialists,Mei Dean Francis
+QA Content Specialists,Daniel Dake Luo
+QA Content Specialists,Stuart Massie
+QA Content Specialists,RA Pearson
+QA Content Specialists,Daniel Polcari
+QA Content Specialists,Anthony Reyes
+QA Content Specialists,David Sanchez
+QA Content Specialists,Michael M. Sun
+QA Content Specialists,Don Vu
+QA Content Specialists,Tengying Yu
+QA Localization Lead,Jin Kim
+QA Localization Testers,Steven Chow
+QA Localization Testers,Mike Euiseung Kim
+QA Localization Testers,Dean Yang
+QA Technologies Test Team,Michael C. Chen
+QA Technologies Test Team,Steve McClory
+QA Technologies Test Team,Ian S Nelson
+QA Technologies Test Team,Anthony Suh
+QA Technologies Test Team,Anant Singh
+Game Testers,Rie Arai
+Game Testers,Scott Army
+Game Testers,Michael Bedernik
+Game Testers,Justin Boehm
+Game Testers,Sean Copeland
+Game Testers,Michael Corpora
+Game Testers,Joel Gregory Clift
+Game Testers,Matt Dabrowski
+Game Testers,Christopher Davila
+Game Testers,Meghan Dawson
+Game Testers,Drew Dobernecker
+Game Testers,Matt Dupree
+Game Testers,Beni Elgueta
+Game Testers,Victor Esquivias
+Game Testers,Casey Fulton
+Game Testers,Jon Graves
+Game Testers,Josh Hilborn
+Game Testers,Xing Jin
+Game Testers,Kevin M. Kelly
+Game Testers,Steve Ketterer
+Game Testers,Alicia Kim
+Game Testers,Daniel Kramer
+Game Testers,Paul Kubit
+Game Testers,Jared Lazaro
+Game Testers,James R. Leaman
+Game Testers,Brian Lee
+Game Testers,Asher Yonah Litwin
+Game Testers,Michael V. Liu
+Game Testers,Nicholas A. Louie
+Game Testers,Anthony Lowery
+Game Testers,John Lynch
+Game Testers,Joe Magdalena
+Game Testers,Robert T. Martin Jr.
+Game Testers,Jonathon K. Mason
+Game Testers,Lewis Mendez
+Game Testers,Jason Messinger
+Game Testers,Christopher J. Mountain
+Game Testers,Mark Nelson
+Game Testers,Arec Nevers
+Game Testers,Anthony Notti
+Game Testers,Serban Mihai Oprescu
+Game Testers,Kurtis Paddock
+Game Testers,Justin K Parker
+Game Testers,Bryan Pendleton
+Game Testers,Art Peshkov
+Game Testers,Albert Portillo
+Game Testers,Mike Powell
+Game Testers,Dustin Remmel
+Game Testers,Anthony Reyes
+Game Testers,Sean Reyes
+Game Testers,Bob Richardson
+Game Testers,Andreas Komma Rounds
+Game Testers,Andrew Rowe
+Game Testers,Joseph Ryan
+Game Testers,Paul Sardis
+Game Testers,Michael Sassone
+Game Testers,William Edward Smith IV
+Game Testers,Simon Thai
+Game Testers,Enrico Tolentino
+Game Testers,Rian Trost
+Game Testers,Jimmy Truong
+Game Testers,Rodney Tsing
+Game Testers,Chuck Valek
+Game Testers,Ryan Vance
+Game Testers,James Walton
+Game Testers,Taylor Westfall
+Game Testers,Jason Weng
+Game Testers,Dean Yang
+Game Testers,Ronny Yoon
+Community Management,Paul Della Bitta
+Community Management,Daniel Chin
+Community Management,Nathan Erickson
+Community Management,Andrew Hsu
+Community Management,Chad Jones
+Community Management,William Kielar
+Community Management,Emily Scherping
+Community Management,Danielle Vanderlip
+Community Management,Micah Whipple
+Community Management,Jerome Wu
+Community Management,Kenny Zigler
+Director of Global Customer Service,Thor Biafore
+Technical Support Manager,John Hsieh
+Technical Support Assistant Manager,Kyle Williams
+Technical Support Lead ,Adam Slack
+Technical Support Representatives,Zach Bogatz
+Technical Support Representatives,Nathan Brown
+Technical Support Representatives,Joshua Burnett
+Technical Support Representatives,David Chan
+Technical Support Representatives,Evan Crawford
+Technical Support Representatives,Jon Day
+Technical Support Representatives,Jamal Davis
+Technical Support Representatives,Kenneth DePalo
+Technical Support Representatives,Travis Hall
+Technical Support Representatives,Dat Ho
+Technical Support Representatives,Anton Hsin
+Technical Support Representatives,Justin Kato
+Technical Support Representatives,Adam Koch
+Technical Support Representatives,James Kompare
+Technical Support Representatives,
+Technical Support Representatives,Michael Lim
+Technical Support Representatives,Tommy Newcomer
+Technical Support Representatives,Michael Nguyen
+Technical Support Representatives,Peter Nott
+Technical Support Representatives,Matt Panepinto
+Technical Support Representatives,Chris Roberts
+Technical Support Representatives,Chuck Salzman
+Technical Support Representatives,John Shin
+Technical Support Representatives,Ed Silveira
+Technical Support Representatives,Matthew Simmons
+Technical Support Representatives,Nick Solano
+Technical Support Representatives,Fritz Stegmann
+Technical Support Representatives,Eric Szymaszek
+Technical Support Representatives,Marty Tande
+Technical Support Representatives,Darian Vorlick
+Technical Support Representatives,Mataio Wilson
+Billing and Account Services Manager,Jason Stilwell
+Assistant Billing and Account Services Manager,Charlie Areson
+Lead Billing Representatives,Mike R. Pierce
+Lead Billing Representatives,Alan Marti
+Billing Representatives,Anne Marie Belland
+Billing Representatives,Marcus Bishop
+Billing Representatives,Erynn Caldwell
+Billing Representatives,Jennifer Calzada
+Billing Representatives,Nicole Campbell
+Billing Representatives,Jason Crewse
+Billing Representatives,Quy Diep
+Billing Representatives,Stephen Gagnon
+Billing Representatives,James Garner
+Billing Representatives,Leah Garner
+Billing Representatives,Iain Gill
+Billing Representatives,Keith Hall
+Billing Representatives,William Harber
+Billing Representatives,Adam Hector
+Billing Representatives,Michael Horning
+Billing Representatives,Jason Justice
+Billing Representatives,April Kelly
+Billing Representatives,Liam Knapp
+Billing Representatives,Christy Kondo
+Billing Representatives,Owen Kuhn
+Billing Representatives,Sang Kwon
+Billing Representatives,Laura Lam
+Billing Representatives,Luis C. Lucero
+Billing Representatives,Geri Kate Macalino
+Billing Representatives,Tim Maggio
+Billing Representatives,Josh Olivo
+Billing Representatives,Evan Peterson
+Billing Representatives,Melissa Pinkard
+Billing Representatives,Megan Puertas
+Billing Representatives,Regina Ramirez
+Billing Representatives,Ryan Reddick
+Billing Representatives,Christian Reynolds
+Billing Representatives,Jesse Romo
+Billing Representatives,Mark Slater
+Billing Representatives,Ann Vanderhelm
+Billing Representatives,Matthew Vineyard
+Billing Representatives,Ted Wang
+Billing Representatives,Jason White
+Billing Representatives,Rory Wood
+Billing Representatives,Ian Wynne
+In-Game Support Manager,Bill Galey
+In-Game Support Assistant Managers,Richard Barham
+In-Game Support Assistant Managers,Justin Guthrie
+In-Game Support Leads,Greg Ashe
+In-Game Support Leads,Michael Burghart
+In-Game Support Leads,Josh Downs
+In-Game Support Leads,James Drosche
+In-Game Support Leads,Keith Duncan
+In-Game Support Leads,Pat Feinauer
+In-Game Support Leads,Matt Martin
+In-Game Support Leads,Robert Perugini
+In-Game Support Leads,Kyle Riseling
+In-Game Support Leads,Brian Smith
+In-Game Support Leads,Alyson Turner
+International Support Leads,Pierre Braude
+International Support Leads,Peiji Guo. Joong Kim
+International Support Leads,Michael Pierce 
+In-Game Support,Mike Aversa
+In-Game Support,Al Baello
+In-Game Support,Amber Bittenbender
+In-Game Support,David Carey
+In-Game Support,Sam Carne
+In-Game Support,Stephen Chang
+In-Game Support,Matt Coburn
+In-Game Support,Angelo Conception
+In-Game Support,Peter Drummond
+In-Game Support,Adam Ebmeier
+In-Game Support,Richard Evans
+In-Game Support,Bejan Fozdar
+In-Game Support,Tim Garfin
+In-Game Support,Luis Gomez
+In-Game Support,Sean Greenroyd
+In-Game Support,Josh Hertz
+In-Game Support,Jacob Hofeldt
+In-Game Support,Adam Hughes
+In-Game Support,Peter Hsu
+In-Game Support,Jessica Johnson
+In-Game Support,Antonio Kontokanis
+In-Game Support,David LaVallee
+In-Game Support,Terence Lindsey
+In-Game Support,Jeff Luckman
+In-Game Support,Jeremy Masker
+In-Game Support,Ryan Mills
+In-Game Support,Julio Miranda
+In-Game Support,Mike Moneymaker
+In-Game Support,Josh Owyang
+In-Game Support,Alfredo Padron
+In-Game Support,Thomas Pieracci
+In-Game Support,Nick Ray
+In-Game Support,Trevor Rothman
+In-Game Support,Dean Sheldon
+In-Game Support,Matthew Sherman
+In-Game Support,Nicole Susanto
+In-Game Support,Duane Than
+In-Game Support,Jason Throop
+In-Game Support,Christopher Towne
+In-Game Support,Miles Trumble
+In-Game Support,Tom Twedell
+In-Game Support,Peter Ty
+In-Game Support,Brian Udarbe
+In-Game Support,Aaron Uesugi
+In-Game Support,Matt Wheeler
+In-Game Support,Matt Worcester
+In-Game Support,Brian Wright
+Quality Control Manager,Bryan Langford
+Quality Control Assistant Manager,Joshua Horst
+Lead Quality Controller,Ryan Quinn
+Senior Quality Controllers,Aaron Bamblett
+Senior Quality Controllers,Jeremy Chasey
+Senior Quality Controllers,Sarah Doebler
+Senior Quality Controllers,Noel Holmes
+Senior Quality Controllers,Lyndsi Revis
+Quality Controllers,Kara Amendola
+Quality Controllers,Amit Bader
+Quality Controllers,Amy Barklow
+Quality Controllers,Deborah Brooks
+Quality Controllers,Matt Burns
+Quality Controllers,Scott Busbea
+Quality Controllers,Larissa Bussell
+Quality Controllers,Chris Cavallo
+Quality Controllers,Angela Cleere
+Quality Controllers,Becky Coker
+Quality Controllers,Hugh T. Edwards
+Quality Controllers,Tim Evans
+Quality Controllers,Sarah Frembling
+Quality Controllers,Andrew Glaser
+Quality Controllers,Manuel Gonzales
+Quality Controllers,Jessica Gonzales
+Quality Controllers,Leif Hafstrom
+Quality Controllers,Rosie Haubner
+Quality Controllers,Gareth Hughes
+Quality Controllers,Leanne Huynh
+Quality Controllers,Charles Knief
+Quality Controllers,Neal Kochhar
+Quality Controllers,Jon Loeffler
+Quality Controllers,Marika Maeuser
+Quality Controllers,Mike Moneymaker
+Quality Controllers,Alexander Nahodil
+Quality Controllers,Chung Ng
+Quality Controllers,Shawn No
+Quality Controllers,Matthew Rader
+Quality Controllers,Dylan Raines
+Quality Controllers,Arron Rasmussen
+Quality Controllers,Victoria Rayno
+Quality Controllers,Cynthia Robbiola
+Quality Controllers,Ryan Schenk
+Quality Controllers,Pete Staley
+Quality Controllers,Melissa Ullrich
+Quality Controllers,Thomas Watson
+Quality Controllers,Daniel Weltz
+Quality Controllers,Mike Morhaime
+Chief Operating Officer,Paul Sams
+VP of Global Business Development and International Operations,Itzik Ben Bassat
+"Management Team, Europe",Anne Berard
+"Management Team, Europe",Julia Gastaldi
+"Management Team, Europe",Delphine Le Corre
+"Management Team, Europe",Fr&#233;deric Menou
+"Management Team, Europe",Jean-Michel Courivaud
+"Management Team, Europe",Benoit Dufour
+"Management Team, Europe",C&#233;dric Mar&#233;chal
+"Managing Director, Korea",Jungwon Hahn
+"Management Team, Korea",Richard Choi
+"Management Team, Korea",Yungjoo Ko
+"Management Team, Korea",Jungho Kwon
+"Management Team, Korea",Jinho Oh
+"Management Team, Korea",Changuk Park
+"Management Team, Korea",Youngmok Park
+"Management Team, Korea",Yun Ho Rhee
+"Managing Director, Greater China",Michael Fong
+"Project Coordinator, Greater China",Stan Wang
+Business Development and Licensing,Jon Dvorak
+Business Development and Licensing,Brian Hsieh
+Business Development and Licensing,Denise Lopez
+Business Development and Licensing,Brianne Messina
+Business Development and Licensing,Steven Price
+Business Development and Licensing,BrisAnne Scheller
+Business Development and Licensing,Sarah Tucker
+Director of Global Information Technology,Isaac Matarasso
+Global Information Technologies Manager,Robert Van Dusen
+Global Network Operations Manager,Chris Glover
+Network Operations Managers,Changkoo Lee
+Network Operations Managers,Julien Mariani
+Network Operations Managers,Hung Nguyen
+Network Operations Managers,Duffy Squier
+Network Operations Managers,Gary Yeh
+Network Operations Engineering,Armando Abanilla
+Network Operations Engineering,Andy Barcinski
+Network Operations Engineering,Jeff Berube
+Network Operations Engineering,Joseph Cochran
+Network Operations Engineering,Alexander Daurskikh
+Network Operations Engineering,Matt Eagleson
+Network Operations Engineering,Dwight Harvey
+Network Operations Engineering,Adrian Luff
+Network Operations Engineering,Dat Nguyen
+Network Operations Engineering,Stefan Ward
+Network Operations Engineering,Albert Wong
+Network Operations Engineering,Jaime Wood
+Network Operations Engineering,Ryan Zapanta
+Network Operations Administration,Gandalf Brahm
+Network Operations Administration,Nick Downs
+Network Operations Administration,Maciej Drobny
+Network Operations Administration,Ryan Gunst
+Network Operations Administration,Tom Hicks
+Network Operations Administration,Joseph Holley
+Network Operations Administration,Gichang Hong
+Network Operations Administration,Mourad Kaci
+Network Operations Administration,Erik Karlsson
+Network Operations Administration,Minhong Kim
+Network Operations Administration,Dustin Koupal
+Network Operations Administration,Jay Lee
+Network Operations Administration,Matt McEligot
+Network Operations Administration,Kai Noetzel
+Network Operations Administration,Gary Reeb
+Network Operations Administration,Mike Schaefer
+Network Operations Administration,Andrew Spiering
+Network Operations Administration,Thierry Sudan
+Network Operations Administration,Casey Suyeto
+Network Operations Administration,Stephen T. Wong
+Network Operations Administration,Hugh Todd
+Network Operations Administration,Anthony Williams
+Network Operations Administration,Ty Williams
+Network Operations,Charlie Berman
+Network Operations,Carl Brumm
+Network Operations,Michael Chizewski
+Network Operations,Corey Louie
+Network Operations,Mycah Mason
+Network Operations,Olam Ng
+Network Operations,Dan Scauzillo
+Network Operations,Matt Smiley
+Network Operations,James T. Yen
+Network Operations,Dave Wareham
+Information Technologies Managers,Weonseok Choi
+Information Technologies Managers,Chris Fajardo
+Information Technologies Managers,Yong Yoon
+Information Technologies,Forrest Bowling
+Information Technologies,Edward Bui
+Information Technologies,Robert Bustamante
+Information Technologies,Hyungsuk Choi
+Information Technologies,Ryan Dean
+Information Technologies,John Dos Santos
+Information Technologies,Chris Eckert
+Information Technologies,Stanley Fu
+Information Technologies,Justin Goad
+Information Technologies,Don Grey
+Information Technologies,Scott Harrison
+Information Technologies,Brian Hill
+Information Technologies,Matthew Jordan
+Information Technologies,Yan Kahl&#233;
+Information Technologies,Rick Kennedy
+Information Technologies,JungHoon Kim
+Information Technologies,Jaemin Ko
+Information Technologies,Mike Kramer
+Information Technologies,Randy Lovin
+Information Technologies,Bryan Ludwig
+Information Technologies,Zak Meekins
+Information Technologies,Danny Nguyen
+Information Technologies,Fran&#231;ois Noel
+Information Technologies,Mike Pearce
+Information Technologies,John Robertson
+Information Technologies,Taylor Russ
+Information Technologies,Bill Tubbs
+Information Technologies Purchasing,Greg Faltersack
+Director of Global Human Resources,Denise Dunlap
+Human Resources,Erika Neuhauser
+Human Resources,Michelle Secrest
+Human Resources,Daniela Shani
+Human Resources,Lisa Pearce
+Global Finance,David Gee 
+Financial Research Analysts,Andrew Amadi
+Financial Research Analysts,Shien Chang
+Office Administration ,Jamie Crooks
+Office Administration ,Heather Foreman
+Office Administration ,Janet Garcia
+Office Administration ,KC Ross
+Office Administration ,Calvin Williams
+Facilities Management,Samuel Schrimsher
+Facilities Management,Brandon Shephard
+Facilities Management,"Henry Szekely,"
+Director of Global Public Relations,Lisa Jensen
+Global Public Relations and Events Team,Elisha Factor Cabrera
+Global Public Relations and Events Team,Bob Colayco
+Global Public Relations and Events Team,Shon Damron
+Global Public Relations and Events Team,Kacy Dishon
+Global Public Relations and Events Team,Gil Shif
+Global Public Relations and Events Team,Christy Um
+Legal Counsel,Kevin Crook
+Legal Counsel,Terri Durham
+Legal Counsel,Satoru Hamada
+Legal Counsel,Eddy Meng
+Legal Counsel,Rod Rigole
+Legal Counsel,Eric Roeder
+Legal Counsel,James Shaw
+VP of Global Marketing,Neal Hubbard
+Global Marketing,John Heinecke
+Global Marketing,Tomas Melian
+Regional Marketing,Qimin Ding
+Regional Marketing,Ellen Hsu
+Regional Marketing,Marc Hutcheson
+Regional Marketing,Matt Kassan
+Regional Marketing,Donghyun Kim
+Regional Marketing,Richard Kwon
+Regional Marketing,Patrick Lee
+Regional Marketing,
+Regional Marketing,Amanda Wang
+Regional Marketing,Maggie Xiao
+Marketing Creative Services,Kathy Carter
+Marketing Creative Services,Michael Freeth
+Marketing Creative Services,Zachary Hubert
+Marketing Creative Services,Henry Pan
+Marketing Creative Services,Steve Parker
+Marketing Creative Services,Pete Tran
+Marketing Creative Services,Caroline Wu
+Recruiting,Choua Her
+Recruiting,Adam Mutchler
+Recruiting,Sunshine Saint Onge
+Recruiting,Jack Sterling
+Recruiting,Asheesh Thukral
+"SVP Global Operations, VG",Robert Wharton
+Manufacturing,Simon Berriochoa
+Manufacturing,Donna Damrow
+Manufacturing,Gary Rogers
+Manufacturing,Rodger Shaw
+Manufacturing,Ralph Speicher
+Manufacturing,Soui Ho
+Manufacturing,Steve Voorma
+Manufacturing,Bob Wilson
+Live Sessions and Orchestrations produced by:,Edo Guidotti
+Orchestration Services on “The Burning Legion” provided by:,Danita Ng-Poss and Jason Poss
+"Duduk, Bansuri, Tunisian Midjwiz, Shakuhachi and Flutes performed by:",Pedro Eustache
+Hand Drums performed by:,John Bergamo
+Cinematic Intro Sound Designers,David Farmer (EAD)
+Cinematic Intro Sound Designers,Paul Menichini (EAD)
+Cinematic Intro Music,Neal Acree
+Cinematic Intro Music,Recorded by the Northwest Sinfonia and Chorus
+Cinematic Intro Music,Contracted by Simon James and David Sabee
+Cinematic Intro Audio Mixer,Tom Brewer (Source sound)
+Manual Project Management,Jason Hutchins
+Manual Project Management,Gloria Soto
+Manual Writing,Micky Neilson
+Manual Design and Layout,Anomaly Creative
+Manual Design and Layout,Raul Ramirez
+Manual Design and Layout,Bill Watt
+Manual Design and Layout,This software is based in part on the work of the Independent JPEG Group.
+Co-Lead Dunsel Managers,Keith Lee
+Co-Lead Dunsel Managers,Chris Sigaty
+Special Thanks,Bruce Hack
+Special Thanks,Bob and Jan Davidson
+Additional Thanks,Gina MacGregor
+Additional Thanks,Alan Dabiri
+Additional Thanks,"Celeste Aviva, bunches."
+Additional Thanks,"Trudy, Gary, Daniel and Dominic Sparks"
+Additional Thanks,Len “Pops” and Irene Sparks
+Additional Thanks,Jean and George Matthews
+Additional Thanks,Kacy &#60;3
+Additional Thanks,Mrs. Karen Barris
+Additional Thanks,Julia Barris
+Additional Thanks,Helkat
+Additional Thanks,Mr. Bojangles
+Additional Thanks,Sandra Webb
+Additional Thanks,Paul (Mr.) Young
+Additional Thanks,Ferre Akbarpour
+Additional Thanks,"To M.A. Afrasiabi, you'll always be missed"
+Additional Thanks,Wendy and Cooper Aello
+Additional Thanks,"Angelista, Colin, and Emi"
+Additional Thanks,The Kaplan Family
+Additional Thanks,Grace and Mehley
+Additional Thanks,Hoiyan “Tracy” To
+Additional Thanks,Daifei
+Additional Thanks,"Jen, Ben, and Mykenna"
+Additional Thanks,Foundation
+Additional Thanks,"Pooka, for all her advice and support"
+Additional Thanks,Claudia and Alanna Guerrero
+Additional Thanks,Stefanie Rainwater
+Additional Thanks,Izabel Rainwater
+Additional Thanks,Yasmin Wood
+Additional Thanks,Robin Wood
+Additional Thanks,Rainey
+Additional Thanks,The Great Rob Chacko
+Additional Thanks,"My Amazing Wife, Shelley"
+Additional Thanks,Beverly and Shangreaux Lagrave
+Additional Thanks,"Thanks to my girlfriend Diana and brother Morgan, I love you both."
+Additional Thanks,A special thanks to my parents for always encouraging me to follow my dreams.
+Additional Thanks,Anna Hartwell
+Additional Thanks,Agapito Barriga
+Additional Thanks,Brynda De Arte
+Additional Thanks,Seamus De Arte
+Additional Thanks,Ji Yeon Han “my gopher”
+Additional Thanks,The Korean National Soccer Team
+Additional Thanks,Chad Verrall
+Additional Thanks,Rob Beatie
+Additional Thanks,Stephanie Keefer
+Additional Thanks,Amber Ray
+Additional Thanks,"Nigel, Linne, Sarah and Lucy"
+Additional Thanks,The Vestal Family
+Additional Thanks,John and Hiroko
+Additional Thanks,Makishi “Cocco” Satoko
+Additional Thanks,Nhu Quynh “Queenie” Ly
+Additional Thanks,The M of O team
+Additional Thanks,J. “Nicknamer” Jina
+Additional Thanks,Lana Lee
+Additional Thanks,Abra Chouinard
+Additional Thanks,Margaret and Tina Brower
+Additional Thanks,i and o
+Additional Thanks,Don Simpson and Matt Householder
+Additional Thanks,Greg Landes
+Additional Thanks,Andrea Landes
+Additional Thanks,Yulia and Jasper Duke
+Additional Thanks,Tracy and Garrett Farr
+Additional Thanks,Dr. Edgar Charles Lawrence
+Additional Thanks,Kazue Blackwell
+Additional Thanks,Karen and Tiggeria
+Additional Thanks,Mark Day
+Additional Thanks,Phillip Bossant
+Additional Thanks,Kevin Ken Lee
+Additional Thanks,Frances Lin and family
+Additional Thanks,Grandma and Grandpa Mencer
+Additional Thanks,Linda Chen
+Additional Thanks,JEND
+Additional Thanks,Randy Jones
+Additional Thanks,Brian Jones
+Additional Thanks,Min Chu
+Additional Thanks,David Chu
+Additional Thanks,Tina and Melissa Maloof
+Additional Thanks,Ron and Judi Maloof
+Additional Thanks,Eric Bigelow
+Additional Thanks,Mike Davis
+Additional Thanks,"Katherine, Penelope and our twin girls."
+Additional Thanks,Andrea Morrisroe
+Additional Thanks,The Morrisroe Family
+Additional Thanks,"Mary, Johnny, and Joey Cash"
+Additional Thanks,Every Gnome I've ever killed
+Additional Thanks,Mindi Johnson
+Additional Thanks,The Foote Clan
+Additional Thanks,Silvia Van Dusen
+Additional Thanks,Kai Van Dusen
+Additional Thanks,Kiana Van Dusen
+Additional Thanks,Astrid Macias
+Additional Thanks,Mandi Stiles
+Additional Thanks,VJ Army
+Additional Thanks,Lauren Squier
+Additional Thanks,Karlee Chadwick
+Additional Thanks,Paige Chadwick
+Additional Thanks,"To Catherine, Steven and Elizabeth, for everything. Simply everything."
+Additional Thanks,"To the Loons .. without you, Azeroth would feel empty."
+Additional Thanks,Thanks to my husband Mike and my family for all their love and support.
+Additional Thanks,Anissa – Thank you for letting me realize my dream.
+Additional Thanks,JDB – Thanks for the faith and support!
+Additional Thanks,Aimee Della Bitta
+Additional Thanks,California DMV
+Additional Thanks,Caffeine
+Additional Thanks,Cairenn and Iriel
+Additional Thanks,Heather Cheng
+Additional Thanks,Hannah Cheng
+Additional Thanks,Daniel Peters
+Additional Thanks,Brandee Prugh
+Additional Thanks,Rhonda Blue
+Additional Thanks,Ruth Blue
+Additional Thanks,Max Blue
+Additional Thanks,Leslie and Patricia Hoffman
+Additional Thanks,Alan and Leslie Rostenberg
+Additional Thanks,Janna Zirpolo -- The true oracle in my life.
+Additional Thanks,Colin Day -- A better friend a man could not have.
+Additional Thanks,Jamie Avins -- w/o your rants and friendship this game would be worse off. ;)
+Additional Thanks,Roy Orichio -- A true friend.
+Additional Thanks,Geoff Herbst -- A man who knows and gets it.
+Additional Thanks,John Coppersmith
+Additional Thanks,Derek Charles Glass
+Additional Thanks,Rhenn Derek Ramirez
+Additional Thanks,Special thanks to the Afrasiabi family.
+Additional Thanks,Special thanks to the Akbarpour family.
+Additional Thanks,Elizabeth Victorian
+Additional Thanks,Don Puls
+Additional Thanks,Teresa Shawn
+Additional Thanks,The Richard family for adopting me while I tried to find my path.
+Additional Thanks,Pike Highschool Art Department for giving me the art chops to end up at Blizz.
+Additional Thanks,Dave Chappelle
+Additional Thanks,Dane Cook
+Additional Thanks,Tenacious D
+Additional Thanks,Kandice Murray
+Additional Thanks,Amethyst Shade
+Additional Thanks,Queens of the Stone Age
+Additional Thanks,Metroid Metal
+Additional Thanks,"Thank you to all the guilds I have been in, Insomnia, Ascension, Tussle, Hidden Dragon, Torch the Bridge, Neo Leviathan, and Robot Kitten Happy Train. Tichondrius represent!"
+Additional Thanks,The Dishon Family
+Additional Thanks,Luke Morgan
+Additional Thanks,Bill Dyess
+Additional Thanks,Luke Freiler
+Additional Thanks,John Lynch
+Additional Thanks,Lydia Barriga
+Additional Thanks,Meeshe Chan – Thanks for everything.
+Additional Thanks,Tarnjit Gill
+Additional Thanks,Ravi Boghan
+Additional Thanks,Tracey and Maeve McNaughton
+Additional Thanks,Jen and Athena Maldonado
+Additional Thanks,Frank and Pat Maldonado
+Additional Thanks,Robert E. Howard
+Additional Thanks,Slacks Lizard.
+Additional Thanks,Bart
+Additional Thanks,Giulia Carcione Lawrence
+Additional Thanks,Grant &#34;Bunny&#34;
+Additional Thanks,The Davis unt Vetter Fam
+Additional Thanks,"Thanks Mom, Dad and Sis, I owe this spot all to you guys!"
+Additional Thanks,"Thanks to my loving wife, without your love and support this wouldn't be possible."
+Additional Thanks,Clyde Kunz
+Additional Thanks,Claudia Kunz
+Additional Thanks,Jared Kunz
+Additional Thanks,Andrew Dick
+Additional Thanks,Demond Rogers
+Additional Thanks,In Young Yang
+Additional Thanks,Choua Her
+Additional Thanks,Soua Her
+Additional Thanks,Lisa Pearce
+Additional Thanks,Lou Adesso
+Additional Thanks,The DeMeza Family
+Additional Thanks,The Spirit Healer
+Additional Thanks,Mountain Dew
+Additional Thanks,Heidi Kunz
+Additional Thanks,Monica Adams
+Additional Thanks,Maximus Adams
+Additional Thanks,Maisie Adams
+Additional Thanks,Margaret Shen
+Additional Thanks,Dena Fitzgerald
+Additional Thanks,"Jennifer, Jane and Kate"
+Additional Thanks,Mr. Wilson
+Additional Thanks,"Mom, Grace, Mehley and the rest of my family for all the support"
+Additional Thanks,Kelly Aguilar
+Additional Thanks,Dylan Rae Aguilar
+Additional Thanks,Chris Moeller
+Additional Thanks,Nici and Billie Morris
+Additional Thanks,"Layla, Wally, Lois, Ben, and Sam"
+Additional Thanks,sine909
+Additional Thanks,Bunnies of Chaos
+Additional Thanks,RBRBRB!
+Additional Thanks,Samantha LeCraft
+Additional Thanks,Jake the Jackalope
+Additional Thanks,Meridian59
+Additional Thanks,Scott Weeks
+Additional Thanks,SnowFish
+Additional Thanks,The Pageant House
+Additional Thanks,Brandy Ann Hall
+Additional Thanks,Bonnie &#64; Mcclures Pub
+Additional Thanks,Karaoke Thursdays
+Additional Thanks,Cel the Rogue
+Additional Thanks,Loving wife Margie and two great kids Taylor and Cody
+Additional Thanks,The Vigilance guild on Proudmoore for the good times
+Additional Thanks,Jimmy Buffett for the great tunes
+Additional Thanks,"Bombur, Hildebrand, Ettibby, Personperson and Leannagrace on Proudmoore"
+Additional Thanks,Philadelphia
+Additional Thanks,New York City
+Additional Thanks,Cris Chambers
+Additional Thanks,Bob Dixon
+Additional Thanks,The Couto Family
+Additional Thanks,Nicole Bartlett
+Additional Thanks,Kisu Kang
+Additional Thanks,Ernie Chen
+Additional Thanks,Rob Sandberg
+Additional Thanks,Genesis Prado for being there for me.
+Additional Thanks,Debbie Tomoguchi
+Additional Thanks,Upper Deck Entertainment
+Additional Thanks,Ogami Itto
+Additional Thanks,Darth Wardo and Duffi-wan Kenobi
+Additional Thanks,Rick Kennedy
+Additional Thanks,George Broussard
+Additional Thanks,The Duke and Shyshkina families
+Additional Thanks,Susie and Luigi
+Additional Thanks,Doug Stone
+Additional Thanks,Dana Judd Curfman
+Additional Thanks,Sydney Rainwater
+Additional Thanks,Charles Rainwater
+Additional Thanks,Dave Pricz
+Additional Thanks,Greg Seyranian
+Additional Thanks,Dawn Radue
+Additional Thanks,A special thanks to Christi for putting up with all of my long hours and late nights. Without you I would have never made it!
+Additional Thanks,"Susie, Joel, and Regina"
+Additional Thanks,Eric To
+Additional Thanks,Runetusk (&#34;SoC for life!&#34;)
+Additional Thanks,Sky and Matthew
+Additional Thanks,Nicholas Vineyard
+Additional Thanks,Jay Maguire
+Additional Thanks,Travis Inman
+Additional Thanks,Trevor Rothman
+Additional Thanks,Christopher Deutsch
+Additional Thanks,Jay Xealous
+Additional Thanks,International community guys
+Additional Thanks,Katrina Spoor
+Additional Thanks,Elysabethe Greyrose
+Additional Thanks,"Deana Matarasso, Dacy Matarasso…"
+Additional Thanks,"Harminder Brar, Emilya Svadjian, Clay Bogott"
+Additional Thanks,Jonathan ‘Trix’ Revah
+Additional Thanks,Ken Ham - AiG
+Additional Thanks,Special thanks to Aiden Michael who has been such an easy podling to carry and is waiting till after we ship the game to grace us with his presence.
+Additional Thanks,Insufficient Light on Silver Hand
+Additional Thanks,"(Who did not take their name from the manual, sir.)"

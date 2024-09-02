@@ -2,8 +2,8 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>Articles | The Thaumatorium</title>
-		<meta name="description" content="Relational Algebra Operators in Database Management" />
+		<title>Relational Algebra Operators in Database Management | The Thaumatorium</title>
+		<meta name="description" content="An overview of basic and additional relational algebra operators" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Articles" />
-		<meta property="og:description" content="Relational Algebra Operators in Database Management" />
+		<meta property="og:title" content="Relational Algebra Operators in Database Management" />
+		<meta property="og:description" content="An overview of basic and additional relational algebra operators" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="Articles" />
-		<meta name="twitter:description" content="Relational Algebra Operators in Database Management" />
+		<meta name="twitter:title" content="Relational Algebra Operators in Database Management" />
+		<meta name="twitter:description" content="An overview of basic and additional relational algebra operators" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
@@ -39,8 +39,8 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/certs">Certificates</a><span> - </span></li>
 				<li><a href="/experimentations">Experimentations</a><span> - </span></li>
-				<li><a href="/code-of-conduct">Code of Conduct</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
 				<li><a href="/hardware">Hardware</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
@@ -48,15 +48,22 @@
 			</ul>
 		</nav>
 		<main>
-			<h1>Articles</h1>
-			<p>This article contains the symbols I've found in a video from CMU Database Group, a YT channel from Carnegie Mellon University.</p>
+			<h1>Relational Algebra Operators in Database Management</h1>
+			<hgroup>
+				<div class="article-meta">
+					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
+					<div class="published-box">Published: <time class="published" datetime="2024-06-22T14:27:00&#43;01:00">2024-06-22</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T19:23:00&#43;01:00">2024-07-24</time></div>
+				</div>
+			</hgroup>
+			<p>This article summarizes the symbols and operations of relational algebra as explained in a video from the CMU Database Group, a YouTube channel by Carnegie Mellon University.</p>
 			<h2>Basic Relational Algebra Operators</h2>
 			<dl>
 				<dt>&sigma; (Selection)</dt>
 				<dd>
 					<strong>Symbol:</strong> &sigma; (Sigma)<br />
 					<strong>Description:</strong> The Selection operator is used to filter rows based on a specified condition.<br />
-					<strong>Example:</strong> &sigma;(condition)(relation)
+					<strong>Example:</strong> &sigma;<sub>condition</sub>(relation)
 				</dd>
 				<dt>&pi; (Projection)</dt>
 				<dd>
@@ -101,13 +108,13 @@
 				<dd>
 					<strong>Symbol:</strong> &rho; (Rho)<br />
 					<strong>Description:</strong> The Rename operator is used to rename the relation or attributes.<br />
-					<strong>Example:</strong> &rho;(new_name)(relation)
+					<strong>Example:</strong> &rho;<sub>new_name</sub>(relation)
 				</dd>
 				<dt>&ShortLeftArrow; (Assignment)</dt>
 				<dd>
 					<strong>Symbol:</strong> R &ShortLeftArrow; S (Assignment)<br />
-					<strong>Description:</strong> The Assignment operator is used to assign the result of a query to a relation variable.<br />
-					<strong>Example:</strong> R &ShortLeftArrow; &sigma;(condition)(relation)
+					<strong>Description:</strong> The Assignment operator assigns the result of a query to a relation variable.<br />
+					<strong>Example:</strong> R &ShortLeftArrow; &sigma;<sub>condition</sub>(relation)
 				</dd>
 				<dt>&delta; (Duplicate Elimination)</dt>
 				<dd>
@@ -130,7 +137,7 @@
 				<dt>&div; (Division)</dt>
 				<dd>
 					<strong>Symbol:</strong> &div; (Division)<br />
-					<strong>Description:</strong> The Division operator is used to find tuples in one relation that are related to all tuples in another relation.<br />
+					<strong>Description:</strong> The Division operator finds tuples in one relation that are related to all tuples in another relation.<br />
 					<strong>Example:</strong> relation1 &div; relation2
 				</dd>
 			</dl>
@@ -141,14 +148,14 @@
 				<li><a href="https://youtu.be/XGMoq-D_mao?t=3564">Additional Relational Algebra Operators</a></li>
 			</ul>
 			<h2>Addendum</h2>
-			<p>I'm reading "E. F. Codd and Relational Theory (revised edition)" by C. J. Date, and he has a few more operators, but no symbols.</p>
+			<p>I'm currently reading "E. F. Codd and Relational Theory (revised edition)" by C. J. Date, which introduces additional operators without specific symbols.</p>
 		</main>
 		<footer>
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2024-06-22</time></sub>
+					<sub>Last updated: <time id="updated">2024-07-24</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

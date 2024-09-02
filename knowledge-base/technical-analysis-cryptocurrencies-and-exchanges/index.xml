@@ -6,21 +6,6 @@
     <description>Recent content in Cryptocurrencies, Exchanges and Technical Analysis on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/about/</guid>
-      <description>&lt;!doctype html&gt;&#xD;Cryptocurrencies, Exchanges and Technical Analysis | The Thaumatorium&#xD;The Thaumatorium:&#xD;Where the magic happens&#xD;Main nav menu&#xD;Frontpage - Articles - Projects - Experimentations - Code of Conduct - Random video - Hardware - Knowledge Base - About&#xD;Cryptocurrencies, Exchanges and Technical Analysis&#xD;Published: 2020-07-17&#xD;Author: NostraDavid&#xD;History and context&#xD;I know about crypto since 2010-ish, back when Bitcoin was the only coin in town. I always wanted to buy some, but never had money left to spend, due to either no income (because student) or because my job wasn&#39;t paying enough and I had to pay off my student loans (which weren&#39;t that big back then - not compared to what I have now, lmao).</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/word-count/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/word-count/</guid>
-      <description>Simple word count web component&#xD;Word count rating widget&#xD;Sample heading&#xD;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sed justo sed viverra. Aliquam ac scelerisque tellus. Vivamus porttitor nunc vel nibh rutrum hendrerit. Donec viverra vestibulum pretium. Mauris at eros vitae ante pellentesque bibendum. Etiam et blandit purus, nec aliquam libero. Etiam leo felis, pulvinar et diam id, sagittis pulvinar diam. Nunc pellentesque rutrum sapien, sed faucibus urna sodales in.</description>
-    </item>
+    <lastBuildDate>Sat, 05 Jun 2021 00:00:00 +0100</lastBuildDate><atom:link href="http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

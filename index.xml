@@ -6,91 +6,66 @@
     <description>Recent content in NostraDavid&#39;s handcrafted website, with his articles and projects on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2020 16:55:37 +0100</lastBuildDate>
-    <atom:link href="http://thaumatorium.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Nov 2022 21:15:38 +0100</lastBuildDate><atom:link href="http://thaumatorium.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex</title>
       <link>http://thaumatorium.com/knowledge-base/_index-old/</link>
       <pubDate>Mon, 17 Aug 2020 16:55:37 +0100</pubDate>
+      
       <guid>http://thaumatorium.com/knowledge-base/_index-old/</guid>
-      <description>For now (2020-07-16) it&amp;rsquo;s just snippets of JS and regex that I use every now and then&#xA;I&amp;rsquo;d use GitHub for that, but I have a tendency to forget GitHub Gist exists…&#xA;Open all chapters&#xD;Close all chapters&#xD;Online Tools&#xD;These are websites/webpages that I use to optimize this site.&#xA;Tool name What to use it for SVGOMG! &amp;ldquo;SVG Optimizer&amp;rsquo;s Missing GUI&amp;rdquo;, an online SVG optimizer Google&amp;rsquo;s Closure Compiler A Javascript optimizer - turns modern JS into highly optimized, yet compatible, Javascript.</description>
+      <description>For now (2020-07-16) it&amp;rsquo;s just snippets of JS and regex that I use every now and then
+I&amp;rsquo;d use GitHub for that, but I have a tendency to forget GitHub Gist exists…
+ {el.open = true});&#34;Open all chapters {el.open = false});&#34;Close all chapters    Online Tools These are websites/webpages that I use to optimize this site.
+    Tool name What to use it for     SVGOMG!</description>
     </item>
+    
     <item>
       <title>The Unabomber Trial: The Manifesto</title>
       <link>http://thaumatorium.com/articles/the-unabomber-trial-the-manifesto/</link>
       <pubDate>Sun, 01 Jan 1995 00:00:00 +0100</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-unabomber-trial-the-manifesto/</guid>
-      <description>&lt;!doctype html&gt;&#xD;The Unabomber Trial: The Manifesto | The Thaumatorium&#xD;The Thaumatorium:&#xD;Where the magic happens&#xD;Last updated: Main nav menu&#xD;Frontpage - Articles - Projects - Experimentations - Code of Conduct - Random video - Hardware - Knowledge Base - About&#xD;This page is not publically accessible because people will think I support his terrorst actions, because people&#xD;are idiots.&#xA;I just want to figure out what made this man tic.</description>
+      <description>The Unabomber Trial: The Manifesto | The Thaumatorium      The Thaumatorium: Where the magic happens Last updated: 
+   Main nav menu  Frontpage -  Articles -  Projects -  Experimentations -  Code of Conduct -  Random video -  Hardware -  Knowledge Base -  About    This page is not publically accessible because people will think I support his terrorst actions, because people are idiots.</description>
     </item>
+    
     <item>
       <title>Fatal Flaws in SQL</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988-fatal-flaws-in-sql/</link>
-      <pubDate>Fri, 01 Jan 1988 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 15 Aug 1988 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988-fatal-flaws-in-sql/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Fatal Flaws in SQL&#xD;Fatal Flaws in SQL&#xD;BY E.F. CODD&#xA;It is clear that DBMS vendors are rushing to support Structured Query Language—either IBM&#39;s version or its weaker ANSI cousin. To an observer, this is like watching a flock of lemmings congregate on a beach in preparation for marching into the sea. With the exception of Teradata, there is no sign that any vendor, including IBM, is considering the question of which parts of SQL are technically worth supporting and which parts will get them and their customers into trouble if they are supported.</description>
+      <description>Fatal Flaws in SQL  body { line-height: 1.6; margin: 20px; } h1, h2, h3, h4, h5, h6, header { text-align: center; } blockquote { background: #eee; border-left: 10px solid #ddd; margin: 20px 0; padding: 20px; } p { margin: 10px 0; text-align: justify; } ul, ol { margin: 20px 0; padding-left: 20px; } li { margin: 10px 0; } pre { background: #f4f4f4; border: 1px solid #ddd; padding: 10px; overflow-x: auto; font-family: Consolas; }     Fatal Flaws in SQL BY E.</description>
     </item>
+    
     <item>
       <title>Does your DBMS run by the rules?</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985b-does-your-dmbs-run-by-the-rules/</link>
-      <pubDate>Tue, 01 Jan 1985 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 21 Oct 1985 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985b-does-your-dmbs-run-by-the-rules/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Does your DBMS run by the rules?&#xD;Does your DBMS run by the rules?&#xD;To be &#34;mid-80s&#34; fully relational, a DBMS must support all 12 basic rules plus nine structural, 18 manipulative and all three integrity rules. There will be more requirements by the 1990s.&#xA;By E. F. Codd&#xA;No existing DBMS product that I know of can honestly claim to be fully relational at this time. The proposed ANSI DBMS standard does not fully comply with the relational model, so a DBMS&#39;s fidelity to the ANSI standard is no guarantee of relational capability.</description>
+      <description>Does your DBMS run by the rules?  body { margin: 0; padding: 0; line-height: 1.6; } article { margin: 2rem auto; padding: 2rem; max-width: 800px; } h1, h2, h3, h4, h5, h6 { text-align: center; } p { text-align: justify; } blockquote { margin: 1rem 0; border-left: 4px solid #ccc; background-color: #f9f9f9; padding: 1rem; } ol { margin: 1rem 0; padding-left: 1.5rem; } ul { margin: 1rem 0; padding-left: 1.</description>
     </item>
+    
     <item>
       <title>Is your DBMS really relational?</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/</link>
-      <pubDate>Tue, 01 Jan 1985 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 14 Oct 1985 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Is your DBMS really relational?&#xD;Is your DBMS really relational?&#xD;By E. F. Codd&#xD;The originator of the relational model for data base management presents basic principles for determining how relational a DBMS product is — a question that faces many buyers today because almost every vendor claims its DBMS is relational. Some vendors may not realize how far from the mark they are.&#xA;Part 1&#xD;In recent years, the data base management system market has undergone a very rapid swing in favor of products that take the relational approach to data base management.</description>
+      <description>Is your DBMS really relational?  body { font-family: &#34;Times New Roman&#34;, Times, serif; line-height: 1.6; margin: 40px; } h1, h2, h3, h4, h5, h6 { text-align: center; } p { margin: 20px 0; text-align: justify; } p.author { text-align: center; font-style: italic; margin-bottom: 40px; } ul { margin: 20px 40px; } p.rule { font-weight: bold; margin-top: 30px; } footer { margin-top: 40px; font-style: italic; }      Is your DBMS really relational?</description>
     </item>
+    
     <item>
       <title>DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1969-derivability-redundancy-and-consistency-of-relations-stored-in-large-data-banks/</link>
-      <pubDate>Wed, 01 Jan 1969 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 19 Aug 1969 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1969-derivability-redundancy-and-consistency-of-relations-stored-in-large-data-banks/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Document Recreation&#xD;DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS&#xD;E. F. Codd&#xA;Research Division&#xA;San Jose, California&#xD;ABSTRACT: The large, integrated data banks of the future will contain many relations of various degrees in stored form. It will not be unusual for this set of stored relations to be redundant. Two types of redundancy are defined and discussed. One type may be employed to improve accessibility of certain kinds of information which happen to be in great demand.</description>
+      <description>Document Recreation    DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS  E. F. Codd
+Research Division
+San Jose, California  ABSTRACT: The large, integrated data banks of the future will contain many relations of various degrees in stored form. It will not be unusual for this set of stored relations to be redundant. Two types of redundancy are defined and discussed. One type may be employed to improve accessibility of certain kinds of information which happen to be in great demand.</description>
     </item>
-    <item>
-      <title>On Computable Numbers, with an Application to the Entscheidungsproblem</title>
-      <link>http://thaumatorium.com/articles/on-computable-numbers/</link>
-      <pubDate>Wed, 01 Jan 1936 00:00:00 +0100</pubDate>
-      <guid>http://thaumatorium.com/articles/on-computable-numbers/</guid>
-      <description>&lt;!doctype html&gt;&#xD;On Computable Numbers, with an Application to the Entscheidungsproblem | The Thaumatorium&#xD;ON COMPUTABLE NUMBERS, WITH AN APPLICATION TO THE ENTSCHEIDUNGSPROBLEM&#xD;By A. M. TURING.&#xD;[Received 28 May, 1936.—Read 12 November, 1936.]&#xD;The “computable” numbers may be described briefly as the real numbers whose expressions as a decimal are calculable by finite means. Although the subject of this paper is ostensibly the computable numbers, it is almost equally easy to define and investigate computable functions of an integral variable or a real or computable variable, computable predicates, and so forth.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/knowledge-base/crypto-subreddits/cryptos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/knowledge-base/crypto-subreddits/cryptos/</guid>
-      <description>A giant table with all current (current meaning 2021-06-07) cryptos available on coinmarketcap.com&#xD;RankNameSymbolMarket CapPriceCirculating SupplyVolume(24h)% 1h% 24h% 7d&#xD;1BitcoinBTC€ 549,787,348,474€ 29,354.5318,729,218 BTC$29,512,971,718-0.23%-0.98%-2.98%&#xD;2EthereumETH€ 260,518,519,683€ 2,242.07116,195,396 ETH$26,431,584,512-1.29%1.09%5.14%&#xD;3TetherUSDT€ 51,077,107,917€ 0.8262,246,255,385 USDT *$59,501,859,000-0.02%-0.01%-0.05%&#xD;4Binance CoinBNB€ 48,830,772,505€ 318.25153,432,897 BNB *$2,339,087,615-0.92%-1.03%12.55%&#xD;5CardanoADA€ 44,060,036,475€ 1.3931,788,529,034 ADA$1,957,630,927-0.51%0.44%2.22%&#xD;6DogecoinDOGE€ 38,137,283,429€ 0.29129,925,434,207 DOGE$2,146,690,563-0.44%-3.66%14.48%&#xD;7XRPXRP€ 35,458,871,875€ 0.7746,151,013,329 XRP *$2,580,269,576-0.49%-0.40%-5.51%&#xD;8USD CoinUSDC€ 18,951,288,824€ 0.8223,095,396,207 USDC *$1,552,470,8770.00%0.02%0.01%&#xD;9PolkadotDOT€ 18,757,577,635€ 19.84945,632,308 DOT *$1,422,899,796-1.87%-0.57%9.96%&#xD;10UniswapUNI€ 12,312,671,731€ 21.79564,972,521 UNI *$413,650,810-0.87%2.45%-1.68%&#xD;11Internet ComputerICP€ 10,327,687,841€ 83.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/about/</guid>
-      <description>&lt;!doctype html&gt;&#xD;Cryptocurrencies, Exchanges and Technical Analysis | The Thaumatorium&#xD;The Thaumatorium:&#xD;Where the magic happens&#xD;Main nav menu&#xD;Frontpage - Articles - Projects - Experimentations - Code of Conduct - Random video - Hardware - Knowledge Base - About&#xD;Cryptocurrencies, Exchanges and Technical Analysis&#xD;Published: 2020-07-17&#xD;Author: NostraDavid&#xD;History and context&#xD;I know about crypto since 2010-ish, back when Bitcoin was the only coin in town. I always wanted to buy some, but never had money left to spend, due to either no income (because student) or because my job wasn&#39;t paying enough and I had to pay off my student loans (which weren&#39;t that big back then - not compared to what I have now, lmao).</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/word-count/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/word-count/</guid>
-      <description>Simple word count web component&#xD;Word count rating widget&#xD;Sample heading&#xD;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pulvinar sed justo sed viverra. Aliquam ac scelerisque tellus. Vivamus porttitor nunc vel nibh rutrum hendrerit. Donec viverra vestibulum pretium. Mauris at eros vitae ante pellentesque bibendum. Etiam et blandit purus, nec aliquam libero. Etiam leo felis, pulvinar et diam id, sagittis pulvinar diam. Nunc pellentesque rutrum sapien, sed faucibus urna sodales in.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/projects/canvas-projects/maze/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/projects/canvas-projects/maze/</guid>
-      <description>&#xD;Maze solver&#xD;Based on JonPizza&#39;s maze solver, but translated to Nim&#xA;I also have a version made in Nim maze.png&#xD;maze2.png&#xD;3232maze_original.png&#xD;3232maze_long.png&#xD;3232maze_longer.png&#xD;3232maze_longest.png&#xD;3232maze_longer_bigger.png&#xD;1&#xD;2&#xD;3&#xD;4&#xD;5&#xD;6&#xD;7&#xD;8&#xD;9&#xD;10&#xD;Play animation&#xD;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>http://thaumatorium.com/projects/fenetres/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://thaumatorium.com/projects/fenetres/</guid>
-      <description>&lt;!doctype html&gt;&#xD;Fenêtres | The Thaumatorium&#xD;Auto rotation&#xD;</description>
-    </item>
+    
   </channel>
 </rss>

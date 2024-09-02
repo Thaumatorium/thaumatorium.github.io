@@ -6,35 +6,44 @@
     <description>Recent content in The Papers of E.F. &#34;The Coddfather&#34; Codd on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jan 1988 00:00:00 +0100</lastBuildDate>
-    <atom:link href="http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Apr 2024 16:14:44 +0200</lastBuildDate><atom:link href="http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fatal Flaws in SQL</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988-fatal-flaws-in-sql/</link>
-      <pubDate>Fri, 01 Jan 1988 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 15 Aug 1988 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988-fatal-flaws-in-sql/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Fatal Flaws in SQL&#xD;Fatal Flaws in SQL&#xD;BY E.F. CODD&#xA;It is clear that DBMS vendors are rushing to support Structured Query Language—either IBM&#39;s version or its weaker ANSI cousin. To an observer, this is like watching a flock of lemmings congregate on a beach in preparation for marching into the sea. With the exception of Teradata, there is no sign that any vendor, including IBM, is considering the question of which parts of SQL are technically worth supporting and which parts will get them and their customers into trouble if they are supported.</description>
+      <description>Fatal Flaws in SQL  body { line-height: 1.6; margin: 20px; } h1, h2, h3, h4, h5, h6, header { text-align: center; } blockquote { background: #eee; border-left: 10px solid #ddd; margin: 20px 0; padding: 20px; } p { margin: 10px 0; text-align: justify; } ul, ol { margin: 20px 0; padding-left: 20px; } li { margin: 10px 0; } pre { background: #f4f4f4; border: 1px solid #ddd; padding: 10px; overflow-x: auto; font-family: Consolas; }     Fatal Flaws in SQL BY E.</description>
     </item>
+    
     <item>
       <title>Does your DBMS run by the rules?</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985b-does-your-dmbs-run-by-the-rules/</link>
-      <pubDate>Tue, 01 Jan 1985 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 21 Oct 1985 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985b-does-your-dmbs-run-by-the-rules/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Does your DBMS run by the rules?&#xD;Does your DBMS run by the rules?&#xD;To be &#34;mid-80s&#34; fully relational, a DBMS must support all 12 basic rules plus nine structural, 18 manipulative and all three integrity rules. There will be more requirements by the 1990s.&#xA;By E. F. Codd&#xA;No existing DBMS product that I know of can honestly claim to be fully relational at this time. The proposed ANSI DBMS standard does not fully comply with the relational model, so a DBMS&#39;s fidelity to the ANSI standard is no guarantee of relational capability.</description>
+      <description>Does your DBMS run by the rules?  body { margin: 0; padding: 0; line-height: 1.6; } article { margin: 2rem auto; padding: 2rem; max-width: 800px; } h1, h2, h3, h4, h5, h6 { text-align: center; } p { text-align: justify; } blockquote { margin: 1rem 0; border-left: 4px solid #ccc; background-color: #f9f9f9; padding: 1rem; } ol { margin: 1rem 0; padding-left: 1.5rem; } ul { margin: 1rem 0; padding-left: 1.</description>
     </item>
+    
     <item>
       <title>Is your DBMS really relational?</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/</link>
-      <pubDate>Tue, 01 Jan 1985 00:00:00 +0100</pubDate>
+      <pubDate>Mon, 14 Oct 1985 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Is your DBMS really relational?&#xD;Is your DBMS really relational?&#xD;By E. F. Codd&#xD;The originator of the relational model for data base management presents basic principles for determining how relational a DBMS product is — a question that faces many buyers today because almost every vendor claims its DBMS is relational. Some vendors may not realize how far from the mark they are.&#xA;Part 1&#xD;In recent years, the data base management system market has undergone a very rapid swing in favor of products that take the relational approach to data base management.</description>
+      <description>Is your DBMS really relational?  body { font-family: &#34;Times New Roman&#34;, Times, serif; line-height: 1.6; margin: 40px; } h1, h2, h3, h4, h5, h6 { text-align: center; } p { margin: 20px 0; text-align: justify; } p.author { text-align: center; font-style: italic; margin-bottom: 40px; } ul { margin: 20px 40px; } p.rule { font-weight: bold; margin-top: 30px; } footer { margin-top: 40px; font-style: italic; }      Is your DBMS really relational?</description>
     </item>
+    
     <item>
       <title>DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS</title>
       <link>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1969-derivability-redundancy-and-consistency-of-relations-stored-in-large-data-banks/</link>
-      <pubDate>Wed, 01 Jan 1969 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 19 Aug 1969 00:00:00 +0000</pubDate>
+      
       <guid>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1969-derivability-redundancy-and-consistency-of-relations-stored-in-large-data-banks/</guid>
-      <description>&lt;!DOCTYPE html&gt;&#xD;Document Recreation&#xD;DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS&#xD;E. F. Codd&#xA;Research Division&#xA;San Jose, California&#xD;ABSTRACT: The large, integrated data banks of the future will contain many relations of various degrees in stored form. It will not be unusual for this set of stored relations to be redundant. Two types of redundancy are defined and discussed. One type may be employed to improve accessibility of certain kinds of information which happen to be in great demand.</description>
+      <description>Document Recreation    DERIVABILITY, REDUNDANCY AND CONSISTENCY OF RELATIONS STORED IN LARGE DATA BANKS  E. F. Codd
+Research Division
+San Jose, California  ABSTRACT: The large, integrated data banks of the future will contain many relations of various degrees in stored form. It will not be unusual for this set of stored relations to be redundant. Two types of redundancy are defined and discussed. One type may be employed to improve accessibility of certain kinds of information which happen to be in great demand.</description>
     </item>
+    
   </channel>
 </rss>
