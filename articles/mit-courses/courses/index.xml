@@ -5,7 +5,6 @@
     <link>http://thaumatorium.com/articles/mit-courses/courses/</link>
     <description>Recent content on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <atom:link href="http://thaumatorium.com/articles/mit-courses/courses/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="http://thaumatorium.com/articles/mit-courses/courses/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

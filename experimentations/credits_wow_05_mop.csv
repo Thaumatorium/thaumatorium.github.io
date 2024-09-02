@@ -1,0 +1,4333 @@
+Role,Name
+Game Design,Blizzard Entertainment
+Executive Producer,Frank Pearce
+Game Director,Tom Chilton
+Production Director,J. Allen Brack
+Art Director,Chris Robinson
+Technical Director,Mike Elliott
+Creative Director,Chris Metzen
+Lead Visual Animator,Steve Aguilar
+Art Manager and Lead Technical Artist,Thomas Blue
+Lead Dungeon Artist,Wendy Vetter
+Lead Environment Artist,Gary Platner
+Lead Prop and FX Artist,Eric Browning
+Lead Content Designer,Cory Stockton
+Lead Systems Designer,Greg Street
+Lead Encounter Designer,Scott Mercer
+Lead Level Designer,Jonathan Dumont
+Lead Quest Designer,Dave Kosak
+Lead Engine Programmer,Marco Koegler
+Lead Gameplay Programmer,Patrick Magruder
+Lead Server Programmer,Alec Dun
+Lead Systems Technology Programmer,Collin Murray
+Lead Tools Programmer,Monte Krol
+Lead UI Programmer,Tom Thompson
+Lead/Senior Producers,Ray Cobo
+Lead/Senior Producers,Rob Foote
+Lead/Senior Producers,Carlos Guerrero
+Lead/Senior Producers,John Hight
+Lead/Senior Producers,John Lagrave
+Producers,Ernst ten Bosch
+Producers,Jason Hutchins
+Producers,Joseph Hsu
+Producers,Scott Keenan
+Producers,Thomas Pieracci
+Producers,John Shin
+Producers,Alex Tsang
+Animators,John Butkus
+Animators,Carman Cheung
+Animators,Jeremy Collins
+Animators,Carlos Fins
+Animators,Mai Igarashi
+Animators,John Scharmen
+Animators,Jason Zirpolo
+Character Artists,Tamara Bakhlycheva
+Character Artists,Danny Beck
+Character Artists,Christopher Chang
+Character Artists,Joe Keller
+Character Artists,Roman Kenney
+Character Artists,Ryan Metcalf
+Character Artists,Tyson Murphy
+Character Artists,Dusty Nolting
+Character Artists,Jon McConnell
+Character Artists,Danny Saint-Hilaire
+Character Artists,Robert Sevilla
+Character Artists,Thomas Yip
+Dungeon Sub-Leads,Steve Crow
+Dungeon Sub-Leads,Jimmy Lo
+Dungeon Artists,Patrick Burke
+Dungeon Artists,Jeff Chang
+Dungeon Artists,Ryan Cooper
+Dungeon Artists,Cole Eastburn
+Dungeon Artists,David Harrington
+Dungeon Artists,Jonathan Jacobson
+Dungeon Artists,Danny “Danky” Kim
+Dungeon Artists,Andrew Matthews
+Dungeon Artists,Chad Max
+Dungeon Artists,Rhett “Stash” Torgoley
+Concept Artist,Mark Gibbons
+Environment Artists,Matthew Heyman
+Environment Artists,Kelli Hoover
+Environment Artists,Gustav Schmidt
+Environment Artists,Tina Wang
+Prop and FX Artists,Mark Abadier
+Prop and FX Artists,Jamie Chang
+Prop and FX Artists,Jeffrey Chuang
+Prop and FX Artists,Terrie Denman
+Prop and FX Artists,Jay Hwang
+Prop and FX Artists,Adam Kugler
+Prop and FX Artists,Kevin Maginnis
+Prop and FX Artists,Dan Moore
+Prop and FX Artists,Holly Prado
+Prop and FX Artists,Kelvin S. Tan
+Technical Artists,Paul Forest
+Technical Artists,Joram Hughes
+Technical Artists,Alexis Meade
+Technical Artists,Trevor Rothman
+Game Designers,Don Adams
+Game Designers,Craig Amai
+Game Designers,Alexander Brazie
+Game Designers,Steve Burke
+Game Designers,Nathaniel Chapman
+Game Designers,Helen Cheng
+Game Designers,Morgan Day
+Game Designers,Travis Day
+Game Designers,Jeremy Feasel
+Game Designers,Scott Gordon
+Game Designers,Ion Hazzikostas
+Game Designers,Chris Kaleiki
+Game Designers,Dan Kramer
+Game Designers,Paul Kubit
+Game Designers,Owen Landgren
+Game Designers,Jonathan LeCraft
+Game Designers,Dave Maldonado
+Game Designers,Ryan Meier
+Game Designers,Chadd Nervig
+Game Designers,Zachariah Owens
+Game Designers,Russell Petersen
+Game Designers,Jessica Rogers
+Game Designers,Joe Shely
+Game Designers,Candace Thomas
+Game Designers,Matt Webster
+Game Designers,He-Rim Woo
+Game Designers,Jason Zelechoski
+Game Designers,Kris Zierhut
+Level Designers,Sarah Boulian
+Level Designers,Ely Cannon
+Level Designers,Paul Cazarez
+Level Designers,Victor Chong
+Level Designers,Ian Gerdes
+Level Designers,Ed Hanes
+Level Designers,Kevin Lee
+Level Designers,Michael McInerney
+Level Designers,Scott Smith
+Level Designers,Julien Tremblay
+Engine Programmers,Alexey Medvedev
+Engine Programmers,Matthew Williams
+Gameplay Programmers,Russell Bernau
+Gameplay Programmers,Patrick Dawson
+Gameplay Programmers,Benjamin Foxworthy
+Gameplay Programmers,Omar Gonzalez
+Gameplay Programmers,Christopher MacDonald
+Gameplay Programmers,Pat MacKellar
+Gameplay Programmers,Marcio Martins
+Gameplay Programmers,Ron Nakada
+Gameplay Programmers,Kyle Radue
+Gameplay Programmers,Darren Williams
+Server Programmers,Joseph Cochran
+Server Programmers,Jason De Arte
+Server Programmers,Jared Gillis
+Server Programmers,Kurtis McCathern
+Server Programmers,Jeff Mears
+Server Programmers,Nicolas Noble
+Server Programmers,Aimee Pi
+Systems Technology Programmers,Frank Kowalkowski
+Systems Technology Programmers,Giray Ozil
+Tools Programmers,Brian Birmingham
+Tools Programmers,Steven Dwyer
+Tools Programmers,Pete Sandrene
+Tools Programmers,Craig Steele
+Tools Programmers,John Stiles
+Tools Programmers,Tim Yanalunas
+UI Designers,Matt Golins
+UI Designers,Ian Wall
+UI Programmers,Bea Metitiri
+UI Programmers,Serban Oprescu
+UI Programmers,Jacob Segal
+Macintosh Team Lead,John Mikros
+Macintosh Programmers,Chris Crowe
+Macintosh Programmers,David Givone
+Macintosh Programmers,Daniel Pageau
+Macintosh Programmers,Scott Scaccianoce
+Macintosh Producer,Brian M. Wright
+Technical Writer,Jeremy Seely
+Additional Art,Steve Allen
+Additional Art,Chris Amaral
+Additional Art,Sungjae Cho
+Additional Art,Peet Cooper
+Additional Art,Sam “Samwise” Didier
+Additional Art,Seth Faske
+Additional Art,Brian Fletcher
+Additional Art,Slim Ghariani
+Additional Art,Kevin Griffith
+Additional Art,Kevin K. Griffith
+Additional Art,Rutherford Gong
+Additional Art,Sojin Hwang
+Additional Art,Jeff Hyeongwon Kang
+Additional Art,Justin Kunz
+Additional Art,Rachel Larsen
+Additional Art,Grace Liu
+Additional Art,Richie Marella
+Additional Art,Pio Ravago
+Additional Art,Matthew Ryan
+Additional Art,Tiffany Sirignano-Sheets
+Additional Art,Anessa Silzer
+Additional Art,John Staats
+Additional Art,Chanon Thareechit
+Additional Art,Paul Warzecha
+Additional Art,Neal Wojahn
+Additional Art,Adam York
+Additional Design,Alex Afrasiabi
+Additional Design,Eric Maloof
+Additional Management,J.D. Calzada
+Additional Production,Jeremy Masker
+Additional Production,Amy Morhaime
+Additional Production,Lee Sparks
+Additional Programming,Erin Catto
+Additional Programming,Patrick Doane
+Additional Programming,Scott Hartin
+Additional Programming,Kevin He
+Additional Programming,Chaz Pratt
+Additional Programming,Craig Tiller
+Interns,Johnny Cash
+Interns,Jessica Dinh
+Interns,Marie Lazar
+Interns,Peter K. Lee
+Strike Team Lead,Kevin Martens
+Strike Team,Chris Amaral
+Strike Team,Jason Boyle
+Strike Team,Juan Custer
+Strike Team,Shon Damron
+Strike Team,Brian Gidge
+Strike Team,Matt Gotcher
+Strike Team,Matthew Hawley
+Strike Team,Jesse McCree
+Strike Team,Vitaliy Naymushin
+Strike Team,Stephanie Paddock
+Strike Team,Stephen Wong
+Strike Team,Jay Wilson
+"Vice President, Battle.net",Robert Bridenbecker
+Design Director,Mike Hein
+Production Director,Dan Elggren
+Technical Directors,Brian Fitzgerald
+Technical Directors,Ali Vatani
+Technical Directors,Matthew Versluys
+Lead Designers,Jon DeMidio
+Lead Designers,Vincent Francoeur
+Lead Engineers,Chulwoong Choi
+Lead Engineers,Ben Deane
+Lead Engineers,Patrick Eger
+Lead Engineers,Steve McGarrity
+Lead Engineers,JC Park
+Lead Engineers,Kyle Riccio
+Lead Engineers,Christopher Stewart
+Lead Engineers,John Yaney
+Lead Producers,Dave Chan
+Lead Producers,Ryan Cooper
+Lead Producers,Melissa Meyer
+Designers,Sam Attanasio
+Designers,Wei Chen
+Designers,Guillaume Cournoyer
+Designers,Christopher Deutsch
+Designers,Randal Dumoret
+Designers,Bryan Gidge
+Designers,Thomas Heger
+Designers,Katherine Joplin
+Designers,Seonghak Jung
+Designers,Dohyeong Kim
+Designers,Junho Kim
+Designers,Bobby Koh
+Designers,Rene Koiter
+Designers,Jeff Liu
+Designers,Bre Miller
+Designers,Juyoung Oh
+Designers,Ryan Pearson
+Designers,Zac Pfaff
+Designers,Bryan Rathman
+Designers,Keith Rhee
+Designers,Angela Shih
+Designers,Bao Tran
+Designers,Jaeson Welch
+Designers,Christina Womack
+User Researchers,Hyojin Bae
+User Researchers,Dan Jenrette
+User Researchers,Ming Xia
+Engineering Manager,Paul Haban
+Engineers,Monica Alba
+Engineers,Cord Bartlett
+Engineers,Woonchang Beck
+Engineers,Andrew Bellinger
+Engineers,Ed Beranek
+Engineers,Todd Blank
+Engineers,Ilya Bobyr
+Engineers,Laurent Bourcier
+Engineers,D. Scott Boyce
+Engineers,Mikyoung Choi
+Engineers,Seungki Choi
+Engineers,Diane Cochran
+Engineers,Ryan Creasey
+Engineers,Joel Deaguero
+Engineers,Joseph Dean
+Engineers,Sascha Demetrio
+Engineers,Evangelia Dendramis
+Engineers,Sarah Doebler
+Engineers,David Eckel
+Engineers,Steven Gabriel
+Engineers,Nick Gerakines
+Engineers,Gisang Gil
+Engineers,Christopher Giroir
+Engineers,Victor Gonzalez Jr.
+Engineers,Don Grey
+Engineers,Kwangbum Ha
+Engineers,Chris Jacobson
+Engineers,Wonhee Jung
+Engineers,Chang-Il Kim
+Engineers,Dennis Kim
+Engineers,Neal Kochhar
+Engineers,Juno Kwak
+Engineers,Ken Lamb
+Engineers,Jay Lauffer
+Engineers,Drew Lawton
+Engineers,Eunyang Lee
+Engineers,Fred Lee
+Engineers,Juho Lee
+Engineers,Youngsik Lee
+Engineers,Ockkyoung Leem
+Engineers,Spenser Li
+Engineers,Robert Lin
+Engineers,Terence Lindsey
+Engineers,Jason MacAllister
+Engineers,Pavel Maisenovich
+Engineers,Nick McVeity
+Engineers,Qi Ming
+Engineers,Keith Miron
+Engineers,Calum Mitchell
+Engineers,Robert Moodey
+Engineers,Chris Myles
+Engineers,Alan Newton
+Engineers,Anthony Nichols
+Engineers,Joonho Park
+Engineers,Sangyong Park
+Engineers,Stephen Raub
+Engineers,Ricardo Robaina
+Engineers,Ian Roberts
+Engineers,Vlad Semenov
+Engineers,Tony Shih
+Engineers,Hwachul Shin
+Engineers,Michael Skacal
+Engineers,Michael Stum
+Engineers,Fanny Suh
+Engineers,Anselmo Talotta
+Engineers,Alex Tearse-Doyle
+Engineers,Steve Toscano
+Engineers,Andy Tran
+Engineers,Tom Van
+Engineers,Daniel Weltz
+Engineers,Stephen Whiting
+Engineers,Ray Xiao
+Engineers,Casey Yelland
+Engineers,Christopher Yim
+Engineers,Christopher Yu
+Producers,Erin Ali
+Producers,Sangeon Bae
+Producers,Shane Cargilo
+Producers,Kevin Carter
+Producers,Bryan Chang
+Producers,Dennis Crow
+Producers,Damien Currano
+Producers,Eric Del Priore
+Producers,Jeremy Dela Rosa
+Producers,Romain Dijoux
+Producers,Sean Flinn
+Producers,Dan Hernberg
+Producers,Andrew Hunt
+Producers,Ty Julian
+Producers,Sunyoung Kim
+Producers,Ben Lam
+Producers,Jenny C.Liu
+Producers,Dan Maas
+Producers,Rainer Mayer
+Producers,Rebecca Orozco
+Producers,Stephanie Paddock
+Producers,Maria Page
+Producers,Russell Pippin
+Producers,Yong Woo
+Technical Writers,Sabina Horigan
+Technical Writers,Simeon Vincent
+Web Editors,Geoff Fraizer
+Web Editors,Eddie Lee
+Web Editors,Martin Leidenfrost
+Web Editors,Otavio Lessa
+Web Editors,Ryan Quinn
+Web Editors,Jaime Scheffler
+Interns,Justin Britch
+Interns,Kevin Gent
+Interns,Daniel Kutz
+Interns,Zak Rubin
+Interns,Alex Wong
+Regional Manager,Yann Pallatier
+Project Managers,Nathalie Beauguerlange
+Project Managers,Olivier Fourel
+Project Managers,Oliver Kurth
+Web Designers,Sören Geier
+Web Designers,Mathieu Magrez
+Web Designers,Prune Moldawan
+Web Designers,Alix Nguyen
+Web Editors,Eddy Béchu
+Web Editors,Thibaud Bertin
+Web Editors,Roberto Crispo
+Web Editors,Irina Kneller
+Web Editors,Maria Loy
+Web Editors,Oliver Lübeck
+Web Editors,Patricio Mekong Talavera
+Web Editors,Carlos Fernández Plaza
+Web Editors,Pierre Rosenthal
+Web Editors,Joseph Toaff
+Web Editors,Alena Yakavets
+Web Editors,Tomasz Zabczynski
+Special Thanks,Pablo Toledo Baeza
+Battle.net Web Producers,Dayeong Oh
+Battle.net Web Producers,Minhyouk Pack
+Battle.net Web Producers,Min Yang
+Web Engineers,Ajin Kim
+Web Engineers,Jungeun Lee
+Web Engineers,Dooyong Oh
+Web Engineers,One Yoon
+Web Designers,Hyunsuk Cheong
+Web Designers,Sangwook Kim
+Web Service Designer,Eunjin Nam
+Web Editors,Ayoung Kim
+Web Editors,Jieun Kim
+Battle.net Senior Web Services Manager,Bee Ai Chua
+Web Producer,Tang Yanfeng
+Web Engineers,Huang Xiaoqiang
+Web Engineers,Yang Yanping
+Web Engineers,Yu Yaodong
+Web Designers,Andy Jin
+Web Designers,Wang Wei
+Web Content Editors,Chu Ching
+Web Content Editors,Jay Zhang
+Project Director,Marc Messenger
+In-Game Project Director,Terran Gregory
+Project Art Directors,Chris Thunig
+Project Art Directors,Fausto De Martini
+Sr. Project Producer,Phillip Hillenbrand
+Sr. Project Producer,Jr.
+Cinematic Script,Marc Messenger
+Cinematic Script,Chris Metzen
+"Vice President, Art & Cinematic Development",Nick Carpenter
+"Vice President, Cinematic Operations",Mike Ryder
+VFX Supervisor,Jeff Chamberlain
+Production Director,Noel Wolfman
+Director of Technology,Mark A. Brown
+Lead Producer,Scott Abeyta
+Project Producer,Kim Kotfis Horn
+Project Editors,Brian Horn
+Project Editors,Rebecca Lilienfeld
+Department Supervisors,John Burnett
+Department Supervisors,Shimon Cohen
+Department Supervisors,Scott Goffman
+Department Supervisors,Steeg Haskell
+Department Supervisors,Arthur Jeppe
+Department Supervisors,Mike Kelleher
+Department Supervisors,Jared Keller
+Department Supervisors,Brian LaFrance
+Department Supervisors,James McCoy
+Department Supervisors,Fin Teo
+Department Supervisors,Seth Thompson
+Department Supervisors,Xin Wang
+Project Leads,Vitaly Bulgarov
+Project Leads,Aaron Chan
+Project Leads,Steven Chen
+Project Leads,Emanuel Druckmann
+Project Leads,Devon Fay
+Project Leads,Joe Frayne
+Project Leads,Chung Kan
+Project Leads,Ryan Leasher
+Project Leads,Laurent Pierlot
+Project Leads,Jamie Pilgrim
+Project Leads,Dennis Price
+Cinematic Artists,Salvador Arditti
+Cinematic Artists,Scott N. Army
+Cinematic Artists,Till Aschwanden
+Cinematic Artists,Jongha Baik
+Cinematic Artists,Becca Baldwin
+Cinematic Artists,Ben Barker
+Cinematic Artists,Jason Barlow
+Cinematic Artists,Stephane Belin
+Cinematic Artists,Barry Berman
+Cinematic Artists,John Berry
+Cinematic Artists,Ricardo Biriba
+Cinematic Artists,Ted Boonthanakit
+Cinematic Artists,Toni Bratincevic
+Cinematic Artists,Alvaro Buendia
+Cinematic Artists,Jason Burton
+Cinematic Artists,Bill Campbell
+Cinematic Artists,Scott Campbell
+Cinematic Artists,Hosuk Chang
+Cinematic Artists,Daniel Chavez
+Cinematic Artists,Ray Chih
+Cinematic Artists,Tae Young Choi
+Cinematic Artists,Joanna Cleland-Jolly
+Cinematic Artists,Matt Cordner
+Cinematic Artists,James Crowson
+Cinematic Artists,Graham Cunningham
+Cinematic Artists,Drew Dobernecker
+Cinematic Artists,David Durand
+Cinematic Artists,Anthony Eftekhari
+Cinematic Artists,Mustazar Essa
+Cinematic Artists,Chris Evans
+Cinematic Artists,Casey Fulton
+Cinematic Artists,Shuntaro Furukawa
+Cinematic Artists,Hunter Grant
+Cinematic Artists,Eric Grimenstein
+Cinematic Artists,Jeremy Gritton
+Cinematic Artists,Chris Ha
+Cinematic Artists,Mike Hardison
+Cinematic Artists,Jason J. Hill
+Cinematic Artists,Benjamin Min Huang
+Cinematic Artists,Steve Hui
+Cinematic Artists,Ray Hsu
+Cinematic Artists,Rodney Iwashina
+Cinematic Artists,Joe Jackman
+Cinematic Artists,Jim Jiang
+Cinematic Artists,Sheng Jin
+Cinematic Artists,Jeramiah Johnson
+Cinematic Artists,Jessica Dru Johnson
+Cinematic Artists,Ren Kikuchi
+Cinematic Artists,Yonghyun (Eddie) Kim
+Cinematic Artists,Andy C. King
+Cinematic Artists,Mike Koizumi
+Cinematic Artists,Bill La Barge
+Cinematic Artists,Mark Lai
+Cinematic Artists,Scott Lange
+Cinematic Artists,Jon Lanz
+Cinematic Artists,Hung Le
+Cinematic Artists,Alan Lee
+Cinematic Artists,Hoya Lee
+Cinematic Artists,John F. Lee
+Cinematic Artists,Moonsung Lee
+Cinematic Artists,Yeon-Ho Lee
+Cinematic Artists,Shawn Liang
+Cinematic Artists,Dyllan Lu
+Cinematic Artists,David Luong
+Cinematic Artists,Brandon Martynowicz
+Cinematic Artists,Brett McConnell
+Cinematic Artists,Matthew Mead
+Cinematic Artists,Andrew Melnychuk-Oseen
+Cinematic Artists,Lucas Merino
+Cinematic Artists,Sada Namiki
+Cinematic Artists,Tuan Ngo
+Cinematic Artists,Kurtis Paddock
+Cinematic Artists,Corey Pelton
+Cinematic Artists,Troy L. Perry
+Cinematic Artists,Levente Peterffy
+Cinematic Artists,Joe Peterson
+Cinematic Artists,Kirti Pillai
+Cinematic Artists,Zachary Podratz
+Cinematic Artists,Reo Prendergast
+Cinematic Artists,Wei Qiao
+Cinematic Artists,Dominic Qwek
+Cinematic Artists,Glenn Ramos
+Cinematic Artists,Jarett Riva
+Cinematic Artists,Casey Robinson
+Cinematic Artists,Davy Sabbe
+Cinematic Artists,Kazuhito Shimada
+Cinematic Artists,Fabio Stabel
+Cinematic Artists,Peter Starostin
+Cinematic Artists,Takuya Suzuki
+Cinematic Artists,Geordie Swainbank
+Cinematic Artists,Jon Teer
+Cinematic Artists,Sofia Vale Cruz
+Cinematic Artists,Brandan Vanderpool
+Cinematic Artists,Mathias Verhasselt
+Cinematic Artists,Kishore Vijay
+Cinematic Artists,Matias Volkert
+Cinematic Artists,Nelson Wang
+Cinematic Artists,Wei Wang
+Cinematic Artists,Christopher Y. Yang
+Cinematic Artists,Jae Hyun Yoo
+Cinematic Artists,Kenson Yu
+Cinematic Artists,Simon Yuen
+Cinematic Artists,Fabio Barretta Zungrone
+Technology Team,Brett Achorn
+Technology Team,Michael Beal
+Technology Team,Cameron Chrisman
+Technology Team,Rudy Cortes
+Technology Team,Jeff Hill
+Technology Team,David Keegan
+Technology Team,Piotrek Krawczyk
+Technology Team,Huong Nguyen
+Technology Team,Chris Rock
+Technology Team,Billy Shih
+Technology Team,Peter Shinners
+Technology Team,Michael Su
+Technology Team,Yun-Chen Sung
+Technology Team,Robert Thomas
+Technology Team,Theresa Wolf
+Technology Team,Tom Craigen
+Technology Team,Jr.
+Production Team,Patricia L. Adams
+Production Team,Tok Braun
+Production Team,Joshua Burnett
+Production Team,Leonard Chang
+Production Team,Eric Davis
+Production Team,Bejan Fozdar
+Production Team,Janet Garcia
+Production Team,Steve McIlwain
+Production Team,Jennifer Owings
+Production Team,Jason Michael Smith
+Production Team,Brandy Stiles
+Production Team,Taka Yasuda
+Studio Engineers,Johann Helgi Agnarsson
+Studio Engineers,Kenneth Lloyd Ayers III
+Studio Engineers,Douglas Beal
+Studio Engineers,Jim Bush
+Studio Engineers,Sean Laverty
+Studio Engineers,JJ Lee
+Studio Engineers,Ramon Rodriguez III
+Studio Engineers,Rob Tomson
+Studio Engineers,Leo Wang
+Cinematic Project Directors,Ben Dai
+Cinematic Project Directors,Matt Samia
+Cinematic Art Director,Jonathan Berube
+Additional Artists,Craig Brown
+Additional Artists,Patrick Dalton
+Additional Artists,Tina Fu
+Additional Artists,Tyler Hunter
+Additional Artists,Bernie Kang
+Additional Artists,Ronny Kim
+Additional Artists,Slavomir Kaslev
+Additional Artists,David Lesperance
+Additional Artists,Eric Yi Lin
+Additional Artists,Frances Lin
+Additional Artists,Sherman Ohms
+Additional Artists,Diego Garzon Sanchez
+Additional Artists,Richard Slechta
+Additional Artists,Cedric Tomacruz
+Additional Artists,Rainer Zoettl
+Additional Production,Rie Arai
+Additional Production,Lauren Gragg
+Director of Audio,Russell Brower
+Production Director of Audio,Shane Dabiri
+Lead Sound Designer,Michael Johnson
+Production Lead,Jay Maguire
+Sound Design,Jon Graves
+Sound Design,Michael Johnson
+Sound Design,Chris Kowalski
+Sound Design,Peter Steinbach
+Sound Producers,Colton Carmine
+Sound Producers,Dennis Crabtree
+Sound Producers,Rhonda Cox
+Sound Producers,Keith Landes
+Sound Producers,Joel Taubel
+Field Recording,John Paul Fasal
+Field Recording,Chris Kowalski
+Sound Implementation,Kyle Webb
+Additional Sound Design,Chris De La Pena
+Additional Sound Design,David Farmer
+Additional Sound Design,Brian David Farr
+Additional Sound Design,Kris Giampa
+Additional Sound Design,Eric Warren Lindemann
+Additional Sound Design,Paul Menichini
+Additional Sound Design,Stuart Provine
+Additional Sound Design,David Rovin
+Additional Sound Design,Pedro Seminario
+Additional Sound Design,Wabi Sabi Sound
+Additional Sound Design,Andrew Lackey
+Additional Sound Design,Geoffrey Garnett
+Additional Sound Design,Warner Bros. Sound
+Additional Sound Design,Bryan Watkins
+Additional Sound Design,Mitchell Osias
+Foley Services - Game,Warner Bros. Sound
+Foley Services - Game,John Roesch
+Foley Services - Game,Alyson Moore
+Foley Services - Game,Mary Jo Lang
+Additional Sound Producers,Sarah Hoist
+Additional Sound Producers,Jessica Louché
+CINEMATIC Supervising Sound Designer,Paul Menichini
+Cinematic Sound Producer,Caroline Hernandez
+Composer - Cinematics,Neal Acree
+Sound Design,David Farmer
+Sound Design,Stuart Provine
+Sound Design,Chris Kowalski
+Foley Artist,Gregg Barbanell
+Foley Mixer,Darin Mann
+Cinematic Re-Recording Mixer,Thomas C. Brewer
+Cinematic Sound Editor,Clinton Jones
+Cinematic Sound Editor,Alexander Ephraim
+MUSIC Lead Composer,Russell Brower
+Composers,Neal Acree
+Composers,Sam Cardon
+Composers,Derek Duke
+Composers,Edo Guidotti
+Composers,Jeremy Soule
+Composers,Glenn Stafford
+Score Performed By,Northwest Sinfonia and Chorus
+Score Performed By,Contracted by Simon James and David Sabee
+Featured Musicians,Erhu solos by Jiebing Chen
+Featured Musicians,Guzheng solos by Cynthia Hsiang
+Featured Musicians,Dizi solos by Chris Bleth
+Orchestration,M.W. Alexander
+Orchestration,Kurt Bestor
+Orchestration,Nick Greer
+Orchestration,Ira Hearshen
+Orchestration,Larry Kenton
+Orchestration,Penka Kouneva
+Orchestral Scoring Mixer,John Kurlander
+Orchestral Sub-Mixes,John Rodd
+Live Sessions and Orchestration Produced By,Edo Guidotti
+Music Preparation,Robert Puff
+Music Preparation,PRM Seattle Music Preparation
+Orchestra and Choir Stems Mixed at,Atlantis Group
+Orchestra and Choir Stems Mixed at,John Kurlander
+Pro Tools Operator/Editor,Jorge Velasco
+Original Soundtrack Mastered By,Patricia Sullivan at Bernie Grundman Mastering
+Original Soundtrack Mastered By,Hollywood
+Original Soundtrack Mastered By,CA
+VOICE Casting and Voice Director,Andrea Toyias
+Additional Voice Direction,Andrea Romano
+Voice Over Producer,Tina T. Nguyen
+Design & Editing,Chris De La Pena
+Design & Editing,Peter Steinbach
+Dialogue Engineers & Recording,L.A. Studios
+Voice Over Cast,Lauren Tom
+Voice Over Cast,Matthew Yang King
+Voice Over Cast,Jim Cummings
+Voice Over Cast,James Hong
+Voice Over Cast,Keone Young
+Voice Over Cast,Patrick Seitz
+Voice Over Cast,David Lodge
+Voice Over Cast,Laura Bailey
+Voice Over Cast,Jon Olson
+Voice Over Cast,Michael Hawley
+Voice Over Cast,Kate Higgins
+Voice Over Cast,Courtenay Taylor
+Voice Over Cast,Fred Tatasciore
+Voice Over Cast,Eric Bauza
+Voice Over Cast,Todd Stone
+Voice Over Cast,David Shaugnessy
+Voice Over Cast,Alyson Reed
+Voice Over Cast,Jamieson Price
+Voice Over Cast,Barry Dennen
+Voice Over Cast,Travis Willingham
+Voice Over Cast,Gideon Emery
+Voice Over Cast,Jim Pirri
+Voice Over Cast,Neil Kaplan
+Voice Over Cast,Dave Mallow
+Voice Over Cast,Jim Meskimen
+Voice Over Cast,Daniel Riordan
+Voice Over Cast,Jim Ward
+Voice Over Cast,Richard Green
+Voice Over Cast,Cree Summer
+Voice Over Cast,Liam O’brien
+Voice Over Cast,Crispin Freeman
+Voice Over Cast,Feodor Chin
+Voice Over Cast,Paul Nakauchi
+Voice Over Cast,Brian Tochi
+Voice Over Cast,JB Blanc
+Voice Over Cast,Steve Blum
+Voice Over Cast,Anna Graves
+Voice Over Cast,Salli Saffioti
+Voice Over Cast,Robin Atkin-Downes
+Voice Over Cast,Yuri Lowenthal
+Voice Over Cast,Josh Keaton
+Voice Over Cast,Tim Dang
+Voice Over Cast,Peter Jessop
+Voice Over Cast,James Sie
+Voice Over Cast,Matt Mercer
+Voice Over Cast,James Horan
+Voice Over Cast,Laura Post
+Voice Over Cast,Greg Chun
+Voice Over Cast,Karen Strassman
+Voice Over Cast,Parry Shen
+Voice Over Cast,Marc Worden
+Voice Over Cast,Paul Hungerford
+Voice Over Cast,Ron Yuan
+Voice Over Cast,Peter Lurie
+Voice Over Cast,Nick Jameson
+Voice Over Cast,Jeremy Schwartz
+Voice Over Cast,Mark Bramhall
+Voice Over Cast,Dave Fennoy
+Voice Over Cast,Keith Ferguson
+Voice Over Cast,Mike Hagiwara
+Voice Over Cast,Janice Kawaye
+Voice Over Cast,Frank Welker
+Voice Over Cast,Rodney To
+Voice Over Cast,Dana Lee
+Voice Over Cast,Jonathan Adams
+Voice Over Cast,Donald Li
+Voice Over Cast,James Mathis
+Voice Over Cast,John Gegenhuber
+Voice Over Cast,Dave Carter
+Voice Over Cast,Debra Wilson
+Voice Over Cast,David Blue
+Voice Over Cast,Michael Donovan
+Voice Over Cast,Carlos Alzaraqui
+Voice Over Cast,John Mariano
+Voice Over Cast,Eric Lopez
+Voice Over Cast,Eugene Kim
+Voice Over Cast,Kath Soucie
+Voice Over Cast,Jen Sweeney
+Voice Over Cast,Pat Pinney
+Voice Over Cast,Vic Chao
+Voice Over Cast,Kim Mai Guest
+Voice Over Cast,Rick Wasserman
+Voice Over Cast,Armin Shimerman
+Voice Over Cast,Michael McConnohie
+Voice Over Cast,David DeSantos
+Voice Over Cast,Stephanie Sheh
+Voice Over Cast,Richard Horvitz
+Voice Over Cast,Nika Futterman
+Voice Over Cast,Gregg Berger
+Voice Over Cast,Sumalee Montano
+Voice Over Cast,Ben Diskin
+Voice Over Cast,Joey D’Auria
+Voice Over Cast,Danny Mann
+Voice Over Cast,Aaron Phillips
+Voice Over Cast,Liz Brunette
+Voice Over Cast,Claudia Choi
+Voice Over Cast,Jessica Straus
+Voice Over Cast,Minae Noji
+Voice Over Cast,Grey Delisle
+Voice Over Cast,Terry Stone
+Voice Over Cast,Valerie Arem
+Voice Over Cast,Kevin Killebrew
+Voice Over Cast,Alano Massi
+Voice Over Cast,Amy Hill
+Voice Over Cast,April Hong
+Voice Over Cast,Chris Metzen
+Voice Over Cast,Dave Fouquette
+Voice Over Cast,June Kyoto Lu
+Voice Over Cast,Kieron Elliot
+Voice Over Cast,Michael Beattie
+Voice Over Cast,Nick Omana
+Voice Over Cast,Rajia Baroudi
+Voice Over Cast,Vanessa Marshall
+Voice Over Cast,Sab Shimono
+Monster Voice Effects,Fred Tatasciore
+Monster Voice Effects,Dave Mallow
+Monster Voice Effects,Jon Olson
+Monster Voice Effects,Darryl Kurylo
+Monster Voice Effects,Debra Wilson
+Monster Voice Effects,Patrick Seitz
+Monster Voice Effects,Dee Bradley Baker
+Monster Voice Effects,Lani Minella
+Monster Voice Effects,Dave Fouquette
+Supervisor,Joeyray Hall
+Producer,Angela Blake
+Editors,Brian Horn
+Editors,Rebecca Lilienfeld
+Editors,Lucas Merino
+Editors,Jake Patton
+Filming and Capturing,Jonny Throop
+Art/Visual Design,Larissa Bussell
+Art/Visual Design,Matias Volkert
+Additional Work by,Ryan Sly
+"Senior Director, Global Platform Services",Michael Gilmartin
+"Senior Managers, Platform Services",Frédéric Baudet (EU)
+"Senior Managers, Platform Services",Jong Hyuk Lee (KR)
+"Senior Managers, Platform Services",Marc Alexandre-Plouffe (CN)
+Senior Manager,Jason Walker
+Project Managers,Edgar Flores
+Project Managers,Andy Houghtelin
+Project Managers,David Brown
+Analytics Manager,Ashok Viswanathan
+Analytics UX Designers,Anthony Reyes
+Analytics UX Designers,Hansa Wahla
+Analytics Software Engineers,Ken Adams
+Analytics Software Engineers,Phillip Dettorre
+Analytics Software Engineers,John Pombo
+Analytics Software Engineers,Jonathan Hankey
+Analytics Software Engineers,Pietro Gobbato
+Analytics Software Engineers,Andrea Opimitti
+Analytics Software Engineers,Hansa Wahla
+Senior Manager,John Herndon
+Senior Producer,Brett Roark
+Producers,Paul Carver
+Producers,Marshall Harlan
+Producers,Casey Marissa Wu
+Lead Programmer,William Warnecke
+Senior Programmer,Lucas Johnston
+Programmers,Anton Burdukovskiy
+Programmers,Bob Chancellor
+Programmers,Damien Chow
+Programmers,Daniel Dao
+Programmers,Samuel Hopp
+Programmers,Xing Jin
+Programmers,Ryan Landis
+Programmers,Eric Lloyd
+Programmers,Robbie McMahon
+Programmers,Brenna Moore
+Programmers,Travis Thornton
+Interns,Nathan Carlson
+Interns,Jerry Cheng
+Interns,Joe Malmsten
+Additional Programming,Christopher Wright
+SUPPORT Assistant Manager,Mark Milan
+Production,Clayton Dubin
+Production,Zach Bogatz
+Production,Andrew Russell
+Programmers,Jerry Blanco
+Programmers,David Chadwick
+Programmers,Kelly Chun
+Programmers,Marius Jivan
+Programmers,Jason Johannes
+Programmers,Dake Luo
+Programmers,Mike Murphy
+Programmers,Nick Urrea
+Programmers,Gary Young
+Technical Artist,Lorenzo Miñaca
+Key Processors,Russell Iseri
+Key Processors,Gene Rotsch
+QUALITY Senior Manager,Mark Moser
+Managers,Jonathan Mankin
+Managers,Sean McCrea
+Assistant Managers,Michael Corpora
+Assistant Managers,Rick Kennedy
+Assistant Managers,William Roseman
+Assistant Managers,Shawn Su
+Assistant Managers,Taylor Westfall
+Supervisors,Dustin Bosteder
+Supervisors,Michael Burghart
+Supervisors,Tom Chua
+Supervisors,Christopher Clarke
+Supervisors,Joel Clift
+Supervisors,Matt Clifton
+Supervisors,Ron Gray
+Supervisors,Peter Hsu
+Supervisors,Lance Karutz
+Supervisors,Jonathan Mason
+Supervisors,Hector Melendres
+Supervisors,Julio Miranda
+Supervisors,Amadeus Phan-Thanh
+"Lead Quality Assurance Analyst, Mists of Pandaria",Jeffrey J. Hicks
+"Assistant Lead Quality Assurance Analysts, Mists of Pandaria",Zach Callanan
+"Assistant Lead Quality Assurance Analysts, Mists of Pandaria",Whitney Day
+"Assistant Lead Quality Assurance Analysts, Mists of Pandaria",David Kerwin
+"Content Specialists, Mists of Pandaria",Justin Boehm
+"Content Specialists, Mists of Pandaria",Jason Briggs
+"Content Specialists, Mists of Pandaria",Andrew Buczacki
+"Content Specialists, Mists of Pandaria",David Dubenko
+"Content Specialists, Mists of Pandaria",Tom Ellis
+"Content Specialists, Mists of Pandaria",Sean Hogan
+"Content Specialists, Mists of Pandaria",Joseph Magdalena
+"Content Specialists, Mists of Pandaria",Lance Powell
+"Content Specialists, Mists of Pandaria",Sverre Rasmussen
+"Content Specialists, Mists of Pandaria",Ryan Schwind
+"Content Specialists, Mists of Pandaria",Trey Spisak
+"Content Specialists, Mists of Pandaria",Clifton Wilcox
+"Lead Quality Assurance Analyst, Battle.net",Nicole Parry
+"Assistant Lead Quality Assurance Analysts, Battle.net",Spencer Halls
+"Assistant Lead Quality Assurance Analysts, Battle.net",Rob Kuczynski
+"Content Specialists, Battle.net",Hunter Curren
+"Content Specialists, Battle.net",Sheila Perez
+"Content Specialists, Battle.net",Aaron Ponoroff
+"Content Specialists, Battle.net",Richard Washburn
+"Lead Quality Assurance Analyst, User Experience",David Sanchez
+"Assistant Lead Quality Assurance Analyst, User Experience",Jeramy McIntyre
+"Content Specialist, User Experience",Ryan Crow
+Mists of Pandaria Product Analysts,Gareth Ackerman
+Mists of Pandaria Product Analysts,Michael Alcorn
+Mists of Pandaria Product Analysts,Tony Allain
+Mists of Pandaria Product Analysts,David Anderson
+Mists of Pandaria Product Analysts,Kyle Aronson
+Mists of Pandaria Product Analysts,Dean Ayala
+Mists of Pandaria Product Analysts,Adam Baxter
+Mists of Pandaria Product Analysts,Shawn Benson
+Mists of Pandaria Product Analysts,David Biggs
+Mists of Pandaria Product Analysts,Chris Boyd
+Mists of Pandaria Product Analysts,Matt Browning
+Mists of Pandaria Product Analysts,Jessica Castillo
+Mists of Pandaria Product Analysts,Jim Chan
+Mists of Pandaria Product Analysts,Bonnie Chang
+Mists of Pandaria Product Analysts,Jonathan Chen
+Mists of Pandaria Product Analysts,Matthew Cederquist
+Mists of Pandaria Product Analysts,Linny Cooke
+Mists of Pandaria Product Analysts,Donnie Cornwell
+Mists of Pandaria Product Analysts,Jared Coulston
+Mists of Pandaria Product Analysts,Wendy Cowles
+Mists of Pandaria Product Analysts,Brett Crawford
+Mists of Pandaria Product Analysts,Hilda Cruz
+Mists of Pandaria Product Analysts,Andrew De Sousa
+Mists of Pandaria Product Analysts,Jason DeFord
+Mists of Pandaria Product Analysts,Landon Doi
+Mists of Pandaria Product Analysts,Alex Dragojlovic
+Mists of Pandaria Product Analysts,Megan Duck
+Mists of Pandaria Product Analysts,William Ebright
+Mists of Pandaria Product Analysts,Ahmad Eletreby
+Mists of Pandaria Product Analysts,Keith Ennis
+Mists of Pandaria Product Analysts,Victor Esquivias
+Mists of Pandaria Product Analysts,Timothy Evans
+Mists of Pandaria Product Analysts,Martin Falster
+Mists of Pandaria Product Analysts,Duncan Field
+Mists of Pandaria Product Analysts,Elissa Flores
+Mists of Pandaria Product Analysts,Josh Fuesting
+Mists of Pandaria Product Analysts,Joshua Greenfield
+Mists of Pandaria Product Analysts,Kevin Gu
+Mists of Pandaria Product Analysts,Herbert Haneke
+Mists of Pandaria Product Analysts,Eric Hansen
+Mists of Pandaria Product Analysts,Kyle Hartline
+Mists of Pandaria Product Analysts,Patrick Heagany
+Mists of Pandaria Product Analysts,Ron Hodge
+Mists of Pandaria Product Analysts,Brian Inboden
+Mists of Pandaria Product Analysts,Sarah Inman
+Mists of Pandaria Product Analysts,Adam Z. Jackson
+Mists of Pandaria Product Analysts,Brandon Jacobson
+Mists of Pandaria Product Analysts,Scott Johnston
+Mists of Pandaria Product Analysts,Tim Jones
+Mists of Pandaria Product Analysts,Mark Kelada
+Mists of Pandaria Product Analysts,David Kingsbury
+Mists of Pandaria Product Analysts,Keith Kodama
+Mists of Pandaria Product Analysts,Erik Larson
+Mists of Pandaria Product Analysts,Magdalena Lazarov
+Mists of Pandaria Product Analysts,Brandon Lee
+Mists of Pandaria Product Analysts,Angela Li
+Mists of Pandaria Product Analysts,Jonathan Loeffler
+Mists of Pandaria Product Analysts,Nicholas Louie
+Mists of Pandaria Product Analysts,Steve Martinez
+Mists of Pandaria Product Analysts,Ryan Matsuba
+Mists of Pandaria Product Analysts,Andrew McClain
+Mists of Pandaria Product Analysts,Neemaa Meskin
+Mists of Pandaria Product Analysts,Anthony Nassar
+Mists of Pandaria Product Analysts,Alex Neyman
+Mists of Pandaria Product Analysts,Kevin O’Brien
+Mists of Pandaria Product Analysts,Erika Page
+Mists of Pandaria Product Analysts,Trevor Page
+Mists of Pandaria Product Analysts,Carlos Penate
+Mists of Pandaria Product Analysts,Brian Pierron
+Mists of Pandaria Product Analysts,Robert Pionke
+Mists of Pandaria Product Analysts,Jennifer Powell
+Mists of Pandaria Product Analysts,David Quick
+Mists of Pandaria Product Analysts,Nicki Quinn
+Mists of Pandaria Product Analysts,Joseph Ransom
+Mists of Pandaria Product Analysts,Gregory Risselada
+Mists of Pandaria Product Analysts,Jared Ritter
+Mists of Pandaria Product Analysts,William Robertson
+Mists of Pandaria Product Analysts,Joseph Romano
+Mists of Pandaria Product Analysts,Desirae Rubio
+Mists of Pandaria Product Analysts,Charles Salzman
+Mists of Pandaria Product Analysts,Chris Sappington
+Mists of Pandaria Product Analysts,Justin Shapp
+Mists of Pandaria Product Analysts,Travis Shute
+Mists of Pandaria Product Analysts,Kevin Starr
+Mists of Pandaria Product Analysts,Wes Stratton
+Mists of Pandaria Product Analysts,Drew Strunk
+Mists of Pandaria Product Analysts,Paul Sullivan
+Mists of Pandaria Product Analysts,Alex Swift
+Mists of Pandaria Product Analysts,Scott Trujillo
+Mists of Pandaria Product Analysts,Zach Unsell
+Mists of Pandaria Product Analysts,Adam Van Dyke
+Mists of Pandaria Product Analysts,Daniel Van Essen
+Mists of Pandaria Product Analysts,Andrew Vassallo
+Mists of Pandaria Product Analysts,Steve Walker
+Mists of Pandaria Product Analysts,Thomas Watson
+Mists of Pandaria Product Analysts,John Yang
+Mists of Pandaria Product Analysts,Eric Yasukochi
+Mists of Pandaria Product Analysts,Rebecca Ysteboe
+Mists of Pandaria Product Analysts,Kevin Zhao
+Other Product Analysts,Mark Agustin
+Other Product Analysts,Steven Alexander
+Other Product Analysts,Stephen Alvarado
+Other Product Analysts,Athena Anderson
+Other Product Analysts,Evan Aronson
+Other Product Analysts,Seamus Auck
+Other Product Analysts,Chris Avina
+Other Product Analysts,George Backus
+Other Product Analysts,Ciji Bambrick
+Other Product Analysts,George Bancroft
+Other Product Analysts,Dylan Bates
+Other Product Analysts,Brandon Brennan
+Other Product Analysts,Brent Brewington
+Other Product Analysts,Jon Briggs
+Other Product Analysts,Nathan Brown
+Other Product Analysts,Christine Cadman
+Other Product Analysts,Kayleigh Calder
+Other Product Analysts,Kevin Caldwell
+Other Product Analysts,Chris Cavalieri
+Other Product Analysts,Joni Cheng
+Other Product Analysts,Michelle Chicos
+Other Product Analysts,Davis Christiansen
+Other Product Analysts,Bret Cocking
+Other Product Analysts,Jonathan Coyle
+Other Product Analysts,Garret Craig
+Other Product Analysts,Jacob Davidson-Lingo
+Other Product Analysts,Christopher Davila
+Other Product Analysts,Christian Decomain
+Other Product Analysts,Carlos Diaz
+Other Product Analysts,Cynthia Dickson
+Other Product Analysts,Eric Dobbs
+Other Product Analysts,Foster M. Elmendorf
+Other Product Analysts,Garrett Elmendorf
+Other Product Analysts,Austin Feeney
+Other Product Analysts,Ryan Felton
+Other Product Analysts,Matt Fieler
+Other Product Analysts,Joseph Floro
+Other Product Analysts,Tina Fu
+Other Product Analysts,Tyler Fuchs
+Other Product Analysts,Denis Genest
+Other Product Analysts,Nicole Gillett
+Other Product Analysts,Matt Grubb
+Other Product Analysts,Cynthia Hall
+Other Product Analysts,Jason Thor Hall
+Other Product Analysts,Nam Han
+Other Product Analysts,Jesse Hill
+Other Product Analysts,Michael Hong
+Other Product Analysts,Zach Hopp
+Other Product Analysts,Kevin Horng
+Other Product Analysts,Ken Huang
+Other Product Analysts,Jonathan Hwang
+Other Product Analysts,Salvatore Ianiero
+Other Product Analysts,Chad Jarrett
+Other Product Analysts,John Kim
+Other Product Analysts,Lawrence King
+Other Product Analysts,Henry Kung
+Other Product Analysts,Jason Kwon
+Other Product Analysts,Matthew Kyle
+Other Product Analysts,Kyle Langs
+Other Product Analysts,Aaron Larson
+Other Product Analysts,Donald Lawrenz
+Other Product Analysts,Kieu Le
+Other Product Analysts,Brian Lee
+Other Product Analysts,Cathy Lee
+Other Product Analysts,Frankie Lee Jr.
+Other Product Analysts,Frances Lin
+Other Product Analysts,Rebecca Lin
+Other Product Analysts,Richard Lin
+Other Product Analysts,Asher Litwin
+Other Product Analysts,Anthony Lowery
+Other Product Analysts,Cynthia Loyd-Peterson
+Other Product Analysts,Jeff Manners
+Other Product Analysts,Sean Masterson
+Other Product Analysts,Jared Mayberry
+Other Product Analysts,Byron Mehlsack
+Other Product Analysts,Emily Mei
+Other Product Analysts,Tony Misgen
+Other Product Analysts,Frank Mummert
+Other Product Analysts,Major Mummert
+Other Product Analysts,Dan V. Nguyen
+Other Product Analysts,David Ortiz
+Other Product Analysts,Art Peshkov
+Other Product Analysts,Max Peters
+Other Product Analysts,Kyle Phillips
+Other Product Analysts,Roy Pitts
+Other Product Analysts,Daniel Polcari
+Other Product Analysts,Mike Powell
+Other Product Analysts,Dana Pull
+Other Product Analysts,Matthew Rader
+Other Product Analysts,Derek Rakos
+Other Product Analysts,Jessica Richards
+Other Product Analysts,Rob Rivera
+Other Product Analysts,Jacob Rodriguez
+Other Product Analysts,Scott Rofe
+Other Product Analysts,Carlin Rogers
+Other Product Analysts,Tom Ryan
+Other Product Analysts,Michael Sassone
+Other Product Analysts,Chris Savolskis
+Other Product Analysts,Michael Schwan Jr.
+Other Product Analysts,Aaron Sedillo
+Other Product Analysts,Jeffrey Shyy
+Other Product Analysts,Andrew Silvernail
+Other Product Analysts,Gurpreet Singh Wahla
+Other Product Analysts,Charles Soon
+Other Product Analysts,James Southall
+Other Product Analysts,Kurt Sparkuhl
+Other Product Analysts,Rick Spears
+Other Product Analysts,Nolan Speed
+Other Product Analysts,Steven Swickard
+Other Product Analysts,Jennifer Szmurlo
+Other Product Analysts,Victoria W. Tao
+Other Product Analysts,Graig Taylor
+Other Product Analysts,Max Thompson
+Other Product Analysts,Michael Thompson
+Other Product Analysts,Dustin Trimble
+Other Product Analysts,Joe Truong
+Other Product Analysts,Tom Twedell
+Other Product Analysts,Neil Stephen Valdez
+Other Product Analysts,Nathaniel Valenta
+Other Product Analysts,Lewis Villamar
+Other Product Analysts,Darian Vorlick
+Other Product Analysts,Clint Walls
+Other Product Analysts,Tiffany Wat
+Other Product Analysts,Jenica Waters
+Other Product Analysts,Shawn Webb
+Other Product Analysts,Mike Westergaard
+Other Product Analysts,Phillip Williams
+Other Product Analysts,Peter Woo
+Other Product Analysts,Matt Worcester
+Other Product Analysts,Steven Worcester
+Other Product Analysts,Kea Yonni
+Other Product Analysts,David Yoon
+Additional Testing,Lee Ake
+Additional Testing,Matthew D. Allen
+Additional Testing,Vanessa Allen
+Additional Testing,Lukasz Bialk
+Additional Testing,Robert Boxeth
+Additional Testing,Kyle Dates
+Additional Testing,Timothy Davis
+Additional Testing,Richard Dievendorff
+Additional Testing,Brian Fattorini
+Additional Testing,Danny Flannagan
+Additional Testing,Marshall Harlan
+Additional Testing,Nicholas Hill
+Additional Testing,Charles Hodgens
+Additional Testing,Michael Horning
+Additional Testing,Leanne Huynh
+Additional Testing,Mark Kamimoto
+Additional Testing,Alec Kettenhofen
+Additional Testing,John Lynch
+Additional Testing,Gilbert Mcguire
+Additional Testing,Krystine Munshower
+Additional Testing,Timothy Reiff
+Additional Testing,Dustin Remmel
+Additional Testing,Jessica Rogers
+Additional Testing,Marc Tormo Carulla
+Additional Testing,George Vasiliadis
+Additional Testing,Don Vu
+Additional Testing,David Warner
+Additional Testing,Herman Waters
+Interns,Andrew Beaudry
+Interns,Karmbir Chima
+Interns,Brian Chuchua
+Interns,Trevor Hilseth
+TECHNICAL Managers,Ted Louie
+TECHNICAL Managers,Arec Nevers
+Assistant Managers,John O’Brien
+Assistant Managers,Tharlie Richardson
+Assistant Managers,Kenneth Pinó (EU)
+Supervisors,Todd Attaway
+Supervisors,Steve McClory
+Supervisors,Ian S. Nelson
+Supervisors,Shaina Peshkov
+Technical Quality Assurance Team Leads,Lynn DeVries
+Technical Quality Assurance Team Leads,Ed Hanley
+Technical Quality Assurance Team Leads,David Loya
+Technical Quality Assurance Team Leads,Matt Patterson
+Technical Quality Assurance Team Leads,Gilbert Samuelian
+Technical Quality Assurance Team Leads,Eric Thibeau
+Technical Quality Assurance Assistant Team Leads,Daniel Berman
+Technical Quality Assurance Assistant Team Leads,Nicholas Buczynski
+Technical Quality Assurance Assistant Team Leads,John Carpenter
+Technical Quality Assurance Assistant Team Leads,Dustin Distefano
+Technical Quality Assurance Assistant Team Leads,Benjamin LeBar
+Technical Quality Assurance Assistant Team Leads,Ben Lilley
+Technical Quality Assurance Assistant Team Leads,Anthony Sierra
+Technical Quality Assurance Assistant Team Leads,Ronny Yoon
+Technical Quality Assurance Specialists,Albert Portillo
+Technical Quality Assurance Specialists,Nicholas Nguyen
+Technical Quality Assurance Specialists,Scott Chaney
+Technical Quality Assurance Analysts,Raphael Ahad
+Technical Quality Assurance Analysts,Rie Arai
+Technical Quality Assurance Analysts,Dan Bach
+Technical Quality Assurance Analysts,Nate Barber
+Technical Quality Assurance Analysts,Alexys Baxter
+Technical Quality Assurance Analysts,Jerome Bonoan
+Technical Quality Assurance Analysts,Edan Bryant
+Technical Quality Assurance Analysts,David Carlock
+Technical Quality Assurance Analysts,Aaron Carter
+Technical Quality Assurance Analysts,Phillip Chiu
+Technical Quality Assurance Analysts,Zachary Chow (in loving memory)
+Technical Quality Assurance Analysts,Beau Cooper
+Technical Quality Assurance Analysts,Chad Daley
+Technical Quality Assurance Analysts,Andrew Dank
+Technical Quality Assurance Analysts,Michael Dinger
+Technical Quality Assurance Analysts,Kenneth Doyle
+Technical Quality Assurance Analysts,Trevor Drissel
+Technical Quality Assurance Analysts,Ryan Dromgoole
+Technical Quality Assurance Analysts,Jean-Marc Genest
+Technical Quality Assurance Analysts,Collin Gilbert
+Technical Quality Assurance Analysts,Ralph Gutierrez
+Technical Quality Assurance Analysts,John Ha
+Technical Quality Assurance Analysts,Mike Hall
+Technical Quality Assurance Analysts,Valerie Hilgenfeldt
+Technical Quality Assurance Analysts,Kevin Landgendoen
+Technical Quality Assurance Analysts,James Leaman
+Technical Quality Assurance Analysts,Joseph Lewis
+Technical Quality Assurance Analysts,Joshua Lewis
+Technical Quality Assurance Analysts,Philip Luke
+Technical Quality Assurance Analysts,Kevin Matthews
+Technical Quality Assurance Analysts,Zachary McCann
+Technical Quality Assurance Analysts,Daniel Mooneyham
+Technical Quality Assurance Analysts,Daniel Morgan
+Technical Quality Assurance Analysts,Vinnie Morrison
+Technical Quality Assurance Analysts,Stephen Murray
+Technical Quality Assurance Analysts,Scott Newman
+Technical Quality Assurance Analysts,Matthew Novy
+Technical Quality Assurance Analysts,Monique Ory
+Technical Quality Assurance Analysts,Carlos Perez
+Technical Quality Assurance Analysts,Adam Portillo
+Technical Quality Assurance Analysts,Shah Rahman
+Technical Quality Assurance Analysts,Brad Rhodes
+Technical Quality Assurance Analysts,Bob Richardson
+Technical Quality Assurance Analysts,Matthieu Roussotte
+Technical Quality Assurance Analysts,Matthew Runyan
+Technical Quality Assurance Analysts,Devin Saverline
+Technical Quality Assurance Analysts,Andrew Sciametta
+Technical Quality Assurance Analysts,David Scott
+Technical Quality Assurance Analysts,Shaun Smiley
+Technical Quality Assurance Analysts,Nicholas Stallings
+Technical Quality Assurance Analysts,Pete Stilwell
+Technical Quality Assurance Analysts,Keita Sumikawa
+Technical Quality Assurance Analysts,Benj Sykes
+Technical Quality Assurance Analysts,Josh Thomas
+Technical Quality Assurance Analysts,Ryan Ward
+Technical Quality Assurance Analysts,Devin Webster
+Technical Quality Assurance Analysts,Devin Wilson
+Technical Quality Assurance Analysts,Melissa Xiong
+Technical Quality Assurance Analysts,Jason Yang
+Technical Quality Assurance Analysts,Steven Yi
+Technical Quality Assurance Analysts,Jonny Yore
+Technical Quality Assurance Analysts,Nick Yore
+Technical Quality Assurance Analysts,Christian Berwind (EU)
+Technical Quality Assurance Analysts,Manuel Dangl (EU)
+Technical Quality Assurance Analysts,Alyona Duclap (EU)
+Technical Quality Assurance Analysts,Vincent Moulin (EU)
+Technical Quality Assurance Analysts,Jerome Pérez Papadopoulos (EU)
+Technical Quality Assurance Analysts,Patricia Pérez Vera (EU)
+Technical Quality Assurance Analysts,Arnaud Schwarz (EU)
+Technical Quality Assurance Analysts,Aliaksei Sedzin (EU)
+Additional Technical Analysts,Matthew Stratford
+Additional Technical Analysts,Jason Weng
+COMPATIBILITY Assistant Manager,Luis Rivas
+Compatibility Team Lead,Jason Kwan
+Assistant Compatibility Team Leads,James Gilbertson
+Assistant Compatibility Team Leads,Matthew S. Sherman
+Development Team Liaisons,Anton Hsin
+Development Team Liaisons,Christopher Mountain
+Compatibility Analysts,Byron Black
+Compatibility Analysts,Alex Bujold
+Compatibility Analysts,Ken DePalo
+Compatibility Analysts,Steve Jaquith
+Compatibility Analysts,Alex Maltsev
+Compatibility Analysts,Danny H. Nguyen
+Compatibility Analysts,Nigel Nikitovich
+Compatibility Analysts,Michael Reardon
+Compatibility Analysts,Ian Sorensen
+Compatibility Analysts,Lawrence Wei
+Compatibility Analysts,Jose Zamora
+Additional Compatibility Analyst,Ray Laubach
+LOCALIZATION Senior Manager,William Barnes
+Producers,Joseph Hsu
+Localization Manager,Joonho Lee
+Localization Manager,Inés Rubio
+Localization Manager,Jeffrey Tang
+Localization Assistant Managers,Tristan Lhomme
+Localization Assistant Managers,Alexander Lyubov
+Localization & QA Coordinator,Antoine Dulac
+Localization Supervisor,Concepción González
+Localization Supervisor,Hao Yuan
+Localization Audio Specialists,Ekaterina Bendrysheva
+Localization Audio Specialists,Frank Chang
+Localization Audio Specialists,Ainara Echaniz
+Localization Audio Specialists,Emil Lu
+Localization Audio Specialists,Kai Moosmann
+Localization Audio Specialists,Frédéric Vasseur
+Localization Leads,Florian Descher
+Localization Leads,Ekaterina Krasnikova
+Localization Leads,Jiang Pu
+Localization Leads,M. Ángeles Rodríguez Marrero
+Localization Leads,Anne Studer
+Localization Leads,William Tan
+Localization Leads,Gayeong Yoo
+Localization Editors,Svyatoslav Merlin
+Localization Editors,María Ermitas Barrasa Rodríguez
+Localization & QA Analysts,Laura Baccolini (Italian)
+Localization & QA Analysts,Krzysztof Kurek (Polish)
+LOCALIZATION Castilian Spanish,David Flórez Herrero
+LOCALIZATION Castilian Spanish,Martín Goñi Torres
+LOCALIZATION Castilian Spanish,Carmen Priego
+LOCALIZATION Castilian Spanish,Paula del Valle Sánchez
+French,Claire Amon-Bajard
+French,Christelle Bravin
+French,Bruno Cailloux
+French,Anne-Sophie Denglos
+French,Thomas Ernoux
+French,Alexis Roy-Petit
+French,Anne Vétillard
+German,Robin Drefs
+German,Sebastian Ewald
+German,Julika Mitschker
+German,Katja Raaf
+German,Katharina Reiche
+Korean,Shinyong Ha
+Korean,Hyang Jung
+Korean,June Kim
+Korean,Kyoungho Ko
+Korean,Wade Lim
+Korean,Harry Park
+Korean,Yooshin Yang
+Russian,Maria Artamonova
+Russian,Svetlana Gribanova
+Russian,Maria Kokova
+Russian,Ievgen Makarevych
+Russian,Igor Sobolevsky
+Simplified Chinese,Alexis Zhang
+Simplified Chinese,Carsten Chai
+Simplified Chinese,Eric Zhang
+Simplified Chinese,Gabriel Liu
+Simplified Chinese,Hawk Li
+Simplified Chinese,Kevin Shen
+Traditional Chinese,Chris Hu
+Traditional Chinese,Felicia Chen
+Traditional Chinese,Hank Hsu
+Traditional Chinese,Jessie Lin
+Traditional Chinese,Kenneth Tung
+Traditional Chinese,Ross Lai
+Traditional Chinese,Yian Lee
+Italian (Synthesis),Luca Reynaud (Lead)
+Italian (Synthesis),Leonardo Gajo (Lead)
+Italian (Synthesis),Susanna Celotti (Assistant Lead)
+Italian (Synthesis),Stefano Battisti (Assistant Lead)
+Italian (Synthesis),Alessandro Seccafieno (Assistant Lead)
+Italian (Synthesis),Simone Urru (Assistant Lead)
+Italian (Synthesis),Pietro Dattola
+Italian (Synthesis),Fabio Tursi
+Italian (Synthesis),Danilo Spatafora
+Italian (Synthesis),Stefano Bertone
+Italian (Synthesis),Mauro Monti
+Italian (Synthesis),Simone Tagliaferri
+Italian (Synthesis),Davide Solbiati
+Italian (Synthesis),Paolo Caronni
+Italian (Synthesis),Andrea Della Calce
+Italian (Synthesis),Stefano Gaburri
+Italian (Synthesis),Paolo Celso
+Italian (Synthesis),Luca Reynaud
+Italian (Synthesis),Luisa Reina
+Italian (Synthesis),Ilenia Casella
+Italian (Synthesis),Manuela Ceccoli
+Brazilian Portuguese (Alpha CRC),Olivier Cabart (Games Division Manager)
+Brazilian Portuguese (Alpha CRC),Felippe Montez (Project Manager)
+Brazilian Portuguese (Alpha CRC),Priscila Caiado (Project Manager)
+Brazilian Portuguese (Alpha CRC),Bruno Galiza
+Brazilian Portuguese (Alpha CRC),Edmo Suassuna
+Brazilian Portuguese (Alpha CRC),Elton Mesquita
+Brazilian Portuguese (Alpha CRC),Fernanda Pamplona
+Brazilian Portuguese (Alpha CRC),Flávia Assis
+Brazilian Portuguese (Alpha CRC),Heber Costa
+Brazilian Portuguese (Alpha CRC),Paulo Henriques
+Brazilian Portuguese (Alpha CRC),Rodrigo Santos
+Brazilian Portuguese (Alpha CRC),Gustavo Nader (Voice Director)
+Localization QA Manager,Yvonne Shi
+Localization QA Assistant Managers,Michael Chen
+Localization QA Assistant Managers,Marc Ho
+Localization QA Assistant Managers,Alexander Ipfelkofer
+Localization QA Assistant Managers,Rubén López González
+Localization QA Assistant Managers,Maxim Mizin
+Localization QA Supervisors,Matt Coburn
+Localization QA Supervisors,Sanghak Jeon
+Localization QA Supervisors,Allen Sung
+Localization QA Supervisors,Siyi Xia
+Localization QA Leads,Jiro Cai
+Localization QA Leads,John Chen
+Localization QA Leads,Diego J. Díaz Gutiérrez
+Localization QA Leads,Euiyoul Kim
+Localization QA Leads,Jenny Q. Liu
+Localization QA Leads,Markus Peters
+Localization QA Leads,Alexey Pyatikhatka
+Localization QA Leads,Frédéric Tabard
+Localization QA Leads,Andy Xu
+Localization QA Specialist,Maxence Fleury
+LOCALIZATION Brazilian Portuguese,Carlos Almeida
+LOCALIZATION Brazilian Portuguese,Joao de Araujo Neto
+LOCALIZATION Brazilian Portuguese,Hsing H. Lee
+LOCALIZATION Brazilian Portuguese,Jared Morgan
+LOCALIZATION Brazilian Portuguese,Thiago Schreiner
+LOCALIZATION Brazilian Portuguese,Robert R. Wilson
+Castilian Spanish,Irene Buesa García
+Castilian Spanish,Pedro Fernández Prieto
+Castilian Spanish,Carlos Godo Borras
+Castilian Spanish,Pablo Lloreda Fernández
+Castilian Spanish,Ricardo Mora Expósito
+Castilian Spanish,Marta Pérez García
+Castilian Spanish,Fabián Salas Casillas
+Castilian Spanish,Juan José de la Torre García
+French,Mickael Bohin
+French,Maxence Fleury
+French,Stéphane Lam
+French,Mathieu Leenhardt
+French,Rémi Le Thery
+French,Graziella Marie
+French,Simon Rimbert
+French,Thomas Chabrier
+French,Hadrien Rudich
+German,Marco Baier
+German,Jan Becker
+German,Ben Choi
+German,Stefan Christ
+German,Thomas Flöter
+German,Dominik Hothow
+German,Michael Radnitz
+German,Daniel Radschun
+German,Marion Wacker
+Korean,Kyungsuk Kang
+Korean,Jung Hwan Kim
+Korean,Eunae Kong
+Korean,Jaeyang Kwak
+Korean,Haneul Lee
+Korean,Kyungjoon Lee
+Korean,Byungwoo Kwon
+Korean,Jaewoo Mo
+Korean,Heeyoung Park
+Korean,Yonghun Song
+Latin American Spanish,Xiaohu Alcocer
+Latin American Spanish,Ricardo Durán
+Latin American Spanish,Jimmie Jaimes
+Latin American Spanish,Hugo Miranda
+Latin American Spanish,Hector Morales
+Latin American Spanish,Gustavo Waehneldt
+Russian,Nikolay Bytskevich
+Russian,Victor Dobrovatov
+Russian,Iakov Dyskin
+Russian,Natalia Goncharova
+Russian,Anton Kochergin
+Russian,Andrey Kuzmin
+Russian,Maria Maisenovich
+Russian,Myroslav Savanzha
+Russian,Olga Sokolenko
+Simplified Chinese,Leon Dang
+Simplified Chinese,Ryan Gu
+Simplified Chinese,Jack Guo
+Simplified Chinese,Chunji Qiu
+Simplified Chinese,Buffon Sun
+Simplified Chinese,Juelin Wang
+Simplified Chinese,Mingxian Wang
+Simplified Chinese,Marvin Wu
+Simplified Chinese,He Zhang
+Simplified Chinese,Fran Zhang
+Simplified Chinese,Zhiqiang Li
+Traditional Chinese,Arthur Chang
+Traditional Chinese,Yung-Chi Chia
+Traditional Chinese,Martin Chung
+Traditional Chinese,Daniel Huang
+Traditional Chinese,Andy Liu
+Traditional Chinese,Qiao Qi
+Traditional Chinese,Chia-Lun Tsai
+Traditional Chinese,Dean Yang
+Italian (Synthesis),Adriano James Majocchi (Lead)
+Italian (Synthesis),Andrea Marrella (Lead)
+Italian (Synthesis),Antonio Edoardo Mondonico (Lead)
+Italian (Synthesis),Andreas Melgrati
+Italian (Synthesis),Mattia Cattaneo
+Italian (Synthesis),Diego Maniero
+Italian (Synthesis),Fabrizio Tobia
+Italian (Synthesis),Francesco Menna
+Italian (Synthesis),Stefano Marcoz
+Italian (Synthesis),Alessandro Parotti
+Italian (Synthesis),Riccardo Fumagalli
+Italian (Synthesis),Federico Cominotto
+Italian (Synthesis),Stefano Ferrari
+Italian (Synthesis),Andrea Cattagni
+ADDITIONAL Italian (Synthesis),Leonardo Gajo (Voice Direction and Audio Lead)
+ADDITIONAL Italian (Synthesis),Alessandro Seccafieno (Voice Direction)
+ADDITIONAL Italian (Synthesis),Manuel Auletta (Sound Engineer)
+ADDITIONAL Italian (Synthesis),Adriano Dezullian (Sound Engineer)
+ADDITIONAL Italian (Synthesis),Matteo Ormellese (Sound Engineer)
+ADDITIONAL Italian (Synthesis),Fabio Pantano (Sound Engineer)
+ADDITIONAL Italian (Synthesis),Ambra Ravaglia (Audio)
+ADDITIONAL Italian (Synthesis),Andrea Vavassori
+ADDITIONAL Italian (Synthesis),Davide Foschini
+ADDITIONAL Italian (Synthesis),Alessia Agustoni
+ADDITIONAL Italian (Synthesis),Stefano Ferretti
+ADDITIONAL Italian (Synthesis),Emanuele Casadio
+ADDITIONAL Italian (Synthesis),Fabio Scotti
+ADDITIONAL Italian (Synthesis),Andrea Mattevi
+ADDITIONAL Italian (Synthesis),Martino Valentini
+ADDITIONAL Italian (Synthesis),Irene Panzeri (HR)
+Brazilian Portuguese Voice Actors,Adriana Torres
+Brazilian Portuguese Voice Actors,Airam Pinheiro
+Brazilian Portuguese Voice Actors,Alexandre Drummond
+Brazilian Portuguese Voice Actors,Ana Paula Martins
+Brazilian Portuguese Voice Actors,Anderson Coutinho
+Brazilian Portuguese Voice Actors,André Belizar
+Brazilian Portuguese Voice Actors,Andrea Suhett
+Brazilian Portuguese Voice Actors,Bruna Laynes
+Brazilian Portuguese Voice Actors,Bruno Rocha
+Brazilian Portuguese Voice Actors,Carlor Gesteira
+Brazilian Portuguese Voice Actors,Carlos Comerio
+Brazilian Portuguese Voice Actors,Carlos Gesteira
+Brazilian Portuguese Voice Actors,Carlos Roberto
+Brazilian Portuguese Voice Actors,Carmem Sheila
+Brazilian Portuguese Voice Actors,Carol Crespo
+Brazilian Portuguese Voice Actors,Clécio Souto
+Brazilian Portuguese Voice Actors,Cristiano Torreão
+Brazilian Portuguese Voice Actors,Duda Espinoza
+Brazilian Portuguese Voice Actors,Ednaldo Lucena
+Brazilian Portuguese Voice Actors,Eduardo Borgerth
+Brazilian Portuguese Voice Actors,Eduardo Dascar
+Brazilian Portuguese Voice Actors,Elcio Romar
+Brazilian Portuguese Voice Actors,Erick Bougleux
+Brazilian Portuguese Voice Actors,Erika Menezes
+Brazilian Portuguese Voice Actors,Ettore zuim
+Brazilian Portuguese Voice Actors,Fabiola Martins
+Brazilian Portuguese Voice Actors,Felipe Drummond
+Brazilian Portuguese Voice Actors,Flávia Fontenelle
+Brazilian Portuguese Voice Actors,Geisa Vidal
+Brazilian Portuguese Voice Actors,Guilene Conte
+Brazilian Portuguese Voice Actors,Gutemberg Barros
+Brazilian Portuguese Voice Actors,Guto Nejaim
+Brazilian Portuguese Voice Actors,Hannah Buttel
+Brazilian Portuguese Voice Actors,Hércules Fernando
+Brazilian Portuguese Voice Actors,Isaac Schneider
+Brazilian Portuguese Voice Actors,Isis Koschdoski
+Brazilian Portuguese Voice Actors,Izabel Lira
+Brazilian Portuguese Voice Actors,José Augusto Sendim
+Brazilian Portuguese Voice Actors,José Leonardo
+Brazilian Portuguese Voice Actors,José Luiz Barbeito
+Brazilian Portuguese Voice Actors,José Santa Cruz
+Brazilian Portuguese Voice Actors,Juraciara Diacovo
+Brazilian Portuguese Voice Actors,Luiz Carlos Pesy
+Brazilian Portuguese Voice Actors,Malta Júnior
+Brazilian Portuguese Voice Actors,Marcelo Garcia
+Brazilian Portuguese Voice Actors,Márcia Coutinho
+Brazilian Portuguese Voice Actors,Márcia Morelli
+Brazilian Portuguese Voice Actors,Márcio Dondi
+Brazilian Portuguese Voice Actors,Marco Ribeiro
+Brazilian Portuguese Voice Actors,Marcos Souza
+Brazilian Portuguese Voice Actors,Marcus Jardym
+Brazilian Portuguese Voice Actors,Maria Helena Pader
+Brazilian Portuguese Voice Actors,Mariangela Cantú
+Brazilian Portuguese Voice Actors,Mário Cardoso
+Brazilian Portuguese Voice Actors,Mário Tupinambá
+Brazilian Portuguese Voice Actors,Marisa Leal
+Brazilian Portuguese Voice Actors,Mauricio Berger
+Brazilian Portuguese Voice Actors,Mauro Horta
+Brazilian Portuguese Voice Actors,Milton Parisi
+Brazilian Portuguese Voice Actors,Nando Lopes
+Brazilian Portuguese Voice Actors,Nando Sierpe
+Brazilian Portuguese Voice Actors,Orlando Drummond
+Brazilian Portuguese Voice Actors,Oscar Henriques
+Brazilian Portuguese Voice Actors,Paulo Bernardo
+Brazilian Portuguese Voice Actors,Pedro Alves
+Brazilian Portuguese Voice Actors,Pedro Eugênio
+Brazilian Portuguese Voice Actors,Pietro Mário
+Brazilian Portuguese Voice Actors,Rafael Pereira
+Brazilian Portuguese Voice Actors,Rafael Rodrigo
+Brazilian Portuguese Voice Actors,Raphael Rossatto
+Brazilian Portuguese Voice Actors,Raul Labanca
+Brazilian Portuguese Voice Actors,Reinaldo Pimenta
+Brazilian Portuguese Voice Actors,Reinaldo Simões
+Brazilian Portuguese Voice Actors,Ricardo Schnetzer
+Brazilian Portuguese Voice Actors,Ricardo Vooght
+Brazilian Portuguese Voice Actors,Rodrigo Antas
+Brazilian Portuguese Voice Actors,Rodrigo Oliveira
+Brazilian Portuguese Voice Actors,Ronaldo Julio
+Brazilian Portuguese Voice Actors,Sergio Stern
+Brazilian Portuguese Voice Actors,Thiago Fagundes
+Brazilian Portuguese Voice Actors,Waldir Fiori
+Brazilian Portuguese Voice Actors,Wirley
+Regional Audio Recording Studios,Atomic Sound Studio
+Regional Audio Recording Studios,DNA Diseño en Audio
+Regional Audio Recording Studios,Som de Vera Cruz Estúdios Cinematográficos
+Special Thanks,Nikol de la Kruz-i-Karo (Russian Recording Project Manager)
+Special Thanks,Irina Petrosyants (Russian Voice Director)
+Special Thanks,Liquid Violet
+TRAINING Senior Manager,Chris Clark
+Supervisor,Nate Shapiro
+Learning Specialist,Daniel Julian
+Trainers,Sine Gov
+Trainers,Charles Knief
+Trainers,Felix Embree
+Associate Learning Specialist,Rex Luther
+Talent Acquisition Coordinator,Michael Schembari
+Intern,Julien Roy
+Creative Director,Jason Stilwell
+Art Lead,Glenn Rane
+Publishing Lead,Micky Neilson
+Illustrators,Laurel Austin
+Illustrators,John Polidora
+Sculptor,Brian Fay
+Media Artists,Leanne Huynh
+Media Artists,Vanessa Luo
+Art Manager,Doug Alexander Gregory
+Publishing Developers,Robert Brooks
+Publishing Developers,Matt Burns
+Publishing Developers,Cameron Dayton
+Historians,Sean Copeland
+Historians,Evelyn Fredericksen
+Historians,Justin Parker
+Editor,Cate Gary
+Curator,Dana Bishop
+Digital Asset Specialist,Charlotte Thai
+Librarian,Steven Park
+Producers,Michael Bybee
+Producers,Skye Chandler
+Producers,Joshua Horst
+Producers,Kyle Williams
+Administrative Assistant,Joslyn Field
+"INFORMATION Senior Director, Global Information Technology",Robert Van Dusen
+"Senior Manager, Global Network Operations & Engineering",Chris Glover
+"Senior Manager, Global Network Operations",Hung Nguyen
+Regional Managers,Travis Biegun
+Regional Managers,Kangho Lee
+Regional Managers,Julien Mariani
+Regional Managers,Paulo Santos
+Network Operations Project Management Lead,Jorge Baranda
+Network Operations Project Managers,James Ridgers
+Network Operations Project Managers,Dan Scauzillo
+Network Operations Project Managers,Charlie Wood
+Network Operations Engineering Manager,Dat Nguyen
+Network Operations Engineering Lead,Andrew Barcinski
+Network Operations Engineering Lead,Matthew Eagleson
+Network Operations Engineering,Dwight Harvey
+Network Operations Engineering,Jeff Kongswangwongsa
+Network Operations Engineering,Dustin Koupal
+Network Operations Engineering,Changkoo Lee
+Network Operations Engineering,Norberto Lopes
+Network Operations Engineering,Adrian Luff
+Network Operations Engineering,Casey Suyeto
+Network Operations Database Administration Manager,David Squier
+Network Operations Database Administration,Armando Abanilla
+Network Operations Database Administration,David Ashman
+Network Operations Database Administration,Michael Chizewski
+Network Operations Database Administration,Alexander Daurskikh
+Network Operations Database Administration,Stefan Ward
+Network Operations Database Administration,Albert Wong
+Network Operations Database Administration,Jaime Wood
+Network Operations Database Administration,Ryan Zapanta
+Network Operations Implementation Lead,James T. Yen
+Network Operations Implementation,Doug Baggett
+Network Operations Implementation,Kevin Drain
+Network Operations Implementation,Corey Louie
+Network Operations Implementation,Mike Mulen
+Network Operations Implementation,Chris Peters
+Network Operations Administration Lead,Matthew McEligot
+Network Operations Administration Supervisor,Maciej Drobny
+Network Operations Administration Supervisor,Robert Meyer
+Network Operations Administration,Yunhwan Ahn
+Network Operations Administration,Justin Beard
+Network Operations Administration,Charles Berman
+Network Operations Administration,Joshua Caskey
+Network Operations Administration,Max Chen
+Network Operations Administration,Michael Everett
+Network Operations Administration,Joseph Holley
+Network Operations Administration,Gichang Hong
+Network Operations Administration,Mourad Kaci
+Network Operations Administration,Heewon Kim
+Network Operations Administration,David Louks
+Network Operations Administration,Eric Nelson
+Network Operations Administration,Riccardo Pittau
+Network Operations Administration,Fabien Poussin
+Network Operations Administration,Andy Qian
+Network Operations Administration,Gary Reeb
+Network Operations Administration,Mathew Smiley
+Network Operations Administration,Alex Tan
+Network Operations Administration,August Tan
+Network Operations Administration,Jason Wang
+Network Operations Center Manager,David Wareham
+Network Operations Center Supervisors,Gandalf Brahm
+Network Operations Center Supervisors,Minhong Kim
+Network Operations Center Supervisors,Justin D. Lo
+Network Operations Center Supervisors,Chris Swoner
+Network Operations,Erik Andersson
+Network Operations,Chris Bosman
+Network Operations,Ahren Boulanger
+Network Operations,Matthew Carcel
+Network Operations,Ryan Conley
+Network Operations,Sylvain Delvaux
+Network Operations,Timothy Hanson
+Network Operations,Jonathan Hosmer
+Network Operations,Jeremy M. Jackson
+Network Operations,Taehee Kang
+Network Operations,Anthony Mercado
+Network Operations,Peter Hanchul Na
+Network Operations,Henrik Schöpel
+Network Operations,Josh Slater
+Network Operations,Chris Towne
+Network Operations,Steven Tran
+Network Operations,Anthony Williams
+"Director, Global Corporate Applications",Stephen Nees
+Production Lead,Adam Schrader
+Producers,Ashley Brown
+Producers,Sarah Butler
+Producers,Justin Goad
+Producers,Stephanie Krutsick
+Producers,Marcos Morin
+Programming Leads,Tom Anderson
+Programming Leads,Mark Kockerbeck
+Programming Leads,Sasha Sydoruk
+Programmers,Michael Aversa
+Programmers,Cliff Chinn
+Programmers,Tom DuPont
+Programmers,Mary Estrada
+Programmers,Rick Faaberg
+Programmers,Boris Giftge
+Programmers,Jordan Irwin
+Programmers,Ryan Karg
+Programmers,Kenneth Lim
+Programmers,Mark Nelson
+Programmers,Sean O’Neil
+Programmers,Teddy Pao
+Programmers,Steven Pereyda
+Programmers,Shaun Potts
+Programmers,David Reed
+Programmers,Michael Stum
+User Experience,Jegan Chen
+User Experience,Carol Lam
+"Manager, Global Strategy",John Gordon
+Knowledge Management,Rosemary Donato
+Analyst,Christopher Benners
+"Manager, Global Information Services",Yong Yoon
+Regional Information Services Managers,Mark Davenport
+Regional Information Services Managers,Junghoon Kim
+Regional Information Services Managers,Eric Kou
+Regional Information Services Managers,Sean Laverty
+Regional Information Services Managers,Danny N. Nguyen
+Regional Information Services Managers,John Robertson
+Regional Information Services Managers,Ramon Rodriguez III
+Regional Information Services Managers,Benjamin Yamada
+Information Services Project Managers,Quentin Giraud
+Information Services Project Managers,JJ Lee
+Information Services Project Managers,Trish Lee
+Information Services Project Managers,Thierry Sudan
+Information Services Project Managers,Leo Wang
+Information Services Project Managers,Ania Wieteski
+Information Services Engineering Leads,Forrest Bowling
+Information Services Engineering Leads,Mike Pearce
+Information Services Engineering,Weonseok Choi
+Information Services Engineering,Brian Hill
+Information Services Engineering,Bryan Ludwig
+Information Services Engineering,Zak Meekins
+Information Services Engineering,Rob Nolen
+Information Services Engineering,Jason Wynsen
+Information Services Administration Leads,Edward Bui
+Information Services Administration Leads,Glyn Hopkins
+Information Services Administration Leads,Lars Kühne
+Information Services Administration Leads,Mike Moneymaker
+Information Services Administration Leads,Brian Murillo
+Information Services Administration Leads,Thi K. Nguyen
+Information Services Administration,Kenneth Lloyd Ayers III
+Information Services Administration,Robert Bustamante
+Information Services Administration,Jamal Davis
+Information Services Administration,Gilbert Fontaine
+Information Services Administration,Stanley Fu
+Information Services Administration,Lutz Haunstein
+Information Services Administration,Yan Kahlé
+Information Services Administration,Jaemin Ko
+Information Services Administration,Sebastien Leterrier
+Information Services Administration,Vincent Moitrot
+Information Services Administration,François Noel
+Information Services Administration,Taylor Russ
+Information Services Administration,Justin Talbott
+Information Services Administration,Stefan Thompson
+Information Services Administration,Anderson X. Tran
+Information Services Technicians,Carol Alvarez
+Information Services Technicians,Jeff Boccuzzi
+Information Services Technicians,Sunghee Choi
+Information Services Technicians,Max Chou
+Information Services Technicians,Rich J. Chu
+Information Services Technicians,Inés Eberhard
+Information Services Technicians,Richard Farrimond
+Information Services Technicians,Dat Ho
+Information Services Technicians,Charlotte Kessler
+Information Services Technicians,Philip Kim
+Information Services Technicians,Yongjun Kim
+Information Services Technicians,Albert Koh
+Information Services Technicians,Gordon Lathan
+Information Services Technicians,Adam Lee
+Information Services Technicians,Luke Lu
+Information Services Technicians,Baptiste Moisson
+Information Services Technicians,Amber Robertson
+Information Services Technicians,Taran Sprake
+Information Services Technicians,Jimmy Truong
+Information Services Technicians,Bill Tubbs
+Information Services Technicians,Benjamin Williams
+Information Services Technicians,James Wong
+"Senior Manager, Global Security",Chris Fajardo
+Security Engineering,Michael Caron
+Security Engineering,Curtis Castrapel
+Security Engineering,Scott Harrison
+Security Administration,Michael Lim
+Security Administration,Richard Reischman
+Security Administration,Tim Vo
+Security Administration,Site Security
+Security Administration,Richie Kharrat
+Security Administration,Michael Muscarella
+Security Administration,Emmanuel Pedro
+Security Administration,Compliance
+Security Administration,Robert Perugini
+Security Administration,Bill Preston
+Security Administration,Chris Voss
+Disaster Recovery,Eric Thedaker
+Administrative Assistant,Sonal Patel
+INTERNATIONAL Regional Managing Director,Alex Tai (CN &amp; TW)
+"Senior Director, Global Market Development",Michael Fong
+CHINA Operation Director,Nichol Bradford
+Project Manager,Jerome Wu
+Project Manager,Zhang Xifang (Gloria)
+TAIWAN Managing Director,Eddy Meng
+Operation Director,Che-Yuan Wang
+Project Manager,Tengying Yu
+EUROPE Managing Director,Jean-Philippe Agati
+Administrative Assistant,Lara Machado
+Senior Director of Operations,Delphine LeCorre
+Project Managers,Thomas Johnsen
+Project Managers,Emmanuel Obert
+Project Managers,Martin Tegner
+KOREA Managing Director,Young-Jay Paik
+Executive Assistant,Mira Bae
+Operations Director,Stanley Kim
+Project Managers,Angie Heo
+Project Managers,Minshik Kim
+Project Managers,Vaughan Wallis
+LATIN Regional Managing Director,Steve Huot
+Operations,Tomás Cortijo (Spanish Speaking South America)
+Operations,Ivan Kako (Brazil)
+Operations,Alejandro Hernández (México)
+Assistant,Olga Mata (LatAm)
+AB Sales,John Dillulo
+AB Sales,Jesus Rosales
+AB Sales,Max Morais
+"SOUTH Director, Operations & Marketing",Alan Chou
+Project Manager,Jaclyn Lo
+Regional Network Operations Managers,Hyeshik Yoon (SEA)
+"MARKETING Senior Vice President, Global Marketing",Neal Hubbard
+HQ Marketing,Jason Anderson
+HQ Marketing,Chris Bartzatt
+HQ Marketing,Bob Brown
+HQ Marketing,Kevin Carter
+HQ Marketing,Ryan Davis
+HQ Marketing,Paul Dowling
+HQ Marketing,John Heinecke
+HQ Marketing,Ben Hsieh
+HQ Marketing,Marc Hutcheson
+HQ Marketing,Michael Lawrence
+HQ Marketing,Tomas Melian
+HQ Marketing,Lyndsi Revis
+Marketing Creative Services,Mike Carrillo
+Marketing Creative Services,Zachary Hubert
+Marketing Creative Services,Erik Jensen
+Marketing Creative Services,Ken Murayama
+Marketing Creative Services,Steven L. Parker
+Marketing Creative Services,Bev Williams
+Marketing Creative Services,Caroline Wu
+Regional Marketing,Yunho Bae (KR)
+Regional Marketing,Anne Bérard (EU)
+Regional Marketing,Eric Chauveau (EU)
+Regional Marketing,Howard Chang (TW)
+Regional Marketing,Rio Chen (TW)
+Regional Marketing,Mark Clements (EU)
+Regional Marketing,Luca Cominelli (EU)
+Regional Marketing,Chris Davey (ANZ)
+Regional Marketing,Sara Fernandez (EU)
+Regional Marketing,Mouna Ferré (EU)
+Regional Marketing,George Georgiou (EU)
+Regional Marketing,Ashley Hsu (TW)
+Regional Marketing,Chimoon Hwang (KR)
+Regional Marketing,Eusoo Kim (KR)
+Regional Marketing,Jinhwan Kim (KR)
+Regional Marketing,Vivian Liu (CN)
+Regional Marketing,Cédric Maréchal (EU)
+Regional Marketing,Dmitry Martirosyan (EU)
+Regional Marketing,Kyungin Min (KR)
+Regional Marketing,Markus Neumann (EU)
+Regional Marketing,Eunjung Oh (KR)
+Regional Marketing,Patrick Lee (KR)
+Regional Marketing,Mark Andrew Penney (EU)
+Regional Marketing,Stéphane Perroud (EU)
+Regional Marketing,Emilie Pujol (EU)
+Regional Marketing,Francisco Bolaños Santana (EU)
+Regional Marketing,Olivier Spaargaren (EU)
+Regional Marketing,Jonas Stålros (EU)
+Regional Marketing,Brett Sun (CN)
+Regional Marketing,Matthew Szajdak (EU)
+Regional Marketing,Rafael Tello (LA)
+Regional Marketing,Wilfrid Vinmer (EU)
+Regional Marketing,Amanda Wang (TW)
+Regional Marketing,Sam Wang (CN)
+Regional Marketing,Maggie Xiao (CN)
+Regional Marketing,Katherine Zhao (CN)
+Regional Marketing,Robin Zhu (CN)
+PUBLIC Vice President of Global Public Relations,Lisa Jensen
+"Regional Vice President, Public Relations & Communications Management",Julia Gastaldi (EU)
+"Director, Global Public Relations",Rob Hilburger
+Director of Public Relations,Roger Sun (CN)
+"Director, Communications & Public Affairs","Christy ""Mina"" Um (KR)"
+"Senior Manager, Public Affairs",Philsoo Shin (KR)
+Public Affairs,Hyukjoon Choi (KR)
+Public Affairs,Chuljo Yun (KR)
+Senior Public Relations Manager,Guy Cunis (EU)
+Public Relations Managers,Christian Beer (DE
+Public Relations Managers,CH
+Public Relations Managers,AT)
+Public Relations Managers,Jonnie Bryant (UK
+Public Relations Managers,IE)
+Public Relations Managers,Bob Colayco
+Public Relations Managers,Luca Cominelli (IT)
+Public Relations Managers,Shon Damron
+Public Relations Managers,Chris Davey (ANZ)
+Public Relations Managers,Sara Fernandez (ES
+Public Relations Managers,PT)
+Public Relations Managers,Alexandre Lennuyeux (FR)
+Public Relations Managers,Tom Lindgren (Nordic)
+Public Relations Managers,Ana Luisa Mota (LatAm)
+Public Relations Managers,Kyoung Hwa Park (KR)
+Public Relations Managers,Che’von Slaughter
+Public Relations Managers,Olivier Spaargaren (BNL)
+Public Relations Managers,Michael Wu (CN)
+"Public Relations & Community Manager of Taiwan, Hong Kong, and Macau",Chi Liu (TW)
+Public Relations,Andre de Abreu (Brazil)
+Public Relations,Lyndsi Achucarro
+Public Relations,"Moonyoung ""Luna"" Baik (KR)"
+Public Relations,Patrick Beja (EU)
+Public Relations,Pierre-Yves Deslandes (EU)
+Public Relations,Marina Kiupa (RU)
+Public Relations,"Jookyoung ""Sarah"" Hyun (KR)"
+Public Relations,Seung Hyun Jung (KR)
+Public Relations,Nick O'Shea (ANZ)
+Public Relations,Moonhee Park (KR)
+Senior Global Editorial Manager,Gil Shif
+Editor,Sean Molloy
+Associate Editors,Gareth Hughes
+Associate Editors,Gerald Villoria
+"Manager, Global Internal Communications",Kamini Tiwari
+Editorial & Internal Communications Manager,Ross Atherton (EU)
+Assistant Editor,Kathryn Boccuzzi (EU)
+Internal Communications,Anne Bargemann (EU)
+Internal Communications,Guillaume Bloch (EU)
+Internal Communications,Samantha Bong
+Internal Communications,Andrew Kim (KR )
+Internal Communications,Paul McSherry (EU)
+Internal Communications,Mark Nash
+Internal Communications,Anita Rice
+Internal Communications,Kacy Sparks
+Internal Communications,Stuart White
+Internal Communications,Vale Yu (CN)
+"Director, Global Events",Steven L. Parker
+"Senior Manager, Events",Elisha Cabrera
+Internal Events Manager,Elodie Dupuis (EU)
+External Events Manager,Pauline Hammelet (EU)
+Events,William Bezou (EU)
+Events,Jessica Cross
+Events,Benjamin Elgueta
+Events,Laura Halasa
+Events,Claire Zarb (EU)
+Additional Public Relations,Ryan Arbogast
+Additional Public Relations,Jiyoon Yoon (KR)
+"COMMUNITY Director, Global Community And E-Sports",Ilja Rotelli
+International Community & E-Sports Managers,Santiago Baranda (LA)
+International Community & E-Sports Managers,Cody Chen (TW)
+International Community & E-Sports Managers,Ramon Hermann (NA)
+International Community & E-Sports Managers,José Ignacio de Andrés (EU)
+International Community & E-Sports Managers,Andy Lee (KR)
+International Community & E-Sports Managers,Jaclyn Lo (SEA)
+International Community & E-Sports Managers,PJ Russell (ANZ)
+International Community & E-Sports Managers,Zhang Yue (CN)
+Global Community Development,Washington Andrade (LA)
+Global Community Development,Steven Bao (CN)
+Global Community Development,Marcus Bishop (NA)
+Global Community Development,Hamish Bode (NA)
+Global Community Development,Soufyane Brahimi (EU)
+Global Community Development,Jonathan Brown (NA)
+Global Community Development,Marie Cabot (EU)
+Global Community Development,Stephen Chang (NA)
+Global Community Development,Daniel Chen (CN)
+Global Community Development,Woonki Cho (KR)
+Global Community Development,Brandon Christenson (NA)
+Global Community Development,Stefano Cozzi (EU)
+Global Community Development,Matilde Controzorzi (EU)
+Global Community Development,Samuel Dempsey (EU)
+Global Community Development,Emmanuel Foissy (EU)
+Global Community Development,Nik Gianozakos (NA)
+Global Community Development,Nicolas Guion (EU)
+Global Community Development,Stefanie Gwinner (EU)
+Global Community Development,Jungho Han (KR)
+Global Community Development,Ash Harman (EU)
+Global Community Development,Junghoon Heo (KR)
+Global Community Development,Andrew Hsu (NA)
+Global Community Development,Tobias Jahn (EU)
+Global Community Development,Peter Jiang (CN)
+Global Community Development,Erin Johanson (EU)
+Global Community Development,Stephanie Johnson (NA)
+Global Community Development,Randy Jordan (NA)
+Global Community Development,Sunna Kim (KR)
+Global Community Development,Liam Knapp (NA)
+Global Community Development,Albert Konrad (EU)
+Global Community Development,Lu Lan (CN)
+Global Community Development,Kimberly LeCrone (NA)
+Global Community Development,Jongwon Lee (KR)
+Global Community Development,Marino Lee (KR)
+Global Community Development,Seungwoo Lee (KR)
+Global Community Development,Claude Lin (TW)
+Global Community Development,Zeno Lin (TW)
+Global Community Development,Nicole Lorenz (EU)
+Global Community Development,Christine Martens (EU)
+Global Community Development,Florian Mentl (EU)
+Global Community Development,Lorena Molina (LA)
+Global Community Development,Susana Monroy (LA)
+Global Community Development,Chung Ng (NA)
+Global Community Development,Benedikt Oehmen (EU)
+Global Community Development,Jesse Perez (LA)
+Global Community Development,John Pingol (NA)
+Global Community Development,Rafael Raudry (NA)
+Global Community Development,Cedrik Razafimanantsoa (EU)
+Global Community Development,Roberto Rios (EU)
+Global Community Development,Alejandro Riveiro de la Peña (EU)
+Global Community Development,Kester Robison (NA)
+Global Community Development,Matthew Rodig (NA)
+Global Community Development,Maria Dolors Sanchez Carnice (EU)
+Global Community Development,Krzysztof Sazon (EU)
+Global Community Development,Rui Santos (EU)
+Global Community Development,Bo Selmer Hansen (EU)
+Global Community Development,Ono Shen (CN)
+Global Community Development,Nicholas Solano (NA)
+Global Community Development,Danielle Vanderlip (NA)
+Global Community Development,Belinda Vaughan (EU)
+Global Community Development,Ben Wang (CN)
+Global Community Development,Jessie Wang (CN)
+Global Community Development,Micah Whipple (NA)
+Global Community Development,Chad Wingerd (NA)
+Global Community Development,Eric Yco (NA)
+Global Community Development,Jino Yoo (KR)
+Global Community Development,Chris Zhu (CN)
+Global Community Development,Kenny Zigler (NA)
+Global E-Sports,Jacky Chen (CN)
+Global E-Sports,Junsun Choi (KR)
+Global E-Sports,Bernd Gottsmann (EU)
+Global E-Sports,Changwoon Jung (NA)
+Global E-Sports,Kibong Kook (KR)
+Global E-Sports,Jaeho Lee (KR)
+Global E-Sports,Marc Olbertz (EU)
+Global E-Sports,Joshua Owyang (NA)
+Global E-Sports,Robert Simpson (NA)
+Global E-Sports,Remi Wang (CN)
+LEGAL Vice President & General Counsel,Eric Roeder
+Deputy General Counsel,Rod Rigole
+Legal Team,Jane Chen
+Legal Team,Kevin Crook
+Legal Team,Lynda Do
+Legal Team,Satoru Hamada
+Legal Team,Ronald Jentges
+Legal Team,Fritz Kryman
+Legal Team,Denis Kurlyukov
+Legal Team,James Riordan
+Legal Team,Colleen Ryan
+Legal Team,Tracy Sargent
+Legal Team,Wonho Seok
+Legal Team,Dave Sutton
+Legal Team,Sylvia Whiteshield
+"HUMAN Vice President, Global Human Resources",Denise Dunlap-Alpert
+"Human Resources Director, Global Business Operations",Jesse Meschuk
+"Human Resources Director, Product Development",Erika Sayre-Smith
+Compensation Manager,Cameron Lazek
+"Human Resources, North America",Nuria Andres
+"Human Resources, North America",Jennifer Bowden
+"Human Resources, North America",Christy Campbell
+"Human Resources, North America",William Carroll
+"Human Resources, North America",Emy Deutsch
+"Human Resources, North America",Julie Farbaniec
+"Human Resources, North America",Sumer Faubert
+"Human Resources, North America",Ann Grealy
+"Human Resources, North America",Dennis Hof
+"Human Resources, North America",Marije Korver
+"Human Resources, North America",Mac McIntyre
+"Human Resources, North America",Sunshine Okano
+"Human Resources, North America",Michelle Secrest
+"Human Resources, North America",Daniela Shani
+"Human Resources, North America",Sabrina Turner
+"Human Resources, Europe",Mariele Weber
+"Human Resources, Europe",Anne Brunet
+"Human Resources, Europe",Sophie Chevet
+"Human Resources, Europe",Elaine Dineen
+"Human Resources, Europe",Juliette Durand
+"Human Resources, Europe",Ruddy Foucan
+"Human Resources, Europe",Susan Hurley
+"Human Resources, Europe",Caroline Kehoe
+"Human Resources, Europe",Einar Lars Loew
+"Human Resources, Europe",Zhang Luo
+"Human Resources, Europe",Nawel Merad
+"Human Resources, Europe",Lisa O’Brien
+"Human Resources, Europe",Anne Stengel
+"Human Resources, Europe",Lesley Turner
+"Human Resources, Asia",Sunny Hwang (HR Director - KR)
+"Human Resources, Asia",Jiwoong Hwang (KR)
+"Human Resources, Asia",Jihyun Jeon (KR)
+"Human Resources, Asia",Hyojung Kim (KR)
+"Human Resources, Asia",Philgon Kim (KR)
+"Human Resources, Asia",Ally Park (KR)
+"Human Resources, Asia",Wenfei Sun (Regional HR Director – CN &amp; TW)
+"Human Resources, Asia",Phyllis Huang (TW)
+"Human Resources, Asia",George Li (CN)
+"Human Resources, Asia",Jenny Zheng (CN)
+"Human Resources, Asia",Sandy Wu (CN)
+"Senior Manager, Global HR Systems",Sandy Madison
+HR Systems,Lisa Pozarich
+"Director, Global HR Operations",Lenny Grossi
+"Talent Acquisition, North America",Reine Bounlutay
+"Talent Acquisition, North America",Danny Flannagan
+"Talent Acquisition, North America",Christina Freeman
+"Talent Acquisition, North America",Tara M. Hsu
+"Talent Acquisition, North America",Cat Kocher
+"Talent Acquisition, North America",Mike Nassar
+"Talent Acquisition, North America",Keisha Krainer
+"Talent Acquisition, North America",Janine Tedford
+"Talent Acquisition, North America",Michael Vergara
+"Talent Acquisition, North America",Meghan Wiley
+"Talent Acquisition, North America",Dave B. Wilson
+"Talent Acquisition, North America",Kathy Zuniga
+"Talent Acquisition, Europe",Patrick Deschamps
+"Talent Acquisition, Europe",Christopher Kopetschek
+"Talent Acquisition, Europe",Iwona Macesowicz
+"Talent Acquisition, Europe",Nathalie Verges
+FINANCE Vice President of Global Finance,Mark Almeida
+Executive Administrative Assistant,Haissel Neira
+"Finance & Accounting, NA",Thomas Hoag
+"Finance & Accounting, NA",Brenda Chen
+"Finance & Accounting, NA",Sean Culmer
+"Finance & Accounting, NA",Andrew Amadi
+"Finance & Accounting, NA",Adam Plushner
+"Finance & Accounting, NA",Christopher Lewis
+"Administration, NA",Lacey Caragan
+"Administration, NA",Shannon Cooper
+"Administration, NA",Jamie Crooks
+"Administration, NA",Jessica Ramirez
+"Director, Finance EU",Benoit Dufour
+"Finance & Accounting, EU",Carol Bolger
+"Finance & Accounting, EU",Julia Bruder
+"Finance & Accounting, EU",Paola Croize
+"Finance & Accounting, EU",Razak Kessas
+"Finance & Accounting, EU",Viktoria Ivanets
+"Finance & Accounting, EU",Mandy Lawton
+"Finance & Accounting, EU",Anna Savic
+"Finance & Accounting, EU",Gregoire Seray
+"Finance & Accounting, EU",Lindsay Sherwin
+"Finance & Accounting, EU",Nicholas Wright
+"Administration, EU",Inma Utrilla
+"Director, Finance Greater China & SEA",Teh Hong Sing
+"Finance & Accounting, CN & SEA",Roger Gao (CN)
+"Finance & Accounting, CN & SEA",Hugo Mimoun (TW &amp; SEA)
+"Finance & Accounting, CN & SEA",Marie Lin (TW)
+"Finance & Accounting, CN & SEA",Lyons Lv (CN)
+"Finance & Accounting, CN & SEA",Wendy Sun (CN)
+"Finance & Accounting, CN & SEA",Vince Xiao (CN)
+"Finance & Accounting, CN & SEA",Priscilla Xu (CN)
+"Finance & Accounting, CN & SEA",Melody Wang (CN)
+"Finance & Accounting, CN & SEA",Linda Zhu (SEA)
+"Administration, CN & SEA",Jaslyn He (CN)
+"Administration, CN & SEA",Sherry Shi (CN)
+"Administration, CN & SEA",Kelly Shu (CN)
+"Director, Finance KR",Sunok Lim
+"Finance & Accounting, KR",Hyejin Cho
+"Finance & Accounting, KR",Yunkwan Cho
+"Finance & Accounting, KR",Grace Huh
+"Finance & Accounting, KR",Jiyoung Jung
+"Finance & Accounting, KR",Sungwon Yoon
+"Administration, KR",Sehwa An
+"Administration, KR",Young Namgoong
+"Administration, KR",Eunbom Park
+"LICENSING Sr. Director, Global Licensing & Business Development",Matt Beecher
+Business Development,Marc Dion
+Business Development,Steve Price
+Licensing,Jon Bias
+Licensing,Jason Bischoff
+Licensing,Jerry Chu
+Licensing,Graham Hill
+Licensing,George Hsieh
+Licensing,Kat Hunter
+Licensing,Fung Y. Thai
+"Business Development & Licensing, EU & KR",Frederic Guy (EU)
+"Business Development & Licensing, EU & KR",Christophe Poupon (EU)
+"Business Development & Licensing, EU & KR",Sebastian Ryu (KR)
+"Business Development & Licensing, EU & KR",Audrey Vicenzi (EU)
+Product Development Lead,Mike Hummel
+Art Manager,Jeremy Cranford
+Product Developers,David Lomeli
+Product Developers,Michele Mejia
+Product Developers,Sean Wang
+Producer,Bryan Langford
+BUSINESS Director Business Intelligence,Greg Ashe
+BI & Risk Operations,Matthew Adams
+BI & Risk Operations,Chris Antenesse
+BI & Risk Operations,David Carey
+BI & Risk Operations,Chris Carlson
+BI & Risk Operations,Chaitanya Chemudugunta
+BI & Risk Operations,Yuan Cheng
+BI & Risk Operations,James Chao
+BI & Risk Operations,Tom Ferris
+BI & Risk Operations,Jens Fischer
+BI & Risk Operations,Arnold Fulmer
+BI & Risk Operations,Amanda Gerdes
+BI & Risk Operations,Jon Gleicher
+BI & Risk Operations,Brian Griffith
+BI & Risk Operations,Ryan Gunst
+BI & Risk Operations,Norm Harms
+BI & Risk Operations,Xiaolin Hao
+BI & Risk Operations,Christine Kenney
+BI & Risk Operations,Renjie Li
+BI & Risk Operations,Minh Luu
+BI & Risk Operations,Aleksandar Mirkovic
+BI & Risk Operations,Kim Phan
+BI & Risk Operations,Clint Rice
+BI & Risk Operations,Gustav Rydstedt
+BI & Risk Operations,Brian Staats
+BI & Risk Operations,Anthony Suh
+BI & Risk Operations,Chris Talucci
+BI & Risk Operations,Timothy Tash
+BI & Risk Operations,Anthony Trankiem
+BI & Risk Operations,David Wang
+BI & Risk Operations,Matt Wheeler
+BI & Risk Operations,Micah Wilson
+BI & Risk Operations,Ben Wurst
+BI & Risk Operations,Xiaoyang Yang
+BI & Risk Operations,Songfan Yang
+BI & Risk Operations,Hyokun Yun
+BI & Risk Operations -- EU,Sebastien Derivaux
+BI & Risk Operations -- EU,Waldemar Fritz
+BI & Risk Operations -- EU,Alexander Gut
+BI & Risk Operations -- EU,Ruben Holen
+BI & Risk Operations -- EU,Ludivine Le Rouge
+BI & Risk Operations -- EU,Thomas Lenglet
+BI & Risk Operations -- EU,Laila Mnad
+BI & Risk Operations -- EU,Lucia Suarez Porta
+BI & Risk Operations -- EU,Tommy Sabri
+BI & Risk Operations -- EU,Sebastiaan Van Doornspeek
+BI & Risk Operations -- EU,Ismael Villeger
+Risk Operations -- KR,Jungwoo Kim
+BI -- CN,Chen Xu
+"PURCHASING Senior Director, Global Purchasing & Facilities",Isaac Matarasso
+Purchasing,Mike Anderson
+Purchasing,Michele Marie Arko
+Purchasing,David Preston
+"Purchasing and Travel, EU",Anaïs Bocianowski
+"Purchasing and Travel, EU",Denise Hicks
+"Purchasing and Travel, EU",Jihène Khessouma
+"Senior Manager, Global Facilities",Susann O’Bryan
+Facilities,Henry Szekely
+Facilities,Timothy Hardy
+Facilities,Jacob Hofeldt
+Facilities,Carlos Lucero
+Facilities,Samuel Schrimsher
+Facilities,Brandon Shephard
+Facilities,Steve Stafford
+Facilities,Richard Varga
+Facilities,Ryan Waeltermann
+"Facilities, EU",Jean-Paul Bruyelle
+"Facilities, EU",Cyril Hammelet
+"Facilities, EU",Keith Ryan
+"Facilities, KR",Marge Kim
+"Facilities, KR",Seungjae Kim
+"Facilities, KR",Yoora Oh
+STRATEGIC Team Members,Jonathan Bankard
+STRATEGIC Team Members,Hamilton Chu
+STRATEGIC Team Members,Walter Kong
+STRATEGIC Team Members,Jay Ong
+STRATEGIC Team Members,Ann Vanderhelm
+Blizzard Academy,Bob Nicoll
+"GLOBAL Vice President, Global Customer Support",Todd Pawlowski
+Executive Administrative Assistant,Kayla Crooks
+"EUROPE Regional Customer Service Director, Europe",Ian Clarke
+"Customer Service Director, Ireland",Eibhlin Payne
+Administrative Assistants,Marlène Cervantes
+Administrative Assistants,Holly Macintosh
+Customer Support Group Managers,Ana Alfageme
+Customer Support Group Managers,Tina Forrester
+Customer Support Group Managers,Frank Keienburg
+Customer Support Group Managers,Ben Noskeau
+Customer Support Team Managers,Mirko Bayer
+Customer Support Team Managers,Florian Blaesche
+Customer Support Team Managers,Robert Bland
+Customer Support Team Managers,Gregoire Bonnafoux
+Customer Support Team Managers,Jean-Christophe Bouchet
+Customer Support Team Managers,Sara Chick
+Customer Support Team Managers,Elodie Cholière
+Customer Support Team Managers,Silvio Clausen
+Customer Support Team Managers,Paul Coen
+Customer Support Team Managers,Rory Devitt
+Customer Support Team Managers,Patrick Dunford
+Customer Support Team Managers,Encarna Fernandez
+Customer Support Team Managers,Sebastien Hoareau
+Customer Support Team Managers,Kim Jensen
+Customer Support Team Managers,Vincent Kaufmann
+Customer Support Team Managers,Mark Kleine
+Customer Support Team Managers,Patrik Knoll
+Customer Support Team Managers,Sylvan Lynn
+Customer Support Team Managers,Martin Mason
+Customer Support Team Managers,Brian McCoy
+Customer Support Team Managers,Moritz Müller
+Customer Support Team Managers,Mark O'Riordan
+Customer Support Team Managers,Cédryck Poitelon
+Customer Support Team Managers,Britta Drabinski
+Customer Support Team Managers,Thomas Röthemeyer
+Customer Support Team Managers,Peter Rothlisberger
+Customer Support Team Managers,David Schlamp
+Customer Support Team Managers,Mikhail Shiryaev
+Customer Support Team Managers,Juan Pablo Suárez-Perdomo
+Customer Support Team Managers,Heidi Wanner
+Customer Support Team Managers,Neil Whelan
+Customer Support Seniors,Daniel Adams
+Customer Support Seniors,Johnny Ahlgren
+Customer Support Seniors,Almudena Alia
+Customer Support Seniors,Maximilian Bauer
+Customer Support Seniors,Marc Behar
+Customer Support Seniors,Mario Berndt
+Customer Support Seniors,Brendan Cavanagh
+Customer Support Seniors,Kim Chaing
+Customer Support Seniors,Lucas Christophe
+Customer Support Seniors,Gaël Company
+Customer Support Seniors,Cian Creed-Healy
+Customer Support Seniors,Laurent Cuvier
+Customer Support Seniors,Marco D´Anna
+Customer Support Seniors,Marianna Deyneko
+Customer Support Seniors,Sylvain Enjalbert
+Customer Support Seniors,Julie Foster
+Customer Support Seniors,Göran Gauruder
+Customer Support Seniors,Kasper Giehm
+Customer Support Seniors,Hagen Grimm
+Customer Support Seniors,Stefan Hintner
+Customer Support Seniors,Chris Homer
+Customer Support Seniors,Dennis Horn
+Customer Support Seniors,Aled Jones
+Customer Support Seniors,Henning Kaiser
+Customer Support Seniors,Michael Khoo
+Customer Support Seniors,Alexander Klontzas
+Customer Support Seniors,Thomas Küppers
+Customer Support Seniors,Anders Larsen
+Customer Support Seniors,Nathalie Lomurno
+Customer Support Seniors,Ana Manso
+Customer Support Seniors,Inigo Moleres
+Customer Support Seniors,Brian Mulcahy
+Customer Support Seniors,Barry Murphy
+Customer Support Seniors,Elena Nikora
+Customer Support Seniors,Markus Nowak
+Customer Support Seniors,Falk Pichl
+Customer Support Seniors,Marcin Platek
+Customer Support Seniors,Irina Platel
+Customer Support Seniors,Josfred Poinsot
+Customer Support Seniors,Oriol Prats Navarro
+Customer Support Seniors,Christopher Purvis
+Customer Support Seniors,Francesco Reinboldt
+Customer Support Seniors,Wolfram Sack
+Customer Support Seniors,Victor Sefastsson
+Customer Support Seniors,Tobias Semrau
+Customer Support Seniors,Patric Stolpe
+Customer Support Seniors,Jessica Stone
+Customer Support Seniors,Alexandre Vallée
+Customer Support Seniors,Maria Vakulenko
+Customer Support Seniors,Marijke Vanhees
+Customer Support Seniors,Cyndie Varin
+Customer Support Seniors,John Warwicker
+Customer Support Seniors,Kirill Zakharov
+Customer Support Seniors,Judith Zachariae
+Customer Support Representatives,David Acker
+Customer Support Representatives,Daniel Ahern
+Customer Support Representatives,Noel Ahern
+Customer Support Representatives,Kseniia Aksenova
+Customer Support Representatives,Marcos Aleman Herrera
+Customer Support Representatives,Marco Alemanno
+Customer Support Representatives,Luca Alesini
+Customer Support Representatives,John Alexander
+Customer Support Representatives,David Allen
+Customer Support Representatives,Urko Allende
+Customer Support Representatives,Frank Alshut
+Customer Support Representatives,Romain Anciaume
+Customer Support Representatives,Julien Andres
+Customer Support Representatives,Ludovic Andrianoff
+Customer Support Representatives,David Angus
+Customer Support Representatives,Pawel Antonik
+Customer Support Representatives,Agnieszka Antonik
+Customer Support Representatives,Ricardo Aranguren
+Customer Support Representatives,Hadrien Arcangeli
+Customer Support Representatives,Pierre-Marc Arnaud
+Customer Support Representatives,Guillaume Arp
+Customer Support Representatives,Keith Aston
+Customer Support Representatives,Aleksej Avdejev
+Customer Support Representatives,Jérémy Aveline
+Customer Support Representatives,Zo Sang Awi
+Customer Support Representatives,Roland Ayliffe
+Customer Support Representatives,Marek Babski
+Customer Support Representatives,Anda Badmaev
+Customer Support Representatives,Stefan Bahr
+Customer Support Representatives,Martin Bailey
+Customer Support Representatives,Andreas Baker
+Customer Support Representatives,David Alain Balacco
+Customer Support Representatives,Clarke Baldwin
+Customer Support Representatives,Dimitrius Bampanaras
+Customer Support Representatives,Robert Band
+Customer Support Representatives,Simon Bargain
+Customer Support Representatives,Danila Barinov
+Customer Support Representatives,David Barlow
+Customer Support Representatives,Keith Barron
+Customer Support Representatives,Björn Bartholome
+Customer Support Representatives,Alex Bassinot
+Customer Support Representatives,Francis Bateman
+Customer Support Representatives,Jenny Baur
+Customer Support Representatives,Mark Baxter
+Customer Support Representatives,Alex Bebbington
+Customer Support Representatives,Philip Becker
+Customer Support Representatives,Joeri Beckers
+Customer Support Representatives,Andreas Beier
+Customer Support Representatives,Julius Beiner
+Customer Support Representatives,Julien Benatar
+Customer Support Representatives,Jörg Bendschneider
+Customer Support Representatives,Richard Bennett
+Customer Support Representatives,Victoria Bennett-Keenan
+Customer Support Representatives,Jean-Christophe Berger
+Customer Support Representatives,Benjamin Berghäuser
+Customer Support Representatives,Andrea Birkhahn
+Customer Support Representatives,Magalie Blaizot
+Customer Support Representatives,Daniel Blam
+Customer Support Representatives,Kevin Blanche
+Customer Support Representatives,Katharina Blinova
+Customer Support Representatives,Nick Blokker
+Customer Support Representatives,Keith Boardman
+Customer Support Representatives,Christian Bock
+Customer Support Representatives,Patrick Bohrer
+Customer Support Representatives,Aleksandras Boiko
+Customer Support Representatives,Denise Bolger
+Customer Support Representatives,Dirk Bömelburg
+Customer Support Representatives,Carl Bone
+Customer Support Representatives,Jasper Borg
+Customer Support Representatives,Sigurd Borge
+Customer Support Representatives,Lorenzo Borgini
+Customer Support Representatives,Jessica Bourke
+Customer Support Representatives,Audrey Bouroux
+Customer Support Representatives,Alexey Bozhor
+Customer Support Representatives,Kathrin Bremicker
+Customer Support Representatives,Brian Brennan
+Customer Support Representatives,Deborah Broadhead
+Customer Support Representatives,Jochen Broeske
+Customer Support Representatives,Sabrina Brogan
+Customer Support Representatives,Daniel Bromand
+Customer Support Representatives,Helen Browne
+Customer Support Representatives,Georgina Browning
+Customer Support Representatives,Mike Brückmann
+Customer Support Representatives,Bastian Buchholz
+Customer Support Representatives,Patricia Bueno Lacasa
+Customer Support Representatives,Lucien Bui
+Customer Support Representatives,Peter Burghardt
+Customer Support Representatives,Anja Burkart
+Customer Support Representatives,David Burlison
+Customer Support Representatives,Matthias Butter
+Customer Support Representatives,Carlos Caballero Franco
+Customer Support Representatives,Jennifer Cacheux Girling
+Customer Support Representatives,Mauro Caeiro
+Customer Support Representatives,Gauthier Cahen
+Customer Support Representatives,Marc Caldwell
+Customer Support Representatives,Lidia Calza
+Customer Support Representatives,Paul Cameron
+Customer Support Representatives,Allan Campbell
+Customer Support Representatives,Juan Caria
+Customer Support Representatives,Vasco Carto
+Customer Support Representatives,Joseph Caslin
+Customer Support Representatives,Georgina Castro Mas
+Customer Support Representatives,Rebecca Charlton
+Customer Support Representatives,Robin Charret
+Customer Support Representatives,David Church Rodriguez
+Customer Support Representatives,Emanuele Cingolani
+Customer Support Representatives,Carlos Clavero
+Customer Support Representatives,Ivan Clemente Carerra
+Customer Support Representatives,Rita Cocozza
+Customer Support Representatives,Manuel Colorado
+Customer Support Representatives,Justine Colson
+Customer Support Representatives,Alisdair Comb
+Customer Support Representatives,Carlo Comessatti
+Customer Support Representatives,Damian Connors
+Customer Support Representatives,Dorothy Constable
+Customer Support Representatives,Olaf Constien
+Customer Support Representatives,Simon Content
+Customer Support Representatives,Matteo Core
+Customer Support Representatives,Patrick Corr
+Customer Support Representatives,Eoghan Corr
+Customer Support Representatives,Donal Cotter
+Customer Support Representatives,Donal Stephen Cotter
+Customer Support Representatives,Lee Coughlan
+Customer Support Representatives,Jason Courtney
+Customer Support Representatives,Odhran Creed
+Customer Support Representatives,Vicente Cremades
+Customer Support Representatives,Peter Croft
+Customer Support Representatives,Tina Crook
+Customer Support Representatives,Steven Cross
+Customer Support Representatives,Maurizio Curione
+Customer Support Representatives,Marlene Daehler
+Customer Support Representatives,Hansjoerg Dagn
+Customer Support Representatives,Gerard Daly
+Customer Support Representatives,Martin Dammers
+Customer Support Representatives,Oliver Danckers
+Customer Support Representatives,Cédric David
+Customer Support Representatives,Gareth Davies
+Customer Support Representatives,Miriam Dawartz
+Customer Support Representatives,Francesco De Bernadini
+Customer Support Representatives,Rafael Del Rio Ravassa
+Customer Support Representatives,Gonzalo Deluque
+Customer Support Representatives,Christian Dembski
+Customer Support Representatives,Adam Dew
+Customer Support Representatives,Alexey Didenko
+Customer Support Representatives,Géraldine Dieppois
+Customer Support Representatives,Sergej Dikun
+Customer Support Representatives,Pavel Dikushin
+Customer Support Representatives,Ilja Dmitrijev
+Customer Support Representatives,James Dobbie
+Customer Support Representatives,Sandor Dobsa
+Customer Support Representatives,Ilona Dolejsi
+Customer Support Representatives,Andre Domigall
+Customer Support Representatives,Gareth Donaghey
+Customer Support Representatives,Philip Doogan
+Customer Support Representatives,Annalisa Dorbolo
+Customer Support Representatives,Barry Downs
+Customer Support Representatives,Tony Doyle
+Customer Support Representatives,Antony Dredge
+Customer Support Representatives,Patrick Drougge
+Customer Support Representatives,Jennifer Dubkowitsch
+Customer Support Representatives,Rene Dubowy
+Customer Support Representatives,Dmitry Dubrov
+Customer Support Representatives,Alexandre Duckman-Lebrun
+Customer Support Representatives,Jens Duever
+Customer Support Representatives,Carl Dugdale
+Customer Support Representatives,Kirsty Durnall
+Customer Support Representatives,Christian Eberhardt
+Customer Support Representatives,Jan Ebermann
+Customer Support Representatives,Jonny Ehleiter
+Customer Support Representatives,Patrick Ehlen
+Customer Support Representatives,Stephan Einecke
+Customer Support Representatives,Adam Eksterowicz
+Customer Support Representatives,Elliès  Elgoutni
+Customer Support Representatives,Robert Emrich
+Customer Support Representatives,Thomas Christian Endres
+Customer Support Representatives,Guillaume Lomig Enfroy
+Customer Support Representatives,Christian Ewald
+Customer Support Representatives,Brian Farren
+Customer Support Representatives,Matthieu Faucillion
+Customer Support Representatives,Christopher Fawcett
+Customer Support Representatives,Alberto Feijoo
+Customer Support Representatives,Maider Ferradas
+Customer Support Representatives,Cristina Figallo
+Customer Support Representatives,Dmitrijs Filipenoks
+Customer Support Representatives,Paul Finn
+Customer Support Representatives,Claire Finn
+Customer Support Representatives,Wolf-Philipp Fischer
+Customer Support Representatives,Doug Fitchett
+Customer Support Representatives,Aaron Fitzpatrick
+Customer Support Representatives,Reece Ford
+Customer Support Representatives,Jamie Foreman
+Customer Support Representatives,Benedict Fox
+Customer Support Representatives,Kai Frankenberg
+Customer Support Representatives,Wayne Freer
+Customer Support Representatives,Jan Freuwörth
+Customer Support Representatives,Jens Fünfkirchler
+Customer Support Representatives,Mathias Gabel
+Customer Support Representatives,Christoph Gansler
+Customer Support Representatives,Nina Ganss
+Customer Support Representatives,Ricardo Garbin
+Customer Support Representatives,Gregory Garcia
+Customer Support Representatives,Miguel García Gómez
+Customer Support Representatives,Guillermo Garcia Rey
+Customer Support Representatives,Oscar Garcia Subirana
+Customer Support Representatives,Christopher Garry
+Customer Support Representatives,Silvio Geisenhainer
+Customer Support Representatives,Nilla Gelius
+Customer Support Representatives,Anika Gieseke
+Customer Support Representatives,Klaus Ginzel
+Customer Support Representatives,Marcela Gleixner
+Customer Support Representatives,Gabriel Gloeggler
+Customer Support Representatives,Nataliya Godunok
+Customer Support Representatives,Dietke Goedde
+Customer Support Representatives,Nathalie Goeller
+Customer Support Representatives,Nico Goetze
+Customer Support Representatives,Alex Golds
+Customer Support Representatives,Manuel Francisco Gomez Gomez
+Customer Support Representatives,Tomas Goncalves
+Customer Support Representatives,Yoann Gonedec
+Customer Support Representatives,Hernan Gonzalez
+Customer Support Representatives,Eliana Gori
+Customer Support Representatives,Thomas Gottwald
+Customer Support Representatives,Sebastien Gouaux
+Customer Support Representatives,Markus Graffe
+Customer Support Representatives,James Graham
+Customer Support Representatives,Stephen Grantham
+Customer Support Representatives,Olivier Grassini
+Customer Support Representatives,Lee Greatorex
+Customer Support Representatives,Lea Deborah Grimm
+Customer Support Representatives,Christoph Grix
+Customer Support Representatives,Stephan Grosse
+Customer Support Representatives,Christian Guelle
+Customer Support Representatives,Christian Guest
+Customer Support Representatives,Dearbhla Guinan
+Customer Support Representatives,Katerina Gulak
+Customer Support Representatives,Frerk Güntzler
+Customer Support Representatives,Mikhail Guskov
+Customer Support Representatives,Mikko Gustafsson
+Customer Support Representatives,Peter Hadaszi
+Customer Support Representatives,Andrew Gordon Haefs
+Customer Support Representatives,Jonathan Hall
+Customer Support Representatives,Sanna Hanskala
+Customer Support Representatives,Nicolas Harding
+Customer Support Representatives,Amanda Kate Harris
+Customer Support Representatives,Klaas Hartman
+Customer Support Representatives,Christine Haugland
+Customer Support Representatives,Kieran Hayes
+Customer Support Representatives,Richard Hayward
+Customer Support Representatives,Henrik Hedstrom
+Customer Support Representatives,Michael Heffernan
+Customer Support Representatives,Carlo Hefner
+Customer Support Representatives,Sandra Heide
+Customer Support Representatives,Ben Hellis
+Customer Support Representatives,Peter Herbert
+Customer Support Representatives,Emma Hernandez Mudarra
+Customer Support Representatives,Alexander Hess
+Customer Support Representatives,Thomas Hilgers
+Customer Support Representatives,Michael Hoffmann
+Customer Support Representatives,Cheryl Hoggins
+Customer Support Representatives,Heidi Hoibraten
+Customer Support Representatives,Johannes Hold
+Customer Support Representatives,Steven Holgate
+Customer Support Representatives,Dean Holroyd
+Customer Support Representatives,Thomas Honey
+Customer Support Representatives,Guus Hoogendoorn
+Customer Support Representatives,Jörn Hoppenrath
+Customer Support Representatives,Andre Hornemann
+Customer Support Representatives,David Horrocks
+Customer Support Representatives,Dominik Hothow
+Customer Support Representatives,Iqbal Hussain
+Customer Support Representatives,Alexey Ilin
+Customer Support Representatives,Alexander Ion Naya Sanchez
+Customer Support Representatives,Mario Iotti
+Customer Support Representatives,Svetlana Ivanov
+Customer Support Representatives,Adam Jablonski
+Customer Support Representatives,Juliusz Marcin Jagodzinski
+Customer Support Representatives,Jan Michael Jahnke
+Customer Support Representatives,Mario Janus
+Customer Support Representatives,Ivans Januskins
+Customer Support Representatives,Ghislain Jeannot
+Customer Support Representatives,Guillaume Jegu
+Customer Support Representatives,Daniel Jenkins
+Customer Support Representatives,Julia Jermolajeva
+Customer Support Representatives,Pascaline Jibert
+Customer Support Representatives,Daniel Johnson
+Customer Support Representatives,Ben Johnson
+Customer Support Representatives,Diana Jojic
+Customer Support Representatives,Emma Jones
+Customer Support Representatives,Dean Jones
+Customer Support Representatives,Matthew Jones
+Customer Support Representatives,Ingo Jungherr
+Customer Support Representatives,Stefan Kaczmarek
+Customer Support Representatives,Roman Kadoshchuk
+Customer Support Representatives,Norbert Kaiser
+Customer Support Representatives,Aleksandrs Kaminskis
+Customer Support Representatives,Rafael Kansy
+Customer Support Representatives,Denis Karpow
+Customer Support Representatives,Frank Kendziora
+Customer Support Representatives,Jon Kenny
+Customer Support Representatives,Jason Kenyon
+Customer Support Representatives,Phillip Kerins
+Customer Support Representatives,Gunars Kessels
+Customer Support Representatives,Vladimir Keturko
+Customer Support Representatives,Ryan Kewley
+Customer Support Representatives,Anastasiia Kharchenko
+Customer Support Representatives,Stephen Kiely
+Customer Support Representatives,Matthias Kiesel
+Customer Support Representatives,Bart Kijanka
+Customer Support Representatives,Markus Kintrup
+Customer Support Representatives,Konrad Kirchgässner
+Customer Support Representatives,Aleksej Kiricenko
+Customer Support Representatives,Mark Klang
+Customer Support Representatives,Daniela Kleint
+Customer Support Representatives,Kevin Knights
+Customer Support Representatives,Timur Kocaurlu
+Customer Support Representatives,Sonja Köck
+Customer Support Representatives,Bjoern Kohlberger
+Customer Support Representatives,Lisa Kohnen
+Customer Support Representatives,Björn Kohnen
+Customer Support Representatives,Andrey Kolchin
+Customer Support Representatives,Vladislav Kollerov
+Customer Support Representatives,Jurijs Kolmikovs
+Customer Support Representatives,Christian Königstein
+Customer Support Representatives,Leokadiya Konstantinova
+Customer Support Representatives,Andreas Kordes
+Customer Support Representatives,Deniss Korzans
+Customer Support Representatives,Olga Kosenko
+Customer Support Representatives,Susanne Kovac
+Customer Support Representatives,Andreas Krause
+Customer Support Representatives,Dominik Kreyssing
+Customer Support Representatives,Patrick Krueger
+Customer Support Representatives,Artem Krylov
+Customer Support Representatives,Katja Kschentz
+Customer Support Representatives,Frédéric Kubikowski
+Customer Support Representatives,Jonathan Kulcsar
+Customer Support Representatives,Dmitrij Kulikov
+Customer Support Representatives,Benjamin Kulz
+Customer Support Representatives,Mandy Kurucz
+Customer Support Representatives,Vadimas Kvetkauskas
+Customer Support Representatives,Matthias Labitzke
+Customer Support Representatives,Irena Lace
+Customer Support Representatives,Valts Laktuks
+Customer Support Representatives,Adrien Lambert
+Customer Support Representatives,Natascia Lamparelli
+Customer Support Representatives,Aaron Langan
+Customer Support Representatives,Rene Langhans
+Customer Support Representatives,Bart Lansink
+Customer Support Representatives,Tim Laufenberg
+Customer Support Representatives,Johannes Läuffer
+Customer Support Representatives,Mathieu Laugle
+Customer Support Representatives,Martin Laur
+Customer Support Representatives,Mathieu Laurent
+Customer Support Representatives,Eoin Layton
+Customer Support Representatives,Anita Lechner
+Customer Support Representatives,Maxime Ledonge
+Customer Support Representatives,Robert Lee
+Customer Support Representatives,Tom Leiper
+Customer Support Representatives,Christoph Leischnig
+Customer Support Representatives,Julia Leitner
+Customer Support Representatives,François Lenglet
+Customer Support Representatives,Wilko Lennartz
+Customer Support Representatives,Michael Lenton
+Customer Support Representatives,Joseph Leonard
+Customer Support Representatives,Johanna Leopold
+Customer Support Representatives,Sascha Leopold
+Customer Support Representatives,Marius Leszczynski
+Customer Support Representatives,Jelena Levitova
+Customer Support Representatives,Anna Levitova
+Customer Support Representatives,Andrew Lewis
+Customer Support Representatives,Frederico Libralato
+Customer Support Representatives,Dana Licht
+Customer Support Representatives,Christian Lichthardt
+Customer Support Representatives,Benjamin Lienert
+Customer Support Representatives,Ashleigh Lillechurch
+Customer Support Representatives,Simon Linford
+Customer Support Representatives,Raimond Linkevic
+Customer Support Representatives,Andre Linnemann
+Customer Support Representatives,Julien Litrico
+Customer Support Representatives,Adrián Llamas Estevez
+Customer Support Representatives,Bruno Loncke
+Customer Support Representatives,Umberto Lopes
+Customer Support Representatives,Jacky Lorimer
+Customer Support Representatives,Oliver Lötscher
+Customer Support Representatives,Adam Lucas
+Customer Support Representatives,Iwona Lucek
+Customer Support Representatives,Angel Luis Carmona Egler
+Customer Support Representatives,Gottfried Lumpi
+Customer Support Representatives,Marco Ly
+Customer Support Representatives,Antonio Manuel Macedo Monteiro
+Customer Support Representatives,Gianluca   Magnanimi
+Customer Support Representatives,Sebastian Magnus
+Customer Support Representatives,Christel Malbrancq
+Customer Support Representatives,Darren Lee Mangan
+Customer Support Representatives,Marco Manig
+Customer Support Representatives,Yulia Mardot
+Customer Support Representatives,Stefan Mark
+Customer Support Representatives,Konstantinos Markogiannakis
+Customer Support Representatives,Derek Martin
+Customer Support Representatives,Chris Marynka
+Customer Support Representatives,Robert Mathews
+Customer Support Representatives,Christopher Mathieson
+Customer Support Representatives,Thomas Mayerhofer
+Customer Support Representatives,Regina Mayr
+Customer Support Representatives,Guillaume Maze
+Customer Support Representatives,Kathrin McCain
+Customer Support Representatives,Peter McDonald
+Customer Support Representatives,David McEvoy
+Customer Support Representatives,Rob McFarlane
+Customer Support Representatives,Steven McNamara
+Customer Support Representatives,Olivier Mea
+Customer Support Representatives,François Medaerts
+Customer Support Representatives,Florian Meister
+Customer Support Representatives,Bo Mejdahl
+Customer Support Representatives,Juan Mendez
+Customer Support Representatives,Patrick Metzger
+Customer Support Representatives,Matthias Michallek
+Customer Support Representatives,Ralph Michel
+Customer Support Representatives,Stefan Mickel
+Customer Support Representatives,Douglas Midgley
+Customer Support Representatives,Alexander Mielchen
+Customer Support Representatives,Gleb Mihhailenko
+Customer Support Representatives,Lucas Millán Tomás
+Customer Support Representatives,Bjorn Miller
+Customer Support Representatives,Jessica Milleville
+Customer Support Representatives,Ivan Minaña Mascarón
+Customer Support Representatives,Yuri Minson
+Customer Support Representatives,Robert Moeckel
+Customer Support Representatives,Bonna Mom
+Customer Support Representatives,Francesco Monetti
+Customer Support Representatives,Sandra Monse
+Customer Support Representatives,Christophe Monteiro
+Customer Support Representatives,Daniel Mooney
+Customer Support Representatives,Oliver Moore
+Customer Support Representatives,Pierre-Nicolas Moreau
+Customer Support Representatives,Pedro Moreno Garcia
+Customer Support Representatives,Sergey Morozov
+Customer Support Representatives,Sebastian Mottschall
+Customer Support Representatives,Chris Mueller
+Customer Support Representatives,Nicolas Mullen
+Customer Support Representatives,Nicoletta Mura
+Customer Support Representatives,Artiom Muraska
+Customer Support Representatives,Niall Murphy
+Customer Support Representatives,Justin Murphy
+Customer Support Representatives,Nicholas Muschiol
+Customer Support Representatives,Eduard Narbut
+Customer Support Representatives,Luis Narvaez
+Customer Support Representatives,Anna Naumova
+Customer Support Representatives,Paul Neil
+Customer Support Representatives,Matthew Neumann
+Customer Support Representatives,Liam Nicklen
+Customer Support Representatives,Jonas Nohr
+Customer Support Representatives,Katharina Nordh
+Customer Support Representatives,Bartosz Nowaczek
+Customer Support Representatives,Juan Alberto Núñez Lauff
+Customer Support Representatives,Karl-Hans Obenauer
+Customer Support Representatives,Nils Odlund
+Customer Support Representatives,Stephen O'Donnell
+Customer Support Representatives,Daniel O'Donovan
+Customer Support Representatives,Olli Oja
+Customer Support Representatives,Pawel Okrajek
+Customer Support Representatives,Alan O'Leary
+Customer Support Representatives,Natalya Oleynikova
+Customer Support Representatives,Chris Oliver
+Customer Support Representatives,Risto Ollila
+Customer Support Representatives,Ray O'Mahony
+Customer Support Representatives,Paul O'Neill
+Customer Support Representatives,Miguel Angel Ortega
+Customer Support Representatives,Conor O'Shea
+Customer Support Representatives,Marco Otto
+Customer Support Representatives,Antonio Pagán Escribano
+Customer Support Representatives,Lorenzo Pagliacci
+Customer Support Representatives,Anna Pajda
+Customer Support Representatives,Jahmin Pama
+Customer Support Representatives,Davide Passarella
+Customer Support Representatives,Pierre Passet
+Customer Support Representatives,Björn Passow
+Customer Support Representatives,Steven Paton
+Customer Support Representatives,Christoph Pauler
+Customer Support Representatives,Aleksander Pavliuk
+Customer Support Representatives,Jekaterina Pavliuk
+Customer Support Representatives,Dana Pawletta
+Customer Support Representatives,Gilles Pedrico
+Customer Support Representatives,Mathias Pelz
+Customer Support Representatives,Aymeric Pentecouteau
+Customer Support Representatives,Carlota Pereira
+Customer Support Representatives,Andrea Vanessa Pereira
+Customer Support Representatives,Stefan Marcus Peter
+Customer Support Representatives,Tim Peters
+Customer Support Representatives,Michail Petriv
+Customer Support Representatives,Kiril Petriv
+Customer Support Representatives,Jean-Louis Phan-Tran
+Customer Support Representatives,James Pilkington
+Customer Support Representatives,Julien Pillay
+Customer Support Representatives,Helena Pinto
+Customer Support Representatives,Isaias Pires
+Customer Support Representatives,Lidia Pisu
+Customer Support Representatives,Patrick Plaichinger
+Customer Support Representatives,Michael Platek
+Customer Support Representatives,Markus Pletz
+Customer Support Representatives,Sarah Pocivalnik
+Customer Support Representatives,Ian Polianskii
+Customer Support Representatives,Oliver Polter
+Customer Support Representatives,Iván Porrua Fuerte
+Customer Support Representatives,Emmanuel Poyac
+Customer Support Representatives,Carlos Pozo Montero
+Customer Support Representatives,Stefano Pretto
+Customer Support Representatives,Renny Priestley
+Customer Support Representatives,Philippe Prince
+Customer Support Representatives,Blandine Pronost
+Customer Support Representatives,Dan Puckett
+Customer Support Representatives,Patrick Pulfer
+Customer Support Representatives,Austin Purcell
+Customer Support Representatives,Sébastien Pusset
+Customer Support Representatives,Bérenger Queune
+Customer Support Representatives,Daniel Raffel
+Customer Support Representatives,Graeme Rafferty
+Customer Support Representatives,Martin Ramm
+Customer Support Representatives,Sebastian Ranta
+Customer Support Representatives,Cristian Raschioni
+Customer Support Representatives,Robert Read
+Customer Support Representatives,Alexander Redeker
+Customer Support Representatives,David Remy-Zephir
+Customer Support Representatives,Hugh Rennard
+Customer Support Representatives,Richard Requena Delon
+Customer Support Representatives,Filipe Ribeiro
+Customer Support Representatives,David Ribeiro
+Customer Support Representatives,Angelika Ribisch
+Customer Support Representatives,John Richmond
+Customer Support Representatives,Diego Ricigliano
+Customer Support Representatives,Susanne Rieger
+Customer Support Representatives,Eduard Riekstins
+Customer Support Representatives,Stefan Riess
+Customer Support Representatives,Steffen Ritter
+Customer Support Representatives,Radoslaw Robaczynski
+Customer Support Representatives,Jonathan Robinson
+Customer Support Representatives,Nicolas Roche
+Customer Support Representatives,Henrique Rodrigues
+Customer Support Representatives,Carlos Rodríguez Pascual
+Customer Support Representatives,Justus Roennau
+Customer Support Representatives,Henning Røst
+Customer Support Representatives,Micael Roumeas
+Customer Support Representatives,Ian Rowland
+Customer Support Representatives,Steffen Rückert
+Customer Support Representatives,Jana Rudinec
+Customer Support Representatives,Monica Ruiz Ortega
+Customer Support Representatives,Alexey Rusinov
+Customer Support Representatives,Brice Russeil
+Customer Support Representatives,Melanie Ruttinger
+Customer Support Representatives,Daniel Ryan
+Customer Support Representatives,Ruslan Saborgalijev
+Customer Support Representatives,Emma Sadler
+Customer Support Representatives,Timo Sagewitz
+Customer Support Representatives,Ilja Salajev
+Customer Support Representatives,Pavels Salins
+Customer Support Representatives,Andy Salwey
+Customer Support Representatives,Isaac Sanchez
+Customer Support Representatives,David Sanchez Millan
+Customer Support Representatives,Oscar Sandstrom
+Customer Support Representatives,Miren Sarasola Laspiur
+Customer Support Representatives,Iga Sasiela
+Customer Support Representatives,Andreas Saß
+Customer Support Representatives,Janina Sauther
+Customer Support Representatives,Nadine Schaarmann
+Customer Support Representatives,Esther Scheeren
+Customer Support Representatives,Simon Schertz
+Customer Support Representatives,Andre Schickhoff
+Customer Support Representatives,Christian Schilling
+Customer Support Representatives,Jeremy Schindler
+Customer Support Representatives,André Schlegelmilch
+Customer Support Representatives,David Schlosser
+Customer Support Representatives,Christopher Schmale
+Customer Support Representatives,Chantale Schmid
+Customer Support Representatives,Martin Schmidt
+Customer Support Representatives,Stefanie Schneider
+Customer Support Representatives,Sascha Schneider
+Customer Support Representatives,Matthias Schreiber
+Customer Support Representatives,Wouter Schrijnemakers
+Customer Support Representatives,Nico Schroeter
+Customer Support Representatives,Sascha Schult
+Customer Support Representatives,Karsten Schulz
+Customer Support Representatives,Patrik Schweigl
+Customer Support Representatives,Aliocha Segard
+Customer Support Representatives,Torsten Seidel
+Customer Support Representatives,Fernando Serina
+Customer Support Representatives,Dario Serna
+Customer Support Representatives,Yolanda Serrano Llamas
+Customer Support Representatives,Anna Shaleva
+Customer Support Representatives,Nikolay Shalunov
+Customer Support Representatives,Sanjay Shinh
+Customer Support Representatives,Nadezda Shishkina
+Customer Support Representatives,Craig Shrewsbury
+Customer Support Representatives,Mirko Siebert
+Customer Support Representatives,Miroslaw Siemens
+Customer Support Representatives,Juris Silovs
+Customer Support Representatives,Paulo Silva
+Customer Support Representatives,Josie Silva
+Customer Support Representatives,Luis Silva
+Customer Support Representatives,Diogo Silva
+Customer Support Representatives,Michael Simpson
+Customer Support Representatives,Samuel Sittl
+Customer Support Representatives,Christian Skonneberg
+Customer Support Representatives,Sergey Slisenko
+Customer Support Representatives,Colin Smith
+Customer Support Representatives,Shaun Smith
+Customer Support Representatives,Sarah Snook
+Customer Support Representatives,Kasia Sochon
+Customer Support Representatives,Genséric Sohier
+Customer Support Representatives,Ruben Soriano
+Customer Support Representatives,Vasileios Souliotis
+Customer Support Representatives,Isabelle Soupault
+Customer Support Representatives,Nils Spehr
+Customer Support Representatives,Volker Stabler
+Customer Support Representatives,Michael Stahmer
+Customer Support Representatives,David Stammerjohann
+Customer Support Representatives,Nicolas Stampf
+Customer Support Representatives,Kenneth Standbridge
+Customer Support Representatives,Stephen Stanley
+Customer Support Representatives,Paul Stapley
+Customer Support Representatives,Kirils Stecenko
+Customer Support Representatives,Kim Nicola Steindel
+Customer Support Representatives,Alexander Steuckmann
+Customer Support Representatives,Alexander Stippekohl
+Customer Support Representatives,Artur Strak
+Customer Support Representatives,Jean Streveler
+Customer Support Representatives,Roman Strogov
+Customer Support Representatives,Jochen Stutzkeitz
+Customer Support Representatives,Vitalijus Surovas
+Customer Support Representatives,Alexander Tarasov
+Customer Support Representatives,Bastien Tardivel
+Customer Support Representatives,Doris Tatzgern
+Customer Support Representatives,Amy Taylor
+Customer Support Representatives,Alexis Terrasse
+Customer Support Representatives,Damiano Tescaro
+Customer Support Representatives,Simon Testard
+Customer Support Representatives,Francesca Teti
+Customer Support Representatives,Daniela Thelen
+Customer Support Representatives,Wolfgang Thurner
+Customer Support Representatives,Anzhelika Timanova
+Customer Support Representatives,Felix Titzer
+Customer Support Representatives,Pablo Toledo Baeza
+Customer Support Representatives,Jenny Tomalik
+Customer Support Representatives,Patrick Töwe
+Customer Support Representatives,Renaud Toyer
+Customer Support Representatives,Christian Traute
+Customer Support Representatives,Antonio Jesus Triana Herrera
+Customer Support Representatives,Marianna Trushkova
+Customer Support Representatives,Oksana Tsoganova
+Customer Support Representatives,Fabien Tumminello
+Customer Support Representatives,Mikhail Tun
+Customer Support Representatives,Daniyar Ushpayev
+Customer Support Representatives,Vincent  Vacquand
+Customer Support Representatives,Julien Vale
+Customer Support Representatives,Jeremy Vangenechten
+Customer Support Representatives,Stéphane Varnier
+Customer Support Representatives,Igor Vasiljev
+Customer Support Representatives,Ivan Vasilyev
+Customer Support Representatives,Pavel Vavilov
+Customer Support Representatives,Marina Vavilova
+Customer Support Representatives,Martin Gundersen Vea
+Customer Support Representatives,Arturas Velutis
+Customer Support Representatives,Luis Vieira
+Customer Support Representatives,Einar Vilop
+Customer Support Representatives,Jens Volkmann
+Customer Support Representatives,Gunnar Voss
+Customer Support Representatives,Eduardo Vozmediano
+Customer Support Representatives,Stephen Wagstaff
+Customer Support Representatives,Markus Wahl
+Customer Support Representatives,Leo Wakelin
+Customer Support Representatives,Marc Wehbe
+Customer Support Representatives,Mario Weissenborn
+Customer Support Representatives,Olaf Wendorff
+Customer Support Representatives,Claudia Wenko
+Customer Support Representatives,Sandra Wernicke
+Customer Support Representatives,Thomas Wertnig
+Customer Support Representatives,Sebastian Wetzel
+Customer Support Representatives,Renate Weygold
+Customer Support Representatives,James Whittall
+Customer Support Representatives,Harald Willems
+Customer Support Representatives,Emma Williamson
+Customer Support Representatives,Loic Wilson
+Customer Support Representatives,Rebecca Wilson
+Customer Support Representatives,Claudia Winter
+Customer Support Representatives,Marcus Winterscheid
+Customer Support Representatives,Stefan Witzel
+Customer Support Representatives,Artur Wojtas
+Customer Support Representatives,Kamil Wojtas
+Customer Support Representatives,Roland Wolf
+Customer Support Representatives,Dennis Wollmann
+Customer Support Representatives,Patryk Wolowiec
+Customer Support Representatives,Christopher Woodcock
+Customer Support Representatives,Lukas Wozniak
+Customer Support Representatives,Audrey Wozniak
+Customer Support Representatives,Giselle Wrigley
+Customer Support Representatives,Romain Wuillaume
+Customer Support Representatives,Sebastian Wyrwall
+Customer Support Representatives,Wei Yue
+Customer Support Representatives,Youri Zabarovski
+Customer Support Representatives,Vincent Zaccheo
+Customer Support Representatives,Sebastian Zaebe
+Customer Support Representatives,Denis Zotov
+Customer Support Representatives,Aleksandra Zurek
+EUROPE Customer Care & Loyalty Manager,Marie-Helene Atienz
+Customer Care & Loyalty Team Members,Jean-Damien Buisson
+Customer Care & Loyalty Team Members,Noemi Cugudda
+Customer Care & Loyalty Team Members,Theo Garcia
+Customer Care & Loyalty Team Members,Svetlana Loukiantchikova
+Customer Care & Loyalty Team Members,María Victoria Martín Briasco
+Customer Care & Loyalty Team Members,Andreas Pfeiffer
+Customer Care & Loyalty Team Members,Maciej Szajdak
+Customer Care & Loyalty Team Members,Vinh Tran
+EUROPE Senior Regional Planning and Support Services Manager,Christian Scharling
+"Support Information, Policy Team Manager",Serge Pinçon
+Support Information Senior Administrators,Serge Olivier
+Support Information Senior Administrators,José Javier Suárez-Perdomo
+Support Information Administrators,Marios Aziz
+Support Information Administrators,Neil Banks
+Support Information Administrators,Kristian Koivisto-Kokko
+Support Information Administrators,Michael Pinder
+Support Forum Representatives,Michal Biniasz
+Support Forum Representatives,Eric De Freslon
+Support Forum Representatives,Mario De Rienzo
+Support Forum Representatives,Christian Döbel
+Support Forum Representatives,Dennis Drabinski
+Support Forum Representatives,David Hollingbery
+Support Forum Representatives,Mikhail Ilin
+Support Forum Representatives,Craig Jobling
+Support Forum Representatives,Alex McHugh
+Support Forum Representatives,Aleksandr Michejev
+Support Forum Representatives,Sébastien Musquin
+Support Forum Representatives,Richard Robinson
+Support Forum Representatives,Steffen Reinke
+Support Forum Representatives,Daniel Stolp
+Support Forum Representatives,Jon Torre Garcia
+Workforce Management Team Manager,Maged Fares
+Workforce Management Analysts,Louise McShane
+Workforce Management Analysts,Cristiano Pereira
+Workforce Management Analysts,Tobias Raupach
+Service Level Coordinators Team Manager,Gerd Berghoff
+Service Level Coordinators,Marcus Blaesche
+Service Level Coordinators,Alexander Bradburn
+Service Level Coordinators,Paul Cox
+Service Level Coordinators,Neal Kingston
+Service Level Coordinators,Thomas Lorimer
+Service Level Coordinators,Matteo Spataro
+Service Level Coordinators,Jenifer Winters
+RPS Team Manager,Darren Buckley
+Internal Affairs Senior Representatives,Robert Busch
+Internal Affairs Senior Representatives,Olga Duval Prosina
+Internal Affairs Representatives,John Harry De Lara
+Internal Affairs Representatives,Lena Drevermann
+Internal Affairs Representatives,Stefan Frei
+Internal Affairs Representatives,Roy Healy
+Internal Affairs Representatives,Niklas Lingsell
+Internal Affairs Representatives,Lee Middleton
+Internal Affairs Representatives,Ryan Vowler
+Internal Affairs Representatives,Andre Tabet
+RPS Manager,Cédric Galins
+Senior CS Tools Representative,Karim Adala
+CS Tools Team Representatives,Cédric Coret
+CS Tools Team Representatives,Philippe Peeters
+Senior Project Manager,Linus Flink
+Project Manager,Torsten Schmidt
+Project Analysts,Henrik Eriksson
+Project Analysts,Charles Smith
+Customer Support Coordinator,Marlène Cervantes
+EUROPE Learning and Development Manager,Paul Horrell
+Learning and Development Specialists,Leeanne Goodwin
+Learning and Development Specialists,Alice Hopkins
+Learning and Development Specialists,Benjamin Klinkhamer
+Learning and Development Specialists,Harald Kneissl
+Learning and Development Specialists,Jenny Llewellyn
+Learning and Development Specialists,Cristian Martín Nieto
+Learning and Development Specialists,Rachel O'Neill
+Learning and Development Specialists,Maija Perfiljeva
+Learning and Development Specialists,Bartosz Posluszny
+Learning and Development Specialists,Daniel Rigas
+Learning and Development Specialists,Christoph Thann
+Learning and Development Specialists,Victoria Wakeman
+KOREA/SOUTH Regional Customer Service Director,Richard Choi
+Customer Support Group Manager,Jiyoung Kim
+Customer Support Team Managers,Jinman Park
+Customer Support Team Managers,Seonmean Kim
+Customer Support Team Managers,Sunmin Lim
+Customer Support Seniors,Eunji Kim
+Customer Support Seniors,Hyojin An
+Customer Support Seniors,Miya Lim
+Customer Support Seniors,Myoungjin Kim
+Customer Support Seniors,Sunho Jeong
+Customer Support Seniors,Jungjun Lee
+KOREA Customer Support Representatives,Sumi Jeong
+KOREA Customer Support Representatives,Junghun Kwag
+KOREA Customer Support Representatives,Kihoon Yang
+KOREA Customer Support Representatives,Sukil Jo
+KOREA Customer Support Representatives,Bogyu Kim
+KOREA Customer Support Representatives,Byoungjin Lim
+KOREA Customer Support Representatives,Junghyun Lee
+KOREA Customer Support Representatives,Dohyun Lee
+KOREA Customer Support Representatives,Kyoungjoon Kim
+KOREA Customer Support Representatives,Eunkyung Jang
+KOREA Customer Support Representatives,Minkyu Park
+KOREA Customer Support Representatives,Insik Lee
+KOREA Customer Support Representatives,Jaehui Kim
+KOREA Customer Support Representatives,Sungpyo Hong
+KOREA Customer Support Representatives,Changhyun An
+KOREA Customer Support Representatives,Hyekyung Lee
+KOREA Customer Support Representatives,Yeri Cho
+KOREA Customer Support Representatives,Bomin Jin
+KOREA Customer Support Representatives,Chahyun Nam
+KOREA Customer Support Representatives,Kwakhyung Kim
+KOREA Customer Support Representatives,Bomi Hwang
+KOREA Customer Support Representatives,Chansoo Kim
+KOREA Customer Support Representatives,Duok Youn
+KOREA Customer Support Representatives,Gunho Jung
+KOREA Customer Support Representatives,Haeyoung park
+KOREA Customer Support Representatives,Jungwon Cho
+KOREA Customer Support Representatives,Kyosung Lee
+KOREA Customer Support Representatives,Miseon Yu
+KOREA Customer Support Representatives,Seho Lim
+KOREA Customer Support Representatives,Seolah Kim
+KOREA Customer Support Representatives,Soongil Kwon
+KOREA Customer Support Representatives,Youngsun Yun
+KOREA Customer Support Representatives,Dongnyuck Cho
+KOREA Customer Support Representatives,Eunhee Lee
+KOREA Customer Support Representatives,Eunyoung Beak
+KOREA Customer Support Representatives,Joohoon Oh
+KOREA Customer Support Representatives,Minhwan Kim
+KOREA Customer Support Representatives,Sairom Park
+KOREA Customer Support Representatives,Minwoo Kim
+KOREA Customer Support Representatives,Hyunwoo Lee
+KOREA Customer Support Representatives,Seulki Kim
+KOREA Customer Support Representatives,Eunhye Yu
+KOREA Customer Support Representatives,Byungdon Lee
+KOREA Customer Support Representatives,Cheongha Lee
+KOREA Customer Support Representatives,Chulwon Park
+KOREA Customer Support Representatives,Daeho Jang
+KOREA Customer Support Representatives,Deungwon Ka
+KOREA Customer Support Representatives,Heejun Jung
+KOREA Customer Support Representatives,Inho Park
+KOREA Customer Support Representatives,Inkook Jeon
+KOREA Customer Support Representatives,Jihee Jeon
+KOREA Customer Support Representatives,Jina Oh
+KOREA Customer Support Representatives,Jinwoong Kim
+KOREA Customer Support Representatives,Jinyoung Jung
+KOREA Customer Support Representatives,Jungrok Choi
+KOREA Customer Support Representatives,Kyungsik Han
+KOREA Customer Support Representatives,Kyupyo Choi
+KOREA Customer Support Representatives,Sangjin Yoon
+KOREA Customer Support Representatives,Seokjoon Hwang
+KOREA Customer Support Representatives,Seulah Kim
+KOREA Customer Support Representatives,Wonmoo Lee
+KOREA Customer Support Representatives,Youngil Sin
+KOREA Customer Support Representatives,Youngjo Heo
+KOREA Customer Support Representatives,Jinsuk An
+KOREA Customer Support Representatives,Jaejin Song
+KOREA Customer Support Representatives,Jongsoo Moon
+KOREA Customer Support Representatives,Daekyum Kim
+KOREA Customer Support Representatives,Nahee Lee
+KOREA Customer Support Representatives,Seungkyu Kim
+KOREA Customer Support Representatives,Jinyeong Yun
+KOREA Customer Support Representatives,Jeemin Kim
+KOREA Customer Support Representatives,Heedo Choi
+KOREA Customer Support Representatives,Cheolree Lee
+KOREA Customer Support Representatives,Hyunseok Lee
+KOREA Customer Support Representatives,Daejeong Ki
+SOUTH EAST ASIA Customer Support Representatives,Minseo Kim
+SOUTH EAST ASIA Customer Support Representatives,Youngjoo Lee
+SOUTH EAST ASIA Customer Support Representatives,Hwayeon Lee
+SOUTH EAST ASIA Customer Support Representatives,Seohyun Park
+KOREA Regional Planning and Support Services Manager,Kyungmee Kim
+CS Project and Service Level Coordinators Team Manager,Wonjae Jeong
+CS Project Team Analysts,Myeonghun Choi
+CS Project Team Analysts,Mihyun Kim
+Service Level Coordinators,Hosang Yu
+Service Level Coordinators,Jaewon Lim
+Service Level Coordinators,Joonbin Lee
+Service Level Coordinators,Sungho Eom
+Service Level Coordinators,Jinsu Lee
+Service Level Coordinators,Jungmin Song
+Service Level Coordinators,Byungkwan Chung
+Service Level Coordinators,Kyueun Lee
+Support Information Team Manager,Yongjo Choi
+Support Information Representatives,Jaehyun Ahn
+Support Information Representatives,Seunghoon Baeg
+Support Information Representatives,Jihyun Song
+Support Information Representatives,Sunghwan Kang
+Support Information Representatives,Hongsup Kim
+Internal Affairs Representative,Wonjang Cho
+KOREA Learning and Development Manager,Hana Lee
+Learning and Development Specialist,Boram Lee
+Learning and Development Specialist,Jeonghoon Hong
+BLIZZARD Assistant Customer Service Manager,Esther Liao
+Support Information Administrator,Jennifer Ni
+TAIWAN CUSTOMER SERVICE AND OPERATIONS,Game First International Corporation
+CHINA Customer Service Manager China,Eric Li
+CS Operations Lead,Louis Lu
+Tools & Information Specialist,Pete Mai
+Reporting Analyst,Rui Li
+CHINA CUSTOMER SERVICE AND OPERATIONS,NetEase Team
+"CUSTOMER Regional Director Customer Service, The Americas",Tony Johnson
+Administrative Assistant,Candace Young
+Receptionist - Austin,Jessica Anderson
+Customer Support Group Managers,Erynn Caldwell
+Customer Support Group Managers,Alan Marti
+Customer Support Group Managers,Johnny Perez
+Customer Support Group Managers,Tim Powell
+Customer Support Group Managers,Bruce Prescott
+Customer Support Team Managers,Neil Anderson
+Customer Support Team Managers,Aaron Bamblett
+Customer Support Team Managers,Matthew Buck
+Customer Support Team Managers,Andrew Cox
+Customer Support Team Managers,Ian Crawford
+Customer Support Team Managers,Aaron Denton
+Customer Support Team Managers,Nick DePalma
+Customer Support Team Managers,Eric Dicesare
+Customer Support Team Managers,Peter Drummond
+Customer Support Team Managers,Mac Ennis
+Customer Support Team Managers,Casey Glenn
+Customer Support Team Managers,Todd Gropp
+Customer Support Team Managers,Daniel Hammer
+Customer Support Team Managers,Michael Kanneg
+Customer Support Team Managers,Cory Larson
+Customer Support Team Managers,Erik Lindberg
+Customer Support Team Managers,Jamie Manzanalez
+Customer Support Team Managers,Maggie Olsen
+Customer Support Team Managers,Scott Orosz
+Customer Support Team Managers,Nicholas Ray
+Customer Support Team Managers,Don Rudy
+Customer Support Team Managers,Falk Schwiefert
+Customer Support Team Managers,Fritz Stegmann
+Customer Support Team Managers,David Tamayo
+Customer Support Team Managers,Jason Thomas
+Customer Support Team Managers,Justin Tritt
+Customer Support Team Managers,Miles Trumble
+Customer Support Team Managers,Matthew Vineyard
+Customer Support Representatives,Travis Abston
+Customer Support Representatives,Giovanni Alfieri
+Customer Support Representatives,John Allen
+Customer Support Representatives,Joshua Alvarez
+Customer Support Representatives,Bruno Alves
+Customer Support Representatives,Chris Amorim
+Customer Support Representatives,Matt Amy
+Customer Support Representatives,Jason Anderson
+Customer Support Representatives,David G. Anderson
+Customer Support Representatives,Flavio Andrade
+Customer Support Representatives,Stephanie Andrews
+Customer Support Representatives,Italo Araujo
+Customer Support Representatives,Marcos Araujo
+Customer Support Representatives,Michael Archuleta
+Customer Support Representatives,Marco Arevalo
+Customer Support Representatives,Robert Arjet
+Customer Support Representatives,Max Arnold
+Customer Support Representatives,Ramiro Ascencio Jr.
+Customer Support Representatives,Sheli Austin
+Customer Support Representatives,Robert M.  Badger
+Customer Support Representatives,Gregory Bahl
+Customer Support Representatives,Graham Bailey
+Customer Support Representatives,Jeni Balch
+Customer Support Representatives,Seng Bangphaxay
+Customer Support Representatives,Richard Barrick
+Customer Support Representatives,Mark Barrios
+Customer Support Representatives,Justin Bauer
+Customer Support Representatives,Edwin Bautista
+Customer Support Representatives,Ron Beaty Jr.
+Customer Support Representatives,Ryan Bebee
+Customer Support Representatives,Rob Belleville
+Customer Support Representatives,Mallory Bellinghausen
+Customer Support Representatives,Michael Belrose
+Customer Support Representatives,Nelson Bermudez
+Customer Support Representatives,Stephanie Berthiaume
+Customer Support Representatives,Justin Binford
+Customer Support Representatives,Howard Bishop
+Customer Support Representatives,Dirk Black
+Customer Support Representatives,Joshua Black
+Customer Support Representatives,Michael Blackard
+Customer Support Representatives,Bruno Blanco
+Customer Support Representatives,Kyan Bond
+Customer Support Representatives,Matt Bonner
+Customer Support Representatives,Aaron Bothne
+Customer Support Representatives,Benjamin Bowers
+Customer Support Representatives,Tracey Boyett
+Customer Support Representatives,Mike Braunstein
+Customer Support Representatives,Keith Breach
+Customer Support Representatives,Crystal Breaux
+Customer Support Representatives,Corey Breitling
+Customer Support Representatives,Daniel Brennecke
+Customer Support Representatives,Lindsay Brennecke
+Customer Support Representatives,Tony Brewer
+Customer Support Representatives,Kari Brewer
+Customer Support Representatives,Page Brockell
+Customer Support Representatives,Jonathan Brockell
+Customer Support Representatives,Jess Brummer
+Customer Support Representatives,Brendan Brunner
+Customer Support Representatives,Colean Brunner
+Customer Support Representatives,John Buik
+Customer Support Representatives,Heather Burdett-Holloway
+Customer Support Representatives,Adrian Butts
+Customer Support Representatives,Heather Butts
+Customer Support Representatives,Randy Butts
+Customer Support Representatives,David Byl
+Customer Support Representatives,Adam Byrd
+Customer Support Representatives,Joao Calhandro
+Customer Support Representatives,Angela Camilotto
+Customer Support Representatives,Claud Campbell
+Customer Support Representatives,Amanda Canfield
+Customer Support Representatives,Danielle Canterberry
+Customer Support Representatives,Trevor Cantrell-Paulson
+Customer Support Representatives,Manda Capan
+Customer Support Representatives,Melody Carver
+Customer Support Representatives,Shannon Cassel
+Customer Support Representatives,Crystal Cebulla
+Customer Support Representatives,Justin Chavez
+Customer Support Representatives,Daniella Chavez
+Customer Support Representatives,Ben Checola
+Customer Support Representatives,Preston Cheeks
+Customer Support Representatives,David Chen
+Customer Support Representatives,Ben Clark
+Customer Support Representatives,Christin Cochran
+Customer Support Representatives,Duncan Coe
+Customer Support Representatives,Kevin Connell
+Customer Support Representatives,Remy Cooper
+Customer Support Representatives,Ethan Copeland
+Customer Support Representatives,Brandy Corbin
+Customer Support Representatives,Austin Cornell
+Customer Support Representatives,William Crawford
+Customer Support Representatives,Nathan Crislip
+Customer Support Representatives,Dez Cummings
+Customer Support Representatives,Courtney S. Curry
+Customer Support Representatives,Chris Cynar
+Customer Support Representatives,Crystal Czarapata
+Customer Support Representatives,Kerry Dabbs
+Customer Support Representatives,Matt Dailey
+Customer Support Representatives,Mallorie Daniels
+Customer Support Representatives,Marina Dantas Tanner
+Customer Support Representatives,Will Darce
+Customer Support Representatives,Jason Davenport
+Customer Support Representatives,Ryan Davis
+Customer Support Representatives,Stuart Davis
+Customer Support Representatives,Willian De Fazio
+Customer Support Representatives,Gabe De Los Santos
+Customer Support Representatives,Daveina De Los Santos
+Customer Support Representatives,Jhonathan De Oliveira
+Customer Support Representatives,Felipe De Paulo
+Customer Support Representatives,Justin DeCloedt
+Customer Support Representatives,Tarah Dees
+Customer Support Representatives,Parisa Dehkordi
+Customer Support Representatives,Jesse DeLuca
+Customer Support Representatives,Peter DeSalvo
+Customer Support Representatives,Paulino Diaz
+Customer Support Representatives,Jake Dickens
+Customer Support Representatives,Steve Dickson
+Customer Support Representatives,Brandon DiMaggio
+Customer Support Representatives,Brandon Dockins
+Customer Support Representatives,Gene Dodge
+Customer Support Representatives,Derek Donovan
+Customer Support Representatives,Forrest Dorsey II
+Customer Support Representatives,Rachel Dost
+Customer Support Representatives,Jeremiah C. Dunn
+Customer Support Representatives,Richard Durval
+Customer Support Representatives,Tony Duson
+Customer Support Representatives,Adam Dyche
+Customer Support Representatives,Camden Eagar
+Customer Support Representatives,Josh Eberhart
+Customer Support Representatives,Benjamin Echelson
+Customer Support Representatives,Brady Echols
+Customer Support Representatives,Michael Edmonds
+Customer Support Representatives,Bryson Elliott
+Customer Support Representatives,Brad Ellison
+Customer Support Representatives,Cecilia Ellison
+Customer Support Representatives,James Engelke
+Customer Support Representatives,Quinn Enochs
+Customer Support Representatives,John Ensminger
+Customer Support Representatives,Daniel Errington
+Customer Support Representatives,Joel Espinoza
+Customer Support Representatives,Casey Everhart
+Customer Support Representatives,Nick Everson
+Customer Support Representatives,Ian Faas
+Customer Support Representatives,Tamara Faas
+Customer Support Representatives,Amanda Fackrell
+Customer Support Representatives,Dani Feibleman
+Customer Support Representatives,Alexandre Fernandes
+Customer Support Representatives,Cory Finnegan
+Customer Support Representatives,Kristin Finnsson
+Customer Support Representatives,Peter Fivelstad
+Customer Support Representatives,Melissa Fleming
+Customer Support Representatives,Vincent Floca
+Customer Support Representatives,Jose Flores III
+Customer Support Representatives,Tommy Flowers
+Customer Support Representatives,Ryan Foreman
+Customer Support Representatives,Nick Frame
+Customer Support Representatives,Martin Francis
+Customer Support Representatives,Anthony Franey
+Customer Support Representatives,Justin Franke
+Customer Support Representatives,Austin Freeman
+Customer Support Representatives,Christopher Frew
+Customer Support Representatives,Cynthia Frushon
+Customer Support Representatives,Christopher Fulgham
+Customer Support Representatives,Zachary Fullerton
+Customer Support Representatives,Rachael Fullerton
+Customer Support Representatives,David Galvan
+Customer Support Representatives,Jennifer Gamer
+Customer Support Representatives,Joe Gangl
+Customer Support Representatives,Justin Gann
+Customer Support Representatives,Matthew Gant
+Customer Support Representatives,Mallory Gant
+Customer Support Representatives,Alan Garcia
+Customer Support Representatives,Jason Garcia
+Customer Support Representatives,Eduardo Garcia
+Customer Support Representatives,Lennon Garcia-Cisneros
+Customer Support Representatives,Levi Garrett
+Customer Support Representatives,Paul Garza
+Customer Support Representatives,Melanie Gauderon
+Customer Support Representatives,Aaron Gayet
+Customer Support Representatives,Andrew Getting
+Customer Support Representatives,Jesse Gibbons
+Customer Support Representatives,Heather Glahn
+Customer Support Representatives,Samuel F. Glass
+Customer Support Representatives,Levi Godwin
+Customer Support Representatives,Lucas Goes
+Customer Support Representatives,Adriano Gomes
+Customer Support Representatives,Jeffrey Gondeck
+Customer Support Representatives,Enrique Gonzalez
+Customer Support Representatives,Katt Goodman
+Customer Support Representatives,Thomas Goodwin
+Customer Support Representatives,Andy Goolsby
+Customer Support Representatives,Chris Gorman
+Customer Support Representatives,Steel Gorman
+Customer Support Representatives,Neil Gossell
+Customer Support Representatives,Darleen Gotay
+Customer Support Representatives,Lyndsey Graham
+Customer Support Representatives,Guilherme Grahl
+Customer Support Representatives,Jed Grant
+Customer Support Representatives,David Gredell
+Customer Support Representatives,Izzy Greene
+Customer Support Representatives,Johnathan Greer
+Customer Support Representatives,Sabee Grewal
+Customer Support Representatives,Brian Gridley
+Customer Support Representatives,Fabian Guajardo
+Customer Support Representatives,Noelia Guerra
+Customer Support Representatives,George Guerrero
+Customer Support Representatives,Cris Guhman
+Customer Support Representatives,Jeremy Gulick
+Customer Support Representatives,Kit Gulick
+Customer Support Representatives,Joe Gutierrez
+Customer Support Representatives,Phil Habig
+Customer Support Representatives,Adrian Hall
+Customer Support Representatives,Nick Hamm
+Customer Support Representatives,Mark Hamm
+Customer Support Representatives,Jade Hammons
+Customer Support Representatives,Sean Hankla
+Customer Support Representatives,Michael Hanna
+Customer Support Representatives,Greg Hansen
+Customer Support Representatives,Scott Hansen
+Customer Support Representatives,William Harber
+Customer Support Representatives,Joseph Harper
+Customer Support Representatives,Kyle Harris
+Customer Support Representatives,Taira Harris
+Customer Support Representatives,Michael Hart
+Customer Support Representatives,Patricia Hayes
+Customer Support Representatives,Geoffrey Hazlewood
+Customer Support Representatives,Emily Hellman
+Customer Support Representatives,Marga Henslee
+Customer Support Representatives,Mark Hernandez
+Customer Support Representatives,Drew Higbee
+Customer Support Representatives,Nick Hite
+Customer Support Representatives,Daniel Hodge
+Customer Support Representatives,Tanner Hoekstra
+Customer Support Representatives,Lindsey Holcomb
+Customer Support Representatives,David Holt IV
+Customer Support Representatives,Val Holzmeister
+Customer Support Representatives,Justin Honeycutt
+Customer Support Representatives,David Hoppe
+Customer Support Representatives,Ehren Hopper
+Customer Support Representatives,Judah Horton
+Customer Support Representatives,William Howard-McKinney
+Customer Support Representatives,Colin Howat
+Customer Support Representatives,Scott Hudson
+Customer Support Representatives,Adam Hughes
+Customer Support Representatives,Bobbie Hughes
+Customer Support Representatives,April Hughey
+Customer Support Representatives,Shawn Hunt
+Customer Support Representatives,Sam Hunt
+Customer Support Representatives,Arthur Huwe
+Customer Support Representatives,Albert Hwang
+Customer Support Representatives,Jason Hyder
+Customer Support Representatives,Martin Iglesias
+Customer Support Representatives,Chris Insall
+Customer Support Representatives,Nash Irvin
+Customer Support Representatives,Chiemi Ishikawa
+Customer Support Representatives,Joelle S. Jackson
+Customer Support Representatives,Zac Jackson
+Customer Support Representatives,Lillie Jackson
+Customer Support Representatives,AJ Jameel
+Customer Support Representatives,Joseph Janisch
+Customer Support Representatives,Tom Joehnk
+Customer Support Representatives,Jonathon Johnson
+Customer Support Representatives,Kenneth Johnson
+Customer Support Representatives,Dillon Johnson
+Customer Support Representatives,Strider Johnson
+Customer Support Representatives,Larry Johnson
+Customer Support Representatives,Ian Johnson
+Customer Support Representatives,Jon Karwoski
+Customer Support Representatives,Linda Kelley
+Customer Support Representatives,Craig Kerbrat
+Customer Support Representatives,Stephen Kirchner
+Customer Support Representatives,Jennifer Klein
+Customer Support Representatives,Marcus Klingspor
+Customer Support Representatives,Skye Knighton
+Customer Support Representatives,Darlene Kolano
+Customer Support Representatives,Chelie Kolano
+Customer Support Representatives,Dawn Shea Kolbachinski
+Customer Support Representatives,Ruth Kolbeck
+Customer Support Representatives,Denise Kountakis
+Customer Support Representatives,Julia Kregear
+Customer Support Representatives,Lori Krell
+Customer Support Representatives,Matt Kuhn
+Customer Support Representatives,Brian Kuiken
+Customer Support Representatives,Blake Kunisch
+Customer Support Representatives,Chris Kunst
+Customer Support Representatives,Myrna Kusano
+Customer Support Representatives,Eddie Kuschel
+Customer Support Representatives,Lori Lambertson
+Customer Support Representatives,Steve Languell
+Customer Support Representatives,Paul Lara
+Customer Support Representatives,Robert Laurenti
+Customer Support Representatives,Laura Laws
+Customer Support Representatives,Tiffany Layton
+Customer Support Representatives,QuocViet Le
+Customer Support Representatives,Michael Le
+Customer Support Representatives,LeeAnn Leavitt
+Customer Support Representatives,Mel LeBeau
+Customer Support Representatives,James Leclair
+Customer Support Representatives,Guillermo Ledesma
+Customer Support Representatives,James Lee
+Customer Support Representatives,Joe Leichliter
+Customer Support Representatives,Pam Leidt
+Customer Support Representatives,James Lengerich
+Customer Support Representatives,Albert Leon Rivera
+Customer Support Representatives,Michael Leonard
+Customer Support Representatives,Amber Lewis
+Customer Support Representatives,Darius Lewis
+Customer Support Representatives,Thomas Lillehoff
+Customer Support Representatives,Jeffrey Lim
+Customer Support Representatives,Michelle Linscomb
+Customer Support Representatives,Adrienne Linton
+Customer Support Representatives,Justin Liquorman
+Customer Support Representatives,John B. Livingston
+Customer Support Representatives,Morgan Llewellyn
+Customer Support Representatives,James Logan
+Customer Support Representatives,Joshua Long
+Customer Support Representatives,Zane Lovett
+Customer Support Representatives,Luke Lovett
+Customer Support Representatives,Armando Loyola
+Customer Support Representatives,Derek Lucien
+Customer Support Representatives,Ryan Ludwig
+Customer Support Representatives,Juliana Luna Cornett
+Customer Support Representatives,Jeanna Lundgren
+Customer Support Representatives,Karl Luquette
+Customer Support Representatives,Clinton Mack
+Customer Support Representatives,Julie Mahoney
+Customer Support Representatives,Tyler Main
+Customer Support Representatives,Robert Maine
+Customer Support Representatives,BJ Mansfield
+Customer Support Representatives,Tom Mantek
+Customer Support Representatives,Blade Marcantel
+Customer Support Representatives,Ryan Marcz
+Customer Support Representatives,Randy Marr
+Customer Support Representatives,Joe Mars
+Customer Support Representatives,Jonny Marshall
+Customer Support Representatives,Taylor Martin
+Customer Support Representatives,Scott Martin
+Customer Support Representatives,Kasey Martin
+Customer Support Representatives,Robert Martinez
+Customer Support Representatives,Ruben Martinez
+Customer Support Representatives,Sean Matthews
+Customer Support Representatives,Sarah Mawdsley
+Customer Support Representatives,John McBurney
+Customer Support Representatives,Thomas McCandless
+Customer Support Representatives,Aaron McCorcle
+Customer Support Representatives,Luke McCorkle
+Customer Support Representatives,Matt McKee
+Customer Support Representatives,Jared McLendon
+Customer Support Representatives,James McPeak
+Customer Support Representatives,Marissa Meissner
+Customer Support Representatives,Ronda Melendez
+Customer Support Representatives,Freddy Mendez
+Customer Support Representatives,David Mendiola
+Customer Support Representatives,Keith Meves
+Customer Support Representatives,Glenn Meyer
+Customer Support Representatives,Brian Miller
+Customer Support Representatives,Jenny Miller
+Customer Support Representatives,James Mills
+Customer Support Representatives,Maya Milo
+Customer Support Representatives,Peter Mitchell
+Customer Support Representatives,Caitlin Mitchell
+Customer Support Representatives,Terry Moeller
+Customer Support Representatives,Ben Monroe
+Customer Support Representatives,Kyle Monteith
+Customer Support Representatives,Emilio Montwheeler
+Customer Support Representatives,Chris Moon
+Customer Support Representatives,Sevon Moore
+Customer Support Representatives,Lloyd Moore
+Customer Support Representatives,Yazmin Moreno
+Customer Support Representatives,Alexander Morgan
+Customer Support Representatives,Michelle Morrison
+Customer Support Representatives,Kenneth Moshenko
+Customer Support Representatives,Sean Motto
+Customer Support Representatives,Noel Muniz
+Customer Support Representatives,Shawn Munro
+Customer Support Representatives,Lais Mussarra
+Customer Support Representatives,Alicia Myers
+Customer Support Representatives,Amanda Myers
+Customer Support Representatives,Peter Myhre
+Customer Support Representatives,Steve Nabours
+Customer Support Representatives,Kyle Nalepa
+Customer Support Representatives,Frederick Nassar
+Customer Support Representatives,William Neiman
+Customer Support Representatives,James Nelson
+Customer Support Representatives,Seth Nesenholtz
+Customer Support Representatives,Vu Nguyen
+Customer Support Representatives,Topher Nguyen
+Customer Support Representatives,Paige Nieto
+Customer Support Representatives,Jennifer Nill
+Customer Support Representatives,Russell Nilsson
+Customer Support Representatives,Pat Norris
+Customer Support Representatives,Sean Nowlin
+Customer Support Representatives,Jessica Nunn
+Customer Support Representatives,Thomas Obermeier
+Customer Support Representatives,Jace O'Brien
+Customer Support Representatives,Brian O'Connor
+Customer Support Representatives,Darin Oehlke
+Customer Support Representatives,Katia Oliveira
+Customer Support Representatives,Casey Oliver
+Customer Support Representatives,Chelsea Olson
+Customer Support Representatives,Heidi Owen
+Customer Support Representatives,Brandon Panagakos
+Customer Support Representatives,Michael Pappalardo
+Customer Support Representatives,Charles Parmelee
+Customer Support Representatives,Sarah Parrett
+Customer Support Representatives,Matt Pashia
+Customer Support Representatives,John Patenaude
+Customer Support Representatives,Derrick Payne
+Customer Support Representatives,Jeffrey Pease
+Customer Support Representatives,Ryan Peithman
+Customer Support Representatives,Christina Perez
+Customer Support Representatives,Albert Perez
+Customer Support Representatives,Joseph Peterson
+Customer Support Representatives,Eric Peterson
+Customer Support Representatives,Kezia Petrelli
+Customer Support Representatives,Kevin Phelps
+Customer Support Representatives,Adrienne Pineda
+Customer Support Representatives,Jason Pinkerton
+Customer Support Representatives,Anthony Piperato Jr.
+Customer Support Representatives,Kaleb Placek
+Customer Support Representatives,Marcelo Ponce
+Customer Support Representatives,Renata Ponte
+Customer Support Representatives,Josh Popperwell
+Customer Support Representatives,Marcelo Porcinelli
+Customer Support Representatives,Mike Predtetchenski
+Customer Support Representatives,Phillip Prochaska
+Customer Support Representatives,Sean Provost
+Customer Support Representatives,Franklin Quick
+Customer Support Representatives,Colleen Quinn
+Customer Support Representatives,Michael Quintana
+Customer Support Representatives,James Quisenberry
+Customer Support Representatives,Chase Rabon
+Customer Support Representatives,Chad Racine
+Customer Support Representatives,Mario Rahmani
+Customer Support Representatives,Christopher Rake
+Customer Support Representatives,Brandon Ramsey
+Customer Support Representatives,Bob Rauscher
+Customer Support Representatives,Donny Rawlings
+Customer Support Representatives,Gordon Ray
+Customer Support Representatives,Matt Redondo
+Customer Support Representatives,Samuel Regimbal
+Customer Support Representatives,Kenny Reichelderfer
+Customer Support Representatives,Evan Repschleger
+Customer Support Representatives,John Reyes
+Customer Support Representatives,Robert Rider
+Customer Support Representatives,Martin Riha
+Customer Support Representatives,Joe Rinaldi
+Customer Support Representatives,Kevin Roberts
+Customer Support Representatives,Josh Robinson
+Customer Support Representatives,Jim Robinson Jr.
+Customer Support Representatives,Dustin Rockers
+Customer Support Representatives,Ryan Rodenbaugh
+Customer Support Representatives,JD Rodriguez
+Customer Support Representatives,Jen Rohrer
+Customer Support Representatives,James Rolfsen
+Customer Support Representatives,Derek Ronzo
+Customer Support Representatives,Jeanette Rooze
+Customer Support Representatives,Aline Rosa
+Customer Support Representatives,Rachel Ross
+Customer Support Representatives,Shoshanna Rubin
+Customer Support Representatives,Josh Ruland
+Customer Support Representatives,Vivian Salter
+Customer Support Representatives,Trey Sanders
+Customer Support Representatives,Chris Santana
+Customer Support Representatives,Edward Santiago
+Customer Support Representatives,Kenda Saunders
+Customer Support Representatives,Jacob Scharf
+Customer Support Representatives,Ashley Schmied
+Customer Support Representatives,Joseph Schmied
+Customer Support Representatives,Phill Schroeder
+Customer Support Representatives,Ashley Sebren
+Customer Support Representatives,Sean P. Sebring
+Customer Support Representatives,Joseph Seely
+Customer Support Representatives,Justin Shade
+Customer Support Representatives,James Shelton
+Customer Support Representatives,Brandon Shelton
+Customer Support Representatives,Joseph Shepard
+Customer Support Representatives,Evan Sherman
+Customer Support Representatives,Xander Shiells
+Customer Support Representatives,Dustin Shipley
+Customer Support Representatives,Casey Shipp
+Customer Support Representatives,Steven Shoesmith
+Customer Support Representatives,Brandy Simek
+Customer Support Representatives,Anne Simoni
+Customer Support Representatives,Sean Sintef
+Customer Support Representatives,John Sitton
+Customer Support Representatives,Kenneth Slagle
+Customer Support Representatives,Chris Smith
+Customer Support Representatives,Joshua Smith
+Customer Support Representatives,Brennen Snow
+Customer Support Representatives,Robert Spann
+Customer Support Representatives,Travis Sparkman
+Customer Support Representatives,Cory Speary
+Customer Support Representatives,Matt Spence
+Customer Support Representatives,Michelle Sprinkle
+Customer Support Representatives,Dorothy Stanford
+Customer Support Representatives,Ryan Steinhoff
+Customer Support Representatives,Roger Stephens
+Customer Support Representatives,Amy Sterling
+Customer Support Representatives,Seth Still
+Customer Support Representatives,Dallas Stringham
+Customer Support Representatives,Jonathan Stubbs
+Customer Support Representatives,Matthew Sublett
+Customer Support Representatives,Ashley Sullivan
+Customer Support Representatives,J.R. Swendseid
+Customer Support Representatives,Alex Swift
+Customer Support Representatives,Joe Tarman
+Customer Support Representatives,Tonga Teave Tucki
+Customer Support Representatives,Adrian Terborg
+Customer Support Representatives,Paul Tessmann
+Customer Support Representatives,Steven Thacker
+Customer Support Representatives,Matthew Thibodeau
+Customer Support Representatives,Sarah Thomas
+Customer Support Representatives,Johnathon Thomas
+Customer Support Representatives,John Thompson
+Customer Support Representatives,John F. Thompson
+Customer Support Representatives,Ryan Thompson
+Customer Support Representatives,Michael Threadgold
+Customer Support Representatives,Craig Tiffen
+Customer Support Representatives,Vapsi Tohala
+Customer Support Representatives,Misty Traylor
+Customer Support Representatives,Ryan Triner
+Customer Support Representatives,Tyler Trujillo
+Customer Support Representatives,Samuel Truman
+Customer Support Representatives,Keith Truong
+Customer Support Representatives,Dave Tschetter
+Customer Support Representatives,Brady Umeda
+Customer Support Representatives,Alexander Van Winkle
+Customer Support Representatives,Michael Van Winkle
+Customer Support Representatives,Jason Vanderslice
+Customer Support Representatives,Fabio Ventura
+Customer Support Representatives,Ruben Vinalay
+Customer Support Representatives,Anna Vines
+Customer Support Representatives,Anthony Vitale
+Customer Support Representatives,Tim Voris
+Customer Support Representatives,Rachel Vought
+Customer Support Representatives,Timothy Vought
+Customer Support Representatives,Rachel Ward
+Customer Support Representatives,AC Ward Jr.
+Customer Support Representatives,Riki Warren
+Customer Support Representatives,Matt Waters
+Customer Support Representatives,Angie Watkins
+Customer Support Representatives,Stephanie Webb
+Customer Support Representatives,Joshua Weinberg
+Customer Support Representatives,Blake Wendel
+Customer Support Representatives,Rhonda White
+Customer Support Representatives,Torean Whitfield-Yates
+Customer Support Representatives,Christopher Whittington
+Customer Support Representatives,Micaiah Wiewandt
+Customer Support Representatives,Jared Williams
+Customer Support Representatives,Kyle Williams
+Customer Support Representatives,Brandon Wilson
+Customer Support Representatives,Carolyn Wilson
+Customer Support Representatives,Tim Wisbauer
+Customer Support Representatives,Jake Witkin
+Customer Support Representatives,Jamie Wolfe
+Customer Support Representatives,Michelle Wood
+Customer Support Representatives,Jack Yang
+Customer Support Representatives,Mary Yellott
+Customer Support Representatives,Amanda York
+Customer Support Representatives,Laura Young
+Customer Support Representatives,Sheri Young
+Customer Support Representatives,Terry Youngkin
+Customer Support Representatives,Mike Zabarousky
+Customer Support Representatives,Kathy Zajicek
+Customer Support Representatives,Geoffrey Zeis
+Customer Support Representatives,David Zemek
+CUSTOMER Customer Service Learning Manager,Shonda Kenter
+Learning and Development Specialists,Christopher Cavallo
+Learning and Development Specialists,Tom Edwards
+Learning and Development Specialists,Royce Higbee
+Learning and Development Specialists,Paul Meyer
+Learning and Development Specialists,Jasmine Monteith
+Learning and Development Specialists,Kim Pierson
+Learning and Development Specialists,Ryan Wick
+"REGIONAL Department Manager, Regional Planning and Support",Andy Maindelle
+"Group Manager, Regional Planning and Support",James Drosche
+Voice of the Player Manager,William Shepard
+Tools & Reporting Team Manager,Kenneth Tan
+Tools & Reporting Team Representatives,Brian Libby
+Tools & Reporting Team Representatives,Andrew Parrott
+Tools & Reporting Team Representatives,Mike Pereira
+Internal Affairs Team Manager,Joshua Berryman
+Internal Affairs Representatives,Sean Baade
+Internal Affairs Representatives,Ulises Brage
+Internal Affairs Representatives,Deborah Brooks
+Internal Affairs Representatives,Daniel Carpenter
+Internal Affairs Representatives,Thomas Harvey
+Internal Affairs Representatives,David Keel
+Internal Affairs Representatives,Lily Kim
+Internal Affairs Representatives,Brian Lanahan
+Internal Affairs Representatives,Brandon Little
+Internal Affairs Representatives,JJ Mata
+Internal Affairs Representatives,Timothy Preston
+Internal Affairs Representatives,Jake Richardson
+Internal Affairs Representatives,David Robinson
+Internal Affairs Representatives,Sam Soheylee-Arasi
+Internal Affairs Representatives,Michael Stokely
+Workforce Analyst,Annelise Zaroban
+Regional Planning and Support Project Managers,Mike Billman
+Regional Planning and Support Project Managers,Dirk Hollis
+Service Level Coordinator Team Manager,Thomas Hopper
+Service Level Coordinators,John Beadles
+Service Level Coordinators,Keaton Bracy
+Service Level Coordinators,Blair Brown
+Service Level Coordinators,Jacob Hurst
+Service Level Coordinators,Ryan Johnston
+Service Level Coordinators,Evan Peterson
+Service Level Coordinators,Aaron Pilling
+Service Level Coordinators,Derek Rosenberg
+Service Level Coordinators,Keith Watkins
+Service Level Coordinators,Reeve Wightman
+Support Information Team Manager,José Antonio Achúcarro Roque
+Support Information Administrators,Christopher Bailey
+Support Information Administrators,Dave Barney
+Support Information Administrators,Michael Batilla
+Support Information Administrators,Callie Carrington
+Support Information Administrators,David Chan
+Support Information Administrators,Jodie Crowson
+Support Information Administrators,Jonathan Day
+Support Information Administrators,Kyle Hawkins
+Support Information Administrators,Jami Hurst
+Support Information Administrators,Pat Jennings
+Support Information Administrators,Adan Lozano
+Support Information Administrators,David Lyle
+Support Information Administrators,Fatima Maciazek
+Support Information Administrators,Mickey Molad
+Support Information Administrators,Tony Moreno
+Support Information Administrators,Regina Ramirez
+Support Information Administrators,Martin Tande
+Support Information Administrators,Cirilo Perez Tapia
+Support Information Administrators,Joshua Wittge
+"GLOBAL Director, Global Support, Learning & Information",Rodger Sanders
+Administrative Assistant,Jennifer Martin
+"Senior Manager, Global CS Program Management & Platforms Office",Eric Wu
+"Manager, Global CS Reporting & Analytics",Wyatt Cole
+"Manager, Global CS Learning & Information",Saralyn Smith
+Game Support Managers,Angelo Concepcion
+Game Support Managers,Marcus Maczynski
+Game Support Managers,Skip See
+Game Support Managers,Andreas Unger
+Program Managers,Cinthia Kush
+Program Managers,Greg Taylor
+Project Managers,Jeremy Chasey
+Project Managers,Lance Kimberlin
+Project Managers,Samuel Park
+Project Analyst,Jeff Carlo
+Global Policy Council Administrator,Samuel Cooper
+Global Workforce Management Analyst,Chris Nunn
+Business Analysts,Catherine Boon
+Business Analysts,Susan Helton-Rahman
+Business Analysts,Misti Lommen
+Business Analysts,Emmanuel Pedro
+Business Analysts,Joshua Proffitt
+Senior Learning & Information Specialist,Charles Areson
+Learning Specialists,Thomas Throop
+Learning Specialists,William Ware
+Learning Specialists,Karri Phillips
+Technical Writers,Danforth Lincoln
+Technical Writers,Efthemia Papadopoulos
+Technical Writers,Kristin Wood
+Custodian of Records,Peter Ty
+Project Management Intern,Nathalie Goh-Livorness
+"EXECUTIVE President & CEO, Blizzard Entertainment",Mike Morhaime
+Chief Operating Officer,Paul Sams
+"Executive Vice President, Game Design",Rob Pardo
+"Executive Vice President, Product Development",Frank Pearce
+"Senior Vice President, Story & Franchise Development",Chris Metzen
+"Vice President, Battle.net",Robert Bridenbecker
+"Senior Vice President, Global Marketing",Neal Hubbard
+Chief of Staff,Itzik Ben Bassat
+Executive Assistants,Nathalie Berggren
+Executive Assistants,Brianne M Loftis
+Executive Assistants,Megan Wallace
+Executive Assistants,Deanne Yap
+VERY SPECIAL THANKS,Allen Adham
+VERY SPECIAL THANKS,Bob and Jan Davidson
+VERY SPECIAL THANKS,Bobby Kotick
+VERY SPECIAL THANKS,Brian Kelly
+VERY SPECIAL THANKS,Thomas Tippl
+VERY SPECIAL THANKS,Dennis Durkin
+VERY SPECIAL THANKS,Jean Bernard Levy
+VERY SPECIAL THANKS,William Ding
+VERY SPECIAL THANKS,Ken Li
+VERY SPECIAL THANKS,Bill Pang
+TEAM SPECIAL THANKS,Dory Chilton
+TEAM SPECIAL THANKS,BWE
+TEAM SPECIAL THANKS,The Domestic CK
+TEAM SPECIAL THANKS,My cat
+TEAM SPECIAL THANKS,Madeline
+TEAM SPECIAL THANKS,Mindi &amp; Sydney Foote
+TEAM SPECIAL THANKS,Nana and Papa
+TEAM SPECIAL THANKS,The Foote Clan
+TEAM SPECIAL THANKS,BG
+TEAM SPECIAL THANKS,Helen
+TEAM SPECIAL THANKS,Connor
+TEAM SPECIAL THANKS,and Maia
+TEAM SPECIAL THANKS,To my amazing girls
+TEAM SPECIAL THANKS,Chandra &amp; Kaelynn
+TEAM SPECIAL THANKS,Kayleigh Shaw
+TEAM SPECIAL THANKS,Avery Bennet
+TEAM SPECIAL THANKS,Josh Sawyer
+TEAM SPECIAL THANKS,Ann and Kaylie
+TEAM SPECIAL THANKS,My Wife
+TEAM SPECIAL THANKS,EunYoung Kim
+TEAM SPECIAL THANKS,Scarlett Kim
+TEAM SPECIAL THANKS,Ezra Kim
+TEAM SPECIAL THANKS,Bo Soon Kim
+TEAM SPECIAL THANKS,Susie
+TEAM SPECIAL THANKS,Joel and Gina
+TEAM SPECIAL THANKS,Lord Rel
+TEAM SPECIAL THANKS,Gargoyle the Cat
+TEAM SPECIAL THANKS,All the paladins
+TEAM SPECIAL THANKS,My wife
+TEAM SPECIAL THANKS,Krystel Cooper
+TEAM SPECIAL THANKS,My parents
+TEAM SPECIAL THANKS,Kaye and Bob
+TEAM SPECIAL THANKS,My cats
+TEAM SPECIAL THANKS,Merlin and Zoey
+TEAM SPECIAL THANKS,My wife Vicky
+TEAM SPECIAL THANKS,Katelyn and Makena
+TEAM SPECIAL THANKS,Brian Hall and Bobby Wolfe
+TEAM SPECIAL THANKS,My girlfriend Keikei
+TEAM SPECIAL THANKS,For being so amazing
+TEAM SPECIAL THANKS,Sage
+TEAM SPECIAL THANKS,Chase
+TEAM SPECIAL THANKS,Raine and Kaili
+TEAM SPECIAL THANKS,Beer O’Clock
+TEAM SPECIAL THANKS,Spring Break
+TEAM SPECIAL THANKS,Woo!
+TEAM SPECIAL THANKS,Vincent “Yazoo” Hamm
+TEAM SPECIAL THANKS,Brack Dad/Brack Bro/Brack Mom
+TEAM SPECIAL THANKS,Team Ragnar!
+TEAM SPECIAL THANKS,SL
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,the love of my life
+TEAM SPECIAL THANKS,one Crystal Tabor-Kosak
+TEAM SPECIAL THANKS,a rare spawn
+TEAM SPECIAL THANKS,baby.
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,BB
+TEAM SPECIAL THANKS,Cookie
+TEAM SPECIAL THANKS,and MiMi
+TEAM SPECIAL THANKS,Katie P
+TEAM SPECIAL THANKS,for believing
+TEAM SPECIAL THANKS,Chris L: RUN LITTLE BUDDY
+TEAM SPECIAL THANKS,Sarah Johnson-Welch
+TEAM SPECIAL THANKS,Harvey Mudd College
+TEAM SPECIAL THANKS,Maria Klawe
+TEAM SPECIAL THANKS,Samantha LeCraft
+TEAM SPECIAL THANKS,The Doctor
+TEAM SPECIAL THANKS,The Terraria dev team
+TEAM SPECIAL THANKS,Becca
+TEAM SPECIAL THANKS,my lovely wife
+TEAM SPECIAL THANKS,GoGo
+TEAM SPECIAL THANKS,PJ
+TEAM SPECIAL THANKS,and J. Clogden
+TEAM SPECIAL THANKS,Hobbes the Immortal
+TEAM SPECIAL THANKS,Angela Hipple
+TEAM SPECIAL THANKS,James Hipple
+TEAM SPECIAL THANKS,Michael Behr
+TEAM SPECIAL THANKS,Linda and J
+TEAM SPECIAL THANKS,E
+TEAM SPECIAL THANKS,N and D
+TEAM SPECIAL THANKS,DCA for the Mad T Party!
+TEAM SPECIAL THANKS,The Santa Clara Vanguard
+TEAM SPECIAL THANKS,Meghan Dawson
+TEAM SPECIAL THANKS,Katelyn &amp; Tyler Dawson
+TEAM SPECIAL THANKS,No Options
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Hartelijke groet
+TEAM SPECIAL THANKS,Vrienden en familie thuis
+TEAM SPECIAL THANKS,Heerlijk Nederland
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Shangreaux Lagrave
+TEAM SPECIAL THANKS,Beverly Lagrave
+TEAM SPECIAL THANKS,Muffin puppy
+TEAM SPECIAL THANKS,Ba
+TEAM SPECIAL THANKS,Ma
+TEAM SPECIAL THANKS,Kay
+TEAM SPECIAL THANKS,Way
+TEAM SPECIAL THANKS,DD PAAC TS BT LX FG TW
+TEAM SPECIAL THANKS,And GM Law
+TEAM SPECIAL THANKS,Erica Burke
+TEAM SPECIAL THANKS,All my love to my family:
+TEAM SPECIAL THANKS,Traci
+TEAM SPECIAL THANKS,Mom
+TEAM SPECIAL THANKS,Dad and Sis!
+TEAM SPECIAL THANKS,Sarah Owens
+TEAM SPECIAL THANKS,Timothy Owens
+TEAM SPECIAL THANKS,Mary McQuigg
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,For Elsa
+TEAM SPECIAL THANKS,because you are
+TEAM SPECIAL THANKS,awesome and someday I will
+TEAM SPECIAL THANKS,teach you martial arts.
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Chad and Eli Verrall
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,My stunning girlfriend
+TEAM SPECIAL THANKS,patient and encouraging
+TEAM SPECIAL THANKS,you brighten my world.
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Frances Lin and Family
+TEAM SPECIAL THANKS,Lois
+TEAM SPECIAL THANKS,Flynn
+TEAM SPECIAL THANKS,and Buttercup
+TEAM SPECIAL THANKS,Our little Peanut
+TEAM SPECIAL THANKS,Susie &amp; Luigi
+TEAM SPECIAL THANKS,Howard Stern &amp; Sal
+TEAM SPECIAL THANKS,The Knife
+TEAM SPECIAL THANKS,The Yardhouse
+TEAM SPECIAL THANKS,Granden Pearce
+TEAM SPECIAL THANKS,Geri Kate Macalino
+TEAM SPECIAL THANKS,My Daughter Alanna
+TEAM SPECIAL THANKS,My Wife Claudia
+TEAM SPECIAL THANKS,My Son Carlos
+TEAM SPECIAL THANKS,Andy
+TEAM SPECIAL THANKS,my partner
+TEAM SPECIAL THANKS,My boardgame emporium crew
+TEAM SPECIAL THANKS,Julia Lodman-Slater
+TEAM SPECIAL THANKS,Thank you Abra
+TEAM SPECIAL THANKS,Grant
+TEAM SPECIAL THANKS,Wednesday
+TEAM SPECIAL THANKS,Madison
+TEAM SPECIAL THANKS,and Sesame.
+TEAM SPECIAL THANKS,My wife Laura Hughes
+TEAM SPECIAL THANKS,Brianne Hughes &amp; Zoe Poll
+TEAM SPECIAL THANKS,Bruce Sharp &amp; AIS
+TEAM SPECIAL THANKS,Wolves
+TEAM SPECIAL THANKS,Wild
+TEAM SPECIAL THANKS,Vikes
+TEAM SPECIAL THANKS,Twins
+TEAM SPECIAL THANKS,My incredible friends
+TEAM SPECIAL THANKS,The Bruery Provisions
+TEAM SPECIAL THANKS,Anne &amp; Bear Shin
+TEAM SPECIAL THANKS,Mom &amp; Pop Shin
+TEAM SPECIAL THANKS,Girls Generation
+TEAM SPECIAL THANKS,My beautiful wife - Anna
+TEAM SPECIAL THANKS,My radical son - Griffin
+TEAM SPECIAL THANKS,My grizzled pug - Hoggle
+TEAM SPECIAL THANKS,“Thanks to my family
+TEAM SPECIAL THANKS,Elisa
+TEAM SPECIAL THANKS,Max and Noah!
+TEAM SPECIAL THANKS,Love
+TEAM SPECIAL THANKS,Papa”
+TEAM SPECIAL THANKS,My fiancé
+TEAM SPECIAL THANKS,Yili Ma
+TEAM SPECIAL THANKS,Friends and family
+TEAM SPECIAL THANKS,Thanks for all the support
+TEAM SPECIAL THANKS,Renee
+TEAM SPECIAL THANKS,Lily and Ruby.
+TEAM SPECIAL THANKS,my older brother Levi
+TEAM SPECIAL THANKS,who convinced our parents
+TEAM SPECIAL THANKS,to buy us an Apple II
+TEAM SPECIAL THANKS,Teresa Bernau
+TEAM SPECIAL THANKS,Tango and Murrie
+TEAM SPECIAL THANKS,The theorycrafting
+TEAM SPECIAL THANKS,community
+TEAM SPECIAL THANKS,My family
+TEAM SPECIAL THANKS,friends
+TEAM SPECIAL THANKS,And especially
+TEAM SPECIAL THANKS,Howard Stern
+TEAM SPECIAL THANKS,Kirsty and Biscuit
+TEAM SPECIAL THANKS,Goober and Wiggle-Butt
+TEAM SPECIAL THANKS,Vigilant of Ner'zhul
+TEAM SPECIAL THANKS,My family: Julie
+TEAM SPECIAL THANKS,William
+TEAM SPECIAL THANKS,Chris
+TEAM SPECIAL THANKS,and Bonnie.
+TEAM SPECIAL THANKS,Val
+TEAM SPECIAL THANKS,Max
+TEAM SPECIAL THANKS,Penny
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Eight years flies so fast
+TEAM SPECIAL THANKS,So many cool memories
+TEAM SPECIAL THANKS,I’ll miss everyone
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Josef and Christa Koegler
+TEAM SPECIAL THANKS,Richard Tsao
+TEAM SPECIAL THANKS,Chris Evans
+TEAM SPECIAL THANKS,Leonard and Leonard
+TEAM SPECIAL THANKS,Professor Snugglesworth
+TEAM SPECIAL THANKS,Special thanks to Pooka
+TEAM SPECIAL THANKS,Jack
+TEAM SPECIAL THANKS,Joey
+TEAM SPECIAL THANKS,Simon
+TEAM SPECIAL THANKS,Elliot
+TEAM SPECIAL THANKS,Olive
+TEAM SPECIAL THANKS,Crosby!
+TEAM SPECIAL THANKS,My Hsiao-Wei Lee Chang;
+TEAM SPECIAL THANKS,To my family: Jay and Shu
+TEAM SPECIAL THANKS,Melissa
+TEAM SPECIAL THANKS,Peggy &amp; Francisco.
+TEAM SPECIAL THANKS,To the “Supreme Overlady”
+TEAM SPECIAL THANKS,Rhonda and the Chaos Twins
+TEAM SPECIAL THANKS,Ruth and Max. Hey Sierra.K
+TEAM SPECIAL THANKS,My extremely supportive
+TEAM SPECIAL THANKS,wife
+TEAM SPECIAL THANKS,Kandice
+TEAM SPECIAL THANKS,and my
+TEAM SPECIAL THANKS,wonderful daughter Ellie.
+TEAM SPECIAL THANKS,Dena and Marion
+TEAM SPECIAL THANKS,Luke and Leia
+TEAM SPECIAL THANKS,Jesus and the police
+TEAM SPECIAL THANKS,AddOn Authors of #wowuidev
+TEAM SPECIAL THANKS,Little Bobby Tables
+TEAM SPECIAL THANKS,TEAM 2!!!!!!!!!!!!!!!!!!!!
+TEAM SPECIAL THANKS,Kizmet
+TEAM SPECIAL THANKS,The Great Guardian
+TEAM SPECIAL THANKS,of Shang’ri La.
+TEAM SPECIAL THANKS,To Khara
+TEAM SPECIAL THANKS,the love of my life.
+TEAM SPECIAL THANKS,Rosella
+TEAM SPECIAL THANKS,Taryn and Claire
+TEAM SPECIAL THANKS,Ian
+TEAM SPECIAL THANKS,Olivia and my lady!
+TEAM SPECIAL THANKS,Ed’s beer fridge
+TEAM SPECIAL THANKS,Her majesty’s secret service
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Marziyat ve Mesut Ozil'e
+TEAM SPECIAL THANKS,Ve etli biber dolmasina
+TEAM SPECIAL THANKS,Sevgilerle (olsa da yesek)
+TEAM SPECIAL THANKS,--
+TEAM SPECIAL THANKS,Brynda
+TEAM SPECIAL THANKS,Seamus
+TEAM SPECIAL THANKS,Tungsten &amp; Magenta
+TEAM SPECIAL THANKS,Wonder Mom Monica
+TEAM SPECIAL THANKS,Stormtrooper Jake
+TEAM SPECIAL THANKS,the beautiful Outlaw
+TEAM SPECIAL THANKS,My loved ones: Gali
+TEAM SPECIAL THANKS,Adam
+TEAM SPECIAL THANKS,and Maya Mehl.
+TEAM SPECIAL THANKS,My mentor and friend
+TEAM SPECIAL THANKS,Bruce Hack
+TEAM SPECIAL THANKS,Zac Wallace
+TEAM SPECIAL THANKS,Robert Bridgman
+TEAM SPECIAL THANKS,Darren Fujiyama
+TEAM SPECIAL THANKS,Emma Croll
+TEAM SPECIAL THANKS,Gracias a mi Buboni
+TEAM SPECIAL THANKS,Boo de la Bubonería
+TEAM SPECIAL THANKS,Bubonosa.
+TEAM SPECIAL THANKS,Mike Naughton
+TEAM SPECIAL THANKS,Daniel Tomalesky
+TEAM SPECIAL THANKS,The Tierney Brothers
+TEAM SPECIAL THANKS,To Autumn
+TEAM SPECIAL THANKS,I love you.
+TEAM SPECIAL THANKS,Pete Cruz
+TEAM SPECIAL THANKS,James Cruz
+TEAM SPECIAL THANKS,Lots of love to my Awesome
+TEAM SPECIAL THANKS,wife Kelly and beautiful
+TEAM SPECIAL THANKS,daughter Dylan.
+TEAM SPECIAL THANKS,Catherine the Diva of Data
+TEAM SPECIAL THANKS,Steven and Elizabeth
+TEAM SPECIAL THANKS,The Loons
+TEAM SPECIAL THANKS,my wife Michelle
+TEAM SPECIAL THANKS,my two sons Ryan &amp; Ethan
+TEAM SPECIAL THANKS,for the support they give
+TEAM SPECIAL THANKS,My Awesome Wife
+TEAM SPECIAL THANKS,Christi
+TEAM SPECIAL THANKS,Nate and Tyler
+TEAM SPECIAL THANKS,I’m home!
+TEAM SPECIAL THANKS,Susan Krol
+TEAM SPECIAL THANKS,Noah Krol
+TEAM SPECIAL THANKS,Lily Krol
+TEAM SPECIAL THANKS,I want to thank the
+TEAM SPECIAL THANKS,Academy
+TEAM SPECIAL THANKS,and my wife
+TEAM SPECIAL THANKS,who I met at the Academy.
+TEAM SPECIAL THANKS,My family
+TEAM SPECIAL THANKS,Lawrence
+TEAM SPECIAL THANKS,Nader  &amp; Samia for
+TEAM SPECIAL THANKS,Their support.
+TEAM SPECIAL THANKS,My parents and my brother
+TEAM SPECIAL THANKS,Nam
+TEAM SPECIAL THANKS,Sungshin
+TEAM SPECIAL THANKS,and Yong:
+TEAM SPECIAL THANKS,Thank you for your love.
+TEAM SPECIAL THANKS,Celeste Aviva my &lt;83.
+TEAM SPECIAL THANKS,JW: burn the land boil the sea
+TEAM SPECIAL THANKS,can't take the sky from me
