@@ -1,9 +1,10 @@
 import { NODE_TYPE_PERSON, NODE_TYPE_GAME, CATEGORY_GAME1_ONLY, CATEGORY_GAME2_ONLY, CATEGORY_BOTH, CATEGORY_SINGLE_GAME } from "./config.js";
 
 /**
- * Sets up event listeners on D3 nodes:
- * - Hover (`mouseenter`/`mouseleave`) to display/hide tooltips.
- * - Click (with Ctrl/Cmd) for highlighting shared roles (departments).
+ * Sets up event listeners on D3 nodes.
+ * Uses absolute positioning relative to the SVG container's coordinate space.
+ * Positions tooltip primarily to the upper-right of the cursor.
+ * Assumes the SVG container or an ancestor has position: relative.
  *
  * @param {d3.Selection} nodeSelection - The D3 selection of node 'g' elements.
  * @param {HTMLElement} tooltipElement - The DOM element to use for the tooltip.
@@ -19,7 +20,13 @@ export function setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, s
 		return;
 	}
 
+	// Get the closest positioned ancestor (or null if none)
+	// We assume the SVG or its container is the intended context
+	const positioningContextElement = tooltipElement.offsetParent || document.body;
+
 	const nodesGroup = d3.select(svgNode).select("g.nodes");
+	const zoomLayer = d3.select(svgNode).select("g.zoom-layer");
+
 	const clearHighlights = () => {
 		nodeSelection.classed("highlighted-department", false);
 		if (nodesGroup) {
@@ -35,14 +42,16 @@ export function setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, s
 		hideTooltipOnly();
 		clearHighlights();
 	};
-	const showTooltip = (d, screenPos) => {
+
+	const showTooltip = (d, event) => {
+		// Pass the whole event object
+		const clientX = event.clientX;
+		const clientY = event.clientY;
+
 		let htmlContent = `<strong>${d.name || "Unknown Node"}</strong>`;
-
 		if (d.type) {
-			const typeText = d.type.charAt(0).toUpperCase() + d.type.slice(1);
-			htmlContent += ` (${typeText})`;
+			htmlContent += ` (${d.type.charAt(0).toUpperCase() + d.type.slice(1)})`;
 		}
-
 		if (d.type === NODE_TYPE_PERSON) {
 			let contributionText = "";
 			if (isSingleGameView) {
@@ -50,30 +59,25 @@ export function setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, s
 			} else {
 				switch (d.category) {
 					case CATEGORY_GAME1_ONLY:
-						if (game1Name) contributionText = `Contributed to: ${game1Name} (only)`;
+						contributionText = `Contributed to: ${game1Name} (only)`;
 						break;
 					case CATEGORY_GAME2_ONLY:
-						if (game2Name) contributionText = `Contributed to: ${game2Name} (only)`;
+						contributionText = `Contributed to: ${game2Name} (only)`;
 						break;
 					case CATEGORY_BOTH:
-						if (game1Name && game2Name) contributionText = `Contributed to: Both ${game1Name} & ${game2Name}`;
-						else if (game1Name) contributionText = `Contributed to: ${game1Name}`;
-						else if (game2Name) contributionText = `Contributed to: ${game2Name}`;
+						contributionText = `Contributed to: Both ${game1Name} & ${game2Name}`;
 						break;
 					default:
+						contributionText = `Contribution status: ${d.category || "Unknown"}`;
 						break;
 				}
 			}
-			if (contributionText) {
-				htmlContent += `<br><span class="tooltip-info">${contributionText}</span>`;
-			}
-
+			if (contributionText) htmlContent += `<br><span class="tooltip-info">${contributionText}</span>`;
 			const roles = personRolesMap.get(d.id);
 			if (roles && roles.size > 0) {
 				htmlContent += `<br><span class="tooltip-info">Role(s): ${[...roles].sort().join(", ")}</span>`;
 			} else if (d.primaryRole) {
 				htmlContent += `<br><span class="tooltip-info">Primary Role: ${d.primaryRole}</span>`;
-			} else {
 			}
 		} else if (d.type === NODE_TYPE_GAME) {
 			const contributorCount = d.degree || 0;
@@ -83,30 +87,56 @@ export function setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, s
 		tooltipElement.innerHTML = htmlContent;
 		tooltipElement.style.display = "block";
 		tooltipElement.setAttribute("aria-hidden", "false");
-		const tooltipPadding = 15;
-		tooltipElement.style.left = `${screenPos[0] + tooltipPadding}px`;
-		tooltipElement.style.top = `${screenPos[1] + tooltipPadding}px`;
+		tooltipElement.style.left = "-10000px";
+		tooltipElement.style.top = "-10000px";
 		const tooltipRect = tooltipElement.getBoundingClientRect();
-		const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-		const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+		const tooltipWidth = tooltipRect.width;
+		const tooltipHeight = tooltipRect.height;
+		const tooltipPadding = 15; // Original padding
 
-		if (tooltipRect.right > viewportWidth - 10) {
-			tooltipElement.style.left = `${screenPos[0] - tooltipRect.width - tooltipPadding}px`;
+		// Get the positioning context element's bounding rect
+		const contextRect = positioningContextElement.getBoundingClientRect();
+		const mouseXRelative = clientX - contextRect.left;
+		const mouseYRelative = clientY - contextRect.top;
+
+		let targetContextLeft = mouseXRelative + tooltipPadding;
+		let targetContextTop = mouseYRelative - tooltipHeight - tooltipPadding; // Place T above cursor B
+
+		const contextWidth = positioningContextElement.offsetWidth;
+		const contextHeight = positioningContextElement.offsetHeight;
+		const boundaryPadding = 10; // Min space from edge
+
+		// Check Top Boundary: If too high, flip BELOW cursor
+		if (targetContextTop < boundaryPadding) {
+			targetContextTop = mouseYRelative + tooltipPadding;
 		}
-		if (tooltipRect.bottom > viewportHeight - 10) {
-			tooltipElement.style.top = `${screenPos[1] - tooltipRect.height - tooltipPadding}px`;
+
+		// Check Right Boundary: If too far right, flip LEFT of cursor
+		if (targetContextLeft + tooltipWidth > contextWidth - boundaryPadding) {
+			targetContextLeft = mouseXRelative - tooltipWidth - tooltipPadding;
 		}
-		if (tooltipRect.left < 10) {
-			tooltipElement.style.left = `${tooltipPadding}px`;
+
+		// Final Edge Adjustments (after potential flips)
+		// Check Left Boundary: If still too far left (e.g., after flipping left), adjust right
+		if (targetContextLeft < boundaryPadding) {
+			targetContextLeft = boundaryPadding;
 		}
-		if (tooltipRect.top < 10) {
-			tooltipElement.style.top = `${tooltipPadding}px`;
+		// Check Bottom Boundary: If still too low (e.g., after flipping below), adjust up
+		if (targetContextTop + tooltipHeight > contextHeight - boundaryPadding) {
+			targetContextTop = contextHeight - tooltipHeight - boundaryPadding;
+			// Final safety check: if adjusting up pushed it above top, clamp to top
+			if (targetContextTop < boundaryPadding) {
+				targetContextTop = boundaryPadding;
+			}
 		}
+
+		tooltipElement.style.left = `${targetContextLeft}px`;
+		tooltipElement.style.top = `${targetContextTop}px`;
 	};
+
 	nodeSelection.on("mouseenter", (event, d) => {
 		const currentTargetNode = d3.select(event.currentTarget);
-		const [screenX, screenY] = [event.clientX, event.clientY];
-		showTooltip(d, [screenX, screenY]);
+		showTooltip(d, event);
 		currentTargetNode.classed("tooltip-active", true);
 	});
 	nodeSelection.on("mouseleave", (event, d) => {
@@ -150,7 +180,7 @@ export function setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, s
 		}
 	});
 	d3.select(svgNode).on("click", (event) => {
-		if (event.target === svgNode || event.target === zoomLayer.node() || event.target.classList.contains("zoom-layer")) {
+		if (event.target === svgNode || (zoomLayer && event.target === zoomLayer.node()) || event.target.classList.contains("zoom-layer")) {
 			hideTooltipAndHighlights();
 		}
 	});

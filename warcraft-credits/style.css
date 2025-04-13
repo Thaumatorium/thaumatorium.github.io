@@ -1,29 +1,10 @@
-body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-	background-color: #f4f4f4;
-	color: #333;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-h1 {
-	text-align: center;
-	color: #333;
-	margin: 20px 0 10px 0;
-	padding: 0 15px;
-}
-
-/* --- Collapsible Instructions Styles --- */
 .instructions-collapsible {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	margin: 15px;
 	background-color: #f9f9f9;
 	overflow: hidden;
+	flex-shrink: 0;
 }
 
 .instructions-collapsible summary {
@@ -69,6 +50,7 @@ h1 {
 
 .instructions-collapsible .instructions-content li {
 	margin-bottom: 8px;
+	list-style-type: disc;
 }
 
 .instructions-collapsible .instructions-content li:last-child {
@@ -79,9 +61,6 @@ h1 {
 	color: #333;
 }
 
-/* --- End Collapsible Instructions Styles --- */
-
-/* === CONTROLS STYLES (WITH STATS BOX) === */
 .controls {
 	padding: 15px;
 	border-bottom: 1px solid #ccc;
@@ -89,9 +68,7 @@ h1 {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	display: flex;
 	flex-direction: column;
-	/* Stack rows vertically */
 	gap: 15px;
-	/* Increased gap between rows */
 	width: 100%;
 	box-sizing: border-box;
 	flex-shrink: 0;
@@ -100,25 +77,19 @@ h1 {
 .game-selection-row {
 	display: flex;
 	align-items: center;
-	/* Vertically align items in the row */
 	flex-wrap: wrap;
-	/* Allow wrapping on small screens */
 	gap: 10px;
-	/* Gap between label, select, stats */
 	justify-content: center;
-	/* Center items if they wrap */
 }
 
 .game-selection-row label {
 	font-weight: bold;
 	display: inline-block;
 	min-width: 110px;
-	/* Keep minimum width */
 	text-align: left;
-	/* Align label text to the left now */
 	flex-shrink: 0;
 	margin-right: 5px;
-	/* Add small space after label */
+	color: #333;
 }
 
 .game-selection-row select {
@@ -127,13 +98,11 @@ h1 {
 	border-radius: 4px;
 	min-width: 250px;
 	max-width: 400px;
-	/* Limit select width */
 	flex-grow: 1;
-	/* Allow select to grow */
 	flex-basis: 250px;
-	/* Base width */
 	background-color: #fff;
 	font-size: 1rem;
+	color: #333;
 }
 
 .stats-box {
@@ -142,14 +111,10 @@ h1 {
 	padding: 6px 12px;
 	border-radius: 4px;
 	min-width: 180px;
-	/* Ensure minimum width */
 	flex-shrink: 0;
-	/* Don't shrink */
 	display: flex;
 	flex-direction: column;
-	/* Stack stats vertically */
 	gap: 3px;
-	/* Small gap between stat items */
 	font-size: 0.85rem;
 	color: #444;
 }
@@ -157,35 +122,26 @@ h1 {
 .stats-box .stat-item {
 	display: flex;
 	justify-content: space-between;
-	/* Align label left, value right */
 	white-space: nowrap;
-	/* Prevent wrapping within a stat item */
 }
 
 .stats-box .stat-label {
 	font-weight: 600;
-	/* Slightly bolder label */
 	margin-right: 8px;
 	color: #555;
 }
 
 .stats-box .stat-value {
 	font-family: monospace;
-	/* Monospace for numbers */
 	color: #111;
 }
 
 .simulation-controls {
 	margin-top: 5px;
-	/* Keep margin */
 	display: flex;
-	/* Use flex for buttons too */
 	justify-content: center;
-	/* Center buttons */
 	gap: 10px;
-	/* Gap between buttons */
 	width: 100%;
-	/* Take full width */
 }
 
 .controls button {
@@ -193,12 +149,17 @@ h1 {
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	background-color: #eee;
+	color: #333;
 	cursor: pointer;
 	font-size: 0.9rem;
+	box-shadow: none;
+	text-transform: none;
+	font-family: inherit;
 }
 
 .controls button:hover:not(:disabled) {
 	background-color: #ddd;
+	color: #000;
 }
 
 .controls button:disabled {
@@ -206,17 +167,22 @@ h1 {
 	opacity: 0.6;
 }
 
-/* === END CONTROLS STYLES === */
+.controls button:active:not(:disabled) {
+	position: static;
+	top: auto;
+	left: auto;
+	box-shadow: none;
+}
 
 .status-message {
 	text-align: center;
-	margin: 10px auto;
+	margin: 10px 15px;
 	padding: 10px 15px;
 	border-radius: 4px;
-	max-width: 90%;
+	max-width: 100%;
 	box-sizing: border-box;
 	display: none;
-	/* Messages hidden by default */
+	flex-shrink: 0;
 }
 
 .status-message.error-message,
@@ -235,6 +201,10 @@ h1 {
 	background-color: #f2dede;
 	border: 1px solid #ebccd1;
 	font-weight: bold;
+	font-family: inherit;
+	line-height: inherit;
+	padding: 10px 15px;
+	border-left: 1px solid #ebccd1;
 }
 
 .warning-message {
@@ -242,29 +212,31 @@ h1 {
 	background-color: #fcf8e3;
 	border: 1px solid #faebcc;
 	font-weight: normal;
+	font-family: inherit;
+	line-height: inherit;
+	padding: 10px 15px;
+	border-left: 1px solid #faebcc;
 }
 
-/* --- Graph Container Styles --- */
 #d3-graph-container {
 	border: 1px solid #ccc;
 	display: block;
 	background-color: #f9f9f9;
-	margin: 15px;
+	margin: 2vh auto;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 	box-sizing: border-box;
 	overflow: hidden;
-	flex-grow: 1;
-	min-height: 400px;
-	width: auto;
-	height: auto;
 	cursor: grab;
+	flex-grow: 1;
+	min-height: 50%;
+	height: 80vh;
+	width: 100%;
 }
 
 #d3-graph-container:active {
 	cursor: grabbing;
 }
 
-/* --- Graph Element Styles (Links, Nodes, Labels) --- */
 .links line {
 	stroke: #bbb;
 	stroke-opacity: 0.6;
@@ -398,7 +370,6 @@ h1 {
 	stroke-width: 1.5px;
 }
 
-/* --- Tooltip Styles --- */
 #tooltip {
 	display: none;
 	position: absolute;
@@ -416,6 +387,8 @@ h1 {
 	-moz-user-select: text;
 	-ms-user-select: text;
 	pointer-events: none;
+	font-family: sans-serif;
+	line-height: 1.4;
 }
 
 #tooltip strong {
@@ -430,4 +403,57 @@ h1 {
 	font-size: 0.8rem;
 	display: block;
 	margin-top: 3px;
+}
+
+body > main {
+	width: 100%;
+	max-width: 100%;
+	padding: 0 15px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	margin: 0 0%;
+}
+
+.filter-controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 10px;
+	width: 100%;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.filter-group {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	flex-grow: 1;
+	min-width: 280px;
+	justify-content: center;
+}
+
+.filter-group label {
+	font-weight: bold;
+	font-size: 0.9rem;
+	flex-shrink: 0;
+}
+
+.filter-group select {
+	padding: 5px 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #fff;
+	font-size: 0.9rem;
+	flex-shrink: 0;
+}
+
+.filter-group input[type="text"] {
+	padding: 6px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 0.9rem;
+	flex-grow: 1;
+	min-width: 120px;
 }
