@@ -1,168 +1,101 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
+    <loc>http://thaumatorium.com/warcraft-credits/</loc>
+    <lastmod>2025-04-09T20:20:00+02:00</lastmod>
+  </url><url>
     <loc>http://thaumatorium.com/articles/relational-algebra-operators-in-database-management/</loc>
     <lastmod>2024-07-24T19:23:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/</loc>
     <lastmod>2024-07-23T22:52:47+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/mit-courses/</loc>
     <lastmod>2024-07-24T18:35:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/</loc>
-    <lastmod>2022-11-20T21:15:38+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://thaumatorium.com/experimentations/</loc>
-    <lastmod>2021-11-08T21:37:49+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://thaumatorium.com/experimentations2/</loc>
-    <lastmod>2024-07-29T23:10:00+02:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2025-04-09T20:14:00+02:00</lastmod>
+  </url><url>
     <loc>http://thaumatorium.com/certs/</loc>
     <lastmod>2021-10-03T11:42:27+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/knowledge-base/crypto-subreddits/</loc>
     <lastmod>2021-06-07T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://thaumatorium.com/knowledge-base/technical-analysis-cryptocurrencies-and-exchanges/</loc>
-    <lastmod>2021-06-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://thaumatorium.com/knowledge-base/_index-old/</loc>
-    <lastmod>2020-08-17T16:55:37+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/knowledge-base/</loc>
     <lastmod>2020-08-17T16:55:37+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://thaumatorium.com/about/</loc>
+    <lastmod>2025-04-09T20:08:00+02:00</lastmod>
+  </url><url>
+    <loc>http://thaumatorium.com/hardware/</loc>
+    <lastmod>2025-04-09T21:15:00+01:00</lastmod>
+  </url><url>
     <loc>http://thaumatorium.com/random-video/</loc>
     <lastmod>2020-08-03T22:31:44+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://thaumatorium.com/about/</loc>
-    <lastmod>2020-08-03T22:31:44+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://thaumatorium.com/hardware/</loc>
-    <lastmod>2020-08-03T22:31:44+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/praetorianpi/</loc>
     <lastmod>2020-08-03T22:31:44+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/how-i-fixed-reddit/</loc>
     <lastmod>2024-07-24T18:41:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/projects/</loc>
     <lastmod>2020-07-14T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/</loc>
     <lastmod>2024-07-24T20:27:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/reddits-t-values/</loc>
     <lastmod>2024-07-24T19:09:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/4chans-programming-projects-for-noobs/</loc>
     <lastmod>2020-06-30T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files/</loc>
     <lastmod>2024-07-24T19:54:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/spark-files-and-keeping-track-of-your-ideas-concepts-thoughts/</loc>
     <lastmod>2024-07-24T19:40:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/haskells-fold-functions-explained/</loc>
     <lastmod>2024-07-24T18:35:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/big-o-beginners-guide/</loc>
     <lastmod>2024-07-24T18:27:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-different-types-of-functions-in-functional-programming/</loc>
     <lastmod>2024-07-24T20:21:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/configuring-jmeter-for-neo4j/</loc>
     <lastmod>2024-07-24T18:30:00+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1988-fatal-flaws-in-sql/</loc>
     <lastmod>1988-08-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985b-does-your-dmbs-run-by-the-rules/</loc>
     <lastmod>1985-10-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1985a-is-your-dbms-really-relational/</loc>
     <lastmod>1985-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1971b-further-normalization-of-the-data-base-relational-model/</loc>
     <lastmod>1971-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/the-papers-of-ef-the-coddfather-codd/1969-derivability-redundancy-and-consistency-of-relations-stored-in-large-data-banks/</loc>
     <lastmod>1969-08-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>http://thaumatorium.com/articles/mit-courses/courses/</loc>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>http://thaumatorium.com/knowledge-base/crypto-subreddits/cryptos/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/projects/canvas-projects/maze/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/projects/fenetres/</loc>
+  </url><url>
+    <loc>http://thaumatorium.com/warcraft-credits/readme/</loc>
+  </url><url>
     <loc>http://thaumatorium.com/nostradavid/</loc>
   </url>
-  
 </urlset>

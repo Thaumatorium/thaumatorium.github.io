@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>NostraDavid&#39;s Warcraft&#39;s Credit Visualizer | The Thaumatorium</title>
+		<meta name="description" content="If you want to compare the credits of two Warcraft games, this is the tool for you. It shows the people who worked on the game, their roles, and how they are connected to each other." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="NostraDavid&#39;s Warcraft&#39;s Credit Visualizer" />
+		<meta property="og:description" content="If you want to compare the credits of two Warcraft games, this is the tool for you. It shows the people who worked on the game, their roles, and how they are connected to each other." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="NostraDavid&#39;s Warcraft&#39;s Credit Visualizer" />
+		<meta name="twitter:description" content="If you want to compare the credits of two Warcraft games, this is the tool for you. It shows the people who worked on the game, their roles, and how they are connected to each other." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>NostraDavid&#39;s Warcraft&#39;s Credit Visualizer</h1>
+			<style>
+				.instructions-collapsible {
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					margin: 15px;
+					background-color: #f9f9f9;
+					overflow: hidden;
+					flex-shrink: 0;
+				}
+				.instructions-collapsible summary {
+					padding: 10px 15px;
+					font-weight: bold;
+					cursor: pointer;
+					background-color: #f0f0f0;
+					outline: none;
+					transition: background-color 0.2s ease;
+					border-bottom: 1px solid #ccc;
+					list-style-position: inside;
+					position: relative;
+				}
+				.instructions-collapsible summary::marker,
+				.instructions-collapsible summary::-webkit-details-marker {
+					color: #555;
+				}
+				.instructions-collapsible summary:hover {
+					background-color: #e8e8e8;
+				}
+				.instructions-collapsible summary:focus-visible {
+					box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+					border-radius: 3px;
+				}
+				.instructions-collapsible[open] summary {
+					background-color: #e5e5e5;
+					border-bottom: 1px solid #ccc;
+				}
+				.instructions-collapsible .instructions-content {
+					padding: 15px 15px 15px 40px;
+					margin: 0;
+					font-size: 0.9rem;
+					color: #555;
+					line-height: 1.5;
+					border-top: none;
+					list-style-type: disc;
+				}
+				.instructions-collapsible .instructions-content li {
+					margin-bottom: 8px;
+					list-style-type: disc;
+				}
+				.instructions-collapsible .instructions-content li:last-child {
+					margin-bottom: 0;
+				}
+				.instructions-collapsible .instructions-content strong {
+					color: #333;
+				}
+				.controls {
+					padding: 15px;
+					border-bottom: 1px solid #ccc;
+					background-color: #fff;
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+					display: flex;
+					flex-direction: column;
+					gap: 15px;
+					width: 100%;
+					box-sizing: border-box;
+					flex-shrink: 0;
+				}
+				.game-selection-row {
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					gap: 10px;
+					justify-content: center;
+				}
+				.game-selection-row label {
+					font-weight: bold;
+					display: inline-block;
+					min-width: 110px;
+					text-align: left;
+					flex-shrink: 0;
+					margin-right: 5px;
+					color: #333;
+				}
+				.game-selection-row select {
+					padding: 8px 10px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					min-width: 250px;
+					max-width: 400px;
+					flex-grow: 1;
+					flex-basis: 250px;
+					background-color: #fff;
+					font-size: 1rem;
+					color: #333;
+				}
+				.stats-box {
+					border: 1px solid #e0e0e0;
+					background-color: #f7f7f7;
+					padding: 6px 12px;
+					border-radius: 4px;
+					min-width: 180px;
+					flex-shrink: 0;
+					display: flex;
+					flex-direction: column;
+					gap: 3px;
+					font-size: 0.85rem;
+					color: #444;
+				}
+				.stats-box .stat-item {
+					display: flex;
+					justify-content: space-between;
+					white-space: nowrap;
+				}
+				.stats-box .stat-label {
+					font-weight: 600;
+					margin-right: 8px;
+					color: #555;
+				}
+				.stats-box .stat-value {
+					font-family: monospace;
+					color: #111;
+				}
+				.simulation-controls {
+					margin-top: 5px;
+					display: flex;
+					justify-content: center;
+					gap: 10px;
+					width: 100%;
+				}
+				.controls button {
+					padding: 8px 15px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					background-color: #eee;
+					color: #333;
+					cursor: pointer;
+					font-size: 0.9rem;
+					box-shadow: none;
+					text-transform: none;
+					font-family: inherit;
+				}
+				.controls button:hover:not(:disabled) {
+					background-color: #ddd;
+					color: #000;
+				}
+				.controls button:disabled {
+					cursor: not-allowed;
+					opacity: 0.6;
+				}
+				.controls button:active:not(:disabled) {
+					position: static;
+					top: auto;
+					left: auto;
+					box-shadow: none;
+				}
+				.status-message {
+					text-align: center;
+					margin: 10px 15px;
+					padding: 10px 15px;
+					border-radius: 4px;
+					max-width: 100%;
+					box-sizing: border-box;
+					display: none;
+					flex-shrink: 0;
+				}
+				.status-message.error-message,
+				.status-message.warning-message {
+					display: block;
+				}
+				#loadingMessage {
+					color: #555;
+					background-color: #eef;
+					border: 1px solid #dde;
+				}
+				.error-message {
+					color: #a94442;
+					background-color: #f2dede;
+					border: 1px solid #ebccd1;
+					font-weight: bold;
+					font-family: inherit;
+					line-height: inherit;
+					padding: 10px 15px;
+					border-left: 1px solid #ebccd1;
+				}
+				.warning-message {
+					color: #8a6d3b;
+					background-color: #fcf8e3;
+					border: 1px solid #faebcc;
+					font-weight: normal;
+					font-family: inherit;
+					line-height: inherit;
+					padding: 10px 15px;
+					border-left: 1px solid #faebcc;
+				}
+				#d3-graph-container {
+					border: 1px solid #ccc;
+					display: block;
+					background-color: #f9f9f9;
+					margin: 2vh auto;
+					box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+					box-sizing: border-box;
+					overflow: hidden;
+					cursor: grab;
+					flex-grow: 1;
+					min-height: 50%;
+					height: 80vh;
+					width: 100%;
+				}
+				#d3-graph-container:active {
+					cursor: grabbing;
+				}
+				.links line {
+					stroke: #bbb;
+					stroke-opacity: 0.6;
+					stroke-width: 1.5px;
+				}
+				#d3-graph-container.links-hidden .links line {
+					stroke-opacity: 0;
+					pointer-events: none;
+				}
+				.nodes g.node {
+					cursor: pointer;
+					opacity: 1;
+					transition: opacity 0.2s ease-in-out;
+				}
+				.nodes g.node circle,
+				.nodes g.node rect.game-rect {
+					stroke: #fff;
+					stroke-width: 1.5px;
+					transition:
+						stroke 0.2s ease-in-out,
+						stroke-width 0.2s ease-in-out;
+				}
+				.nodes g.node:not(.game) text.node-label {
+					opacity: 0;
+					font-family: sans-serif;
+					font-size: 10px;
+					fill: #444;
+					paint-order: stroke;
+					stroke: white;
+					stroke-width: 2.5px;
+					stroke-linecap: butt;
+					stroke-linejoin: miter;
+					pointer-events: none;
+					user-select: none;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+					transition:
+						opacity 0.15s ease-in-out,
+						fill 0.15s ease-in-out;
+				}
+				.nodes g.node.game text.node-label {
+					opacity: 1;
+					font-family: sans-serif;
+					font-size: 10px;
+					fill: #444;
+					paint-order: stroke;
+					stroke: white;
+					stroke-width: 2.5px;
+					stroke-linecap: butt;
+					stroke-linejoin: miter;
+					pointer-events: none;
+					user-select: none;
+					-webkit-user-select: none;
+					-moz-user-select: none;
+					-ms-user-select: none;
+				}
+				.nodes g.node:not(.game):hover text.node-label,
+				.nodes g.node.tooltip-active:not(.game) text.node-label,
+				.nodes g.node.highlighted-department:not(.game) text.node-label {
+					opacity: 1;
+				}
+				.nodes g.node.highlighted-department:not(.game) text.node-label {
+					fill: #c0392b;
+				}
+				#d3-graph-container.show-all-labels .nodes g.node:not(.game) text.node-label {
+					opacity: 1;
+				}
+				.nodes g.node:hover {
+					opacity: 0.9;
+				}
+				.nodes g.node:hover circle,
+				.nodes g.node:hover rect.game-rect {
+					stroke: #555;
+					stroke-width: 2.5px;
+				}
+				.nodes g.node.tooltip-active circle,
+				.nodes g.node.tooltip-active rect.game-rect {
+					stroke: #000;
+					stroke-width: 3px;
+				}
+				.nodes g.node.highlighted-department {
+					opacity: 1;
+				}
+				.nodes g.node.highlighted-department circle,
+				.nodes g.node.highlighted-department rect.game-rect {
+					stroke: #e74c3c;
+					stroke-width: 3.5px;
+				}
+				.nodes.department-highlight-active g.node:not(.highlighted-department) {
+					opacity: 0.15;
+				}
+				.nodes.department-highlight-active g.node.tooltip-active {
+					opacity: 1;
+				}
+				.nodes.department-highlight-active g.node:not(.highlighted-department):not(.tooltip-active) text.node-label {
+					opacity: 0;
+				}
+				#d3-graph-container.show-all-labels .nodes.department-highlight-active g.node:not(.highlighted-department):not(.tooltip-active) text.node-label {
+					opacity: 1;
+				}
+				.nodes.department-highlight-active g.node.game {
+					opacity: 1;
+				}
+				.nodes.department-highlight-active g.node.game text.node-label {
+					opacity: 1;
+					fill: #444;
+				}
+				.nodes.department-highlight-active g.node.game:not(.highlighted-department) rect.game-rect {
+					stroke: #fff;
+					stroke-width: 1.5px;
+				}
+				#tooltip {
+					display: none;
+					position: absolute;
+					background-color: rgba(0, 0, 0, 0.85);
+					color: white;
+					padding: 8px 12px;
+					border-radius: 4px;
+					font-size: 0.85rem;
+					z-index: 100;
+					max-width: 300px;
+					white-space: normal;
+					box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+					user-select: text;
+					-webkit-user-select: text;
+					-moz-user-select: text;
+					-ms-user-select: text;
+					pointer-events: none;
+					font-family: sans-serif;
+					line-height: 1.4;
+				}
+				#tooltip strong {
+					display: block;
+					margin-bottom: 5px;
+					color: #fff;
+					font-weight: bold;
+				}
+				#tooltip span.tooltip-info {
+					color: #ddd !important;
+					font-size: 0.8rem;
+					display: block;
+					margin-top: 3px;
+				}
+				body > main {
+					width: 100%;
+					max-width: 100%;
+					padding: 0 15px;
+					margin: 0 auto;
+					box-sizing: border-box;
+					margin: 0 0%;
+				}
+			</style>
+			<p>I was wondering how many people from one Warcraft game worked on another, but there was no tool that existed to visualize this, so I created this page. I just wanted the ability to select two games, and get a visual representation of the people who worked on each game, or both... The hardest was to create the JSON files, because the first few games did not have any data directly available, but since those credits were relatively small, I could type them over (or just use LLMs to convert the screenshot images to text, hehehe) - the actual hard part was to convert the World of Warcraft HTML into something useful, because those files were: different between different expacs, inconsistent within the same file, missing last names, inconsistent HTML formatting, unneeded Dunsel titles, mentioning Bobby Kotick as "Special Thanks" 🤮, etc, etc.</p>
+			<p>Anyway, here's the tool to visualize who worked on which game. Selecting the latest games can take a bit, since it's SUPER slow. D3.js isn't the fastest tool, but that's what I'm familiar with, so...</p>
+			<details class="instructions-collapsible" id="control-instructions-details">
+				<summary>Instructions & Controls</summary>
+				<ul class="instructions-content" aria-labelledby="control-instructions-details">
+					<li><strong>Select Games:</strong> Use the dropdowns below to choose one or two games. Stats appear on the right.</li>
+					<li><strong>Zoom/Pan:</strong> Use the mouse wheel to zoom in/out. Click and drag the background to pan the view.</li>
+					<li><strong>Node Info:</strong> Hover over any node (person circle or game rectangle) to see details in a tooltip.</li>
+					<li><strong>Highlight Department:</strong> Hold Ctrl (or Cmd on Mac) and click a person node to highlight that person and others who share at least one of their roles. Ctrl/Cmd+Click again or click background to clear.</li>
+					<li><strong>Show All Labels:</strong> Hold the 'Shift' key to temporarily show labels for all person nodes (can be slow with many nodes).</li>
+					<li><strong>Layout Control:</strong> Use the 'Stop Layout' button to freeze the graph arrangement. Use 'Resume Layout' to allow nodes to move again. Dragging a node when stopped will resume the layout.</li>
+				</ul>
+			</details>
+			<!-- === MODIFIED CONTROLS SECTION START === -->
+			<div class="controls">
+				<div class="game-selection-row">
+					<label for="fileSelect1">Select Game 1:</label>
+					<select id="fileSelect1" aria-label="Select first game file"></select>
+					<div class="stats-box" id="statsBox1" aria-live="polite" aria-atomic="true">
+						<span class="stat-item"><span class="stat-label">People:</span> <span id="personCount1" class="stat-value">--</span></span>
+						<span class="stat-item"><span class="stat-label">Unique Roles:</span> <span id="roleCount1" class="stat-value">--</span></span>
+						<!-- Add more stats here if needed -->
+					</div>
+				</div>
+				<div class="game-selection-row">
+					<label for="fileSelect2">Select Game 2:</label>
+					<select id="fileSelect2" aria-label="Select second game file"></select>
+					<div class="stats-box" id="statsBox2" aria-live="polite" aria-atomic="true">
+						<span class="stat-item"><span class="stat-label">People:</span> <span id="personCount2" class="stat-value">--</span></span>
+						<span class="stat-item"><span class="stat-label">Unique Roles:</span> <span id="roleCount2" class="stat-value">--</span></span>
+						<!-- Add more stats here if needed -->
+					</div>
+				</div>
+				<div class="simulation-controls">
+					<button id="stopButton" aria-label="Stop graph layout simulation">Stop Layout</button>
+					<button id="resumeButton" aria-label="Resume graph layout simulation" disabled>Resume Layout</button>
+				</div>
+			</div>
+			<!-- === MODIFIED CONTROLS SECTION END === -->
+			<div id="loadingMessage" class="status-message" style="display: none" aria-live="polite">Loading and processing data...</div>
+			<div id="errorMessage" class="status-message" aria-live="assertive"></div>
+			<svg id="d3-graph-container" aria-label="Graph visualization area" aria-describedby="control-instructions-details"></svg>
+			<div id="tooltip" role="tooltip" aria-hidden="true"></div>
+			<script src="https://d3js.org/d3.v7.min.js"></script>
+			<script type="module" src="main.js"></script>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2025-04-09</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

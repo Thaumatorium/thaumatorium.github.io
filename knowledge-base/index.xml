@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex on Thaumatorium</title>
+    <title>NostraDavid&#39;s Knowledge Base on Thaumatorium</title>
     <link>http://thaumatorium.com/knowledge-base/</link>
-    <description>Recent content in NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex on Thaumatorium</description>
+    <description>Recent content in NostraDavid&#39;s Knowledge Base on Thaumatorium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Aug 2020 16:55:37 +0100</lastBuildDate><atom:link href="http://thaumatorium.com/knowledge-base/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NostraDavid&#39;s Knowledge Base - Javascript code snippets and regex</title>
-      <link>http://thaumatorium.com/knowledge-base/_index-old/</link>
-      <pubDate>Mon, 17 Aug 2020 16:55:37 +0100</pubDate>
-      
-      <guid>http://thaumatorium.com/knowledge-base/_index-old/</guid>
-      <description>For now (2020-07-16) it&amp;rsquo;s just snippets of JS and regex that I use every now and then
-I&amp;rsquo;d use GitHub for that, but I have a tendency to forget GitHub Gist exists…
- {el.open = true});&#34;Open all chapters {el.open = false});&#34;Close all chapters    Online Tools These are websites/webpages that I use to optimize this site.
-    Tool name What to use it for     SVGOMG!</description>
-    </item>
-    
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://thaumatorium.com/knowledge-base/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

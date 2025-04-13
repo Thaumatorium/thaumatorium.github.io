@@ -1,0 +1,10260 @@
+{
+	"WoW: Wrath of the Lich King": [
+		{
+			"name": "AC Ward",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Aaron Bamblett",
+			"roles": ["QC Lead"]
+		},
+		{
+			"name": "Aaron Bothne",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Aaron Chan",
+			"roles": ["Artists", "Leads"]
+		},
+		{
+			"name": "Aaron Denton",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Aaron Gayet",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Aaron Green",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Aaron Hesse",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Aaron Keller",
+			"roles": ["Lead Exterior Level Designers"]
+		},
+		{
+			"name": "Aaron Orcino",
+			"roles": ["Recruitment", "Representatives"]
+		},
+		{
+			"name": "Aaron Ortiz-Clay",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Aaron Pemberton",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Aaron Uesugi",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Aaron Williams-Mayer",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Aaron Yasukochi",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Adam Ebmeier",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adam Ferguson",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Adam Hector",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adam Hughes",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Adam Koch",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Adam Lee",
+			"roles": ["English"]
+		},
+		{
+			"name": "Adam Lloyd",
+			"roles": ["English"]
+		},
+		{
+			"name": "Adam Moghaddassi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adam Morris",
+			"roles": ["English"]
+		},
+		{
+			"name": "Adam Plushner",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Adam Slack",
+			"roles": ["Technical Support Leads"]
+		},
+		{
+			"name": "Adam Wright",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adam Zweig",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adem Ozkum",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adrian Butts",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Adrian Luff",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Ahren Boulanger",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Aidan Mc Loughlin",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Aimee Pi",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Ajin Kim",
+			"roles": ["Web Programmers"]
+		},
+		{
+			"name": "Alan Carr",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alan Marti",
+			"roles": ["Assistant Manager"]
+		},
+		{
+			"name": "Alan McNevin",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alanna Quigley",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alastair Morris",
+			"roles": ["English"]
+		},
+		{
+			"name": "Albert Konrad",
+			"roles": ["German"]
+		},
+		{
+			"name": "Albert Portillo",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Albert Wong",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Alec Dun",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Aled Jones",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alejandro Riveiro de la Peña (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Aleski Airaksinen",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alex Afrasiabi",
+			"roles": ["Lead World Designer"]
+		},
+		{
+			"name": "Alex Bebbington",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alex Koreneff",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Alex Mayberry",
+			"roles": ["Senior Producers"]
+		},
+		{
+			"name": "Alex Murtaza",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Alex Tan",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Alex Tsang",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Alex Van Winkle",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Becker",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Alexander Berghoff",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Alexander Bradburn",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Alexander Brazie",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Alexander Böning (DE)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Alexander Coons",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Daurskikh",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Alexander Düsseldorf",
+			"roles": ["German"]
+		},
+		{
+			"name": "Alexander Gustafson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Gut",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Haselbacherm",
+			"roles": ["German"]
+		},
+		{
+			"name": "Alexander Ion Naya Sanchez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Ipfelkofer (DE)",
+			"roles": ["Regional Localization Leads", "Regional QA Leads"]
+		},
+		{
+			"name": "Alexander James Klontzas",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alexander Lione Stark",
+			"roles": ["English"]
+		},
+		{
+			"name": "Alexander Lyubov (RU)",
+			"roles": ["Regional Localization Leads", "Regional QA Leads"]
+		},
+		{
+			"name": "Alexander Mc Hugh",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Mochi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alexander Otto",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Alexander Redeker",
+			"roles": ["German"]
+		},
+		{
+			"name": "Alexander Sun",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Alexandre Duckman Lebrun",
+			"roles": ["French"]
+		},
+		{
+			"name": "Alexandre Vallee",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Alexis Roy-Petit (FR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Alexis Terrasse",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alfred Gabriele",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alfredo Padron",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Ali Vatani",
+			"roles": ["Web Team Leads"]
+		},
+		{
+			"name": "Alicia Kim",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Aliocha Segard",
+			"roles": ["French"]
+		},
+		{
+			"name": "Alisdair Comb",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Allan Campbell",
+			"roles": ["English"]
+		},
+		{
+			"name": "Allan Stellakis",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Allen Dauphin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Allen Dilling",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Allison Harvey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Alvaro Aguilar Tormo",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Alvaro Buendia",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Alyson Turner",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Amadeus Phanthanh",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Amanda Canfield",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Amanda Evans",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Amanda Kate Harris",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Amanda Wang",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Amanda Wood",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Amber Bittenbender",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Amber Larson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Amber Young",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Amit Bader",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Amy Taylor",
+			"roles": ["English"]
+		},
+		{
+			"name": "Ana Manso",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Anant Singh",
+			"roles": ["Purchasing"]
+		},
+		{
+			"name": "Anders Valum",
+			"roles": ["English"]
+		},
+		{
+			"name": "Andre Buchmann (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Andre Schickhoff",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Andre Schlegelmilch",
+			"roles": ["German"]
+		},
+		{
+			"name": "Andrea Birkhahn",
+			"roles": ["English"]
+		},
+		{
+			"name": "Andrea Della Noce",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Andrea Opimitti",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrea Tüger (DE)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Andreas Liebau",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Andreas Rohr",
+			"roles": ["German"]
+		},
+		{
+			"name": "Andreas Rounds",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Andreas Stiebert",
+			"roles": ["German"]
+		},
+		{
+			"name": "Andreas Unger",
+			"roles": ["Technical Support Leads"]
+		},
+		{
+			"name": "Andrew Amadi",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Andrew Balch",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Barcinski",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Andrew Bellinger",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Andrew Clisson",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Andrew Cox",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Andrew Dank",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Andrew De Sousa",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Andrew Eddy",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Galipeau",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Getting",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Glaser",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Andrew Hsu",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Andrew Hunt",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Andrew John Whitmarsh",
+			"roles": ["English"]
+		},
+		{
+			"name": "Andrew Matthews",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Andrew Meaney",
+			"roles": ["English"]
+		},
+		{
+			"name": "Andrew Naudi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Palan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Phaneuf",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Priestnall",
+			"roles": ["English"]
+		},
+		{
+			"name": "Andrew Rexroth",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Robson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andrew Rowe",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Andrew Russell",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Andrew Spiering",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Andrew Vestal",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "AndrewGordon Haefs",
+			"roles": ["German"]
+		},
+		{
+			"name": "Andrey Kuzmin (RU)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "André Linnemann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Andy Salwey",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Andy Tran",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Angel Martin Ayuso",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Angela Blake",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Angela Cleere",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Angela Shih",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Angelo Concepcion",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Anita Rice",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Ann Ta",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Anna Parera Bohigas (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Anna Sort Gonzalez",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Anne Bargemann",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Anne Berard",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Anne Bérard",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Anne Marie Belland",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Anne Stengel (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Anne Studer (FR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Anne Vétillard (FR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Anne-Sophie Buiret",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Anne-Sophie Denglos (FR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Anne-Sophie Lefebvre",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Anselm Hempel",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Anselmo Talotta",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Anthony Franey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Anthony Gutierrez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Anthony Piperato",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Anthony Reyes",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Anthony Rietta",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Anthony Sierra",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Anthony Snow",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Anthony Suh",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Anthony Williams",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Antoine Guyard",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Antoine Guyard (EU)",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Antoine Pezzo",
+			"roles": ["French"]
+		},
+		{
+			"name": "Antoine Traylor",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Anton Brumme",
+			"roles": ["German"]
+		},
+		{
+			"name": "Anton Hsin",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Anton Karanov",
+			"roles": ["English"]
+		},
+		{
+			"name": "Anton Kochergin( RU)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Antonia Ryan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Antonio Achuccaro",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Antonio Kontokanis",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Antonio Moreno (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Anwar Bey-Taylor",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Arec Nevers",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Ari Nur",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Armando Abanilla",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Arnaud Ameele",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Arnaud Schwarz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Arnold Fulmer",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Aron Kirkpatrick",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Arron Rasmussen",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Art Peshkov",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Arthur Flew (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Arthur Jeppe",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "Artur Strak",
+			"roles": ["German"]
+		},
+		{
+			"name": "Asheesh Thukral",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Asher Litwin",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Ashok Viswanathan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Audra Oberloh",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Audrey Selnet",
+			"roles": ["French"]
+		},
+		{
+			"name": "Audrey Vicenzi (EU)",
+			"roles": ["Business Development"]
+		},
+		{
+			"name": "Audrey Wozniak",
+			"roles": ["French"]
+		},
+		{
+			"name": "Aungoun Lee",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Aurélien Bovis",
+			"roles": ["French"]
+		},
+		{
+			"name": "Austin Cornell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Austin Feeney",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Austin Purcell",
+			"roles": ["English"]
+		},
+		{
+			"name": "Avril Cater",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Aymeric Pentecouteau",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ayoung Kim",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "BB Casting and Production Services",
+			"roles": ["Voice Casting and Recording"]
+		},
+		{
+			"name": "Bandar Garski",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bao Tran",
+			"roles": ["Web Design Team Lead"]
+		},
+		{
+			"name": "Barbara Johnson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Barry Berman",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Barry Connell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Barry Downs",
+			"roles": ["English"]
+		},
+		{
+			"name": "Barry Ellis",
+			"roles": ["English"]
+		},
+		{
+			"name": "Barry Hayles",
+			"roles": ["English"]
+		},
+		{
+			"name": "Barry Murphy",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Bartosz Posluszny",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bastien Lebourg",
+			"roles": ["French"]
+		},
+		{
+			"name": "Beau Billingsley",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bejan Fozdar (Modeling)",
+			"roles": ["Production Team"]
+		},
+		{
+			"name": "Ben Barker",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Ben Bowers",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ben Brode",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Ben Choi (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Ben Corbey",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Ben Dai",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Ben Dickey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ben George",
+			"roles": ["Licensing"]
+		},
+		{
+			"name": "Ben Haywood",
+			"roles": ["English"]
+		},
+		{
+			"name": "Ben Hellis",
+			"roles": ["English"]
+		},
+		{
+			"name": "Ben Hsieh",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Ben LeBar",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Ben Lebar",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ben Noskeau",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Ben Orchard",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Ben Schroder (EU)",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Ben Werbner",
+			"roles": ["English"]
+		},
+		{
+			"name": "Benedikt Oehmen (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Benj Sykes",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Benjamin Berghäuser",
+			"roles": ["German"]
+		},
+		{
+			"name": "Benjamin Elgueta",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Benjamin Klinkhamer",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Benjamin Lilley",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Benjamin Schmidt (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Benjamin Williams",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Benny Haryadi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Benny Waldenmaier",
+			"roles": ["German"]
+		},
+		{
+			"name": "Benoit Dufour",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Benoit Dufour (EU)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Beom Choi",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Berenger Queune",
+			"roles": ["French"]
+		},
+		{
+			"name": "Bernd Gottsmann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bernhard Mann",
+			"roles": ["German"]
+		},
+		{
+			"name": "Bernie Kang",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Bianca Braun",
+			"roles": ["German"]
+		},
+		{
+			"name": "Bill Galey",
+			"roles": ["Senior Manager"]
+		},
+		{
+			"name": "Bill Tubbs",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Billy Shih",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Björn Bartholome",
+			"roles": ["German"]
+		},
+		{
+			"name": "Björn Ebner",
+			"roles": ["German"]
+		},
+		{
+			"name": "Björn Löhrer",
+			"roles": ["German"]
+		},
+		{
+			"name": "Björn Passow",
+			"roles": ["German"]
+		},
+		{
+			"name": "Blake Chafin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Blandine Pronost",
+			"roles": ["French"]
+		},
+		{
+			"name": "Bo Mejdahl",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bo Selmer-Hansen (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Bob Colayco",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Bob Richardson",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Bogyu Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bonna Mom",
+			"roles": ["French"]
+		},
+		{
+			"name": "Bonnye Bauerle",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bora Park",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Boram Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brad Rhodes",
+			"roles": ["QA Analysts", "Representatives"]
+		},
+		{
+			"name": "Bradley Edmund Bernhard",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandan Vanderpool",
+			"roles": ["Production Assistants"]
+		},
+		{
+			"name": "Brandon Christenson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandon Crumpler",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandon DiMaggio",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandon Harvey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandon I Ramsey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandon Jacobson",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Brandon Shelton",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandon Shephard",
+			"roles": ["Facilities"]
+		},
+		{
+			"name": "Brandy Corbin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brandy Stiles",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Brendan Cavanagh",
+			"roles": ["English"]
+		},
+		{
+			"name": "Brendan Ryan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brenika Janiszewski",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brent Brewington",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Bret Cocking",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Brett Dixon",
+			"roles": ["Technical Artist"]
+		},
+		{
+			"name": "Brett Wooldridge",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Brian Birmingham",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Brian Bula",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brian Choi",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Brian David Farr",
+			"roles": ["Lead Sound Designer"]
+		},
+		{
+			"name": "Brian Deering",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brian Fitzgerald",
+			"roles": ["Team Lead"]
+		},
+		{
+			"name": "Brian Hartsell",
+			"roles": ["Information Technology", "Representatives"]
+		},
+		{
+			"name": "Brian Hill",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Brian Huong",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Brian LaFrance",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Brian Lee",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Brian Libby",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Brian Morin",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Brian Morrisroe",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Brian Murillo",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Brian Pierron",
+			"roles": ["QA Analysts", "Representatives"]
+		},
+		{
+			"name": "Brian Snyder",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Brian Sueyoshi",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Brian Wright",
+			"roles": ["Producer", "Project Management"]
+		},
+		{
+			"name": "Brianna Schneider",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Brianne Messina",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Brice Petibas",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Brice Russeil",
+			"roles": ["French"]
+		},
+		{
+			"name": "Britta Riess",
+			"roles": ["Account Services Seniors"]
+		},
+		{
+			"name": "Bruce Prescott",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Bruno Cailloux (FR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Bruno Loncke",
+			"roles": ["English"]
+		},
+		{
+			"name": "Bryan Chang",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Bryan Cleveland",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Bryan Gibson-Winge",
+			"roles": ["Lead Server Programmer"]
+		},
+		{
+			"name": "Bryan Langford (Tech, Animation)",
+			"roles": ["Production Team"]
+		},
+		{
+			"name": "Bryan Ludwig",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Bryan Nystul",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Bryan Rathman",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Byoungjin Lim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Byungho Park",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Byunghun Park (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Byungkwan Chung",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Byungwoo Kwon (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Cajsa Ekstav",
+			"roles": ["Guest Musicians"]
+		},
+		{
+			"name": "Calleah Kaiser",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Camille DuBose",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Candace Thomas",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Carine Fiorani",
+			"roles": ["Account Services Seniors"]
+		},
+		{
+			"name": "Carl Bone",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Carl Brumm",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Carl Mc Neill",
+			"roles": ["English"]
+		},
+		{
+			"name": "Carlos Godó Borrás (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Carlos Guerrero",
+			"roles": ["Senior Producers"]
+		},
+		{
+			"name": "Carlos Lucero",
+			"roles": ["Administration"]
+		},
+		{
+			"name": "Carman Cheung",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Carmen Priego (ES)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Carol Alvarez",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Carolin Dittman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Caroline Wu",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Carrie Zhang (CN)",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Carsten Schedding",
+			"roles": ["German"]
+		},
+		{
+			"name": "Casey Foreman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Casey Fulton",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Casey Glenn",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Casey Suyeto",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Casey Yelland",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Caspar Michel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Casting Director – Brigitte Burdine",
+			"roles": ["Voice Casting and Recording"]
+		},
+		{
+			"name": "Cedric Gallins",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Cedryck Poitelon",
+			"roles": ["Techical Support Lead"]
+		},
+		{
+			"name": "Chad Hodgson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chad Jones",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Chad Starkey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chance Tijerina",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Changhoon Lee",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Changhyun An",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Changkoo Lee",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Changuk Park",
+			"roles": ["Director"]
+		},
+		{
+			"name": "Charles Knief",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Charles Smith",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Charles Valek",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Charlie Areson",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Charlie Berman",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Chase Sherman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chay Johansson",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Chelsea Olson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Cheryl Hoggins",
+			"roles": ["English"]
+		},
+		{
+			"name": "Chi Liu",
+			"roles": ["Public Relations and Community Manager of Taiwan, Hong Kong and Macau"]
+		},
+		{
+			"name": "Cholong Han",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Choua Her",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Chris Antenesse",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Chris Cavallo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Crowson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Curtis",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Cynar",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Davey",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Chris De La Pena",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Chris Evans",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Chris Fajardo",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Chris Garrett",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Glover",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Chris Gorman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Ha",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Chris Kaleiki",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Chris Luckenbach",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Chris McLeroy",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Chris Metzen",
+			"roles": ["Creative Director"]
+		},
+		{
+			"name": "Chris Myles",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Chris Presnall",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Robinson",
+			"roles": ["Art Director"]
+		},
+		{
+			"name": "Chris Rock",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Chris Ryder",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Chris Swoner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Thunig",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Chris Whitaker",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chris Zhu",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Christa Buckentin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christel Malbrancq",
+			"roles": ["French"]
+		},
+		{
+			"name": "Christelle Bravin (FR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Christiaan Rascon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christian Arvidsson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christian Berwind",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Decomain",
+			"roles": ["Regional Localization Test Leads"]
+		},
+		{
+			"name": "Christian Döbel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Eberhardt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christian Guest",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christian Heidrich",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Konigstein",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christian Kröger",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Meinert",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Reynolds",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Christian Riegger",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Scharling",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Christian Schilling",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Sperber",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Christian Traute",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christian Vestøl (EU)",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Christian Zirpner",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christina Helbig",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christina McCombie",
+			"roles": ["Online Services Manager"]
+		},
+		{
+			"name": "Christoph Gembe",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christoph Grix",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christoph Thann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christophe Monteiro",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher Bailey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher Carter (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Christopher Davila",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Christopher Deutsch",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Christopher Fawcett",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christopher Frew",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher Fulgham",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher Göttfert",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christopher Heidick",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher John Mountain",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Christopher Kopetschek (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Christopher MacDonald",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Christopher Mathieson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christopher Mc Hale",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christopher Peters",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Christopher Purvis",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher Schmale",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christopher Simonis",
+			"roles": ["German"]
+		},
+		{
+			"name": "Christopher Towne",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Christopher Twite",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christopher Veazey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Christopher Woodcock",
+			"roles": ["English"]
+		},
+		{
+			"name": "Christy “Mina” Um (KR)",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Chuck Salzman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chulho Chang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chuljo Yun",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chulwoong Choi",
+			"roles": ["Billing Software Engineers"]
+		},
+		{
+			"name": "Chung Kan",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Chung Ng",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Chungseok Han",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Cian Creed-Healy",
+			"roles": ["English"]
+		},
+		{
+			"name": "Cian Yates",
+			"roles": ["English"]
+		},
+		{
+			"name": "Claude Keogh",
+			"roles": ["English"]
+		},
+		{
+			"name": "Claudio Gentilini",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Claus Schumacher",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Clayton Dubin",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Clemens Krainer",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Cliff Threadgold",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Clint Rice",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "Clint Walls",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Cody Griffith",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Colin McShane",
+			"roles": ["English"]
+		},
+		{
+			"name": "Colleen Tulley",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Collin Murray",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Colton Carmine",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Concepción González (ES)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Conor O'Shea",
+			"roles": ["English"]
+		},
+		{
+			"name": "Constance Wang",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Contracted by Simon James and David Sabee",
+			"roles": ["Cinematic Intro and Main Title Music"]
+		},
+		{
+			"name": "Cord Bartlett",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Corey Louie",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Corey Pelton",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Cornelia Nolte",
+			"roles": ["English", "German"]
+		},
+		{
+			"name": "Cory Jones",
+			"roles": ["Global Director"]
+		},
+		{
+			"name": "Cory Larson",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Cory Stockton",
+			"roles": ["Lead Level Designer"]
+		},
+		{
+			"name": "Cosme Alcázar (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Craig Amai",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Craig Andrew Jobling",
+			"roles": ["English"]
+		},
+		{
+			"name": "Craig Bland",
+			"roles": ["English"]
+		},
+		{
+			"name": "Craig Hyatt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Craig Pratt",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Craig Shrewsbury",
+			"roles": ["English"]
+		},
+		{
+			"name": "Craig Steele",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Craig Turner",
+			"roles": ["English"]
+		},
+		{
+			"name": "Cristian Martin Nieto",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Cristiano Pereira",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Cristina Martínez Jiménez",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Crystal Breaux",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Curtis Castrapel",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Cyndie Varin",
+			"roles": ["French"]
+		},
+		{
+			"name": "Cynthia Frushon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Cynthia Robbiola",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Cédric Coret",
+			"roles": ["French"]
+		},
+		{
+			"name": "Cédric David",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Cédric Maréchal",
+			"roles": ["Management Team, Europe", "Regional Marketing"]
+		},
+		{
+			"name": "Cédrik Razafimamantsoa",
+			"roles": ["French"]
+		},
+		{
+			"name": "Céline Choliere",
+			"roles": ["French"]
+		},
+		{
+			"name": "Céline Etcheberry",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Céline Guise",
+			"roles": ["French"]
+		},
+		{
+			"name": "Dagmara Lebiedzinska (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Dale Lewis",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Dallas Stringham",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Damien Chow",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Damien Currano",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dan Kramer",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Dan Moore",
+			"roles": ["Prop Artists"]
+		},
+		{
+			"name": "Dan Morningstar",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dan Reed",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Dana Bishop",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Danai Bastin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Brennecke",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Brockdorff",
+			"roles": ["German"]
+		},
+		{
+			"name": "Daniel Bromand",
+			"roles": ["German"]
+		},
+		{
+			"name": "Daniel Carpenter",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Carroll",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Chin",
+			"roles": ["Community Manager"]
+		},
+		{
+			"name": "Daniel Dylla",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Favela",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Daniel Hackel",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Hammer",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Johnson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Daniel Kanneg",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Luo",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Daniel McClellan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Mooney",
+			"roles": ["English"]
+		},
+		{
+			"name": "Daniel Nagel",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Ortega",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Pageau",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "Daniel Polcari",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Daniel Radschun",
+			"roles": ["German"]
+		},
+		{
+			"name": "Daniel Ryan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Daniel Scauzillo",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Daniel Watson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniel Weltz",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Daniel Wiley",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Daniela Shani",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Danielle Vanderlip",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Daniil Sokolov (RU)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Danita Ng-Poss",
+			"roles": ["Main Titles Music Preparation provided by"]
+		},
+		{
+			"name": "Danny Flannagan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Danny H. Nguyen",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Danny Nguyen",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Danny Saint-Hilaire",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Darleen Gotay",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Darlene Kolano",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Darryll Silva",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Dat Ho",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dat Nguyen",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Dave Amason",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Dave Byer",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dave Maldonado",
+			"roles": ["Lead World Event Designer"]
+		},
+		{
+			"name": "David Ashman",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "David Baines",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Barney",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Burlinson",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Byl",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Carey",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "David Chadwick",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Chan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Church Rodriguez",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "David Durand",
+			"roles": ["Art Staff"]
+		},
+		{
+			"name": "David Eckel",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "David Farmer",
+			"roles": ["Cinematic Intro Sound Designers"]
+		},
+		{
+			"name": "David Fisher",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Gee",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "David Hollingbery",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Hoppe",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Horrocks",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Keegan",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "David Keel",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Kerwin",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "David LaRocca",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David LaVallee",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "David Lim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Luong",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "David M. Adams",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "David Malach",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Maxwell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David McGrath",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Navarro",
+			"roles": ["German"]
+		},
+		{
+			"name": "David Nguyen",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "David Odiot",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "David Ortiz",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "David Potter",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "David Remy Zephir",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Ribeiro",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Richards",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Rowell",
+			"roles": ["English"]
+		},
+		{
+			"name": "David Sanchez",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "David Savvy",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "David Schlamp",
+			"roles": ["German"]
+		},
+		{
+			"name": "David Strammerjohann",
+			"roles": ["German"]
+		},
+		{
+			"name": "David Tamayo",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "David Wareham",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "David Warner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "David Zemek",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Davis Lidiak",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dean Jones",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dean Lillywhite",
+			"roles": ["English"]
+		},
+		{
+			"name": "Dean Shelden",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Dean Yang (CN)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Deana Thiem",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Deborah Brooks",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Delphine Le Corre",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Denis Courtin",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Denis Genest",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Denis Walsh",
+			"roles": ["English"]
+		},
+		{
+			"name": "Denise Dunlap",
+			"roles": ["Vice President of Global Human Resources"]
+		},
+		{
+			"name": "Denise Hicks",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Dennis Crabtree",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Dennis Crow",
+			"roles": ["Producer"]
+		},
+		{
+			"name": "Dennis Czybulka",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Dennis Drabinski",
+			"roles": ["German"]
+		},
+		{
+			"name": "Dennis Horn",
+			"roles": ["German"]
+		},
+		{
+			"name": "Dennis Price",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Dennis Wollmann",
+			"roles": ["German"]
+		},
+		{
+			"name": "Deokhoi Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Derek Duhon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Derek Duke",
+			"roles": ["Music"]
+		},
+		{
+			"name": "Derek Rakos",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Derek Ronzo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Derek Rosenberg",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Derek Sakamoto",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Des Gordon",
+			"roles": ["English"]
+		},
+		{
+			"name": "Desmond Gregory",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Devin Julia",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Devin Vink",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Devin Webster",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Devon Robert Kelly",
+			"roles": ["English"]
+		},
+		{
+			"name": "Diego Valero Suarez",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Dimitri Del Castillo",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Diogo Silva",
+			"roles": ["English"]
+		},
+		{
+			"name": "Dion Rogers",
+			"roles": ["Environment Artists"]
+		},
+		{
+			"name": "Dirk Bömelburg",
+			"roles": ["German"]
+		},
+		{
+			"name": "Dirk Schmid",
+			"roles": ["German"]
+		},
+		{
+			"name": "Dohyeong Kim",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Dohyun Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dominic Qwek",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Don Adams",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Don Prentice",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Don Vu",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Donald Grey",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Dongho Chang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Donghyun Kim",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Doohyun Bae",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Doris Tatzgern",
+			"roles": ["German"]
+		},
+		{
+			"name": "Doug Fitchett",
+			"roles": ["English"]
+		},
+		{
+			"name": "Doug Miller",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Douglas Liljekvist",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Douglas Midgley",
+			"roles": ["English"]
+		},
+		{
+			"name": "Doyeon Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Drew Dobernecker",
+			"roles": ["Interns", "QA Analysts"]
+		},
+		{
+			"name": "Duane Than",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Duffy Squier",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Duncan Coe",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Duncan Field",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Dustin Bosteder",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Dustin Distefano",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dustin Koupal",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Dustin Remmel",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Dustin Rockers",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dustin Trimble",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Dustin Vail",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Dwight Harvey",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Dylan Kho",
+			"roles": ["Representatives", "Support Seniors"]
+		},
+		{
+			"name": "Dyllan Lu",
+			"roles": ["Artists", "Technical Artists"]
+		},
+		{
+			"name": "Ed Hanes",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Ed Hanley",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Eddie Rainwater",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Eddy Béchu",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Eddy Meng (CN)",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Edgar Flores",
+			"roles": ["Assistant Lead QA Analysts"]
+		},
+		{
+			"name": "Edna Weissflog",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Edo Guidotti",
+			"roles": ["Live Sessions and Orchestrations produced by"]
+		},
+		{
+			"name": "Edward Bui",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Edward Harborne",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Edward Kang",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Edward Lee",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Edward Mcdonald",
+			"roles": ["English"]
+		},
+		{
+			"name": "Edward Olivieri",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Edward Silveira",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Eirik Fjeldal",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Elaine Fu Yang",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Elena Ovchinnikova (RU)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Elina Bytskevich",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Elisa Orellana Huhn (ES)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Elisabeth Astl",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Elisha Cabrera",
+			"roles": ["Events"]
+		},
+		{
+			"name": "Elizabeth Cho",
+			"roles": ["Licensing"]
+		},
+		{
+			"name": "Elizabeth Jackson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Elodie Bastide",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Elodie Choliere",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Elodie Dupuis (EU)",
+			"roles": ["Events"]
+		},
+		{
+			"name": "Ely Cannon",
+			"roles": ["Lead Exterior Artist"]
+		},
+		{
+			"name": "Emil Jannesson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Emma Lorking",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Emma Stott",
+			"roles": ["English"]
+		},
+		{
+			"name": "Emmanuel Obert",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Emy Hetherington (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Enrico Tolentino",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Enrique Gonzales de Vallejo",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Eric Baskin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Eric Browning",
+			"roles": ["City/Dungeon Sub-Leads"]
+		},
+		{
+			"name": "Eric Chauveau",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Eric Davis",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Eric De Freslon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Eric Dodds",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Eric Maloof",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Eric Modolin",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Eric Prescott",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Eric Rigler",
+			"roles": ["Guest Musicians"]
+		},
+		{
+			"name": "Eric Roeder",
+			"roles": ["General Counsel"]
+		},
+		{
+			"name": "Eric Szymaszek",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Eric Thedaker",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Eric Thibeau",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Eric Yasukochi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Erica Kuschel",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Erik Jensen",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Erik Lindberg",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Erik Perez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Erik Tabor",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Erika Sayre-Smith",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Erin Johanson",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Ernest Completo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ernst ten Bosch",
+			"roles": ["Back Office Manager"]
+		},
+		{
+			"name": "Erwan Bargain",
+			"roles": ["French"]
+		},
+		{
+			"name": "Erynn Caldwell",
+			"roles": ["Billing Leads"]
+		},
+		{
+			"name": "Esther Scheeren",
+			"roles": ["German"]
+		},
+		{
+			"name": "Ethan Copeland",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Eugen Heller",
+			"roles": ["German"]
+		},
+		{
+			"name": "Eunae Kong (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Eunbom Park",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Eunjung Lee",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Eunkyung Jang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Eunsun Hong",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Eunyoung “Jessie” Kim (KR)",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Eva-Maria Fritsche",
+			"roles": ["German"]
+		},
+		{
+			"name": "Evan Calder",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Evan Crawford",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Evan Peterson",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Evan Powers",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Evan Stoudenmire",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Evelyn Fredericksen",
+			"roles": ["Historians"]
+		},
+		{
+			"name": "Fabian Rauch",
+			"roles": ["German"]
+		},
+		{
+			"name": "Fabian Schrader",
+			"roles": ["German"]
+		},
+		{
+			"name": "Fabien Poussin",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Fabio Ventura",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Fabrice Piel",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Falk Schwiefert",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Fanny Hermant",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Fausto De Martini",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "Felix Embree",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Filip Nogowski",
+			"roles": ["German"]
+		},
+		{
+			"name": "Florian Bläsche",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Florian Meister",
+			"roles": ["German"]
+		},
+		{
+			"name": "Florian Mentl",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Forrest Bowling",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Forrest Dorsey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Foster M. Elmendorf",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Frances Fobke",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Francesco Reinboldt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Francis Fandino",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Francisco Bolaños Santana",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Francisco Sanchez Campos",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Franck Alshut",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Frank Heling",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Frank Keienburg",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Frank Müller",
+			"roles": ["German"]
+		},
+		{
+			"name": "Frank Pearce",
+			"roles": ["Executive Producer"]
+		},
+		{
+			"name": "Frank Roesel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Frank Rolle",
+			"roles": ["German"]
+		},
+		{
+			"name": "Frank Schulze",
+			"roles": ["German"]
+		},
+		{
+			"name": "François Medaerts",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "François Noël",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "François Pinturault",
+			"roles": ["French"]
+		},
+		{
+			"name": "François Trani",
+			"roles": ["French"]
+		},
+		{
+			"name": "Fred Benson",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Frederic Baudet (EU)",
+			"roles": ["Regional Managers", "Regional QA Managers"]
+		},
+		{
+			"name": "Frederic Menou",
+			"roles": ["Director"]
+		},
+		{
+			"name": "Frederick Dayhee Lee",
+			"roles": ["Billing Software Engineers"]
+		},
+		{
+			"name": "Fredrik Kurki",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Fredrik Svantes",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Frerk Güntzler",
+			"roles": ["German"]
+		},
+		{
+			"name": "Friedrich Stegmann",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Fritz Kryman",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Fréderic Menou",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Frédéric Kubiakowski",
+			"roles": ["French"]
+		},
+		{
+			"name": "Frédéric Rochet",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Frédéric Tabard",
+			"roles": ["French"]
+		},
+		{
+			"name": "Frédéric Vasseur (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Gabriel Ropers (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Gaetan Mahon",
+			"roles": ["German"]
+		},
+		{
+			"name": "Gaetan Martens",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Gandalf Brahm",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Gareth Barry",
+			"roles": ["English"]
+		},
+		{
+			"name": "Gareth Donaghey",
+			"roles": ["English"]
+		},
+		{
+			"name": "Gareth Hughes",
+			"roles": ["Editorial Assistant"]
+		},
+		{
+			"name": "Gareth Roberts",
+			"roles": ["English"]
+		},
+		{
+			"name": "Garett Savard",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Garrett Elmendorf",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Gary Davis",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gary Platner",
+			"roles": ["Lead Environment Artist"]
+		},
+		{
+			"name": "Gary Reeb",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Gary Young",
+			"roles": ["Project Management"]
+		},
+		{
+			"name": "Gavin Jurgen-Fyhrie",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gayeong Yoo (KR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Gaël Company",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Geir Mjosund",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gene Dodge",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Genséric Sohier",
+			"roles": ["French"]
+		},
+		{
+			"name": "Geobo Shim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Geoff Fraizer",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Geoff Goodman",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Geordie Swainbank",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Georg Hirschauer",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "George Backus",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "George Merrill",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "George Penman",
+			"roles": ["English"]
+		},
+		{
+			"name": "Gerald Freeman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gerd Ridder",
+			"roles": ["German"]
+		},
+		{
+			"name": "Geri Kate Macalino",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "German Echeverria",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gichang Hong",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Gijs Johan Maur Waverijn",
+			"roles": ["English"]
+		},
+		{
+			"name": "Gil Shif",
+			"roles": ["Senior Editorial Manager"]
+		},
+		{
+			"name": "Gilbert McGuire",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gilbert Samuelian",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Gilles Durosay",
+			"roles": ["French"]
+		},
+		{
+			"name": "Gilles Durosay (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Gina Pippin",
+			"roles": ["Licensing"]
+		},
+		{
+			"name": "Gisang Gil",
+			"roles": ["Web Programmers"]
+		},
+		{
+			"name": "Glenn Ramos",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Glenn Rane",
+			"roles": ["Art Director"]
+		},
+		{
+			"name": "Glenn Stafford",
+			"roles": ["Music"]
+		},
+		{
+			"name": "Gloria Soto",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Goran Parnen",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Gordon Lathan",
+			"roles": ["German"]
+		},
+		{
+			"name": "Grace Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Graeme Rafferty",
+			"roles": ["English"]
+		},
+		{
+			"name": "Graham Cunningham",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Graham Murphy",
+			"roles": ["English"]
+		},
+		{
+			"name": "Graig Taylor",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Graven Tung",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Graziella Marie",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Greg Ashe",
+			"roles": ["Battle.net Research Manager"]
+		},
+		{
+			"name": "Greg Street",
+			"roles": ["Lead Systems Designer"]
+		},
+		{
+			"name": "Gregoire Bonnafoux",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Gregor Beck",
+			"roles": ["German"]
+		},
+		{
+			"name": "Gregory Bahl",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gregory Hansen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Grégory Garcia",
+			"roles": ["French"]
+		},
+		{
+			"name": "Grégory Sevin",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Guillaume Bloch (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Guillaume Chaput",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Guillaume Jegu",
+			"roles": ["French"]
+		},
+		{
+			"name": "Guillaume Lachambre",
+			"roles": ["French"]
+		},
+		{
+			"name": "Guillaume Richard",
+			"roles": ["Account Services Seniors"]
+		},
+		{
+			"name": "Guillermo Ledesma",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Gurpreet Wahla",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Gustav Schmidt",
+			"roles": ["Environment Artists"]
+		},
+		{
+			"name": "Guus Hoogendoorn",
+			"roles": ["English"]
+		},
+		{
+			"name": "Guy Cunis (EU)",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Göran Gauruder",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Hadrien Rudich",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hagen Zawany",
+			"roles": ["German"]
+		},
+		{
+			"name": "Hamilton Chu",
+			"roles": ["Director of Special Projects"]
+		},
+		{
+			"name": "Han Lee",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Hana Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hanlong Wang",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Hannah Mcarthur",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Hansa Sawami",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hansjörg Brandt",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Harald Kneissl",
+			"roles": ["German"]
+		},
+		{
+			"name": "Harald Prem",
+			"roles": ["German"]
+		},
+		{
+			"name": "Harold Pendery",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Heather Foreman",
+			"roles": ["Administration"]
+		},
+		{
+			"name": "Heather Holloway",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hector Melendres",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Heeyoung Park (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Heidi Lindsey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Heidi Wanner",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Heiko Dieregsweiler",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Henning Kaiser",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Henning Roese",
+			"roles": ["German"]
+		},
+		{
+			"name": "Henning Roest",
+			"roles": ["English"]
+		},
+		{
+			"name": "Henrik Eriksson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Henrik Hedstrom",
+			"roles": ["English"]
+		},
+		{
+			"name": "Henrik Schöpel",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Henrique Rodrigues",
+			"roles": ["English"]
+		},
+		{
+			"name": "Henry Davis",
+			"roles": ["English"]
+		},
+		{
+			"name": "Henry Ramos",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Henry Szekely",
+			"roles": ["Facilities Manager"]
+		},
+		{
+			"name": "Hernan Gonzalez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Holger Speckter",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Holly Wilson",
+			"roles": ["Prop Artists"]
+		},
+		{
+			"name": "Hong Sing Teh (CN)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Hosang Yu",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hosuk Chang",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Howard Bishop",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hugh Todd",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Hun Kevin Lee",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Hung Le",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Hung Nguyen",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Hunter Curren",
+			"roles": ["Representatives", "Support Seniors"]
+		},
+		{
+			"name": "Hunter Grant",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Huong Grey",
+			"roles": ["Programmers", "Technical Artists"]
+		},
+		{
+			"name": "Huw Gower",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Hwajun Song",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyejin Yum (KR)",
+			"roles": ["Community Manager"]
+		},
+		{
+			"name": "Hyekyung Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyeyoung Jung",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyeyoung Park",
+			"roles": ["Training Seniors"]
+		},
+		{
+			"name": "Hyojin An",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyojin Bae",
+			"roles": ["Web Design Team Manager"]
+		},
+		{
+			"name": "Hyojin Kim",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Hyoju Gou",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyosung Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyunbum Lim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyungjun Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Hyungsuk Choi",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Hyunsin “Durty” Lim",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Hyunsuk Cheong",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Hyunyoung Ahn",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Ian Coleman",
+			"roles": ["English"]
+		},
+		{
+			"name": "Ian Combs",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Ian Crawford",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ian Ho",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Ian Jolly",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ian Patterson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ian Polianskii",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ian Roberts",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Ian S. Nelson",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Ian Stamatedes",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ian Wynne",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Ievgen Makarevych (RU)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Ignacio Ramirez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ikhyun Kim (KR)",
+			"roles": ["Regional Localization Test Leads"]
+		},
+		{
+			"name": "Ilona Dolejsi",
+			"roles": ["English"]
+		},
+		{
+			"name": "Inchaul Bae",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Inigo Moleres Apilluelo",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Inkyoung Sim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Inma Utrilla (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Insik Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Inés Eberhard",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Inés Rubio (ES)",
+			"roles": ["Regional Assistant Localization Managers"]
+		},
+		{
+			"name": "Iqbal Hussain",
+			"roles": ["English"]
+		},
+		{
+			"name": "Irena Pereira",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Irene Buesa (ES)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Irene Pacheco",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Irina Kneller",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Isaac Jeon",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Isaac Matarasso",
+			"roles": ["Senior Global Director"]
+		},
+		{
+			"name": "Isaac Sanchez",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Isabelle Soupault",
+			"roles": ["French"]
+		},
+		{
+			"name": "Isidro Tellez",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Ismaël Villeger",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Istvan Kakasi",
+			"roles": ["English"]
+		},
+		{
+			"name": "Ivo Garcia (ES)",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Iwan De Kleine",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "J. Allen Brack",
+			"roles": ["Production Director"]
+		},
+		{
+			"name": "J.D. Calzada",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "JC Park",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Jack Chen",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jack Sterling",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Jacob Hofeldt",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jacob Hurst",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jacob Perez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jacob Rodriguez",
+			"roles": ["QA Analysts", "Representatives"]
+		},
+		{
+			"name": "Jacob Segal",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Jacqueline Harrison",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jae Kim",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jae Wook Park",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jaechang Kim (KR)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Jaeeun Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jaegoo moon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jaehong “Big J” Jeong",
+			"roles": ["Training Lead"]
+		},
+		{
+			"name": "Jaehui Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jaehyun Ahn",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jaekwang Han",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jaemin Ko",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jaewon Lim",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jaewoo Mo (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Jaeyang Kwak",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Jaeyong Choi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jaiki Song",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jaime Scheffler",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Jaime Wood",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jamal Davis",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "James Chadwick",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "James Chao",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "James Cho",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "James Crowson",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "James Drosche",
+			"roles": ["Assistant Managers"]
+		},
+		{
+			"name": "James Garner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "James Kompare",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "James Leaman",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "James Logan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "James McCoy",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "James Mills",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "James O’Connor",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "James Shaw",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "James Siqi Cui (CN)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "James Southall",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "James Whittall",
+			"roles": ["English"]
+		},
+		{
+			"name": "James Wong",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "James Yen",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "James Young",
+			"roles": ["Representatives", "Support Seniors"]
+		},
+		{
+			"name": "Jameson Hodge",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jami Hurst",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jamie Alexander Foreman",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jamie Chang",
+			"roles": ["Prop Artists"]
+		},
+		{
+			"name": "Jamie Crooks",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "JanKonrad Ebermann",
+			"roles": ["German"]
+		},
+		{
+			"name": "JanMichael Jahnke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jane Chen (CN)",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Janet Garcia",
+			"roles": ["Production Team"]
+		},
+		{
+			"name": "Janina Taab",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jaoued Karim",
+			"roles": ["French"]
+		},
+		{
+			"name": "Jared Keller",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "Jared Ritter",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jared Schiller",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jared Stepp",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jarett Riva",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jason Adams",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Jason Avakian",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jason Barlow",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jason Bischoff",
+			"roles": ["Licensing"]
+		},
+		{
+			"name": "Jason Copeland",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jason Courtney",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jason Crewse",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jason De Arté",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Jason Devine",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jason Hill",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jason Hutchins",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Jason Kwan",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Jason Kwon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jason Leu",
+			"roles": ["Senior Producer"]
+		},
+		{
+			"name": "Jason Messinger",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Jason Morris",
+			"roles": ["Lead Prop Artist"]
+		},
+		{
+			"name": "Jason Poss",
+			"roles": ["Main Titles Music Preparation provided by", "Main Titles Orchestration by"]
+		},
+		{
+			"name": "Jason Sampankarnpanich",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jason Stilwell",
+			"roles": ["Senior Manager, North America"]
+		},
+		{
+			"name": "Jason Teixeira Babo",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jason Thomas",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jason Throop",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Jason Torres",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jason W. Hill",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jason Weng",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Jason White",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Jason Zirpolo",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Jay Baxter",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Jay Greenham",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jay Lee",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jay Maguire",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Jay Xealous",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jean Christophe Berger",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jean-Baptiste Pennes (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Jean-Christophe Bouchet",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Jean-Claude Cipriani",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Jean-Louis Phan Tran",
+			"roles": ["French"]
+		},
+		{
+			"name": "Jean-Michel Courivaud",
+			"roles": ["Director", "Management Team, Europe"]
+		},
+		{
+			"name": "Jean-Pierre Poulain (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Jeanna Lundgren",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeff Boccuzzi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeff Carlo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeff Chamberlain",
+			"roles": ["Director/Writer"]
+		},
+		{
+			"name": "Jeff Chang",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Jeff Clausen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeff Gregory",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Jeff Hicks",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jeff Liu",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Jeff Luckman",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jeff Manners",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jeff Mears",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Jeffery Qixun Tang (CN)",
+			"roles": ["Regional Managers"]
+		},
+		{
+			"name": "Jeffrey Berube",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jeffrey Bridges",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jeffrey Gondeck",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeffrey Kaplan",
+			"roles": ["Game Director"]
+		},
+		{
+			"name": "Jeffrey Kember",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jeffrey Leonhardt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeffrey Lim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeffrey Macalino",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Jeffrey Shyy",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jeffrey Walent",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jenifer Winters",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jennifer Balch",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jennifer Brett",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jennifer Martin",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Jennifer Owings",
+			"roles": ["Associate Producer"]
+		},
+		{
+			"name": "Jennifer Powell",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jenny Towner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jens Bekemeier",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jens Fehr",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jens Fischer",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jens Fünfkirchler",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jens Kirchhoff",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeongho Kook",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeramiah Johnson",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jerardo Garcia",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeremiah Clark",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeremy Chasey",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Jeremy Chernobieff",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Jeremy Craig",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Jeremy Graves",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Jeremy Gritton",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jeremy Jacquemin",
+			"roles": ["French"]
+		},
+		{
+			"name": "Jeremy Lambertson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeremy Marshall",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jeremy Masker",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Jeremy Nelligan",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Jeremy Nelson",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jeremy Wood",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Jerimiah Bell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jerod Crespin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jerome Wu (CN)",
+			"roles": ["Community Manager"]
+		},
+		{
+			"name": "Jerry Wang (CN)",
+			"roles": ["Community Manager"]
+		},
+		{
+			"name": "Jesse Blomberg",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Jesse Gibbons",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jesse McCree",
+			"roles": ["Lead Exterior Level Designers"]
+		},
+		{
+			"name": "Jesse Perez",
+			"roles": ["Community", "Representatives"]
+		},
+		{
+			"name": "Jesse Ramazani",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jessica Barnhart",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jessica Milleville",
+			"roles": ["French"]
+		},
+		{
+			"name": "Jessica Ramirez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jessica Schleder (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Jhazmin Carnes",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jihoon Cho",
+			"roles": ["Support Tools Programmer"]
+		},
+		{
+			"name": "Jihye Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jihye Yun",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jihyun Song",
+			"roles": ["Billing Leads"]
+		},
+		{
+			"name": "Jihène Khessouma",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jim Chan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jim Jiang",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Jim Leggat",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jimin Kwon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jimmie Jaimes (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Jimmy Lo",
+			"roles": ["City/Dungeon Sub-Leads"]
+		},
+		{
+			"name": "Jimmy Truong",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jin Kim (KR)",
+			"roles": ["Regional Localization Test Leads"]
+		},
+		{
+			"name": "Jina Baek",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jinho Oh",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Jinkyu Ko (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Jinman Park",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Jino Yoo (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Jinsu Lee",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Jinsuk Park",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jinsun Park",
+			"roles": ["Training Seniors"]
+		},
+		{
+			"name": "Jisook Baek",
+			"roles": ["Web Programmers"]
+		},
+		{
+			"name": "Jisub Han",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jiwoong Kim",
+			"roles": ["Project Manager"]
+		},
+		{
+			"name": "Jiyoun Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jiyoung Chung (KR)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Jiyoung Kim",
+			"roles": ["Billing Leads"]
+		},
+		{
+			"name": "Joanna Cleland-Jolly",
+			"roles": ["Art Staff"]
+		},
+		{
+			"name": "Joanne Ingham",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jochen Stutzkeitz",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jodie Rutherford",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joe Currivan",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Joe Frayne",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Joe Magdalena",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Joe Rumsey",
+			"roles": ["Mad Scientist"]
+		},
+		{
+			"name": "Joe Shely",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Joel Clift",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Joeyray Hall",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Johan Kooijman",
+			"roles": ["English"]
+		},
+		{
+			"name": "Johannes Hilgert",
+			"roles": ["German"]
+		},
+		{
+			"name": "Johannes Läuffer",
+			"roles": ["German"]
+		},
+		{
+			"name": "John Butkus",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "John Cash",
+			"roles": ["Technical Director Emeritus"]
+		},
+		{
+			"name": "John Diers II",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Downing",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Harry De Lara",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "John Heinecke",
+			"roles": ["Global Marketing"]
+		},
+		{
+			"name": "John Herndon",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "John Hosemann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Hsieh",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "John Lafleur",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "John Lagrave",
+			"roles": ["Senior Producers"]
+		},
+		{
+			"name": "John Lanier",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Lynch",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "John Mikros",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "John Patenaude",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Petersen",
+			"roles": ["English"]
+		},
+		{
+			"name": "John Polidora",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "John Pombo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Richardson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Robertson",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "John Rodriguez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Scharmen",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "John Shin",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "John Staats",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "John Stapleton",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Steinert",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Stiles",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "John Warwicker",
+			"roles": ["English"]
+		},
+		{
+			"name": "John Wisnewski",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "John Yaney",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "John Zappulla",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Johnathan Raynor",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Johnny Ahlgren",
+			"roles": ["Billing Lead"]
+		},
+		{
+			"name": "Jon Bias",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jon Day",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jon Dvorak",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Jon Graves",
+			"roles": ["Additional Sound Editing"]
+		},
+		{
+			"name": "Jon Jelinek",
+			"roles": ["Prop Artists"]
+		},
+		{
+			"name": "Jon Kenny",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Jon Lanz",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "Jon Loeffler",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jon McConnell",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Jonas Laster",
+			"roles": ["Sound Design"]
+		},
+		{
+			"name": "Jonathan Berube",
+			"roles": ["Information Technology", "Supervisors"]
+		},
+		{
+			"name": "Jonathan Brockell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jonathan Brown",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Jonathan Douglas",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jonathan Dumont",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Jonathan Estes",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jonathan Graves",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jonathan Hall",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jonathan Hankey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jonathan Horrocks",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jonathan Hosmer",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jonathan LeCraft",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Jonathan Lydall",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jonathan Mankin",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Jonathan Mason",
+			"roles": ["Analysts", "Assistant Team Leads"]
+		},
+		{
+			"name": "Jonathan Robinson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Jonathan Throop",
+			"roles": ["QA Analysts", "Representatives"]
+		},
+		{
+			"name": "Jong Hyuk Lee (KR)",
+			"roles": ["Regional QA Managers"]
+		},
+		{
+			"name": "Jongwon Lee (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Jongwon Park",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joni Cheng",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Joohong Pan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joonbin Lee",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Joong Kim",
+			"roles": ["eSports Manager"]
+		},
+		{
+			"name": "Joonho Lee (KR)",
+			"roles": ["Regional Managers"]
+		},
+		{
+			"name": "Joonho Park",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Joowan Kim",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Jordan Rosales",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jordan Womack",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Jorge Baranda",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jorge Mata",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jose Javier Suarez Perdomo",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Joseph Cochran",
+			"roles": ["Information Technology", "Programmers"]
+		},
+		{
+			"name": "Joseph Garrett",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joseph Holley",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Joseph Hsu",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Joseph Lawrence",
+			"roles": ["Field and Foley SFX Recording", "Sound Design"]
+		},
+		{
+			"name": "Joseph Magdalena",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Joseph Ragsdale",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joseph Ransom",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Joseph Ryan",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Joseph Toaff",
+			"roles": ["English"]
+		},
+		{
+			"name": "Joseph Willett",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Josfred Poinsot",
+			"roles": ["French"]
+		},
+		{
+			"name": "Josh Berryman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Josh Black",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Josh Hilborn",
+			"roles": ["Analysts", "Programmers"]
+		},
+		{
+			"name": "Josh Portillo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Josh Thornton",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joshua Caskey",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Joshua Davis",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joshua Horst",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Joshua Owyang",
+			"roles": ["eSports"]
+		},
+		{
+			"name": "Joshua Proffitt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joshua Riggs",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joshua Ruch",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Joshua Wittge",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Joslyn Field",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "José Ignacio de Andrés (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Joy Fields",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Juan Alvarez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Juan Caria",
+			"roles": ["French"]
+		},
+		{
+			"name": "Juan José De La Torre",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Judith Zachariae",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Judson Ladd",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Juhee Seo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Julia Bedell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Julia Bruder (EU)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Julia Gastaldi",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Julia Gastaldi (EU)",
+			"roles": ["Director of Communication and Community"]
+		},
+		{
+			"name": "Julia Hopf",
+			"roles": ["German"]
+		},
+		{
+			"name": "Julia Mertens",
+			"roles": ["German"]
+		},
+		{
+			"name": "Julian Morris",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Julian Murray",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Julianna Danner",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Julie Farbaniec",
+			"roles": ["Organizational Development and Training"]
+		},
+		{
+			"name": "Julie Foster",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Julie Song (KR)",
+			"roles": ["Regional Localization Leads"]
+		},
+		{
+			"name": "Julien Benatar",
+			"roles": ["French"]
+		},
+		{
+			"name": "Julien Litrico",
+			"roles": ["French"]
+		},
+		{
+			"name": "Julien Mariani",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Julien Pillay",
+			"roles": ["French"]
+		},
+		{
+			"name": "Julien Vale",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Juliette Durand (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Julio Miranda",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Julius Beiner",
+			"roles": ["German"]
+		},
+		{
+			"name": "Jung Hwan Kim (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "JungHoon Kim",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Jungho Han",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jungho Kwon",
+			"roles": ["Director"]
+		},
+		{
+			"name": "Junghun Kwag",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Junghyun Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jungjun Lee",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jungmin Song",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Jungran Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Jungwon Hahn",
+			"roles": ["Managing Director, Korea"]
+		},
+		{
+			"name": "Jungwoo Kim",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Jungyi Roh",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Juno Kwak",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Justin Boehm",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Justin Chesser",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Justin Davey",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Justin Dye",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Justin Gann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Justin Goad",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Justin Klinchuch",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Justin Kunz",
+			"roles": ["Environment Artists"]
+		},
+		{
+			"name": "Justin Liedel",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Justin Liquorman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Justin Parker",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Justin Shade",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Justin Thavirat",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Justin Tritt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Justin Yandell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Justin Z. Bartlett",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Juyoung Oh",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Jörg Franck",
+			"roles": ["German"]
+		},
+		{
+			"name": "Kacey Yucikas",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kacy Dishon",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Kai Frankenberg",
+			"roles": ["German"]
+		},
+		{
+			"name": "Kai Moosmann (DE)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Kaleb Placek",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kangho Lee",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Kara Amendola",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Karim Adala",
+			"roles": ["French"]
+		},
+		{
+			"name": "Karin Baxter",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Kasper Giehm",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Katharina Nord",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kathrin McCain",
+			"roles": ["German"]
+		},
+		{
+			"name": "Kathryn Hyder",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Katja Raaf (DE)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Katt Jean",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kazuhito Shimada",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Kea Yonni",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Keaton Bracy",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Keith Barron",
+			"roles": ["English"]
+		},
+		{
+			"name": "Keith Boardman",
+			"roles": ["English"]
+		},
+		{
+			"name": "Keith Breach",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Keith Duncan",
+			"roles": ["Assistant Managers"]
+		},
+		{
+			"name": "Keith Ennis",
+			"roles": ["English"]
+		},
+		{
+			"name": "Keith Hall",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Keith Kanneg",
+			"roles": ["Assistant Managers"]
+		},
+		{
+			"name": "Keith Landes",
+			"roles": ["Audio Producer"]
+		},
+		{
+			"name": "Keith Meves",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Keith Rhee",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Keith Willingham",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Kelli Johnson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kelly Chun",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Kelly Lanahan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kelly Lopez",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Ken DePalo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ken Lau (CN)",
+			"roles": ["eSports Manager"]
+		},
+		{
+			"name": "Ken Tan",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Kendall Dodd",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kenneth Benedict",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kenneth Graulund",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kenneth Lim",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Kenneth Mellamphy",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kenneth Pinó (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Kenneth Rogers",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kenneth Standbridge",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kenny Carvalho",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Kenny Zigler",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Kenson Yu",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Keri Waller",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kester Robison",
+			"roles": ["Community", "Interns"]
+		},
+		{
+			"name": "Keunjeong You",
+			"roles": ["Training Seniors"]
+		},
+		{
+			"name": "Keven Dannenbring",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kevin Blanche",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kevin Carter",
+			"roles": ["QA Analysts", "Regional Marketing"]
+		},
+		{
+			"name": "Kevin Crook (Global)",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Kevin Daniels",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kevin Davis",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kevin G. Wang",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Kevin Griffith",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Kevin Johnson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kevin Jordan",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Kevin K. Griffith",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Kevin M. Kelly",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Kevin Maginnis",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Kevin O'Brien",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kevin O'Regan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kevin Vanderlaan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kevin Weaver",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Kevin Yu",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Khristopher Boulton",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kidae Kim (KR)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Kieran Hayes",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kihoon Yang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kim Chaing",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Kim Frandsen",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kim Horn (Animation)",
+			"roles": ["Production Team"]
+		},
+		{
+			"name": "Kim Jensen",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Kim Phan",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Kimberly Grimes",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kirsten Murchison",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kjell Arvid Helgeneseth",
+			"roles": ["English"]
+		},
+		{
+			"name": "Klaus Wichmand",
+			"roles": ["English"]
+		},
+		{
+			"name": "Knute Berger",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Konrad Kirchgassner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Konstantinos Markogiannakis",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kris Zierhut",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Kriste Stull",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Kristen DeMeza",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Kristen Pettey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Krister Aavikko",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kristian Koivisto Kokko",
+			"roles": ["English"]
+		},
+		{
+			"name": "Kristin Finnsson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kristina Rathburn",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Krystian Gawron",
+			"roles": ["German"]
+		},
+		{
+			"name": "Krystine Munshower",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kurt Smith",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kurtis Paddock",
+			"roles": ["Assistant Lead QA Analysts"]
+		},
+		{
+			"name": "Kwangbum Ha",
+			"roles": ["Web Programmers"]
+		},
+		{
+			"name": "Kwansoon Hwang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyle Cannon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyle Dates",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Kyle Hawkins",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyle Otsu",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyle Radue",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Kyle Riseling",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Kyle Webb",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Kyle Williams",
+			"roles": ["Assistant Manager"]
+		},
+		{
+			"name": "Kyoungjoon Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyueun Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyunghee Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyunghwa Yu",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyunghyo Kim",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Kyungin Min",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Kyungmee Kim",
+			"roles": ["Billing Leads"]
+		},
+		{
+			"name": "Kyungmin Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Kyungtae Myung",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Laetitia Planchon (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Laila Mnad",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lance Kimberlin",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Lance Powell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Landry Dugan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lara Machado (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Larissa Bussell",
+			"roles": ["Production Assistants"]
+		},
+		{
+			"name": "Lars Kuhne",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lars Peter Lohm Jensen",
+			"roles": ["English"]
+		},
+		{
+			"name": "Lars Weiler",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Laura Currie",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Laura Godfrey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Laura Grant",
+			"roles": ["Events"]
+		},
+		{
+			"name": "Laura Lam",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lauren Ortiz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Laurence Juber",
+			"roles": ["Guest Musicians"]
+		},
+		{
+			"name": "Laurent Bourcier",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Laurent Cuvier",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lawrence King",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Leah Garner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Leann Evans",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lee Ake",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lee Middleton",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Lee Sparks",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Lena Drevermann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Leo Wakelin",
+			"roles": ["English"]
+		},
+		{
+			"name": "Leonard Chang",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Leonard Grossi Jr.",
+			"roles": ["Sr. Manager, Global Staffing and Recruitment"]
+		},
+		{
+			"name": "Leonie McKewan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Leticia Sáenz (ES)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Levi Godwin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lewis Villamar",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Liam Andrew Tye",
+			"roles": ["English"]
+		},
+		{
+			"name": "Liam Knapp",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Lily Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Linus Fink",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Lisa Jensen",
+			"roles": ["Vice President of Global Public Relations"]
+		},
+		{
+			"name": "Lisa Pearce",
+			"roles": ["Global Manager, Organizational Development and Training"]
+		},
+		{
+			"name": "Lisa Pozarich",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Lloyd Moore",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lorenz Graf",
+			"roles": ["German"]
+		},
+		{
+			"name": "Lorenzo Minaca",
+			"roles": ["Analysts", "Assistant Team Leads"]
+		},
+		{
+			"name": "Louis Vincent",
+			"roles": ["French"]
+		},
+		{
+			"name": "Lucas Christophe",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Lucas Welch",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lucia Suarez Porta",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Lucien Bui",
+			"roles": ["French"]
+		},
+		{
+			"name": "Lucy Hindson",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Ludivine Le Rouge",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Luis Barriga",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Luis Gomez",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Lukas Wozniak",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Lukasz Bialk",
+			"roles": ["English"]
+		},
+		{
+			"name": "Luke Lovett",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Luke McCorkle",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Lutz Haunstein",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Lyndsi Revis",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Lynn DeVries",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Lætitia Georges (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Maarten Alexand Kuijpers",
+			"roles": ["English"]
+		},
+		{
+			"name": "Maciej Drobny",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Mads Carstens",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mads Taanquist",
+			"roles": ["English"]
+		},
+		{
+			"name": "Magalie Blaizot",
+			"roles": ["French"]
+		},
+		{
+			"name": "Maggie Xiao",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Mai Igarashi",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Makenna Mills",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Malte Maehlmann",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Mandy Lawton (EU)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Manuel Gonzales",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Marc Behar",
+			"roles": ["English"]
+		},
+		{
+			"name": "Marc Dion",
+			"roles": ["Business Development"]
+		},
+		{
+			"name": "Marc Hartmann",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marc Ho (FR)",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Marc Hutcheson",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Marc Jung",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marc Luttecke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marc Messenger",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Marc S. Olbertz (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Marc Tormo Carulla",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Marcel Haug",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marco Alemanno",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marco Baier",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Marco Golüke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marco Manig",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marco Vogt",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marcos Morin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Marcus Bishop",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Marcus Maczynski",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Marcus Ryndycz",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Marcus Schoeberl",
+			"roles": ["German"]
+		},
+		{
+			"name": "Maria Dolors Sanchez Carnice",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Maria Kokova (RU)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Maria Loy",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Maria Shurukhina (RU)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Maria Victoria Martin Briasco",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Marianne Pilote",
+			"roles": ["French"]
+		},
+		{
+			"name": "Marianne Tierney (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Marie Cabot (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Marie-Hélène Atienz",
+			"roles": ["Technical and Billing Support Manager"]
+		},
+		{
+			"name": "Marije Korver (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Marijke Vanhees",
+			"roles": ["English"]
+		},
+		{
+			"name": "Mario Berndt",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Mario De Rienzo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mario Janus",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Marion Wacker",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marion Weißenborn",
+			"roles": ["German"]
+		},
+		{
+			"name": "Marios Aziz",
+			"roles": ["Account Services Seniors"]
+		},
+		{
+			"name": "Marius Jivan",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Mariusz Leszczynski",
+			"roles": ["English"]
+		},
+		{
+			"name": "Mark Almeida",
+			"roles": ["Vice President of Global Finance"]
+		},
+		{
+			"name": "Mark Clements",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Mark Furniss",
+			"roles": ["English"]
+		},
+		{
+			"name": "Mark Gibbons",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Mark Hamm",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mark Kamimoto",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Mark Klang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mark Lai",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Mark Moser",
+			"roles": ["Regional QA Managers"]
+		},
+		{
+			"name": "Mark Muncy",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Mark Nash (EU)",
+			"roles": ["Operations"]
+		},
+		{
+			"name": "Mark Nelson",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Mark Sison",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Mark Slater",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mark Stanners",
+			"roles": ["English"]
+		},
+		{
+			"name": "Marko Kylmamaa",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Markus Burks",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Markus Graffe",
+			"roles": ["German"]
+		},
+		{
+			"name": "Markus Jorissen",
+			"roles": ["German"]
+		},
+		{
+			"name": "Markus Kaldenbach",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Markus Kintrup",
+			"roles": ["German"]
+		},
+		{
+			"name": "Markus Kraus",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Markus Schill",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Marlène Cervantes",
+			"roles": ["Coordinator"]
+		},
+		{
+			"name": "Martin Anthony Colling",
+			"roles": ["English"]
+		},
+		{
+			"name": "Martin Dammers",
+			"roles": ["German"]
+		},
+		{
+			"name": "Martin Doll",
+			"roles": ["German"]
+		},
+		{
+			"name": "Martin Franz",
+			"roles": ["German"]
+		},
+		{
+			"name": "Martin Gunderse Vea",
+			"roles": ["English"]
+		},
+		{
+			"name": "Martin Jagla",
+			"roles": ["German"]
+		},
+		{
+			"name": "Martin Langsted",
+			"roles": ["English"]
+		},
+		{
+			"name": "Martin Leidenfrost",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Martin Leipold",
+			"roles": ["German"]
+		},
+		{
+			"name": "Martin Machovec",
+			"roles": ["English"]
+		},
+		{
+			"name": "Martin Mason",
+			"roles": ["English"]
+		},
+		{
+			"name": "Martin Tegner",
+			"roles": ["Documentation team"]
+		},
+		{
+			"name": "Marty Tande",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mary Sides",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mary Yellott",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mataio Wilson",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Mathew Kishimoto",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mathew Smiley",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Mathias Gabel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mathias Ortner",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mathias Pelz",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mathias Verhasselt",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Mathieu Chauvin",
+			"roles": ["Software Team Lead"]
+		},
+		{
+			"name": "Mathieu Laugle",
+			"roles": ["French"]
+		},
+		{
+			"name": "Mathieu Laurent",
+			"roles": ["French"]
+		},
+		{
+			"name": "Mathieu Orjebin",
+			"roles": ["French"]
+		},
+		{
+			"name": "Matt Burns",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matt Carcel",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Matt Coburn",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Matt Fitzgerald",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matt Kenemore",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matt M. Patterson",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Matt Samia",
+			"roles": ["Senior Director of Cinematics"]
+		},
+		{
+			"name": "Matt Stratford",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matt Wheeler",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "Matt Worcester",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Matteo Spataro",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Matthew Adams",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "Matthew Barrett",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Matthew D. Sherman",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Matthew Eagleson",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Matthew Frisch",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew Hawley",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Matthew Jones",
+			"roles": ["English"]
+		},
+		{
+			"name": "Matthew Jordan",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Matthew Kuhn",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew Lucero",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew Martin",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Matthew McEligot",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Matthew McKee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew Mead",
+			"roles": ["Artists", "Editor"]
+		},
+		{
+			"name": "Matthew Neumann",
+			"roles": ["English"]
+		},
+		{
+			"name": "Matthew Panepinto",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Matthew Rader",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew S. Sherman",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Matthew Simmons",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew Spence",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Matthew Versluys",
+			"roles": ["Battle.net Lead"]
+		},
+		{
+			"name": "Matthew Vineyard",
+			"roles": ["Billing Leads"]
+		},
+		{
+			"name": "Matthias Butter",
+			"roles": ["German"]
+		},
+		{
+			"name": "Matthias Kiesel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Matthias Koch",
+			"roles": ["German"]
+		},
+		{
+			"name": "Matthias Labitzke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Matthijs Jansen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mauricio Hoffman",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Max Kreisel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Max McDuffee-Smith",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Max Peters",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Max Thompson",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Maxim Mizin (RU)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Maxime Berjot",
+			"roles": ["French"]
+		},
+		{
+			"name": "Maxime Ledonge",
+			"roles": ["French"]
+		},
+		{
+			"name": "Maximilian Weber",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Megan Puertas",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Meghan Dawson",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Mei Dean Francis",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Mei Frank Buckle",
+			"roles": ["English"]
+		},
+		{
+			"name": "Melinda Williams",
+			"roles": ["Administration"]
+		},
+		{
+			"name": "Melissa Meyer",
+			"roles": ["Senior Producer"]
+		},
+		{
+			"name": "Melissa Moloney (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Melissa Ullrich",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Micah Caldwell",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Micah L Wilson",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "Micah Whipple",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Michael Alcorn",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Michael Archuleta",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Arleth Pedersen",
+			"roles": ["English"]
+		},
+		{
+			"name": "Michael Aversa",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Beal",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Michael Belrose",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Bernal",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Billman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Blumenthal",
+			"roles": ["German"]
+		},
+		{
+			"name": "Michael Broek",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Michael Burghart",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Michael C. Chen",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Michael Caron",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Michael Chauvet",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Chizewski",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Michael Corpora",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Michael Dinger",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael F. Schweitzer",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Michael Fong",
+			"roles": ["Managing Director, Greater China"]
+		},
+		{
+			"name": "Michael Gilmartin",
+			"roles": ["Director"]
+		},
+		{
+			"name": "Michael Graham",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Guy Ferguson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Hardison",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Michael Heffernan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Michael Hershberg",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Michael Hoffmann",
+			"roles": ["German"]
+		},
+		{
+			"name": "Michael Horning",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Kanneg",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Michael Khoo",
+			"roles": ["English"]
+		},
+		{
+			"name": "Michael Lawrence",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Michael Lenton",
+			"roles": ["English"]
+		},
+		{
+			"name": "Michael Lueth",
+			"roles": ["German"]
+		},
+		{
+			"name": "Michael Lukenbill",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael McInerney",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Michael Mulen",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Michael Mumford",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Murphy",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Michael Nassar",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Michael Nguyen",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Michael Nichols",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Pauli",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Pepper",
+			"roles": ["English"]
+		},
+		{
+			"name": "Michael Pereira",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Michael Pierce",
+			"roles": ["International Manager"]
+		},
+		{
+			"name": "Michael Pietrucha",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Pinder",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Powell",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Michael Radnitz",
+			"roles": ["German"]
+		},
+		{
+			"name": "Michael Radnitz (DE)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Michael Ryder",
+			"roles": ["Vice President and Executive Managing Director, International Operations"]
+		},
+		{
+			"name": "Michael Sacco",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Sassone",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Michael Schaefer",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Michael Schneider",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Michael Schwan Jr.",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Michael Seppala",
+			"roles": ["English"]
+		},
+		{
+			"name": "Michael Srithapin",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Michael Starich",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Michael Stum",
+			"roles": ["Documentation team"]
+		},
+		{
+			"name": "Michael Su",
+			"roles": ["Project Management"]
+		},
+		{
+			"name": "Michael Sun",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Michael Triglia",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael Trotzuk",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michael V. Liu",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Michele Arko",
+			"roles": ["Purchasing"]
+		},
+		{
+			"name": "Michelle Coltrin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michelle Kolano",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Michelle Secrest",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Michèle Bérot",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Mickaël Bohin",
+			"roles": ["French"]
+		},
+		{
+			"name": "Mickey Molad",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Micky Neilson",
+			"roles": ["Voice Direction"]
+		},
+		{
+			"name": "Miguel Budesca Dykes",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Miguel Garcia Gomez",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Miguel Izquierdo",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Mihyun Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mike Bannon",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Mike Bybee",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Mike Elliott",
+			"roles": ["Technical Director"]
+		},
+		{
+			"name": "Mike Euiseung Kim (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Mike Hein",
+			"roles": ["Web Team Leads"]
+		},
+		{
+			"name": "Mike Kelleher",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "Mike Kramer",
+			"roles": ["Studio Technical Engineers"]
+		},
+		{
+			"name": "Mike Lim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mike Lütjens",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mike Moneymaker",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Mike Morhaime",
+			"roles": ["President and CEO of Blizzard Entertainment"]
+		},
+		{
+			"name": "Mike Munson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mike Pearce",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Mike Piepenstock",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mike Reardon",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Mikhail Shiryaev",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Miles Trumble",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Min Yang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Minh Nhat Nguyen",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Minhong Kim",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Minhyouk Pack",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Minjin Lee (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Minkyu Park",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Minkyung Cho",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Minseok Seo",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Mirko Bayer",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Mitch Lowery",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Mitchell Saenz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Monte Krol",
+			"roles": ["Lead Tools Programmer"]
+		},
+		{
+			"name": "Monty Yeates",
+			"roles": ["English"]
+		},
+		{
+			"name": "Moonsung Lee",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Moonyoung Baik",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Morgan Day",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Moritz Müller",
+			"roles": ["German"]
+		},
+		{
+			"name": "Mourad Kaci",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Myeonghun Choi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Myoungjin Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Namsuk Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nate Gross",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Nate Shapiro",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Nathan Brown",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nathan Crislip",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nathan Johnson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nathan LaMusga",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Nathan Wee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Navid Akbari",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Neal Acree",
+			"roles": ["Cinematic Intro Music"]
+		},
+		{
+			"name": "Neal Hubbard",
+			"roles": ["Senior Vice President of Global Marketing"]
+		},
+		{
+			"name": "Neal Kingston",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Neal Kochhar",
+			"roles": ["QA Analysts", "Representatives"]
+		},
+		{
+			"name": "Neal Wojahn",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Neil Anderson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Neil Banks",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Neil Chopra",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Neil Whelan",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Neil de Soto",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nelson Wang",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Nicholas Bialostosky",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicholas Downs",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Nicholas Hill",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Nicholas Hunter",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicholas Louie",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Nicholas Mennen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicholas Pisani",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Nicholas Ray",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Nicholas Rivera",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Nicholas Smith",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicholas Stallings",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Nicholas Vineyard",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Nick Betteker",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Nick Blokker",
+			"roles": ["English"]
+		},
+		{
+			"name": "Nick Carpenter",
+			"roles": ["Creative Director"]
+		},
+		{
+			"name": "Nick Frame",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nick Hamm",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nick Solano",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nico Roos",
+			"roles": ["German"]
+		},
+		{
+			"name": "Nicola Booyens",
+			"roles": ["English"]
+		},
+		{
+			"name": "Nicola Creedon",
+			"roles": ["English"]
+		},
+		{
+			"name": "Nicolaj Adriansen",
+			"roles": ["English"]
+		},
+		{
+			"name": "Nicolas Goulard",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Nicolas Guion (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Nicolas Harding",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicolas Hodapp",
+			"roles": ["German"]
+		},
+		{
+			"name": "Nicolas Noble",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Nicolas Passemard",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Nicolas Pruvost",
+			"roles": ["French"]
+		},
+		{
+			"name": "Nicole Lorenz (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Nicole Watkins",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicole Yandell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Nicolette Martinez",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Nik Gianozakos",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Niklas Lingsell",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Nikolay Bytskevich (RU)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Nils Berggren",
+			"roles": ["English"]
+		},
+		{
+			"name": "Nils Matern",
+			"roles": ["German"]
+		},
+		{
+			"name": "Nils Odlund",
+			"roles": ["English"]
+		},
+		{
+			"name": "Nina Kroner",
+			"roles": ["German"]
+		},
+		{
+			"name": "Noel Wolfman (Dev)",
+			"roles": ["Production Team"]
+		},
+		{
+			"name": "Noemi Cugudda",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Norman Harms",
+			"roles": ["Battle.net Research Analysts"]
+		},
+		{
+			"name": "Oana Dumitrache",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ockkyoung Leem",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Olaf Wendorff",
+			"roles": ["German"]
+		},
+		{
+			"name": "Olam Ng",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Oliver Danckers",
+			"roles": ["German"]
+		},
+		{
+			"name": "Oliver Kurth",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Oliver Lam",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Oliver Lockyer",
+			"roles": ["English"]
+		},
+		{
+			"name": "Oliver Lorek",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Oliver Lötscher",
+			"roles": ["German"]
+		},
+		{
+			"name": "Oliver Moore",
+			"roles": ["English"]
+		},
+		{
+			"name": "Olivia Quintanilla",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Olivier Grassini",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Olivier Martel",
+			"roles": ["French"]
+		},
+		{
+			"name": "Olivier Mouvet",
+			"roles": ["English", "French"]
+		},
+		{
+			"name": "Olli Oja",
+			"roles": ["English"]
+		},
+		{
+			"name": "Omar Gonzalez",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Oskari Turkia",
+			"roles": ["English"]
+		},
+		{
+			"name": "Owen Landgren",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Oyvind Sorensen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Pablo Lloreda (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Pablo Martín Siota (DE)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Page Evans",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Pascale Roncin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Pascaline Jibert",
+			"roles": ["French"]
+		},
+		{
+			"name": "Pat Feinauer",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Pat MacKellar",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Pat Nagle",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Patric Stolpe",
+			"roles": ["German"]
+		},
+		{
+			"name": "Patricia Jennings",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Patricia May",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Patrick André Seidler",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Patrick Bohrer",
+			"roles": ["German"]
+		},
+		{
+			"name": "Patrick Dawson",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Patrick Dekoepper",
+			"roles": ["German"]
+		},
+		{
+			"name": "Patrick Deschamps",
+			"roles": ["English"]
+		},
+		{
+			"name": "Patrick Dillon",
+			"roles": ["Licensing"]
+		},
+		{
+			"name": "Patrick Doane",
+			"roles": ["Lead Engine Programmer"]
+		},
+		{
+			"name": "Patrick Dunford",
+			"roles": ["English"]
+		},
+		{
+			"name": "Patrick Evans",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Patrick Fitzgerald",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Patrick Happel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Patrick Knoll",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Patrick Lee",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Patrick Lorenz",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Patrick Magruder",
+			"roles": ["Lead Gameplay Programmers"]
+		},
+		{
+			"name": "Patrick Metzger",
+			"roles": ["German"]
+		},
+		{
+			"name": "Patrick Nagel",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Patrick Pulfer",
+			"roles": ["German"]
+		},
+		{
+			"name": "Patrick Rusche",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Patrik Svantes",
+			"roles": ["English"]
+		},
+		{
+			"name": "Paul Carver",
+			"roles": ["Lead QA Analyst"]
+		},
+		{
+			"name": "Paul Cazarez",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Paul Cox",
+			"roles": ["English"]
+		},
+		{
+			"name": "Paul Della Bitta",
+			"roles": ["Senior Manager, Global Community and eSPORTS"]
+		},
+		{
+			"name": "Paul Dowling",
+			"roles": ["Business Development"]
+		},
+		{
+			"name": "Paul Finn",
+			"roles": ["English"]
+		},
+		{
+			"name": "Paul Halliwell",
+			"roles": ["English"]
+		},
+		{
+			"name": "Paul Horrel",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Paul Kubit",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Paul Lara",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Paul Mazu",
+			"roles": ["German"]
+		},
+		{
+			"name": "Paul Menichini",
+			"roles": ["Cinematic Intro Sound Designers"]
+		},
+		{
+			"name": "Paul O'Neill",
+			"roles": ["English"]
+		},
+		{
+			"name": "Paul Oltmanns",
+			"roles": ["Account Services Seniors"]
+		},
+		{
+			"name": "Paul Sams",
+			"roles": ["Chief Operating Officer"]
+		},
+		{
+			"name": "Paul Sardis",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Pauline Hammelet (EU)",
+			"roles": ["Events"]
+		},
+		{
+			"name": "Paulino Diaz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Paulo Santos",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Pawel Zukowski",
+			"roles": ["English"]
+		},
+		{
+			"name": "Pedro Eustache",
+			"roles": ["Guest Musicians"]
+		},
+		{
+			"name": "Pedro Moreno Garcia",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Peiji Guo",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Pelle Lingsell",
+			"roles": ["English"]
+		},
+		{
+			"name": "Per Antonsson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Pete Sandrene",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Pete Staley",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Peter C. Lee",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Peter Cormack",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Peter DeSalvo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Peter Drummond",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Peter Fivelstad",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Peter Guibert (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Peter Hadaszi",
+			"roles": ["English"]
+		},
+		{
+			"name": "Peter Hsu",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Peter Mc Donald",
+			"roles": ["English"]
+		},
+		{
+			"name": "Peter Nott",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Peter Rothlisberger",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Peter Schneider (DE)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Peter Shinners",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Peter Starostin",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Peter Swigut",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Peter Ty",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Peter Wetzel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Philip Doogan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Philip Kerins",
+			"roles": ["English"]
+		},
+		{
+			"name": "Philip Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Philip Saloga",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Philip Thiede",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Philippe Miguet",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Philippe Motheron",
+			"roles": ["French"]
+		},
+		{
+			"name": "Philippe Peeters",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Philippe Prince",
+			"roles": ["French"]
+		},
+		{
+			"name": "Phillip Hillenbrand",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Pierre Braude",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Pierre Marc Arnaud",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Pierre Nicolas Moreau",
+			"roles": ["French"]
+		},
+		{
+			"name": "Pierre Passet",
+			"roles": ["English"]
+		},
+		{
+			"name": "Pierre Rosenthal",
+			"roles": ["Web Editorial Team Leads"]
+		},
+		{
+			"name": "Pietro Gobbato",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Pior Oberson",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Preston Roberts",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Prune Moldawan",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Qi Ming Chen",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Qimin Ding",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "R. Blaine Whittle",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "RPM Seattle Music Preparation",
+			"roles": ["Main Titles Music Preparation provided by"]
+		},
+		{
+			"name": "Rachel James",
+			"roles": ["English"]
+		},
+		{
+			"name": "Rachel Perey",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Rafael Raudry",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Raik Patze",
+			"roles": ["German"]
+		},
+		{
+			"name": "Rainer Mayer",
+			"roles": ["Producer"]
+		},
+		{
+			"name": "Rameses Arias",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ramiro Ascencio",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ramon Hermann (EU)",
+			"roles": ["Community Manager"]
+		},
+		{
+			"name": "Ramon Navarro",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ramon Rodriguez",
+			"roles": ["Studio Technical Engineers"]
+		},
+		{
+			"name": "Randal Dumoret",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Randall Ward",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Randy Coffman",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Randy Lovin",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Raul Burgos Mayer",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Raul Romero Fuentes",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Raven DeLara",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Ray Laubach",
+			"roles": ["Analysts", "Mastering Technician"]
+		},
+		{
+			"name": "Raymond Donaldson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Reagan Duggan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Recorded by the Northwest Sinfonia and Chorus",
+			"roles": ["Cinematic Intro and Main Title Music"]
+		},
+		{
+			"name": "Recording Engineer – John Adair",
+			"roles": ["Voice Casting and Recording"]
+		},
+		{
+			"name": "Regina Ramirez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ren Kikuchi",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Renato Yoon",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Rene Langhans",
+			"roles": ["German"]
+		},
+		{
+			"name": "René Koiter",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Reo Prendergast",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Rhett \"Stash\" Torgoley",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Rian Trost",
+			"roles": ["Assistant Lead QA Analysts"]
+		},
+		{
+			"name": "Ricardo Aranguren Gassis",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Ricardo Biriba",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Ricardo Duran (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Richard Barham",
+			"roles": ["Assistant Managers"]
+		},
+		{
+			"name": "Richard Bartram",
+			"roles": ["English"]
+		},
+		{
+			"name": "Richard Bennett",
+			"roles": ["English"]
+		},
+		{
+			"name": "Richard Choi",
+			"roles": ["Director"]
+		},
+		{
+			"name": "Richard Dievendorff",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Richard Eggleston",
+			"roles": ["QC Training Lead"]
+		},
+		{
+			"name": "Richard Evans",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Richard Hardy",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Richard Kwon",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Richard Mark Honeywood",
+			"roles": ["Global Manager"]
+		},
+		{
+			"name": "Richard Mc Keon",
+			"roles": ["English"]
+		},
+		{
+			"name": "Richard Nicholls",
+			"roles": ["English"]
+		},
+		{
+			"name": "Richard Robinson",
+			"roles": ["French"]
+		},
+		{
+			"name": "Richard Romasanta",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Richard Segers",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Richard Varga",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Richie Kharrat",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Rick Kennedy",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Rick Spears",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Rie Arai",
+			"roles": ["Team Leads"]
+		},
+		{
+			"name": "Rinaldo Andreolli",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Rob Barris",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "Rob Kuczynski",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Rob Pardo",
+			"roles": ["Executive Vice President, Game Design"]
+		},
+		{
+			"name": "Rob Rivera",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Robert Allan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robert Ashby",
+			"roles": ["Ireland Site Manager"]
+		},
+		{
+			"name": "Robert Belleville",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Bland",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robert Boxeth",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Robert Bridenbecker",
+			"roles": ["Vice President of Online Technologies"]
+		},
+		{
+			"name": "Robert Busch",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Robert Bustamante",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Robert Dale",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robert Foote",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Robert Groeneveld",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Robert Henson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Hoff",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Holloway",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robert Kezar",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Robert Laws",
+			"roles": ["QA Analysts", "Representatives"]
+		},
+		{
+			"name": "Robert Lin",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Robert Lundgren",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Martin",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Robert Mathews",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robert McBride",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert McCollum",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Meyer Jr.",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Robert Perugini",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Robert Pionke",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Robert Sevilla",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Robert Spann",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Van Dusen",
+			"roles": ["Global Director"]
+		},
+		{
+			"name": "Robert Warner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Robert Webb",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Robin Berquet",
+			"roles": ["French"]
+		},
+		{
+			"name": "Robin Blackborow",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robin Graf",
+			"roles": ["German"]
+		},
+		{
+			"name": "Robin High",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robin Höse",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Robin Johansson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Robin Zhu",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Rod Rigole (Global)",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Rodney Tsing",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Roland Ayliffe",
+			"roles": ["English"]
+		},
+		{
+			"name": "Romain Dijoux",
+			"roles": ["Web Editorial Team"]
+		},
+		{
+			"name": "Romain Joffre",
+			"roles": ["French"]
+		},
+		{
+			"name": "Romain Mardot",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Romain Wuillaume",
+			"roles": ["French"]
+		},
+		{
+			"name": "Roman Häusler",
+			"roles": ["German"]
+		},
+		{
+			"name": "Roman Kenney",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Roman Voce Marotte",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Ron Beaty",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ron Nakada",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Ronda Melendez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ronnie Hansson",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Ronny Kim",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Ronny Yoon",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Rory Wood",
+			"roles": ["Billing Leads"]
+		},
+		{
+			"name": "Rosie Haubner",
+			"roles": ["Organizational Development and Training"]
+		},
+		{
+			"name": "Ruben Holen",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Ruben Jasso",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Rubén López (ES)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Russel Nilsson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Russell Bernau",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Russell Brower",
+			"roles": ["Director", "Main Titles Orchestration by", "Music"]
+		},
+		{
+			"name": "Ruth Kolbeck",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Rutherford Gong",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Ryan A. Pearson",
+			"roles": ["Artist"]
+		},
+		{
+			"name": "Ryan Belanger",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ryan Campbell",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ryan Dean",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Ryan Foreman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ryan Fowler",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ryan Gunst",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Ryan Karg",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Ryan Meier",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Ryan Mills",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Ryan Peach",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ryan Quinn",
+			"roles": ["Assistant Manager"]
+		},
+		{
+			"name": "Ryan Reddick",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Ryan Schenk",
+			"roles": ["Administration"]
+		},
+		{
+			"name": "Ryan Steinhoff",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ryan Treadwell",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Ryan Vowler",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Ryan Zapanta",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Rémi Aumeunier",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Rémi Le Thery",
+			"roles": ["French"]
+		},
+		{
+			"name": "Sada Namiki",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Sal Arditti",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Sam Carne",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sam Didier",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Sam Holder",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sam Hunt",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sam Lantinga",
+			"roles": ["Lead Gameplay Programmers"]
+		},
+		{
+			"name": "Sam Park",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Samuel Schrimsher",
+			"roles": ["Facilities"]
+		},
+		{
+			"name": "Sandor Dobsa",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sandra Heide",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sandra Milena Alarcon Ruiz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sandra Ragot",
+			"roles": ["French"]
+		},
+		{
+			"name": "Sandra Raum",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sandra Wernicke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sanghak Jeon (KR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Sangwook Kim",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Sangyong Park",
+			"roles": ["Support Tools Lead"]
+		},
+		{
+			"name": "Sanja Peric",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Sanjay Shinh",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sanna Hanskala",
+			"roles": ["English"]
+		},
+		{
+			"name": "Santiago Baranda",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Sanu Satheesababu",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sara Gissot (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Sara Hernandez-Land",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sara Holliday",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sarah Boulian",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Sarah Brady",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sarah Doebler",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Sarah Tucker",
+			"roles": ["Business Development"]
+		},
+		{
+			"name": "Sascha Giese",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Sascha Leopold",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sascha Schneider",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sascha Szopko",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sasha Sydoruk",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Satoru Hamadam (EU)",
+			"roles": ["Legal"]
+		},
+		{
+			"name": "Scott Abeyta",
+			"roles": ["Lead Producer"]
+		},
+		{
+			"name": "Scott Army",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Scott Busbea",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Scott Campbell",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Scott Gordon",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Scott Harrison",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Scott Hartin",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Scott Kane",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Scott Keenan",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Scott Koller",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Scott Lange",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Scott Mercer",
+			"roles": ["Lead Encounter Designer"]
+		},
+		{
+			"name": "Sean Baade",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sean Copeland",
+			"roles": ["Historians"]
+		},
+		{
+			"name": "Sean Laverty",
+			"roles": ["Information Technology", "Studio Technical Engineers"]
+		},
+		{
+			"name": "Sean Lyons",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sean Masterson",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Sean McCrea",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Sean O'Neil",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Sean Quinlan",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sean Salazar",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sean Wang",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Sebastiaan Van Doornspeek",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Sebastian Beer",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sebastian Delascurain",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sebastian Ewald (DE)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Sebastian Kolodzik",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sebastian Magnus",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sebastian Mottschall",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sebastian Oldenettel",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sebastian Oliva",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sebastian Ranta",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sebastian Roth",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sebastien Hoareau",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Sebastien Leterrier",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Sehwa An",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Sejin Choi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seolhee Cho",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seonghak Jung",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Seongjung Kim (KR)",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Seonmean Kim",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Seoyeon Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Serban Oprescu",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Serge Olivier",
+			"roles": ["Documentation team"]
+		},
+		{
+			"name": "Serge Pincon",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Sergi Berjano",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Sergio Porres",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Sergio Vitaliti (EU)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Seth Lindner",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seth Nesenholtz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seth Thompson",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Seunggook Yang (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Seungho Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seunghoon Baeg",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seunghyuk Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seungki Choi",
+			"roles": ["Web Lead"]
+		},
+		{
+			"name": "Seungkyu Han",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Seungsoo Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Seyong (Simon) Lee",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Shaina Ludwin",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Shane Cargilo",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Shane Dabiri",
+			"roles": ["Additional Production"]
+		},
+		{
+			"name": "Shannon McCartney",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Shannon Meadors",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shant Soghomonian",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shaun Hawkins",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shaun Ingram",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shaun Kuschel",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shaun Potts",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shaun Smiley",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Shawn Benson",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Shawn Carnes",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Shawn Munro",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shawn No",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Shawn Su",
+			"roles": ["Regional Assistant QA Managers"]
+		},
+		{
+			"name": "Shay Pressler",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Sheila Perez",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sheng Jin",
+			"roles": ["Artists", "Leads"]
+		},
+		{
+			"name": "Shien Chang",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Shimon Cohen",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Shinyong Ha (KR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Shon Damron",
+			"roles": ["Managers"]
+		},
+		{
+			"name": "Shon-Ting Fu (CN)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Shoshanna Rubin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sigurd Bengtson Borge",
+			"roles": ["English"]
+		},
+		{
+			"name": "Silvio Clausen",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Silvio Geisenhainer",
+			"roles": ["German"]
+		},
+		{
+			"name": "Simon Parment",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sinhee Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Siri Ellefsen Selvnes",
+			"roles": ["English"]
+		},
+		{
+			"name": "Sjir Bagmeijer",
+			"roles": ["English"]
+		},
+		{
+			"name": "Slim Ghariani",
+			"roles": ["Special Effects Artist"]
+		},
+		{
+			"name": "Sofia Vale Cruz",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Sojung Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sonja Göden",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sonja Köck",
+			"roles": ["German"]
+		},
+		{
+			"name": "Soo Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Soohye Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sooil Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sookhee Bae",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sophie Bellegarde",
+			"roles": ["Leads"]
+		},
+		{
+			"name": "Soren Kirkager",
+			"roles": ["English"]
+		},
+		{
+			"name": "Soufyane Brahimi",
+			"roles": ["French"]
+		},
+		{
+			"name": "Sowon Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Spencer Aitken",
+			"roles": ["Representatives", "Support Seniors"]
+		},
+		{
+			"name": "Stan Wang",
+			"roles": ["Additional Production"]
+		},
+		{
+			"name": "Stanley Fu",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Steeg Haskell",
+			"roles": ["Supervisors"]
+		},
+		{
+			"name": "Stefan Bahr",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stefan Böhme",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stefan Christ",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stefan Duffner-Hansmann",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stefan Frei",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stefan Krannich",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stefan Mai",
+			"roles": ["QC Lead"]
+		},
+		{
+			"name": "Stefan Mark",
+			"roles": ["English"]
+		},
+		{
+			"name": "Stefan Modh",
+			"roles": ["English"]
+		},
+		{
+			"name": "Stefan Mohler",
+			"roles": ["Battle.net Programmers"]
+		},
+		{
+			"name": "Stefan Mond",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stefan Schmitt (DE)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Stefan Thompson",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Stefan Ward",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Stefan-Marcus Peter",
+			"roles": ["German"]
+		},
+		{
+			"name": "Steffen Gutzeit",
+			"roles": ["German"]
+		},
+		{
+			"name": "Steffen Reinke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Steffen Zietz",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stephan Cosgrove",
+			"roles": ["English"]
+		},
+		{
+			"name": "Stephan Einecke",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stephan Marek",
+			"roles": ["German"]
+		},
+		{
+			"name": "Stephan Wolf",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stephane Perroud",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Stephanie Johnson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stephanie Krutsick",
+			"roles": ["Representatives", "Support Seniors"]
+		},
+		{
+			"name": "Stephen Alvarado",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stephen Buitron",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stephen Chang",
+			"roles": ["eSports"]
+		},
+		{
+			"name": "Stephen Clarkson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stephen Grantham",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Stephen Nees",
+			"roles": ["Support Tools Lead"]
+		},
+		{
+			"name": "Stephen O'Donnell",
+			"roles": ["English"]
+		},
+		{
+			"name": "Stephen Robinson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stephen Stanley",
+			"roles": ["English"]
+		},
+		{
+			"name": "Stephen Tadman",
+			"roles": ["English"]
+		},
+		{
+			"name": "Stephen Thomas",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Stephen Whiting",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Steve Aguilar",
+			"roles": ["Lead Animator"]
+		},
+		{
+			"name": "Steve Allen",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Steve Burke",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Steve Crow",
+			"roles": ["City/Dungeon Artists"]
+		},
+		{
+			"name": "Steve Hui",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Steve Martens",
+			"roles": ["German"]
+		},
+		{
+			"name": "Steve McGarrity",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Steve McIlwain (Finishing)",
+			"roles": ["Production Team"]
+		},
+		{
+			"name": "Steve Parker",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Steve Stafford",
+			"roles": ["Facilities"]
+		},
+		{
+			"name": "Steven Apodaca",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Steven Chen",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Steven Dwyer",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Steven Gabriel",
+			"roles": ["Mobile Team"]
+		},
+		{
+			"name": "Steven Nabours",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Steven Park",
+			"roles": ["Librarian"]
+		},
+		{
+			"name": "Steven Paton",
+			"roles": ["English"]
+		},
+		{
+			"name": "Steven Pereyda",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Steven Price",
+			"roles": ["Business Development"]
+		},
+		{
+			"name": "Steven Swickard",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Steven Walker",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Steven Whitaker",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Steven Worcester",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stian Skjondal",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Stuart Massie",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Stuart White",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Stéphane Lam",
+			"roles": ["French"]
+		},
+		{
+			"name": "Suhyun Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sujhon Jhong",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sukil Jo",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sumer Ortiz",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Sumi Jeong",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sungho Eom",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Sungjoon Lee",
+			"roles": ["Technical Support Seniors"]
+		},
+		{
+			"name": "Sungju Yu",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sungpyo Hong",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sunmin Lim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Sunna Kim (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Sunshine Saint Onge",
+			"roles": ["Recruitment"]
+		},
+		{
+			"name": "Sunshine Toledo",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Sunyoung Ham (KR)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Sven Jost",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sven Kruse",
+			"roles": ["German"]
+		},
+		{
+			"name": "Sverre Rasmussen",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Sylvain Enjalbert",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Sylvan Lynn",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Sébastien Musquin",
+			"roles": ["French"]
+		},
+		{
+			"name": "Sébastien Pusset",
+			"roles": ["French"]
+		},
+		{
+			"name": "Sören Geier",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Sören Klein",
+			"roles": ["German"]
+		},
+		{
+			"name": "Taehee Kang",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Taka Yasuda",
+			"roles": ["Additional Production"]
+		},
+		{
+			"name": "Tamra Morgan",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Tanya Wall",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Taylor Smith",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Taylor Westfall",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Ted Louie",
+			"roles": ["Assistant Manager"]
+		},
+		{
+			"name": "Ted Wang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Teddy Pao",
+			"roles": ["Support Tools Programmers"]
+		},
+		{
+			"name": "Terence Lindsey",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Terran Gregory",
+			"roles": ["Editor Staff"]
+		},
+		{
+			"name": "Terrie Denman",
+			"roles": ["Prop Artists"]
+		},
+		{
+			"name": "Terry Phelps",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Theodore Gegoux",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Theresa Wolf",
+			"roles": ["Technical Writer"]
+		},
+		{
+			"name": "Thi Nguyen",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Thibaud Bertin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thierry Sudan",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Thomas Blue",
+			"roles": ["Lead Technical Artist"]
+		},
+		{
+			"name": "Thomas Boertien",
+			"roles": ["English"]
+		},
+		{
+			"name": "Thomas Chabrier (FR)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Thomas Chartrain",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Thomas Farrell",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Thomas Flöter (DE)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Thomas Goodwin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thomas Hemingway",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Thomas Hendricks",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thomas Jauneault",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Thomas Johnsen (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Thomas Küppers",
+			"roles": ["German"]
+		},
+		{
+			"name": "Thomas L. Hicks",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Thomas Lenglet",
+			"roles": ["Account Services Lead"]
+		},
+		{
+			"name": "Thomas Long",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thomas Marquardt",
+			"roles": ["German"]
+		},
+		{
+			"name": "Thomas Marx",
+			"roles": ["German"]
+		},
+		{
+			"name": "Thomas Pieracci",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Thomas Röthemeyer",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Thomas Schoeneburg",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thomas Van Scyoc",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thomas Watson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Thomas Yip",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Thomas Zimmer",
+			"roles": ["German"]
+		},
+		{
+			"name": "Thomas-Christian Endres",
+			"roles": ["German"]
+		},
+		{
+			"name": "Thommy Jerneskorg",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Thor Biafore",
+			"roles": ["Director"]
+		},
+		{
+			"name": "Tiffany Sirignano",
+			"roles": ["Prop Artists"]
+		},
+		{
+			"name": "Tim Campbell",
+			"roles": ["Curator"]
+		},
+		{
+			"name": "Tim Daniels",
+			"roles": ["Additional Writing", "QA Analysts"]
+		},
+		{
+			"name": "Tim Denke",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tim Evans",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tim Feldman",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Tim Jones",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Tim Laufenberg",
+			"roles": ["German"]
+		},
+		{
+			"name": "Tim Maggio",
+			"roles": ["Billing Seniors"]
+		},
+		{
+			"name": "Tim Vo",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Tim Voris",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Timothy Hardy",
+			"roles": ["Facilities"]
+		},
+		{
+			"name": "Timothy Ismay",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Timothy McBride",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Timothy Preston",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Timothy Shroat",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Timothy Tash",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Timur Kocaurlu",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tina Crook",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tina T. Nguyen",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Tobias Beclin (EU)",
+			"roles": ["Finance"]
+		},
+		{
+			"name": "Tobias Franke",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Tobias Hänseler",
+			"roles": ["German"]
+		},
+		{
+			"name": "Tobias Jahn (EU)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Todd Attaway",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Todd Blank",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Tom Brewer (Sound Cove)",
+			"roles": ["Cinematic Intro Audio Mixer"]
+		},
+		{
+			"name": "Tom Chilton",
+			"roles": ["Lead Designer"]
+		},
+		{
+			"name": "Tom Edwards",
+			"roles": ["QC Seniors"]
+		},
+		{
+			"name": "Tom Ellis",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Tom Flint",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tom Lillehoff",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tom Ryan",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Tom Thompson",
+			"roles": ["Lead UI Programmer"]
+		},
+		{
+			"name": "Tom Twedell",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Tomas Melian",
+			"roles": ["Global Marketing"]
+		},
+		{
+			"name": "Tommy Newcomer",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tommy Sabri",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Tony Misgen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tony Shih",
+			"roles": ["Mobile Team"]
+		},
+		{
+			"name": "Torsten Lill",
+			"roles": ["German"]
+		},
+		{
+			"name": "Torsten Schmidt",
+			"roles": ["German"]
+		},
+		{
+			"name": "Tracy Whitehead",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Travis Biegun",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Travis Day",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Travis Howsman",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Travis Mansbridge",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Trent Cline",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Trent Kaniuga",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Trevor Cantrell-Paulson",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Trevor Rothman",
+			"roles": ["Interns"]
+		},
+		{
+			"name": "Tristan Lhomme (FR)",
+			"roles": ["Regional Assistant Localization Managers"]
+		},
+		{
+			"name": "Tristan Pope",
+			"roles": ["Editor Staff"]
+		},
+		{
+			"name": "Tuan Ngo",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Ty Williams",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Tyler Agee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tyler Crawford",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Tyler Hunter",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Tyler Raygoza",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Ugo Croci",
+			"roles": ["French"]
+		},
+		{
+			"name": "Umberto Lopes",
+			"roles": ["French"]
+		},
+		{
+			"name": "Vale Yu (CN)",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Valerie Watrous",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Valérie Chrétien (EU)",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Vanness Zhou",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Vernon Poling",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Vicky Nott",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Victor Borjesson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Victor Chong",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Victor Esquivias",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Victor Gonzalez Jr",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Victor I. Dobrovatov (RU)",
+			"roles": ["Regional Localization Analysts"]
+		},
+		{
+			"name": "Victor Sefastsson",
+			"roles": ["English"]
+		},
+		{
+			"name": "Victoria Bennett-Keenan",
+			"roles": ["English"]
+		},
+		{
+			"name": "Victoria Rayno",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Victoria Spanier",
+			"roles": ["German"]
+		},
+		{
+			"name": "Victoria Thacker",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Viktor König",
+			"roles": ["German"]
+		},
+		{
+			"name": "Vincent Francoeur",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Vincent Kaufmann",
+			"roles": ["Seniors"]
+		},
+		{
+			"name": "Vincent Mesnard",
+			"roles": ["French"]
+		},
+		{
+			"name": "Vincent Moitrot",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Vincent Moulin",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "Vincent Zaccheo",
+			"roles": ["French"]
+		},
+		{
+			"name": "Vinh Tran",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Volker Stabler",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Waldemar Fritz",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Walter Mazza",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wayne Armstrong",
+			"roles": ["English"]
+		},
+		{
+			"name": "Wayne Freer",
+			"roles": ["English"]
+		},
+		{
+			"name": "Wayne Lee",
+			"roles": ["Managing Director, Taiwan"]
+		},
+		{
+			"name": "Wayne Skarboszewski",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wei Qiao",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Wei Wang",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Wendy Vetter",
+			"roles": ["Lead City/Dungeon Artist"]
+		},
+		{
+			"name": "Wendy Yang",
+			"roles": ["English"]
+		},
+		{
+			"name": "Weonseok Choi",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Wesley Day",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wesley Foults",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wesley Smith",
+			"roles": ["English"]
+		},
+		{
+			"name": "Whitney Day",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Wilko Lennartz",
+			"roles": ["German"]
+		},
+		{
+			"name": "Will Darce",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "William Bezou",
+			"roles": ["AA Agents"]
+		},
+		{
+			"name": "William E. Smith IV",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "William Harber",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "William Roseman",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "William Sanders",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "William Shepard",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Wissam Muhialddin",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wolfram Sack",
+			"roles": ["German"]
+		},
+		{
+			"name": "Wonjae Jeong",
+			"roles": ["Support Seniors"]
+		},
+		{
+			"name": "Wonjang Cho",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wonjong Lee",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Wonyoung Choi (KR)",
+			"roles": ["Regional Localization Engineers"]
+		},
+		{
+			"name": "Woody Skiba",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Woonchang Beck",
+			"roles": ["Web Design Team"]
+		},
+		{
+			"name": "Woonki Cho",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Woosung Lee",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Wouter Schrijnemakers",
+			"roles": ["English"]
+		},
+		{
+			"name": "Wouter Van Der Veen",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Xavier Lepage",
+			"roles": ["French"]
+		},
+		{
+			"name": "Xin Wang",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Xing Jin",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Xuan Mai",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yan Kahlé",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Yangrae Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yann Pallatier",
+			"roles": ["Web Editorial Team Leads"]
+		},
+		{
+			"name": "Yeon-Ho Lee",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Yeri Cho",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yoann Gonedec",
+			"roles": ["French"]
+		},
+		{
+			"name": "Yolanda Serrano Llamas",
+			"roles": ["Spanish"]
+		},
+		{
+			"name": "Yong Yoon",
+			"roles": ["Global IT Managers"]
+		},
+		{
+			"name": "Yonghyun (Eddie) Kim",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Yongjo Choi",
+			"roles": ["Lead"]
+		},
+		{
+			"name": "Yongteak Im",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yoojin Yang",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yoongjun Kim",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Yoonhee Kim",
+			"roles": ["Manager"]
+		},
+		{
+			"name": "Yoora Oh",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yooseok Pan (KR)",
+			"roles": ["Community"]
+		},
+		{
+			"name": "Young Namgoong",
+			"roles": ["Support Leads"]
+		},
+		{
+			"name": "Youngjin Park",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Youngki Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Youngmok Park (KR)",
+			"roles": ["Director of Communication and Community"]
+		},
+		{
+			"name": "Youngnan Park",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Youngsik Lee",
+			"roles": ["Programmers"]
+		},
+		{
+			"name": "Yunbai Kim",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yunho Bae",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yunhwan Ahn",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Yunsil Choi",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Yvonne Yu Hong Shi (CN)",
+			"roles": ["Regional QA Managers"]
+		},
+		{
+			"name": "Zac Pfaff",
+			"roles": ["Mobile Team"]
+		},
+		{
+			"name": "Zach Bogatz",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Zach Callanan",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Zachariah Owens",
+			"roles": ["Representatives"]
+		},
+		{
+			"name": "Zachary Chow",
+			"roles": ["Analysts"]
+		},
+		{
+			"name": "Zachary Hubert",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Zachary Podratz",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Zak Meekins",
+			"roles": ["Information Technology"]
+		},
+		{
+			"name": "Zaven Haroutunian",
+			"roles": ["QA Analysts"]
+		},
+		{
+			"name": "Zaza Essa",
+			"roles": ["Artists"]
+		}
+	]
+}
