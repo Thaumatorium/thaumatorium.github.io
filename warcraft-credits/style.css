@@ -1,0 +1,433 @@
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	background-color: #f4f4f4;
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+h1 {
+	text-align: center;
+	color: #333;
+	margin: 20px 0 10px 0;
+	padding: 0 15px;
+}
+
+/* --- Collapsible Instructions Styles --- */
+.instructions-collapsible {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 15px;
+	background-color: #f9f9f9;
+	overflow: hidden;
+}
+
+.instructions-collapsible summary {
+	padding: 10px 15px;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	outline: none;
+	transition: background-color 0.2s ease;
+	border-bottom: 1px solid #ccc;
+	list-style-position: inside;
+	position: relative;
+}
+
+.instructions-collapsible summary::marker,
+.instructions-collapsible summary::-webkit-details-marker {
+	color: #555;
+}
+
+.instructions-collapsible summary:hover {
+	background-color: #e8e8e8;
+}
+
+.instructions-collapsible summary:focus-visible {
+	box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+	border-radius: 3px;
+}
+
+.instructions-collapsible[open] summary {
+	background-color: #e5e5e5;
+	border-bottom: 1px solid #ccc;
+}
+
+.instructions-collapsible .instructions-content {
+	padding: 15px 15px 15px 40px;
+	margin: 0;
+	font-size: 0.9rem;
+	color: #555;
+	line-height: 1.5;
+	border-top: none;
+	list-style-type: disc;
+}
+
+.instructions-collapsible .instructions-content li {
+	margin-bottom: 8px;
+}
+
+.instructions-collapsible .instructions-content li:last-child {
+	margin-bottom: 0;
+}
+
+.instructions-collapsible .instructions-content strong {
+	color: #333;
+}
+
+/* --- End Collapsible Instructions Styles --- */
+
+/* === CONTROLS STYLES (WITH STATS BOX) === */
+.controls {
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	/* Stack rows vertically */
+	gap: 15px;
+	/* Increased gap between rows */
+	width: 100%;
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+
+.game-selection-row {
+	display: flex;
+	align-items: center;
+	/* Vertically align items in the row */
+	flex-wrap: wrap;
+	/* Allow wrapping on small screens */
+	gap: 10px;
+	/* Gap between label, select, stats */
+	justify-content: center;
+	/* Center items if they wrap */
+}
+
+.game-selection-row label {
+	font-weight: bold;
+	display: inline-block;
+	min-width: 110px;
+	/* Keep minimum width */
+	text-align: left;
+	/* Align label text to the left now */
+	flex-shrink: 0;
+	margin-right: 5px;
+	/* Add small space after label */
+}
+
+.game-selection-row select {
+	padding: 8px 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	min-width: 250px;
+	max-width: 400px;
+	/* Limit select width */
+	flex-grow: 1;
+	/* Allow select to grow */
+	flex-basis: 250px;
+	/* Base width */
+	background-color: #fff;
+	font-size: 1rem;
+}
+
+.stats-box {
+	border: 1px solid #e0e0e0;
+	background-color: #f7f7f7;
+	padding: 6px 12px;
+	border-radius: 4px;
+	min-width: 180px;
+	/* Ensure minimum width */
+	flex-shrink: 0;
+	/* Don't shrink */
+	display: flex;
+	flex-direction: column;
+	/* Stack stats vertically */
+	gap: 3px;
+	/* Small gap between stat items */
+	font-size: 0.85rem;
+	color: #444;
+}
+
+.stats-box .stat-item {
+	display: flex;
+	justify-content: space-between;
+	/* Align label left, value right */
+	white-space: nowrap;
+	/* Prevent wrapping within a stat item */
+}
+
+.stats-box .stat-label {
+	font-weight: 600;
+	/* Slightly bolder label */
+	margin-right: 8px;
+	color: #555;
+}
+
+.stats-box .stat-value {
+	font-family: monospace;
+	/* Monospace for numbers */
+	color: #111;
+}
+
+.simulation-controls {
+	margin-top: 5px;
+	/* Keep margin */
+	display: flex;
+	/* Use flex for buttons too */
+	justify-content: center;
+	/* Center buttons */
+	gap: 10px;
+	/* Gap between buttons */
+	width: 100%;
+	/* Take full width */
+}
+
+.controls button {
+	padding: 8px 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	background-color: #eee;
+	cursor: pointer;
+	font-size: 0.9rem;
+}
+
+.controls button:hover:not(:disabled) {
+	background-color: #ddd;
+}
+
+.controls button:disabled {
+	cursor: not-allowed;
+	opacity: 0.6;
+}
+
+/* === END CONTROLS STYLES === */
+
+.status-message {
+	text-align: center;
+	margin: 10px auto;
+	padding: 10px 15px;
+	border-radius: 4px;
+	max-width: 90%;
+	box-sizing: border-box;
+	display: none;
+	/* Messages hidden by default */
+}
+
+.status-message.error-message,
+.status-message.warning-message {
+	display: block;
+}
+
+#loadingMessage {
+	color: #555;
+	background-color: #eef;
+	border: 1px solid #dde;
+}
+
+.error-message {
+	color: #a94442;
+	background-color: #f2dede;
+	border: 1px solid #ebccd1;
+	font-weight: bold;
+}
+
+.warning-message {
+	color: #8a6d3b;
+	background-color: #fcf8e3;
+	border: 1px solid #faebcc;
+	font-weight: normal;
+}
+
+/* --- Graph Container Styles --- */
+#d3-graph-container {
+	border: 1px solid #ccc;
+	display: block;
+	background-color: #f9f9f9;
+	margin: 15px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	box-sizing: border-box;
+	overflow: hidden;
+	flex-grow: 1;
+	min-height: 400px;
+	width: auto;
+	height: auto;
+	cursor: grab;
+}
+
+#d3-graph-container:active {
+	cursor: grabbing;
+}
+
+/* --- Graph Element Styles (Links, Nodes, Labels) --- */
+.links line {
+	stroke: #bbb;
+	stroke-opacity: 0.6;
+	stroke-width: 1.5px;
+}
+
+#d3-graph-container.links-hidden .links line {
+	stroke-opacity: 0;
+	pointer-events: none;
+}
+
+.nodes g.node {
+	cursor: pointer;
+	opacity: 1;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.nodes g.node circle,
+.nodes g.node rect.game-rect {
+	stroke: #fff;
+	stroke-width: 1.5px;
+	transition:
+		stroke 0.2s ease-in-out,
+		stroke-width 0.2s ease-in-out;
+}
+
+.nodes g.node:not(.game) text.node-label {
+	opacity: 0;
+	font-family: sans-serif;
+	font-size: 10px;
+	fill: #444;
+	paint-order: stroke;
+	stroke: white;
+	stroke-width: 2.5px;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	transition:
+		opacity 0.15s ease-in-out,
+		fill 0.15s ease-in-out;
+}
+
+.nodes g.node.game text.node-label {
+	opacity: 1;
+	font-family: sans-serif;
+	font-size: 10px;
+	fill: #444;
+	paint-order: stroke;
+	stroke: white;
+	stroke-width: 2.5px;
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+	pointer-events: none;
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.nodes g.node:not(.game):hover text.node-label,
+.nodes g.node.tooltip-active:not(.game) text.node-label,
+.nodes g.node.highlighted-department:not(.game) text.node-label {
+	opacity: 1;
+}
+
+.nodes g.node.highlighted-department:not(.game) text.node-label {
+	fill: #c0392b;
+}
+
+#d3-graph-container.show-all-labels .nodes g.node:not(.game) text.node-label {
+	opacity: 1;
+}
+
+.nodes g.node:hover {
+	opacity: 0.9;
+}
+
+.nodes g.node:hover circle,
+.nodes g.node:hover rect.game-rect {
+	stroke: #555;
+	stroke-width: 2.5px;
+}
+
+.nodes g.node.tooltip-active circle,
+.nodes g.node.tooltip-active rect.game-rect {
+	stroke: #000;
+	stroke-width: 3px;
+}
+
+.nodes g.node.highlighted-department {
+	opacity: 1;
+}
+
+.nodes g.node.highlighted-department circle,
+.nodes g.node.highlighted-department rect.game-rect {
+	stroke: #e74c3c;
+	stroke-width: 3.5px;
+}
+
+.nodes.department-highlight-active g.node:not(.highlighted-department) {
+	opacity: 0.15;
+}
+
+.nodes.department-highlight-active g.node.tooltip-active {
+	opacity: 1;
+}
+
+.nodes.department-highlight-active g.node:not(.highlighted-department):not(.tooltip-active) text.node-label {
+	opacity: 0;
+}
+
+#d3-graph-container.show-all-labels .nodes.department-highlight-active g.node:not(.highlighted-department):not(.tooltip-active) text.node-label {
+	opacity: 1;
+}
+
+.nodes.department-highlight-active g.node.game {
+	opacity: 1;
+}
+
+.nodes.department-highlight-active g.node.game text.node-label {
+	opacity: 1;
+	fill: #444;
+}
+
+.nodes.department-highlight-active g.node.game:not(.highlighted-department) rect.game-rect {
+	stroke: #fff;
+	stroke-width: 1.5px;
+}
+
+/* --- Tooltip Styles --- */
+#tooltip {
+	display: none;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.85);
+	color: white;
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-size: 0.85rem;
+	z-index: 100;
+	max-width: 300px;
+	white-space: normal;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	user-select: text;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	pointer-events: none;
+}
+
+#tooltip strong {
+	display: block;
+	margin-bottom: 5px;
+	color: #fff;
+	font-weight: bold;
+}
+
+#tooltip span.tooltip-info {
+	color: #ddd !important;
+	font-size: 0.8rem;
+	display: block;
+	margin-top: 3px;
+}

@@ -1,0 +1,1336 @@
+{
+	"Warcraft 3: Reign of Chaos": [
+		{
+			"name": "AT&T",
+			"roles": ["Battle.net Hosting Partners"]
+		},
+		{
+			"name": "Aaron Adams",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Aaron Chan",
+			"roles": ["Cinematic Artists", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Aaron Keller",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Abe Lasser",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Adam Byrne",
+			"roles": ["Additional Art", "Additional Game Review"]
+		},
+		{
+			"name": "Adam Slack",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Adrian Luff",
+			"roles": ["Battle.net Network Engineers"]
+		},
+		{
+			"name": "Alan Dabiri",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Alen Lapidis",
+			"roles": ["Cinematic Technical Artists & Tools Development", "Online Support"]
+		},
+		{
+			"name": "Alex Dumas",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Allen Adham",
+			"roles": ["Additional Game Review", "Senior Designer"]
+		},
+		{
+			"name": "Allen Dilling",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Allen Lin",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Amanda Fenster",
+			"roles": ["Outside Voice Casting Assistants"]
+		},
+		{
+			"name": "Andrea Pessino",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Andrew Brownell",
+			"roles": ["Game Testers", "Multiplayer Maps"]
+		},
+		{
+			"name": "Andrew Hagger",
+			"roles": ["Localization QA"]
+		},
+		{
+			"name": "Andy Bond",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Arthur Fong",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Attila Edelenyi",
+			"roles": ["Localization Engineers"]
+		},
+		{
+			"name": "Barry Kehoe",
+			"roles": ["Localization Project Manager"]
+		},
+		{
+			"name": "Beau Yarbrough",
+			"roles": ["Additional Game Review", "Public Relations"]
+		},
+		{
+			"name": "Ben Dai",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Bernie Wilkins",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Bill Petras",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Bill Roper",
+			"roles": ["Blizzard North Game Review", "Voice Acting"]
+		},
+		{
+			"name": "Bill Watt",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Blaine Whittle",
+			"roles": ["Additional Game Review", "Web Team"]
+		},
+		{
+			"name": "Bo Bell",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Bob Fitch",
+			"roles": ["Additional Game Review", "Programming"]
+		},
+		{
+			"name": "Bob Marafioti",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Bob Papenbrook",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Bob Wharton",
+			"roles": ["Global Launch Team", "Manufacturing"]
+		},
+		{
+			"name": "Brandon Idol",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Brendan O' Mahony",
+			"roles": ["Localization Engineers"]
+		},
+		{
+			"name": "Brett Wood",
+			"roles": ["Additional Macintosh Programming", "Programming"]
+		},
+		{
+			"name": "Brian Farr",
+			"roles": ["Sound Design"]
+		},
+		{
+			"name": "Brian Fitzgerald",
+			"roles": ["Additional Programming", "Battle.net Programming"]
+		},
+		{
+			"name": "Brian Hsu",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Brian Love",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Brian Mitchell",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Brian Urquhart",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Brit Snyder",
+			"roles": ["Additional Cinematic Work"]
+		},
+		{
+			"name": "Bruce Slywka",
+			"roles": ["Global Launch Team", "North American Sales"]
+		},
+		{
+			"name": "Bryan Chen",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Caitriona Finlay",
+			"roles": ["Localization Project Leads"]
+		},
+		{
+			"name": "Calab Moody",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Cameron Lamprecht",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Carl Chimes",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Carlo Arellano",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Carlos Guerrero",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Carrie Gordon Lowrey",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Cedric Marechal",
+			"roles": ["Global Launch Team", "International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Chad Jones",
+			"roles": ["Online Support"]
+		},
+		{
+			"name": "Charles Carter",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Chris Ansell",
+			"roles": ["International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Chris Arretche",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Chris Metzen",
+			"roles": ["Cinematic Script Writers", "Manual Artwork", "Manual Development and Editing", "Story Concept", "Voice Acting", "Voice Direction & Internal Casting", "Writer & Creative Director"]
+		},
+		{
+			"name": "Chris Millar",
+			"roles": ["Additional Game Review", "Associate Producers"]
+		},
+		{
+			"name": "Chris Sigaty",
+			"roles": ["Additional Game Review", "Global Launch Team", "Producer"]
+		},
+		{
+			"name": "Christina Cade",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Christophe Ramboz",
+			"roles": ["Global Launch Team", "International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Christopher Fisher",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Christopher Manley",
+			"roles": ["Quality Assurance Management"]
+		},
+		{
+			"name": "Christopher Roberts",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Collin Murray",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Collin Smith",
+			"roles": ["Online Support", "Support File Development & Editing"]
+		},
+		{
+			"name": "Cosmo Taormina",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Cyril Marchal",
+			"roles": ["Global Launch Team", "International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "DACOM/KIDC",
+			"roles": ["Battle.net Hosting Partners"]
+		},
+		{
+			"name": "Damien Monaghan",
+			"roles": ["Localization Lead Engineer"]
+		},
+		{
+			"name": "Dan Burke",
+			"roles": ["Additional Cinematic Work"]
+		},
+		{
+			"name": "Dan Moore",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Dana Jan",
+			"roles": ["Multiplayer Maps"]
+		},
+		{
+			"name": "Danny Nguyen",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Dave Berggren",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Dave Brevik",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Dave Fried",
+			"roles": ["Manual Development and Editing", "Multiplayer Maps"]
+		},
+		{
+			"name": "Dave Hale",
+			"roles": ["Campaign Design & Layout", "Multiplayer Maps"]
+		},
+		{
+			"name": "Dave Lawrence",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "David Dooley",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "David Fried",
+			"roles": ["Campaign Design & Layout"]
+		},
+		{
+			"name": "David Gee",
+			"roles": ["Financial Management"]
+		},
+		{
+			"name": "David Hickey",
+			"roles": ["Localization Project Leads", "Localization QA Leads"]
+		},
+		{
+			"name": "David Nguyen",
+			"roles": ["Online Support", "Technical Support Tools"]
+		},
+		{
+			"name": "David Ray",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Dean E. Fronk",
+			"roles": ["Outside Voice Casting"]
+		},
+		{
+			"name": "Dean Lee",
+			"roles": ["QA Team Leads", "Support File Development & Editing"]
+		},
+		{
+			"name": "Dean Shimonishi",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Dean Shipley",
+			"roles": ["Campaign Design & Layout", "Multiplayer Maps"]
+		},
+		{
+			"name": "Dennis Lam",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Dennis Price",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Derek Duke",
+			"roles": ["Music", "Sound Design", "Voice Acting"]
+		},
+		{
+			"name": "Derek Johnstone",
+			"roles": ["Game Testers", "Multiplayer Maps"]
+		},
+		{
+			"name": "Derek Simmons",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Donald Paul Pemrick",
+			"roles": ["Outside Voice Casting"]
+		},
+		{
+			"name": "Ed Kang",
+			"roles": ["QA Lead Tester"]
+		},
+		{
+			"name": "Edward Bui",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Edward Hanes",
+			"roles": ["Multiplayer Maps", "Online Support", "Support File Development & Editing"]
+		},
+		{
+			"name": "Edward Kang",
+			"roles": ["Support File Development & Editing"]
+		},
+		{
+			"name": "Edward Zinser",
+			"roles": ["Global Launch Team"]
+		},
+		{
+			"name": "Elaine Di Iorio",
+			"roles": ["Additional Business Development & Operations", "Web Team"]
+		},
+		{
+			"name": "Eli Catalan",
+			"roles": ["Manual Development and Editing"]
+		},
+		{
+			"name": "Elisabeth Miller",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Elliott Chin",
+			"roles": ["Manual Development and Editing"]
+		},
+		{
+			"name": "Emilio Segura",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Eric Dodds",
+			"roles": ["Additional Game Review", "Multiplayer Maps"]
+		},
+		{
+			"name": "Eric Henze",
+			"roles": ["Additional Art", "Additional Game Review"]
+		},
+		{
+			"name": "Eric Roeder",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Eric Strauss",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Erich Schaefer",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Evelyn Smith",
+			"roles": ["Manual Development and Editing", "Multiplayer Maps", "QA Technical Engineer", "Support File Development & Editing"]
+		},
+		{
+			"name": "Flavie Gufflet",
+			"roles": ["Global Launch Team", "Globalization Producer"]
+		},
+		{
+			"name": "Franchesco Musso",
+			"roles": ["Localization QA"]
+		},
+		{
+			"name": "Francis \"Frux\" Courchinoux",
+			"roles": ["Localization QA"]
+		},
+		{
+			"name": "Frank Gilson",
+			"roles": ["Associate Producers"]
+		},
+		{
+			"name": "Frank Pearce",
+			"roles": ["Programming", "Team Lead"]
+		},
+		{
+			"name": "Fredrick Bloggs",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Gary Gibson",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Gary Platner",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Geoff Fraizer",
+			"roles": ["Additional Game Review", "Web Team"]
+		},
+		{
+			"name": "Geoff Goodman",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Georges Martins",
+			"roles": ["International Web Teams"]
+		},
+		{
+			"name": "Gerry Carty",
+			"roles": ["Global Launch Team"]
+		},
+		{
+			"name": "Gil Shif",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Glenn Stafford",
+			"roles": ["Audio Director", "Music", "Sound Design", "Voice Acting"]
+		},
+		{
+			"name": "Graham Madarasz",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Greg Sacks",
+			"roles": ["Outside Voice Casting Assistants"]
+		},
+		{
+			"name": "Harley D. Huggins II",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Hayley Sumner",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Hubert Larenaudie",
+			"roles": ["Global Launch Team", "International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Hung Nguyen",
+			"roles": ["Battle.net Network Engineers", "Information Technologies"]
+		},
+		{
+			"name": "Ian Welke",
+			"roles": ["Additional Game Review", "Quality Assurance Management"]
+		},
+		{
+			"name": "Ilya Berelson",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Isaac Matarasso",
+			"roles": ["Additional Business Development & Operations", "Information Technologies"]
+		},
+		{
+			"name": "J.C. Pastor \"pAsh",
+			"roles": ["Localization QA"]
+		},
+		{
+			"name": "Jack Chen",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jack Sterling",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Jackson Daniels",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Jaime Chavez",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "James Anhalt",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "James Chadwick",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "James McCoy",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jamie Neveaux",
+			"roles": ["Additional Game Review", "Office Administration"]
+		},
+		{
+			"name": "Jamin Shoulet",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Jared Keller",
+			"roles": ["Cinematic Artists", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Jason Fader",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jason Hayes",
+			"roles": ["Music", "Voice Direction & Internal Casting"]
+		},
+		{
+			"name": "Jason Hutchins",
+			"roles": ["Global Launch Team", "Localization & Macintosh Producer", "Manual Development and Editing"]
+		},
+		{
+			"name": "Jason King",
+			"roles": ["Localization Engineers"]
+		},
+		{
+			"name": "Jason Stilwell",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Jay Hathaway",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jay Patel",
+			"roles": ["Programming", "Technology Lead"]
+		},
+		{
+			"name": "Jeanette Clausen",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Jeff Chamberlain",
+			"roles": ["Additional Game Review", "Cinematic Artists", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Jeff Chow",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Jeff Gates",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Jeff Mclean",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Jeffrey Kaplan",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Jeremy Cargilo",
+			"roles": ["Game Testers", "Multiplayer Maps"]
+		},
+		{
+			"name": "Jeremy Smith",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Jeremy Wood",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Jesse Blomberg",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Jessica Drossin",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Jesus Baquedano Ferrer",
+			"roles": ["Localization QA Leads"]
+		},
+		{
+			"name": "Joe Frayne",
+			"roles": ["Cinematic Artists", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Joe Rumsey",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Joeyray Hall",
+			"roles": ["Cinematic Editor"]
+		},
+		{
+			"name": "John Burnett",
+			"roles": ["Cinematic Artists", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "John Cash",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "John Chalfant",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "John Hsieh",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "John Lagrave",
+			"roles": ["Battle.net Producer"]
+		},
+		{
+			"name": "John Meyers",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "John Mikros",
+			"roles": ["Additional Macintosh Programming"]
+		},
+		{
+			"name": "John Schwartz",
+			"roles": ["Technical Support Management"]
+		},
+		{
+			"name": "John Staats",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "John Stiles",
+			"roles": ["Additional Programming", "Macintosh Programming", "Support File Development & Editing"]
+		},
+		{
+			"name": "John Wick",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "John Yoo",
+			"roles": ["Game Testers", "Multiplayer Maps"]
+		},
+		{
+			"name": "Jon Lanz",
+			"roles": ["Cinematic Artists", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Jonas Laster",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jonathan Mankin",
+			"roles": ["Multiplayer Maps", "QA Team Leads", "Support File Development & Editing"]
+		},
+		{
+			"name": "Jose Aello",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Josh Hillborn",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Joshua Kurtz",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Justin Gross",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Justin Parker",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Justin Thavirat",
+			"roles": ["Additional Art", "Box Cover Artwork"]
+		},
+		{
+			"name": "Kaeo Milker",
+			"roles": ["Game Testers", "Multiplayer Maps"]
+		},
+		{
+			"name": "Kai Vilhelmsen",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Kathy Carter",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Kelly Chun",
+			"roles": ["QA Assistant Lead Tester"]
+		},
+		{
+			"name": "Ken Williams",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Kenny Zigler",
+			"roles": ["Online Support"]
+		},
+		{
+			"name": "Kenson Yu",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Kevin Beardslee",
+			"roles": ["Additional Art", "Additional Game Review"]
+		},
+		{
+			"name": "Kevin Crook",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Kevin Jordan",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Kim Bridenbecker",
+			"roles": ["Direct Sales"]
+		},
+		{
+			"name": "Kim Watt",
+			"roles": ["International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Kirk Mahony",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Kris Mackey",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Kris Nedrebo",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Kyle Harrison",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Lang Fredrickson",
+			"roles": ["Global Launch Team"]
+		},
+		{
+			"name": "Lani Minella",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Les Douglas",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Lisa Bucek",
+			"roles": ["Global Launch Team", "Public Relations"]
+		},
+		{
+			"name": "Lisa Schoner",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Lloyd Tullues",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Luc Vanhal",
+			"roles": ["Global Launch Team"]
+		},
+		{
+			"name": "Manny Gonzales",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Mark Downie",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Mark Kern",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Mark Moser",
+			"roles": ["Quality Assurance Management"]
+		},
+		{
+			"name": "Mark Skelton",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Mark Warburton",
+			"roles": ["Global Launch Team", "International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Martin Tande",
+			"roles": ["Online Support"]
+		},
+		{
+			"name": "Matt Householder",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Matt Lee",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Matt Mocarski",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Matt Morris",
+			"roles": ["Campaign Design & Layout", "Multiplayer Maps"]
+		},
+		{
+			"name": "Matt Oursbourn",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Matt Samia",
+			"roles": ["Cinematic Artists", "Cinematic Executive Producer"]
+		},
+		{
+			"name": "Matt Sanders",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Matthew King",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Matthew Mead",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Matthew Versluys",
+			"roles": ["Additional Programming", "Battle.net Programming"]
+		},
+		{
+			"name": "Max Schaefer",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Melissa Edwards",
+			"roles": ["Additional Business Development & Operations", "Global Launch Team", "Manual Development and Editing"]
+		},
+		{
+			"name": "Michael Backus",
+			"roles": ["QA Team Leads", "Support File Development & Editing"]
+		},
+		{
+			"name": "Michael Barken",
+			"roles": ["Game Testers", "Voice Acting"]
+		},
+		{
+			"name": "Michael Bradberry",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Michael Chu",
+			"roles": ["QA Team Leads", "Support File Development & Editing"]
+		},
+		{
+			"name": "Michael Fuller",
+			"roles": ["Global Launch Team", "International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Michael Gough",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Michael Heiberg",
+			"roles": ["Campaign Design & Layout"]
+		},
+		{
+			"name": "Michael McConnohie",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Michael Murphy",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Michael Nguyen",
+			"roles": ["Multiplayer Maps", "Online Support"]
+		},
+		{
+			"name": "Michael Schaefer",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Michelle Elbert",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Micky Neilson",
+			"roles": ["Artists", "Script & Text Editing", "Voice Direction & Internal Casting"]
+		},
+		{
+			"name": "Mike Hale",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Mike Heiberg",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Mike Hein",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Mike Kramer",
+			"roles": ["Multiplayer Maps", "Online Support", "Support File Development & Editing"]
+		},
+		{
+			"name": "Mike Morhaime",
+			"roles": ["Additional Game Review", "Additional Programming", "Executive Producer", "Global Launch Team"]
+		},
+		{
+			"name": "Mike Scandizzo",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Mikey Schaefer",
+			"roles": ["Manual Development and Editing"]
+		},
+		{
+			"name": "Monte Krol",
+			"roles": ["Localization Engineers", "Programming", "Voice Acting"]
+		},
+		{
+			"name": "Myriam Santoso",
+			"roles": ["International Web Teams"]
+		},
+		{
+			"name": "Neal Hubbard",
+			"roles": ["Global Brand Management", "Global Launch Team"]
+		},
+		{
+			"name": "Nelly Dietrich",
+			"roles": ["Localization QA"]
+		},
+		{
+			"name": "Nicholas Lawson",
+			"roles": ["Game Testers", "Multiplayer Maps"]
+		},
+		{
+			"name": "Nicholas Pisani",
+			"roles": ["Multiplayer Maps"]
+		},
+		{
+			"name": "Nicholas S. Carpenter",
+			"roles": ["Cinematic Artists", "Cinematic Director", "Cinematic Script Writers", "Voice Direction & Internal Casting"]
+		},
+		{
+			"name": "Nick Pisani",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Norman Harms",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Padraig McCaul",
+			"roles": ["Localization Project Leads"]
+		},
+		{
+			"name": "Pat Nagle",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Patrick Sweeney",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Patrick Thomas",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Paul Hormis",
+			"roles": ["Additional Cinematic Work"]
+		},
+		{
+			"name": "Paul W. Sams",
+			"roles": ["Business Development", "Financial Management", "Global Launch Team"]
+		},
+		{
+			"name": "Peter Underwood",
+			"roles": ["Manual Development and Editing"]
+		},
+		{
+			"name": "Philip O'Neil",
+			"roles": ["Global Launch Team", "North American Sales"]
+		},
+		{
+			"name": "Piera Coppola",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Ray Laubach",
+			"roles": ["QA Team Leads", "Support File Development & Editing"]
+		},
+		{
+			"name": "Richard Barnes",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Richard George",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Richard Sanford",
+			"roles": ["Technical Support"]
+		},
+		{
+			"name": "Rob Beatie",
+			"roles": ["Direct Sales"]
+		},
+		{
+			"name": "Rob McNaughton",
+			"roles": ["Artists", "Lead Technical Artist", "Voice Acting"]
+		},
+		{
+			"name": "Rob Pardo",
+			"roles": ["Campaign Design & Layout", "Lead Designer", "Story Concept"]
+		},
+		{
+			"name": "Rob Rigole",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Robert Barris",
+			"roles": ["Additional Macintosh Programming", "Additional Programming"]
+		},
+		{
+			"name": "Robert Bridenbecker",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "Robert Foote",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Robert Van Dusen",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Roger Eberhart",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Roman Kenney",
+			"roles": ["Artists"]
+		},
+		{
+			"name": "Ron Frybarger",
+			"roles": ["Multiplayer Maps", "QA Team Leads"]
+		},
+		{
+			"name": "Ru Weerasuriya",
+			"roles": ["Artists", "Cinematic Artists", "Manual Artwork", "Script & Text Editing"]
+		},
+		{
+			"name": "Sam Lantinga",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Samuel Schrimsher",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Samwise Didier",
+			"roles": ["Additional Game Review", "Art Director", "Artists", "Manual Artwork", "Story Concept", "Voice Acting"]
+		},
+		{
+			"name": "Scott Abeyta",
+			"roles": ["Cinematic Artists", "Cinematic Producer", "Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Scott Hartin",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Scott Mercer",
+			"roles": ["Campaign Design & Layout", "Manual Development and Editing", "Multiplayer Maps"]
+		},
+		{
+			"name": "Sean McCrea",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Sebastien Gernault",
+			"roles": ["International Web Teams"]
+		},
+		{
+			"name": "Seth Thompson",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Shane Cargilo",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Solomon Lee",
+			"roles": ["Additional Art", "Additional Game Review"]
+		},
+		{
+			"name": "Stan Wang",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Steeg Haskell",
+			"roles": ["Cinematic Technical Artists & Tools Development"]
+		},
+		{
+			"name": "Stefanie Pranz",
+			"roles": ["International Web Teams"]
+		},
+		{
+			"name": "Stephane Vallet",
+			"roles": ["International Sales, Marketing, & PR"]
+		},
+		{
+			"name": "Stephen Wong",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Steve Librande",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Steve Martin",
+			"roles": ["International Web Teams"]
+		},
+		{
+			"name": "Steve Voorma",
+			"roles": ["Global Launch Team"]
+		},
+		{
+			"name": "Steven Parker",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Stewart Weiss",
+			"roles": ["Marketing & Creative Services"]
+		},
+		{
+			"name": "Stu Rose",
+			"roles": ["Artists", "Voice Acting"]
+		},
+		{
+			"name": "Stuart Nolan",
+			"roles": ["Localization Engineers"]
+		},
+		{
+			"name": "Susan Sams",
+			"roles": ["Manual Development and Editing", "Public Relations", "Script & Text Editing"]
+		},
+		{
+			"name": "Tami Donner Harrison",
+			"roles": ["Sound Design", "Voice Acting", "Voice Direction & Internal Casting", "Voice Editing"]
+		},
+		{
+			"name": "Ted Barken",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Ted Park",
+			"roles": ["Additional Game Review", "Artists", "Manual Artwork", "Web Team"]
+		},
+		{
+			"name": "Ted Whitney",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Telia",
+			"roles": ["Battle.net Hosting Partners"]
+		},
+		{
+			"name": "Tharyn Valavanis",
+			"roles": ["Additional Cinematic Work"]
+		},
+		{
+			"name": "Thomas Jung",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Thor Biafore",
+			"roles": ["Technical Support Management"]
+		},
+		{
+			"name": "Tiffany Hayes",
+			"roles": ["Voice Acting"]
+		},
+		{
+			"name": "Tim Campbell",
+			"roles": ["Campaign Design & Layout", "Multiplayer Maps"]
+		},
+		{
+			"name": "Tim Truesdale",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Timothy Fox",
+			"roles": ["Online Support"]
+		},
+		{
+			"name": "Tod Fay",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Tom Bryan",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Tony Tribelli",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "Tracy W. Bush",
+			"roles": ["Music", "Sound Design", "Voice Acting", "Voice Direction & Internal Casting"]
+		},
+		{
+			"name": "Trevor Jacobs",
+			"roles": ["Additional Game Review", "Artists"]
+		},
+		{
+			"name": "Twain Martin",
+			"roles": ["Additional Testers"]
+		},
+		{
+			"name": "Tyler Thompson",
+			"roles": ["Blizzard North Game Review"]
+		},
+		{
+			"name": "Will Glenn",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "William Roseman",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Zach Allen",
+			"roles": ["QA Team Leads"]
+		},
+		{
+			"name": "Zach Callanan",
+			"roles": ["Additional Game Review", "Multiplayer Maps", "QA Team Leads"]
+		}
+	]
+}
