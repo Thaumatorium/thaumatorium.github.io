@@ -409,6 +409,45 @@
 					box-sizing: border-box;
 					margin: 0 0%;
 				}
+				.filter-controls {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					gap: 15px;
+					margin-top: 10px;
+					width: 100%;
+					padding: 0 10px;
+					box-sizing: border-box;
+				}
+				.filter-group {
+					display: flex;
+					align-items: center;
+					gap: 8px;
+					flex-grow: 1;
+					min-width: 280px;
+					justify-content: center;
+				}
+				.filter-group label {
+					font-weight: bold;
+					font-size: 0.9rem;
+					flex-shrink: 0;
+				}
+				.filter-group select {
+					padding: 5px 8px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					background-color: #fff;
+					font-size: 0.9rem;
+					flex-shrink: 0;
+				}
+				.filter-group input[type="text"] {
+					padding: 6px 10px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					font-size: 0.9rem;
+					flex-grow: 1;
+					min-width: 120px;
+				}
 			</style>
 			<p>I was wondering how many people from one Warcraft game worked on another, but there was no tool that existed to visualize this, so I created this page. I just wanted the ability to select two games, and get a visual representation of the people who worked on each game, or both... The hardest was to create the JSON files, because the first few games did not have any data directly available, but since those credits were relatively small, I could type them over (or just use LLMs to convert the screenshot images to text, hehehe) - the actual hard part was to convert the World of Warcraft HTML into something useful, because those files were: different between different expacs, inconsistent within the same file, missing last names, inconsistent HTML formatting, unneeded Dunsel titles, mentioning Bobby Kotick as "Special Thanks" 🤮, etc, etc.</p>
 			<p>Anyway, here's the tool to visualize who worked on which game. Selecting the latest games can take a bit, since it's SUPER slow. D3.js isn't the fastest tool, but that's what I'm familiar with, so...</p>
@@ -416,6 +455,7 @@
 				<summary>Instructions & Controls</summary>
 				<ul class="instructions-content" aria-labelledby="control-instructions-details">
 					<li><strong>Select Games:</strong> Use the dropdowns below to choose one or two games. Stats appear on the right.</li>
+					<li><strong>Filter People:</strong> Use the filter inputs (comma-separate multiple terms). Filtering applies shortly after you stop typing.</li>
 					<li><strong>Zoom/Pan:</strong> Use the mouse wheel to zoom in/out. Click and drag the background to pan the view.</li>
 					<li><strong>Node Info:</strong> Hover over any node (person circle or game rectangle) to see details in a tooltip.</li>
 					<li><strong>Highlight Department:</strong> Hold Ctrl (or Cmd on Mac) and click a person node to highlight that person and others who share at least one of their roles. Ctrl/Cmd+Click again or click background to clear.</li>
@@ -431,7 +471,6 @@
 					<div class="stats-box" id="statsBox1" aria-live="polite" aria-atomic="true">
 						<span class="stat-item"><span class="stat-label">People:</span> <span id="personCount1" class="stat-value">--</span></span>
 						<span class="stat-item"><span class="stat-label">Unique Roles:</span> <span id="roleCount1" class="stat-value">--</span></span>
-						<!-- Add more stats here if needed -->
 					</div>
 				</div>
 				<div class="game-selection-row">
@@ -440,7 +479,28 @@
 					<div class="stats-box" id="statsBox2" aria-live="polite" aria-atomic="true">
 						<span class="stat-item"><span class="stat-label">People:</span> <span id="personCount2" class="stat-value">--</span></span>
 						<span class="stat-item"><span class="stat-label">Unique Roles:</span> <span id="roleCount2" class="stat-value">--</span></span>
-						<!-- Add more stats here if needed -->
+					</div>
+				</div>
+				<div class="filter-controls">
+					<div class="filter-group">
+						<label for="nameFilter">Name Filter:</label>
+						<select id="nameFilterMode" aria-label="Name filter mode">
+							<option value="contains" selected>Contains</option>
+							<option value="not_contains">Does Not Contain</option>
+							<option value="exact">Exactly Matches</option>
+							<option value="not_exact">Does Not Exactly Match</option>
+						</select>
+						<input type="text" id="nameFilterInput" placeholder="e.g., Smith, Jones (comma-sep)" aria-label="Name filter text" />
+					</div>
+					<div class="filter-group">
+						<label for="roleFilter">Role Filter:</label>
+						<select id="roleFilterMode" aria-label="Role filter mode">
+							<option value="contains" selected>Contains</option>
+							<option value="not_contains">Does Not Contain</option>
+							<option value="exact">Exactly Matches</option>
+							<option value="not_exact">Does Not Exactly Match</option>
+						</select>
+						<input type="text" id="roleFilterInput" placeholder="e.g., Programmer, Engineer (comma-sep)" aria-label="Role filter text" />
 					</div>
 				</div>
 				<div class="simulation-controls">
@@ -448,7 +508,6 @@
 					<button id="resumeButton" aria-label="Resume graph layout simulation" disabled>Resume Layout</button>
 				</div>
 			</div>
-			<!-- === MODIFIED CONTROLS SECTION END === -->
 			<div id="loadingMessage" class="status-message" style="display: none" aria-live="polite">Loading and processing data...</div>
 			<div id="errorMessage" class="status-message" aria-live="assertive"></div>
 			<svg id="d3-graph-container" aria-label="Graph visualization area" aria-describedby="control-instructions-details"></svg>
