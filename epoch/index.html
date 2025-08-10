@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Epoch Time Converter | The Thaumatorium</title>
+		<meta name="description" content="Convert epoch seconds/milliseconds/nanoseconds to RFC3339 and ISO8601 timestamps" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Epoch Time Converter" />
+		<meta property="og:description" content="Convert epoch seconds/milliseconds/nanoseconds to RFC3339 and ISO8601 timestamps" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Epoch Time Converter" />
+		<meta name="twitter:description" content="Convert epoch seconds/milliseconds/nanoseconds to RFC3339 and ISO8601 timestamps" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/epoch">Epoch</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Epoch Time Converter</h1>
+			<style>
+				body main {
+					max-width: 100%;
+					margin: 0 auto;
+				}
+				.epoch-converter {
+					max-width: none;
+					width: 100%;
+					margin: 0;
+					padding: 20px;
+					font-family: "Consolas", "Monaco", "Courier New", monospace;
+				}
+				.input-group {
+					margin-bottom: 20px;
+					padding: 15px;
+					border: 1px solid #ddd;
+					border-radius: 8px;
+					background-color: #f8f9fa;
+				}
+				.input-group label {
+					display: block;
+					margin-bottom: 8px;
+					font-weight: bold;
+					color: #333;
+				}
+				.input-group input {
+					width: 100%;
+					padding: 10px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					font-size: 14px;
+					font-family: "Consolas", "Monaco", "Courier New", monospace;
+					box-sizing: border-box;
+				}
+				.input-group input:focus {
+					outline: none;
+					border-color: #007bff;
+					box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+				}
+				.output-group {
+					margin-bottom: 15px;
+					padding: 10px;
+					background-color: #e9ecef;
+					border-radius: 4px;
+					border-left: 4px solid #007bff;
+				}
+				.output-group label {
+					display: block;
+					font-weight: bold;
+					color: #495057;
+					margin-bottom: 5px;
+				}
+				.output-value {
+					font-family: "Consolas", "Monaco", "Courier New", monospace;
+					font-size: 14px;
+					padding: 8px;
+					background-color: white;
+					border: 1px solid #ced4da;
+					border-radius: 3px;
+					cursor: pointer;
+					transition: background-color 0.2s;
+				}
+				.output-value:hover {
+					background-color: #f8f9fa;
+				}
+				.button-group {
+					text-align: center;
+					margin: 20px 0;
+				}
+				.btn {
+					padding: 10px 20px;
+					margin: 0 5px;
+					border: none;
+					border-radius: 4px;
+					cursor: pointer;
+					font-size: 14px;
+					transition: background-color 0.2s;
+				}
+				.btn-primary {
+					background-color: #007bff;
+					color: white;
+				}
+				.btn-primary:hover {
+					background-color: #0056b3;
+				}
+				.btn-secondary {
+					background-color: #6c757d;
+					color: white;
+				}
+				.btn-secondary:hover {
+					background-color: #545b62;
+				}
+				.current-time {
+					text-align: center;
+					margin: 20px 0;
+					padding: 15px;
+					background-color: #d4edda;
+					border-radius: 8px;
+					border: 1px solid #c3e6cb;
+				}
+				.examples {
+					margin-top: 30px;
+					padding: 20px;
+					background-color: #fff3cd;
+					border-radius: 8px;
+					border: 1px solid #ffeaa7;
+				}
+				.examples h3 {
+					margin-top: 0;
+					color: #856404;
+				}
+				.example-item {
+					margin: 10px 0;
+					padding: 8px;
+					background-color: white;
+					border-radius: 4px;
+					cursor: pointer;
+					transition: background-color 0.2s;
+				}
+				.example-item:hover {
+					background-color: #f8f9fa;
+				}
+				.error {
+					color: #dc3545;
+					font-style: italic;
+				}
+				/* Batch converter styles */
+				.input-group textarea {
+					width: 100%;
+					padding: 10px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					font-size: 14px;
+					font-family: "Consolas", "Monaco", "Courier New", monospace;
+					box-sizing: border-box;
+					resize: vertical;
+				}
+				.table-container {
+					overflow-x: auto;
+					border: 1px solid #ddd;
+					border-radius: 8px;
+					background: #fff;
+				}
+				.batch-results table {
+					width: 100%;
+					border-collapse: collapse;
+					min-width: 720px;
+				}
+				.batch-results th,
+				.batch-results td {
+					border: 1px solid #dee2e6;
+					padding: 8px 10px;
+					text-align: left;
+					vertical-align: top;
+					font-family: "Consolas", "Monaco", "Courier New", monospace;
+					font-size: 13px;
+				}
+				.batch-results thead th {
+					background: #f1f3f5;
+					position: sticky;
+					top: 0;
+					z-index: 1;
+				}
+				.batch-results tbody tr:hover {
+					background: #f8f9fa;
+				}
+				td.copyable {
+					cursor: pointer;
+				}
+				@media (max-width: 768px) {
+					.epoch-converter {
+						padding: 10px;
+					}
+					.input-group,
+					.output-group {
+						padding: 10px;
+					}
+				}
+			</style>
+			<div class="epoch-converter">
+				<div class="current-time">
+					<h3>Current Time</h3>
+					<div id="currentTime"></div>
+				</div>
+				<!-- Removed single-value converter -->
+				<!-- Batch Converter -->
+				<div class="input-group">
+					<label for="batchInput">Batch Epoch Timestamps:</label>
+					<textarea id="batchInput" rows="8" placeholder="Enter one timestamp per line or separate by spaces/commas"></textarea>
+					<small>Tip: Non-numeric tokens are ignored. Click table cells to copy values.</small>
+					<div class="button-group">
+						<button class="btn btn-primary" onclick="convertBatch()">Convert List</button>
+						<button class="btn btn-secondary" onclick="clearBatch()">Clear</button>
+						<button class="btn btn-secondary" onclick="downloadBatchCSV()">Download CSV</button>
+					</div>
+				</div>
+				<div id="batchResults" class="batch-results" style="display: none">
+					<h3>Batch Results</h3>
+					<div class="table-container">
+						<table>
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>Input</th>
+									<th>Detected</th>
+									<th>RFC3339 (UTC)</th>
+									<th>ISO8601 (Local)</th>
+									<th>Unix s</th>
+									<th>Unix ms</th>
+									<th>Unix ns</th>
+									<th>Error</th>
+								</tr>
+							</thead>
+							<tbody id="batchTbody"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<script>
+				function updateCurrentTime() {
+					const now = new Date();
+					const currentTimeDiv = document.getElementById("currentTime");
+					// Compute ISO8601 local with timezone offset
+					const localISOString = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString();
+					const timezoneOffset = -now.getTimezoneOffset();
+					const offsetHours = Math.floor(Math.abs(timezoneOffset) / 60)
+						.toString()
+						.padStart(2, "0");
+					const offsetMinutes = (Math.abs(timezoneOffset) % 60).toString().padStart(2, "0");
+					const offsetSign = timezoneOffset >= 0 ? "+" : "-";
+					const isoLocal = localISOString.slice(0, -1) + offsetSign + offsetHours + ":" + offsetMinutes;
+					currentTimeDiv.innerHTML = `
+        <strong>RFC3339:</strong> ${now.toISOString()}<br>
+        <strong>Local ISO8601:</strong> ${isoLocal}<br>
+        <strong>Local Human:</strong> ${now.toString()}<br>
+        <strong>Unix Seconds:</strong> ${Math.floor(now.getTime() / 1000)}<br>
+        <strong>Unix Milliseconds:</strong> ${now.getTime()}<br>
+        <strong>Unix Nanoseconds:</strong> ${now.getTime() * 1000000}
+    `;
+				}
+				function detectEpochFormat(timestamp) {
+					const num = Math.abs(parseInt(timestamp));
+					const str = num.toString();
+					if (str.length <= 10) return "seconds";
+					if (str.length <= 13) return "milliseconds";
+					if (str.length <= 19) return "nanoseconds";
+					return "unknown";
+				}
+				function copyToClipboard(element) {
+					const text = element.textContent;
+					navigator.clipboard
+						.writeText(text)
+						.then(function () {
+							const originalText = element.textContent;
+							element.textContent = "Copied!";
+							element.style.backgroundColor = "#d4edda";
+							setTimeout(function () {
+								element.textContent = originalText;
+								element.style.backgroundColor = "";
+							}, 1000);
+						})
+						.catch(function (err) {
+							console.error("Could not copy text: ", err);
+							const textArea = document.createElement("textarea");
+							textArea.value = text;
+							document.body.appendChild(textArea);
+							textArea.select();
+							try {
+								document.execCommand("copy");
+							} catch (err) {
+								console.error("Fallback copy failed: ", err);
+							}
+							document.body.removeChild(textArea);
+						});
+				}
+				// Batch conversion helpers
+				function convertSingle(raw) {
+					const str = String(raw).trim();
+					if (!/^[-+]?\d+$/.test(str)) {
+						throw new Error("Not a number");
+					}
+					const unit = detectEpochFormat(str);
+					let ms;
+					switch (unit) {
+						case "seconds":
+							ms = Number(str) * 1000;
+							break;
+						case "milliseconds":
+							ms = Number(str);
+							break;
+						case "nanoseconds":
+							try {
+								ms = Number(BigInt(str) / 1000000n);
+							} catch (e) {
+								ms = Number(str) / 1_000_000;
+							}
+							break;
+						default:
+							throw new Error("Unknown unit");
+					}
+					const date = new Date(ms);
+					if (isNaN(date.getTime())) throw new Error("Invalid timestamp");
+					const isoUTC = date.toISOString();
+					const tzOffset = -date.getTimezoneOffset();
+					const oh = String(Math.floor(Math.abs(tzOffset) / 60)).padStart(2, "0");
+					const om = String(Math.abs(tzOffset) % 60)
+						.toString()
+						.padStart(2, "0");
+					const os = tzOffset >= 0 ? "+" : "-";
+					const isoLocal = new Date(date.getTime() - date.getTimezoneOffset() * 60000).toISOString().slice(0, -1) + os + oh + ":" + om;
+					const unixS = Math.floor(ms / 1000);
+					const unixMs = ms;
+					let unixNs;
+					try {
+						unixNs = (BigInt(Math.trunc(ms)) * 1000000n).toString();
+					} catch (e) {
+						unixNs = String(ms * 1_000_000);
+					}
+					return { unit, isoUTC, isoLocal, unixS: String(unixS), unixMs: String(unixMs), unixNs };
+				}
+				function convertBatch() {
+					const input = document.getElementById("batchInput").value;
+					const tbody = document.getElementById("batchTbody");
+					const container = document.getElementById("batchResults");
+					const tokens = (input.match(/[-+]?\d+/g) || []).slice(0, 5000);
+					if (tokens.length === 0) {
+						alert("Enter one or more integer epoch timestamps");
+						return;
+					}
+					let rows = "";
+					tokens.forEach((tok, idx) => {
+						try {
+							const r = convertSingle(tok);
+							rows += `<tr>` + `<td>${idx + 1}</td>` + `<td>${tok}</td>` + `<td>${r.unit}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.isoUTC}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.isoLocal}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.unixS}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.unixMs}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.unixNs}</td>` + `<td></td>` + `</tr>`;
+						} catch (err) {
+							rows += `<tr>` + `<td>${idx + 1}</td>` + `<td>${tok}</td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td class="error">${err.message}</td>` + `</tr>`;
+						}
+					});
+					tbody.innerHTML = rows;
+					container.style.display = "block";
+				}
+				function clearBatch() {
+					document.getElementById("batchInput").value = "";
+					document.getElementById("batchTbody").innerHTML = "";
+					document.getElementById("batchResults").style.display = "none";
+				}
+				function downloadBatchCSV() {
+					const table = document.querySelector("#batchResults table");
+					if (!table || table.style.display === "none") {
+						alert("No batch results to export");
+						return;
+					}
+					const rows = Array.from(table.querySelectorAll("tr"));
+					const csv = rows
+						.map((tr) =>
+							Array.from(tr.querySelectorAll("th,td"))
+								.map((td) => {
+									const text = td.textContent.replaceAll('"', '""');
+									return '"' + text + '"';
+								})
+								.join(",")
+						)
+						.join("\n");
+					const blob = new Blob([csv + "\n"], { type: "text/csv;charset=utf-8;" });
+					const url = URL.createObjectURL(blob);
+					const a = document.createElement("a");
+					a.href = url;
+					a.download = "epoch_batch_" + new Date().toISOString().replace(/[:.]/g, "-") + ".csv";
+					document.body.appendChild(a);
+					a.click();
+					document.body.removeChild(a);
+					URL.revokeObjectURL(url);
+				}
+				// Quick paste-to-convert for batch input
+				document.getElementById("batchInput").addEventListener("paste", () => {
+					setTimeout(() => {
+						if (document.getElementById("batchInput").value.trim()) convertBatch();
+					}, 0);
+				});
+				// Initialize current time ticker
+				updateCurrentTime();
+				setInterval(updateCurrentTime, 1000);
+				// Example helper for batch
+				function addExampleToBatch(ts) {
+					const ta = document.getElementById("batchInput");
+					ta.value = (ta.value ? ta.value + "\n" : "") + ts;
+					convertBatch();
+				}
+			</script>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2025-08-10</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

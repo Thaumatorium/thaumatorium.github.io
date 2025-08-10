@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Regex to NFA/DFA Visualizer | The Thaumatorium</title>
+		<meta name="description" content="A tool for visualizing the conversion from regular expressions to NFA/DFA automata" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Regex to NFA/DFA Visualizer" />
+		<meta property="og:description" content="A tool for visualizing the conversion from regular expressions to NFA/DFA automata" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Regex to NFA/DFA Visualizer" />
+		<meta name="twitter:description" content="A tool for visualizing the conversion from regular expressions to NFA/DFA automata" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/epoch">Epoch</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Regex to NFA/DFA Visualizer</h1>
+			<hgroup>
+				<div class="article-meta">
+					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
+					<div class="published-box">Published: <time class="published" datetime="2025-06-05T12:22:00&#43;02:00">2025-06-05</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2025-06-05T12:22:00&#43;02:00">2025-06-05</time></div>
+				</div>
+			</hgroup>
+			<!doctype html>
+			<html lang="en">
+				<head>
+					<meta charset="UTF-8" />
+					<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+					<title>Regex to Automaton Visualizer</title>
+					<style>
+						body {
+							font-family: sans-serif;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							margin: 0;
+							padding: 20px;
+							background-color: #f0f0f0;
+						}
+						.container {
+							background-color: white;
+							padding: 20px;
+							border-radius: 8px;
+							box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+							width: 90%;
+							max-width: 900px;
+							margin-bottom: 20px;
+						}
+						h1 {
+							text-align: center;
+							color: #333;
+						}
+						label {
+							display: block;
+							margin-bottom: 5px;
+							font-weight: bold;
+						}
+						input[type="text"],
+						textarea {
+							width: calc(100% - 22px);
+							padding: 10px;
+							margin-bottom: 15px;
+							border: 1px solid #ccc;
+							border-radius: 4px;
+							font-family: monospace;
+						}
+						button {
+							padding: 10px 15px;
+							margin-right: 10px;
+							border: none;
+							border-radius: 4px;
+							background-color: #007bff;
+							color: white;
+							cursor: pointer;
+							font-size: 16px;
+						}
+						button:hover {
+							background-color: #0056b3;
+						}
+						#automatonCanvas {
+							border: 1px solid #ccc;
+							display: block;
+							margin-top: 20px;
+							background-color: #fff;
+							width: 100%;
+							height: 500px;
+						}
+						.error {
+							color: red;
+							margin-top: 10px;
+							font-weight: bold;
+							white-space: pre-wrap;
+						}
+						.info {
+							margin-top: 10px;
+							font-style: italic;
+							color: #555;
+						}
+						.controls {
+							display: flex;
+							align-items: center;
+							margin-bottom: 15px;
+							flex-wrap: wrap;
+						}
+						.controls > div {
+							margin-right: 20px;
+							margin-bottom: 10px;
+						}
+						.state-key {
+							margin-top: 15px;
+							padding: 10px;
+							border: 1px solid #eee;
+							border-radius: 4px;
+							background-color: #f9f9f9;
+						}
+						.state-key p {
+							margin: 5px 0;
+						}
+						.token-debug {
+							margin-top: 10px;
+							padding: 5px;
+							background-color: #efefef;
+							font-family: monospace;
+							font-size: 0.9em;
+							max-height: 100px;
+							overflow-y: auto;
+							border: 1px solid #ddd;
+						}
+					</style>
+				</head>
+				<body>
+					<div class="container">
+						<h1>Regex to NFA/DFA Visualizer</h1>
+						<label for="regexInput">Enter Regex:</label>
+						<textarea id="regexInput" rows="3" placeholder="e.g., (a|b)*cde+f? or [Gg]ood"></textarea>
+						<div class="controls">
+							<button id="generateNfaBtn">Generate NFA</button>
+							<button id="generateDfaBtn">Generate DFA (from NFA)</button>
+							<div>
+								<label for="epsilonSymbol">Epsilon Symbol:</label>
+								<input type="text" id="epsilonSymbol" value="ε" style="width: 30px; padding: 5px" />
+							</div>
+						</div>
+						<p class="info">Supported: <code>ab</code> (concat), <code>a|b</code> (alt), <code>a*</code> (Kleene star), <code>a+</code> (one+), <code>a?</code> (zero/one), <code>()</code> (grouping). <br />Basic char classes: <code>[abc]</code>, <code>[Gg]</code> (treated as <code>a|b|c</code> or <code>G|g</code>). <br />Most other characters (including Unicode like 'ツ') are treated as literals. <br /><b>Unsupported:</b> Lookarounds, anchors, `\s`, `\d`, `{m,n}`, complex escapes within classes.</p>
+						<div id="errorMessage" class="error"></div>
+						<div id="tokenDebugPre" class="token-debug" style="display: none"><strong>Tokens (Raw):</strong> <span id="tokenOutputPre"></span></div>
+						<div id="tokenDebugPost" class="token-debug" style="display: none"><strong>Tokens (Processed for Postfix):</strong> <span id="tokenOutputPost"></span></div>
+						<div id="postfixDebug" class="token-debug" style="display: none"><strong>Postfix:</strong> <span id="postfixOutput"></span></div>
+						<canvas id="automatonCanvas"></canvas>
+						<div class="state-key">
+							<p><strong>Key:</strong></p>
+							<p>
+								<svg width="20" height="20" style="vertical-align: middle">
+									<circle cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="#lightblue"></circle>
+								</svg>
+								Normal State
+							</p>
+							<p>
+								<svg width="20" height="20" style="vertical-align: middle">
+									<circle cx="10" cy="10" r="8" stroke="black" stroke-width="1" fill="#lightgreen"></circle>
+									<circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="none"></circle>
+								</svg>
+								Accept State
+							</p>
+							<p>➔ Start State</p>
+						</div>
+					</div>
+					<script>
+						// --- Global Variables ---
+						let stateIdCounter = 0;
+						const EPSILON = () => document.getElementById("epsilonSymbol").value || "ε";
+						// --- Debug Output Elements ---
+						const tokenOutputPreEl = document.getElementById("tokenOutputPre");
+						const tokenOutputPostEl = document.getElementById("tokenOutputPost");
+						const postfixOutputEl = document.getElementById("postfixOutput");
+						const tokenDebugPreDiv = document.getElementById("tokenDebugPre");
+						const tokenDebugPostDiv = document.getElementById("tokenDebugPost");
+						const postfixDebugDiv = document.getElementById("postfixDebug");
+						function showDebugInfo(tokensPre, tokensPost, postfix) {
+							tokenOutputPreEl.textContent = JSON.stringify(tokensPre);
+							tokenOutputPostEl.textContent = JSON.stringify(tokensPost);
+							postfixOutputEl.textContent = postfix;
+							tokenDebugPreDiv.style.display = "block";
+							tokenDebugPostDiv.style.display = "block";
+							postfixDebugDiv.style.display = "block";
+						}
+						function clearDebugInfo() {
+							tokenDebugPreDiv.style.display = "none";
+							tokenDebugPostDiv.style.display = "none";
+							postfixDebugDiv.style.display = "none";
+						}
+						// --- NFA/DFA Data Structures ---
+						class State {
+							constructor(id, isAccepting = false) {
+								this.id = id;
+								this.isAccepting = isAccepting;
+								this.transitions = new Map(); // symbol -> Set of next state IDs
+							}
+							addTransition(symbol, nextStateId) {
+								if (!this.transitions.has(symbol)) {
+									this.transitions.set(symbol, new Set());
+								}
+								this.transitions.get(symbol).add(nextStateId);
+							}
+						}
+						class Automaton {
+							constructor() {
+								this.states = new Map(); // id -> State object
+								this.startStateId = null;
+								this.acceptStateIds = new Set();
+								this.alphabet = new Set();
+							}
+							addState(isAccepting = false) {
+								const id = stateIdCounter++;
+								const state = new State(id, isAccepting);
+								this.states.set(id, state);
+								if (isAccepting) this.acceptStateIds.add(id);
+								return id;
+							}
+							setStartState(id) {
+								this.startStateId = id;
+							}
+							setAcceptState(id, isAccepting = true) {
+								const state = this.states.get(id);
+								if (state) {
+									state.isAccepting = isAccepting;
+									if (isAccepting) this.acceptStateIds.add(id);
+									else this.acceptStateIds.delete(id);
+								}
+							}
+							addTransition(fromId, toId, symbol) {
+								const fromState = this.states.get(fromId);
+								if (fromState) {
+									fromState.addTransition(symbol, toId);
+									if (symbol !== EPSILON()) this.alphabet.add(symbol);
+								}
+							}
+						}
+						// --- Regex Tokenizer & Preprocessing ---
+						const REGEX_OPERATORS = ["|", "*", "+", "?", "(", ")"];
+						const CONCAT_OPERATOR = "."; // Explicit concatenation character
+						function isMetaCharacter(char) {
+							return REGEX_OPERATORS.includes(char) || char === "[" || char === "]";
+						}
+						function tokenizeRegex(regex) {
+							const tokens = [];
+							let i = 0;
+							while (i < regex.length) {
+								const char = regex[i];
+								if (char === "[") {
+									// Character class
+									let classContent = "";
+									i++;
+									let depth = 1;
+									while (i < regex.length) {
+										if (regex[i] === "\\" && i + 1 < regex.length) {
+											classContent += regex[i] + regex[i + 1];
+											i += 2;
+											continue;
+										}
+										if (regex[i] === "]") {
+											depth--;
+											if (depth === 0) break;
+										} else if (regex[i] === "[") {
+											depth++;
+										}
+										classContent += regex[i];
+										i++;
+									}
+									if (depth !== 0 || i >= regex.length || regex[i] !== "]") {
+										throw new Error("Unterminated or malformed character class starting with: [" + classContent.substring(0, 10));
+									}
+									tokens.push(`[${classContent}]`);
+									i++;
+								} else if (char === "\\" && i + 1 < regex.length) {
+									// Escaped character
+									tokens.push(char + regex[i + 1]);
+									i += 2;
+								} else if (REGEX_OPERATORS.includes(char)) {
+									tokens.push(char);
+									i++;
+								} else {
+									// Literal character
+									tokens.push(char);
+									i++;
+								}
+							}
+							return tokens;
+						}
+						function addExplicitConcat(tokens) {
+							const result = [];
+							if (!tokens || tokens.length === 0) return result;
+							for (let i = 0; i < tokens.length; i++) {
+								result.push(tokens[i]);
+								if (i < tokens.length - 1) {
+									const currentToken = tokens[i];
+									const nextToken = tokens[i + 1];
+									let currentCanPrecedeConcat = false;
+									if (currentToken === ")" || currentToken === "*" || currentToken === "+" || currentToken === "?") {
+										currentCanPrecedeConcat = true;
+									} else if (currentToken.startsWith("[") && currentToken.endsWith("]")) {
+										currentCanPrecedeConcat = true;
+									} else if (!REGEX_OPERATORS.includes(currentToken) && currentToken !== "(") {
+										// Literal
+										currentCanPrecedeConcat = true;
+									}
+									let nextCanFollowConcat = false;
+									if (nextToken === "(") {
+										nextCanFollowConcat = true;
+									} else if (nextToken.startsWith("[") && nextToken.endsWith("]")) {
+										nextCanFollowConcat = true;
+									} else if (!REGEX_OPERATORS.includes(nextToken) && nextToken !== ")") {
+										// Literal
+										nextCanFollowConcat = true;
+									}
+									if (currentCanPrecedeConcat && nextCanFollowConcat) {
+										result.push(CONCAT_OPERATOR);
+									}
+								}
+							}
+							return result;
+						}
+						function infixToPostfix(tokensWithConcat) {
+							const precedence = { "|": 1, [CONCAT_OPERATOR]: 2, "?": 3, "*": 3, "+": 3 };
+							const output = [];
+							const operatorStack = [];
+							tokensWithConcat.forEach((token) => {
+								if (token.startsWith("[") && token.endsWith("]")) {
+									output.push(token);
+								} else if (token.length === 2 && token[0] === "\\") {
+									output.push(token);
+								} else if (!REGEX_OPERATORS.includes(token) && token !== CONCAT_OPERATOR) {
+									// Literal operand
+									output.push(token);
+								} else if (token === "(") {
+									operatorStack.push(token);
+								} else if (token === ")") {
+									while (operatorStack.length && operatorStack[operatorStack.length - 1] !== "(") {
+										output.push(operatorStack.pop());
+									}
+									if (operatorStack.length === 0 || operatorStack[operatorStack.length - 1] !== "(") {
+										throw new Error("Mismatched parentheses");
+									}
+									operatorStack.pop();
+								} else {
+									// Operator
+									while (operatorStack.length && operatorStack[operatorStack.length - 1] !== "(" && precedence[operatorStack[operatorStack.length - 1]] >= precedence[token]) {
+										output.push(operatorStack.pop());
+									}
+									operatorStack.push(token);
+								}
+							});
+							while (operatorStack.length) {
+								const op = operatorStack.pop();
+								if (op === "(") throw new Error("Mismatched parentheses");
+								output.push(op);
+							}
+							return output.join(" ");
+						}
+						// --- Thompson's Construction (Postfix to NFA) ---
+						function postfixToNFA(postfix) {
+							stateIdCounter = 0;
+							const nfaStack = [];
+							const tokens = postfix.split(" ").filter((t) => t.length > 0);
+							tokens.forEach((token) => {
+								if (token === CONCAT_OPERATOR) {
+									if (nfaStack.length < 2) throw new Error("Invalid postfix for concatenation");
+									const nfa2 = nfaStack.pop();
+									const nfa1 = nfaStack.pop();
+									const idOffset = stateIdCounter;
+									const nfa2StatesCloned = new Map();
+									nfa2.states.forEach((s, oldId) => {
+										const newS = new State(oldId + idOffset, s.isAccepting);
+										s.transitions.forEach((nextIds, sym) => {
+											nextIds.forEach((nid) => newS.addTransition(sym, nid + idOffset));
+										});
+										nfa2StatesCloned.set(oldId + idOffset, newS);
+										nfa1.states.set(oldId + idOffset, newS);
+									});
+									const nfa2StartIdCloned = nfa2.startStateId + idOffset;
+									const nfa2AcceptIdsCloned = new Set(Array.from(nfa2.acceptStateIds).map((id) => id + idOffset));
+									nfa1.acceptStateIds.forEach((accId1) => {
+										nfa1.addTransition(accId1, nfa2StartIdCloned, EPSILON());
+										nfa1.setAcceptState(accId1, false);
+									});
+									nfa1.acceptStateIds = nfa2AcceptIdsCloned;
+									nfa1.alphabet = new Set([...nfa1.alphabet, ...nfa2.alphabet]);
+									nfaStack.push(nfa1);
+								} else if (token === "|") {
+									if (nfaStack.length < 2) throw new Error("Invalid postfix for alternation");
+									const nfa2 = nfaStack.pop();
+									const nfa1 = nfaStack.pop();
+									const nfa = new Automaton();
+									const start = nfa.addState();
+									nfa.setStartState(start);
+									nfa1.states.forEach((s, id) => nfa.states.set(id, s));
+									nfa2.states.forEach((s, id) => nfa.states.set(id, s));
+									nfa.addTransition(start, nfa1.startStateId, EPSILON());
+									nfa.addTransition(start, nfa2.startStateId, EPSILON());
+									const accept = nfa.addState(true);
+									nfa1.acceptStateIds.forEach((accId) => {
+										nfa.setAcceptState(accId, false);
+										nfa.addTransition(accId, accept, EPSILON());
+									});
+									nfa2.acceptStateIds.forEach((accId) => {
+										nfa.setAcceptState(accId, false);
+										nfa.addTransition(accId, accept, EPSILON());
+									});
+									nfa.alphabet = new Set([...nfa1.alphabet, ...nfa2.alphabet]);
+									nfaStack.push(nfa);
+								} else if (token === "*") {
+									// Kleene Star
+									if (nfaStack.length < 1) throw new Error("Invalid postfix for Kleene star");
+									const nfa1 = nfaStack.pop();
+									const nfa = new Automaton();
+									const start = nfa.addState();
+									const accept = nfa.addState(true);
+									nfa.setStartState(start);
+									nfa1.states.forEach((s, id) => nfa.states.set(id, s));
+									nfa.addTransition(start, nfa1.startStateId, EPSILON());
+									nfa.addTransition(start, accept, EPSILON());
+									nfa1.acceptStateIds.forEach((accId) => {
+										nfa.setAcceptState(accId, false);
+										nfa.addTransition(accId, nfa1.startStateId, EPSILON());
+										nfa.addTransition(accId, accept, EPSILON());
+									});
+									nfa.alphabet = new Set(nfa1.alphabet);
+									nfaStack.push(nfa);
+								} else if (token === "+") {
+									// One or more
+									if (nfaStack.length < 1) throw new Error("Invalid postfix for Kleene plus");
+									const nfa1 = nfaStack.pop();
+									const nfa = new Automaton();
+									nfa1.states.forEach((s, id) => nfa.states.set(id, s));
+									nfa.setStartState(nfa1.startStateId);
+									const accept = nfa.addState(true);
+									nfa1.acceptStateIds.forEach((accId) => {
+										nfa.setAcceptState(accId, false);
+										nfa.addTransition(accId, nfa1.startStateId, EPSILON());
+										nfa.addTransition(accId, accept, EPSILON());
+									});
+									nfa.alphabet = new Set(nfa1.alphabet);
+									nfaStack.push(nfa);
+								} else if (token === "?") {
+									// Zero or one
+									if (nfaStack.length < 1) throw new Error("Invalid postfix for optional");
+									const nfa1 = nfaStack.pop();
+									const nfa = new Automaton();
+									const start = nfa.addState();
+									const accept = nfa.addState(true);
+									nfa.setStartState(start);
+									nfa1.states.forEach((s, id) => nfa.states.set(id, s));
+									nfa.addTransition(start, nfa1.startStateId, EPSILON());
+									nfa1.acceptStateIds.forEach((accId) => {
+										nfa.setAcceptState(accId, false);
+										nfa.addTransition(accId, accept, EPSILON());
+									});
+									nfa.addTransition(start, accept, EPSILON());
+									nfa.alphabet = new Set(nfa1.alphabet);
+									nfaStack.push(nfa);
+								} else {
+									// Operand (literal or character class)
+									const nfa = new Automaton();
+									const start = nfa.addState();
+									const accept = nfa.addState(true);
+									nfa.setStartState(start);
+									if (token.startsWith("[") && token.endsWith("]")) {
+										const classContent = token.substring(1, token.length - 1);
+										if (classContent.length === 0) {
+											throw new Error("Empty character class not allowed.");
+										}
+										let k = 0;
+										while (k < classContent.length) {
+											let charSymbol = classContent[k];
+											if (charSymbol === "\\" && k + 1 < classContent.length) {
+												charSymbol = classContent[k + 1];
+												k++;
+											}
+											nfa.addTransition(start, accept, charSymbol);
+											k++;
+										}
+									} else if (token.length === 2 && token[0] === "\\") {
+										nfa.addTransition(start, accept, token[1]);
+									} else {
+										// Simple literal
+										nfa.addTransition(start, accept, token);
+									}
+									nfaStack.push(nfa);
+								}
+							});
+							if (nfaStack.length !== 1) {
+								console.error("NFA Stack after postfix processing:", nfaStack);
+								throw new Error("Invalid postfix expression or construction error. Stack size: " + nfaStack.length);
+							}
+							return nfaStack[0];
+						}
+						// --- NFA to DFA Conversion (Subset Construction) ---
+						function nfaToDfa(nfa) {
+							stateIdCounter = 0;
+							const dfa = new Automaton();
+							const alphabet = Array.from(nfa.alphabet);
+							const epsilonClosure = (nfaStatesSet) => {
+								const closure = new Set(nfaStatesSet);
+								const stack = [...nfaStatesSet];
+								while (stack.length > 0) {
+									const sId = stack.pop();
+									const nfaState = nfa.states.get(sId);
+									if (nfaState && nfaState.transitions.has(EPSILON())) {
+										nfaState.transitions.get(EPSILON()).forEach((nextId) => {
+											if (!closure.has(nextId)) {
+												closure.add(nextId);
+												stack.push(nextId);
+											}
+										});
+									}
+								}
+								return closure;
+							};
+							const move = (nfaStatesSet, symbol) => {
+								const reachableStates = new Set();
+								nfaStatesSet.forEach((sId) => {
+									const nfaState = nfa.states.get(sId);
+									if (nfaState && nfaState.transitions.has(symbol)) {
+										nfaState.transitions.get(symbol).forEach((nextId) => {
+											reachableStates.add(nextId);
+										});
+									}
+								});
+								return reachableStates;
+							};
+							if (nfa.startStateId === null || !nfa.states.has(nfa.startStateId)) {
+								throw new Error("NFA has no start state or start state is invalid.");
+							}
+							const q0_nfa = epsilonClosure(new Set([nfa.startStateId]));
+							const dfaStatesMap = new Map();
+							const unmarkedDfaStates = [];
+							const startDfaStateId = dfa.addState();
+							dfa.setStartState(startDfaStateId);
+							const q0_nfa_key = Array.from(q0_nfa)
+								.sort((a, b) => a - b)
+								.join(",");
+							dfaStatesMap.set(q0_nfa_key, { dfaId: startDfaStateId, nfaStates: q0_nfa });
+							unmarkedDfaStates.push(q0_nfa_key);
+							if (Array.from(q0_nfa).some((nfaId) => nfa.acceptStateIds.has(nfaId))) {
+								dfa.setAcceptState(startDfaStateId, true);
+							}
+							dfa.alphabet = new Set(nfa.alphabet);
+							while (unmarkedDfaStates.length > 0) {
+								const currentNfaStatesKey = unmarkedDfaStates.shift();
+								const { dfaId: currentDfaStateId, nfaStates: currentNfaStatesSet } = dfaStatesMap.get(currentNfaStatesKey);
+								alphabet.forEach((symbol) => {
+									const moveResult = move(currentNfaStatesSet, symbol);
+									if (moveResult.size === 0) return;
+									const targetNfaStatesSet = epsilonClosure(moveResult);
+									const targetNfaStatesKey = Array.from(targetNfaStatesSet)
+										.sort((a, b) => a - b)
+										.join(",");
+									let targetDfaStateId;
+									if (dfaStatesMap.has(targetNfaStatesKey)) {
+										targetDfaStateId = dfaStatesMap.get(targetNfaStatesKey).dfaId;
+									} else {
+										targetDfaStateId = dfa.addState();
+										dfaStatesMap.set(targetNfaStatesKey, { dfaId: targetDfaStateId, nfaStates: targetNfaStatesSet });
+										unmarkedDfaStates.push(targetNfaStatesKey);
+										if (Array.from(targetNfaStatesSet).some((nfaId) => nfa.acceptStateIds.has(nfaId))) {
+											dfa.setAcceptState(targetDfaStateId, true);
+										}
+									}
+									dfa.addTransition(currentDfaStateId, targetDfaStateId, symbol);
+								});
+							}
+							return dfa;
+						}
+						// --- Canvas Drawing ---
+						const canvas = document.getElementById("automatonCanvas");
+						const canvasContainer = canvas.parentElement;
+						const ctx = canvas.getContext("2d");
+						const STATE_RADIUS = 18;
+						const ARROW_SIZE = 7;
+						function resizeCanvas() {
+							canvas.width = canvasContainer.offsetWidth * 0.98;
+							// canvas.height = 600; // Or dynamic height
+						}
+						window.addEventListener("resize", () => {
+							resizeCanvas();
+							if (window.currentAutomatonForRedraw) {
+								drawAutomaton(window.currentAutomatonForRedraw);
+							}
+						});
+						function drawAutomaton(automaton, type = "Automaton") {
+							window.currentAutomatonForRedraw = automaton;
+							resizeCanvas();
+							ctx.clearRect(0, 0, canvas.width, canvas.height);
+							if (!automaton || !automaton.states || automaton.states.size === 0) {
+								document.getElementById("errorMessage").textContent = "No automaton to draw.";
+								return;
+							}
+							document.getElementById("errorMessage").textContent = "";
+							const stateCoords = new Map();
+							const numStates = automaton.states.size;
+							const centerX = canvas.width / 2;
+							const centerY = canvas.height / 2;
+							let layoutRadius = Math.min(canvas.width, canvas.height) / 2.5 - STATE_RADIUS * 2;
+							if (numStates > 15) layoutRadius *= 1.2;
+							if (numStates > 25) layoutRadius *= 1.2;
+							layoutRadius = Math.max(layoutRadius, STATE_RADIUS * (numStates / Math.PI));
+							let i = 0;
+							const sortedStateIds = Array.from(automaton.states.keys()).sort((a, b) => a - b);
+							sortedStateIds.forEach((id) => {
+								let x, y;
+								if (numStates <= 1) {
+									x = centerX;
+									y = centerY;
+								} else if (id === automaton.startStateId && numStates > 1) {
+									x = Math.max(STATE_RADIUS * 2, centerX - layoutRadius * 0.9);
+									y = centerY;
+								} else {
+									const effectiveIdx = id === automaton.startStateId ? -1 : sortedStateIds.indexOf(id);
+									const effectiveNumStates = automaton.states.has(automaton.startStateId) && numStates > 1 ? numStates - 1 : numStates;
+									let angleOffset = 0;
+									if (id === automaton.startStateId) angleOffset = Math.PI;
+									const angle = (effectiveIdx / Math.max(1, effectiveNumStates)) * 2 * Math.PI + angleOffset;
+									x = centerX + layoutRadius * Math.cos(angle);
+									y = centerY + layoutRadius * Math.sin(angle);
+								}
+								stateCoords.set(id, { x: Math.round(x), y: Math.round(y) });
+								i++;
+							});
+							if (automaton.startStateId !== null && !stateCoords.has(automaton.startStateId) && automaton.states.has(automaton.startStateId)) {
+								stateCoords.set(automaton.startStateId, { x: centerX - layoutRadius, y: centerY });
+							}
+							// Draw transitions
+							automaton.states.forEach((fromState, fromId) => {
+								const p1 = stateCoords.get(fromId);
+								if (!p1) {
+									console.warn(`No coords for fromId ${fromId}`);
+									return;
+								}
+								const transitionsByTarget = new Map();
+								fromState.transitions.forEach((toIds, symbol) => {
+									toIds.forEach((toId) => {
+										if (!transitionsByTarget.has(toId)) {
+											transitionsByTarget.set(toId, []);
+										}
+										transitionsByTarget.get(toId).push(symbol);
+									});
+								});
+								transitionsByTarget.forEach((symbols, toId) => {
+									const p2 = stateCoords.get(toId);
+									if (!p2) {
+										console.warn(`No coords for toId ${toId}`);
+										return;
+									}
+									const label = symbols.join(",");
+									drawTransition(p1, p2, label, fromId === toId);
+								});
+							});
+							// Draw states on top
+							sortedStateIds.forEach((id) => {
+								const state = automaton.states.get(id);
+								const pos = stateCoords.get(id);
+								if (!pos || !state) {
+									console.warn(`Missing state or pos for id ${id}`);
+									return;
+								}
+								drawState(pos.x, pos.y, id.toString(), state.isAccepting, id === automaton.startStateId);
+							});
+						}
+						function drawState(x, y, label, isAccepting, isStart) {
+							ctx.beginPath();
+							ctx.arc(x, y, STATE_RADIUS, 0, 2 * Math.PI);
+							ctx.fillStyle = isAccepting ? "#lightgreen" : "#lightblue";
+							ctx.fill();
+							ctx.strokeStyle = "black";
+							ctx.lineWidth = 1.5;
+							ctx.stroke();
+							if (isAccepting) {
+								ctx.beginPath();
+								ctx.arc(x, y, STATE_RADIUS - 5, 0, 2 * Math.PI);
+								ctx.stroke();
+							}
+							ctx.fillStyle = "black";
+							ctx.textAlign = "center";
+							ctx.textBaseline = "middle";
+							ctx.font = "11px Arial";
+							ctx.fillText(label, x, y);
+							if (isStart && automatonCanvas.width > 0) {
+								ctx.beginPath();
+								const startArrowLength = STATE_RADIUS * 1.5;
+								const startArrowX = x - STATE_RADIUS - ARROW_SIZE;
+								ctx.moveTo(startArrowX - startArrowLength, y);
+								ctx.lineTo(startArrowX, y);
+								ctx.stroke();
+								ctx.beginPath();
+								ctx.moveTo(startArrowX, y);
+								ctx.lineTo(startArrowX - ARROW_SIZE, y - ARROW_SIZE / 2);
+								ctx.lineTo(startArrowX - ARROW_SIZE, y + ARROW_SIZE / 2);
+								ctx.closePath();
+								ctx.fill();
+							}
+						}
+						function drawTransition(p1, p2, label, isSelfLoop) {
+							ctx.strokeStyle = "black";
+							ctx.fillStyle = "black";
+							ctx.lineWidth = 1;
+							ctx.font = "10px Arial";
+							const controlPointOffset = 25;
+							if (isSelfLoop) {
+								const loopRadius = STATE_RADIUS * 0.8;
+								const angle = -Math.PI / 2;
+								const circleCenterX = p1.x + loopRadius * Math.cos(angle);
+								const circleCenterY = p1.y + loopRadius * Math.sin(angle) - loopRadius;
+								ctx.beginPath();
+								ctx.arc(circleCenterX, circleCenterY, loopRadius, Math.PI * 0.2, Math.PI * 1.8);
+								ctx.stroke();
+								const arrowAngle = Math.PI * 0.25;
+								const arrowX = circleCenterX + loopRadius * Math.cos(arrowAngle);
+								const arrowY = circleCenterY + loopRadius * Math.sin(arrowAngle);
+								const tangentAngle = arrowAngle + Math.PI / 2;
+								drawArrowheadCoords(arrowX, arrowY, tangentAngle);
+								ctx.fillText(label, circleCenterX, circleCenterY - loopRadius - ARROW_SIZE - 2);
+							} else {
+								const angle = Math.atan2(p2.y - p1.y, p2.x - p1.x);
+								const startX = p1.x + Math.cos(angle) * STATE_RADIUS;
+								const startY = p1.y + Math.sin(angle) * STATE_RADIUS;
+								const endX = p2.x - Math.cos(angle) * STATE_RADIUS;
+								const endY = p2.y - Math.sin(angle) * STATE_RADIUS;
+								let midOffsetX = 0;
+								let midOffsetY = 0;
+								const midX = (startX + endX) / 2 + midOffsetX;
+								const midY = (startY + endY) / 2 + midOffsetY;
+								ctx.beginPath();
+								ctx.moveTo(startX, startY);
+								if (midOffsetX !== 0 || midOffsetY !== 0) {
+									ctx.quadraticCurveTo(midX + -midOffsetY * 0.3, midY + midOffsetX * 0.3, endX, endY);
+								} else {
+									ctx.lineTo(endX, endY);
+								}
+								ctx.stroke();
+								drawArrowheadCoords(endX, endY, angle);
+								const textX = midX + Math.sin(angle) * 10;
+								const textY = midY - Math.cos(angle) * 10;
+								ctx.fillText(label, textX, textY);
+							}
+						}
+						function drawArrowheadCoords(x, y, angle) {
+							ctx.beginPath();
+							ctx.moveTo(x, y);
+							ctx.lineTo(x - ARROW_SIZE * Math.cos(angle - Math.PI / 6), y - ARROW_SIZE * Math.sin(angle - Math.PI / 6));
+							ctx.lineTo(x - ARROW_SIZE * Math.cos(angle + Math.PI / 6), y - ARROW_SIZE * Math.sin(angle + Math.PI / 6));
+							ctx.closePath();
+							ctx.fill();
+						}
+						// --- Event Listeners ---
+						let currentNFA = null;
+						window.currentAutomatonForRedraw = null;
+						document.getElementById("generateNfaBtn").addEventListener("click", () => {
+							const regexStr = document.getElementById("regexInput").value;
+							clearDebugInfo();
+							if (!regexStr) {
+								document.getElementById("errorMessage").textContent = "Please enter a regex.";
+								return;
+							}
+							try {
+								document.getElementById("errorMessage").textContent = "";
+								const rawTokens = tokenizeRegex(regexStr);
+								const tokensWithConcat = addExplicitConcat(rawTokens);
+								const postfixStr = infixToPostfix(tokensWithConcat);
+								showDebugInfo(rawTokens, tokensWithConcat, postfixStr);
+								currentNFA = postfixToNFA(postfixStr);
+								drawAutomaton(currentNFA, "NFA");
+							} catch (e) {
+								document.getElementById("errorMessage").textContent = "Error: " + e.message + (e.stack ? "\n" + e.stack.substring(0, 300) : "");
+								console.error(e);
+								currentNFA = null;
+								window.currentAutomatonForRedraw = null;
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+							}
+						});
+						document.getElementById("generateDfaBtn").addEventListener("click", () => {
+							clearDebugInfo();
+							if (!currentNFA) {
+								document.getElementById("errorMessage").textContent = "Please generate an NFA first.";
+								return;
+							}
+							if (currentNFA.states.size === 0 || currentNFA.startStateId === null) {
+								document.getElementById("errorMessage").textContent = "Cannot convert empty or invalid NFA to DFA.";
+								return;
+							}
+							try {
+								document.getElementById("errorMessage").textContent = "";
+								const dfa = nfaToDfa(currentNFA);
+								drawAutomaton(dfa, "DFA");
+							} catch (e) {
+								document.getElementById("errorMessage").textContent = "Error converting to DFA: " + e.message + (e.stack ? "\n" + e.stack.substring(0, 300) : "");
+								console.error(e);
+								window.currentAutomatonForRedraw = null;
+								ctx.clearRect(0, 0, canvas.width, canvas.height);
+							}
+						});
+						// Initial setup
+						resizeCanvas();
+						ctx.clearRect(0, 0, canvas.width, canvas.height);
+					</script>
+				</body>
+			</html>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2025-06-05</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
