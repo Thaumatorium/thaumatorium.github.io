@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Dutch murders between 2017-2021 | The Thaumatorium</title>
+		<meta name="description" content="An analysis of the relationships between perpetrators and victims in Dutch murder cases from 2017 to 2021" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Dutch murders between 2017-2021" />
+		<meta property="og:description" content="An analysis of the relationships between perpetrators and victims in Dutch murder cases from 2017 to 2021" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Dutch murders between 2017-2021" />
+		<meta name="twitter:description" content="An analysis of the relationships between perpetrators and victims in Dutch murder cases from 2017 to 2021" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/epoch">Epoch</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Dutch murders between 2017-2021</h1>
+			<hgroup>
+				<div class="article-meta">
+					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
+					<div class="published-box">Published: <time class="published" datetime="2025-08-21T23:28:52&#43;02:00">2025-08-21</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2025-08-21T23:28:52&#43;02:00">2025-08-21</time></div>
+				</div>
+			</hgroup>
+			<p>The Dutch government (OCW - Onderwijs, Cultuur en Wetenschap) has been making <a href="https://www.ocwincijfers.nl/sectoren/emancipatie/sociale-veiligheid/sociale-veiligheid">this one chart</a> available, which bothers me.</p>
+			<p>Here is my version (using the same data) - the self-documented code can be found <a href="./relative_code.py">here</a>.</p>
+			<p><img src="./relatie-dader-slachtoffer-stacked-percent-2017-2021.svg" alt="SVG chart" /></p>
+			<p>It shows the relations from the perpetrator to the victims in Dutch murder cases between 2017 and 2021. While the chart is informative and important around the current discussions regarding <em>femicide</em> (the killing of women because of their gender), it presents the data in relative terms (percentages), which can be misleading without the context of absolute numbers.</p>
+			<p>To better understand the situation, I decided to create a stacked bar chart that displays the <em>absolute</em> numbers of victims, separated by gender and relationship to the perpetrator as before. This allows for an improved comparison and highlights the scale of the issue more effectively.</p>
+			<p>What I did was to grab the data from the original chart (available under the first URL) and used ChatGPT to generate me the chart below - <a href="absolute_code.py">self-documented code available as well</a></p>
+			<p><img src="./relatie-dader-slachtoffer-stacked-2017-2021.svg" alt="SVG chart" /></p>
+			<p>This shows a slightly different story, as men get killed as often, if not more, by &ldquo;Kennis of vriend(in)&rdquo; than women do by their (ex-)partners.</p>
+			<p>
+				Now here&rsquo;s the important difference between those numbers: The <em>supposed</em> reason why those men and women got killed. I say <em>supposed</em>, as I have not found any data on the <em><strong>reasons</strong></em> why people were killed. The theory is that the women were generally killed for being a woman (femicide), while the reasons the men were killed were more diverse (homicide - killing of a person who just happens to be a man, in this case).
+			</p>
+			<hr />
+			<p>I generated these charts to show the data in a more informative way, but I am not an expert in this field, nor do I have the complete context, as I&rsquo;m missing the reasons for the killings.</p>
+			<p>To be continued, I guess.</p>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2025-08-21</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
