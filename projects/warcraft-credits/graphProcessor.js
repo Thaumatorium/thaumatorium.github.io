@@ -1,21 +1,13 @@
 import { generatePersonId, getGameNameFromData } from "./dataUtils.js";
-import { gameTitleMap, NODE_TYPE_PERSON, NODE_TYPE_GAME, LINK_TYPE_WORKED_ON, CATEGORY_GAME, CATEGORY_SINGLE_GAME, CATEGORY_BOTH, CATEGORY_GAME1_ONLY, CATEGORY_GAME2_ONLY, CATEGORY_OTHER, DEFAULT_ROLE } from "./config.js";
+import { gameTitleMap, NODE_TYPE_PERSON, NODE_TYPE_GAME, LINK_TYPE_WORKED_ON, CATEGORY_GAME, CATEGORY_SINGLE_GAME, CATEGORY_MULTI_GAME, DEFAULT_ROLE } from "./config.js";
 
-/**
- * Generates a stable ID for a Game node based on its name for D3.
- * @param {string} gameName - The name of the game.
- * @returns {string} A generated ID string (e.g., "game_warcraft_1_orcs_vs_humans").
- */
-function generateGameId(gameName) {
-	if (!gameName || typeof gameName !== "string" || gameName.trim() === "") {
-		return "game_invalid_unknown";
-	}
-	const sanitizedName = gameName
+function generateGameId(gameName, filename, index) {
+	const base = `${gameName || filename || "unknown"}_${filename || index || "game"}`
 		.toLowerCase()
 		.replace(/[^a-z0-9_]+/g, "_")
 		.replace(/[ _]+/g, "_")
 		.replace(/^_+|_+$/g, "");
-	return sanitizedName ? `game_${sanitizedName}` : "game_invalid_unknown";
+	return `game_${base || `fallback_${index}`}`;
 }
 
 function collectRoles(personObj) {
@@ -39,373 +31,251 @@ function addPersonToMap(peopleMap, allPeopleNames, personObj) {
 	peopleMap.set(name, { roles });
 }
 
-function buildRoleDetails(personData1, personData2, isSameGame) {
-	const game1Roles = new Set(personData1?.roles ?? []);
-	const game2Roles = isSameGame ? new Set(personData1?.roles ?? []) : new Set(personData2?.roles ?? []);
-	const sharedRoles = new Set();
-	const game1OnlyRoles = new Set();
-	const game2OnlyRoles = new Set();
-	const allRoles = new Set();
-
-	game1Roles.forEach((role) => allRoles.add(role));
-	game2Roles.forEach((role) => allRoles.add(role));
-
-	if (isSameGame) {
-		game1Roles.forEach((role) => sharedRoles.add(role));
-	} else {
-		game1Roles.forEach((role) => {
-			if (game2Roles.has(role)) sharedRoles.add(role);
-			else game1OnlyRoles.add(role);
-		});
-		game2Roles.forEach((role) => {
-			if (!game1Roles.has(role)) game2OnlyRoles.add(role);
-		});
+function getPrimaryRole(contributions) {
+	for (const contribution of contributions) {
+		for (const role of contribution.roles) {
+			if (role && role !== DEFAULT_ROLE) return role;
+		}
 	}
-
-	return {
-		allRoles,
-		game1Roles,
-		game2Roles,
-		sharedRoles,
-		game1OnlyRoles,
-		game2OnlyRoles,
-	};
+	return contributions[0]?.roles?.[0] ?? DEFAULT_ROLE;
 }
 
-/**
- * Extracts and normalizes the primary role for a person based on their roles array.
- * Takes the first valid role, otherwise returns DEFAULT_ROLE.
- * @param {Array<string> | undefined} roles - The array of roles for a person (e.g., ["Role1", "Role2"]).
- * @returns {string} The normalized primary role or DEFAULT_ROLE.
- */
-function getPrimaryRole(roles) {
-	if (Array.isArray(roles) && roles.length > 0 && roles[0] && typeof roles[0] === "string") {
-		const role = roles[0].trim();
-		return role ? role : DEFAULT_ROLE;
-	}
-	return DEFAULT_ROLE;
-}
-
-/**
- * Checks if a person matches the provided name and role filters,
- * handling multiple comma-separated terms.
- *
- * @param {string} personName - The name of the person.
- * @param {Set<string>} personRoles - A Set of roles the person has.
- * @param {object} filters - Filter criteria: { name: { terms: string[], mode: string }, role: { terms: string[], mode: string } }.
- * @returns {boolean} True if the person passes all active filters, false otherwise.
- */
 function passesFilters(personName, personRoles, filters) {
-	const nameFilterTerms = filters.name.terms.map((t) => t.toLowerCase());
+	const nameFilterTerms = filters.name.terms.map((term) => term.toLowerCase());
 	const nameFilterMode = filters.name.mode;
-	const roleFilterTerms = filters.role.terms.map((t) => t.toLowerCase());
+	const roleFilterTerms = filters.role.terms.map((term) => term.toLowerCase());
 	const roleFilterMode = filters.role.mode;
 
 	let namePass = true;
 	if (nameFilterTerms.length > 0) {
 		const lowerPersonName = personName.toLowerCase();
 		switch (nameFilterMode) {
-			case "contains": // OR logic: Pass if name contains ANY term
+			case "contains":
 				namePass = nameFilterTerms.some((term) => lowerPersonName.includes(term));
 				break;
-			case "not_contains": // AND logic: Pass if name contains NONE of the terms
+			case "not_contains":
 				namePass = !nameFilterTerms.some((term) => lowerPersonName.includes(term));
 				break;
-			case "exact": // OR logic: Pass if name exactly matches ANY term
+			case "exact":
 				namePass = nameFilterTerms.some((term) => lowerPersonName === term);
 				break;
-			case "not_exact": // AND logic: Pass if name exactly matches NONE of the terms
+			case "not_exact":
 				namePass = !nameFilterTerms.some((term) => lowerPersonName === term);
 				break;
 		}
 	}
 
-	// If name filter fails, no need to check roles
 	if (!namePass) return false;
 
 	let rolePass = true;
 	if (roleFilterTerms.length > 0) {
-		const lowerPersonRoles = Array.from(personRoles).map((r) => r.toLowerCase());
-
-		// Handle cases where the person has no roles
+		const lowerPersonRoles = Array.from(personRoles).map((role) => role.toLowerCase());
 		if (lowerPersonRoles.length === 0) {
-			// If filtering for inclusion ('contains', 'exact'), having no roles means automatic fail.
-			// If filtering for exclusion ('not_contains', 'not_exact'), having no roles means automatic pass.
 			rolePass = roleFilterMode === "not_contains" || roleFilterMode === "not_exact";
 		} else {
-			// Person has roles, apply term logic
 			switch (roleFilterMode) {
-				case "contains": // OR logic: Pass if ANY role contains ANY term
+				case "contains":
 					rolePass = lowerPersonRoles.some((role) => roleFilterTerms.some((term) => role.includes(term)));
 					break;
-				case "not_contains": // AND logic: Pass if NO role contains ANY of the terms
+				case "not_contains":
 					rolePass = !lowerPersonRoles.some((role) => roleFilterTerms.some((term) => role.includes(term)));
 					break;
-				case "exact": // OR logic: Pass if ANY role exactly matches ANY term
+				case "exact":
 					rolePass = lowerPersonRoles.some((role) => roleFilterTerms.some((term) => role === term));
 					break;
-				case "not_exact": // AND logic: Pass if NO role exactly matches ANY of the terms
+				case "not_exact":
 					rolePass = !lowerPersonRoles.some((role) => roleFilterTerms.some((term) => role === term));
 					break;
 			}
 		}
 	}
 
-	// Must pass both name and role filters
 	return namePass && rolePass;
 }
 
-/**
- * Processes the new person-centric JSON data for D3.
- * Applies multi-term filters.
- * // ... (rest of JSDoc remains the same) ...
- * @param {object} filters - Filter criteria: { name: { terms: string[], mode: string }, role: { terms: string[], mode: string } }. // Updated type
- * @returns {{nodes: Array, links: Array, filteredStats1: object|null, filteredStats2: object|null}}
- */
-export function processDataForD3(jsonData1, jsonData2, filename1, filename2, isSameGame, personRolesMap, filters) {
-	if (!jsonData1 && !jsonData2) {
-		throw new Error("Both input data sources are missing or invalid.");
+function buildRoleDetails(contributions) {
+	const allRoles = new Set();
+	const repeatedRoleCounts = new Map();
+	const games = contributions.map((contribution) => {
+		const roleSet = new Set(contribution.roles);
+		roleSet.forEach((role) => {
+			allRoles.add(role);
+			repeatedRoleCounts.set(role, (repeatedRoleCounts.get(role) ?? 0) + 1);
+		});
+		return {
+			gameId: contribution.gameId,
+			gameName: contribution.gameName,
+			roles: roleSet,
+		};
+	});
+
+	const repeatedRoles = new Set(
+		Array.from(repeatedRoleCounts.entries())
+			.filter(([, count]) => count > 1)
+			.map(([role]) => role)
+	);
+
+	return {
+		allRoles,
+		repeatedRoles,
+		games,
+	};
+}
+
+function getPeopleArray(jsonData, gameName) {
+	if (gameName && Array.isArray(jsonData?.[gameName])) {
+		return jsonData[gameName];
+	}
+	for (const key of Object.keys(jsonData ?? {})) {
+		if (Array.isArray(jsonData[key])) {
+			return jsonData[key];
+		}
+	}
+	return [];
+}
+
+function resolveGameDatasets(gameDatasets) {
+	return gameDatasets
+		.map(({ filename, jsonData }, index) => {
+			const gameName =
+				getGameNameFromData(jsonData, filename) ||
+				gameTitleMap[filename] ||
+				filename
+					.replace(".json", "")
+					.replace(/_/g, " ")
+					.replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+			const gameId = generateGameId(gameName, filename, index + 1);
+			const peopleMap = new Map();
+			const peopleArray = getPeopleArray(jsonData, gameName);
+			const allPeopleNames = new Set();
+			peopleArray.forEach((personObj) => addPersonToMap(peopleMap, allPeopleNames, personObj));
+
+			return {
+				filename,
+				gameId,
+				gameIndex: index + 1,
+				gameName,
+				peopleMap,
+			};
+		})
+		.filter((gameData) => gameData.gameName);
+}
+
+export function processDataForD3(gameDatasets, personRolesMap, filters) {
+	if (!Array.isArray(gameDatasets) || gameDatasets.length === 0) {
+		throw new Error("No input data sources are available.");
 	}
 
 	personRolesMap.clear();
 	const nodes = [];
 	const links = [];
 	const nodesMap = new Map();
+	const resolvedGames = resolveGameDatasets(gameDatasets);
 
-	const peopleMap1 = new Map();
-	const peopleMap2 = new Map();
+	if (resolvedGames.length === 0) {
+		throw new Error("Could not identify any selected games.");
+	}
+
 	const allPeopleNames = new Set();
+	resolvedGames.forEach((gameData) => {
+		gameData.peopleMap.forEach((_, personName) => allPeopleNames.add(personName));
+	});
 
-	let gameName1 = null,
-		gameId1 = null;
-	let gameName2 = null,
-		gameId2 = null;
+	const perGameTracking = new Map(
+		resolvedGames.map((gameData) => [
+			gameData.gameId,
+			{
+				filename: gameData.filename,
+				gameId: gameData.gameId,
+				gameName: gameData.gameName,
+				personIds: new Set(),
+				roles: new Set(),
+			},
+		])
+	);
 
 	const addNode = (nodeData) => {
 		if (!nodesMap.has(nodeData.id)) {
 			nodes.push(nodeData);
 			nodesMap.set(nodeData.id, nodeData);
-			nodeData.degree = 0;
-			return true;
 		}
-		return false;
+		return nodesMap.get(nodeData.id);
 	};
 
-	// Phase 1: Extract all potential people and their roles
-	if (jsonData1) {
-		gameName1 = getGameNameFromData(jsonData1, filename1) || gameTitleMap[filename1];
-		if (!gameName1) {
-			gameName1 = filename1
-				.replace(".json", "")
-				.replace(/_/g, " ")
-				.replace(/\b\w/g, (l) => l.toUpperCase());
-		}
-
-		if (gameName1) {
-			gameId1 = generateGameId(gameName1);
-			const peopleArray1 = jsonData1[gameName1];
-			if (Array.isArray(peopleArray1)) {
-				peopleArray1.forEach((personObj) => addPersonToMap(peopleMap1, allPeopleNames, personObj));
-			} else {
-				console.warn(`Game 1 data for '${gameName1}' is not an array in ${filename1}`);
-			}
-		} else {
-			console.error(`Could not determine identity for Game 1 from ${filename1}.`);
-		}
-	} else {
-		console.error(`Could not load data for Game 1 (${filename1}).`);
-	}
-
-	// Process Game 2
-	if (!isSameGame && jsonData2) {
-		gameName2 = getGameNameFromData(jsonData2, filename2) || gameTitleMap[filename2];
-		if (!gameName2) {
-			gameName2 = filename2
-				.replace(".json", "")
-				.replace(/_/g, " ")
-				.replace(/\b\w/g, (l) => l.toUpperCase());
-		}
-		if (gameName2) {
-			gameId2 = generateGameId(gameName2);
-			if (gameId1 && gameId1 === gameId2) {
-				isSameGame = true;
-				gameName2 = gameName1;
-				gameId2 = gameId1;
-			} else {
-				const peopleArray2 = jsonData2[gameName2];
-				if (Array.isArray(peopleArray2)) {
-					peopleArray2.forEach((personObj) => addPersonToMap(peopleMap2, allPeopleNames, personObj));
-				} else {
-					console.warn(`Game 2 data for '${gameName2}' is not an array in ${filename2}`);
-				}
-			}
-		} else {
-			console.error(`Could not determine identity for Game 2 from ${filename2}.`);
-			if (gameId1) {
-				isSameGame = true;
-				gameName2 = gameName1;
-				gameId2 = gameId1;
-			}
-		}
-	} else if (isSameGame && gameId1) {
-		gameName2 = gameName1;
-		gameId2 = gameId1;
-	}
-
-	if (!gameId1 && !gameId2) {
-		throw new Error("Could not identify or load data for either selected game. Cannot process contributors.");
-	}
-
-	// Phase 2: Filter people and create final nodes/links
-	const filteredPeopleGame1 = new Set();
-	const filteredPeopleGame2 = new Set();
-	const filteredUniqueRolesGame1 = new Set();
-	const filteredUniqueRolesGame2 = new Set();
-
-	allPeopleNames.forEach((personName) => {
-		const personId = generatePersonId(personName);
-		const personData1 = peopleMap1.get(personName);
-		const personData2 = isSameGame ? personData1 : peopleMap2.get(personName);
-
-		const inGame1 = !!personData1;
-		const inGame2 = !!personData2;
-
-		// Combine all unique roles across both games for this person for filtering check
-		const roleDetails = buildRoleDetails(personData1, personData2, isSameGame);
-		if (roleDetails.allRoles.size === 0 && (inGame1 || inGame2)) {
-			// Ensure default role is considered if person exists but has no listed roles
-			roleDetails.allRoles.add(DEFAULT_ROLE);
-		}
-
-		// +++ Apply Filters (using the updated passesFilters) +++
-		if (!passesFilters(personName, roleDetails.allRoles, filters)) {
-			return; // Skip this person
-		}
-
-		// Person passed filters, proceed
-		let category = CATEGORY_OTHER;
-		let primaryRole = DEFAULT_ROLE;
-		let rolesForNodeCreation = []; // Roles specific to the context (game1, game2, or both)
-
-		if (isSameGame) {
-			if (inGame1) {
-				category = CATEGORY_SINGLE_GAME;
-				rolesForNodeCreation = Array.from(personData1.roles);
-				primaryRole = getPrimaryRole(rolesForNodeCreation);
-				filteredPeopleGame1.add(personId);
-				personData1.roles.forEach((role) => filteredUniqueRolesGame1.add(role));
-			}
-		} else {
-			// Two different games
-			if (inGame1 && inGame2) {
-				category = CATEGORY_BOTH;
-				const combinedRoles = new Set([...personData1.roles, ...personData2.roles]);
-				rolesForNodeCreation = Array.from(combinedRoles);
-				primaryRole = getPrimaryRole(Array.from(personData1.roles)) !== DEFAULT_ROLE ? getPrimaryRole(Array.from(personData1.roles)) : getPrimaryRole(Array.from(personData2.roles));
-
-				filteredPeopleGame1.add(personId);
-				personData1.roles.forEach((role) => filteredUniqueRolesGame1.add(role));
-				filteredPeopleGame2.add(personId);
-				personData2.roles.forEach((role) => filteredUniqueRolesGame2.add(role));
-			} else if (inGame1) {
-				category = CATEGORY_GAME1_ONLY;
-				rolesForNodeCreation = Array.from(personData1.roles);
-				primaryRole = getPrimaryRole(rolesForNodeCreation);
-				filteredPeopleGame1.add(personId);
-				personData1.roles.forEach((role) => filteredUniqueRolesGame1.add(role));
-			} else if (inGame2) {
-				category = CATEGORY_GAME2_ONLY;
-				rolesForNodeCreation = Array.from(personData2.roles);
-				primaryRole = getPrimaryRole(rolesForNodeCreation);
-				filteredPeopleGame2.add(personId);
-				personData2.roles.forEach((role) => filteredUniqueRolesGame2.add(role));
-			}
-		}
-
-		// Ensure primary role validity
-		primaryRole = primaryRole !== DEFAULT_ROLE ? primaryRole : getPrimaryRole(rolesForNodeCreation) || DEFAULT_ROLE;
-
-		// Add/update person node if they contributed to at least one game contextually
-		if (category !== CATEGORY_OTHER) {
-			let personNodeData = nodesMap.get(personId);
-			if (!personNodeData) {
-				personNodeData = {
-					id: personId,
-					name: personName,
-					type: NODE_TYPE_PERSON,
-					category: category,
-					primaryRole: primaryRole,
-					degree: 0,
-				};
-				addNode(personNodeData);
-			} else {
-				// Update existing node if somehow added before (should be rare now)
-				personNodeData.category = category;
-				personNodeData.primaryRole = primaryRole;
-			}
-
-			// Populate the output personRolesMap with the roles used for node creation context
-			const rolesSetForOutput = new Set(rolesForNodeCreation);
-			if (rolesSetForOutput.size === 0) rolesSetForOutput.add(DEFAULT_ROLE);
-			personRolesMap.set(personId, {
-				allRoles: rolesSetForOutput,
-				game1Roles: roleDetails.game1Roles,
-				game2Roles: roleDetails.game2Roles,
-				sharedRoles: roleDetails.sharedRoles,
-				game1OnlyRoles: roleDetails.game1OnlyRoles,
-				game2OnlyRoles: roleDetails.game2OnlyRoles,
-			});
-
-			// Add links
-			if (inGame1 && gameId1) {
-				links.push({
-					source: personId,
-					target: gameId1,
-					type: LINK_TYPE_WORKED_ON,
-				});
-			}
-			if (!isSameGame && inGame2 && gameId2) {
-				links.push({
-					source: personId,
-					target: gameId2,
-					type: LINK_TYPE_WORKED_ON,
-				});
-			}
-		}
+	resolvedGames.forEach((gameData) => {
+		addNode({
+			id: gameData.gameId,
+			name: gameData.gameName,
+			type: NODE_TYPE_GAME,
+			category: CATEGORY_GAME,
+			gameIndex: gameData.gameIndex,
+			degree: 0,
+		});
 	});
 
-	// Phase 3: Add Game Nodes, Calculate Degrees/Stats (remains the same)
-	let game1DataNode = null;
-	let game2DataNode = null;
+	let sharedCount = 0;
 
-	if (gameId1 && links.some((link) => link.target === gameId1 || link.source === gameId1)) {
-		game1DataNode = {
-			id: gameId1,
-			name: gameName1,
-			type: NODE_TYPE_GAME,
-			category: CATEGORY_GAME,
-			gameIndex: 1,
+	allPeopleNames.forEach((personName) => {
+		const contributions = resolvedGames
+			.map((gameData) => {
+				const personData = gameData.peopleMap.get(personName);
+				if (!personData) return null;
+				return {
+					gameId: gameData.gameId,
+					gameName: gameData.gameName,
+					roles: Array.from(personData.roles),
+				};
+			})
+			.filter(Boolean);
+
+		if (contributions.length === 0) return;
+
+		const roleDetails = buildRoleDetails(contributions);
+		if (roleDetails.allRoles.size === 0) {
+			roleDetails.allRoles.add(DEFAULT_ROLE);
+		}
+		if (!passesFilters(personName, roleDetails.allRoles, filters)) {
+			return;
+		}
+
+		const personId = generatePersonId(personName);
+		const category = contributions.length > 1 ? CATEGORY_MULTI_GAME : CATEGORY_SINGLE_GAME;
+		const primaryRole = getPrimaryRole(contributions);
+
+		addNode({
+			id: personId,
+			name: personName,
+			type: NODE_TYPE_PERSON,
+			category,
+			primaryRole,
+			contributionCount: contributions.length,
+			gameIds: contributions.map((contribution) => contribution.gameId),
 			degree: 0,
-		};
-		addNode(game1DataNode);
-	}
+		});
 
-	if (gameId2 && !isSameGame && links.some((link) => link.target === gameId2 || link.source === gameId2)) {
-		game2DataNode = {
-			id: gameId2,
-			name: gameName2,
-			type: NODE_TYPE_GAME,
-			category: CATEGORY_GAME,
-			gameIndex: 2,
-			degree: 0,
-		};
-		addNode(game2DataNode);
-	} else if (isSameGame && game1DataNode) {
-		game2DataNode = game1DataNode; // Point to the same node object
-	}
+		personRolesMap.set(personId, roleDetails);
 
-	// Calculate degrees based on the final nodes and links
-	nodes.forEach((node) => (node.degree = 0));
+		if (contributions.length > 1) {
+			sharedCount++;
+		}
+
+		contributions.forEach((contribution) => {
+			links.push({
+				source: personId,
+				target: contribution.gameId,
+				type: LINK_TYPE_WORKED_ON,
+			});
+
+			const tracking = perGameTracking.get(contribution.gameId);
+			tracking.personIds.add(personId);
+			contribution.roles.forEach((role) => tracking.roles.add(role));
+		});
+	});
+
+	nodes.forEach((node) => {
+		node.degree = 0;
+	});
 
 	links.forEach((link) => {
 		const sourceNode = nodesMap.get(link.source);
@@ -414,29 +284,22 @@ export function processDataForD3(jsonData1, jsonData2, filename1, filename2, isS
 		if (targetNode) targetNode.degree++;
 	});
 
-	// Calculate filtered stats based on the sets populated during filtering
-	const filteredStats1 = game1DataNode
-		? {
-				personCount: filteredPeopleGame1.size,
-				uniqueRoleCount: filteredUniqueRolesGame1.size,
-			}
-		: null;
+	const perGameStats = resolvedGames.map((gameData) => {
+		const tracking = perGameTracking.get(gameData.gameId);
+		return {
+			filename: gameData.filename,
+			gameId: gameData.gameId,
+			gameName: gameData.gameName,
+			personCount: tracking.personIds.size,
+			uniqueRoleCount: tracking.roles.size,
+		};
+	});
 
-	const filteredStats2 = game2DataNode
-		? {
-				// Use game 1 sets if same game, otherwise game 2 sets
-				personCount: isSameGame ? filteredPeopleGame1.size : filteredPeopleGame2.size,
-				uniqueRoleCount: isSameGame ? filteredUniqueRolesGame1.size : filteredUniqueRolesGame2.size,
-			}
-		: null;
-
-	// Calculate shared count (people who worked on both games)
-	let sharedCount = 0;
-	if (!isSameGame) {
-		for (const id of filteredPeopleGame1) {
-			if (filteredPeopleGame2.has(id)) sharedCount++;
-		}
-	}
-
-	return { nodes, links, filteredStats1, filteredStats2, sharedCount };
+	return {
+		nodes,
+		links,
+		perGameStats,
+		sharedCount,
+		selectedGameCount: resolvedGames.length,
+	};
 }

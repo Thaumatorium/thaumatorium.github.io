@@ -250,16 +250,7 @@ function simulateQueueScenario(config, seed) {
 	const lambdaEff = measuredSeconds > 0 ? (metrics.arrivals - metrics.dropped) / measuredSeconds : 0;
 	const littlesGap = avgSystemLen - lambdaEff * avgSystem;
 	const meanUtil = mean(servers.map((server) => server.busyTimeMeasured / measuredSeconds));
-	return {
-		throughput,
-		avgWait,
-		avgSystem,
-		avgQueueLen,
-		avgSystemLen,
-		dropRate,
-		littlesGap,
-		meanUtil,
-	};
+	return { throughput, avgWait, avgSystem, avgQueueLen, avgSystemLen, dropRate, littlesGap, meanUtil };
 }
 
 class QueueSimulation {

@@ -1,10 +1,12 @@
 import { gameTitleMap } from "./config.js";
 import { visualizeGraphD3 } from "./graphVisualizer.js";
-import { populateDropdown, setDefaultSelections } from "./ui.js";
+import { createGameSelectionRow, setDefaultSelections, syncDisabledGameOptions, updateGameSelectionRow, updateRemoveButtons, updateStatsForRows } from "./ui.js";
 
 const MAX_NODES_FOR_LINKS = 20000;
 const FILTER_DEBOUNCE_MS = 250;
 const RESIZE_DEBOUNCE_MS = 150;
+const MINIMUM_GAME_ROWS = 1;
+const INITIAL_GAME_ROWS = 2;
 
 function debounce(func, wait) {
 	let timeout;
@@ -18,28 +20,28 @@ function debounce(func, wait) {
 	};
 }
 
+function arraysEqual(left, right) {
+	if (left.length !== right.length) return false;
+	return left.every((value, index) => value === right[index]);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
 	const elements = {
-		fileSelect1: document.getElementById("fileSelect1"),
-		fileSelect2: document.getElementById("fileSelect2"),
+		gameSelectionList: document.getElementById("gameSelectionList"),
+		addGameButton: document.getElementById("addGameButton"),
 		svgContainer: document.getElementById("d3-graph-container"),
 		loadingMessage: document.getElementById("loadingMessage"),
 		errorMessage: document.getElementById("errorMessage"),
 		tooltip: document.getElementById("tooltip"),
 		stopButton: document.getElementById("stopButton"),
 		resumeButton: document.getElementById("resumeButton"),
-		personCount1: document.getElementById("personCount1"),
-		roleCount1: document.getElementById("roleCount1"),
-		personCount2: document.getElementById("personCount2"),
-		roleCount2: document.getElementById("roleCount2"),
-		statsBox1: document.getElementById("statsBox1"),
-		statsBox2: document.getElementById("statsBox2"),
 		nameFilterInput: document.getElementById("nameFilterInput"),
 		nameFilterMode: document.getElementById("nameFilterMode"),
 		roleFilterInput: document.getElementById("roleFilterInput"),
 		roleFilterMode: document.getElementById("roleFilterMode"),
 		sharedCount: document.getElementById("sharedCount"),
 		sharedStats: document.getElementById("sharedStats"),
+		selectedGameCount: document.getElementById("selectedGameCount"),
 	};
 
 	let missingElement = false;
@@ -58,18 +60,37 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 	if (missingElement) return;
 
-	const setSimulationButtonState = (isRunning) => {
-		if (elements.stopButton) elements.stopButton.disabled = !isRunning;
-		if (elements.resumeButton) elements.resumeButton.disabled = isRunning;
+	const state = {
+		rows: [],
+		nextRowId: 1,
+		d3Simulation: null,
+		lastSelectedFiles: [],
+		personRolesMap: new Map(),
+		normalizedRolePositions: new Map(),
+		activeWorker: null,
+		isShiftPressed: false,
+		isSimulationStoppedByUser: false,
+		currentGraphData: null,
+		currentFilters: {
+			name: { text: "", mode: "contains" },
+			role: { text: "", mode: "contains" },
+		},
 	};
+
+	const setSimulationButtonState = (isRunning) => {
+		elements.stopButton.disabled = !isRunning;
+		elements.resumeButton.disabled = isRunning;
+	};
+
 	const resetSharedStats = () => {
-		if (!elements.sharedStats || !elements.sharedCount) return;
 		elements.sharedCount.textContent = "0";
+		elements.selectedGameCount.textContent = "0";
 		elements.sharedStats.style.display = "none";
 	};
-	const updateSharedStats = (sharedCount) => {
-		if (!elements.sharedStats || !elements.sharedCount) return;
-		if (typeof sharedCount === "number" && sharedCount > 0) {
+
+	const updateSharedStats = (sharedCount, selectedCount) => {
+		elements.selectedGameCount.textContent = String(selectedCount || 0);
+		if (typeof sharedCount === "number" && sharedCount > 0 && selectedCount > 1) {
 			elements.sharedCount.textContent = sharedCount.toLocaleString();
 			elements.sharedStats.style.display = "";
 			return;
@@ -77,23 +98,25 @@ document.addEventListener("DOMContentLoaded", () => {
 		resetSharedStats();
 	};
 
-	const state = {
-		d3Simulation: null,
-		lastFile1: null,
-		lastFile2: null,
-		personRolesMap: new Map(),
-		normalizedRolePositions: new Map(),
-		activeWorker: null,
-		isShiftPressed: false,
-		isSimulationStoppedByUser: false,
-		stats1: null,
-		stats2: null,
-		currentGraphData: null,
-		currentFilters: {
-			name: { text: "", mode: "contains" }, // Text might contain commas now
-			role: { text: "", mode: "contains" }, // Text might contain commas now
-		},
+	const showMessage = (text, type) => {
+		const el = elements.errorMessage;
+		if (!text) {
+			el.textContent = "";
+			el.style.display = "none";
+			el.classList.remove("error-message", "warning-message");
+			return;
+		}
+		el.textContent = text;
+		el.style.display = "block";
+		el.classList.toggle("error-message", type === "error");
+		el.classList.toggle("warning-message", type === "warning");
 	};
+
+	const updateStatsUI = (perGameStats) => {
+		const statsByFilename = new Map((perGameStats ?? []).map((stats) => [stats.filename, stats]));
+		updateStatsForRows(state.rows, statsByFilename);
+	};
+
 	const buildRenderState = () => {
 		if (!state.currentGraphData?.nodes?.length || !state.d3Simulation) return {};
 		const preservedPositions = new Map(state.currentGraphData.nodes.filter((node) => Number.isFinite(node.x) && Number.isFinite(node.y)).map((node) => [node.id, { x: node.x, y: node.y }]));
@@ -102,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			previousSize: state.d3Simulation.renderSize ?? elements.svgContainer.getBoundingClientRect(),
 		};
 	};
+
 	const renderGraph = (graphData, renderState = {}) => {
 		const visualizerDomElements = {
 			svgContainer: elements.svgContainer,
@@ -118,6 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			setSimulationButtonState(true);
 		}
 	};
+
 	const rerenderGraph = () => {
 		if (!state.currentGraphData?.nodes?.length) return;
 		const renderState = buildRenderState();
@@ -144,41 +169,77 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		setSimulationButtonState(true);
 	};
-	const updateStatsUI = (stats1, stats2, els) => {
-		const placeholder = "--";
-		if (stats1 && typeof stats1.personCount === "number") {
-			els.personCount1.textContent = stats1.personCount.toLocaleString();
-			els.roleCount1.textContent = stats1.uniqueRoleCount.toLocaleString();
-		} else {
-			els.personCount1.textContent = placeholder;
-			els.roleCount1.textContent = placeholder;
-		}
-		if (stats2 && typeof stats2.personCount === "number") {
-			els.personCount2.textContent = stats2.personCount.toLocaleString();
-			els.roleCount2.textContent = stats2.uniqueRoleCount.toLocaleString();
-		} else {
-			els.personCount2.textContent = placeholder;
-			els.roleCount2.textContent = placeholder;
-		}
+
+	const getCurrentFiltersFromUI = () => ({
+		name: { text: elements.nameFilterInput.value, mode: elements.nameFilterMode.value },
+		role: { text: elements.roleFilterInput.value, mode: elements.roleFilterMode.value },
+	});
+
+	const collectSelectedFiles = () => state.rows.map((rowController) => rowController.select.value).filter(Boolean);
+
+	const refreshGameSelectionUI = () => {
+		state.rows.forEach((rowController, index) => {
+			updateGameSelectionRow(rowController, index + 1);
+		});
+		updateRemoveButtons(state.rows, MINIMUM_GAME_ROWS);
+		syncDisabledGameOptions(state.rows);
+		elements.addGameButton.disabled = !getNextAvailableGame();
 	};
 
-	/** Show/hide the error/warning message element. Call with no args to clear. */
-	const showMessage = (text, type) => {
-		const el = elements.errorMessage;
-		if (!text) {
-			el.textContent = "";
-			el.style.display = "none";
-			el.classList.remove("error-message", "warning-message");
-			return;
+	const clearVisualization = () => {
+		if (state.activeWorker) {
+			state.activeWorker.terminate();
+			state.activeWorker = null;
 		}
-		el.textContent = text;
-		el.style.display = "block";
-		el.classList.toggle("error-message", type === "error");
-		el.classList.toggle("warning-message", type === "warning");
+		if (state.d3Simulation) {
+			state.d3Simulation.stop();
+			state.d3Simulation = null;
+		}
+		state.currentGraphData = null;
+		state.lastSelectedFiles = [];
+		elements.svgContainer.innerHTML = "";
+		elements.tooltip.style.display = "none";
+		elements.svgContainer.classList.remove("links-hidden", "show-all-labels");
+		updateStatsUI([]);
+		resetSharedStats();
+		setSimulationButtonState(false);
 	};
 
-	async function runWorkerAndVisualize(filename1, filename2, filters) {
-		showMessage(); // clear
+	const handleRowSelectionChange = () => {
+		refreshGameSelectionUI();
+		triggerLoad(false);
+	};
+
+	const handleRemoveGameRow = (rowId) => {
+		if (state.rows.length <= MINIMUM_GAME_ROWS) return;
+		const rowIndex = state.rows.findIndex((rowController) => rowController.rowId === rowId);
+		if (rowIndex === -1) return;
+
+		const [rowController] = state.rows.splice(rowIndex, 1);
+		rowController.row.remove();
+		refreshGameSelectionUI();
+		triggerLoad(true);
+	};
+
+	const createRow = (selectedValue = "") => {
+		const rowController = createGameSelectionRow(state.nextRowId++, state.rows.length + 1, gameTitleMap, handleRowSelectionChange, handleRemoveGameRow);
+		state.rows.push(rowController);
+		elements.gameSelectionList.appendChild(rowController.row);
+		if (selectedValue) {
+			rowController.select.value = selectedValue;
+		}
+		return rowController;
+	};
+
+	const getNextAvailableGame = () => {
+		const selected = new Set(collectSelectedFiles());
+		return Object.keys(gameTitleMap)
+			.sort()
+			.find((filename) => !selected.has(filename));
+	};
+
+	async function runWorkerAndVisualize(selectedFiles, filters) {
+		showMessage();
 		elements.loadingMessage.style.display = "block";
 		elements.tooltip.style.display = "none";
 		elements.svgContainer.classList.remove("links-hidden", "show-all-labels");
@@ -190,12 +251,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			state.activeWorker = null;
 		}
 
-		// Stop simulation *before* clearing SVG if it exists
 		if (state.d3Simulation) {
 			state.d3Simulation.stop();
-			state.d3Simulation = null; // Nullify the simulation reference
+			state.d3Simulation = null;
 		}
-		// Clear SVG *after* stopping simulation, before starting worker
 		elements.svgContainer.innerHTML = "";
 
 		try {
@@ -208,25 +267,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			worker.onmessage = (event) => {
 				if (worker !== state.activeWorker) return;
-				const {
-					status,
-					graphData,
-					personRolesMapData,
-					normalizedRolePositionsData,
-					stats1,
-					stats2,
-					message,
-					effectiveFilters, // Worker sends back the parsed/validated filters
-				} = event.data;
+
+				const { status, graphData, personRolesMapData, normalizedRolePositionsData, perGameStats, sharedCount, selectedGameCount, message, effectiveFilters } = event.data;
 
 				if (effectiveFilters) {
 					state.currentFilters = effectiveFilters;
 				}
 
-				state.stats1 = stats1;
-				state.stats2 = stats2;
-				updateStatsUI(state.stats1, state.stats2, elements);
-				updateSharedStats(event.data.sharedCount);
+				updateStatsUI(perGameStats);
+				updateSharedStats(sharedCount, selectedGameCount);
 
 				if (status === "success" && graphData?.nodes) {
 					state.currentGraphData = graphData;
@@ -234,16 +283,18 @@ document.addEventListener("DOMContentLoaded", () => {
 					state.personRolesMap = new Map();
 					if (Array.isArray(personRolesMapData)) {
 						personRolesMapData.forEach(([key, roleDetails]) => {
-							if (key && roleDetails && typeof roleDetails === "object") {
-								state.personRolesMap.set(key, {
-									allRoles: new Set(roleDetails.allRoles ?? []),
-									game1Roles: new Set(roleDetails.game1Roles ?? []),
-									game2Roles: new Set(roleDetails.game2Roles ?? []),
-									sharedRoles: new Set(roleDetails.sharedRoles ?? []),
-									game1OnlyRoles: new Set(roleDetails.game1OnlyRoles ?? []),
-									game2OnlyRoles: new Set(roleDetails.game2OnlyRoles ?? []),
-								});
-							}
+							if (!key || !roleDetails || typeof roleDetails !== "object") return;
+							state.personRolesMap.set(key, {
+								allRoles: new Set(roleDetails.allRoles ?? []),
+								repeatedRoles: new Set(roleDetails.repeatedRoles ?? []),
+								games: Array.isArray(roleDetails.games)
+									? roleDetails.games.map((gameEntry) => ({
+											gameId: gameEntry.gameId,
+											gameName: gameEntry.gameName,
+											roles: new Set(gameEntry.roles ?? []),
+										}))
+									: [],
+							});
 						});
 					}
 
@@ -260,8 +311,6 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (graphData.nodes.length > MAX_NODES_FOR_LINKS) {
 						shouldHideLinks = true;
 						showMessage(`Links visually hidden for performance (${graphData.nodes.length} nodes > ${MAX_NODES_FOR_LINKS}). Filtering applied.`, "warning");
-					} else if (elements.errorMessage.classList.contains("warning-message") && !elements.errorMessage.classList.contains("error-message")) {
-						showMessage();
 					}
 
 					state.d3Simulation = renderGraph(graphData);
@@ -269,29 +318,25 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (!state.d3Simulation) {
 						const filterText = state.currentFilters.name.text || state.currentFilters.role.text ? " with current filters" : "";
 						if (!elements.errorMessage.textContent) {
-							showMessage(`D3 Graph visualization failed to initialize${filterText}. Check console for details.`, "error");
+							showMessage(`D3 graph visualization failed to initialize${filterText}. Check console for details.`, "error");
 						}
 						setSimulationButtonState(false);
 					} else {
-						if (shouldHideLinks) {
-							elements.svgContainer.classList.add("links-hidden");
-						} else {
-							elements.svgContainer.classList.remove("links-hidden");
-						}
+						elements.svgContainer.classList.toggle("links-hidden", shouldHideLinks);
 						if (state.isShiftPressed) {
-							// Apply shift state if held during load
 							elements.svgContainer.classList.add("show-all-labels");
 						}
 						setSimulationButtonState(!state.isSimulationStoppedByUser);
 					}
 				} else {
 					const errorMsg = message || (status === "error" ? "Worker reported an error." : "Worker returned invalid data or no nodes passed filters.");
-					console.error("Main: D3 Worker reported error or invalid data:", errorMsg, event.data);
+					console.error("Main: worker reported error or invalid data:", errorMsg, event.data);
 					state.currentGraphData = null;
 					resetSharedStats();
 					showMessage(`Error processing data: ${errorMsg}`, "error");
 					setSimulationButtonState(false);
 				}
+
 				elements.loadingMessage.style.display = "none";
 				if (state.activeWorker === worker) {
 					worker.terminate();
@@ -301,12 +346,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			worker.onerror = (error) => {
 				if (worker !== state.activeWorker) return;
-				console.error("Main: D3 Worker onerror event:", error);
-				showMessage(`D3 Worker failed unexpectedly. (${error.message || "Unknown error"}) Check console.`, "error");
-				setSimulationButtonState(false);
-				elements.loadingMessage.style.display = "none";
-				updateStatsUI(null, null, elements);
+				console.error("Main: worker onerror event:", error);
+				showMessage(`Worker failed unexpectedly. (${error.message || "Unknown error"}) Check console.`, "error");
+				updateStatsUI([]);
 				resetSharedStats();
+				elements.loadingMessage.style.display = "none";
+				setSimulationButtonState(false);
 				if (state.activeWorker === worker) {
 					worker.terminate();
 					state.activeWorker = null;
@@ -316,136 +361,89 @@ document.addEventListener("DOMContentLoaded", () => {
 			worker.onmessageerror = () => {
 				if (worker !== state.activeWorker) return;
 				showMessage("Worker returned a malformed message. Check console.", "error");
-				setSimulationButtonState(false);
-				elements.loadingMessage.style.display = "none";
-				updateStatsUI(null, null, elements);
+				updateStatsUI([]);
 				resetSharedStats();
+				elements.loadingMessage.style.display = "none";
+				setSimulationButtonState(false);
 				if (state.activeWorker === worker) {
 					worker.terminate();
 					state.activeWorker = null;
 				}
 			};
 
-			worker.postMessage({ filename1, filename2, filters });
+			worker.postMessage({ filenames: selectedFiles, filters });
 		} catch (error) {
-			console.error("Main: Error setting up D3 worker or pre-check:", error);
+			console.error("Main: error setting up worker or pre-check:", error);
 			showMessage(`Initialization Error: ${error.message}`, "error");
-			setSimulationButtonState(false);
-			elements.loadingMessage.style.display = "none";
-			updateStatsUI(null, null, elements);
+			updateStatsUI([]);
 			resetSharedStats();
-			state.lastFile1 = null;
-			state.lastFile2 = null;
+			elements.loadingMessage.style.display = "none";
+			setSimulationButtonState(false);
 			state.currentGraphData = null;
-			state.currentFilters = {
-				name: { text: "", mode: "contains" },
-				role: { text: "", mode: "contains" },
-			};
-			// Reset UI filters on major error
-			elements.nameFilterInput.value = "";
-			elements.nameFilterMode.value = "contains";
-			elements.roleFilterInput.value = "";
-			elements.roleFilterMode.value = "contains";
 			if (state.activeWorker) {
 				state.activeWorker.terminate();
 				state.activeWorker = null;
 			}
-			if (state.d3Simulation) {
-				state.d3Simulation.stop();
-				state.d3Simulation = null;
-			}
-			elements.svgContainer.innerHTML = "";
 		}
 	}
 
-	// Central trigger function
 	function triggerLoad(forceReload = false) {
-		const selectedFile1 = elements.fileSelect1.value;
-		const selectedFile2 = elements.fileSelect2.value;
-		// Get filter values directly from UI elements
-		const nameFilterText = elements.nameFilterInput.value; // Don't trim here, let worker handle it
-		const nameFilterMode = elements.nameFilterMode.value;
-		const roleFilterText = elements.roleFilterInput.value; // Don't trim here
-		const roleFilterMode = elements.roleFilterMode.value;
+		const selectedFiles = collectSelectedFiles();
+		const currentRawFilters = getCurrentFiltersFromUI();
+		const filtersChanged = currentRawFilters.name.text !== state.currentFilters.name.text || currentRawFilters.name.mode !== state.currentFilters.name.mode || currentRawFilters.role.text !== state.currentFilters.role.text || currentRawFilters.role.mode !== state.currentFilters.role.mode;
+		const selectionsChanged = !arraysEqual(selectedFiles, state.lastSelectedFiles);
 
-		// Check if filters *as typed in UI* differ from *state* filters
-		const filtersChanged = nameFilterText !== state.currentFilters.name.text || nameFilterMode !== state.currentFilters.name.mode || roleFilterText !== state.currentFilters.role.text || roleFilterMode !== state.currentFilters.role.mode;
-
-		const gamesChanged = selectedFile1 !== state.lastFile1 || selectedFile2 !== state.lastFile2;
-
-		// Store the raw UI filter values in a temporary object to pass to worker
-		const currentRawFilters = {
-			name: { text: nameFilterText, mode: nameFilterMode },
-			role: { text: roleFilterText, mode: roleFilterMode },
-		};
-
-		// Basic check for validity before proceeding
-		if (!selectedFile1 || !selectedFile2) {
-			if (state.d3Simulation) {
-				state.d3Simulation.stop();
-				state.d3Simulation = null;
-				elements.svgContainer.innerHTML = "";
-			}
-			elements.tooltip.style.display = "none";
+		if (selectedFiles.length === 0) {
 			showMessage();
-			updateStatsUI(null, null, elements);
-			resetSharedStats();
-			state.lastFile1 = null;
-			state.lastFile2 = null;
-			state.stats1 = null;
-			state.stats2 = null;
-			state.currentGraphData = null;
-			if (elements.fileSelect1.options.length > 0) elements.fileSelect1.options[0].disabled = !!selectedFile1;
-			if (elements.fileSelect2.options.length > 0) elements.fileSelect2.options[0].disabled = !!selectedFile2;
+			clearVisualization();
 			return;
 		}
 
-		// Reload if forced, games changed, or filters changed
-		if (forceReload || gamesChanged || filtersChanged) {
-			state.lastFile1 = selectedFile1;
-			state.lastFile2 = selectedFile2;
-			// Update state filters *before* calling worker, so state reflects what was sent
+		if (forceReload || selectionsChanged || filtersChanged) {
+			state.lastSelectedFiles = selectedFiles.slice();
 			state.currentFilters = currentRawFilters;
-			if (gamesChanged) {
-				state.isSimulationStoppedByUser = false; // Reset stop only on game change
+			if (selectionsChanged) {
+				state.isSimulationStoppedByUser = false;
 			}
-			runWorkerAndVisualize(selectedFile1, selectedFile2, currentRawFilters); // Pass raw UI filters
+			runWorkerAndVisualize(selectedFiles, currentRawFilters);
 		}
-
-		if (elements.fileSelect1.options.length > 0) elements.fileSelect1.options[0].disabled = true;
-		if (elements.fileSelect2.options.length > 0) elements.fileSelect2.options[0].disabled = true;
 	}
 
-	// Debounced version specifically for text inputs
 	const debouncedTriggerLoadForFilters = debounce(() => triggerLoad(false), FILTER_DEBOUNCE_MS);
 	const debouncedRerender = debounce(rerenderGraph, RESIZE_DEBOUNCE_MS);
 
 	try {
-		populateDropdown(elements.fileSelect1, gameTitleMap);
-		populateDropdown(elements.fileSelect2, gameTitleMap);
+		for (let index = 0; index < INITIAL_GAME_ROWS; index++) {
+			createRow();
+		}
+		setDefaultSelections(state.rows, gameTitleMap);
+		refreshGameSelectionUI();
+		updateStatsUI([]);
 		resetSharedStats();
-
-		// Attach event listeners
-		elements.fileSelect1.addEventListener("change", () => triggerLoad(false));
-		elements.fileSelect2.addEventListener("change", () => triggerLoad(false));
-
-		// Filter MODE changes trigger immediately
-		elements.nameFilterMode.addEventListener("change", () => triggerLoad(false));
-		elements.roleFilterMode.addEventListener("change", () => triggerLoad(false));
-
-		// Filter TEXT changes trigger the debounced function
-		elements.nameFilterInput.addEventListener("input", debouncedTriggerLoadForFilters);
-		elements.roleFilterInput.addEventListener("input", debouncedTriggerLoadForFilters);
-
-		// Set initial state and load data
-		setDefaultSelections(elements, () => triggerLoad(true)); // Use force=true for initial load
+		triggerLoad(true);
 	} catch (uiError) {
 		console.error("Error setting up UI:", uiError);
 		showMessage(`Fatal UI Setup Error: ${uiError.message}`, "error");
 		elements.loadingMessage.style.display = "none";
 		setSimulationButtonState(false);
-		updateStatsUI(null, null, elements);
+		updateStatsUI([]);
+		return;
 	}
+
+	elements.addGameButton.addEventListener("click", () => {
+		const nextGame = getNextAvailableGame();
+		if (!nextGame) {
+			return;
+		}
+		createRow(nextGame);
+		refreshGameSelectionUI();
+		triggerLoad(true);
+	});
+
+	elements.nameFilterMode.addEventListener("change", () => triggerLoad(false));
+	elements.roleFilterMode.addEventListener("change", () => triggerLoad(false));
+	elements.nameFilterInput.addEventListener("input", debouncedTriggerLoadForFilters);
+	elements.roleFilterInput.addEventListener("input", debouncedTriggerLoadForFilters);
 
 	elements.stopButton.addEventListener("click", () => {
 		if (state.d3Simulation) {
@@ -454,6 +452,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			setSimulationButtonState(false);
 		}
 	});
+
 	elements.resumeButton.addEventListener("click", () => {
 		if (state.d3Simulation) {
 			state.isSimulationStoppedByUser = false;
@@ -463,29 +462,32 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	setSimulationButtonState(!!state.d3Simulation && !state.isSimulationStoppedByUser);
+
 	window.addEventListener("keydown", (event) => {
 		if (event.key === "Shift" && !state.isShiftPressed) {
 			state.isShiftPressed = true;
 			elements.svgContainer.classList.add("show-all-labels");
 		}
-		// Allow Enter in filter inputs to trigger load immediately
 		if (event.key === "Enter" && (document.activeElement === elements.nameFilterInput || document.activeElement === elements.roleFilterInput)) {
 			event.preventDefault();
 			triggerLoad(false);
 		}
 	});
+
 	window.addEventListener("keyup", (event) => {
 		if (event.key === "Shift") {
 			state.isShiftPressed = false;
 			elements.svgContainer.classList.remove("show-all-labels");
 		}
 	});
+
 	window.addEventListener("blur", () => {
 		if (state.isShiftPressed) {
 			state.isShiftPressed = false;
 			elements.svgContainer.classList.remove("show-all-labels");
 		}
 	});
+
 	const resizeObserver = new ResizeObserver(() => {
 		debouncedRerender();
 	});

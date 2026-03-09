@@ -26,9 +26,7 @@ export const LINK_TYPE_WORKED_ON = "worked_on";
 
 export const CATEGORY_GAME = "game";
 export const CATEGORY_SINGLE_GAME = "single_game";
-export const CATEGORY_BOTH = "both";
-export const CATEGORY_GAME1_ONLY = "game1_only";
-export const CATEGORY_GAME2_ONLY = "game2_only";
+export const CATEGORY_MULTI_GAME = "multi_game";
 export const CATEGORY_OTHER = "other";
 
 export const DEFAULT_ROLE = "Contributor";

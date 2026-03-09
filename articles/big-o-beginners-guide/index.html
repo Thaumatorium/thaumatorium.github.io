@@ -49,24 +49,15 @@
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">
-						Published:
-						<time class="published" datetime="2019-03-16T00:00:00&#43;01:00">2019-03-16</time>
-					</div>
-					<div class="published-box">
-						Updated:
-						<time class="published" datetime="2024-07-24T18:27:00&#43;02:00">2024-07-24</time>
-					</div>
+					<div class="published-box">Published: <time class="published" datetime="2019-03-16T00:00:00&#43;01:00">2019-03-16</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T18:27:00&#43;02:00">2024-07-24</time></div>
 				</div>
 			</hgroup>
 			<h2 id="disclaimer">
 				<a class="self-link" href="#disclaimer"> Disclaimer </a>
 			</h2>
 			<p>I&rsquo;m not a mathematician, so this won&rsquo;t be exact, but I&rsquo;ll try to give you an intuitive understanding of Big O.</p>
-			<p>
-				Big O (usually written as <em>O(x)</em>, where <em>x</em> is a mathematical equation like <em>1</em>, <em>n</em>, <em>n²</em>, or <em>2ⁿ</em>, for example) describes
-				<em>how quickly the amount of work grows when the amount of input grows.</em>
-			</p>
+			<p>Big O (usually written as <em>O(x)</em>, where <em>x</em> is a mathematical equation like <em>1</em>, <em>n</em>, <em>n²</em>, or <em>2ⁿ</em>, for example) describes <em>how quickly the amount of work grows when the amount of input grows.</em></p>
 			<p>In beginner explanations this is often treated like &ldquo;how bad can it get?&rdquo;, and that&rsquo;s usually good enough to build intuition.</p>
 			<h2 id="what-big-o-ignores">
 				<a class="self-link" href="#what-big-o-ignores"> What Big O Ignores </a>
@@ -78,8 +69,8 @@
 				<a class="self-link" href="#example-1-constant-time---o1"> Example 1: Constant Time - O(1) </a>
 			</h2>
 			<p>
-				If you have an array or list and want to look up the nth item, it will maximally take a so-called &ldquo;constant time&rdquo;, expressed as
-				<em>O(1)</em>. This does not mean it literally takes one step, but it means that no matter how many items you have in your data structure, the number of steps it takes to retrieve the nth item is always a constant amount (whether it&rsquo;s actually 1 step or 10 does not matter in practice).
+				If you have an array or list and want to look up the nth item, it will maximally take a so-called &ldquo;constant time&rdquo;, expressed as <em>O(1)</em>. This does not mean it literally takes one step, but it means that no matter how many items you have in your data structure, the number of steps it takes to
+				retrieve the nth item is always a constant amount (whether it&rsquo;s actually 1 step or 10 does not matter in practice).
 			</p>
 			<div class="highlight">
 				<pre
@@ -96,10 +87,7 @@
 			<p>
 				<em>Image sourced from <a href="http://cslibrary.stanford.edu/110/BinaryTrees.html">Stanford&rsquo;s Binary Trees</a></em>
 			</p>
-			<p>
-				Note that you may execute a few constant steps before that (like creating a variable to save the answer in), but since
-				<em>O(log n)</em>&rsquo;s runtime overshadows any <em>O(1)</em> code, we only note the <em>O(log n)</em> part.
-			</p>
+			<p>Note that you may execute a few constant steps before that (like creating a variable to save the answer in), but since <em>O(log n)</em>&rsquo;s runtime overshadows any <em>O(1)</em> code, we only note the <em>O(log n)</em> part.</p>
 			<div class="highlight">
 				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Check the middle
 </span></span><span style="display:flex;"><span>Then half of what remains
@@ -110,14 +98,9 @@
 			<h2 id="example-3-linear-time---on">
 				<a class="self-link" href="#example-3-linear-time---on"> Example 3: Linear Time - O(n) </a>
 			</h2>
+			<p>If you want to find whether your array or list contains a certain item (assuming it&rsquo;s an unsorted list), it will take <em>O(n)</em> steps, because each item has to be checked once to see if it&rsquo;s the item you&rsquo;re looking for.</p>
 			<p>
-				If you want to find whether your array or list contains a certain item (assuming it&rsquo;s an unsorted list), it will take
-				<em>O(n)</em> steps, because each item has to be checked once to see if it&rsquo;s the item you&rsquo;re looking for.
-			</p>
-			<p>
-				If you have a list with 10 items and the last item is the one you&rsquo;re looking for, it will take 10 steps. This represents the
-				<em>worst case</em> scenario: Big O describes
-				<em>how many steps an algorithm <strong>maximally</strong> will take to run.</em>
+				If you have a list with 10 items and the last item is the one you&rsquo;re looking for, it will take 10 steps. This represents the <em>worst case</em> scenario: Big O describes <em>how many steps an algorithm <strong>maximally</strong> will take to run.</em>
 			</p>
 			<p>If your algorithm has a part that happens to be <em>O(1)</em> or <em>O(log n)</em>, you still note it down as <em>O(n)</em>, because <em>O(n)</em> overshadows the runtime of <em>O(1)</em> and <em>O(log n)</em>.</p>
 			<div class="highlight">
@@ -146,10 +129,7 @@
 			<h2 id="example-5-exponential-time---o2ⁿ">
 				<a class="self-link" href="#example-5-exponential-time---o2%e2%81%bf"> Example 5: Exponential Time - O(2ⁿ) </a>
 			</h2>
-			<p>
-				Some algorithms, like the naive recursive Fibonacci implementation, take
-				<em>O(2ⁿ)</em> time. This means the amount of work roughly doubles with each extra step of input.
-			</p>
+			<p>Some algorithms, like the naive recursive Fibonacci implementation, take <em>O(2ⁿ)</em> time. This means the amount of work roughly doubles with each extra step of input.</p>
 			<p>For example, with 10 items, it could take up to 1024 steps.</p>
 			<div class="highlight">
 				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fib</span>(n):
@@ -162,8 +142,7 @@
 				<a class="self-link" href="#most-common-big-o-notations"> Most Common Big O Notations </a>
 			</h2>
 			<p>
-				Now that you understand the basics, here&rsquo;s a simplified list of possible Big O expressions, sorted from shortest to longest runtime. The
-				<em><strong>bold-italic</strong></em> rows are the most common.
+				Now that you understand the basics, here&rsquo;s a simplified list of possible Big O expressions, sorted from shortest to longest runtime. The <em><strong>bold-italic</strong></em> rows are the most common.
 			</p>
 			<table>
 				<thead>
@@ -178,97 +157,69 @@
 						<td>
 							<em><strong>O(1)</strong></em>
 						</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Constant_time">Constant</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Constant_time">Constant</a></td>
 						<td>Array lookup like <code>list[2]</code></td>
 					</tr>
 					<tr>
 						<td>O(log log n)</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Double_logarithm">Double Logarithmic</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Double_logarithm">Double Logarithmic</a></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td>
 							<em><strong>O(log n)</strong></em>
 						</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Logarithmic_time">Logarithmic</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Logarithmic_time">Logarithmic</a></td>
 						<td>Lookup in a sorted binary tree</td>
 					</tr>
 					<tr>
 						<td>O((log n)ᶜ)</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Polylogarithmic_time">Polylogarithmic</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Polylogarithmic_time">Polylogarithmic</a></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td>O(nᶜ), where 0 &lt; c &lt; 1</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Computational_complexity_theory#Complexity_classes">Fractional Power</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Computational_complexity_theory#Complexity_classes">Fractional Power</a></td>
 						<td>Rare, but grows slower than O(n)</td>
 					</tr>
 					<tr>
 						<td>
 							<em><strong>O(n)</strong></em>
 						</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Linear_time">Linear</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Linear_time">Linear</a></td>
 						<td>For-loops</td>
 					</tr>
 					<tr>
 						<td>O(n log n) = O(log n!)</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Linearithmic_time">Linearithmic or Quasilinear</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Linearithmic_time">Linearithmic or Quasilinear</a></td>
 						<td>Merge sort, quicksort</td>
 					</tr>
 					<tr>
 						<td>
 							<em><strong>O(n²)</strong></em>
 						</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Quadratic_time">Quadratic</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Quadratic_time">Quadratic</a></td>
 						<td>Bubble sort, nested loops, insertion sort in the worst case</td>
 					</tr>
 					<tr>
 						<td>O(nᶜ), where c &gt; 1</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Polynomial_time">Polynomial</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Polynomial_time">Polynomial</a></td>
 						<td>Matrix multiplication</td>
 					</tr>
 					<tr>
 						<td>O(2ⁿ)</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Exponential_time">Exponential</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Exponential_time">Exponential</a></td>
 						<td>Naive recursive Fibonacci</td>
 					</tr>
 					<tr>
 						<td>O(n!)</td>
-						<td>
-							<a href="https://en.wikipedia.org/wiki/Factorial">Factorial</a>
-						</td>
+						<td><a href="https://en.wikipedia.org/wiki/Factorial">Factorial</a></td>
 						<td>Brute-force solutions</td>
 					</tr>
 				</tbody>
 			</table>
-			<p>
-				For the full table:
-				<a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions">Wikipedia - Big O Notation</a>
-			</p>
-			<p>
-				Another great article:
-				<a href="https://en.wikipedia.org/wiki/Time_complexity">Wikipedia - Time Complexity</a>
-			</p>
+			<p>For the full table: <a href="https://en.wikipedia.org/wiki/Big_O_notation#Orders_of_common_functions">Wikipedia - Big O Notation</a></p>
+			<p>Another great article: <a href="https://en.wikipedia.org/wiki/Time_complexity">Wikipedia - Time Complexity</a></p>
 			<h2 id="best-average-and-worst-case">
 				<a class="self-link" href="#best-average-and-worst-case"> Best, Average and Worst Case </a>
 			</h2>
@@ -297,9 +248,7 @@
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
-				–
-				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2024-07-24</time></sub>

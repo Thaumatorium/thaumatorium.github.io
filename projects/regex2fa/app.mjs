@@ -125,15 +125,7 @@ function parseAndBuild() {
 		const minDfa = minimizeDfa(dfa, epsilon);
 		currentModels = { nfa, dfa, minDfa };
 		updateInternals({ rawTokens, concatTokens, postfixTokens });
-		updateSteps({
-			regex,
-			rawTokens,
-			concatTokens,
-			postfixTokens,
-			nfa,
-			dfa,
-			minDfa,
-		});
+		updateSteps({ regex, rawTokens, concatTokens, postfixTokens, nfa, dfa, minDfa });
 		renderCurrentView();
 	} catch (error) {
 		currentModels = null;

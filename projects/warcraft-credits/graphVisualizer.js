@@ -1,23 +1,25 @@
 import { setupD3Tooltips } from "./tooltips.js";
-import { NODE_TYPE_PERSON, NODE_TYPE_GAME, ROLE_COLORS, DEFAULT_ROLE, DEFAULT_ROLE_COLOR, CATEGORY_GAME1_ONLY, CATEGORY_GAME2_ONLY, CATEGORY_BOTH, CATEGORY_SINGLE_GAME } from "./config.js";
+import { NODE_TYPE_PERSON, NODE_TYPE_GAME, ROLE_COLORS, DEFAULT_ROLE, DEFAULT_ROLE_COLOR } from "./config.js";
 
-const INITIAL_SIMULATION_CHARGE_STRENGTH = -120;
-const INITIAL_SIMULATION_LINK_DISTANCE = 50;
-const INITIAL_SIMULATION_LINK_STRENGTH = 0.8;
-const INITIAL_COLLISION_PADDING = 2;
-const INITIAL_COLLISION_STRENGTH = 0.7;
-const INITIAL_ROLE_POSITIONING_FORCE_STRENGTH = 0.16;
+const GAME_NODE_RADIUS = 25;
+const PERSON_NODE_RADIUS = 7;
+const PERSON_CLUSTER_SPACING = 18;
+const SINGLE_GAME_CLUSTER_DISTANCE = 92;
+const MULTI_GAME_CLUSTER_OFFSET = 24;
+const GAME_LABEL_CLEARANCE = 46;
 
-const EXAMPLE_GAME_NODE_RADIUS = 25;
-const EXAMPLE_PERSON_NODE_RADIUS = 7;
-
-const dynamicRoleColors = new Map();
-const colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+const personRoleColors = new Map();
+const gameNodeColors = new Map();
+const personColorScale = d3.scaleOrdinal(d3.schemeTableau10);
+const personRolePie = d3
+	.pie()
+	.value(() => 1)
+	.sort(null);
 
 function hashString(value) {
 	let hash = 2166136261;
-	for (let i = 0; i < value.length; i++) {
-		hash ^= value.charCodeAt(i);
+	for (let index = 0; index < value.length; index++) {
+		hash ^= value.charCodeAt(index);
 		hash = Math.imul(hash, 16777619);
 	}
 	return hash >>> 0;
@@ -28,22 +30,6 @@ function deterministicOffset(id, axis, magnitude) {
 	return (hash / 0xffffffff - 0.5) * magnitude;
 }
 
-function getZoneX(category, width, isSingleGameView) {
-	if (isSingleGameView) return width * 0.5;
-
-	switch (category) {
-		case CATEGORY_GAME1_ONLY:
-		case CATEGORY_SINGLE_GAME:
-			return width * 0.22;
-		case CATEGORY_BOTH:
-			return width * 0.5;
-		case CATEGORY_GAME2_ONLY:
-			return width * 0.78;
-		default:
-			return width * 0.5;
-	}
-}
-
 function getRoleLaneY(role, normalizedRolePositions, defaultRolePositionNorm, height) {
 	const roleTargetPosNorm = normalizedRolePositions.get(role) || defaultRolePositionNorm;
 	const laneTop = height * 0.24;
@@ -51,273 +37,590 @@ function getRoleLaneY(role, normalizedRolePositions, defaultRolePositionNorm, he
 	return laneTop + roleTargetPosNorm.normY * laneHeight;
 }
 
-/**
- * Determines the fill color for a node.
- * @param {object} d - The node data object.
- * @param {Array} allGameNodes - Array containing the game node objects for comparison.
- * @returns {string} A hex color code.
- */
-function getNodeColor(d, allGameNodes) {
-	if (d.type === NODE_TYPE_GAME) {
-		const gameNode1 = allGameNodes.find((n) => n.gameIndex === 1);
-		const isDifferentGame2 = allGameNodes.length > 1 && d.gameIndex === 2 && d.id !== gameNode1?.id;
-		return isDifferentGame2 ? "#2980b9" : "#3498db";
+function getRoleLaneNorm(role, normalizedRolePositions, defaultRolePositionNorm) {
+	return (normalizedRolePositions.get(role) || defaultRolePositionNorm).normY;
+}
+
+function getGameAnchor(index, totalGames, width, height, radiusOverride = null) {
+	if (totalGames <= 1) {
+		return { x: width * 0.5, y: height * 0.22 };
 	}
-	if (d.type === NODE_TYPE_PERSON) {
-		const role = d.primaryRole || DEFAULT_ROLE;
-		const normalizedRole = role.toLowerCase().trim();
-		if (ROLE_COLORS[normalizedRole]) return ROLE_COLORS[normalizedRole];
-		if (dynamicRoleColors.has(normalizedRole)) return dynamicRoleColors.get(normalizedRole);
-		if (normalizedRole && normalizedRole !== DEFAULT_ROLE.toLowerCase().trim()) {
-			const newColor = colorScale(normalizedRole);
-			dynamicRoleColors.set(normalizedRole, newColor);
-			return newColor;
-		}
-		return DEFAULT_ROLE_COLOR;
+
+	const centerX = width * 0.5;
+	const centerY = height * 0.42;
+	const radius = radiusOverride ?? Math.min(Math.min(width * 0.78, height * 0.68), Math.min(width * 0.12, height * 0.1) + Math.min(width, height) * 0.18 * Math.max(0, totalGames - 2));
+	const angle = -Math.PI / 2 + (index / totalGames) * Math.PI * 2;
+
+	return {
+		x: centerX + Math.cos(angle) * radius,
+		y: centerY + Math.sin(angle) * radius,
+	};
+}
+
+function estimateClusterDimensions(count) {
+	if (count <= 0) {
+		return { width: 0, depth: 0 };
 	}
+
+	const columns = Math.max(1, Math.ceil(Math.sqrt(count)));
+	const rows = Math.max(1, Math.ceil(count / columns));
+	return {
+		width: Math.max(0, (columns - 1) * PERSON_CLUSTER_SPACING),
+		depth: Math.max(0, (rows - 1) * PERSON_CLUSTER_SPACING * 0.9),
+	};
+}
+
+function calculateGameRingRadius(graphData, width, height) {
+	const gameNodes = graphData.nodes.filter((node) => node.type === NODE_TYPE_GAME);
+	const personNodes = graphData.nodes.filter((node) => node.type === NODE_TYPE_PERSON);
+	const totalGames = gameNodes.length;
+
+	if (totalGames <= 1) {
+		return 0;
+	}
+
+	const singleGameCounts = new Map(gameNodes.map((node) => [node.id, 0]));
+	personNodes.forEach((node) => {
+		if (!Array.isArray(node.gameIds) || node.gameIds.length !== 1) return;
+		const gameId = node.gameIds[0];
+		singleGameCounts.set(gameId, (singleGameCounts.get(gameId) ?? 0) + 1);
+	});
+
+	const largestSingleGameCluster = Math.max(0, ...singleGameCounts.values());
+	const singleGameClusterFootprint = estimateClusterDimensions(largestSingleGameCluster);
+	const totalPeople = personNodes.length;
+
+	const baseRadius = Math.min(width * 0.12, height * 0.1);
+	const gameCountGrowth = Math.min(width, height) * 0.18 * Math.max(0, totalGames - 2);
+	const peopleGrowth = Math.sqrt(totalPeople) * PERSON_CLUSTER_SPACING * 0.55;
+	const singleClusterGrowth = Math.max(singleGameClusterFootprint.width * 0.32, singleGameClusterFootprint.depth * 1.15);
+	const maxRadius = Math.min(width * 0.9, height * 0.82);
+
+	return Math.min(maxRadius, baseRadius + gameCountGrowth + peopleGrowth + singleClusterGrowth);
+}
+
+function getResolvedGamePosition(gameNode) {
+	return {
+		x: Number.isFinite(gameNode?.anchorX) ? gameNode.anchorX : gameNode?.x,
+		y: Number.isFinite(gameNode?.anchorY) ? gameNode.anchorY : gameNode?.y,
+	};
+}
+
+function getLinkedGamePositions(node, gameNodesById) {
+	return (Array.isArray(node.gameIds) ? node.gameIds : [])
+		.map((gameId) => gameNodesById.get(gameId))
+		.filter(Boolean)
+		.map(getResolvedGamePosition)
+		.filter((position) => Number.isFinite(position.x) && Number.isFinite(position.y));
+}
+
+function getAllGameCenter(gameNodesById, width, height) {
+	const positions = Array.from(gameNodesById.values())
+		.map(getResolvedGamePosition)
+		.filter((position) => Number.isFinite(position.x) && Number.isFinite(position.y));
+	if (positions.length === 0) {
+		return { x: width * 0.5, y: height * 0.5 };
+	}
+	return {
+		x: positions.reduce((sum, position) => sum + position.x, 0) / positions.length,
+		y: positions.reduce((sum, position) => sum + position.y, 0) / positions.length,
+	};
+}
+
+function getSignatureKey(node) {
+	return (Array.isArray(node.gameIds) ? [...node.gameIds] : []).sort().join("|");
+}
+
+function getClusterOffsets(count, spacing, mode = "centered") {
+	const offsets = [];
+	const columns = Math.max(1, Math.ceil(Math.sqrt(count)));
+	const rows = Math.max(1, Math.ceil(count / columns));
+	const rowSpacing = spacing * 0.9;
+
+	for (let index = 0; index < count; index++) {
+		const row = Math.floor(index / columns);
+		const column = index % columns;
+		const centeredColumn = column - (columns - 1) / 2 + (row % 2 === 0 ? 0 : 0.5);
+		offsets.push({
+			parallel: centeredColumn * spacing,
+			perpendicular: mode === "outward" ? row * rowSpacing : (row - (rows - 1) / 2) * rowSpacing,
+		});
+	}
+
+	return offsets;
+}
+
+function getUnitVector(from, to, fallbackX = 1, fallbackY = 0) {
+	const deltaX = to.x - from.x;
+	const deltaY = to.y - from.y;
+	const length = Math.hypot(deltaX, deltaY);
+	if (!length) {
+		return { x: fallbackX, y: fallbackY };
+	}
+	return { x: deltaX / length, y: deltaY / length };
+}
+
+function getClusterFrame(signatureGamePositions, allGameCenter, width, height, signatureKey) {
+	if (signatureGamePositions.length === 0) {
+		return {
+			center: { x: width * 0.5, y: height * 0.5 },
+			parallel: { x: 1, y: 0 },
+			perpendicular: { x: 0, y: 1 },
+		};
+	}
+
+	if (signatureGamePositions.length === 1) {
+		const game = signatureGamePositions[0];
+		const outward = getUnitVector(allGameCenter, game, 0, -1);
+		return {
+			mode: "outward",
+			center: {
+				x: game.x + outward.x * SINGLE_GAME_CLUSTER_DISTANCE,
+				y: game.y + outward.y * SINGLE_GAME_CLUSTER_DISTANCE,
+			},
+			parallel: { x: -outward.y, y: outward.x },
+			perpendicular: outward,
+		};
+	}
+
+	const centroid = {
+		x: signatureGamePositions.reduce((sum, position) => sum + position.x, 0) / signatureGamePositions.length,
+		y: signatureGamePositions.reduce((sum, position) => sum + position.y, 0) / signatureGamePositions.length,
+	};
+
+	if (signatureGamePositions.length === 2) {
+		const between = getUnitVector(signatureGamePositions[0], signatureGamePositions[1], 1, 0);
+		const outward = getUnitVector(allGameCenter, centroid, -between.y, between.x);
+		return {
+			mode: "centered",
+			center: {
+				x: centroid.x + outward.x * MULTI_GAME_CLUSTER_OFFSET,
+				y: centroid.y + outward.y * MULTI_GAME_CLUSTER_OFFSET,
+			},
+			parallel: { x: -between.y, y: between.x },
+			perpendicular: between,
+		};
+	}
+
+	const outward = getUnitVector(allGameCenter, centroid, 0, -1);
+	const rotationSeed = (hashString(signatureKey) % 360) * (Math.PI / 180);
+	const parallel = {
+		x: Math.cos(rotationSeed) * -outward.y - Math.sin(rotationSeed) * outward.x,
+		y: Math.cos(rotationSeed) * outward.x - Math.sin(rotationSeed) * outward.y,
+	};
+	const perpendicular = { x: -parallel.y, y: parallel.x };
+
+	return {
+		mode: "centered",
+		center: {
+			x: centroid.x + outward.x * MULTI_GAME_CLUSTER_OFFSET,
+			y: centroid.y + outward.y * MULTI_GAME_CLUSTER_OFFSET,
+		},
+		parallel,
+		perpendicular,
+	};
+}
+
+function getNodeRoles(node, personRolesMap) {
+	const roleDetails = personRolesMap.get(node.id);
+	const roles = Array.from(roleDetails?.allRoles ?? []).filter(Boolean);
+	if (roles.length > 0) return roles;
+	return [node.primaryRole || DEFAULT_ROLE];
+}
+
+function normalizeRoleName(role) {
+	return String(role || DEFAULT_ROLE)
+		.toLowerCase()
+		.trim();
+}
+
+function getGameColor(gameId) {
+	if (!gameNodeColors.has(gameId)) {
+		const hash = hashString(String(gameId || "game"));
+		const hue = (((hash * 137.508) % 360) + 360) % 360;
+		const saturation = 0.58 + ((hash >> 8) % 7) * 0.025;
+		const lightness = 0.56 + ((hash >> 16) % 5) * 0.02;
+		gameNodeColors.set(gameId, d3.hsl(hue, Math.min(saturation, 0.78), Math.min(lightness, 0.68)).formatHex());
+	}
+	return gameNodeColors.get(gameId);
+}
+
+function getRoleColor(role) {
+	const normalizedRole = normalizeRoleName(role);
+	if (ROLE_COLORS[normalizedRole]) return ROLE_COLORS[normalizedRole];
+	if (!personRoleColors.has(normalizedRole)) {
+		personRoleColors.set(normalizedRole, personColorScale(normalizedRole));
+	}
+	return personRoleColors.get(normalizedRole) || DEFAULT_ROLE_COLOR;
+}
+
+function getPersonRoleEntries(node, personRolesMap) {
+	const uniqueRoles = [
+		...new Set(
+			getNodeRoles(node, personRolesMap)
+				.map((role) => String(role || "").trim())
+				.filter(Boolean)
+		),
+	];
+	const normalizedPrimaryRole = normalizeRoleName(node.primaryRole || DEFAULT_ROLE);
+
+	return uniqueRoles.sort((left, right) => {
+		const leftIsPrimary = normalizeRoleName(left) === normalizedPrimaryRole;
+		const rightIsPrimary = normalizeRoleName(right) === normalizedPrimaryRole;
+		if (leftIsPrimary !== rightIsPrimary) return leftIsPrimary ? -1 : 1;
+		return left.localeCompare(right);
+	});
+}
+
+function getSliceStrokeStyle(sliceCount) {
+	const strokeWidth = Math.max(0.2, 1.5 - Math.max(0, sliceCount - 1) * 0.12);
+	const alpha = Math.max(0.18, 0.9 - Math.max(0, sliceCount - 1) * 0.06);
+	return {
+		stroke: `rgba(255, 255, 255, ${alpha.toFixed(3)})`,
+		strokeWidth,
+	};
+}
+
+function getPersonSliceData(node, personRolesMap) {
+	const roles = getPersonRoleEntries(node, personRolesMap);
+	const sliceStyle = getSliceStrokeStyle(roles.length);
+	return personRolePie(roles).map((slice) => ({
+		...slice,
+		role: slice.data,
+		color: getRoleColor(slice.data),
+		stroke: sliceStyle.stroke,
+		strokeWidth: sliceStyle.strokeWidth,
+	}));
+}
+
+function buildRolePopularity(nodes, personRolesMap) {
+	const rolePopularity = new Map();
+	nodes.forEach((node) => {
+		getNodeRoles(node, personRolesMap).forEach((role) => {
+			rolePopularity.set(role, (rolePopularity.get(role) ?? 0) + 1);
+		});
+	});
+	return rolePopularity;
+}
+
+function getLayoutRoleForNode(node, personRolesMap, rolePopularity) {
+	const roles = getNodeRoles(node, personRolesMap);
+	return [...roles].sort((left, right) => {
+		const leftPopularity = rolePopularity.get(left) ?? 0;
+		const rightPopularity = rolePopularity.get(right) ?? 0;
+		if (leftPopularity !== rightPopularity) return rightPopularity - leftPopularity;
+		return left.localeCompare(right);
+	})[0];
+}
+
+function sortNodesForCluster(nodes, personRolesMap, normalizedRolePositions, defaultRolePositionNorm) {
+	const rolePopularity = buildRolePopularity(nodes, personRolesMap);
+	const roleCounts = new Map();
+	nodes.forEach((node) => {
+		const roleKey = getLayoutRoleForNode(node, personRolesMap, rolePopularity);
+		roleCounts.set(roleKey, (roleCounts.get(roleKey) ?? 0) + 1);
+	});
+
+	return [...nodes].sort((left, right) => {
+		const leftRole = getLayoutRoleForNode(left, personRolesMap, rolePopularity);
+		const rightRole = getLayoutRoleForNode(right, personRolesMap, rolePopularity);
+		const leftRoleCount = roleCounts.get(leftRole) ?? 0;
+		const rightRoleCount = roleCounts.get(rightRole) ?? 0;
+
+		if (leftRoleCount !== rightRoleCount) return rightRoleCount - leftRoleCount;
+		if (leftRole !== rightRole) return leftRole.localeCompare(rightRole);
+
+		const leftNorm = getRoleLaneNorm(leftRole, normalizedRolePositions, defaultRolePositionNorm);
+		const rightNorm = getRoleLaneNorm(rightRole, normalizedRolePositions, defaultRolePositionNorm);
+		if (leftNorm !== rightNorm) return leftNorm - rightNorm;
+		return String(left.name || "").localeCompare(String(right.name || ""));
+	});
+}
+
+function assignClusterPositions(clusterNodes, frame, personRolesMap, normalizedRolePositions, defaultRolePositionNorm, width, height) {
+	const orderedNodes = sortNodesForCluster(clusterNodes, personRolesMap, normalizedRolePositions, defaultRolePositionNorm);
+	const offsets = getClusterOffsets(orderedNodes.length, PERSON_CLUSTER_SPACING, frame.mode ?? "centered");
+
+	let originX = frame.center.x;
+	let originY = frame.center.y;
+	if (frame.mode === "outward" && offsets.length > 0) {
+		const minimumPerpendicular = Math.min(...offsets.map((offset) => offset.perpendicular));
+		const requiredShift = GAME_NODE_RADIUS + PERSON_NODE_RADIUS + GAME_LABEL_CLEARANCE - minimumPerpendicular;
+		originX += frame.perpendicular.x * requiredShift;
+		originY += frame.perpendicular.y * requiredShift;
+	}
+
+	orderedNodes.forEach((node, index) => {
+		const offset = offsets[index];
+		node.x = originX + frame.parallel.x * offset.parallel + frame.perpendicular.x * offset.perpendicular;
+		node.y = originY + frame.parallel.y * offset.parallel + frame.perpendicular.y * offset.perpendicular;
+	});
+}
+
+function getNodeColor(node) {
+	if (node.type === NODE_TYPE_GAME) {
+		return getGameColor(node.id);
+	}
+
+	if (node.type === NODE_TYPE_PERSON) {
+		return getRoleColor(node.primaryRole || DEFAULT_ROLE);
+	}
+
 	return DEFAULT_ROLE_COLOR;
 }
 
-/**
- * Determines the radius for a node based on its type, using fixed sizes.
- * @param {object} d - Node data.
- * @returns {number} Radius value.
- */
-function nodeRadius(d) {
-	return d.type === NODE_TYPE_GAME ? EXAMPLE_GAME_NODE_RADIUS : EXAMPLE_PERSON_NODE_RADIUS;
+function nodeRadius(node) {
+	return node.type === NODE_TYPE_GAME ? GAME_NODE_RADIUS : PERSON_NODE_RADIUS;
 }
 
-/**
- * Initializes and renders the graph using D3.js force simulation.
- * Sets initial node positions based on roles AND game contribution category.
- * Uses forceX/forceY with pre-calculated positions to group person nodes by primary role.
- * REMOVED node position constraints within SVG bounds.
- *
- * @param {{nodes: Array, links: Array}} graphData - Object containing nodes and links arrays.
- * @param {Object} domElements - Object containing { svgContainer, tooltipElement, errorMessageElement }.
- * @param {Map<string, Set<string>>} personRolesMap - Map of person ID to their Set of roles.
- * @param {Map<string, {normX: number, normY: number}>} normalizedRolePositions - Map of role name to normalized target coordinates.
- * @param {Function} [onDragRestartNeeded] - Optional callback function executed when a drag restarts a user-stopped simulation.
- * @returns {d3.Simulation | null} The initialized D3 simulation instance, or null on failure.
- */
+function computeGameAnchors(graphData, gameNodes, preservedPositions, previousSize, width, height) {
+	const ringRadius = calculateGameRingRadius(graphData, width, height);
+	gameNodes.forEach((node, index) => {
+		const preservedPosition = preservedPositions?.get(node.id);
+		const anchor = getGameAnchor(index, gameNodes.length, width, height, ringRadius);
+		const resolvedAnchorX = preservedPosition && previousSize?.width > 0 ? (preservedPosition.x / previousSize.width) * width : Number.isFinite(node.anchorX) ? node.anchorX : anchor.x;
+		const resolvedAnchorY = preservedPosition && previousSize?.height > 0 ? (preservedPosition.y / previousSize.height) * height : Number.isFinite(node.anchorY) ? node.anchorY : anchor.y;
+
+		node.anchorX = resolvedAnchorX;
+		node.anchorY = resolvedAnchorY;
+		node.x = resolvedAnchorX;
+		node.y = resolvedAnchorY;
+	});
+}
+
+function applyDeterministicLayout(graphData, gameNodesById, personRolesMap, normalizedRolePositions, width, height) {
+	const defaultRolePositionNorm = { normX: 0.5, normY: 0.5 };
+	const personNodes = graphData.nodes.filter((node) => node.type === NODE_TYPE_PERSON);
+	const allGameCenter = getAllGameCenter(gameNodesById, width, height);
+	const groups = new Map();
+
+	personNodes.forEach((node) => {
+		const signatureKey = getSignatureKey(node);
+		if (!groups.has(signatureKey)) {
+			groups.set(signatureKey, []);
+		}
+		groups.get(signatureKey).push(node);
+	});
+
+	groups.forEach((clusterNodes, signatureKey) => {
+		const signatureGameIds = signatureKey ? signatureKey.split("|") : [];
+		const signatureGamePositions = signatureGameIds
+			.map((gameId) => gameNodesById.get(gameId))
+			.filter(Boolean)
+			.map(getResolvedGamePosition);
+		const frame = getClusterFrame(signatureGamePositions, allGameCenter, width, height, signatureKey);
+		assignClusterPositions(clusterNodes, frame, personRolesMap, normalizedRolePositions, defaultRolePositionNorm, width, height);
+	});
+}
+
+function createLayoutController(applyLayout) {
+	let running = true;
+
+	return {
+		stop() {
+			running = false;
+			return this;
+		},
+		restart() {
+			running = true;
+			applyLayout();
+			return this;
+		},
+		alpha() {
+			return running ? 1 : 0;
+		},
+		alphaMin() {
+			return 0.001;
+		},
+		alphaTarget() {
+			return this;
+		},
+		isRunning() {
+			return running;
+		},
+	};
+}
+
 export function visualizeGraphD3(graphData, domElements, personRolesMap, normalizedRolePositions, onDragRestartNeeded, renderState = {}) {
 	const { svgContainer, tooltipElement, errorMessageElement } = domElements;
-	const baseErrorMessage = "No common contributors or relevant data found for the selected combination.";
-	if (!graphData || !graphData.nodes || graphData.nodes.length === 0) {
-		if (!errorMessageElement.textContent || !errorMessageElement.textContent.includes("hidden")) {
-			errorMessageElement.textContent = baseErrorMessage + " (No nodes to display).";
-			errorMessageElement.style.display = "block";
-			errorMessageElement.classList.add("error-message");
-			errorMessageElement.classList.remove("warning-message");
-		}
+	const baseErrorMessage = "No contributors or relevant data found for the selected games.";
+
+	if (!graphData?.nodes?.length) {
+		errorMessageElement.textContent = `${baseErrorMessage} (No nodes to display).`;
+		errorMessageElement.style.display = "block";
+		errorMessageElement.classList.add("error-message");
+		errorMessageElement.classList.remove("warning-message");
 		svgContainer.innerHTML = "";
 		tooltipElement.style.display = "none";
 		return null;
 	}
-	const personNodesExist = graphData.nodes.some((n) => n.type === NODE_TYPE_PERSON);
+
+	const personNodesExist = graphData.nodes.some((node) => node.type === NODE_TYPE_PERSON);
 	if (!personNodesExist) {
-		if (!errorMessageElement.textContent || !errorMessageElement.textContent.includes("hidden")) {
-			errorMessageElement.textContent = baseErrorMessage + " (No contributors to display).";
-			errorMessageElement.style.display = "block";
-			errorMessageElement.classList.add("error-message");
-			errorMessageElement.classList.remove("warning-message");
-		}
+		errorMessageElement.textContent = `${baseErrorMessage} (No contributors to display).`;
+		errorMessageElement.style.display = "block";
+		errorMessageElement.classList.add("error-message");
+		errorMessageElement.classList.remove("warning-message");
 		svgContainer.innerHTML = "";
 		tooltipElement.style.display = "none";
 		return null;
 	}
-	let game1Name = null,
-		game2Name = null;
-	const allGameNodes = graphData.nodes.filter((n) => n.type === NODE_TYPE_GAME);
-	const gameNode1 = allGameNodes.find((n) => n.gameIndex === 1);
-	const gameNode2 = allGameNodes.find((n) => n.gameIndex === 2);
-	if (gameNode1) game1Name = gameNode1.name;
-	if (gameNode2) game2Name = gameNode2.name;
-	const isSingleGameView = !gameNode2 || (gameNode1 && gameNode2 && gameNode1.id === gameNode2.id);
-	if (isSingleGameView && game1Name && !game2Name) game2Name = game1Name;
 
 	const svg = d3.select(svgContainer);
 	svg.selectAll("*").remove();
 	const { width, height } = svgContainer.getBoundingClientRect();
 	if (isNaN(width) || isNaN(height) || width <= 0 || height <= 0) {
-		if (!errorMessageElement.textContent || !errorMessageElement.textContent.includes("hidden")) {
-			errorMessageElement.textContent = "SVG container has invalid dimensions.";
-			errorMessageElement.style.display = "block";
-			errorMessageElement.classList.add("error-message");
-			errorMessageElement.classList.remove("warning-message");
-		}
-		console.error("SVG container dimensions error:", width, height);
+		errorMessageElement.textContent = "SVG container has invalid dimensions.";
+		errorMessageElement.style.display = "block";
+		errorMessageElement.classList.add("error-message");
+		errorMessageElement.classList.remove("warning-message");
 		return null;
 	}
-	dynamicRoleColors.clear();
+
+	personRoleColors.clear();
+	gameNodeColors.clear();
+
 	const previousSize = renderState.previousSize ?? null;
 	const preservedPositions = renderState.preservedPositions ?? null;
-	const defaultRolePositionNorm = { normX: 0.5, normY: 0.5 };
-	let game1InitialPos = { x: width / 2, y: height / 2 };
-	let game2InitialPos = { x: width / 2, y: height / 2 };
-	graphData.nodes.forEach((d) => {
-		if (d.type === NODE_TYPE_GAME) {
-			d.x = isSingleGameView ? width * 0.5 : d.gameIndex === 1 ? width * 0.18 : width * 0.82;
-			d.y = height * 0.1;
-			if (d.gameIndex === 1) game1InitialPos = { x: d.x, y: d.y };
-			if (d.gameIndex === 2 && !isSingleGameView) game2InitialPos = { x: d.x, y: d.y };
-			else if (d.gameIndex === 2 && isSingleGameView) game2InitialPos = game1InitialPos;
-		}
-		d.fx = null;
-		d.fy = null;
-	});
-	graphData.nodes.forEach((d) => {
-		const preservedPosition = preservedPositions?.get(d.id);
-		if (d.type === NODE_TYPE_PERSON) {
-			const role = d.primaryRole || DEFAULT_ROLE;
-			const targetX = getZoneX(d.category, width, isSingleGameView);
-			const targetY = getRoleLaneY(role, normalizedRolePositions, defaultRolePositionNorm, height);
+	const nodesById = new Map(graphData.nodes.map((node) => [node.id, node]));
+	const gameNodes = graphData.nodes.filter((node) => node.type === NODE_TYPE_GAME).sort((left, right) => (left.gameIndex ?? 0) - (right.gameIndex ?? 0));
+	const gameNodesById = new Map(gameNodes.map((node) => [node.id, node]));
 
-			if (preservedPosition && previousSize?.width > 0 && previousSize?.height > 0) {
-				d.x = (preservedPosition.x / previousSize.width) * width;
-				d.y = (preservedPosition.y / previousSize.height) * height;
-			} else {
-				d.x = targetX + deterministicOffset(d.id, "x", width * 0.05);
-				d.y = targetY + deterministicOffset(d.id, "y", 18);
-			}
-		} else if (d.type !== NODE_TYPE_GAME) {
-			if (preservedPosition && previousSize?.width > 0 && previousSize?.height > 0) {
-				d.x = (preservedPosition.x / previousSize.width) * width;
-				d.y = (preservedPosition.y / previousSize.height) * height;
-			} else {
-				d.x = d.x || width / 2 + deterministicOffset(d.id, "x", 50);
-				d.y = d.y || height / 2 + deterministicOffset(d.id, "y", 50);
-			}
+	computeGameAnchors(graphData, gameNodes, preservedPositions, previousSize, width, height);
+	applyDeterministicLayout(graphData, gameNodesById, personRolesMap, normalizedRolePositions, width, height);
+	graphData.links.forEach((edge) => {
+		if (typeof edge.source !== "object") {
+			edge.source = nodesById.get(edge.source) ?? edge.source;
 		}
-		d.fx = null;
-		d.fy = null;
+		if (typeof edge.target !== "object") {
+			edge.target = nodesById.get(edge.target) ?? edge.target;
+		}
 	});
 
 	const zoomLayer = svg.append("g").attr("class", "zoom-layer");
 	const linkGroup = zoomLayer.append("g").attr("class", "links");
 	const nodeGroup = zoomLayer.append("g").attr("class", "nodes");
-	const collisionForce = d3
-		.forceCollide()
-		.radius((d) => nodeRadius(d) + INITIAL_COLLISION_PADDING)
-		.strength(INITIAL_COLLISION_STRENGTH);
-
-	const linkForce = d3
-		.forceLink(graphData.links)
-		.id((d) => d.id)
-		.distance(INITIAL_SIMULATION_LINK_DISTANCE)
-		.strength(INITIAL_SIMULATION_LINK_STRENGTH);
-
-	const chargeForce = d3.forceManyBody().strength(INITIAL_SIMULATION_CHARGE_STRENGTH);
-
-	const centerForce = d3.forceCenter(width / 2, height / 2).strength(0.05);
-	const forceX = d3
-		.forceX()
-		.strength((d) => (d.type === NODE_TYPE_PERSON ? INITIAL_ROLE_POSITIONING_FORCE_STRENGTH : 0.18))
-		.x((d) => {
-			if (d.type === NODE_TYPE_PERSON) {
-				return getZoneX(d.category, width, isSingleGameView);
-			}
-			return d.gameIndex === 1 || isSingleGameView ? game1InitialPos.x : game2InitialPos.x;
-		});
-
-	const forceY = d3
-		.forceY()
-		.strength((d) => (d.type === NODE_TYPE_PERSON ? INITIAL_ROLE_POSITIONING_FORCE_STRENGTH : 0.12))
-		.y((d) => {
-			if (d.type === NODE_TYPE_PERSON) {
-				const role = d.primaryRole || DEFAULT_ROLE;
-				return getRoleLaneY(role, normalizedRolePositions, defaultRolePositionNorm, height);
-			}
-			return game1InitialPos.y;
-		});
-	const simulation = d3.forceSimulation(graphData.nodes).force("link", linkForce).force("charge", chargeForce).force("center", centerForce).force("collision", collisionForce).force("x", forceX).force("y", forceY).alpha(1).alphaDecay(0.0228).alphaMin(0.001).on("tick", ticked);
 
 	const link = linkGroup.selectAll("line").data(graphData.links).join("line").attr("class", "link").attr("stroke", "#999").attr("stroke-opacity", 0.6).attr("stroke-width", 1.5);
 
 	let nodeSelection = nodeGroup
 		.selectAll("g.node")
-		.data(graphData.nodes, (d) => d.id)
+		.data(graphData.nodes, (node) => node.id)
 		.join("g")
-		.attr("class", (d) => `node ${d.type} ${d.category || ""}`)
-		.attr("transform", (d) => `translate(${d.x},${d.y})`)
-		.call(setupDrag(simulation, onDragRestartNeeded));
+		.attr("class", (node) => `node ${node.type} ${node.category || ""}`)
+		.attr("transform", (node) => `translate(${node.x},${node.y})`);
+
+	const personArc = d3.arc().innerRadius(0);
+	const personNodeSelection = nodeSelection.filter((node) => node.type === NODE_TYPE_PERSON);
+
+	personNodeSelection
+		.selectAll("path.person-slice")
+		.data((node) => getPersonSliceData(node, personRolesMap))
+		.join("path")
+		.attr("class", "person-slice")
+		.attr("d", function (slice) {
+			const radius = nodeRadius(this.parentNode.__data__);
+			return personArc.outerRadius(radius)(slice);
+		})
+		.attr("fill", (slice) => slice.color)
+		.attr("stroke", (slice) => slice.stroke)
+		.attr("stroke-width", (slice) => slice.strokeWidth);
 
 	nodeSelection
-		.filter((d) => d.type === NODE_TYPE_PERSON)
-		.append("circle")
-		.attr("r", (d) => nodeRadius(d))
-		.attr("fill", (d) => getNodeColor(d, allGameNodes))
-		.attr("stroke", "#fff")
-		.attr("stroke-width", 1.5);
-
-	nodeSelection
-		.filter((d) => d.type === NODE_TYPE_GAME)
+		.filter((node) => node.type === NODE_TYPE_GAME)
 		.append("rect")
 		.attr("class", "game-rect")
-		.attr("width", EXAMPLE_GAME_NODE_RADIUS * 3.5)
-		.attr("height", EXAMPLE_GAME_NODE_RADIUS * 2)
-		.attr("fill", (d) => getNodeColor(d, allGameNodes))
+		.attr("width", GAME_NODE_RADIUS * 3.5)
+		.attr("height", GAME_NODE_RADIUS * 2)
+		.attr("fill", (node) => getNodeColor(node))
 		.attr("rx", 3)
 		.attr("ry", 3)
-		.attr("x", -EXAMPLE_GAME_NODE_RADIUS * 1.75)
-		.attr("y", -EXAMPLE_GAME_NODE_RADIUS * 1)
+		.attr("x", -GAME_NODE_RADIUS * 1.75)
+		.attr("y", -GAME_NODE_RADIUS)
 		.attr("stroke", "#fff")
 		.attr("stroke-width", 1.5);
 
 	nodeSelection
 		.append("text")
-		.text((d) => d.name)
+		.text((node) => node.name)
 		.attr("class", "node-label")
-		.attr("dy", (d) => (d.type === NODE_TYPE_GAME ? 5 : nodeRadius(d) + 8))
+		.attr("dy", (node) => (node.type === NODE_TYPE_GAME ? 5 : nodeRadius(node) + 8))
 		.attr("text-anchor", "middle");
 
-	function ticked() {
+	function updateVisualPositions() {
 		link
-			.attr("x1", (d) => d.source.x)
-			.attr("y1", (d) => d.source.y)
-			.attr("x2", (d) => d.target.x)
-			.attr("y2", (d) => d.target.y);
+			.attr("x1", (edge) => edge.source.x)
+			.attr("y1", (edge) => edge.source.y)
+			.attr("x2", (edge) => edge.target.x)
+			.attr("y2", (edge) => edge.target.y);
 
-		nodeSelection.attr("transform", (d) => `translate(${d.x},${d.y})`);
+		nodeSelection.attr("transform", (node) => `translate(${node.x},${node.y})`);
 	}
 
-	function setupDrag(sim, dragRestartCallback) {
-		function dragstarted(event, d) {
-			if (!event.active) {
-				const needsRestart = sim.alpha() < sim.alphaMin();
+	const controller = createLayoutController(() => {
+		applyDeterministicLayout(graphData, gameNodesById, personRolesMap, normalizedRolePositions, width, height);
+		updateVisualPositions();
+	});
 
-				if (needsRestart && dragRestartCallback) {
-					dragRestartCallback();
+	function setupDrag(layoutController, dragRestartCallback) {
+		function dragstarted(event, node) {
+			if (node.type === NODE_TYPE_GAME && !layoutController.isRunning()) {
+				dragRestartCallback?.();
+				layoutController.restart();
+			}
+			node.dragStartX = node.x;
+			node.dragStartY = node.y;
+			node.wasDragged = false;
+		}
+
+		function dragged(event, node) {
+			node.wasDragged = true;
+			node.x = event.x;
+			node.y = event.y;
+
+			if (node.type === NODE_TYPE_GAME) {
+				node.anchorX = event.x;
+				node.anchorY = event.y;
+				if (layoutController.isRunning()) {
+					applyDeterministicLayout(graphData, gameNodesById, personRolesMap, normalizedRolePositions, width, height);
 				}
-
-				sim.alphaTarget(0.3).restart();
 			}
-			d.fx = event.x;
-			d.fy = event.y;
+
+			updateVisualPositions();
 		}
 
-		function dragged(event, d) {
-			d.fx = event.x;
-			d.fy = event.y;
-		}
-
-		function dragended(event, d) {
-			if (!event.active) {
-				sim.alphaTarget(0);
+		function dragended(_event, node) {
+			if (!node.wasDragged) {
+				node.x = node.dragStartX;
+				node.y = node.dragStartY;
+				if (node.type === NODE_TYPE_GAME) {
+					node.anchorX = node.dragStartX;
+					node.anchorY = node.dragStartY;
+				}
 			}
-			d.fx = null;
-			d.fy = null;
+
+			if (node.type === NODE_TYPE_GAME && layoutController.isRunning()) {
+				applyDeterministicLayout(graphData, gameNodesById, personRolesMap, normalizedRolePositions, width, height);
+			}
+
+			node.dragStartX = null;
+			node.dragStartY = null;
+			node.wasDragged = false;
+			updateVisualPositions();
 		}
 
 		return d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended);
 	}
+
+	nodeSelection.call(setupDrag(controller, onDragRestartNeeded));
+	updateVisualPositions();
 
 	const zoomHandler = d3
 		.zoom()
 		.scaleExtent([0.1, 5])
 		.on("start", () => {
 			tooltipElement.style.display = "none";
-			if (nodeSelection) nodeSelection.classed("tooltip-active", false);
+			nodeSelection.classed("tooltip-active", false);
 		})
 		.on("zoom", (event) => {
 			zoomLayer.attr("transform", event.transform);
@@ -325,8 +628,8 @@ export function visualizeGraphD3(graphData, domElements, personRolesMap, normali
 
 	svg.call(zoomHandler).on("dblclick.zoom", null);
 
-	setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, svg.node(), game1Name, game2Name, isSingleGameView);
+	setupD3Tooltips(nodeSelection, tooltipElement, personRolesMap, svg.node(), gameNodes);
 
-	simulation.renderSize = { width, height };
-	return simulation;
+	controller.renderSize = { width, height };
+	return controller;
 }

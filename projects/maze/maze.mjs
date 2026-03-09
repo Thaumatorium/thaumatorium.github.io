@@ -62,10 +62,7 @@ const HEX_UNSUPPORTED_STRATEGY_IDS = new Set(["wall-follower-left", "wall-follow
 const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
 const randomInt = (max) => Math.floor(Math.random() * max);
 const indexOf = (grid, x, y) => y * grid.width + x;
-const coordsOf = (grid, index) => ({
-	x: index % grid.width,
-	y: Math.floor(index / grid.width),
-});
+const coordsOf = (grid, index) => ({ x: index % grid.width, y: Math.floor(index / grid.width) });
 const toKey = ({ x, y }) => `${x},${y}`;
 const getSpeedFactor = () => Math.max(0.02, (MAZE.animationSpeed / 100) ** 2 * 12);
 const getEffectiveGenerationTimeLimitMs = () => Math.max(50, Math.round(MAZE.generationTimeLimitMs / getSpeedFactor()));

@@ -164,17 +164,7 @@ function handleBatchConvert() {
 			const converted = convertSingle(line, batchUnit.value);
 			rows.push({ index, input: line, ...converted, error: "" });
 		} catch (error) {
-			rows.push({
-				index,
-				input: line,
-				unit: "",
-				isoUTC: "",
-				isoLocal: "",
-				unixS: "",
-				unixMs: "",
-				unixNs: "",
-				error: error.message,
-			});
+			rows.push({ index, input: line, unit: "", isoUTC: "", isoLocal: "", unixS: "", unixMs: "", unixNs: "", error: error.message });
 		}
 	});
 

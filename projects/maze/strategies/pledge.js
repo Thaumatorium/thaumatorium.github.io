@@ -52,11 +52,6 @@ export const strategy = {
 			searchOrder.push(current);
 		}
 
-		return buildSolveResult({
-			searchOrder,
-			path,
-			deadEndOrder,
-			steps: searchOrder.length,
-		});
+		return buildSolveResult({ searchOrder, path, deadEndOrder, steps: searchOrder.length });
 	},
 };
