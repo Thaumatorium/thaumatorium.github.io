@@ -175,7 +175,10 @@
 								<input type="text" id="epsilonSymbol" value="ε" style="width: 30px; padding: 5px" />
 							</div>
 						</div>
-						<p class="info">Supported: <code>ab</code> (concat), <code>a|b</code> (alt), <code>a*</code> (Kleene star), <code>a+</code> (one+), <code>a?</code> (zero/one), <code>()</code> (grouping). <br />Basic char classes: <code>[abc]</code>, <code>[Gg]</code> (treated as <code>a|b|c</code> or <code>G|g</code>). <br />Most other characters (including Unicode like 'ツ') are treated as literals. <br /><b>Unsupported:</b> Lookarounds, anchors, `\s`, `\d`, `{m,n}`, complex escapes within classes.</p>
+						<p class="info">
+							Supported: <code>ab</code> (concat), <code>a|b</code> (alt), <code>a*</code> (Kleene star), <code>a+</code> (one+), <code>a?</code> (zero/one), <code>()</code> (grouping). <br />Basic char classes: <code>[abc]</code>, <code>[Gg]</code> (treated as <code>a|b|c</code> or <code>G|g</code>). <br />Most other
+							characters (including Unicode like 'ツ') are treated as literals. <br /><b>Unsupported:</b> Lookarounds, anchors, `\s`, `\d`, `{m,n}`, complex escapes within classes.
+						</p>
 						<div id="errorMessage" class="error"></div>
 						<div id="tokenDebugPre" class="token-debug" style="display: none"><strong>Tokens (Raw):</strong> <span id="tokenOutputPre"></span></div>
 						<div id="tokenDebugPost" class="token-debug" style="display: none"><strong>Tokens (Processed for Postfix):</strong> <span id="tokenOutputPost"></span></div>
