@@ -39,9 +39,7 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
-				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
-				<li><a href="/epoch">Epoch</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
 				<li><a href="/about">About</a></li>
 			</ul>
@@ -51,8 +49,14 @@
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="1969-08-19T00:00:00Z">1969-08-19</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="1969-08-19T00:00:00Z">1969-08-19</time></div>
+					<div class="published-box">
+						Published:
+						<time class="published" datetime="1969-08-19T00:00:00Z">1969-08-19</time>
+					</div>
+					<div class="published-box">
+						Updated:
+						<time class="published" datetime="1969-08-19T00:00:00Z">1969-08-19</time>
+					</div>
 				</div>
 			</hgroup>
 			<!doctype html>
@@ -130,7 +134,10 @@
 								<li>(1) Each row represents an n-tuple of R;</li>
 								<li>(2) The ordering of rows is immaterial;</li>
 								<li>(3) All rows are distinct;</li>
-								<li>(4) The ordering of columns is significant - it corresponds to the ordering S<sub>1</sub>, S<sub>2</sub>, ... S<sub>n</sub> of the domains on which R is defined;</li>
+								<li>
+									(4) The ordering of columns is significant - it corresponds to the ordering S<sub>1</sub>, S<sub>2</sub>, ... S<sub>n</sub>
+									of the domains on which R is defined;
+								</li>
 								<li>(5) The significance of each column is partially conveyed by labeling it with the name of the corresponding domain.</li>
 							</ul>
 						</section>
@@ -180,9 +187,9 @@
 								part numbers are. The domains listed above correspond to what are commonly called the attributes of the entity type part.
 							</p>
 							<p>
-								Normally, one attribute (or combination of attributes) of a given entity type has values which uniquely identify each entity. Such an attribute (or combination) is called a <u>key</u>. In the example above, part number would be a key, while part color would not be. A key is <u>non-redundant</u> if it is
-								either a simple attribute (not a combination) or a combination such that none of the participating attributes is superfluous in uniquely identifying each entity. An entity type may possess more than one non-redundant key. This would be the case in the example, if different parts were always given
-								distinct names.
+								Normally, one attribute (or combination of attributes) of a given entity type has values which uniquely identify each entity. Such an attribute (or combination) is called a
+								<u>key</u>. In the example above, part number would be a key, while part color would not be. A key is <u>non-redundant</u> if it is either a simple attribute (not a combination) or a combination such that none of the participating attributes is superfluous in uniquely identifying each entity. An entity
+								type may possess more than one non-redundant key. This would be the case in the example, if different parts were always given distinct names.
 							</p>
 							<p>
 								The remaining relations in a data bank are between entity types, and are, therefore, called <u>inter-entity relations</u>. An essential property of every inter-entity relation is that its domains include at least two keys which either refer to distinct entity types or refer to a common entity type
@@ -232,7 +239,8 @@
 						</section>
 						<section id="page7" aria-label="Page 7">
 							<p class="no-indent">
-								expression involving only binary relations, then 2n-1 names have to be coined instead of only n+1 with direct n-ary notation as described in Section 1. For example, the 4-ary relation <u>ship</u> of Figure 1, which entails 5 names in n-ary notation, would be represented in the form
+								expression involving only binary relations, then 2n-1 names have to be coined instead of only n+1 with direct n-ary notation as described in Section 1. For example, the 4-ary relation
+								<u>ship</u> of Figure 1, which entails 5 names in n-ary notation, would be represented in the form
 							</p>
 							<pre>
     P ( <u>supplier</u>, Q ( <u>part</u>, R ( <u>project</u>, <u>quantity</u> ) ) )
@@ -247,8 +255,8 @@
 							</p>
 							<h4>3.1 Permutation</h4>
 							<p>
-								A binary relation has an array representation with two columns. Interchanging these two columns yields the converse relation. More generally, if a permutation is applied to the columns of an n-ary relation, the resulting relation is said to be a <u>permutation</u> of the given relation. There are, for
-								example, 4! = 24 permutations of the relation ship in Figure 1, if we include the identity permutation which leaves the ordering of columns unchanged.
+								A binary relation has an array representation with two columns. Interchanging these two columns yields the converse relation. More generally, if a permutation is applied to the columns of an n-ary relation, the resulting relation is said to be a
+								<u>permutation</u> of the given relation. There are, for example, 4! = 24 permutations of the relation ship in Figure 1, if we include the identity permutation which leaves the ordering of columns unchanged.
 							</p>
 							<p>
 								In a system which provides symmetric exploitation of relations, the set of queries answerable by a stored relation is identical to the set answerable by any permutation of that relation. Although it is logically unnecessary to store both a relation and some permutation of it, performance could make it
@@ -261,7 +269,10 @@
         L = i<sub>1</sub>, i<sub>2</sub>, ..., i<sub>k</sub>
             </pre
 							>
-							<p class="no-indent">and R is an n-ary relation (n &ge; k), then <span class="math">&Pi;</span><sub>L</sub>(R) is the k-ary relation whose j<sup>th</sup> column is column i<sub>j</sub> of R (j = 1, 2, ..., k) except that duplication in resulting rows is removed. Consider</p>
+							<p class="no-indent">
+								and R is an n-ary relation (n &ge; k), then
+								<span class="math">&Pi;</span><sub>L</sub>(R) is the k-ary relation whose j<sup>th</sup> column is column i<sub>j</sub> of R (j = 1, 2, ..., k) except that duplication in resulting rows is removed. Consider
+							</p>
 						</section>
 						<section id="page8" aria-label="Page 8">
 							<p class="no-indent">the relation ship of Figure 1. A projection of this relation is exhibited in Figure 3.</p>
@@ -328,7 +339,10 @@ U ( <u>supplier</u> <u>part</u> <u>project</u> )
 								with R (as well as with S), and this join would be an entirely separate consideration. In Figure 4, none of the relations R, <span class="math">&Pi;<sub>21</sub></span
 								>(R), S, <span class="math">&Pi;</span><sub>21</sub>(S) is a function.
 							</p>
-							<p>Ambiguity in the joining of R with S can sometimes be resolved by means of other relations. Suppose we are given, or can derive from sources independent of R and S, a relation T on the domains <u>project</u> and <u>supplier</u> with the following properties:</p>
+							<p>
+								Ambiguity in the joining of R with S can sometimes be resolved by means of other relations. Suppose we are given, or can derive from sources independent of R and S, a relation T on the domains
+								<u>project</u> and <u>supplier</u> with the following properties:
+							</p>
 							<ul>
 								<li>(1) <span class="math">&Pi;</span><sub class="sub-math">1</sub>(T) = <span class="math">&Pi;</span><sub class="sub-math">2</sub>(S)</li>
 								<li>(2) <span class="math">&Pi;</span><sub class="sub-math">2</sub>(T) = <span class="math">&Pi;</span><sub class="sub-math">1</sub>(R)</li>
@@ -410,10 +424,13 @@ U ( <u>supplier</u> <u>part</u> <u>project</u> )
 								The reader is probably familiar with the notion of composition applied to functions. We shall discuss a generalization of that concept and apply it first to binary relations. Our definitions of composition and composability are based very directly on the definitions of join and joinability given above.
 							</p>
 							<p>
-								Suppose we are given two relations R, S. T is a composition of R with S if there exists a join U of R with S such that T = <span class="math">&Pi;</span><sub>13</sub>(U). Thus, two relations are composable if and only if they are joinable. However, the existence of more than one join of R with S does
-								not imply the existence of more than one composition of R with S.
+								Suppose we are given two relations R, S. T is a composition of R with S if there exists a join U of R with S such that T =
+								<span class="math">&Pi;</span><sub>13</sub>(U). Thus, two relations are composable if and only if they are joinable. However, the existence of more than one join of R with S does not imply the existence of more than one composition of R with S.
 							</p>
-							<p>Corresponding to the natural join of R with S is the <u>natural composition</u> of R with S defined by</p>
+							<p>
+								Corresponding to the natural join of R with S is the
+								<u>natural composition</u> of R with S defined by
+							</p>
 							<pre>
         R&#9679;S = <span class="math">&Pi;</span><sub>13</sub>(R&lowast;S)
             </pre>
@@ -530,7 +547,10 @@ U ( <u>supplier</u> <u>part</u> <u>project</u> )
 							<ul>
 								<li>(1) <span class="math">&Pi;</span><sub>1</sub>(T) = <span class="math">&Pi;</span><sub>1</sub>(R)</li>
 								<li>(2) <span class="math">&Pi;</span><sub>2</sub>(T) = <span class="math">&Pi;</span><sub>2</sub>(S)</li>
-								<li>(3) for every element pair (a, c) in the relation <span class="math">&Pi;</span><sub>12</sub>(T) there is an element b such that (a, b) is in <span class="math">&Pi;</span><sub>12</sub>(R) and (b, c) is in <span class="math">&Pi;</span><sub>12</sub>(S).</li>
+								<li>
+									(3) for every element pair (a, c) in the relation
+									<span class="math">&Pi;</span><sub>12</sub>(T) there is an element b such that (a, b) is in <span class="math">&Pi;</span><sub>12</sub>(R) and (b, c) is in <span class="math">&Pi;</span><sub>12</sub>(S).
+								</li>
 							</ul>
 							<p class="no-indent">There are practical problems (which we shall not discuss here) in taking an instantaneous snapshot of a collection of relations, some of which may be very large and highly variable.</p>
 							<div class="hr-container">
@@ -564,7 +584,9 @@ U ( <u>supplier</u> <u>part</u> <u>project</u> )
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">1969-08-19</time></sub>

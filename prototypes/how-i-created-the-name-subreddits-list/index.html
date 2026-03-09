@@ -36,14 +36,18 @@
 			<hgroup>
 				<h1>How I created the "name-subreddits list"</h1>
 				<div class="article-meta">
-					<div class="published-box">Published: <time class="published" datetime="2020-06-14">2020-06-14</time></div>
+					<div class="published-box">
+						Published:
+						<time class="published" datetime="2020-06-14">2020-06-14</time>
+					</div>
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
 				</div>
 			</hgroup>
 			<div class="disclaimer">
 				<p>
-					This article contains affiliate links to amazon - that is how I can keep this site afloat. If you have a better idea, or an alternative where I can still make money but not support giant corporations, please open up an <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Issue</a> on Github
-					and let me know!
+					This article contains affiliate links to amazon - that is how I can keep this site afloat. If you have a better idea, or an alternative where I can still make money but not support giant corporations, please open up an
+					<a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Issue</a>
+					on Github and let me know!
 				</p>
 			</div>
 			<p>It started in 2018 with creating a file containing all subreddit names from the site's sitemap (which has been made unavailable for unknown reasons)</p>
@@ -55,7 +59,10 @@
 			<p>To do this, I would need a giant list of first names and basically filter out all existing subreddits that did not exist in the names list, which would leave me list a list of subreddits that <em>did</em> exist in that list</p>
 			<p>Good thing I had that file with all those subreddits laying around!</p>
 			<p>Now, where to find a list of names? <em>Books</em>, of course!</p>
-			<p>After a short search I found <a>Bruce Lansky's "100,000+ baby names"</a>, so I bought the Kindle version, converted it to text and got to work in my text editor to filter out most (if not all) names.</p>
+			<p>
+				After a short search I found
+				<a>Bruce Lansky's "100,000+ baby names"</a>, so I bought the Kindle version, converted it to text and got to work in my text editor to filter out most (if not all) names.
+			</p>
 			<p>After fiddling with regex for a bit, I got left with a list of 95477 names. Not really 100k, but close enough.</p>
 			<p>
 				While thinking about how to filter the subreddit list, I remembered that Excel had such a functionality! Quickly throwing those two lists in an Excel sheet and using <samp>Conditional Formatting</samp> on both lists to mark the names that were in both was a breeze, but to then <em>filter</em> those lists took
@@ -64,10 +71,13 @@
 			<p>At first I tried to filter the subreddit list (which was about a million items long), but after two hours of waiting for the list to filter out all unmarked items, I force-quit Excel and tried to do the same on the names list instead. Success!</p>
 			<p>I was left with a neat list of just a "measly" 8221 items it was time to turn to reddit to extract some information.</p>
 			<p>
-				Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding <samp>.json</samp> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <samp>/r/[SUBREDDIT]/about/.json</samp>, instead of the normal
-				<samp>/r/[SUBREDDIT]/.json</samp>, but eh, it's not the worst.
+				Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding
+				<samp>.json</samp> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <samp>/r/[SUBREDDIT]/about/.json</samp>, instead of the normal <samp>/r/[SUBREDDIT]/.json</samp>, but eh, it's not the worst.
 			</p>
-			<p>Now I was ready to extract the information I needed, but how? Well, this <em>is</em> the web, so it seems reasonable to use Javascript (even though I don't like the language for several reasons) for the task at hand, which I did.</p>
+			<p>
+				Now I was ready to extract the information I needed, but how? Well, this
+				<em>is</em> the web, so it seems reasonable to use Javascript (even though I don't like the language for several reasons) for the task at hand, which I did.
+			</p>
 			<p>I turned the list of name-subreddits into a list of URLs, through arcane magic called <samp>regex</samp>, after which I threw the list into a <samp>.js</samp> file.</p>
 			<pre><code>
 				const urls = ["https://old.reddit.com/r/aakash/about/.json",
@@ -78,11 +88,16 @@
 				"https://old.reddit.com/r/who/about/.json",
 				"https://old.reddit.com/r/whoopee/about/.json"]
 		</code></pre>
-			<p>And remember kids, Reddit has a rate limit of <strong>30 requests per minute!</strong> If you go over that, you'll be temporarily blocked!</p>
+			<p>
+				And remember kids, Reddit has a rate limit of
+				<strong>30 requests per minute!</strong> If you go over that, you'll be temporarily blocked!
+			</p>
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">120__</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">120__</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2020-__-__</time></sub>

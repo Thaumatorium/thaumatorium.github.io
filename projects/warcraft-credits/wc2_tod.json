@@ -1,0 +1,260 @@
+{
+	"Warcraft 2: Tides of Darkness": [
+		{
+			"name": "Adam Maxwell",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Allen Adham",
+			"roles": ["Executive Producer"]
+		},
+		{
+			"name": "Andy Weir",
+			"roles": ["Installer Programming"]
+		},
+		{
+			"name": "Bill Roper",
+			"roles": ["Manual Design and Layout", "Narration", "Voices"]
+		},
+		{
+			"name": "Bob Fitch",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Brian Fitzgerald",
+			"roles": ["Programming (Mac)"]
+		},
+		{
+			"name": "Brian Love",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Brian Sousa",
+			"roles": ["3D Artwork", "Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Chris Metzen",
+			"roles": ["Artwork", "Manual Artwork", "Manual Design and Layout", "Scenario Design", "Story & Design", "Voices"]
+		},
+		{
+			"name": "Chris Millar",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Chris Yoshimura",
+			"roles": ["International Sales"]
+		},
+		{
+			"name": "Christina Cade",
+			"roles": ["Office Manager"]
+		},
+		{
+			"name": "Collin Murray",
+			"roles": ["Manual Artwork"]
+		},
+		{
+			"name": "Daniel Moore",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Dave Berggren",
+			"roles": ["3D Artwork", "Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Dave Hale",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "David Lawrence",
+			"roles": ["Programming (Mac)"]
+		},
+		{
+			"name": "Duane Stinnett",
+			"roles": ["3D Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Eric Flannum",
+			"roles": ["Manual Artwork", "Scenario Layout"]
+		},
+		{
+			"name": "Florian Mueller",
+			"roles": ["International Sales"]
+		},
+		{
+			"name": "Frank Pearce",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Future Point",
+			"roles": ["Macintosh version"]
+		},
+		{
+			"name": "Glenn Stafford",
+			"roles": ["Audio Producer", "Music Composition", "Sound Effects Design", "Voices"]
+		},
+		{
+			"name": "James Shipley",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Jay Patel",
+			"roles": ["Technical Help and Stuff"]
+		},
+		{
+			"name": "Jeff Roberts",
+			"roles": ["Technical Help and Stuff"]
+		},
+		{
+			"name": "Jesse McReynolds",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Joeyray Hall",
+			"roles": ["3D Artwork"]
+		},
+		{
+			"name": "John Goodman",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "John Miles",
+			"roles": ["Technical Help and Stuff"]
+		},
+		{
+			"name": "John Patrick",
+			"roles": ["Marketing"]
+		},
+		{
+			"name": "John Schwartz",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Jorge \"Crazy Cuban\" Rivero",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Josh Cook",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Justin \"Han\" Thavirat",
+			"roles": ["3D Artwork", "Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Kamran Fotoohi",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Kathy Carter",
+			"roles": ["Marketing"]
+		},
+		{
+			"name": "Kendall Bennett",
+			"roles": ["Technical Help and Stuff"]
+		},
+		{
+			"name": "Linda Duttenhaver",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Mark Polcyn",
+			"roles": ["Marketing"]
+		},
+		{
+			"name": "Matt Samia",
+			"roles": ["3D Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Micky Neilson",
+			"roles": ["3D Artwork", "Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Mike Morhaime",
+			"roles": ["Producers", "Programming"]
+		},
+		{
+			"name": "Mike O'Brien",
+			"roles": ["Autoplay Programming"]
+		},
+		{
+			"name": "Nick Carpenter",
+			"roles": ["3D Artwork", "Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Patrick Wyatt",
+			"roles": ["Producers", "Programming"]
+		},
+		{
+			"name": "Ralph Becker",
+			"roles": ["International Sales"]
+		},
+		{
+			"name": "Robert Bridenbecker, II",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Robert Djordjevich",
+			"roles": ["Manual Design and Layout"]
+		},
+		{
+			"name": "Roman Kenney",
+			"roles": ["3D Artwork", "Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Ron Meyer",
+			"roles": ["Programming (Mac)"]
+		},
+		{
+			"name": "Ron Millar",
+			"roles": ["Artwork", "Manual Artwork", "Manual Design and Layout", "Scenario Design", "Scenario Layout", "Senior Designer", "Voices"]
+		},
+		{
+			"name": "Samwise Didier",
+			"roles": ["Artwork", "Manual Artwork", "Producers"]
+		},
+		{
+			"name": "Shane Dabiri",
+			"roles": ["Director of QA"]
+		},
+		{
+			"name": "Steve Huot",
+			"roles": ["Marketing"]
+		},
+		{
+			"name": "Stu Rose",
+			"roles": ["Artwork", "Manual Artwork", "Voices"]
+		},
+		{
+			"name": "Susan Wooley",
+			"roles": ["Public Relations"]
+		},
+		{
+			"name": "Tim Thein",
+			"roles": ["Scenario Editor Programming", "Scenario Editor Programming (Mac)"]
+		},
+		{
+			"name": "Todd Coyle",
+			"roles": ["U.S. Sales"]
+		},
+		{
+			"name": "Tom Bryan",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Trevor Jacobs",
+			"roles": ["3D Artwork", "Manual Artwork"]
+		},
+		{
+			"name": "Tymothi Loving",
+			"roles": ["Lead Tester", "Voices"]
+		},
+		{
+			"name": "Vic Larson",
+			"roles": ["Testers"]
+		},
+		{
+			"name": "Walter Takata",
+			"roles": ["Testers"]
+		}
+	]
+}

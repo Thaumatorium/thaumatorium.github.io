@@ -102,19 +102,35 @@
 					let links = [];
 					let personNodes = new Map();
 					// Add the selected games as nodes (to point to)
-					nodes.push({ id: game1.full_title, group: "game", size: GAME_NODE_SIZE });
+					nodes.push({
+						id: game1.full_title,
+						group: "game",
+						size: GAME_NODE_SIZE,
+					});
 					if (game1.full_title !== game2.full_title) {
-						nodes.push({ id: game2.full_title, group: "game", size: GAME_NODE_SIZE });
+						nodes.push({
+							id: game2.full_title,
+							group: "game",
+							size: GAME_NODE_SIZE,
+						});
 					}
 					const addPersonNode = (person) => {
 						if (!personNodes.has(person.name)) {
-							personNodes.set(person.name, { id: person.name, group: "person", roles: new Set([person.role]) });
+							personNodes.set(person.name, {
+								id: person.name,
+								group: "person",
+								roles: new Set([person.role]),
+							});
 						} else {
 							personNodes.get(person.name).roles.add(person.role);
 						}
 					};
 					const addPersonLinks = (person, gameTitle) => {
-						links.push({ source: person.name, target: gameTitle, role: person.role });
+						links.push({
+							source: person.name,
+							target: gameTitle,
+							role: person.role,
+						});
 					};
 					// Process credits for both games
 					game1.credits.forEach((person) => {
@@ -150,8 +166,16 @@
 					const LT = d3.map(links, linkTarget).map(intern);
 					const T = nodeTitle == null ? null : d3.map(nodes, nodeTitle);
 					const G = nodeGroup == null ? null : d3.map(nodes, nodeGroup).map(intern);
-					nodes = d3.map(nodes, (_, i) => ({ id: N[i], group: G[i], size: nodeSize(nodes[i]) }));
-					links = d3.map(links, (_, i) => ({ source: LS[i], target: LT[i], role: links[i].role }));
+					nodes = d3.map(nodes, (_, i) => ({
+						id: N[i],
+						group: G[i],
+						size: nodeSize(nodes[i]),
+					}));
+					links = d3.map(links, (_, i) => ({
+						source: LS[i],
+						target: LT[i],
+						role: links[i].role,
+					}));
 					if (G && nodeGroups === undefined) nodeGroups = d3.sort(G);
 					const color = nodeGroup == null ? null : d3.scaleOrdinal(nodeGroups, colors);
 					const forceNode = d3.forceManyBody().strength(FORCE_MANYBODY_STRENGTH);
@@ -255,7 +279,9 @@
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12024</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2021-11-08</time></sub>

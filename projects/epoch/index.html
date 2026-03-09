@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Epoch Time Converter | The Thaumatorium</title>
+		<meta name="description" content="Convert epoch seconds, milliseconds, and nanoseconds to RFC3339 and ISO8601 timestamps." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Epoch Time Converter" />
+		<meta property="og:description" content="Convert epoch seconds, milliseconds, and nanoseconds to RFC3339 and ISO8601 timestamps." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Epoch Time Converter" />
+		<meta name="twitter:description" content="Convert epoch seconds, milliseconds, and nanoseconds to RFC3339 and ISO8601 timestamps." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Epoch Time Converter</h1>
+			<section class="epoch-page">
+				<style>
+					body > main {
+						max-width: 100%;
+					}
+					.epoch-page {
+						display: grid;
+						gap: 1rem;
+						padding: 1rem 0;
+						font-family: Consolas, Monaco, "Courier New", monospace;
+					}
+					.epoch-panel {
+						display: grid;
+						gap: 0.9rem;
+						padding: 1rem;
+						border: 1px solid #cda9a9;
+						border-radius: 8px;
+						background: #fffaf9;
+						box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+					}
+					.epoch-toc {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.6rem;
+						align-items: center;
+					}
+					.epoch-toc-label {
+						font-weight: 700;
+					}
+					.epoch-toc a {
+						display: inline-block;
+						padding: 0.2rem 0.55rem;
+						border: 1px solid #d8b3b3;
+						border-radius: 999px;
+						background: #fff;
+						text-decoration: none;
+					}
+					.epoch-toc a:hover {
+						text-decoration: underline;
+					}
+					.epoch-current {
+						background: #edf8ee;
+						border-color: #bdd8c1;
+					}
+					.epoch-current-lines,
+					.epoch-output-grid,
+					.epoch-batch-results {
+						display: grid;
+						gap: 0.55rem;
+					}
+					.epoch-toolbar,
+					.epoch-inline-fields,
+					.epoch-actions {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						align-items: end;
+					}
+					.epoch-field {
+						display: grid;
+						gap: 0.35rem;
+						min-width: 10rem;
+					}
+					.epoch-field.grow {
+						flex: 1 1 24rem;
+					}
+					.epoch-field label {
+						font-weight: 700;
+					}
+					.epoch-input,
+					.epoch-textarea,
+					.epoch-select {
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						padding: 0.65rem 0.8rem;
+						font: inherit;
+						background: #fff;
+						box-sizing: border-box;
+					}
+					.epoch-textarea {
+						min-height: 12rem;
+						resize: vertical;
+					}
+					.epoch-output {
+						padding: 0.75rem 0.85rem;
+						border: 1px solid #d8d8d8;
+						border-left: 4px solid #007bff;
+						border-radius: 6px;
+						background: #f7f9fb;
+					}
+					.epoch-output-label,
+					.epoch-copy-label {
+						display: block;
+						font-weight: 700;
+						margin-bottom: 0.25rem;
+					}
+					.epoch-output-value,
+					.epoch-current-value {
+						margin: 0;
+						padding: 0.55rem 0.65rem;
+						border: 1px solid #ced4da;
+						border-radius: 4px;
+						background: #fff;
+						cursor: pointer;
+						word-break: break-word;
+					}
+					.epoch-output-value:hover,
+					.epoch-current-value:hover {
+						background: #f8f9fa;
+					}
+					.epoch-status {
+						margin: 0;
+						min-height: 1.25rem;
+						color: #6e0000;
+					}
+					.epoch-status[data-tone="error"] {
+						color: #a31717;
+					}
+					.epoch-hint {
+						margin: 0;
+						font-size: 0.92rem;
+						color: #555;
+					}
+					.epoch-batch-results[hidden] {
+						display: none;
+					}
+					.epoch-table-wrap {
+						overflow-x: auto;
+						border: 1px solid #ddd;
+						border-radius: 8px;
+						background: #fff;
+					}
+					.epoch-table {
+						width: 100%;
+						min-width: 820px;
+						border-collapse: collapse;
+						font-size: 0.9rem;
+					}
+					.epoch-table th,
+					.epoch-table td {
+						border: 1px solid #dee2e6;
+						padding: 0.55rem 0.7rem;
+						text-align: left;
+						vertical-align: top;
+					}
+					.epoch-table thead th {
+						position: sticky;
+						top: 0;
+						background: #f1f3f5;
+						z-index: 1;
+					}
+					.epoch-table td.copyable {
+						cursor: pointer;
+					}
+					.epoch-table td.copyable:hover {
+						background: #f8f9fa;
+					}
+					@media (max-width: 768px) {
+						.epoch-page {
+							padding: 0.25rem 0;
+						}
+						.epoch-panel {
+							padding: 0.85rem;
+						}
+					}
+				</style>
+				<section class="epoch-panel epoch-current">
+					<nav class="epoch-toc" aria-label="Page contents">
+						<span class="epoch-toc-label">On this page:</span>
+						<a href="#current-time">Current Time</a>
+						<a href="#single-converter">Single Converter</a>
+						<a href="#batch-converter">Batch Converter</a>
+					</nav>
+				</section>
+				<section class="epoch-panel epoch-current" id="current-time">
+					<h2>Current Time</h2>
+					<div class="epoch-current-lines" id="currentTime"></div>
+					<p class="epoch-hint">Click any value to copy it.</p>
+				</section>
+				<section class="epoch-panel" id="single-converter">
+					<h2>Single Converter</h2>
+					<div class="epoch-toolbar">
+						<div class="epoch-field grow">
+							<label for="singleInput">Epoch timestamp</label>
+							<input class="epoch-input" id="singleInput" type="text" placeholder="e.g. 1754841115 or 1754841115585" />
+						</div>
+						<div class="epoch-field">
+							<label for="singleUnit">Interpret as</label>
+							<select class="epoch-select" id="singleUnit">
+								<option value="auto">Auto-detect</option>
+								<option value="seconds">Seconds</option>
+								<option value="milliseconds">Milliseconds</option>
+								<option value="nanoseconds">Nanoseconds</option>
+							</select>
+						</div>
+					</div>
+					<div class="epoch-actions">
+						<button class="button" id="convertSingleBtn" type="button">Convert</button>
+						<button class="button" id="useNowBtn" type="button">Use current time</button>
+						<button class="button" id="clearSingleBtn" type="button">Clear</button>
+					</div>
+					<p class="epoch-status" id="singleStatus" aria-live="polite"></p>
+					<div class="epoch-output-grid">
+						<div class="epoch-output">
+							<span class="epoch-output-label">Detected unit</span>
+							<div class="epoch-output-value" id="singleDetected">-</div>
+						</div>
+						<div class="epoch-output">
+							<span class="epoch-output-label">RFC3339 (UTC)</span>
+							<div class="epoch-output-value" id="singleUtc">-</div>
+						</div>
+						<div class="epoch-output">
+							<span class="epoch-output-label">ISO8601 (Local)</span>
+							<div class="epoch-output-value" id="singleLocal">-</div>
+						</div>
+						<div class="epoch-output">
+							<span class="epoch-output-label">Unix seconds</span>
+							<div class="epoch-output-value" id="singleSeconds">-</div>
+						</div>
+						<div class="epoch-output">
+							<span class="epoch-output-label">Unix milliseconds</span>
+							<div class="epoch-output-value" id="singleMilliseconds">-</div>
+						</div>
+						<div class="epoch-output">
+							<span class="epoch-output-label">Unix nanoseconds</span>
+							<div class="epoch-output-value" id="singleNanoseconds">-</div>
+						</div>
+					</div>
+				</section>
+				<section class="epoch-panel" id="batch-converter">
+					<h2>Batch Converter</h2>
+					<div class="epoch-inline-fields">
+						<div class="epoch-field">
+							<label for="batchUnit">Interpret batch as</label>
+							<select class="epoch-select" id="batchUnit">
+								<option value="auto">Auto-detect</option>
+								<option value="seconds">Seconds</option>
+								<option value="milliseconds">Milliseconds</option>
+								<option value="nanoseconds">Nanoseconds</option>
+							</select>
+						</div>
+					</div>
+					<div class="epoch-field">
+						<label for="batchInput">One timestamp per line</label>
+						<textarea class="epoch-textarea" id="batchInput" placeholder="1754841115&#10;1754841115585&#10;1754841115585000000"></textarea>
+					</div>
+					<p class="epoch-hint">Batch parsing is line-based now. Empty lines are ignored. Click table cells to copy them.</p>
+					<div class="epoch-actions">
+						<button class="button" id="convertBatchBtn" type="button">Convert list</button>
+						<button class="button" id="clearBatchBtn" type="button">Clear</button>
+						<button class="button" id="downloadBatchBtn" type="button">Download CSV</button>
+					</div>
+					<p class="epoch-status" id="batchStatus" aria-live="polite"></p>
+					<div class="epoch-batch-results" id="batchResults" hidden>
+						<div class="epoch-table-wrap">
+							<table class="epoch-table">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Input</th>
+										<th>Detected</th>
+										<th>RFC3339 (UTC)</th>
+										<th>ISO8601 (Local)</th>
+										<th>Unix s</th>
+										<th>Unix ms</th>
+										<th>Unix ns</th>
+										<th>Error</th>
+									</tr>
+								</thead>
+								<tbody id="batchTbody"></tbody>
+							</table>
+						</div>
+					</div>
+				</section>
+				<script type="module" src="/projects/epoch/epoch.mjs"></script>
+			</section>
+			<style>
+				.project-index {
+					margin-top: 1.5em;
+				}
+				.project-index-summary {
+					color: #5f1d1d;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.95em;
+					margin-bottom: 2em;
+				}
+				.project-list {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				.project-year-group {
+					margin-bottom: 2.5em;
+				}
+				.project-year-group > h2 {
+					border-bottom: 1px solid #d8b3b3;
+					margin-bottom: 0.8em;
+					padding-bottom: 0.2em;
+				}
+				.project-entry {
+					border-bottom: 1px solid #ead6d6;
+					list-style: none;
+					margin: 0;
+					padding: 1em 0 1.15em;
+				}
+				.project-entry:first-child {
+					padding-top: 0.2em;
+				}
+				.project-entry:last-child {
+					border-bottom: 0;
+					padding-bottom: 0;
+				}
+				.project-entry article {
+					display: grid;
+					gap: 0.35em;
+				}
+				.project-entry h3 {
+					font-size: 1.05em;
+					margin: 0;
+					padding: 0;
+					text-transform: none;
+				}
+				.project-entry h3 a {
+					text-decoration: none;
+				}
+				.project-entry h3 a:hover {
+					text-decoration: underline;
+				}
+				.project-entry-meta,
+				.project-entry-summary {
+					margin: 0;
+					padding: 0;
+					text-align: left;
+				}
+				.project-entry-meta {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.88em;
+				}
+				.project-entry-summary {
+					color: #2b2b2b;
+					font-size: 0.98em;
+					line-height: 1.45;
+					max-width: 70ch;
+				}
+				@media (min-width: 900px) {
+					body > main {
+						margin-left: 12%;
+						margin-right: 12%;
+					}
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-08</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

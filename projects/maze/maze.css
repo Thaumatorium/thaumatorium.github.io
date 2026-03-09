@@ -1,0 +1,154 @@
+.maze-page {
+	display: grid;
+	gap: 1rem;
+}
+
+.maze-page h2 {
+	margin-bottom: 0;
+}
+
+.maze-intro {
+	margin: 0;
+	max-width: 70ch;
+}
+
+.maze-status {
+	margin: 0;
+}
+
+.maze-controls {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: end;
+	gap: 0.75rem 1rem;
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	background: #f7f7f7;
+}
+
+.maze-controls label {
+	display: grid;
+	gap: 0.35rem;
+	font-size: 0.95rem;
+	font-weight: 600;
+	color: inherit;
+}
+
+.maze-controls select,
+.maze-controls input,
+.maze-controls button,
+.maze-controls output {
+	font: inherit;
+}
+
+.maze-controls select,
+.maze-controls input[type="number"],
+.maze-controls input[type="range"] {
+	min-width: 9rem;
+}
+
+.maze-controls output {
+	font-variant-numeric: tabular-nums;
+}
+
+.maze-controls button {
+	border: 1px solid #999;
+	border-radius: 4px;
+	padding: 0.7rem 1rem;
+	background: #fff;
+	color: inherit;
+	cursor: pointer;
+}
+
+.maze-controls button:hover {
+	background: #f0f0f0;
+}
+
+.maze-stage {
+	overflow: auto;
+	padding: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.maze-stage canvas {
+	display: block;
+	max-width: 100%;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.maze-benchmark {
+	display: grid;
+	gap: 0.75rem;
+}
+
+.maze-benchmark h3,
+.maze-benchmark-intro,
+.maze-benchmark-empty {
+	margin: 0;
+}
+
+.maze-benchmark-results {
+	overflow: auto;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	background: #fff;
+}
+
+.maze-benchmark-table {
+	width: 100%;
+	border-collapse: collapse;
+	min-width: max-content;
+	font-size: 0.92rem;
+}
+
+.maze-benchmark-table th,
+.maze-benchmark-table td {
+	padding: 0.55rem 0.7rem;
+	border: 1px solid #ddd;
+	text-align: center;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+
+.maze-benchmark-table thead th {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	background: #f3f4f6;
+}
+
+.maze-benchmark-table thead th:first-child,
+.maze-benchmark-table tbody th {
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background: #f9fafb;
+	text-align: left;
+}
+
+.maze-benchmark-table thead th:first-child {
+	z-index: 3;
+}
+
+.maze-benchmark-table tfoot th,
+.maze-benchmark-table tfoot td {
+	font-weight: 700;
+	background: #f8fafc;
+}
+
+.maze-benchmark-table tfoot tr:last-child th,
+.maze-benchmark-table tfoot tr:last-child td {
+	border-top: 2px solid #94a3b8;
+}
+
+.maze-benchmark-table td[data-state="na"] {
+	color: #6b7280;
+}
+
+.maze-benchmark-table td[data-state="fail"] {
+	color: #7f1d1d;
+	font-weight: 700;
+}

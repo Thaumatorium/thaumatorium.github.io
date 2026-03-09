@@ -101,7 +101,8 @@
 				human memory is necessarily limited.
 			</p>
 			<p>
-				We may compare a man in the process of computing a real number to a machine which is only capable of a finite number of conditions <var>q<sub>1</sub></var
+				We may compare a man in the process of computing a real number to a machine which is only capable of a finite number of conditions
+				<var>q<sub>1</sub></var
 				>, <var>q<sub>2</sub></var
 				>, …, <var>q<sub>R</sub></var> which will be called “<var>m</var>-configurations”. The machine is supplied with a “tape” (the analogue of paper) running through it, and divided into sections (called “squares”) each capable of bearing a “symbol”. At any moment there is just one square, say the <var>r</var>-th,
 				bearing the symbol ℭ(<var>r</var>) which is “in the machine”. We may call this square the “scanned square”. The symbol on the scanned square may be called the “scanned symbol”. The “scanned symbol” is the only one of which the machine is, so to speak, “directly aware”. However, by altering its
@@ -114,14 +115,18 @@
 			</p>
 			<aside>
 				<p>† Alonzo Church, “An unsolvable problem, of elementary number theory number theory”, <var>American J. of Math.</var>, 58 (1936), 345-363.</p>
-				<p>&ddagger; Alonzo Church, “A note on the Entscheidungsproblem”, <var>J. of Symbolic Logic</var>, 1 (1936), 40-41.</p>
+				<p>
+					&ddagger; Alonzo Church, “A note on the Entscheidungsproblem”,
+					<var>J. of Symbolic Logic</var>, 1 (1936), 40-41.
+				</p>
 			</aside>
 			<h2>2. Definitions.</h2>
 			<h3>Automatic machines.</h3>
 			<p>If at each stage the motion of a machine (in the sense of § 1) is completely determined by the configuration, we shall call the machine an “automatic machine” (or <var>a</var>-machine).</p>
 			<p>
-				For some purposes we might use machines (choice machines or <var>c</var>-machines) whose motion is only partially determined by the configuration (hence the use of the word “possible” in §1). When such a machine reaches one of these ambiguous configurations, it cannot go on until some arbitrary choice has been
-				made by an external operator. This would be the case if we were using machines to deal with axiomatic systems. In this paper I deal only with automatic machines, and will therefore often omit the prefix <var>a</var>-.
+				For some purposes we might use machines (choice machines or
+				<var>c</var>-machines) whose motion is only partially determined by the configuration (hence the use of the word “possible” in §1). When such a machine reaches one of these ambiguous configurations, it cannot go on until some arbitrary choice has been made by an external operator. This would be the case if we
+				were using machines to deal with axiomatic systems. In this paper I deal only with automatic machines, and will therefore often omit the prefix <var>a</var>-.
 			</p>
 			<h3>Computing machines.</h3>
 			<p>
@@ -130,8 +135,8 @@
 				<em>number computed by the machine</em>.
 			</p>
 			<p>
-				At any stage of the motion of the machine, the number of the scanned square, the complete sequence of all symbols on the tape, and the <var>m</var>-configuration will be said to describe the <em>complete configuration</em> at that stage. The changes of the machine and tape between successive complete
-				configurations will be called the <em>moves</em> of the machine.
+				At any stage of the motion of the machine, the number of the scanned square, the complete sequence of all symbols on the tape, and the
+				<var>m</var>-configuration will be said to describe the <em>complete configuration</em> at that stage. The changes of the machine and tape between successive complete configurations will be called the <em>moves</em> of the machine.
 			</p>
 			<h3>Circular and circle-free machines.</h3>
 			<p>If a computing machine never writes down more than a finite number of symbols of the first kind, it will be called <em>circular</em>. Otherwise it is said to be <em>circle-free</em>.</p>
@@ -186,7 +191,10 @@
 					</tr>
 				</tbody>
 			</table>
-			<p>If (contrary to the description in §1) we allow the letters <var>L</var>, <var>R</var> to appear more than once in the operations column we can simplify the table considerably.</p>
+			<p>
+				If (contrary to the description in §1) we allow the letters
+				<var>L</var>, <var>R</var> to appear more than once in the operations column we can simplify the table considerably.
+			</p>
 			<table>
 				<thead>
 					<tr>
@@ -247,7 +255,10 @@
 						<td rowspan="2">𝔬</td>
 						<td rowspan="2" class="stache"></td>
 						<td>1</td>
-						<td><var>R</var>, <var>P</var>𝑥, <var>L</var>, <var>L</var>, <var>L</var></td>
+						<td>
+							<var>R</var>, <var>P</var>𝑥, <var>L</var>, <var>L</var>,
+							<var>L</var>
+						</td>
 						<td>𝔬</td>
 					</tr>
 					<tr>
@@ -551,7 +562,10 @@
 					</tr>
 				</tbody>
 			</table>
-			<p>in which a space has been made on the left of the scanned symbol and the <var>m</var>-configuration written in this space. This form is less easy to follow, but we shall make use of it later for theoretical purposes.</p>
+			<p>
+				in which a space has been made on the left of the scanned symbol and the
+				<var>m</var>-configuration written in this space. This form is less easy to follow, but we shall make use of it later for theoretical purposes.
+			</p>
 			<p>
 				The convention of writing the figures only on alternate squares is very useful: I shall always make use of it. I shall call the one sequence of alternate squares <var>F</var>-squares and the other sequence <var>E</var>-squares. The symbols on <var>E</var>-squares will be liable to erasure. The symbols on
 				<var>F</var>-squares form a continuous sequence. There are no blanks until the end is reached. There is no need to have more than one <var>E</var>-square between each pair of <var>F</var>-squares: an apparent need of more <var>E</var>-squares can be satisfied by having a sufficiently rich variety of symbols
@@ -631,13 +645,14 @@
 			</table>
 			<p>If we were to replace ℭ throughout by 𝔮 (say), 𝔟 by 𝔯, and α by 𝑥, we should have a complete table for the <var>m</var>-configuration 𝔣(𝔮, 𝔯, 𝑥). 𝔣 is called an “<var>m</var>-configuration function” or “<var>m</var>-function".</p>
 			<p>
-				The only expressions which are admissible for substitution in an <var>m</var>-function are the <var>m</var>-configurations and symbols of the machine. These have to be enumerated more or less explicitly: they may include expressions such as 𝔭(𝔢, 𝑥); indeed they must if there are any <var>m</var>-functions used
-				at all. If we did not insist on this explicit enumeration, but simply stated that the machine had certain <var>m</var>-configurations (enumerated) and all <var>m</var>-configurations obtainable by substitution of <var>m</var>-configurations in certain <var>m</var>-functions, we should usually get an infinity of
-				<var>m</var>-configurations; e.g., we might say that the machine was to have the <var>m</var>-configuration 𝔮 and all <var>m</var>-configurations obtainable by substituting an <var>m</var>-configuration for ℭ in 𝔭(ℭ). Then it would have 𝔮, 𝔭(𝔮), 𝔭(𝔭(𝔮)) 𝔭(𝔭(𝔭(𝔮))), … as <var>m</var>-configurations.
+				The only expressions which are admissible for substitution in an
+				<var>m</var>-function are the <var>m</var>-configurations and symbols of the machine. These have to be enumerated more or less explicitly: they may include expressions such as 𝔭(𝔢, 𝑥); indeed they must if there are any <var>m</var>-functions used at all. If we did not insist on this explicit enumeration, but
+				simply stated that the machine had certain <var>m</var>-configurations (enumerated) and all <var>m</var>-configurations obtainable by substitution of <var>m</var>-configurations in certain <var>m</var>-functions, we should usually get an infinity of <var>m</var>-configurations; e.g., we might say that the
+				machine was to have the <var>m</var>-configuration 𝔮 and all <var>m</var>-configurations obtainable by substituting an <var>m</var>-configuration for ℭ in 𝔭(ℭ). Then it would have 𝔮, 𝔭(𝔮), 𝔭(𝔭(𝔮)) 𝔭(𝔭(𝔭(𝔮))), … as <var>m</var>-configurations.
 			</p>
 			<p>
-				Our interpretation rule then is this. We are given the names of the <var>m</var>-configurations of the machine, mostly expressed in terms of <var>m</var>-functions. We are also given skeleton tables. All we want is the complete table for the <var>m</var>-configurations of the machine. This is obtained by
-				repeated substitution in the skeleton tables.
+				Our interpretation rule then is this. We are given the names of the
+				<var>m</var>-configurations of the machine, mostly expressed in terms of <var>m</var>-functions. We are also given skeleton tables. All we want is the complete table for the <var>m</var>-configurations of the machine. This is obtained by repeated substitution in the skeleton tables.
 			</p>
 			<h3>Further examples.</h3>
 			<p>(In the explanations the symbol “→” is used to signify “the machine goes into the <var>m</var>-configuration. . . . “)</p>
@@ -1171,8 +1186,9 @@ DADDCRDAA;DAADDRDAAA;
 			</p>
 			<h2>7. Detailed description of the universal machine.</h2>
 			<p>
-				A table is given below of the behaviour of this universal machine. The <var>m</var>-configurations of which the machine is capable are all those occurring in the first and last columns of the table, together with all those which occur when we write out the unabbreviated tables of those which appear in the table
-				in the form of <var>m</var>-functions. E.g., 𝔢(𝔞𝔫𝔣) appears in the table and is an <var>m</var>-function. Its unabbreviated table is (see p. 239)
+				A table is given below of the behaviour of this universal machine. The
+				<var>m</var>-configurations of which the machine is capable are all those occurring in the first and last columns of the table, together with all those which occur when we write out the unabbreviated tables of those which appear in the table in the form of <var>m</var>-functions. E.g., 𝔢(𝔞𝔫𝔣) appears in the
+				table and is an <var>m</var>-function. Its unabbreviated table is (see p. 239)
 			</p>
 			𝔢(𝔞𝔫𝔣) 𝔢<sub>1</sub>(𝔞𝔫𝔣)
 			<!-- ! HIER VERDER -->
@@ -1232,7 +1248,10 @@ DADDCRDAA;DAADDRDAAA;
 						<td>C</td>
 						<td>R, Pa, R</td>
 						<td>𝔠𝔬𝔫<sub>2</sub>(ℭ, α)</td>
-						<td>𝔠𝔬𝔫(ℭ, ). In the final configuration the machine is scanning the square which is four squares to the right of the last square of <var>C</var>. <var>C</var> is left unmarked</td>
+						<td>
+							𝔠𝔬𝔫(ℭ, ). In the final configuration the machine is scanning the square which is four squares to the right of the last square of
+							<var>C</var>. <var>C</var> is left unmarked
+						</td>
 					</tr>
 					<tr>
 						<td></td>
@@ -1300,10 +1319,11 @@ DADDCRDAA;DAADDRDAAA;
 				all the rough work done by &Dscr; is erased.
 			</p>
 			<p>
-				The machine &Mscr; has its motion divided into sections. In the first <var>N</var>-1 sections, among other things, the integers 1, 2,&hellip;, <var>N</var>-1 have been written down and tested by the machine &Dscr;. A certain number, say <var>R</var>(<var>N</var>-<var>I</var>), of them have been found to be the
-				D.N's of circle-free machines. In the <var>N</var>-th section the machine &Dscr; tests the number <var>N</var>. If <var>N</var> is satisfactory, i.e., if it is the D.N of a circle-free machine, then <var>R</var>(<var>N</var>)=1+<var>R</var>(<var>N</var>-1) and the first <var>R</var>(<var>N</var>) figures of the
-				sequence of which a D.N is <var>N</var> are calculated. The <var>R</var>(<var>N</var>)-th figure of this sequence is written down as one of the figures of the sequence &beta;&prime; computed by &Mscr;. If <var>N</var> is not satisfactory, then <var>R</var>(<var>N</var>)=<var>R</var>(<var>N</var>-1) and the
-				machine goes on to the (<var>N</var>+l)-th section of its motion.
+				The machine &Mscr; has its motion divided into sections. In the first
+				<var>N</var>-1 sections, among other things, the integers 1, 2,&hellip;, <var>N</var>-1 have been written down and tested by the machine &Dscr;. A certain number, say <var>R</var>(<var>N</var>-<var>I</var>), of them have been found to be the D.N's of circle-free machines. In the <var>N</var>-th section the
+				machine &Dscr; tests the number <var>N</var>. If <var>N</var> is satisfactory, i.e., if it is the D.N of a circle-free machine, then <var>R</var>(<var>N</var>)=1+<var>R</var>(<var>N</var>-1) and the first <var>R</var>(<var>N</var>) figures of the sequence of which a D.N is <var>N</var> are calculated. The
+				<var>R</var>(<var>N</var>)-th figure of this sequence is written down as one of the figures of the sequence &beta;&prime; computed by &Mscr;. If <var>N</var> is not satisfactory, then <var>R</var>(<var>N</var>)=<var>R</var>(<var>N</var>-1) and the machine goes on to the (<var>N</var>+l)-th section of its
+				motion.
 			</p>
 			<p>
 				From the construction of &Mscr; we can see that &Mscr; is circle-free. Each section of the motion of &Mscr; comes to an end after a finite number of steps. For, by our assumption about &Dscr;, the decision as to whether <var>N</var> is satisfactory is reached in a finite number of steps. If <var>N</var> is not
@@ -1317,7 +1337,10 @@ DADDCRDAA;DAADDRDAAA;
 				<var>R</var>(<var>K</var>) figures computed by <var>H</var> and write down the <var>R</var>(<var>K</var>)-th”. This <var>R</var>(<var>K</var>)-th figure would never be found. I.e., &Mscr; is circular, contrary both to what we have found in the last paragraph and to the verdict “<var>s</var>”. Thus both verdicts
 				are impossible and we conclude that there can be no machine &Dscr;
 			</p>
-			<p>We can show further that <em>there can be no machine &Escr; which, when supplied with the S.D of an arbitrary machine &Mscr;, will determine whether &Mscr; ever prints a given symbol (0 say).</em></p>
+			<p>
+				We can show further that
+				<em>there can be no machine &Escr; which, when supplied with the S.D of an arbitrary machine &Mscr;, will determine whether &Mscr; ever prints a given symbol (0 say).</em>
+			</p>
 			<p>
 				We will first show that, if there is a machine &Escr; then there is a general process for determining whether a given machine &Mscr; prints 0 infinitely often. Let &Mscr;<sub>1</sub> be a machine which prints the same sequence as &Mscr;, except that in the position where the first 0 printed by &Mscr; stands,
 				&Mscr;<sub>1</sub> prints <var style="text-decoration: overline">0</var>. &Mscr;<sub>2</sub> is to have the first two symbols 0 replaced by <var style="text-decoration: overline">0</var>, and so on. Thus, if &Mscr; were to print
@@ -1329,8 +1352,8 @@ DADDCRDAA;DAADDRDAAA;
 			<pre><var>ABA<var style="text-decoration: overline;">0</var>1AAB<var style="text-decoration: overline;">0</var>010AB&hellip;.</var></pre>
 			<p>
 				Now let &Fscr; be a machine which, when supplied with the S.D of &Mscr;, will write down successively the S.D of &Mscr;, of &Mscr;<sub>1</sub> of &Mscr;<sub>2</sub>, &hellip; (there is such a machine). We combine &Fscr; with &Escr; and obtain a new machine, &Gscr;. In the motion of &Gscr; first &Fscr; is used
-				to write down the S.D of &Mscr;, and then &Escr; tests it. <code>:o:</code> is written if it is found that &Mscr; never prints 0; then &Fscr; writes the S.D of &Mscr;<sub>1</sub>, and this is tested, <code>:0:</code> being printed if and only if &Mscr;<sub>1</sub> never prints 0, and so on. Now let us test
-				&Gscr; with &Escr;. If it is found that &Gscr; never prints 0, then &Mscr; prints 0 infinitely often; if &Gscr; prints 0 sometimes, then &Mscr; does not print 0 infinitely often.
+				to write down the S.D of &Mscr;, and then &Escr; tests it. <code>:o:</code> is written if it is found that &Mscr; never prints 0; then &Fscr; writes the S.D of &Mscr;<sub>1</sub>, and this is tested, <code>:0:</code> being printed if and only if &Mscr;<sub>1</sub>
+				never prints 0, and so on. Now let us test &Gscr; with &Escr;. If it is found that &Gscr; never prints 0, then &Mscr; prints 0 infinitely often; if &Gscr; prints 0 sometimes, then &Mscr; does not print 0 infinitely often.
 			</p>
 			<p>
 				Similarly there is a general process for determining whether &Mscr; prints 1 infinitely often. By a combination of these processes we have a process for determining whether &Mscr; prints an infinity of figures, i.e. we have a process for determining whether &Mscr; is circle-free. There can therefore be no
@@ -1404,9 +1427,10 @@ DADDCRDAA;DAADDRDAAA;
 			</ol>
 			<p>The operation actually performed is determined, as has been suggested on p. 250, by the state of mind of the computer and the observed symbols. In particular, they determine the state of mind of the computer after the operation is carried out.</p>
 			<p>
-				We may now construct a machine to do the work of this computer. To each state of mind of the computer corresponds an “<var>m</var>-configuration” of the machine. The machine scans <var>B</var> squares corresponding to the <var>B</var> squares observed by the computer. In any move the machine can change a symbol
-				on a scanned square or can change any one of the scanned squares to another square distant not more than <var>L</var> squares from one of the other scanned squares. The move which is done, and the succeeding configuration, are determined by the scanned symbol and the <var>m</var>-configuration. The machines
-				just described do not differ very essentially from computing machines as defined in §2, and corresponding to any machine of this type a computing machine can be constructed to compute the same sequence, that is to say the sequence computed by the computer.
+				We may now construct a machine to do the work of this computer. To each state of mind of the computer corresponds an “<var>m</var>-configuration” of the machine. The machine scans
+				<var>B</var> squares corresponding to the <var>B</var> squares observed by the computer. In any move the machine can change a symbol on a scanned square or can change any one of the scanned squares to another square distant not more than <var>L</var> squares from one of the other scanned squares. The move which
+				is done, and the succeeding configuration, are determined by the scanned symbol and the <var>m</var>-configuration. The machines just described do not differ very essentially from computing machines as defined in §2, and corresponding to any machine of this type a computing machine can be constructed to compute
+				the same sequence, that is to say the sequence computed by the computer.
 			</p>
 			<p>II. [Type (6)].</p>
 			<p>If the notation of the Hilbert functional calculus&dagger; is modified so as to be systematic, and so as to involve onty a finite number of symbols, it becomes possible to construct an automatic&ddagger; machine &Kscr;, which will find all the provable formulae of the calculus§.</p>
@@ -1433,12 +1457,18 @@ DADDCRDAA;DAADDRDAAA;
 				<p>§ The author has found a description of such a machine.</p>
 				<!-- ! I don't know what that doulbe bar thingy is ! -->
 				<p id="negation-sign-explanation"><a href="#negation-sign">||</a> The negation sign is written before an expression and not over it.</p>
-				<p>¶ A sequence of <var>r</var> primes is denoted by <sup>(<var>r</var>)</sup></p>
+				<p>
+					¶ A sequence of <var>r</var> primes is denoted by
+					<sup>(<var>r</var>)</sup>
+				</p>
 				.
 			</aside>
 			<hr />
 			<!-- ! CONTINUE HERE ! -->
-			<p>I say that &alpha; is then a computable sequence: a machine &kscr;<sub>&alpha;</sub> to compute &alpha; can be obtained by a fairly simple modification of &Kscr;.</p>
+			<p>
+				I say that &alpha; is then a computable sequence: a machine &kscr;<sub>&alpha;</sub>
+				to compute &alpha; can be obtained by a fairly simple modification of &Kscr;.
+			</p>
 			<p>
 				We divide the motion of &kscr;<sub>&alpha;</sub> into sections. The <var>n</var>-th section is devoted to finding the <var>n</var>-th figure of &alpha;. After the (<var>n</var>-1)-th section is finished a double colon :: is printed after all the symbols, and the succeeding work is done wholly on the squares to
 				the right of this double colon. The first step is to write the letter “<var>A</var>” followed by the formula (<var>A</var><sub><var>n</var></sub
@@ -1469,17 +1499,18 @@ DADDCRDAA;DAADDRDAAA;
 			<p>10. Examples of large classes of numbers which are computable.</p>
 			<p>
 				It will be useful to begin with definitions of a computable function of an integral variable and of a computable variable, etc. There are many equivalent ways of defining a computable function of an integral variable. The simplest is, possibly, as follows. If &gamma; is a computable sequence in which 0 appears
-				infinitely&dagger; often, and <var>n</var> is an integer, then let us define &epsilon;(&gamma;, <var>n</var>) to be the number of figures 1 between the <var>n</var>-th and the (<var>n</var>+1)-th figure 0 in &gamma;. Then &fcy;(<var>n</var>) is computable if, for all <var>n</var> and some &gamma;,
-				&fcy;(<var>n</var>) = &epsilon;(&gamma;, <var>n</var>). An equivalent definition is this. Let <var>H</var>(<var>x</var>, <var>y</var>) mean &fcy;(<var>x</var>)=<var>y</var>. Then, if we can find a contradiction-free axiom &Ufr;<sub>&fcy;</sub>, such that &Ufr;<sub>&fcy;</sub>&rarr;<var>P</var>, and if for each
-				integer <var>n</var> there exists an integer <var>N</var>, such that
+				infinitely&dagger; often, and
+				<var>n</var> is an integer, then let us define &epsilon;(&gamma;, <var>n</var>) to be the number of figures 1 between the <var>n</var>-th and the (<var>n</var>+1)-th figure 0 in &gamma;. Then &fcy;(<var>n</var>) is computable if, for all <var>n</var> and some &gamma;, &fcy;(<var>n</var>) = &epsilon;(&gamma;,
+				<var>n</var>). An equivalent definition is this. Let <var>H</var>(<var>x</var>, <var>y</var>) mean &fcy;(<var>x</var>)=<var>y</var>. Then, if we can find a contradiction-free axiom &Ufr;<sub>&fcy;</sub>, such that &Ufr;<sub>&fcy;</sub>&rarr;<var>P</var>, and if for each integer <var>n</var> there exists an
+				integer <var>N</var>, such that
 			</p>
 			<pre>&Ufr;<sub>&fcy;</sub> & <var>F</var><sup>(<var>N</var>)</sup> &rarr; <var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(&fcy;(<var>n</var>))</sup>),</pre>
 			<p>and such that, if <var>m</var>&ne;&fcy;(<var>n</var>), then, for some <var>N</var>&prime;,</p>
 			<pre>&Ufr;<sub>&fcy;</sub> & <var>F</var><sup>(<var>N&prime;</var>)</sup> &rarr; (&mdash;<var>H</var>(<var>u</var><sup>(<var>n</var>)</sup>, <var>u</var><sup>(<var>m</var>)</sup>),</pre>
 			<p>then &fcy; may be said to be a computable function.</p>
 			<p>
-				We cannot define general computable functions of a real variable, since there is no general method of describing a real number, but we can define a computable function of a computable variable. If <var>n</var> is satisfactory, let &gamma;<sub><var>n</var></sub> be the number computed by &Mscr;(<var>n</var>),
-				and let
+				We cannot define general computable functions of a real variable, since there is no general method of describing a real number, but we can define a computable function of a computable variable. If
+				<var>n</var> is satisfactory, let &gamma;<sub><var>n</var></sub> be the number computed by &Mscr;(<var>n</var>), and let
 			</p>
 			<!-- ! fix this pre -->
 			<pre></pre>
@@ -1493,7 +1524,10 @@ DADDCRDAA;DAADDRDAAA;
 			<p>I shall enunciate a number of theorems about computability, but I shall prove only (ii) and a theorem similar to (iii).</p>
 			<ol>
 				<li>(i) A computable function of a computable function of an integral or computable variable is computable.</li>
-				<li>(ii) Any function of an integral variable defined recursively in terms of computable functions is computable. I.e. if &fcy;(<var>m</var>, <var>n</var>) is computable, and <var>r</var> is some integer, then &#414;(<var>n</var>) is computable, where</li>
+				<li>
+					(ii) Any function of an integral variable defined recursively in terms of computable functions is computable. I.e. if &fcy;(<var>m</var>,
+					<var>n</var>) is computable, and <var>r</var> is some integer, then &#414;(<var>n</var>) is computable, where
+				</li>
 				<!-- ! FIX THIS PRE -->
 				<div>&#414;(0)=<var>r</var>,</div>
 				<div>&#414;(<var>n</var>)=&fcy;(<var>n</var>, &#414;(<var>n</var>-1)).</div>
@@ -1506,7 +1540,10 @@ DADDCRDAA;DAADDRDAAA;
 			</ol>
 			<div>(a) (&exist;&alpha;)(&exist;&beta;){<var>G</var>(&alpha;) & (&mdash;<var>G</var>(&beta;))},</div>
 			<div>(6) <var>G</var>(&alpha;) & (&mdash;<var>G</var>(&beta;))&rarr;(&alpha;&lt;&beta;),</div>
-			<p>and there is a general process for determining the truth value of <var>G</var>(&alpha;), then</p>
+			<p>
+				and there is a general process for determining the truth value of
+				<var>G</var>(&alpha;), then
+			</p>
 			<hr />
 			<aside>
 				<p>&dagger; A function an may be defined in many other ways so as to run through the computable numbers.</p>
@@ -1542,7 +1579,8 @@ DADDCRDAA;DAADDRDAAA;
 				to be
 			</p>
 			<div>
-				&Ufr;<sub>&fcy;</sub>&<var>P</var>&(<var>F</var>(<var>x</var>, <var>y</var>)&rarr;<var>G</var>(<var>x</var>, <var>y</var>))&(<var>G</var>(<var>x</var>, <var>y</var>) & <var>G</var>(<var>y</var>, <var>z</var>)&rarr;<var>G</var>(<var>x</var>, <var>z</var>)) &(<var>F</var><sup><var>r</var></sup
+				&Ufr;<sub>&fcy;</sub>&<var>P</var>&(<var>F</var>(<var>x</var>,
+				<var>y</var>)&rarr;<var>G</var>(<var>x</var>, <var>y</var>))&(<var>G</var>(<var>x</var>, <var>y</var>) & <var>G</var>(<var>y</var>, <var>z</var>)&rarr;<var>G</var>(<var>x</var>, <var>z</var>)) &(<var>F</var><sup><var>r</var></sup
 				>)&rarr; <var>H</var>(<var>u</var>, <var>u</var><sup><var>r</var></sup
 				>)) &(<var>F</var>(<var>v</var>, <var>w</var>) & <var>H</var>(<var>v</var>, <var>x</var>) & <var>K</var>(<var>w</var>, <var>x</var>, <var>z</var>) &rarr; <var>H</var>(<var>w</var>, <var>z</var>)) &[<var>H</var>(<var>w</var>, <var>z</var>) & <var>G</var>(<var>z</var>, <var>t</var>) v <var>G</var>(<var>t</var>,
 				<var>z</var>) &rarr;(&ndash;<var>H</var>(<var>w</var>, <var>t</var>))].
@@ -1581,8 +1619,9 @@ DADDCRDAA;DAADDRDAAA;
 				>(<var>n</var>) is computable.
 			</p>
 			<p>
-				We suppose that the table for &Nscr; has been written out in such a way that in each line only one operation appears in the operations column. We also suppose that &Xi;, &Theta;, <span style="text-decoration: overline">0</span>, and <span style="text-decoration: overline">1</span> do not occur in the table, and
-				we replace &#601; throughout by &Theta;, 0 by <span style="text-decoration: overline">0</span>, and 1 by <span style="text-decoration: overline">1</span>. Further substitutions are then made. Any line of form
+				We suppose that the table for &Nscr; has been written out in such a way that in each line only one operation appears in the operations column. We also suppose that &Xi;, &Theta;,
+				<span style="text-decoration: overline">0</span>, and <span style="text-decoration: overline">1</span> do not occur in the table, and we replace &#601; throughout by &Theta;, 0 by <span style="text-decoration: overline">0</span>, and 1 by <span style="text-decoration: overline">1</span>. Further substitutions
+				are then made. Any line of form
 			</p>
 			<div>&Ufr; &alpha; <var>P</var><span style="text-decoration: overline">0</span> &Bfr;</div>
 			<p>we replace by</p>
@@ -1601,9 +1640,13 @@ DADDCRDAA;DAADDRDAAA;
 			<h2>11. Application to the Entscheidungsproblem.</h2>
 			<p>
 				The results of §8 have some important applications. In particular, they can be used to show that the Hilbert Entscheidungsproblem can have no solution. For the present I shall confine myself to proving this particular theorem. For the formulation of this problem I must refer the reader to Hilbert and
-				Ackermann's <em>Grundzüge der Theoretischen Logik</em> (Berlin, 1931), chapter 3.
+				Ackermann's
+				<em>Grundzüge der Theoretischen Logik</em> (Berlin, 1931), chapter 3.
 			</p>
-			<p>I propose, therefore, to show that there can be no general process for determining whether a given formula &Ufr; of the functional calculus <strong>K</strong> is provable, i.e. that there can be no machine which, supplied with any one &Ufr; of these formulae, will eventually say whether &Ufr; is provable.</p>
+			<p>
+				I propose, therefore, to show that there can be no general process for determining whether a given formula &Ufr; of the functional calculus
+				<strong>K</strong> is provable, i.e. that there can be no machine which, supplied with any one &Ufr; of these formulae, will eventually say whether &Ufr; is provable.
+			</p>
 			<p>
 				It should perhaps be remarked that what I shall prove is 𝔮uite different from the well-known results of Gödel&dagger;. Gödel has shown that (in the formalism of Principia Mathematica) there are propositions &Ufr; such that neither &Ufr; nor &ndash; &Ufr; is provable. As a consequence of this, it is shown that
 				no proof of consistency of Principia Mathematica (or of <strong>K</strong>) can be given within that formalism. On the other hand, I shall show that there is no general method which tells whether a given formula &Ufr; is provable in <strong>K</strong>, or, what comes to the same, whether the system consisting
@@ -1664,11 +1707,13 @@ DADDCRDAA;DAADDRDAAA;
 			<p>When this has been done, the remainder of the theorem is trivial.</p>
 			<hr />
 			<p>
-				LEMMA 1. <em>If <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;, then Un(&Mscr;) is provable.</em>
+				LEMMA 1.
+				<em>If <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;, then Un(&Mscr;) is provable.</em>
 			</p>
 			<p>
-				We have to show how to prove Un(&Mscr;). Let us suppose that in the <var>n</var>-th complete configuration the sequence of symbols on the tape is <var>S</var><sub>r(n,0)</sub>,<var>S</var><sub>r(n,1)</sub>, &hellip;, <var>S</var><sub>r(n,n)</sub>, followed by nothing but blanks, and that the scanned symbol is
-				the <var>i</var>(<var>n</var>)-th, and that the <var>m</var>-configuration is <var>q</var><sub>k(n)</sub>. Then we may form the proposition
+				We have to show how to prove Un(&Mscr;). Let us suppose that in the
+				<var>n</var>-th complete configuration the sequence of symbols on the tape is <var>S</var><sub>r(n,0)</sub>,<var>S</var><sub>r(n,1)</sub>, &hellip;, <var>S</var><sub>r(n,n)</sub>, followed by nothing but blanks, and that the scanned symbol is the <var>i</var>(<var>n</var>)-th, and that the
+				<var>m</var>-configuration is <var>q</var><sub>k(n)</sub>. Then we may form the proposition
 			</p>
 			<!-- ! FIX THIS FORMULA -->
 			<p>which we may abbreviate to <var>CC</var><sub>n</sub>.</p>
@@ -1724,7 +1769,8 @@ DADDCRDAA;DAADDRDAAA;
 			<p>i.e. Un(&Mscr;) is provable.</p>
 			<p>This completes the proof of Lemma 1.</p>
 			<p>
-				LEMMA 2. <em>If Un(&Mscr;) is provable, then <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;.</em>
+				LEMMA 2.
+				<em>If Un(&Mscr;) is provable, then <var>S</var><sub>1</sub> appears on the tape in some complete configuration of &Mscr;.</em>
 			</p>
 			<p>
 				If we substitute any propositional functions for function variables in a provable formula, we obtain a true proposition. In particular, if we substitute the meanings tabulated on pp. 259-260 in Un(&Mscr;), we obtain a true proposition with the meaning “<var>S</var><sub>1</sub> appears somewhere on the tape in
@@ -1770,8 +1816,8 @@ DADDCRDAA;DAADDRDAAA;
 			<p>To prove that every computable sequence &gamma; is &lambda;-definable, we must show how to find a formula <var>M</var><sub>&gamma;</sub> such that, for all integers <var>n</var>,</p>
 			<div>{<var>M</var><sub>&gamma;</sub>}(<var>N</var><sub>n</sub>) conv <var>N</var><sub>1+&fcy;<sub>&gamma;</sub>(<var>n</var>)</sub></div>
 			<p>
-				Let &Mscr; be a machine which computes &gamma; and let us take some description of the complete configurations of &Mscr; by means of numbers, e.g. we may take the D.N of the complete configuration as described in §6. Let &epsilon;(<var>n</var>) be the D.N of the <var>n</var>-th complete configuration of &Mscr;.
-				The table for the machine &Mscr; gives us a relation between &epsilon;(<var>n</var>+1) and &epsilon;(<var>b</var>) of the form
+				Let &Mscr; be a machine which computes &gamma; and let us take some description of the complete configurations of &Mscr; by means of numbers, e.g. we may take the D.N of the complete configuration as described in §6. Let &epsilon;(<var>n</var>) be the D.N of the
+				<var>n</var>-th complete configuration of &Mscr;. The table for the machine &Mscr; gives us a relation between &epsilon;(<var>n</var>+1) and &epsilon;(<var>b</var>) of the form
 			</p>
 			<div>&epsilon;(<var>n</var>+1)=&rho;<sub>&gamma;</sub>(&epsilon;(<var>n</var>)),</div>
 			<p>
@@ -1801,7 +1847,8 @@ DADDCRDAA;DAADDRDAAA;
 			<p>New Jersey, U.S.A.</p>
 			<p>
 				&dagger; In a complete proof of the &lambda;-definability of computable sequences it would be best to modify this method by replacing the numerical description of the complete configurations by a description which can be handled more easily with our apparatus. Let us choose certain integers to represent the
-				symbols and the <var>m</var>-configurations of the machine. Suppose that in a certain complete configuration the numbers representing the successive symbols on the tape are <var>s<sub>1</sub></var
+				symbols and the
+				<var>m</var>-configurations of the machine. Suppose that in a certain complete configuration the numbers representing the successive symbols on the tape are <var>s<sub>1</sub></var
 				><var>s<sub>2</sub></var
 				>&hellip;<var>s<sub>n</sub></var
 				>, that the <var>m</var>-th symbol is scanned, and that the <var>m</var>-configuration has the number <var>t</var>; then we may represent this complete configuration by the formula

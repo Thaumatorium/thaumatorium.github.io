@@ -333,10 +333,18 @@ export function processDataForD3(jsonData1, jsonData2, filename1, filename2, isS
 
 			// Add links
 			if (inGame1 && gameId1) {
-				links.push({ source: personId, target: gameId1, type: LINK_TYPE_WORKED_ON });
+				links.push({
+					source: personId,
+					target: gameId1,
+					type: LINK_TYPE_WORKED_ON,
+				});
 			}
 			if (!isSameGame && inGame2 && gameId2) {
-				links.push({ source: personId, target: gameId2, type: LINK_TYPE_WORKED_ON });
+				links.push({
+					source: personId,
+					target: gameId2,
+					type: LINK_TYPE_WORKED_ON,
+				});
 			}
 		}
 	});

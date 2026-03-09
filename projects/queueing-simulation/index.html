@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Queueing System Simulation | The Thaumatorium</title>
+		<meta name="description" content="Interactive finite-capacity queue simulation with configurable servers, warm-up, measurement windows, and live history." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Queueing System Simulation" />
+		<meta property="og:description" content="Interactive finite-capacity queue simulation with configurable servers, warm-up, measurement windows, and live history." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Queueing System Simulation" />
+		<meta name="twitter:description" content="Interactive finite-capacity queue simulation with configurable servers, warm-up, measurement windows, and live history." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section class="queue-sim-page">
+				<style>
+					.queue-sim-page {
+						--bg: #f4efe5;
+						--panel: rgba(255, 251, 244, 0.92);
+						--panel-strong: #fffdf9;
+						--ink: #20150d;
+						--muted: #5c4636;
+						--border: #d6c3af;
+						--accent: #0f766e;
+						--accent-soft: rgba(15, 118, 110, 0.16);
+						--warn: #d97706;
+						--danger: #dc2626;
+						display: grid;
+						gap: 1rem;
+						margin-left: calc(50% - 50vw + 1rem);
+						margin-right: calc(50% - 50vw + 1rem);
+						padding: 0 0 1rem;
+						color: var(--ink);
+					}
+					.queue-sim-shell,
+					.queue-sim-panel {
+						border: 1px solid var(--border);
+						border-radius: 16px;
+						background: linear-gradient(180deg, var(--panel-strong), var(--panel));
+						box-shadow: 0 18px 36px rgba(58, 36, 18, 0.1);
+					}
+					.queue-sim-shell {
+						display: grid;
+						grid-template-columns: 320px 1fr;
+						gap: 1rem;
+						padding: 1rem;
+					}
+					.queue-sim-controls,
+					.queue-sim-sidebar {
+						display: grid;
+						gap: 1rem;
+						align-content: start;
+					}
+					.queue-sim-panel {
+						padding: 1rem;
+					}
+					.queue-sim-shell h2,
+					.queue-sim-shell h3,
+					.queue-sim-shell p {
+						margin: 0;
+						padding: 0;
+					}
+					.queue-sim-kicker {
+						color: var(--muted);
+						font-size: 0.88rem;
+						line-height: 1.5;
+					}
+					.queue-sim-title {
+						display: grid;
+						gap: 0.35rem;
+					}
+					.queue-sim-subtitle {
+						color: var(--muted);
+						font-size: 0.95rem;
+						line-height: 1.45;
+						max-width: 72ch;
+					}
+					.queue-sim-form {
+						display: grid;
+						gap: 0.85rem;
+					}
+					.queue-sim-form label,
+					.queue-sim-range {
+						display: grid;
+						gap: 0.35rem;
+						color: var(--muted);
+						font-size: 0.83rem;
+					}
+					.queue-sim-form input,
+					.queue-sim-form select {
+						border: 1px solid var(--border);
+						border-radius: 10px;
+						padding: 0.6rem 0.7rem;
+						background: #fffdfa;
+						color: var(--ink);
+						font: inherit;
+					}
+					.queue-sim-form input[type="range"] {
+						padding: 0;
+						accent-color: var(--accent);
+					}
+					.queue-sim-inline {
+						display: grid;
+						grid-template-columns: 1fr auto;
+						align-items: center;
+						gap: 0.75rem;
+					}
+					.queue-sim-actions {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+					}
+					.queue-sim-repl-grid {
+						display: grid;
+						grid-template-columns: 1fr auto;
+						gap: 0.75rem;
+						align-items: end;
+					}
+					.queue-sim-note {
+						color: var(--muted);
+						font-size: 0.82rem;
+						line-height: 1.45;
+					}
+					.queue-sim-stage {
+						display: grid;
+						gap: 1rem;
+					}
+					.queue-sim-canvas {
+						position: relative;
+						overflow: hidden;
+						min-height: 24rem;
+						padding: 1.2rem 1.4rem;
+						border: 1px solid var(--border);
+						border-radius: 16px;
+						background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.09), transparent 32%), linear-gradient(180deg, #fffcf7, #f5eee2);
+					}
+					.queue-sim-flow {
+						display: flex;
+						align-items: center;
+						gap: 1.2rem;
+						min-height: 18rem;
+					}
+					.queue-sim-cloud,
+					.queue-sim-exit {
+						display: grid;
+						justify-items: center;
+						gap: 0.55rem;
+						color: var(--muted);
+						font-size: 0.8rem;
+						text-transform: uppercase;
+						letter-spacing: 0.08em;
+					}
+					.queue-sim-cloud::before {
+						content: "";
+						width: 72px;
+						height: 44px;
+						border-radius: 999px;
+						border: 2px dashed #b8a48f;
+						background: rgba(255, 255, 255, 0.7);
+					}
+					.queue-sim-exit::before {
+						content: "";
+						width: 14px;
+						height: 14px;
+						border-radius: 999px;
+						background: var(--accent);
+						box-shadow: 0 0 16px rgba(15, 118, 110, 0.35);
+					}
+					.queue-sim-arrow {
+						width: 38px;
+						height: 4px;
+						background: #b5a08c;
+						position: relative;
+					}
+					.queue-sim-arrow::after {
+						content: "";
+						position: absolute;
+						right: -2px;
+						top: -5px;
+						border-left: 9px solid #8d7661;
+						border-top: 7px solid transparent;
+						border-bottom: 7px solid transparent;
+					}
+					.queue-sim-pipe {
+						flex: 1;
+						display: grid;
+						grid-template-columns: minmax(240px, 1fr) minmax(260px, 320px);
+						gap: 1rem;
+						align-items: center;
+					}
+					.queue-sim-queue,
+					.queue-sim-server {
+						min-height: 10rem;
+						border: 2px solid var(--border);
+						border-radius: 16px;
+						background: rgba(255, 255, 255, 0.7);
+						padding: 0.85rem;
+						position: relative;
+					}
+					.queue-sim-label {
+						font-size: 0.75rem;
+						letter-spacing: 0.1em;
+						text-transform: uppercase;
+						color: var(--muted);
+					}
+					.queue-area {
+						position: relative;
+						min-height: 8rem;
+					}
+					.queue-sim-server-bank {
+						display: grid;
+						gap: 0.8rem;
+					}
+					.queue-sim-server .slot {
+						min-height: 3rem;
+						margin-top: 0.8rem;
+						border: 1px dashed #baa894;
+						border-radius: 12px;
+						background: rgba(244, 239, 229, 0.8);
+					}
+					.queue-sim-server.busy .slot {
+						border-color: var(--accent);
+						box-shadow: inset 0 0 0 2px var(--accent-soft);
+					}
+					.customer-layer {
+						position: absolute;
+						inset: 0;
+						pointer-events: none;
+					}
+					.customer {
+						position: absolute;
+						width: 36px;
+						height: 36px;
+						border-radius: 12px;
+						background: linear-gradient(135deg, #22c55e, #0ea5e9);
+						color: #0b1414;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						font-size: 0.7rem;
+						font-weight: 700;
+						opacity: 0;
+						transition:
+							transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
+							opacity 0.35s ease;
+						box-shadow: 0 14px 18px rgba(15, 23, 42, 0.12);
+					}
+					.customer.visible {
+						opacity: 1;
+					}
+					.customer.rejected {
+						background: linear-gradient(135deg, #fb923c, #f43f5e);
+					}
+					.queue-sim-strip {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						font-size: 0.84rem;
+						color: var(--muted);
+					}
+					.queue-sim-strip span {
+						padding: 0.45rem 0.75rem;
+						border: 1px solid var(--border);
+						border-radius: 999px;
+						background: rgba(255, 255, 255, 0.65);
+						font-variant-numeric: tabular-nums;
+					}
+					.queue-sim-stats {
+						display: grid;
+						grid-template-columns: repeat(3, minmax(0, 1fr));
+						gap: 0.75rem;
+					}
+					.queue-sim-stat {
+						border: 1px solid var(--border);
+						border-radius: 12px;
+						padding: 0.75rem;
+						background: rgba(255, 255, 255, 0.65);
+						display: grid;
+						gap: 0.25rem;
+						font-variant-numeric: tabular-nums;
+					}
+					.queue-sim-stat small {
+						color: var(--muted);
+						text-transform: uppercase;
+						letter-spacing: 0.08em;
+						font-size: 0.68rem;
+					}
+					.queue-sim-stat strong {
+						font-size: 1rem;
+					}
+					.queue-sim-chart-shell {
+						display: grid;
+						gap: 0.5rem;
+					}
+					.queue-sim-chart {
+						width: 100%;
+						height: 220px;
+						border: 1px solid var(--border);
+						border-radius: 14px;
+						background: linear-gradient(180deg, rgba(15, 118, 110, 0.05), rgba(255, 255, 255, 0.55)), repeating-linear-gradient(to top, rgba(92, 70, 54, 0.08), rgba(92, 70, 54, 0.08) 1px, transparent 1px, transparent 44px);
+					}
+					.queue-sim-chart-legend {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 1rem;
+						color: var(--muted);
+						font-size: 0.82rem;
+					}
+					.queue-sim-chart-key {
+						display: inline-flex;
+						align-items: center;
+						gap: 0.45rem;
+					}
+					.queue-sim-chart-swatch {
+						width: 1.4rem;
+						height: 0.2rem;
+						border-radius: 999px;
+					}
+					@media (max-width: 980px) {
+						.queue-sim-shell {
+							grid-template-columns: 1fr;
+						}
+						.queue-sim-page {
+							margin-left: 0;
+							margin-right: 0;
+						}
+						.queue-sim-pipe {
+							grid-template-columns: 1fr;
+						}
+						.queue-sim-flow {
+							flex-direction: column;
+						}
+						.queue-sim-stats {
+							grid-template-columns: repeat(2, minmax(0, 1fr));
+						}
+					}
+				</style>
+				<section class="queue-sim-shell">
+					<aside class="queue-sim-controls">
+						<section class="queue-sim-panel queue-sim-title">
+							<h2>Queueing System Simulation</h2>
+							<p class="queue-sim-subtitle">Poisson arrivals, configurable server pool <code>c</code>, finite total system capacity <code>K</code>, and switchable service-time distributions.</p>
+						</section>
+						<section class="queue-sim-panel">
+							<h3>Controls</h3>
+							<div class="queue-sim-form">
+								<label>
+									Arrival rate λ (customers/sec)
+									<input type="number" id="arrivalRate" min="0.05" step="0.05" value="1.2" />
+								</label>
+								<label>
+									Mean service time E[S] (sec)
+									<input type="number" id="meanService" min="0.05" step="0.05" value="0.7" />
+								</label>
+								<label>
+									Service distribution
+									<select id="serviceDistribution">
+										<option value="gamma" selected>Gamma (general)</option>
+										<option value="exponential">Exponential</option>
+										<option value="deterministic">Deterministic</option>
+									</select>
+								</label>
+								<div class="queue-sim-range">
+									<div class="queue-sim-inline">
+										<span>Service variability (CV)</span>
+										<strong id="cvValue">0.8</strong>
+									</div>
+									<input type="range" id="serviceCv" min="0" max="2" step="0.1" value="0.8" />
+								</div>
+								<label>
+									System capacity K
+									<input type="number" id="capacity" min="2" max="60" step="1" value="10" />
+								</label>
+								<label>
+									Servers c
+									<input type="number" id="servers" min="1" max="8" step="1" value="2" />
+								</label>
+								<label>
+									Warm-up time (sec)
+									<input type="number" id="warmupTime" min="0" max="10000" step="5" value="60" />
+								</label>
+								<label>
+									Measurement window (sec)
+									<input type="number" id="measurementTime" min="10" max="10000" step="10" value="300" />
+								</label>
+								<div class="queue-sim-range">
+									<div class="queue-sim-inline">
+										<span>Simulation speed</span>
+										<strong id="speedValue">10×</strong>
+									</div>
+									<input type="range" id="speed" min="1" max="80" step="1" value="10" />
+								</div>
+							</div>
+							<div class="queue-sim-actions">
+								<button class="button" id="startBtn" type="button">Start</button>
+								<button class="button" id="pauseBtn" type="button">Pause</button>
+								<button class="button" id="resetBtn" type="button">Reset</button>
+							</div>
+						</section>
+						<section class="queue-sim-panel">
+							<h3>Model Notes</h3>
+							<p class="queue-sim-note"><code>K</code> is total system capacity, including the 2 customers in service. If the system already has <code>K</code> customers, a new arrival is dropped.</p>
+							<p class="queue-sim-note">The reported averages are based only on the measurement window after warm-up. Wait/system times are conditional on served customers, not dropped arrivals.</p>
+						</section>
+						<section class="queue-sim-panel">
+							<h3>Replications</h3>
+							<div class="queue-sim-form">
+								<label>
+									Base seed
+									<input type="number" id="baseSeed" step="1" value="12345" />
+								</label>
+								<div class="queue-sim-repl-grid">
+									<label>
+										Runs
+										<input type="number" id="replications" min="2" max="500" step="1" value="50" />
+									</label>
+									<button class="button" id="runReplicationsBtn" type="button">Run batch</button>
+								</div>
+							</div>
+							<p class="queue-sim-note">
+								Batch mode re-runs the same scenario with deterministic seeds
+								<code>seed, seed+1, ...</code> and reports 95% confidence intervals.
+							</p>
+						</section>
+					</aside>
+					<section class="queue-sim-sidebar">
+						<section class="queue-sim-panel queue-sim-stage">
+							<div class="queue-sim-canvas">
+								<div class="queue-sim-flow">
+									<div class="queue-sim-cloud">
+										<span>Arrivals</span>
+										<div class="queue-sim-arrow"></div>
+									</div>
+									<div class="queue-sim-pipe">
+										<div class="queue-sim-queue">
+											<span class="queue-sim-label">Queue</span>
+											<div class="queue-area" id="queueArea"></div>
+										</div>
+										<div class="queue-sim-server-bank" id="serverBank"></div>
+									</div>
+									<div class="queue-sim-exit">
+										<div class="queue-sim-arrow"></div>
+										<span>Departures</span>
+									</div>
+								</div>
+								<div class="customer-layer" id="customerLayer"></div>
+							</div>
+							<div class="queue-sim-strip">
+								<span>Sim time: <strong id="simTime">0.0s</strong></span>
+								<span>Phase: <strong id="simPhase">Warm-up</strong></span>
+								<span>Measured time: <strong id="measuredTime">0.0s</strong></span>
+								<span>In system: <strong id="inSystem">0</strong></span>
+								<span>In queue: <strong id="inQueue">0</strong></span>
+								<span>Busy servers: <strong id="busyServers">0</strong></span>
+								<span title="Traffic intensity lambda * E[S] / c">ρ: <strong id="rho">0.00</strong></span>
+							</div>
+						</section>
+						<section class="queue-sim-panel">
+							<h3>Measured Metrics</h3>
+							<div class="queue-sim-stats">
+								<div class="queue-sim-stat"><small>Measured arrivals</small><strong id="arrivals">0</strong></div>
+								<div class="queue-sim-stat"><small>Served</small><strong id="served">0</strong></div>
+								<div class="queue-sim-stat"><small>Dropped</small><strong id="dropped">0</strong></div>
+								<div class="queue-sim-stat"><small>Throughput</small><strong id="throughput">0.00/s</strong></div>
+								<div class="queue-sim-stat"><small>Avg wait</small><strong id="avgWait">0.00s</strong></div>
+								<div class="queue-sim-stat"><small>Avg system</small><strong id="avgSystem">0.00s</strong></div>
+								<div class="queue-sim-stat"><small>Mean util</small><strong id="meanUtil">0%</strong></div>
+								<div class="queue-sim-stat"><small>Server utilizations</small><strong id="utilBreakdown">-</strong></div>
+								<div class="queue-sim-stat"><small>Avg queue len</small><strong id="avgQueueLen">0.00</strong></div>
+								<div class="queue-sim-stat"><small>Avg system len</small><strong id="avgSystemLen">0.00</strong></div>
+								<div class="queue-sim-stat"><small>Drop rate</small><strong id="dropRate">0.0%</strong></div>
+								<div class="queue-sim-stat"><small>Distribution</small><strong id="distributionLabel">Gamma</strong></div>
+							</div>
+						</section>
+						<section class="queue-sim-panel">
+							<h3>Theoretical Reference</h3>
+							<p class="queue-sim-note">
+								Only available for exponential service, i.e.
+								<code>M/M/c/K</code>.
+							</p>
+							<div class="queue-sim-stats">
+								<div class="queue-sim-stat"><small>Model</small><strong id="theoryModel">n/a</strong></div>
+								<div class="queue-sim-stat"><small>Blocking probability</small><strong id="theoryBlocking">-</strong></div>
+								<div class="queue-sim-stat"><small>Expected system size E[N]</small><strong id="theorySystem">-</strong></div>
+								<div class="queue-sim-stat"><small>Expected queue size E[Nq]</small><strong id="theoryQueue">-</strong></div>
+								<div class="queue-sim-stat"><small>Effective arrival rate</small><strong id="theoryLambdaEff">-</strong></div>
+								<div class="queue-sim-stat"><small>Expected sojourn E[T]</small><strong id="theorySystemTime">-</strong></div>
+							</div>
+						</section>
+						<section class="queue-sim-panel">
+							<h3>Replication Summary</h3>
+							<div class="queue-sim-stats">
+								<div class="queue-sim-stat"><small>Runs</small><strong id="batchRuns">0</strong></div>
+								<div class="queue-sim-stat"><small>Seed range</small><strong id="batchSeedRange">-</strong></div>
+								<div class="queue-sim-stat"><small>Mean throughput</small><strong id="batchThroughput">-</strong></div>
+								<div class="queue-sim-stat"><small>95% CI throughput</small><strong id="batchThroughputCi">-</strong></div>
+								<div class="queue-sim-stat"><small>Mean avg wait</small><strong id="batchAvgWait">-</strong></div>
+								<div class="queue-sim-stat"><small>95% CI avg wait</small><strong id="batchAvgWaitCi">-</strong></div>
+								<div class="queue-sim-stat"><small>Mean drop rate</small><strong id="batchDropRate">-</strong></div>
+								<div class="queue-sim-stat"><small>95% CI drop rate</small><strong id="batchDropRateCi">-</strong></div>
+								<div class="queue-sim-stat"><small>Mean avg queue len</small><strong id="batchAvgQueueLen">-</strong></div>
+								<div class="queue-sim-stat"><small>95% CI avg queue len</small><strong id="batchAvgQueueLenCi">-</strong></div>
+								<div class="queue-sim-stat"><small>Little's Law gap</small><strong id="batchLittlesGap">-</strong></div>
+								<div class="queue-sim-stat"><small>Mean util</small><strong id="batchMeanUtil">-</strong></div>
+							</div>
+						</section>
+						<section class="queue-sim-panel queue-sim-chart-shell">
+							<h3>History</h3>
+							<svg class="queue-sim-chart" id="historyChart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Queue history chart"></svg>
+							<div class="queue-sim-chart-legend">
+								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #0f766e"></span>Queue length</span>
+								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #2563eb"></span>System size</span>
+								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #dc2626"></span>Drops</span>
+							</div>
+						</section>
+					</section>
+				</section>
+				<script type="module" src="/projects/queueing-simulation/queueing-simulation.mjs"></script>
+			</section>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-08</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

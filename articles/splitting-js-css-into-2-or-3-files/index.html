@@ -2,7 +2,7 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>Optimizing Your Site by Splitting JS/CSS into Multiple Files | The Thaumatorium</title>
+		<title>Optimizing your site by splitting JS/CSS into layers | The Thaumatorium</title>
 		<meta name="description" content="A spark of an idea to enhance site performance" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Optimizing Your Site by Splitting JS/CSS into Multiple Files" />
+		<meta property="og:title" content="Optimizing your site by splitting JS/CSS into layers" />
 		<meta property="og:description" content="A spark of an idea to enhance site performance" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
@@ -22,7 +22,7 @@
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="Optimizing Your Site by Splitting JS/CSS into Multiple Files" />
+		<meta name="twitter:title" content="Optimizing your site by splitting JS/CSS into layers" />
 		<meta name="twitter:description" content="A spark of an idea to enhance site performance" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
@@ -39,23 +39,30 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
-				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
-				<li><a href="/epoch">Epoch</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
 		<main>
-			<h1>Optimizing Your Site by Splitting JS/CSS into Multiple Files</h1>
+			<h1>Optimizing your site by splitting JS/CSS into layers</h1>
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2019-11-29T00:00:00&#43;02:00">2019-11-29</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T19:54:00&#43;02:00">2024-07-24</time></div>
+					<div class="published-box">
+						Published:
+						<time class="published" datetime="2019-11-29T00:00:00&#43;02:00">2019-11-29</time>
+					</div>
+					<div class="published-box">
+						Updated:
+						<time class="published" datetime="2024-07-24T19:54:00&#43;02:00">2024-07-24</time>
+					</div>
 				</div>
 			</hgroup>
-			<p>Optimizing the performance of your website can be significantly enhanced by splitting your JavaScript (JS) and Cascading Style Sheets (CSS) into multiple files. This idea emerged from analyzing coverage using <a href="https://developers.google.com/web/tools/chrome-devtools/coverage">Chrome DevTools</a>.</p>
+			<p>
+				My idea is to split CSS into 3 parts (layers), where each outer part effectively builds on top of the inner part. The same applies to JS. This idea came from analyzing coverage using
+				<a href="https://developers.google.com/web/tools/chrome-devtools/coverage">Chrome DevTools</a>.
+			</p>
 			<h3 id="steps-to-optimize">
 				<a class="self-link" href="#steps-to-optimize"> Steps to Optimize </a>
 			</h3>
@@ -89,13 +96,20 @@
 				<li><strong>OuterCore:</strong> Covered code</li>
 				<li><strong>Mantle:</strong> Uncovered but potentially useful code</li>
 			</ul>
-			<p>For a visual reference, see the <a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Earth poster on Wikipedia</a>:</p>
-			<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Earth_poster.svg/2880px-Earth_poster.svg.png" alt="Earth poster on Wikipedia" /></p>
+			<p>
+				For a visual reference, see the
+				<a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Earth poster on Wikipedia</a>:
+			</p>
+			<p>
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Earth_poster.svg/2880px-Earth_poster.svg.png" alt="Earth poster on Wikipedia" />
+			</p>
 			<p>By following these steps, you can ensure that your website is both efficient and effective, providing a better experience for your users.</p>
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2024-07-24</time></sub>

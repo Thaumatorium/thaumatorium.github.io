@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Optimizing Your Site by Splitting JS/CSS into Multiple Files on Thaumatorium</title>
+    <title>Optimizing your site by splitting JS/CSS into layers on Thaumatorium</title>
     <link>http://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files/</link>
-    <description>Recent content in Optimizing Your Site by Splitting JS/CSS into Multiple Files on Thaumatorium</description>
+    <description>Recent content in Optimizing your site by splitting JS/CSS into layers on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>

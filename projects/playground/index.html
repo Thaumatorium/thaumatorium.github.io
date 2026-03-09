@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Playground | The Thaumatorium</title>
+		<meta name="description" content="Context and small interactive demos collected from the projects archive." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Playground" />
+		<meta property="og:description" content="Context and small interactive demos collected from the projects archive." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Playground" />
+		<meta name="twitter:description" content="Context and small interactive demos collected from the projects archive." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<h1>Playground</h1>
+			<link rel="stylesheet" href="/styles/projects.css" />
+			<section class="playground-page">
+				<header class="playground-header">
+					<p class="playground-intro">A drawer full of small text transformers and browser experiments. Most of these started as one-off jokes or utility snippets and then earned a permanent place here.</p>
+					<div class="playground-toolbar">
+						<button class="button" type="button" data-details-action="open">Open all chapters</button>
+						<button class="button" type="button" data-details-action="close">Close all chapters</button>
+					</div>
+				</header>
+				<details open>
+					<summary>
+						<h3>Runifier</h3>
+						<p>Transliterate Latin text into Elder Futhark, and back into a Latin approximation.</p>
+					</summary>
+					<p>A playful rune transliterator. It uses a rough phonetic mapping, so it is closer to "what rune would fit here?" than to strict historical linguistics.</p>
+					<div class="tool-grid">
+						<section class="tool-card">
+							<h4>Encode</h4>
+							<label>
+								Input
+								<textarea id="runifier-encode-in" placeholder="the elder futhark sings"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="runifier-encode-out" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="runifier-encode-out">Copy output</button>
+								<button class="button" type="button" data-clear-target="runifier-encode-in,runifier-encode-out">Clear</button>
+								<output class="tool-status" id="runifier-encode-status"></output>
+							</div>
+						</section>
+						<section class="tool-card">
+							<h4>Decode</h4>
+							<label>
+								Input
+								<textarea id="runifier-decode-in" placeholder="ᚦᛖ ᛖᛚᛞᛖᚱ ᚠᚢᚦᚨᚱᚲ"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="runifier-decode-out" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="runifier-decode-out">Copy output</button>
+								<button class="button" type="button" data-clear-target="runifier-decode-in,runifier-decode-out">Clear</button>
+								<output class="tool-status" id="runifier-decode-status"></output>
+							</div>
+						</section>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h3>Starfield</h3>
+						<p>The first kind of project I ever made, now rebuilt in a canvas.</p>
+					</summary>
+					<p>The original lived in <code>cmd.exe</code>, with janky <samp>*</samp> and <samp>.</samp> characters flying by from right to left. Over the years it grew into several variants, including 2D and 3D versions. This one keeps the spirit while staying plain HTML, CSS, and JS.</p>
+					<canvas id="starfield"></canvas>
+					<script type="module" src="/projects/playground/starfield.mjs"></script>
+				</details>
+				<details>
+					<summary>
+						<h3>Mocking Spongebob Text Generator</h3>
+						<p>
+							<q>WhY dO wE nEeD aNoThEr MoCkInG sPoNgEbOb tExT gEnErAtOr???</q>
+						</p>
+					</summary>
+					<div class="tool-pair" data-tool="mstg">
+						<label>
+							Input
+							<textarea id="mstg-in" placeholder="This page really did need another mocking generator."></textarea>
+						</label>
+						<label>
+							Output
+							<textarea id="mstg-out" readonly></textarea>
+						</label>
+						<div class="tool-actions">
+							<button class="button" type="button" data-copy-target="mstg-out">Copy output</button>
+							<button class="button" type="button" data-clear-target="mstg-in,mstg-out">Clear</button>
+							<output class="tool-status" id="mstg-status"></output>
+						</div>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h3>ROT13</h3>
+						<p>I <em>could</em> go to <a href="https://rot13.com">ROT13.com</a>, but why?</p>
+					</summary>
+					<div class="tool-pair" data-tool="rot13">
+						<label>
+							Input
+							<textarea id="rot13-in" placeholder="Uryyb jbeyq"></textarea>
+						</label>
+						<label>
+							Output
+							<textarea id="rot13-out" readonly></textarea>
+						</label>
+						<div class="tool-actions">
+							<button class="button" type="button" data-copy-target="rot13-out">Copy output</button>
+							<button class="button" type="button" data-clear-target="rot13-in,rot13-out">Clear</button>
+							<output class="tool-status" id="rot13-status"></output>
+						</div>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h3>Slugify</h3>
+						<p>Turn regular text into a cleaner URL slug.</p>
+					</summary>
+					<div class="tool-pair" data-tool="slugify">
+						<label>
+							Input
+							<textarea id="slugify-in" placeholder="A Very Normal Title: With punctuation, spaces, and CAPS"></textarea>
+						</label>
+						<label>
+							Output
+							<textarea id="slugify-out" readonly></textarea>
+						</label>
+						<div class="tool-actions">
+							<button class="button" type="button" data-copy-target="slugify-out">Copy output</button>
+							<button class="button" type="button" data-clear-target="slugify-in,slugify-out">Clear</button>
+							<output class="tool-status" id="slugify-status"></output>
+						</div>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h3>Base64</h3>
+						<p>Encode and decode text, this time without breaking on Unicode.</p>
+					</summary>
+					<p>
+						<strong>Try this:</strong>
+						<code>V2hZIGRPIHdFIG5FZUQgYU5vVGhFciBCYVNlNjQgRW5Db0RlL2RFY09kRXI/Pz8=</code>
+					</p>
+					<div class="tool-grid">
+						<section class="tool-card">
+							<h4>Encode</h4>
+							<label>
+								Input
+								<textarea id="base64-encode-in" placeholder="Encode me. Emoji too: 🚀"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="base64-encode-out" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="base64-encode-out">Copy output</button>
+								<button class="button" type="button" data-clear-target="base64-encode-in,base64-encode-out">Clear</button>
+								<output class="tool-status" id="base64-encode-status"></output>
+							</div>
+						</section>
+						<section class="tool-card">
+							<h4>Decode</h4>
+							<label>
+								Input
+								<textarea id="base64-decode-in" placeholder="Paste Base64 here"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="base64-decode-out" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="base64-decode-out">Copy output</button>
+								<button class="button" type="button" data-clear-target="base64-decode-in,base64-decode-out">Clear</button>
+								<output class="tool-status" id="base64-decode-status"></output>
+							</div>
+						</section>
+					</div>
+				</details>
+				<details>
+					<summary>
+						<h3>Timing fetch</h3>
+						<p>Measure fetch time and payload size for a URL that your browser is actually allowed to read.</p>
+					</summary>
+					<pre><code class="lang-javascript">const startedAt = performance.now();
+const response = await fetch(url);
+const text = await response.text();
+console.log(`${Math.round(performance.now() - startedAt)}ms\t${text.length} bytes`);</code></pre>
+					<p><strong>Example URLs:</strong></p>
+					<ul>
+						<li>https://hacker-news.firebaseio.com/v0/user/NostraDavid.json</li>
+						<li>https://api.hnpwa.com/v0/newest.json?page=1</li>
+						<li>https://api.hnpwa.com/v0/news.json?page=1</li>
+						<li>https://api.hnpwa.com/v0/ask.json?page=1</li>
+						<li>https://api.hnpwa.com/v0/jobs.json?page=1</li>
+						<li>https://api.hnpwa.com/v0/show.json?page=1</li>
+					</ul>
+					<label>
+						URL
+						<input type="url" id="fetch-input" value="https://hacker-news.firebaseio.com/v0/user/NostraDavid.json" />
+					</label>
+					<div class="tool-actions">
+						<button class="button" type="button" id="fetch-run">Run fetch</button>
+						<output class="tool-status" id="fetch-status">Idle.</output>
+					</div>
+					<p>Timing: <output id="fetch-timing">?</output></p>
+					<p>Payload size: <output id="fetch-length">?</output></p>
+					<p>HTTP status: <output id="fetch-http-status">?</output></p>
+				</details>
+				<details>
+					<summary>
+						<h3>Text to Emoji</h3>
+						<p>
+							Created because of
+							<a href="https://www.reddit.com/r/ComedyCemetery/comments/hq2gvw/is_this_clever/">this Reddit thread</a>.
+						</p>
+					</summary>
+					<div class="tool-grid">
+						<section class="tool-card">
+							<h4>Encode</h4>
+							<label>
+								Input
+								<textarea id="t2e-in-encode"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="t2e-out-encode" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="t2e-out-encode">Copy output</button>
+								<output class="tool-status" id="t2e-encode-status"></output>
+							</div>
+						</section>
+						<section class="tool-card">
+							<h4>Decode</h4>
+							<label>
+								Input
+								<textarea id="t2e-in-decode"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="t2e-out-decode" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="t2e-out-decode">Copy output</button>
+								<output class="tool-status" id="t2e-decode-status"></output>
+							</div>
+						</section>
+					</div>
+					<script type="module" src="/projects/playground/t2e.mjs"></script>
+				</details>
+				<details>
+					<summary>
+						<h3>𝔊𝔢𝔯𝔪𝔞𝔫𝔦𝔷𝔢𝔯</h3>
+						<p>Because apparently normal Unicode was not enough.</p>
+					</summary>
+					<div class="tool-grid">
+						<section class="tool-card">
+							<h4>Encode</h4>
+							<label>
+								Input
+								<textarea id="germanizer-in-encode"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="germanizer-out-encode" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="germanizer-out-encode">Copy output</button>
+								<output class="tool-status" id="germanizer-encode-status"></output>
+							</div>
+						</section>
+						<section class="tool-card">
+							<h4>Decode</h4>
+							<label>
+								Input
+								<textarea id="germanizer-in-decode"></textarea>
+							</label>
+							<label>
+								Output
+								<textarea id="germanizer-out-decode" readonly></textarea>
+							</label>
+							<div class="tool-actions">
+								<button class="button" type="button" data-copy-target="germanizer-out-decode">Copy output</button>
+								<output class="tool-status" id="germanizer-decode-status"></output>
+							</div>
+						</section>
+					</div>
+					<script type="module" src="/projects/playground/germanizer.mjs"></script>
+				</details>
+				<script type="module" src="/projects/playground/playground.mjs"></script>
+			</section>
+			<style>
+				.project-index {
+					margin-top: 1.5em;
+				}
+				.project-index-summary {
+					color: #5f1d1d;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.95em;
+					margin-bottom: 2em;
+				}
+				.project-list {
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				.project-year-group {
+					margin-bottom: 2.5em;
+				}
+				.project-year-group > h2 {
+					border-bottom: 1px solid #d8b3b3;
+					margin-bottom: 0.8em;
+					padding-bottom: 0.2em;
+				}
+				.project-entry {
+					border-bottom: 1px solid #ead6d6;
+					list-style: none;
+					margin: 0;
+					padding: 1em 0 1.15em;
+				}
+				.project-entry:first-child {
+					padding-top: 0.2em;
+				}
+				.project-entry:last-child {
+					border-bottom: 0;
+					padding-bottom: 0;
+				}
+				.project-entry article {
+					display: grid;
+					gap: 0.35em;
+				}
+				.project-entry h3 {
+					font-size: 1.05em;
+					margin: 0;
+					padding: 0;
+					text-transform: none;
+				}
+				.project-entry h3 a {
+					text-decoration: none;
+				}
+				.project-entry h3 a:hover {
+					text-decoration: underline;
+				}
+				.project-entry-meta,
+				.project-entry-summary {
+					margin: 0;
+					padding: 0;
+					text-align: left;
+				}
+				.project-entry-meta {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.88em;
+				}
+				.project-entry-summary {
+					color: #2b2b2b;
+					font-size: 0.98em;
+					line-height: 1.45;
+					max-width: 70ch;
+				}
+				@media (min-width: 900px) {
+					body > main {
+						margin-left: 12%;
+						margin-right: 12%;
+					}
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-08</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

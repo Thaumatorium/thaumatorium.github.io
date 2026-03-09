@@ -291,7 +291,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			updateStatsUI(null, null, elements);
 			state.lastFile1 = null;
 			state.lastFile2 = null;
-			state.currentFilters = { name: { text: "", mode: "contains" }, role: { text: "", mode: "contains" } };
+			state.currentFilters = {
+				name: { text: "", mode: "contains" },
+				role: { text: "", mode: "contains" },
+			};
 			// Reset UI filters on major error
 			elements.nameFilterInput.value = "";
 			elements.nameFilterMode.value = "contains";

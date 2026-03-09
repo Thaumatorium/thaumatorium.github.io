@@ -39,9 +39,7 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
-				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
-				<li><a href="/epoch">Epoch</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
 				<li><a href="/about">About</a></li>
 			</ul>
@@ -53,7 +51,10 @@
 			</h2>
 			<p>I&rsquo;m someone who&rsquo;s sick of the state of the web and you know what they say:</p>
 			<blockquote>
-				<p>Improve the world, start with yourself - <a href="https://nl.wikipedia.org/wiki/Bond_zonder_Naam">Bond Zonder Naam</a></p>
+				<p>
+					Improve the world, start with yourself -
+					<a href="https://nl.wikipedia.org/wiki/Bond_zonder_Naam">Bond Zonder Naam</a>
+				</p>
 			</blockquote>
 			<p>This is why I started with the basics: HTML, CSS and JS. Anything else is deemed <em>bloat</em>. Then, over the years of HTML growth, I eventually switched to GoHugo as the basis of my website, so I could reduce a mass amount of duplicate HTML (mostly around the website&rsquo;s menu)</p>
 			<h2 id="thaumatorium">
@@ -66,12 +67,21 @@
 			<h3 id="the-reason---the-why">
 				<a class="self-link" href="#the-reason---the-why"> The reason - the why </a>
 			</h3>
-			<p>I wanted a place where I could post my articles, but I found my free <a href="https://thaumatorium.wordpress.com/">Wordpress site</a> too slow, too bloated, too messy, so I started to search for a way to still create and host articles, without needing bloat like Wordpress.</p>
+			<p>
+				I wanted a place where I could post my articles, but I found my free
+				<a href="https://thaumatorium.wordpress.com/">Wordpress site</a> too slow, too bloated, too messy, so I started to search for a way to still create and host articles, without needing bloat like Wordpress.
+			</p>
 			<p>I started with thinking about using something like Angular and React. They were the hot new thing in town, so why not try that? Turns out they both have a tendency to become pretty damn complex pretty damn fast - that&rsquo;s my personal experience anyway.</p>
-			<p>After finding Elm, a Haskell-like language that compiles to JS I though to use that as it promised small and (more importantly) <em>fast</em> websites.</p>
+			<p>
+				After finding Elm, a Haskell-like language that compiles to JS I though to use that as it promised small and (more importantly)
+				<em>fast</em> websites.
+			</p>
 			<p>After learning the creator wasn&rsquo;t the&hellip; most cooperating of persons I decided to move on before even clashing with him.</p>
 			<p>I quickly found the Blazor beta, which seemed promising, especially in the PWA department. Downsides: the output is rather huge (4MB+ in size) and the code is based on the Mono lib, not the fastest of libs.</p>
-			<p>So I ended up thinking: What&rsquo;s left after removing <em>all and anything</em> bloat? HTML. CSS. JS&hellip; So why not create my site in that? So I set out to create a PWA - a single HTML page that contains the whole site.</p>
+			<p>
+				So I ended up thinking: What&rsquo;s left after removing
+				<em>all and anything</em> bloat? HTML. CSS. JS&hellip; So why not create my site in that? So I set out to create a PWA - a single HTML page that contains the whole site.
+			</p>
 			<p>The site quickly grew too big for this, so I changed it up by splitting the site in separate HTML pages, but index.html contained the generic header/footer HTML, while the other HTML files contained the articles.</p>
 			<p>In doing so - splitting the site, but mostly handling things like a PWA - I broke the back/forward buttons and browser history&hellip;</p>
 			<p>In the end I decided in writing just separate HTML pages, which means I have a bunch of duplicate HTML, but I&rsquo;m OK with that, as I know enough REGEX to edit <em>all</em> HTML headers in one fell swoop!</p>
@@ -82,7 +92,9 @@
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2025-04-09</time></sub>

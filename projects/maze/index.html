@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Maze Solver | The Thaumatorium</title>
+		<meta name="description" content="Canvas-based maze solver inspired by JonPizza&#39;s recursive solver." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Maze Solver" />
+		<meta property="og:description" content="Canvas-based maze solver inspired by JonPizza&#39;s recursive solver." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Maze Solver" />
+		<meta name="twitter:description" content="Canvas-based maze solver inspired by JonPizza&#39;s recursive solver." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section class="maze-page">
+				<link rel="stylesheet" href="maze.css" />
+				<h2>Maze solver 2.0</h2>
+				<p class="maze-intro">Generate a maze with a range of algorithms, then solve it with full-map or local-navigation strategies.</p>
+				<p>1.0 used static mazes and barely worked. 2.0 generates its own mazes, and has a whole cabinet of generators and solvers.</p>
+				<div class="maze-controls">
+					<label>
+						Width
+						<input id="maze-width" type="number" min="4" max="80" value="40" />
+					</label>
+					<label>
+						Height
+						<input id="maze-height" type="number" min="4" max="80" value="40" />
+					</label>
+					<label>
+						Cell size
+						<input id="cell-size" type="number" min="8" max="40" value="30" />
+					</label>
+					<label>
+						Generator
+						<select id="generation-algorithm"></select>
+					</label>
+					<label>
+						Initial coverage
+						<input id="generation-coverage" type="number" min="1" max="100" value="95" />
+					</label>
+					<label>
+						Time limit (ms)
+						<input id="generation-time-limit" type="number" min="50" max="10000" step="50" value="5000" />
+					</label>
+					<label>
+						Benchmark runs
+						<input id="benchmark-runs" type="number" min="1" max="50" value="5" />
+					</label>
+					<label>
+						Strategy
+						<select id="search-strategy" type="select-one">
+							<option value="bfs" selected>Breadth-first search</option>
+							<option value="dfs">Depth-first search</option>
+						</select>
+					</label>
+					<label for="animation-speed">
+						Animation speed
+						<input id="animation-speed" type="range" min="1" max="100" value="35" />
+						<output id="animation-speed-value" for="animation-speed">35</output>
+					</label>
+					<button id="generate-maze">Generate maze</button>
+					<button id="solve-maze">Solve maze</button>
+					<button id="benchmark-maze">Benchmark all</button>
+				</div>
+				<p id="maze-status" class="maze-status">Ready to generate a 40 x 40 maze until 95% coverage or 5000 ms.</p>
+				<div class="maze-stage">
+					<canvas id="maze"></canvas>
+				</div>
+				<section class="maze-benchmark">
+					<h3>Generator vs strategy benchmark</h3>
+					<p class="maze-benchmark-intro">Each generator is run multiple times with fresh random mazes. Within each run, all strategies share the same maze; table values are averaged across runs. Lower step counts are better and shown greener.</p>
+					<div id="benchmark-results" class="maze-benchmark-results">
+						<p class="maze-benchmark-empty">No benchmark yet.</p>
+					</div>
+				</section>
+				<script type="module" src="maze.mjs"></script>
+			</section>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-07</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
