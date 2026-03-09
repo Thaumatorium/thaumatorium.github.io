@@ -218,9 +218,15 @@ self.onmessage = async (event) => {
 			workerNormalizedRolePositions.set(role, { normX, normY });
 		});
 		if (!workerNormalizedRolePositions.has(DEFAULT_ROLE) && allFilteredRoles.has(DEFAULT_ROLE)) {
-			workerNormalizedRolePositions.set(DEFAULT_ROLE, { normX: 0.5, normY: 0.5 });
+			workerNormalizedRolePositions.set(DEFAULT_ROLE, {
+				normX: 0.5,
+				normY: 0.5,
+			});
 		} else if (numFilteredRoles === 0 && d3GraphData.nodes.some((n) => n.type === "person")) {
-			workerNormalizedRolePositions.set(DEFAULT_ROLE, { normX: 0.5, normY: 0.5 });
+			workerNormalizedRolePositions.set(DEFAULT_ROLE, {
+				normX: 0.5,
+				normY: 0.5,
+			});
 		}
 		const normalizedRolePositionsData = Array.from(workerNormalizedRolePositions.entries());
 

@@ -39,9 +39,7 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
-				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
-				<li><a href="/epoch">Epoch</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
 				<li><a href="/about">About</a></li>
 			</ul>
@@ -51,8 +49,14 @@
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="1971-08-31T00:00:00Z">1971-08-31</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="1971-08-31T00:00:00Z">1971-08-31</time></div>
+					<div class="published-box">
+						Published:
+						<time class="published" datetime="1971-08-31T00:00:00Z">1971-08-31</time>
+					</div>
+					<div class="published-box">
+						Updated:
+						<time class="published" datetime="1971-08-31T00:00:00Z">1971-08-31</time>
+					</div>
 				</div>
 			</hgroup>
 			<h1 id="further-normalization-of-the-data-base-relational-model">
@@ -93,12 +97,13 @@
 			<p>
 				When setting up a relational data base, the data base designer is confronted with many possibilities in selecting the relational schema itself, let alone the selection of its representation in storage. An important, in fact fundamental, consideration is that of identifying which attributes are functionally
 				dependent on others. Attribute B of relation R is functionally dependent on attribute A of R if, at every instant of time, each value in A has no more than one value in B associated with it under R. In other words, the projection Π<sub>A,B</sub>(R) is at every instant of time a function from Π<sub>A</sub>(R) to
-				Π<sub>B</sub>(R) (this function can be, and usually will be, time-varying). We write R.A → R.B if B is functionally dependent on A in R, and R.A ↛ R.B if B is <strong>not</strong> functionally dependent on A in R. If both R.A → R.B and R.B → R.A hold, then at all times R.A and R.B are in one-to-one
-				correspondence, and we write R.A ↔ R.B.
+				Π<sub>B</sub>(R) (this function can be, and usually will be, time-varying). We write R.A → R.B if B is functionally dependent on A in R, and R.A ↛ R.B if B is
+				<strong>not</strong> functionally dependent on A in R. If both R.A → R.B and R.B → R.A hold, then at all times R.A and R.B are in one-to-one correspondence, and we write R.A ↔ R.B.
 			</p>
 			<p>
 				The definition given above can be extended to collections of attributes. Thus, if D, E are distinct collections of attributes of R, E is functionally dependent on D if, at every instant of time, each D-value has no more than one E-value associated with it under R. The notation →, ↛ introduced for individual
-				attributes is applied similarly to collections of attributes. A functional dependence of the form R.D → R.E where E is a subset of D will be called a <strong>trivial dependence</strong>.
+				attributes is applied similarly to collections of attributes. A functional dependence of the form R.D → R.E where E is a subset of D will be called a
+				<strong>trivial dependence</strong>.
 			</p>
 			<p>As an example to illustrate functional dependence (both trivial and non-trivial), consider the relation</p>
 			<pre><code>U(E#, D#, V#)
@@ -248,7 +253,9 @@ T.P# ↛ T.S#
 				In what follows, we shall suppose that in the given relations there are no functional dependencies other than those itemized above together with those that can be formally deduced from them. Fig. 3 summarizes the non-trivial dependencies (but not the non-dependencies) in a parent relation R from which
 				R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>, R<sub>5</sub> can be derived by projection.
 			</p>
-			<p><img src="attribute-dependencies-in-r.drawio.png" alt="Fig. 3: Attribute Dependencies in R" /></p>
+			<p>
+				<img src="attribute-dependencies-in-r.drawio.png" alt="Fig. 3: Attribute Dependencies in R" />
+			</p>
 			<p>In all five sample relations above, (S#, P#, J#) is a candidate key. In R<sub>1</sub> and R<sub>5</sub> it is the primary key also. X# is both a candidate key and the primary key in relations R<sub>2</sub>, R<sub>3</sub>, R<sub>4</sub>.</p>
 			<h3 id="23-prime-attributes">
 				<a class="self-link" href="#23-prime-attributes"> 2.3 Prime Attributes </a>
@@ -281,8 +288,8 @@ T.P# ↛ T.S#
 			<p>C2: Every candidate key of R consists of just a single attribute.</p>
 			<hr />
 			<p>
-				* Although each prime attribute is fully dependent on each candidate key of which it is a component, it is possible for a prime attribute to be non-fully dependent on a candidate key of which it is <strong>not</strong> a component. Thus, this definition is changed in meaning if the term &ldquo;non-prime&rdquo;
-				is dropped. An example which illustrates this distinction is R(A, B, C, D, E, F) where
+				* Although each prime attribute is fully dependent on each candidate key of which it is a component, it is possible for a prime attribute to be non-fully dependent on a candidate key of which it is
+				<strong>not</strong> a component. Thus, this definition is changed in meaning if the term &ldquo;non-prime&rdquo; is dropped. An example which illustrates this distinction is R(A, B, C, D, E, F) where
 			</p>
 			<pre><code>R.(A,B,C) ↔ R.(D, E) → R.F
  R.(A,B)  → R.D
@@ -291,8 +298,8 @@ T.P# ↛ T.S#
 			<p>Prime attribute C is not fully dependent on candidate key (D, E); neither is D on (A, B, C).</p>
 			<hr />
 			<p>
-				Then, without further investigation, we can say that R is in second normal form. Observe that both R<sub>1</sub> and R<sub>2</sub> are in second normal form, because special case C1 applies. Relation R<sub>3</sub> is an example of a relation in second normal form, but not as a result of the special conditions
-				C1, C2 above.
+				Then, without further investigation, we can say that R is in second normal form. Observe that both R<sub>1</sub> and R<sub>2</sub> are in second normal form, because special case C1 applies. Relation R<sub>3</sub>
+				is an example of a relation in second normal form, but not as a result of the special conditions C1, C2 above.
 			</p>
 			<h3 id="26-optimal-second-normal-form">
 				<a class="self-link" href="#26-optimal-second-normal-form"> 2.6 Optimal Second Normal Form </a>
@@ -331,9 +338,14 @@ R.B → R.C .
 			<pre><code>R.A → R.C,    R.C ↛ R.A
 </code></pre>
 			<p>and we may represent the entire set of conditions on A, B, C as shown in Fig. 4. Note that R.C → R.B is neither prohibited nor required.</p>
-			<p><img src="transitive-dependence-of-c-on-a-under-r.drawio.png" alt="Transitive Dependence of C on A under R" /></p>
+			<p>
+				<img src="transitive-dependence-of-c-on-a-under-r.drawio.png" alt="Transitive Dependence of C on A under R" />
+			</p>
 			<p>Fig. 4: Transitive Dependence of C on A under R</p>
-			<p>In such a case we say that C is <strong>transitively dependent</strong> on A under R. In the special case where R.C → R.B also, both B and C are transitively dependent on A under R.</p>
+			<p>
+				In such a case we say that C is
+				<strong>transitively dependent</strong> on A under R. In the special case where R.C → R.B also, both B and C are transitively dependent on A under R.
+			</p>
 			<p>To illustrate transitive dependence, consider a relation W concerning employees and their departments:</p>
 			<pre><code>W(E#, JC, D#, M#, CT)
 </code></pre>
@@ -348,7 +360,9 @@ CT = contract type (government or non-government)
 				Suppose that each employee is given only one jobcode and is assigned to only one department. Each department has its own manager and is involved in work on either government or non-government contracts, not both. The non-trivial functional dependencies in W are as shown in Fig. 5 (the non-dependencies are
 				implied).
 			</p>
-			<p><img src="example-of-several-transitive-dependencies.drawio.png" alt="Example of Several Transitive Dependencies" /></p>
+			<p>
+				<img src="example-of-several-transitive-dependencies.drawio.png" alt="Example of Several Transitive Dependencies" />
+			</p>
 			<p>Fig. 5: <strong>Example of Several Transitive Dependencies</strong></p>
 			<p>If M# were not present, the only transitive dependence would be that of CT on E#. With M# present, there are two additional transitive dependencies: both D# and M# are transitively dependent on E#. Note, however, that CT is not transitively dependent on either D# or M#.</p>
 			<p>
@@ -429,8 +443,9 @@ R.B → R.C ,  R.C ↛ R.B
 			<p>This is a special case of transitive dependence (see definition in section 3.1)</p>
 			<hr />
 			<p>
-				Application of these conditions is illustrated in Fig. 8a, 8b using the relation W of section 3.1. Fig. 8a treats the normalization of W<sub>0</sub> (obtained from W by dropping manager number M#). Fig. 8b treats the normalization of W itself, and shows how one-to-one correspondences are forced to occur between
-				candidate keys of the projections (instead of between non-prime attributes). Note also the non-uniqueness of the optimal third normal form in Fig. 8b.
+				Application of these conditions is illustrated in Fig. 8a, 8b using the relation W of section 3.1. Fig. 8a treats the normalization of W<sub>0</sub>
+				(obtained from W by dropping manager number M#). Fig. 8b treats the normalization of W itself, and shows how one-to-one correspondences are forced to occur between candidate keys of the projections (instead of between non-prime attributes). Note also the non-uniqueness of the optimal third normal form in Fig.
+				8b.
 			</p>
 			<h2 id="4-admissible-states">
 				<a class="self-link" href="#4-admissible-states"> 4. Admissible States </a>
@@ -451,9 +466,12 @@ R.B → R.C ,  R.C ↛ R.B
 				</ol>
 			</blockquote>
 			<p>As usual, the primary keys are underlined.</p>
-			<p><img src="conversion-of-w0-to-third-normal-form.drawio.png" alt="Conversion of W0 to Third Normal Form" /></p>
 			<p>
-				Fig. 8a: <strong>Conversion of W<sub>0</sub> to Third Normal Form</strong>
+				<img src="conversion-of-w0-to-third-normal-form.drawio.png" alt="Conversion of W0 to Third Normal Form" />
+			</p>
+			<p>
+				Fig. 8a:
+				<strong>Conversion of W<sub>0</sub> to Third Normal Form</strong>
 			</p>
 			<h1 id="todo-continue-here">
 				<a class="self-link" href="#todo-continue-here"> TODO: CONTINUE HERE </a>
@@ -526,7 +544,10 @@ R.B → R.C ,  R.C ↛ R.B
 				</tbody>
 			</table>
 			<p><em>Fig. 8b: Conversion of W to Third Normal Form</em></p>
-			<p>A data base state (i.e., instantaneous snapshot) is <strong>admissible</strong> relative to a given schema if</p>
+			<p>
+				A data base state (i.e., instantaneous snapshot) is
+				<strong>admissible</strong> relative to a given schema if
+			</p>
 			<ol>
 				<li>each relation named in the schema has tuples whose components belong to the specified domains;</li>
 				<li>all tuples of a relation named in the schema are distinct;</li>
@@ -602,7 +623,8 @@ R.B → R.C ,  R.C ↛ R.B
 			<p>A useful notion of query equivalence of data base states can be based on the algebraic view of queries. In this view retrieval of data is treated as the formation of a new relation from the data base relations by some operation of a relational algebra (see [2]).</p>
 			<p>
 				If Θ is a relational algebra, B is a collection of relations and R is a relation which is derivable from B using operations of the algebra Θ only, then we say (as in [1]) that R is Θ-derivable from B. Suppose now that we have two data bases A, B which at time t are in states A<sub>t</sub>, B<sub>t</sub>
-				respectively. We say that the data base states A<sub>t</sub>, B<sub>t</sub> are <strong>query-equivalent</strong>
+				respectively. We say that the data base states A<sub>t</sub>, B<sub>t</sub> are
+				<strong>query-equivalent</strong>
 			</p>
 			<p>
 				providing they are each Θ-derivable from the other and Θ is a relationally complete algebra (see [2]). The reasonableness of this definition stems from the fact that, if each of the data base states A<sub>t</sub>, B<sub>t</sub> is Θ-derivable from the other, then <strong>any</strong> relation R which is
@@ -620,7 +642,9 @@ R.B → R.C ,  R.C ↛ R.B
 				application programs when the collection of relations is itself changed to conform to a new schema. Simple additions of new data base domains and new relations have no effect. Outright removal of a relation R obviously cripples those programs that previously made use of R. Replacement of a relation by
 				<strong>one</strong> of its projections will cripple those programs that previously made use of the attributes now dropped.
 			</p>
-			<p><img src="file-IaFPoQ4RvXmLLNM6U5Ugkou7" alt="Fig. 11: Admissible States for a Data Base cast in Normal Forms #1, 2, 3." /></p>
+			<p>
+				<img src="file-IaFPoQ4RvXmLLNM6U5Ugkou7" alt="Fig. 11: Admissible States for a Data Base cast in Normal Forms #1, 2, 3." />
+			</p>
 			<p>
 				The really interesting type of change is replacement of a relation R by two or more of its projections such that R may be recovered by taking the natural join of these projections. We discussed this type of change in sections 2 and 3 in the context of conversion to second and third normal forms respectively. In
 				the present context of data base growth we call this phenomenon <strong>attribute migration</strong>.
@@ -761,7 +785,9 @@ R.B → R.C ,  R.C ↛ R.B
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">1971-08-31</time></sub>

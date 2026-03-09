@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Regex to NFA/DFA Visualizer | The Thaumatorium</title>
+		<meta name="description" content="A tool for visualizing the conversion from regular expressions to NFA and DFA automata." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Regex to NFA/DFA Visualizer" />
+		<meta property="og:description" content="A tool for visualizing the conversion from regular expressions to NFA and DFA automata." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Regex to NFA/DFA Visualizer" />
+		<meta name="twitter:description" content="A tool for visualizing the conversion from regular expressions to NFA and DFA automata." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section class="regex2fa-page">
+				<style>
+					.regex2fa-page {
+						display: grid;
+						gap: 1.25rem;
+					}
+					.regex2fa-shell {
+						display: grid;
+						gap: 1rem;
+						padding: 1.1rem;
+						border: 1px solid #cda9a9;
+						border-radius: 8px;
+						background: #fffaf9;
+						box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+					}
+					.regex2fa-lead,
+					.regex2fa-help,
+					.regex2fa-status {
+						margin: 0;
+					}
+					.regex2fa-form,
+					.regex2fa-actions,
+					.regex2fa-switches,
+					.regex2fa-legend {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						align-items: center;
+					}
+					.regex2fa-form {
+						display: grid;
+						gap: 0.5rem;
+					}
+					.regex2fa-form label,
+					.regex2fa-switches label {
+						display: grid;
+						gap: 0.35rem;
+						font-weight: 600;
+					}
+					.regex2fa-input,
+					.regex2fa-epsilon {
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						padding: 0.6rem 0.75rem;
+						font: inherit;
+						background: #fff;
+					}
+					.regex2fa-input {
+						min-height: 5.5rem;
+						font-family: monospace;
+						resize: vertical;
+					}
+					.regex2fa-epsilon {
+						width: 4rem;
+						font-family: monospace;
+					}
+					.regex2fa-stage {
+						display: grid;
+						gap: 0.75rem;
+					}
+					#automatonCanvas {
+						display: block;
+						width: 100%;
+						height: 34rem;
+						border: 1px solid #cda9a9;
+						border-radius: 8px;
+						background: #fff;
+					}
+					.regex2fa-status {
+						min-height: 1.4rem;
+						font-family: Tahoma, sans-serif;
+						font-size: 0.95rem;
+						color: #6e0000;
+					}
+					.regex2fa-status[data-tone="error"] {
+						color: #a31717;
+					}
+					.regex2fa-legend {
+						font-size: 0.95rem;
+					}
+					.regex2fa-chip {
+						display: inline-flex;
+						align-items: center;
+						gap: 0.35rem;
+						padding: 0.2rem 0.55rem;
+						border: 1px solid #d8b3b3;
+						border-radius: 999px;
+						background: #fff;
+					}
+					.regex2fa-chip-swatch {
+						width: 0.8rem;
+						height: 0.8rem;
+						border: 1px solid #333;
+						border-radius: 50%;
+						background: #d9ecff;
+					}
+					.regex2fa-chip-swatch.accept {
+						background: #dcf5d7;
+					}
+					.regex2fa-internals {
+						display: grid;
+						gap: 0.6rem;
+						padding: 0.9rem;
+						border: 1px dashed #cda9a9;
+						border-radius: 6px;
+						background: #fff;
+					}
+					.regex2fa-debug {
+						margin: 0;
+						padding: 0.65rem 0.8rem;
+						border: 1px solid #ead6d6;
+						border-radius: 4px;
+						background: #fffaf9;
+						font-family: monospace;
+						font-size: 0.92rem;
+						overflow-x: auto;
+						white-space: pre-wrap;
+					}
+					.regex2fa-steps {
+						display: grid;
+						gap: 0.75rem;
+					}
+					.regex2fa-step-list {
+						display: grid;
+						gap: 0.7rem;
+						margin: 0;
+						padding: 0;
+						list-style: none;
+					}
+					.regex2fa-step {
+						padding: 0.8rem 0.9rem;
+						border: 1px solid #ead6d6;
+						border-radius: 6px;
+						background: #fff;
+					}
+					.regex2fa-step.is-active {
+						border-color: #8b2d2d;
+						box-shadow: inset 0 0 0 1px #8b2d2d;
+						background: #fff8f5;
+					}
+					.regex2fa-step-title,
+					.regex2fa-step-body {
+						margin: 0;
+					}
+					.regex2fa-step-title {
+						font-weight: 700;
+					}
+					.regex2fa-step-body {
+						margin-top: 0.3rem;
+						font-family: monospace;
+						white-space: pre-wrap;
+						word-break: break-word;
+					}
+					@media (max-width: 720px) {
+						#automatonCanvas {
+							height: 26rem;
+						}
+					}
+				</style>
+				<header class="regex2fa-shell">
+					<h2>Regex to NFA/DFA Visualizer</h2>
+					<p class="regex2fa-lead">Parse a small regular-expression subset, build a Thompson NFA, and derive the DFA from it. The graph is deterministic per input, so the same regex always redraws the same way.</p>
+					<p class="regex2fa-help">
+						Supported: concatenation, alternation, grouping, <code>*</code>, <code>+</code>, <code>?</code>, escaped literals, and simple character classes like <code>[abc]</code> or <code>[Gg]</code>. Unsupported: lookarounds, anchors, counted quantifiers, shorthand classes like <code>\d</code>, and advanced class
+						syntax.
+					</p>
+				</header>
+				<section class="regex2fa-shell">
+					<div class="regex2fa-form">
+						<label for="regexInput">Regex</label>
+						<textarea class="regex2fa-input" id="regexInput" placeholder="e.g. (a|b)*cde+f? or [Gg]ood"></textarea>
+					</div>
+					<div class="regex2fa-actions">
+						<button class="button" id="renderRegexBtn" type="button">Render automaton</button>
+						<button class="button" id="loadExampleBtn" type="button">Load example</button>
+						<button class="button" id="clearRegexBtn" type="button">Clear</button>
+					</div>
+					<div class="regex2fa-switches">
+						<label for="viewMode">
+							View
+							<select id="viewMode">
+								<option value="nfa">NFA</option>
+								<option value="dfa">DFA</option>
+								<option value="min-dfa">Minimized DFA</option>
+							</select>
+						</label>
+						<label for="epsilonSymbol">
+							Epsilon symbol
+							<input class="regex2fa-epsilon" id="epsilonSymbol" type="text" value="ε" maxlength="3" />
+						</label>
+						<label for="showInternals">
+							<input id="showInternals" type="checkbox" />
+							Show internals
+						</label>
+					</div>
+					<p class="regex2fa-status" id="regex2faStatus" aria-live="polite"></p>
+					<div class="regex2fa-stage">
+						<canvas id="automatonCanvas" aria-label="Automaton visualization"></canvas>
+						<div class="regex2fa-legend">
+							<span class="regex2fa-chip"><span class="regex2fa-chip-swatch"></span>Normal state</span>
+							<span class="regex2fa-chip"><span class="regex2fa-chip-swatch accept"></span>Accept state</span>
+							<span class="regex2fa-chip">Start arrow points into the start state</span>
+						</div>
+					</div>
+					<section class="regex2fa-steps" aria-labelledby="regex2fa-steps-title">
+						<h3 id="regex2fa-steps-title">Step By Step</h3>
+						<ol class="regex2fa-step-list">
+							<li class="regex2fa-step" id="step-regex">
+								<p class="regex2fa-step-title">1. Parse the input regex</p>
+								<p class="regex2fa-step-body" id="stepRegexBody">Enter a regex to begin.</p>
+							</li>
+							<li class="regex2fa-step" id="step-postfix">
+								<p class="regex2fa-step-title">2. Insert explicit concatenation and convert to postfix</p>
+								<p class="regex2fa-step-body" id="stepPostfixBody">Nothing parsed yet.</p>
+							</li>
+							<li class="regex2fa-step" id="step-nfa">
+								<p class="regex2fa-step-title">3. Build a Thompson NFA</p>
+								<p class="regex2fa-step-body" id="stepNfaBody">No NFA built yet.</p>
+							</li>
+							<li class="regex2fa-step" id="step-dfa">
+								<p class="regex2fa-step-title">4. Run subset construction to get the DFA</p>
+								<p class="regex2fa-step-body" id="stepDfaBody">No DFA built yet.</p>
+							</li>
+							<li class="regex2fa-step" id="step-min-dfa">
+								<p class="regex2fa-step-title">5. Minimize equivalent DFA states</p>
+								<p class="regex2fa-step-body" id="stepMinDfaBody">No minimized DFA built yet.</p>
+							</li>
+						</ol>
+					</section>
+					<div class="regex2fa-internals" id="regex2faInternals" hidden>
+						<div>
+							<strong>Raw tokens</strong>
+							<pre class="regex2fa-debug" id="rawTokensDebug"></pre>
+						</div>
+						<div>
+							<strong>Tokens with explicit concatenation</strong>
+							<pre class="regex2fa-debug" id="concatTokensDebug"></pre>
+						</div>
+						<div>
+							<strong>Postfix form</strong>
+							<pre class="regex2fa-debug" id="postfixDebug"></pre>
+						</div>
+					</div>
+				</section>
+				<script type="module" src="/projects/regex2fa/app.mjs"></script>
+			</section>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-08</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

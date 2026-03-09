@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Warcraft Game Loop | The Thaumatorium</title>
+		<meta name="description" content="An interactive graph view of Warcraft-style gameplay loops such as leveling, economy, social play, and exploration." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Warcraft Game Loop" />
+		<meta property="og:description" content="An interactive graph view of Warcraft-style gameplay loops such as leveling, economy, social play, and exploration." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Warcraft Game Loop" />
+		<meta name="twitter:description" content="An interactive graph view of Warcraft-style gameplay loops such as leveling, economy, social play, and exploration." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<section class="warcraft-loop-page">
+				<style>
+					.warcraft-loop-page {
+						--loop-bg: #f7f1e7;
+						--loop-panel: #fffaf4;
+						--loop-border: #d3c3b2;
+						--loop-text: #1b120a;
+						--loop-muted: #4d3a2a;
+						display: grid;
+						gap: 1rem;
+						margin-left: calc(50% - 50vw + 1rem);
+						margin-right: calc(50% - 50vw + 1rem);
+						padding: 0 0 1rem;
+						color: var(--loop-text);
+					}
+					.warcraft-loop-shell,
+					.warcraft-loop-stage {
+						border: 1px solid var(--loop-border);
+						border-radius: 12px;
+						background: linear-gradient(180deg, #fffdfa, #f5ede1);
+						box-shadow: 0 16px 34px rgba(78, 51, 24, 0.12);
+					}
+					.warcraft-loop-shell {
+						display: grid;
+						gap: 1rem;
+						padding: 1rem;
+					}
+					.warcraft-loop-shell p,
+					.warcraft-loop-shell h2,
+					.warcraft-loop-shell h3 {
+						margin: 0;
+						padding: 0;
+						color: var(--loop-text);
+					}
+					.warcraft-loop-shell p {
+						color: var(--loop-muted);
+						text-align: left;
+					}
+					.warcraft-loop-toolbar,
+					.warcraft-loop-legend,
+					.warcraft-loop-edge-legend,
+					.warcraft-loop-presets {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						align-items: center;
+					}
+					.warcraft-loop-chip {
+						display: inline-flex;
+						align-items: center;
+						gap: 0.45rem;
+						padding: 0.35rem 0.7rem;
+						border: 1px solid var(--loop-border);
+						border-radius: 999px;
+						background: rgba(255, 255, 255, 0.72);
+						color: var(--loop-text);
+						cursor: pointer;
+					}
+					.warcraft-loop-chip.is-active {
+						box-shadow: inset 0 0 0 1px #8b6c4f;
+						background: rgba(255, 245, 230, 0.95);
+					}
+					.warcraft-loop-chip.is-dimmed {
+						opacity: 0.45;
+					}
+					.warcraft-loop-dot {
+						width: 0.8rem;
+						height: 0.8rem;
+						border-radius: 50%;
+					}
+					.warcraft-loop-edge-key {
+						display: inline-flex;
+						align-items: center;
+						gap: 0.55rem;
+						padding: 0.3rem 0.65rem;
+						border: 1px solid var(--loop-border);
+						border-radius: 999px;
+						background: rgba(255, 255, 255, 0.72);
+						color: var(--loop-text);
+						font-size: 0.95rem;
+					}
+					.warcraft-loop-edge-swatch {
+						width: 2.6rem;
+						height: 0.8rem;
+						flex: 0 0 auto;
+					}
+					.warcraft-loop-stage {
+						position: relative;
+						overflow: hidden;
+						min-height: 78vh;
+					}
+					#warcraft-loop-chart {
+						width: 100%;
+						height: 78vh;
+					}
+					.warcraft-loop-tooltip {
+						position: absolute;
+						pointer-events: none;
+						display: none;
+						max-width: 18rem;
+						padding: 0.65rem 0.8rem;
+						border: 1px solid #cdb49b;
+						border-radius: 8px;
+						background: rgba(255, 250, 244, 0.97);
+						color: #352616;
+						font-size: 0.9rem;
+						box-shadow: 0 12px 24px rgba(78, 51, 24, 0.18);
+					}
+					.warcraft-loop-tooltip strong {
+						display: block;
+						margin-bottom: 0.25rem;
+					}
+					@media (max-width: 719px) {
+						.warcraft-loop-page {
+							margin-left: 0;
+							margin-right: 0;
+						}
+						.warcraft-loop-stage {
+							min-height: 66vh;
+						}
+						#warcraft-loop-chart {
+							height: 66vh;
+						}
+					}
+				</style>
+				<section class="warcraft-loop-shell">
+					<h2>Warcraft Game Loop</h2>
+					<p>
+						This graph sketches how Warcraft-style activities connect across progression, economy, social play, and exploration. The main chain is still visible, but intra-phase links, support links, and cost/friction links stay in the model too. Click a node to isolate its outgoing arrows, or click a legend chip to
+						filter by category.
+					</p>
+					<div class="warcraft-loop-toolbar">
+						<button class="button" id="warcraft-loop-fit" type="button">Fit graph</button>
+						<button class="button" id="warcraft-loop-reset" type="button">Clear focus</button>
+					</div>
+					<div class="warcraft-loop-presets" id="warcraft-loop-presets"></div>
+					<div class="warcraft-loop-legend" id="warcraft-loop-legend"></div>
+					<div class="warcraft-loop-edge-legend" id="warcraft-loop-edge-legend" aria-label="Arrow legend"></div>
+				</section>
+				<section class="warcraft-loop-stage">
+					<div id="warcraft-loop-chart" aria-label="Warcraft gameplay loop graph"></div>
+					<div class="warcraft-loop-tooltip" id="warcraft-loop-tooltip" aria-hidden="true"></div>
+				</section>
+				<script type="module" src="/projects/warcraft-game-loop/warcraft-game-loop.mjs"></script>
+			</section>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-08</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

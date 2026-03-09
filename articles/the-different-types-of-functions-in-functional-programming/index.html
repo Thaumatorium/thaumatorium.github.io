@@ -2,8 +2,8 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>The Different Types of Functions in Functional Programming | The Thaumatorium</title>
-		<meta name="description" content="Comprehensive explanations of various function types in functional programming" />
+		<title>Function Kinds and Function Patterns in Functional Programming | The Thaumatorium</title>
+		<meta name="description" content="A practical overview of function shapes, abstractions and common patterns in functional programming" />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="The Different Types of Functions in Functional Programming" />
-		<meta property="og:description" content="Comprehensive explanations of various function types in functional programming" />
+		<meta property="og:title" content="Function Kinds and Function Patterns in Functional Programming" />
+		<meta property="og:description" content="A practical overview of function shapes, abstractions and common patterns in functional programming" />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="The Different Types of Functions in Functional Programming" />
-		<meta name="twitter:description" content="Comprehensive explanations of various function types in functional programming" />
+		<meta name="twitter:title" content="Function Kinds and Function Patterns in Functional Programming" />
+		<meta name="twitter:description" content="A practical overview of function shapes, abstractions and common patterns in functional programming" />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
@@ -39,113 +39,331 @@
 				<li><a href="/">Frontpage</a><span> - </span></li>
 				<li><a href="/articles">Articles</a><span> - </span></li>
 				<li><a href="/projects">Projects</a><span> - </span></li>
-				<li><a href="/warcraft-credits">Warcraft Credits</a><span> - </span></li>
 				<li><a href="/random-video">Random video</a><span> - </span></li>
-				<li><a href="/epoch">Epoch</a><span> - </span></li>
 				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
 		<main>
-			<h1>The Different Types of Functions in Functional Programming</h1>
+			<h1>Function Kinds and Function Patterns in Functional Programming</h1>
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2018-10-15T00:00:00&#43;02:00">2018-10-15</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T20:21:00&#43;02:00">2024-07-24</time></div>
+					<div class="published-box">
+						Published:
+						<time class="published" datetime="2018-10-15T00:00:00&#43;02:00">2018-10-15</time>
+					</div>
+					<div class="published-box">
+						Updated:
+						<time class="published" datetime="2026-03-07T20:41:00&#43;01:00">2026-03-07</time>
+					</div>
 				</div>
 			</hgroup>
 			<p>
-				In functional programming, the term "type" can be somewhat overloaded, especially in languages like Haskell. However, in this context, we are referring to different kinds of functions and their behaviors. A parser, for example, is a function that accepts strings as input and returns some data structure as
-				output, typically a parse tree or a set of indices representing where parsing stopped successfully.
+				In functional programming, the term &ldquo;kind&rdquo; can be somewhat overloaded, especially in languages like Haskell. However, in this context, we are referring to different shapes of functions and their behaviors. Some of these are truly different kinds of functions, while others are simply common patterns
+				or abstractions that you will quickly run into when learning FP.
 			</p>
-			<h2>Types of Functions</h2>
-			<table>
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-						<th>Example Code</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Pure</td>
-						<td>Takes an input, returns an output – no side effects (data changes).</td>
-						<td>
-							<pre><code class="lang-haskell">f :: Int -> Int
-f x = x</code></pre>
-						</td>
-					</tr>
-					<tr>
-						<td>Predicate</td>
-						<td>Takes an input, returns a Bool.</td>
-						<td>
-							<pre><code class="lang-haskell">f :: Int -> Bool
-f x = x > 5</code></pre>
-						</td>
-					</tr>
-					<tr>
-						<td>Recursive</td>
-						<td>Like a Pure function, but also calls itself (at least once) with a subset of the original input.</td>
-						<td>
-							<pre><code class="lang-haskell">length :: [a] -> Int
-length (x:xs) = 1 + length xs</code></pre>
-						</td>
-					</tr>
-					<tr>
-						<td>Curried</td>
-						<td>"Partial Application" means that a function receives only a part of the input, which makes it return a <em>new</em> function that still wants the rest of the input (imperative languages like C or Python always want all arguments at once)</td>
-						<td>
-							<pre><code class="lang-haskell">timesTwo :: Int -> Int
-timesTwo = (2 *)</code></pre>
-							<p>Example usage: As you can see, the <samp>*</samp> operator only has one input - It's been partially applied! When you look at the definition, you see that timesTwo expects at least one Int, which when applied, gets added at the end of the function:</p>
-							<pre><code class="lang-haskell">timesTwo 3
--- { apply timesTwo }
-2 * 3
--- { apply * }
-6</code></pre>
-						</td>
-					</tr>
-					<tr>
-						<td>Applicative</td>
-						<td>Can take a variable amount of inputs and return an output. Uses the <code>pure</code> function and the <code>&lt;*&gt;</code> operator.</td>
-						<td>
-							<p><code>pure</code> lifts a function into a wrapped type, and <code>&lt;*&gt;</code> accepts a wrapped type and a variable (also wrapped).</p>
-						</td>
-					</tr>
-					<tr>
-						<td>Monadic</td>
-						<td>Takes an input, returns an output - can have side effects and uses either the bind <code>&gt;&gt;=</code> operator or <code>do</code> notation.</td>
-						<td>
-							<p>From: <a href="https://wiki.haskell.org/All_About_Monads">Haskell Wiki: All About Monads</a></p>
-							<pre><code class="lang-haskell">maternalGrandfather :: Sheep -> Maybe Sheep
-maternalGrandfather s = (return s) >>= mother >>= father
--- Alternatively
-mothersPaternalGrandfather :: Sheep -> Maybe Sheep
-mothersPaternalGrandfather s = do m  <- mother s
-                                  gf <- father m
-                                  father gf
-</code></pre>
-						</td>
-					</tr>
-					<tr>
-						<td>Parser Combinator</td>
-						<td>Accepts several parsers as input and returns a new parser as output.</td>
-						<td>
-							<p>From: <a href="https://en.wikipedia.org/wiki/Parser_combinator">Wikipedia: Parser Combinator</a></p>
-							<p>A parser is a function accepting strings as input and returning some structure as output, typically a parse tree or a set of indices representing where parsing stopped successfully in the string.</p>
-						</td>
-					</tr>
-				</tbody>
-			</table>
+			<h2 id="side-effects">
+				<a class="self-link" href="#side-effects"> Side Effects </a>
+			</h2>
+			<p>Before talking about the different kinds of functions, it helps to understand what a <em>side effect</em> is.</p>
+			<p>A side effect is anything a function does besides calculating and returning a result. In other words: if a function affects or depends on something outside its explicit input and output, that&rsquo;s usually a side effect.</p>
+			<p>You can roughly divide side effects like this:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Side effects
+</span></span><span style="display:flex;"><span>├── I/O
+</span></span><span style="display:flex;"><span>│   ├── printing to the console
+</span></span><span style="display:flex;"><span>│   ├── reading user input
+</span></span><span style="display:flex;"><span>│   ├── reading/writing files
+</span></span><span style="display:flex;"><span>│   └── network or database access
+</span></span><span style="display:flex;"><span>├── Mutation
+</span></span><span style="display:flex;"><span>│   ├── changing a variable
+</span></span><span style="display:flex;"><span>│   ├── mutating an object or list
+</span></span><span style="display:flex;"><span>│   └── changing global/shared state
+</span></span><span style="display:flex;"><span>├── Environment inspection
+</span></span><span style="display:flex;"><span>│   ├── reading the current time
+</span></span><span style="display:flex;"><span>│   ├── generating randomness
+</span></span><span style="display:flex;"><span>│   └── reading environment variables
+</span></span><span style="display:flex;"><span>└── Control effects
+</span></span><span style="display:flex;"><span>    ├── throwing exceptions
+</span></span><span style="display:flex;"><span>    ├── aborting early
+</span></span><span style="display:flex;"><span>    └── other non-local control flow
+</span></span></code></pre>
+			</div>
+			<p>Side effects come in several forms. Mutating state, reading the current time, generating random values, and interacting with the outside world are all examples.</p>
+			<p>This matters because a pure function has no side effects: it only depends on its input, and only produces an output.</p>
+			<h2 id="types-of-functions">
+				<a class="self-link" href="#types-of-functions"> Types of Functions </a>
+			</h2>
+			<h3 id="basic-function-shapes">
+				<a class="self-link" href="#basic-function-shapes"> Basic Function Shapes </a>
+			</h3>
+			<h4 id="pure">
+				<a class="self-link" href="#pure"> Pure </a>
+			</h4>
+			<p>
+				Takes an input, returns an output, and has no side effects. This also means that the same input should always produce the same output. This idea is closely related to <em>referential transparency</em>: if an expression is pure, you can replace it with its result without changing the behavior of the program.
+			</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">f</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">f</span> x <span style="color:#f92672">=</span> x
+</span></span></code></pre>
+			</div>
+			<h4 id="predicate">
+				<a class="self-link" href="#predicate"> Predicate </a>
+			</h4>
+			<p>Takes an input and returns a <code>Bool</code>.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">f</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Bool</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">f</span> x <span style="color:#f92672">=</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>
+</span></span></code></pre>
+			</div>
+			<h4 id="recursive">
+				<a class="self-link" href="#recursive"> Recursive </a>
+			</h4>
+			<p>Like a pure function, but also calls itself at least once with a subset of the original input.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">length</span> <span style="color:#f92672">::</span> [a] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">length</span> (x<span style="color:#66d9ef">:</span>xs) <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> length xs
+</span></span></code></pre>
+			</div>
+			<h4 id="curried">
+				<a class="self-link" href="#curried"> Curried </a>
+			</h4>
+			<p>
+				&ldquo;Partial Application&rdquo; means that a function receives only a part of the input, which makes it return a <em>new</em> function that still wants the rest of the input. Imperative languages like C or Python usually want all arguments at once. In other words: partial application means &ldquo;give a
+				function some of its arguments now, and get back a new function that waits for the remaining arguments.&rdquo;
+			</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">timesTwo</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">timesTwo</span> <span style="color:#f92672">=</span> (<span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span>)
+</span></span></code></pre>
+			</div>
+			<p>Example usage: as you can see, the <code>*</code> operator only has one input. It&rsquo;s been partially applied. When you look at the definition, you see that <code>timesTwo</code> expects at least one <code>Int</code>, which when applied, gets added at the end of the function:</p>
+			<div class="highlight">
+				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">timesTwo</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- { apply timesTwo }</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- { apply * }</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>
+</span></span></code></pre>
+			</div>
+			<h3 id="functions-you-will-also-run-into">
+				<a class="self-link" href="#functions-you-will-also-run-into"> Functions You Will Also Run Into </a>
+			</h3>
+			<h4 id="higher-order">
+				<a class="self-link" href="#higher-order"> Higher-Order </a>
+			</h4>
+			<p>Higher-order functions either take one or more functions as input, return a function as output, or both.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">map</span> <span style="color:#f92672">::</span> (a <span style="color:#f92672">-&gt;</span> b) <span style="color:#f92672">-&gt;</span> [a] <span style="color:#f92672">-&gt;</span> [b]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">map</span> f xs <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
+</span></span></code></pre>
+			</div>
+			<p>Common examples are <code>map</code>, <code>filter</code>, and <code>foldr</code>.</p>
+			<h4 id="lambda--anonymous">
+				<a class="self-link" href="#lambda--anonymous"> Lambda / Anonymous </a>
+			</h4>
+			<p>Anonymous functions are functions without a name. They are often used when a function is only needed once.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">\</span>x <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre>
+			</div>
+			<p>For example:</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">map</span> (<span style="color:#a6e22e">\</span>x <span style="color:#f92672">-&gt;</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>]
+</span></span></code></pre>
+			</div>
+			<h4 id="polymorphic">
+				<a class="self-link" href="#polymorphic"> Polymorphic </a>
+			</h4>
+			<p>Polymorphic functions work for many different types instead of just one specific type.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">id</span> <span style="color:#f92672">::</span> a <span style="color:#f92672">-&gt;</span> a
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">id</span> x <span style="color:#f92672">=</span> x
+</span></span></code></pre>
+			</div>
+			<p>
+				This function works for <code>Int</code>, <code>String</code>, <code>Bool</code>, <code>[Int]</code>, <code>[String]</code>, and many other types. So &ldquo;many types&rdquo; does not mean literally every imaginable type, but rather every type that matches the function&rsquo;s type constraints. In the case of
+				<code>id :: a -&gt; a</code>, there are no extra constraints, so it works for almost anything.
+			</p>
+			<h4 id="partial">
+				<a class="self-link" href="#partial"> Partial </a>
+			</h4>
+			<p>A partial function is not defined for every possible input.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">head</span> <span style="color:#f92672">::</span> [a] <span style="color:#f92672">-&gt;</span> a
+</span></span></code></pre>
+			</div>
+			<p>This works for non-empty lists, but fails on an empty list.</p>
+			<h4 id="total">
+				<a class="self-link" href="#total"> Total </a>
+			</h4>
+			<p>A total function is defined for every possible input of its type.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">safeHead</span> <span style="color:#f92672">::</span> [a] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Maybe</span> a
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">safeHead</span> <span style="color:#66d9ef">[]</span>    <span style="color:#f92672">=</span> <span style="color:#66d9ef">Nothing</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">safeHead</span> (x<span style="color:#66d9ef">:</span><span style="color:#66d9ef">_</span>) <span style="color:#f92672">=</span> <span style="color:#66d9ef">Just</span> x
+</span></span></code></pre>
+			</div>
+			<p>Unlike <code>head</code>, this version always returns a valid result.</p>
+			<h4 id="composition">
+				<a class="self-link" href="#composition"> Composition </a>
+			</h4>
+			<p>Function composition means combining smaller functions into a new function.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">f</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Int</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">f</span> <span style="color:#f92672">=</span> negate <span style="color:#f92672">.</span> (<span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+</span></span></code></pre>
+			</div>
+			<p>This first adds <code>1</code>, and then negates the result.</p>
+			<h4 id="fold">
+				<a class="self-link" href="#fold"> Fold </a>
+			</h4>
+			<p>A fold reduces a whole list or structure into a single value by repeatedly combining smaller pieces.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">sum&#39;</span> <span style="color:#f92672">::</span> [<span style="color:#66d9ef">Int</span>] <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sum&#39;</span> <span style="color:#f92672">=</span> foldr (<span style="color:#f92672">+</span>) <span style="color:#ae81ff">0</span>
+</span></span></code></pre>
+			</div>
+			<p>Folds are extremely common in FP because they capture a very general recursion pattern.</p>
+			<h3 id="fp-abstractions-and-patterns">
+				<a class="self-link" href="#fp-abstractions-and-patterns"> FP Abstractions and Patterns </a>
+			</h3>
+			<h4 id="applicative">
+				<a class="self-link" href="#applicative"> Applicative </a>
+			</h4>
+			<p>
+				Can take a variable amount of inputs and return an output. Uses the
+				<code>pure</code> function and the <code>&lt;*&gt;</code> operator.
+			</p>
+			<p>
+				<code>pure</code> lifts a function into a wrapped type, and <code>&lt;*&gt;</code> accepts a wrapped type and a variable, also wrapped. A &ldquo;wrapped type&rdquo; means a value inside some context, such as <code>Maybe Int</code>, <code>[Int]</code>, or <code>IO Int</code>. Here, &ldquo;context&rdquo; means
+				extra meaning around the value: <code>Maybe Int</code> means &ldquo;an Int that may be missing&rdquo;, <code>[Int]</code> means &ldquo;many Int values&rdquo;, and <code>IO Int</code> means &ldquo;an Int produced by interacting with the outside world&rdquo;.
+			</p>
+			<h4 id="monadic">
+				<a class="self-link" href="#monadic"> Monadic </a>
+			</h4>
+			<p>Takes an input, returns an output, can have side effects, and uses either the bind <code>&gt;&gt;=</code> operator or <code>do</code> notation.</p>
+			<p>
+				Just like with applicatives, a monad works with values inside a context. Here, &ldquo;context&rdquo; again means that the value comes with some extra meaning or computational setting around it, such as optionality (<code>Maybe</code>), multiple results (<code>[]</code>), or I/O (<code>IO</code>). The bind
+				operator <code>&gt;&gt;=</code> takes a wrapped value, passes its inner value to the next function, and keeps the whole computation inside that same context.
+			</p>
+			<p>
+				From:
+				<a href="https://wiki.haskell.org/All_About_Monads">Haskell Wiki: All About Monads</a>
+			</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">maternalGrandfather</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Sheep</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Maybe</span> <span style="color:#66d9ef">Sheep</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">maternalGrandfather</span> s <span style="color:#f92672">=</span> (return s) <span style="color:#f92672">&gt;&gt;=</span> mother <span style="color:#f92672">&gt;&gt;=</span> father
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Alternatively</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mothersPaternalGrandfather</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">Sheep</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Maybe</span> <span style="color:#66d9ef">Sheep</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">mothersPaternalGrandfather</span> s <span style="color:#f92672">=</span> <span style="color:#66d9ef">do</span> m  <span style="color:#f92672">&lt;-</span> mother s
+</span></span><span style="display:flex;"><span>                                  gf <span style="color:#f92672">&lt;-</span> father m
+</span></span><span style="display:flex;"><span>                                  father gf
+</span></span></code></pre>
+			</div>
+			<h4 id="parser-combinator">
+				<a class="self-link" href="#parser-combinator"> Parser Combinator </a>
+			</h4>
+			<p>Accepts several parsers as input and returns a new parser as output.</p>
+			<p>
+				From:
+				<a href="https://en.wikipedia.org/wiki/Parser_combinator">Wikipedia: Parser Combinator</a>
+			</p>
+			<p>A parser is a function that reads input text and tries to turn it into structured data. That output is often a parse tree, a syntax tree, or simply a result plus the remaining unparsed input.</p>
+			<p>For example:</p>
+			<p>A number parser accepts text that should represent a number and turns it into an actual numeric value.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">parseNumber</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Either</span> <span style="color:#66d9ef">String</span> <span style="color:#66d9ef">Int</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseNumber</span> s <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> all isDigit s
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">then</span> <span style="color:#66d9ef">Right</span> (read s)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">Left</span> <span style="color:#e6db74">&#34;not a number&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseNumber</span> <span style="color:#e6db74">&#34;123&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Right 123</span>
+</span></span></code></pre>
+			</div>
+			<p>A CSV parser accepts comma-separated text and turns it into separate fields.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">parseCsvLine</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Either</span> <span style="color:#66d9ef">String</span> [<span style="color:#66d9ef">String</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseCsvLine</span> s <span style="color:#f92672">=</span> <span style="color:#66d9ef">Right</span> (splitOn <span style="color:#e6db74">&#34;,&#34;</span> s)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseCsvLine</span> <span style="color:#e6db74">&#34;red,green,blue&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Right [&#34;red&#34;, &#34;green&#34;, &#34;blue&#34;]</span>
+</span></span></code></pre>
+			</div>
+			<p>A JSON parser accepts JSON text and turns it into a structured JSON value.</p>
+			<div class="highlight">
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"
+				><code class="language-haskell" data-lang="haskell"><span style="display:flex;"><span><span style="color:#a6e22e">parseJson</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Either</span> <span style="color:#66d9ef">String</span> <span style="color:#66d9ef">JsonValue</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseJson</span> <span style="color:#e6db74">&#34;{</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">name</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">:</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">David</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">}&#34;</span> <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Right</span> (<span style="color:#66d9ef">Object</span> [(<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#66d9ef">JsonString</span> <span style="color:#e6db74">&#34;David&#34;</span>)])
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseJson</span> <span style="color:#66d9ef">_</span> <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">Left</span> <span style="color:#e6db74">&#34;invalid json&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parseJson</span> <span style="color:#e6db74">&#34;{</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">name</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">:</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">David</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">}&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Right (Object ...)</span>
+</span></span></code></pre>
+			</div>
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2024-07-24</time></sub>
+					<sub>Last updated: <time id="updated">2026-03-07</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

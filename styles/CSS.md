@@ -13,7 +13,9 @@ Since I'm relatively new, I'll document some information. No guarantee I'm actua
 
 You can always prepend `[attr]` with a tag or class name. If none is provided, the `universal selector (*)` is assumed.
 
-`*[hreflang|=en]` and `[hreflang|=en]` are equivalent, `*.warning` and `.warning` are equivalent, `*#myid` and `#myid` are equivalent.
+`*[hreflang|=en]` and `[hreflang|=en]` are equivalent,
+`*.warning` and `.warning` are equivalent,
+`*#myid` and `#myid` are equivalent.
 
 ### h1[attr]
 
@@ -51,7 +53,8 @@ Can be used for grouping? At least for languages: `[attr|=en]` would encapsulate
 
 ### LHS>RHS
 
-Child combinator This means the RHS is a **direct** child of LHS
+Child combinator
+This means the RHS is a **direct** child of LHS
 
 ```HTML
 <LHS>
@@ -61,7 +64,8 @@ Child combinator This means the RHS is a **direct** child of LHS
 
 ### LHS RHS
 
-Descendant combinator RHS is some descendant of LHS (could be very shallow _or_ very deep into the DOM – it doesn't matter)
+Descendant combinator
+RHS is some descendant of LHS (could be very shallow _or_ very deep into the DOM – it doesn't matter)
 
 ```HTML
 <LHS>
@@ -73,7 +77,8 @@ Descendant combinator RHS is some descendant of LHS (could be very shallow _or_ 
 
 ### LHS+RHS
 
-Next-subling combinator RHS follows RHS. In other words: RHS sits _directly below_ LHS.
+Next-subling combinator
+RHS follows RHS. In other words: RHS sits _directly below_ LHS.
 
 ```HTML
 <LHS></LHS>
@@ -82,7 +87,8 @@ Next-subling combinator RHS follows RHS. In other words: RHS sits _directly belo
 
 ### LHS~RHS
 
-Subsequent-sibling combinator RHS follows RHS with more tags between. In other words: RHS sits _somewhere below_ LHS.
+Subsequent-sibling combinator
+RHS follows RHS with more tags between. In other words: RHS sits _somewhere below_ LHS.
 
 ```HTML
 <RHS></RHS>

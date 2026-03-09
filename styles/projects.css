@@ -1,11 +1,6 @@
 textarea {
 	width: 100%;
-	height: 5em;
-}
-
-section > canvas {
-	height: 100%;
-	width: 100%;
+	min-height: 6em;
 }
 
 #pause {
@@ -15,9 +10,118 @@ section > canvas {
 }
 
 #starfield {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	min-height: 16rem;
 	box-shadow: 1px 1px 2px gray;
 }
 
 .highlight > pre {
 	padding: 10px;
+}
+
+.playground-page {
+	display: grid;
+	gap: 1rem;
+}
+
+.playground-header {
+	display: grid;
+	gap: 0.6rem;
+}
+
+.playground-kicker,
+.playground-intro {
+	margin: 0;
+}
+
+.playground-kicker {
+	color: #6e0000;
+	font-family: Tahoma, sans-serif;
+	font-size: 0.95rem;
+	text-transform: uppercase;
+}
+
+.playground-toolbar,
+.tool-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	align-items: center;
+}
+
+.playground-page details {
+	border: 1px solid #cda9a9;
+	border-radius: 6px;
+	padding: 0.8rem 1rem 1rem;
+	background: #fff;
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.playground-page summary {
+	border: 0;
+	padding-bottom: 0.2rem;
+}
+
+.playground-page summary > h3,
+.playground-page summary > p {
+	margin: 0;
+}
+
+.playground-page summary > p {
+	padding: 0;
+}
+
+.tool-pair,
+.tool-grid {
+	display: grid;
+	gap: 1rem;
+}
+
+.tool-grid {
+	grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+}
+
+.tool-card {
+	display: grid;
+	gap: 0.75rem;
+	padding: 0.75rem;
+	border: 1px solid #ead6d6;
+	border-radius: 6px;
+	background: #fffaf9;
+}
+
+.tool-card h4 {
+	margin: 0;
+	padding: 0;
+}
+
+.playground-page label {
+	display: grid;
+	gap: 0.35rem;
+	font-weight: 600;
+}
+
+.playground-page input,
+.playground-page textarea,
+.playground-page button,
+.playground-page output {
+	font: inherit;
+}
+
+.playground-page input,
+.playground-page textarea {
+	border: 1px solid #b98f8f;
+	border-radius: 4px;
+	padding: 0.55rem 0.7rem;
+	background: #fff;
+}
+
+.tool-status {
+	color: #6e0000;
+	font-family: Tahoma, sans-serif;
+	font-size: 0.92rem;
+	min-width: 5rem;
 }

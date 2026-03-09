@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>The Different Types of Functions in Functional Programming on Thaumatorium</title>
+    <title>Function Kinds and Function Patterns in Functional Programming on Thaumatorium</title>
     <link>http://thaumatorium.com/articles/the-different-types-of-functions-in-functional-programming/</link>
-    <description>Recent content in The Different Types of Functions in Functional Programming on Thaumatorium</description>
+    <description>Recent content in Function Kinds and Function Patterns in Functional Programming on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>

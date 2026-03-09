@@ -54,18 +54,28 @@
 				<li>&ldquo;E.F. &lsquo;The Coddfather&rsquo; Codd was right all along&rdquo;</li>
 			</ul>
 			<blockquote>
-				<p><a href="https://en.wiktionary.org/wiki/quaternary">How to pronounce &ldquo;Quaternary&rdquo;?</a> (I prefer the &ldquo;Audio (General Australian)&rdquo; version)</p>
+				<p>
+					<a href="https://en.wiktionary.org/wiki/quaternary">How to pronounce &ldquo;Quaternary&rdquo;?</a>
+					(I prefer the &ldquo;Audio (General Australian)&rdquo; version)
+				</p>
 			</blockquote>
 			<p>
 				I&rsquo;ve been programming since 2009, professionally since 2021, and I&rsquo;ve written programs in Python (my current go-to due to professional reasons), C (my first language - can highly recommend as beginner language), C++, C#, Java, Haskell (my first FP language -
 				<a href="https://learnyouahaskell.github.io/chapters.html">can also highly recommend (Primeagen pls read)</a>), Typescript (ew), Javascript (ew), PowerShell, Bash, and have dipped my toes in Rust, Go, Elm, Lisp, Visual Basic (ew), and last but not least Lua.
 			</p>
-			<p>I&rsquo;m telling you this to explain that I have a very <em>broad</em> knowledge of programming, with a <em>deep</em> one in Python - I won&rsquo;t claim to be an expert in any other language besides Python, and even in Python there&rsquo;s plenty I&rsquo;ve barely touched due to a lack of necessity.</p>
+			<p>
+				I&rsquo;m telling you this to explain that I have a very
+				<em>broad</em> knowledge of programming, with a <em>deep</em> one in Python - I won&rsquo;t claim to be an expert in any other language besides Python, and even in Python there&rsquo;s plenty I&rsquo;ve barely touched due to a lack of necessity.
+			</p>
 			<p>In all this time the only two languages that broke my brain out of learned paradigms were Haskell and SQL.</p>
 			<p>Haskell for its Functional Programming paradigm, clearly, but SQL I did not expect.</p>
 			<p>See, it&rsquo;s not so much SQL itself, but the theory behind it - Relational Algebra, Relational Calculus, and the whole idea of the Relational Model, as invented by Edgar F. &ldquo;The Coddfather&rdquo; Codd in 1969 (†2003).</p>
 			<p>In 1990 The Coddfather released a book called &ldquo;The Relational Model for Database Management: Version 2&rdquo; (RM/V2 after this), where he introduced the idea of &ldquo;Four-Valued Logic&rdquo; - that is, a logic system with four truth values, instead of the typical two (True and False).</p>
-			<p>This idea initially broke my brain, because <em>computers are binary, right?</em> <em>So how does having four truth values make sense?</em></p>
+			<p>
+				This idea initially broke my brain, because
+				<em>computers are binary, right?</em>
+				<em>So how does having four truth values make sense?</em>
+			</p>
 			<p>Well, through my experience I&rsquo;ve noticed that we&rsquo;ve been using quaternary logic all this time, without even realizing it!</p>
 			<p>
 				Take the previously mentioned Python, for example. Lets say I have a function that returns a boolean. This same function could also return None, if it doesn&rsquo;t know the answer because returning True or False doesn&rsquo;t make sense. So now we have three possible return values: True, False, and None. But
@@ -80,9 +90,11 @@
 			</ul>
 			<p>This is a perfect example of quaternary logic in action in a super common programming language.</p>
 			<p>
-				So, how does this relate to SQL? Well, in <a href="https://codeblab.com/wp-content/uploads/2009/12/rmdb-codd.pdf">RM/V2</a> (Relational Model, version 2 - yes, Codd numbered his models like a programming language) Codd introduces <code>TRUE</code> (<code>t</code>), <code>FALSE</code> (<code>f</code>),
-				<code>MAYBE BUT APPLICABLE</code> (<code>a</code>), and <code>MAYBE BUT INAPPLICABLE</code> (<code>i</code>) - Everything is shouted, because all language did so back in the 1960s. Anyway, <code>t</code> and <code>f</code> are named <em>&ldquo;values&rdquo;</em>, and <code>i</code> and <code>a</code> are named
-				<em>&ldquo;markers&rdquo;</em>.
+				So, how does this relate to SQL? Well, in
+				<a href="https://codeblab.com/wp-content/uploads/2009/12/rmdb-codd.pdf">RM/V2</a>
+				(Relational Model, version 2 - yes, Codd numbered his models like a programming language) Codd introduces
+				<code>TRUE</code> (<code>t</code>), <code>FALSE</code> (<code>f</code>), <code>MAYBE BUT APPLICABLE</code> (<code>a</code>), and <code>MAYBE BUT INAPPLICABLE</code> (<code>i</code>) - Everything is shouted, because all language did so back in the 1960s. Anyway, <code>t</code> and <code>f</code> are named
+				<em>&ldquo;values&rdquo;</em>, and <code>i</code> and <code>a</code> are named <em>&ldquo;markers&rdquo;</em>.
 			</p>
 			<h3 id="a-code-example">
 				<a class="self-link" href="#a-code-example"> A code example </a>
@@ -110,7 +122,10 @@
 				Luckily, Haskell and Rust already have a solution for this - Monadic types! I&rsquo;m not going to explain monads in detail, but think of them as a coloured box that holds a value, and the colour of the box will tell you something about the type of content it holds - for example, if it&rsquo;s a success or a
 				failure, regardless of whether that value is <code>t</code>, <code>f</code>, <code>a</code>, or <code>i</code>.
 			</p>
-			<p>Haskell and Rust have this built-in, but using the <code>returns</code> library in Python, we can express this idea like so:</p>
+			<p>
+				Haskell and Rust have this built-in, but using the
+				<code>returns</code> library in Python, we can express this idea like so:
+			</p>
 			<p>Again, see <a href="./monadic_example.py">monadic_example.py</a> for a full example that you can run locally, but here&rsquo;s the relevant code snippet:</p>
 			<div class="highlight">
 				<pre
@@ -155,7 +170,9 @@
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12025</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2025-08-23</time></sub>

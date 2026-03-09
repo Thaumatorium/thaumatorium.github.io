@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Will the Real Ascii Table please stand up? | The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Will the Real Ascii Table please stand up?" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Will the Real Ascii Table please stand up?" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<p>Most ASCII tables are formatted in a way that hides the interesting part: ASCII is a 7-bit layout with structure, not just a list of characters.</p>
+			<p>If you split the table by the top 2 bits, and use the lower 5 bits as the row index, the design suddenly becomes obvious:</p>
+			<ul>
+				<li>the left column is control codes</li>
+				<li>digits and punctuation live in the middle</li>
+				<li>uppercase and lowercase line up almost perfectly</li>
+				<li>
+					<code>A</code> and <code>a</code> differ by exactly one bit:
+					<code>0x20</code>
+				</li>
+			</ul>
+			<p>So instead of a long boring table, you get something that shows why ASCII was laid out this way.</p>
+			<p>The columns below are the top 2 bits. The rightmost column is the lower 5 bits.</p>
+			<table>
+				<thead>
+					<tr>
+						<th style="text-align: left">00</th>
+						<th style="text-align: center">01</th>
+						<th style="text-align: center">10</th>
+						<th style="text-align: center">11</th>
+						<th style="text-align: center">low 5 bits</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="text-align: left"><code>NUL</code></td>
+						<td style="text-align: center"><code>Spc</code></td>
+						<td style="text-align: center"><code>@</code></td>
+						<td style="text-align: center"><code>`</code></td>
+						<td style="text-align: center"><code>00000</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>SOH</code></td>
+						<td style="text-align: center"><code>!</code></td>
+						<td style="text-align: center"><code>A</code></td>
+						<td style="text-align: center"><code>a</code></td>
+						<td style="text-align: center"><code>00001</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>STX</code></td>
+						<td style="text-align: center"><code>&quot;</code></td>
+						<td style="text-align: center"><code>B</code></td>
+						<td style="text-align: center"><code>b</code></td>
+						<td style="text-align: center"><code>00010</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>ETX</code></td>
+						<td style="text-align: center"><code>#</code></td>
+						<td style="text-align: center"><code>C</code></td>
+						<td style="text-align: center"><code>c</code></td>
+						<td style="text-align: center"><code>00011</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>EOT</code></td>
+						<td style="text-align: center"><code>$</code></td>
+						<td style="text-align: center"><code>D</code></td>
+						<td style="text-align: center"><code>d</code></td>
+						<td style="text-align: center"><code>00100</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>ENQ</code></td>
+						<td style="text-align: center"><code>%</code></td>
+						<td style="text-align: center"><code>E</code></td>
+						<td style="text-align: center"><code>e</code></td>
+						<td style="text-align: center"><code>00101</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>ACK</code></td>
+						<td style="text-align: center"><code>&amp;</code></td>
+						<td style="text-align: center"><code>F</code></td>
+						<td style="text-align: center"><code>f</code></td>
+						<td style="text-align: center"><code>00110</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>BEL</code></td>
+						<td style="text-align: center"><code>'</code></td>
+						<td style="text-align: center"><code>G</code></td>
+						<td style="text-align: center"><code>g</code></td>
+						<td style="text-align: center"><code>00111</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>BS</code></td>
+						<td style="text-align: center"><code>(</code></td>
+						<td style="text-align: center"><code>H</code></td>
+						<td style="text-align: center"><code>h</code></td>
+						<td style="text-align: center"><code>01000</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>TAB</code></td>
+						<td style="text-align: center"><code>)</code></td>
+						<td style="text-align: center"><code>I</code></td>
+						<td style="text-align: center"><code>i</code></td>
+						<td style="text-align: center"><code>01001</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>LF</code></td>
+						<td style="text-align: center"><code>\*</code></td>
+						<td style="text-align: center"><code>J</code></td>
+						<td style="text-align: center"><code>j</code></td>
+						<td style="text-align: center"><code>01010</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>VT</code></td>
+						<td style="text-align: center"><code>+</code></td>
+						<td style="text-align: center"><code>K</code></td>
+						<td style="text-align: center"><code>k</code></td>
+						<td style="text-align: center"><code>01011</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>FF</code></td>
+						<td style="text-align: center"><code>,</code></td>
+						<td style="text-align: center"><code>L</code></td>
+						<td style="text-align: center"><code>l</code></td>
+						<td style="text-align: center"><code>01100</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>CR</code></td>
+						<td style="text-align: center"><code>-</code></td>
+						<td style="text-align: center"><code>M</code></td>
+						<td style="text-align: center"><code>m</code></td>
+						<td style="text-align: center"><code>01101</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>SO</code></td>
+						<td style="text-align: center"><code>.</code></td>
+						<td style="text-align: center"><code>N</code></td>
+						<td style="text-align: center"><code>n</code></td>
+						<td style="text-align: center"><code>01110</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>SI</code></td>
+						<td style="text-align: center"><code>/</code></td>
+						<td style="text-align: center"><code>O</code></td>
+						<td style="text-align: center"><code>o</code></td>
+						<td style="text-align: center"><code>01111</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>DLE</code></td>
+						<td style="text-align: center"><code>0</code></td>
+						<td style="text-align: center"><code>P</code></td>
+						<td style="text-align: center"><code>p</code></td>
+						<td style="text-align: center"><code>10000</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>DC1</code></td>
+						<td style="text-align: center"><code>1</code></td>
+						<td style="text-align: center"><code>Q</code></td>
+						<td style="text-align: center"><code>q</code></td>
+						<td style="text-align: center"><code>10001</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>DC2</code></td>
+						<td style="text-align: center"><code>2</code></td>
+						<td style="text-align: center"><code>R</code></td>
+						<td style="text-align: center"><code>r</code></td>
+						<td style="text-align: center"><code>10010</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>DC3</code></td>
+						<td style="text-align: center"><code>3</code></td>
+						<td style="text-align: center"><code>S</code></td>
+						<td style="text-align: center"><code>s</code></td>
+						<td style="text-align: center"><code>10011</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>DC4</code></td>
+						<td style="text-align: center"><code>4</code></td>
+						<td style="text-align: center"><code>T</code></td>
+						<td style="text-align: center"><code>t</code></td>
+						<td style="text-align: center"><code>10100</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>NAK</code></td>
+						<td style="text-align: center"><code>5</code></td>
+						<td style="text-align: center"><code>U</code></td>
+						<td style="text-align: center"><code>u</code></td>
+						<td style="text-align: center"><code>10101</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>SYN</code></td>
+						<td style="text-align: center"><code>6</code></td>
+						<td style="text-align: center"><code>V</code></td>
+						<td style="text-align: center"><code>v</code></td>
+						<td style="text-align: center"><code>10110</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>ETB</code></td>
+						<td style="text-align: center"><code>7</code></td>
+						<td style="text-align: center"><code>W</code></td>
+						<td style="text-align: center"><code>w</code></td>
+						<td style="text-align: center"><code>10111</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>CAN</code></td>
+						<td style="text-align: center"><code>8</code></td>
+						<td style="text-align: center"><code>X</code></td>
+						<td style="text-align: center"><code>x</code></td>
+						<td style="text-align: center"><code>11000</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>EM</code></td>
+						<td style="text-align: center"><code>9</code></td>
+						<td style="text-align: center"><code>Y</code></td>
+						<td style="text-align: center"><code>y</code></td>
+						<td style="text-align: center"><code>11001</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>SUB</code></td>
+						<td style="text-align: center"><code>:</code></td>
+						<td style="text-align: center"><code>Z</code></td>
+						<td style="text-align: center"><code>z</code></td>
+						<td style="text-align: center"><code>11010</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>ESC</code></td>
+						<td style="text-align: center"><code>;</code></td>
+						<td style="text-align: center"><code>[</code></td>
+						<td style="text-align: center"><code>{</code></td>
+						<td style="text-align: center"><code>11011</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>FS</code></td>
+						<td style="text-align: center"><code>&lt;</code></td>
+						<td style="text-align: center"><code>\</code></td>
+						<td style="text-align: center"><code>|</code></td>
+						<td style="text-align: center"><code>11100</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>GS</code></td>
+						<td style="text-align: center"><code>=</code></td>
+						<td style="text-align: center"><code>]</code></td>
+						<td style="text-align: center"><code>}</code></td>
+						<td style="text-align: center"><code>11101</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>RS</code></td>
+						<td style="text-align: center"><code>&gt;</code></td>
+						<td style="text-align: center"><code>^</code></td>
+						<td style="text-align: center"><code>~</code></td>
+						<td style="text-align: center"><code>11110</code></td>
+					</tr>
+					<tr>
+						<td style="text-align: left"><code>US</code></td>
+						<td style="text-align: center"><code>?</code></td>
+						<td style="text-align: center"><code>_</code></td>
+						<td style="text-align: center"><code>DEL</code></td>
+						<td style="text-align: center"><code>11111</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<p>The nicest part is the letter alignment:</p>
+			<ul>
+				<li><code>A</code> is <code>1000001</code></li>
+				<li><code>a</code> is <code>1100001</code></li>
+			</ul>
+			<p>Only one bit changes: bit <code>0x20</code>.</p>
+			<p>That means ASCII case conversion is not some arbitrary lookup table artifact. It is baked directly into the encoding. The same row, same lower 5 bits, different high bits.</p>
+			<p>That also explains a bunch of old bit tricks:</p>
+			<ul>
+				<li>uppercase to lowercase: set bit <code>0x20</code></li>
+				<li>lowercase to uppercase: clear bit <code>0x20</code></li>
+				<li>map letters to <code>1..26</code>: mask with <code>0x1f</code></li>
+			</ul>
+			<h2 id="useful-shortcuts">
+				<a class="self-link" href="#useful-shortcuts"> Useful shortcuts </a>
+			</h2>
+			<p>These only work because ASCII is structured so cleanly.</p>
+			<h3 id="flip-case-with-a-single-bit">
+				<a class="self-link" href="#flip-case-with-a-single-bit"> Flip case with a single bit </a>
+			</h3>
+			<p>Uppercase and lowercase letters differ only in bit <code>0x20</code>.</p>
+			<ul>
+				<li><code>A</code> = <code>0x41</code></li>
+				<li><code>a</code> = <code>0x61</code></li>
+			</ul>
+			<p>So:</p>
+			<ul>
+				<li>force lowercase: <code>c | 0x20</code></li>
+				<li>force uppercase: <code>c &amp; 0x5f</code></li>
+				<li>toggle case: <code>c ^ 0x20</code></li>
+			</ul>
+			<p>Of course, that only makes sense if <code>c</code> is already an ASCII letter. If you do it blindly, other characters also move around.</p>
+			<h3 id="map-letters-to-1-through-26">
+				<a class="self-link" href="#map-letters-to-1-through-26"> Map letters to 1 through 26 </a>
+			</h3>
+			<p>Because the low 5 bits are shared between uppercase and lowercase letters, this works:</p>
+			<ul>
+				<li><code>A &amp; 0x1f = 1</code></li>
+				<li><code>B &amp; 0x1f = 2</code></li>
+				<li>&hellip;</li>
+				<li><code>Z &amp; 0x1f = 26</code></li>
+			</ul>
+			<p>And the same holds for lowercase letters:</p>
+			<ul>
+				<li><code>a &amp; 0x1f = 1</code></li>
+				<li><code>z &amp; 0x1f = 26</code></li>
+			</ul>
+			<p>That made ASCII handy for parsers, tokenizers, and old-school case-insensitive logic.</p>
+			<h3 id="digits-are-contiguous-too">
+				<a class="self-link" href="#digits-are-contiguous-too"> Digits are contiguous too </a>
+			</h3>
+			<p>The digits are also laid out as a neat block:</p>
+			<ul>
+				<li><code>0</code> = <code>0x30</code></li>
+				<li><code>1</code> = <code>0x31</code></li>
+				<li>&hellip;</li>
+				<li><code>9</code> = <code>0x39</code></li>
+			</ul>
+			<p>So converting between digit characters and numbers is trivial:</p>
+			<ul>
+				<li>char to int: <code>c - '0'</code></li>
+				<li>int to char: <code>n + '0'</code></li>
+			</ul>
+			<p>That seems obvious now, but it is another example of ASCII being designed for computation, not just display.</p>
+			<h3 id="control-codes-line-up-with-letters">
+				<a class="self-link" href="#control-codes-line-up-with-letters"> Control codes line up with letters </a>
+			</h3>
+			<p>There is another cute shortcut hidden in the table.</p>
+			<p>
+				If you take an uppercase letter and clear the high 3 bits with
+				<code>&amp; 0x1f</code>, you land in the control-code range:
+			</p>
+			<ul>
+				<li><code>A &amp; 0x1f = 0x01</code> = <code>SOH</code></li>
+				<li><code>M &amp; 0x1f = 0x0d</code> = <code>CR</code></li>
+				<li><code>J &amp; 0x1f = 0x0a</code> = <code>LF</code></li>
+				<li><code>Z &amp; 0x1f = 0x1a</code> = <code>SUB</code></li>
+			</ul>
+			<p>This is why notations like <code>Ctrl-M</code> and <code>Ctrl-J</code> make historical sense: they map directly onto carriage return and line feed.</p>
+			<h3 id="cheap-ascii-checks">
+				<a class="self-link" href="#cheap-ascii-checks"> Cheap ASCII checks </a>
+			</h3>
+			<p>The same structure also makes simple range checks cheap:</p>
+			<ul>
+				<li>digit: <code>'0' &lt;= c &amp;&amp; c &lt;= '9'</code></li>
+				<li>uppercase: <code>'A' &lt;= c &amp;&amp; c &lt;= 'Z'</code></li>
+				<li>lowercase: <code>'a' &lt;= c &amp;&amp; c &lt;= 'z'</code></li>
+				<li>
+					alphabetic ASCII:
+					<code>(c | 0x20) &gt;= 'a' &amp;&amp; (c | 0x20) &lt;= 'z'</code>
+				</li>
+			</ul>
+			<p>Again, this is not accidental. The layout was chosen so character classification and conversion would be easy on limited hardware.</p>
+			<h2 id="what-the-control-codes-actually-mean">
+				<a class="self-link" href="#what-the-control-codes-actually-mean"> What the control codes actually mean </a>
+			</h2>
+			<p>The <code>00</code> column is the least familiar part of ASCII today.</p>
+			<p>These are the old control codes: non-printable values meant for teletypes, terminals, printers, and serial links. They were used to structure messages, move the print head around, ring bells, pause transmission, and escape into device-specific commands.</p>
+			<p>Some are still relevant. Many are now mostly historical.</p>
+			<h3 id="message-framing-and-transmission">
+				<a class="self-link" href="#message-framing-and-transmission"> Message framing and transmission </a>
+			</h3>
+			<p>These were used to structure or control a stream of data:</p>
+			<ul>
+				<li><code>SOH</code> = Start of Heading Used to mark the beginning of a message header. Mostly historical now.</li>
+				<li><code>STX</code> = Start of Text Marks the start of the actual payload text. Mostly historical now.</li>
+				<li><code>ETX</code> = End of Text Marks the end of the payload text. Mostly historical now.</li>
+				<li><code>EOT</code> = End of Transmission Signals that transmission is done. Mostly historical now.</li>
+				<li><code>ENQ</code> = Enquiry Used to ask the other side for a response. Mostly historical now.</li>
+				<li><code>ACK</code> = Acknowledge Positive acknowledgement: &ldquo;got it&rdquo;. Still conceptually relevant, but not usually as raw ASCII anymore.</li>
+				<li><code>NAK</code> = Negative Acknowledge Negative acknowledgement: &ldquo;send again&rdquo; or &ldquo;something went wrong&rdquo;. Same story: concept still relevant, raw code mostly historical.</li>
+				<li><code>SYN</code> = Synchronous Idle Used to maintain synchronization on synchronous links. Historical.</li>
+				<li><code>ETB</code> = End of Transmission Block End of one block in a larger transmission. Historical.</li>
+			</ul>
+			<h3 id="device-control">
+				<a class="self-link" href="#device-control"> Device control </a>
+			</h3>
+			<p>These were meant to control hardware more directly:</p>
+			<ul>
+				<li><code>DLE</code> = Data Link Escape Escape byte in communication protocols. Historical in raw ASCII form, though escape bytes still exist in many protocols.</li>
+				<li><code>DC1</code> = Device Control 1 General device control. Often reused as XON. Still somewhat relevant historically because of XON/XOFF flow control.</li>
+				<li><code>DC2</code> = Device Control 2 General device control. Mostly historical.</li>
+				<li><code>DC3</code> = Device Control 3 General device control. Often reused as XOFF. Still somewhat relevant historically because of XON/XOFF flow control.</li>
+				<li><code>DC4</code> = Device Control 4 General device control. Mostly historical.</li>
+			</ul>
+			<h3 id="layout-paper-and-terminal-movement">
+				<a class="self-link" href="#layout-paper-and-terminal-movement"> Layout, paper, and terminal movement </a>
+			</h3>
+			<p>These matter because ASCII came from the teletype era:</p>
+			<ul>
+				<li><code>BEL</code> = Bell Makes the terminal beep or flash. Still somewhat relevant; many terminals still react to it.</li>
+				<li><code>BS</code> = Backspace Move back one character position. Still relevant in terminals and text processing.</li>
+				<li><code>TAB</code> = Horizontal Tab Move to the next tab stop. Still very relevant.</li>
+				<li><code>LF</code> = Line Feed Move down one line. Still very relevant.</li>
+				<li><code>VT</code> = Vertical Tab Vertical movement similar to tabbing down. Mostly irrelevant today.</li>
+				<li><code>FF</code> = Form Feed Advance to the next page. Mostly obsolete, except in a few printers and legacy formats.</li>
+				<li><code>CR</code> = Carriage Return Move to the start of the current line. Still very relevant because of line endings like <code>CRLF</code>.</li>
+			</ul>
+			<h3 id="shift-and-escaping">
+				<a class="self-link" href="#shift-and-escaping"> Shift and escaping </a>
+			</h3>
+			<ul>
+				<li><code>SO</code> = Shift Out Switch to an alternate character set or mode. Historical for most people.</li>
+				<li><code>SI</code> = Shift In Switch back from the alternate set or mode. Historical for most people.</li>
+				<li><code>ESC</code> = Escape Start an escape sequence. Very relevant. Modern terminal control sequences still use <code>ESC</code>.</li>
+			</ul>
+			<h3 id="record-and-separator-codes">
+				<a class="self-link" href="#record-and-separator-codes"> Record and separator codes </a>
+			</h3>
+			<p>These were intended as structural separators in text streams:</p>
+			<ul>
+				<li><code>FS</code> = File Separator</li>
+				<li><code>GS</code> = Group Separator</li>
+				<li><code>RS</code> = Record Separator</li>
+				<li><code>US</code> = Unit Separator</li>
+			</ul>
+			<p>These are mostly historical today. The idea survived, but modern formats usually use commas, tabs, newlines, JSON punctuation, or protocol-specific delimiters instead.</p>
+			<h3 id="special-cases">
+				<a class="self-link" href="#special-cases"> Special cases </a>
+			</h3>
+			<ul>
+				<li><code>NUL</code> = Null Literally a zero byte. Still extremely relevant in C, binary data, protocol padding, and low-level programming.</li>
+				<li><code>SUB</code> = Substitute Used as a replacement marker for invalid or missing data. Mostly historical.</li>
+				<li><code>CAN</code> = Cancel Cancel the current operation or block. Mostly historical.</li>
+				<li><code>EM</code> = End of Medium Intended to mark the end of a physical medium, like tape. Historical.</li>
+				<li><code>DEL</code> = Delete Originally all 1 bits (<code>0x7f</code>), handy for punching out paper tape. Still somewhat relevant as the Delete key code name, though its original purpose is obsolete.</li>
+			</ul>
+			<h3 id="which-ones-still-matter">
+				<a class="self-link" href="#which-ones-still-matter"> Which ones still matter? </a>
+			</h3>
+			<p>If you are writing modern software, the most relevant control codes are usually:</p>
+			<ul>
+				<li><code>NUL</code></li>
+				<li><code>TAB</code></li>
+				<li><code>LF</code></li>
+				<li><code>CR</code></li>
+				<li><code>ESC</code></li>
+				<li><code>DEL</code></li>
+				<li>
+					sometimes <code>BEL</code>, <code>BS</code>, <code>DC1</code>, and
+					<code>DC3</code>
+				</li>
+			</ul>
+			<p>The rest are mostly of historical interest. They matter if you care about old communication protocols, terminals, paper tape, or how character encodings evolved, but most programmers will almost never handle them directly.</p>
+			<p>Once you see ASCII in this shape, it stops looking random and starts looking engineered.</p>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
+				–
+				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-08</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

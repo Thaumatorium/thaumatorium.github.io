@@ -1,0 +1,264 @@
+{
+	"Warcraft 2: Beyond the Dark Portal": [
+		{
+			"name": "Andrew Edwards",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Bill Roper",
+			"roles": ["Character Voices", "Executive Producer", "Narration", "Storyline Consultant"]
+		},
+		{
+			"name": "Brian Love",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Brian Reed",
+			"roles": ["Additional PUDs by", "QA Assault Team"]
+		},
+		{
+			"name": "Brian Sousa",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Chris Metzen",
+			"roles": ["Character Voices", "Storyline Consultant"]
+		},
+		{
+			"name": "Chris Millar",
+			"roles": ["Additional PUDs by", "Additional Playtesting"]
+		},
+		{
+			"name": "Chris Sigaty",
+			"roles": ["QA Assault Team"]
+		},
+		{
+			"name": "Christopher Cross",
+			"roles": ["QA Assault Team"]
+		},
+		{
+			"name": "Collin Murray",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Collin Smith",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Craig Norton",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Cristina Cade",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Dan Moore",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Dave Berggren",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Dave Hale",
+			"roles": ["Additional PUDs by", "QA Assault Team"]
+		},
+		{
+			"name": "David Pursley",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Dawn Caddel",
+			"roles": ["Additional Playtesting", "Character Voices"]
+		},
+		{
+			"name": "Dean Shipley",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Dmitri Nishman",
+			"roles": ["Playtesting"]
+		},
+		{
+			"name": "Duane Stinnett",
+			"roles": ["3D Art Direction"]
+		},
+		{
+			"name": "Eric Flannum",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Glenn Stafford",
+			"roles": ["Character Voices", "Music and SFX"]
+		},
+		{
+			"name": "Gregor Alper",
+			"roles": ["Excerpt from Warcraft I"]
+		},
+		{
+			"name": "Ian Welke",
+			"roles": ["QA Assault Team"]
+		},
+		{
+			"name": "James Shipley",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Jamie Wiggs",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Jeff Vaughn",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Jesse King",
+			"roles": ["Campaign Design", "PUD Design", "Playtesting"]
+		},
+		{
+			"name": "Jim DuBois",
+			"roles": ["Campaign Design", "PUD Design", "Playtesting"]
+		},
+		{
+			"name": "Joe Minton",
+			"roles": ["Campaign Design", "PUD Design", "Producer"]
+		},
+		{
+			"name": "John Schwartz",
+			"roles": ["Additional PUDs by", "QA Assault Team"]
+		},
+		{
+			"name": "Jorge Rivero",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Justin Thavirat",
+			"roles": ["Additional 3D Artwork"]
+		},
+		{
+			"name": "Keith Kellogg",
+			"roles": ["2D Art"]
+		},
+		{
+			"name": "Ken Grey",
+			"roles": ["Program Enhancements"]
+		},
+		{
+			"name": "Kerry Bischoff",
+			"roles": ["Additional PUDs by", "Additional Playtesting"]
+		},
+		{
+			"name": "Kim Farrington",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Mark Phiffer",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Matt Samia",
+			"roles": ["Additional Music"]
+		},
+		{
+			"name": "Michael Yanko",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Micky Neilson",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Mike Morhaime",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Pete Lawson",
+			"roles": ["2D Art", "3D Art", "Additional Design", "Playtesting"]
+		},
+		{
+			"name": "Rendall Koski",
+			"roles": ["Playtesting"]
+		},
+		{
+			"name": "Rich Amtower",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Rob Beatie",
+			"roles": ["QA Assault Team"]
+		},
+		{
+			"name": "Rob Caswell",
+			"roles": ["2D Art", "Additional Design", "PUD Design"]
+		},
+		{
+			"name": "Roman Kenney",
+			"roles": ["Additional 2D Artwork", "Additional Playtesting"]
+		},
+		{
+			"name": "Ron Millar",
+			"roles": ["Character Voices", "Design Consultant"]
+		},
+		{
+			"name": "Ron Smorynski",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Russel Miller",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Sam Didier",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Sam Moore",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Samwise Didier",
+			"roles": ["2D Art Direction", "Additional 2D Artwork"]
+		},
+		{
+			"name": "Seth Spaulding",
+			"roles": ["2D Art", "3D Art", "Art Direction"]
+		},
+		{
+			"name": "Shane Dabiri",
+			"roles": ["Director of Support Services"]
+		},
+		{
+			"name": "Steve Pabst",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Steve Skolos",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Todd Kurihara",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Tony Hardy",
+			"roles": ["Additional PUDs by", "Additional Playtesting"]
+		},
+		{
+			"name": "Trevor Jacobs",
+			"roles": ["Additional 3D Artwork", "Additional Playtesting"]
+		},
+		{
+			"name": "Tymothi Loving",
+			"roles": ["Additional PUDs by", "QA Assault Team"]
+		},
+		{
+			"name": "Vic Larson",
+			"roles": ["Additional Playtesting"]
+		},
+		{
+			"name": "Walter Takata",
+			"roles": ["Additional PUDs by", "Lead Tester"]
+		}
+	]
+}

@@ -1,0 +1,3112 @@
+{
+	"WoW: The Burning Crusade": [
+		{
+			"name": "Aaron Bamblett",
+			"roles": ["Senior Quality Controllers"]
+		},
+		{
+			"name": "Aaron Chan",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Aaron Keller",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Aaron Uesugi",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Adam Ebmeier",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Adam Hector",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Adam Hughes",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Adam Koch",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Adam Mutchler",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Adam Slack",
+			"roles": ["Technical Support Lead"]
+		},
+		{
+			"name": "Adrian Luff",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Aimee Pi",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Al Baello",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Alan Marti",
+			"roles": ["Lead Billing Representatives"]
+		},
+		{
+			"name": "Albert Portillo",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Albert Wong",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Alec Dun",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Alex Afrasiabi",
+			"roles": ["Lead Quest Designer"]
+		},
+		{
+			"name": "Alex Mayberry",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Alex Sun",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Alex Tsang",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Alexander Brazie",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Alexander Daurskikh",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Alexander Nahodil",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Alfredo Padron",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Ali Vatani",
+			"roles": ["Web Team Leads"]
+		},
+		{
+			"name": "Alicia Kim",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Allen Dilling",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Alp Altiner",
+			"roles": ["Additional Matte Painting"]
+		},
+		{
+			"name": "Alyson Turner",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Amanda Wang",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Amber Bittenbender",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Amit Bader",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Amy Barklow",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Anant Singh",
+			"roles": ["QA Technologies Test Team"]
+		},
+		{
+			"name": "Andreas Komma Rounds",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Andrew Amadi",
+			"roles": ["Financial Research Analysts"]
+		},
+		{
+			"name": "Andrew Glaser",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Andrew Hsu",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Andrew Matthews",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Andrew Rowe",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Andrew Spiering",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Andrew Vestal",
+			"roles": ["Localization Producer"]
+		},
+		{
+			"name": "Andy Barcinski",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Angela Cleere",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Angela Young",
+			"roles": ["Cinematics Producers"]
+		},
+		{
+			"name": "Angelo Conception",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Ann Vanderhelm",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Anne Berard",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Anne Marie Belland",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Anomaly Creative",
+			"roles": ["Manual Design and Layout"]
+		},
+		{
+			"name": "Anthony Lowery",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Anthony Notti",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Anthony Reyes",
+			"roles": ["Game Testers", "QA Content Specialists"]
+		},
+		{
+			"name": "Anthony Suh",
+			"roles": ["QA Technologies Test Team"]
+		},
+		{
+			"name": "Anthony Williams",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Anton Hsin",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Antonio Kontokanis",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "April Kelly",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Arec Nevers",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Armando Abanilla",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Arron Rasmussen",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Art Peshkov",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Asheesh Thukral",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Asher Yonah Litwin",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Becky Coker",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Bejan Fozdar",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Ben Brode",
+			"roles": ["Creative Development Production"]
+		},
+		{
+			"name": "Ben Dai",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Beni Elgueta",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Benoit Dufour",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Bernie Kang",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Bill Black",
+			"roles": ["Field SFX Recording", "Voice Casting"]
+		},
+		{
+			"name": "Bill Galey",
+			"roles": ["In-Game Support Manager"]
+		},
+		{
+			"name": "Bill Petras",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Bill Tubbs",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Bill Watt",
+			"roles": ["Manual Design and Layout"]
+		},
+		{
+			"name": "Blaine Whittle",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Bob Colayco",
+			"roles": ["Global Public Relations and Events Team"]
+		},
+		{
+			"name": "Bob Fitch",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Bob Richardson",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Bob Wilson",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Brandan Vanderpool",
+			"roles": ["Video Production Team"]
+		},
+		{
+			"name": "Brandon Shephard",
+			"roles": ["Facilities Management"]
+		},
+		{
+			"name": "Brett Dixon",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Brian Birmingham",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Brian Farr",
+			"roles": ["Additional Music", "Lead Sound Designer"]
+		},
+		{
+			"name": "Brian Fitzgerald",
+			"roles": ["Install/Patch/Distribution Lead Programmer"]
+		},
+		{
+			"name": "Brian Hill",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Brian Hsieh",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Brian Hsu",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Brian Huang",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Brian Lee",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Brian Morin",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "Brian Morrisroe",
+			"roles": ["Lead Interior Artist"]
+		},
+		{
+			"name": "Brian Silva",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Brian Smith",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Brian Udarbe",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Brian Wright",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Brianna Schneider",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Brianne Messina",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Brice Petibas",
+			"roles": ["QA Compatibility Testers"]
+		},
+		{
+			"name": "BrisAnne Scheller",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Bryan Cleveland",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "Bryan Gibson-Winge",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Bryan Gillingham",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Bryan Langford",
+			"roles": ["Quality Control Manager"]
+		},
+		{
+			"name": "Bryan Ludwig",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Bryan Pendleton",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Calvin Williams",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Carl Brumm",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Carlos Guerrero",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Carman Cheung",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Caroline Wu",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Casey Fulton",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Casey Suyeto",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Casey Yelland",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Chad Jones",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Changkoo Lee",
+			"roles": ["Network Operations Managers"]
+		},
+		{
+			"name": "Changuk Park",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Charles Knief",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Charlie Areson",
+			"roles": ["Assistant Billing and Account Services Manager"]
+		},
+		{
+			"name": "Charlie Berman",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Choua Her",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Chris Cavallo",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Chris Eckert",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Chris Fajardo",
+			"roles": ["Information Technologies Managers"]
+		},
+		{
+			"name": "Chris Glover",
+			"roles": ["Global Network Operations Manager"]
+		},
+		{
+			"name": "Chris Luckenbach",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Chris MacDonald",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Chris Metzen",
+			"roles": ["Cinematic Writers", "Creative Director"]
+		},
+		{
+			"name": "Chris Roberts",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Chris Robinson",
+			"roles": ["Lead Character Artist"]
+		},
+		{
+			"name": "Chris Rock",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Chris Ryder",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Chris Thunig",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Christian Reynolds",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Christopher Davila",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Christopher J. Mountain",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Christopher Towne",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Christy Kondo",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Christy Um",
+			"roles": ["Global Public Relations and Events Team"]
+		},
+		{
+			"name": "Chuck Salzman",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Chuck Valek",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Chulwoong Choi",
+			"roles": ["Online Technologies Software Engineers"]
+		},
+		{
+			"name": "Chung Kan",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Chung Ng",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Clayton Dubin",
+			"roles": ["QA Assistant Leads (Live)"]
+		},
+		{
+			"name": "Clint Walls",
+			"roles": ["QA Assistant Leads (Expansion)"]
+		},
+		{
+			"name": "Collin Murray",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Corey Louie",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Corey Pelton",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Cory Stockton",
+			"roles": ["Lead Level Designer"]
+		},
+		{
+			"name": "Craig Steele",
+			"roles": ["QA Automated Test Engineers"]
+		},
+		{
+			"name": "Cynthia Robbiola",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Cédric Maréchal",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Dan Moore",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Dan Reed",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Dan Scauzillo",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Dana Jan",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Daniel Bendt",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Daniel Chin",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Daniel Dake Luo",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Daniel Kramer",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Daniel Pageau",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "Daniel Polcari",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Daniel Weltz",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Daniela Shani",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Danielle Vanderlip",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Danita Ng-Poss and Jason Poss",
+			"roles": ["Orchestration Services on “The Burning Legion” provided by"]
+		},
+		{
+			"name": "Danny Nguyen",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Danny Saint-Hilaire",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Darian Vorlick",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Dat Ho",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Dat Nguyen",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Dave Berggren",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Dave Hale",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Dave Maldonado",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Dave Wareham",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "David Arkenstone",
+			"roles": ["Additional Music"]
+		},
+		{
+			"name": "David Carey",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "David Chan",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "David Farmer",
+			"roles": ["Cinematic Intro Sound Designers"]
+		},
+		{
+			"name": "David Gee",
+			"roles": ["Global Finance"]
+		},
+		{
+			"name": "David LaVallee",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "David M. Adams",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "David Nguyen",
+			"roles": ["Online Technologies Software Engineers"]
+		},
+		{
+			"name": "David Ray",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "David Sanchez",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Dean Sheldon",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Dean Shipley",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Dean Yang",
+			"roles": ["Game Testers", "QA Localization Testers"]
+		},
+		{
+			"name": "Deborah Brooks",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Delphine Le Corre",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Denise Dunlap",
+			"roles": ["Director of Global Human Resources"]
+		},
+		{
+			"name": "Denise Lopez",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Dennis Crabtree",
+			"roles": ["Assistant Audio Producer"]
+		},
+		{
+			"name": "Dennis Price",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Derek Duke",
+			"roles": ["Music"]
+		},
+		{
+			"name": "Derek Sakamoto",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Dion Rogers",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Don Grey",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Don Vu",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Donghyun Kim",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Donna Damrow",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Drew Dobernecker",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Duane Than",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Duffy Squier",
+			"roles": ["Network Operations Managers"]
+		},
+		{
+			"name": "Dustin Browder",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Dustin Koupal",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Dustin Remmel",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Dwight Harvey",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Dylan Cole",
+			"roles": ["Additional Matte Painting"]
+		},
+		{
+			"name": "Dylan Raines",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Ed Hanes",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Ed Silveira",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Eddie Rainwater",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Eddy Meng",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Edgar Flores",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Edo Guidotti",
+			"roles": ["Live Sessions and Orchestrations produced by"]
+		},
+		{
+			"name": "Edward Bui",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Edward Kang",
+			"roles": ["Quality Assurance Assistant Managers"]
+		},
+		{
+			"name": "Elaine Fu Yang",
+			"roles": ["QA Compatibility Testers"]
+		},
+		{
+			"name": "Elisha Factor Cabrera",
+			"roles": ["Global Public Relations and Events Team"]
+		},
+		{
+			"name": "Ellen Hsu",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Ely Cannon",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Emily Scherping",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Enrico Tolentino",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Eric A. Soulvie",
+			"roles": ["Cinematic Technical Artists"]
+		},
+		{
+			"name": "Eric Browning",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Eric Dodds",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Eric Maloof",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Eric Roeder",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Eric Szymaszek",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Erik Karlsson",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Erika Neuhauser",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Erynn Caldwell",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Evan Calder",
+			"roles": ["QA Automated Test Engineers"]
+		},
+		{
+			"name": "Evan Crawford",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Evan Peterson",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Evelyn Fredericksen",
+			"roles": ["Creative Development Historian"]
+		},
+		{
+			"name": "Fausto De Martini",
+			"roles": ["Lead Cinematic Modeler"]
+		},
+		{
+			"name": "Forrest Bowling",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Foster M. Elmendorf",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Frank Pearce",
+			"roles": ["Executive Producer"]
+		},
+		{
+			"name": "François Noel",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Fritz Stegmann",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Fréderic Menou",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Gandalf Brahm",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Gareth Hughes",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Gary Platner",
+			"roles": ["Lead Exterior Artist"]
+		},
+		{
+			"name": "Gary Reeb",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Gary Rogers",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Gary Yeh",
+			"roles": ["Network Operations Managers"]
+		},
+		{
+			"name": "Geoff Fraizer",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Geoff Goodman",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Geri Kate Macalino",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Gichang Hong",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Gil Shif",
+			"roles": ["Global Public Relations and Events Team"]
+		},
+		{
+			"name": "Glenn Rane",
+			"roles": ["Creative Development Illustrators"]
+		},
+		{
+			"name": "Gloria Soto",
+			"roles": ["Creative Development Production", "Manual Project Management"]
+		},
+		{
+			"name": "Graven Tung",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Greg Ashe",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Greg Faltersack",
+			"roles": ["Information Technologies Purchasing"]
+		},
+		{
+			"name": "Hanlong Wang",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "Harley Huggins",
+			"roles": ["Additional Cinematic Artists"]
+		},
+		{
+			"name": "Heather Foreman",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Hector Melendres",
+			"roles": ["QA Compatibility Testers"]
+		},
+		{
+			"name": "Henry Pan",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Henry Szekely",
+			"roles": ["Facilities Management"]
+		},
+		{
+			"name": "Holly Wilson",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Hugh T. Edwards",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Hugh Todd",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Hun Kevin Lee",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Hung Le",
+			"roles": ["Cinematic Technical Artists"]
+		},
+		{
+			"name": "Hung Nguyen",
+			"roles": ["Network Operations Managers"]
+		},
+		{
+			"name": "Hunter Grant",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Huong Grey",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Hyungsuk Choi",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Iain Gill",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Ian Combs",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Ian S Nelson",
+			"roles": ["QA Technologies Test Team"]
+		},
+		{
+			"name": "Ian Wynne",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Irena Pereira",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Isaac Matarasso",
+			"roles": ["Director of Global Information Technology"]
+		},
+		{
+			"name": "Itzik Ben Bassat",
+			"roles": ["VP of Global Business Development and International Operations"]
+		},
+		{
+			"name": "J. Allen Brack",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "JC Park",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Jack Chen",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Jack Sterling",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Jacob Hofeldt",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Jaemin Ko",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Jaime Wood",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Jamal Davis",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "James Chadwick",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "James Cho",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "James Drosche",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "James Garner",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "James Kompare",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "James McCoy",
+			"roles": ["Lead Cinematic Animator"]
+		},
+		{
+			"name": "James R. Leaman",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "James Shaw",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "James T. Yen",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "James Walton",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jamie Chang",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Jamie Crooks",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Jamin Shoulet",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Janet Garcia",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Jared Keller",
+			"roles": ["Lead Cinematic Technical Artist"]
+		},
+		{
+			"name": "Jared Lazaro",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jarett Riva",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jason Crewse",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Jason De Arte",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Jason Hill",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jason Hutchins",
+			"roles": ["Manual Project Management", "Producers"]
+		},
+		{
+			"name": "Jason Justice",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Jason Kwan",
+			"roles": ["QA Compatibility Testers"]
+		},
+		{
+			"name": "Jason Leu",
+			"roles": ["Online Technologies Producers"]
+		},
+		{
+			"name": "Jason Messinger",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jason Morris",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Jason Stilwell",
+			"roles": ["Billing and Account Services Manager"]
+		},
+		{
+			"name": "Jason Throop",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Jason Weng",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jason White",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Jason Zirpolo",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Jay Baxter",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Jay Hathaway",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Jay Lee",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Jean-Michel Courivaud",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Jeff Berube",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Jeff Chamberlain",
+			"roles": ["Cinematic Intro Director", "Cinematic Writers", "Lead Cinematic Finisher"]
+		},
+		{
+			"name": "Jeff Chang",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Jeff Liu",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Jeff Luckman",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Jeff Mears",
+			"roles": ["Battle.net Programming"]
+		},
+		{
+			"name": "Jeffrey Kaplan",
+			"roles": ["Lead Designers"]
+		},
+		{
+			"name": "Jennifer Calzada",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Jeramiah Johnson",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jeremy Chasey",
+			"roles": ["Senior Quality Controllers"]
+		},
+		{
+			"name": "Jeremy Chernobieff",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Jeremy Masker",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Jeremy Wood",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Jeremy “Faceless” Graves",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Jerome Wu",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Jesse Blomberg",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Jesse McCree",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Jesse Romo",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Jessica Gonzales",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Jessica Johnson",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Jimmy Truong",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jimmy “Lo-Tek” Lo",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Jin Kim",
+			"roles": ["QA Localization Lead"]
+		},
+		{
+			"name": "Jinho Oh",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Joanna Cleland",
+			"roles": ["Creative Development Production"]
+		},
+		{
+			"name": "Joe Frayne",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Joe Magdalena",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Joe Peterson",
+			"roles": ["Additional Cinematic Artists"]
+		},
+		{
+			"name": "Joe Rumsey",
+			"roles": ["Lead Server Programmer"]
+		},
+		{
+			"name": "Joe Shely",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Joel Gregory Clift",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Joeyray Hall",
+			"roles": ["Video Production Manager"]
+		},
+		{
+			"name": "John Bergamo",
+			"roles": ["Hand Drums performed by"]
+		},
+		{
+			"name": "John Burnett",
+			"roles": ["Additional Cinematic Artists"]
+		},
+		{
+			"name": "John Cash",
+			"roles": ["Lead Game Programmer"]
+		},
+		{
+			"name": "John Dos Santos",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "John Fasal",
+			"roles": ["Field SFX Recording"]
+		},
+		{
+			"name": "John Heinecke",
+			"roles": ["Global Marketing"]
+		},
+		{
+			"name": "John Herndon",
+			"roles": ["Quality Assurance Assistant Managers"]
+		},
+		{
+			"name": "John Hsieh",
+			"roles": ["Technical Support Manager"]
+		},
+		{
+			"name": "John Lafleur",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "John Lagrave",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "John Lynch",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "John Mikros",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "John Polidora",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "John Robertson",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "John Schwartz",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "John Shin",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "John Staats",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "John Stiles",
+			"roles": ["Install/Patch/Distribution Programming", "Macintosh Programming"]
+		},
+		{
+			"name": "Jon Day",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Jon Dvorak",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Jon Graves",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jon Jelinek",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Jon Lanz",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jon Loeffler",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Jonas Laster",
+			"roles": ["Sound Design"]
+		},
+		{
+			"name": "Jonathan Berube",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Jonathan LeCraft",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Jonathan Mankin",
+			"roles": ["Quality Assurance Assistant Managers"]
+		},
+		{
+			"name": "Jonathon K. Mason",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Jose Aello, Jr.",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Joseph Cochran",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Joseph Holley",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Joseph Lawrence",
+			"roles": ["Field SFX Recording", "Sound Design"]
+		},
+		{
+			"name": "Joseph Ryan",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Josh Downs",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Josh Hertz",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Josh Hilborn",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Josh Olivo",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Josh Owyang",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Joshua Burnett",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Joshua Horst",
+			"roles": ["Quality Control Assistant Manager"]
+		},
+		{
+			"name": "Julia Gastaldi",
+			"roles": ["Management Team, Europe"]
+		},
+		{
+			"name": "Julian Morris",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Julien Mariani",
+			"roles": ["Network Operations Managers"]
+		},
+		{
+			"name": "Julio Miranda",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "JungHoon Kim",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Jungho Kwon",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Jungwon Hahn",
+			"roles": ["Managing Director, Korea"]
+		},
+		{
+			"name": "Justin Boehm",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Justin Goad",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Justin Guthrie",
+			"roles": ["In-Game Support Assistant Managers"]
+		},
+		{
+			"name": "Justin K Parker",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Justin Kato",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Justin Klinchuch",
+			"roles": ["QA Automated Test Engineers"]
+		},
+		{
+			"name": "Justin Kunz",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Justin Thavirat",
+			"roles": ["Art Director"]
+		},
+		{
+			"name": "Justin Z. Bartlett",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "KC Ross",
+			"roles": ["Office Administration"]
+		},
+		{
+			"name": "Kacy Dishon",
+			"roles": ["Global Public Relations and Events Team"]
+		},
+		{
+			"name": "Kai Noetzel",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Kara Amendola",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Kathy Carter",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Keith Duncan",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Keith Hall",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Keith Landes",
+			"roles": ["Audio Producer"]
+		},
+		{
+			"name": "Kelly Chun",
+			"roles": ["Quality Assurance Assistant Managers"]
+		},
+		{
+			"name": "Kenneth DePalo",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Kenny Zigler",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Kenson Yu",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Kevin Crook",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Kevin Griffith",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Kevin Jordan",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Kevin K. Griffith",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Kevin M. Kelly",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Kevin Maginnis",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Kim Phan",
+			"roles": ["Online Technologies Producers"]
+		},
+		{
+			"name": "Kris Zierhut",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Kristen DeMeza",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Kurtis Paddock",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Kyle Radue",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Kyle Riseling",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Kyle Williams",
+			"roles": ["Technical Support Assistant Manager"]
+		},
+		{
+			"name": "Larissa Bussell",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Laura Lam",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Leah Garner",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Leanne Huynh",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Lee Sparks",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Leif Hafstrom",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Lewis Mendez",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Liam Knapp",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Lisa Jensen",
+			"roles": ["Director of Global Public Relations"]
+		},
+		{
+			"name": "Lisa Pearce",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Luis Barriga",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Luis C. Lucero",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Luis Gomez",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Lyndsi Revis",
+			"roles": ["Senior Quality Controllers"]
+		},
+		{
+			"name": "Maciej Drobny",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Maggie Xiao",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Manuel Gonzales",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Marc Hutcheson",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Marcus Bishop",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Marika Maeuser",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Marius Jivan",
+			"roles": ["QA Automated Test Engineers"]
+		},
+		{
+			"name": "Mark Lai",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Mark Moser",
+			"roles": ["Quality Assurance Assistant Managers"]
+		},
+		{
+			"name": "Mark Nelson",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Mark Slater",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Martin Leidenfrost",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Marty Tande",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Mataio Wilson",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Matt Burns",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Matt Coburn",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Matt Dabrowski",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Matt Dupree",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Matt Eagleson",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Matt Gotcher",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Matt Kassan",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Matt Martin",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Matt McEligot",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Matt Milizia",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Matt Mocarski",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Matt Panepinto",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Matt Samia",
+			"roles": ["Cinematic Writers", "Cinematics Executive Producer"]
+		},
+		{
+			"name": "Matt Sanders",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Matt Smiley",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Matt Uelmen",
+			"roles": ["Music"]
+		},
+		{
+			"name": "Matt Wheeler",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Matt Worcester",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Matthew Jordan",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Matthew Mead",
+			"roles": ["Cinematic Artists", "Cinematic Editor"]
+		},
+		{
+			"name": "Matthew Morris",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Matthew Rader",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Matthew Sherman",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Matthew Simmons",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Matthew Versluys",
+			"roles": ["Battle.net Lead"]
+		},
+		{
+			"name": "Matthew Vineyard",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Mauricio Hoffman",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Megan Puertas",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Meghan Dawson",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Mei Dean Francis",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Melissa Meyer",
+			"roles": ["Install/Patch/Distribution Producer"]
+		},
+		{
+			"name": "Melissa Pinkard",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Melissa Ullrich",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Micah Caldwell",
+			"roles": ["Battle.net Research"]
+		},
+		{
+			"name": "Micah Whipple",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Michael Bedernik",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Michael Burghart",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Michael C. Chen",
+			"roles": ["QA Technologies Test Team"]
+		},
+		{
+			"name": "Michael Chizewski",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Michael Chu",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Michael Corpora",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Michael Fong",
+			"roles": ["Managing Director, Greater China"]
+		},
+		{
+			"name": "Michael Freeth",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Michael Gilmartin",
+			"roles": ["Quality Assurance Manager"]
+		},
+		{
+			"name": "Michael Heiberg",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Michael Horning",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Michael Lim",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Michael M. Sun",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Michael McInerney",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Michael Murphy",
+			"roles": ["QA Automated Test Engineers"]
+		},
+		{
+			"name": "Michael Nguyen",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Michael Pierce",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Michael Sassone",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Michael Schwan Jr.",
+			"roles": ["QA Assistant Leads (Expansion)"]
+		},
+		{
+			"name": "Michael Starich",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Michael V. Liu",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Michele Arko",
+			"roles": ["QA Lead Tester (Live)"]
+		},
+		{
+			"name": "Michelle Secrest",
+			"roles": ["Human Resources"]
+		},
+		{
+			"name": "Micky Neilson",
+			"roles": ["Manual Writing", "Voice Direction"]
+		},
+		{
+			"name": "Mike Aversa",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Mike Elliott",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Mike Euiseung Kim",
+			"roles": ["QA Localization Testers"]
+		},
+		{
+			"name": "Mike Hein",
+			"roles": ["Web Team Leads"]
+		},
+		{
+			"name": "Mike Kramer",
+			"roles": ["Cinematic Studio Technical Engineers", "Information Technologies"]
+		},
+		{
+			"name": "Mike Moneymaker",
+			"roles": ["In-Game Support", "Quality Controllers"]
+		},
+		{
+			"name": "Mike Morhaime",
+			"roles": ["President of Blizzard Entertainment"]
+		},
+		{
+			"name": "Mike Pearce",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Mike Powell",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Mike R. Pierce",
+			"roles": ["Lead Billing Representatives"]
+		},
+		{
+			"name": "Mike Schaefer",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Mike Schweitzer",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Miles Trumble",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Minhong Kim",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Monte Krol",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Morgan Day",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Mourad Kaci",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Mycah Mason",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Nate Gross",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Nate Miller",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Nathan Brown",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Nathan Erickson",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Neal Acree",
+			"roles": ["Cinematic Intro Music"]
+		},
+		{
+			"name": "Neal Hubbard",
+			"roles": ["VP of Global Marketing"]
+		},
+		{
+			"name": "Neal Kochhar",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Neil Chopra",
+			"roles": ["Online Technologies Software Engineers"]
+		},
+		{
+			"name": "Nelson Wang",
+			"roles": ["Cinematic Technical Artists"]
+		},
+		{
+			"name": "Nicholas A. Louie",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Nicholas Pisani",
+			"roles": ["Quality Assurance Assistant Managers"]
+		},
+		{
+			"name": "Nick Carpenter",
+			"roles": ["Cinematics Creative Director"]
+		},
+		{
+			"name": "Nick Downs",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Nick Ray",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Nick Solano",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Nicole Campbell",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Nicole Susanto",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Noel Holmes",
+			"roles": ["Senior Quality Controllers"]
+		},
+		{
+			"name": "Norman Harms",
+			"roles": ["Battle.net Research"]
+		},
+		{
+			"name": "Olam Ng",
+			"roles": ["Network Operations"]
+		},
+		{
+			"name": "Omar Gonzalez",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Owen Kuhn",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Pat Feinauer",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Pat MacKellar",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Pat Nagle",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Patrick Dawson",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Patrick Elia",
+			"roles": ["QA Automated Test Engineers"]
+		},
+		{
+			"name": "Patrick Lee",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Patrick Magruder",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Paul Carver",
+			"roles": ["QA Assistant Leads (Live)"]
+		},
+		{
+			"name": "Paul Cazarez",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Paul Della Bitta",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "Paul Kubit",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Paul Menichini",
+			"roles": ["Cinematic Intro Sound Designers"]
+		},
+		{
+			"name": "Paul Sams",
+			"roles": ["Chief Operating Officer"]
+		},
+		{
+			"name": "Paul Sardis",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Pedro Eustache",
+			"roles": ["Duduk, Bansuri, Tunisian Midjwiz, Shakuhachi and Flutes performed by"]
+		},
+		{
+			"name": "Peiji Guo. Joong Kim",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Pete Sandrene",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Pete Staley",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Pete Tran",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Peter C. Lee",
+			"roles": ["Concept Artist"]
+		},
+		{
+			"name": "Peter Drummond",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Peter Hsu",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Peter Lee",
+			"roles": ["Additional Cinematic Artists"]
+		},
+		{
+			"name": "Peter Nott",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Peter Ty",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Phill Gonzales",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Pierre Braude",
+			"roles": ["International Support Leads"]
+		},
+		{
+			"name": "Qi Ming Chen",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Qimin Ding",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Quy Diep",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "RA Pearson",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Ralph Speicher",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Randal Dumoret",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Randall Hyde",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Randy Lovin",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Raul Ramirez",
+			"roles": ["Manual Design and Layout"]
+		},
+		{
+			"name": "Ray Laubach",
+			"roles": ["QA Compatibility Testers"]
+		},
+		{
+			"name": "Recorded by the Northwest Sinfonia and Chorus, Contracted by Simon James and David Sabee",
+			"roles": ["Cinematic Intro Music"]
+		},
+		{
+			"name": "Regina Ramirez",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Reo Andrew Prendergast",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Rhett \"Stash\" Torgoley",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Rian Trost",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Richard Barham",
+			"roles": ["In-Game Support Assistant Managers"]
+		},
+		{
+			"name": "Richard Choi",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Richard Evans",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Richard Kwon",
+			"roles": ["Regional Marketing"]
+		},
+		{
+			"name": "Rick Kennedy",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Rie Arai",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Rob Barris",
+			"roles": ["Macintosh Programming"]
+		},
+		{
+			"name": "Rob McNaughton",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Rob Pardo",
+			"roles": ["Lead Designers"]
+		},
+		{
+			"name": "Robb Shoberg",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Robert Boxeth",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Robert Bridenbecker",
+			"roles": ["Director of Global Online Technologies"]
+		},
+		{
+			"name": "Robert Bustamante",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Robert Foote",
+			"roles": ["Producers"]
+		},
+		{
+			"name": "Robert Lin",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Robert Perugini",
+			"roles": ["In-Game Support Leads"]
+		},
+		{
+			"name": "Robert Sevilla",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Robert T. Martin Jr.",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Robert Van Dusen",
+			"roles": ["Global Information Technologies Manager"]
+		},
+		{
+			"name": "Robert Wharton",
+			"roles": ["SVP Global Operations, VG"]
+		},
+		{
+			"name": "Rod Rigole",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Rodger Shaw",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Rodney Tsing",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Roger Eberhart",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Roman Kenney",
+			"roles": ["Character Artists"]
+		},
+		{
+			"name": "Ron Nakada",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Ronny Kim",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Ronny Yoon",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Rory Wood",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Rosie Haubner",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Russell Bernau",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Russell Brower",
+			"roles": ["Audio Director", "Music"]
+		},
+		{
+			"name": "Rutherford Gong",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Ryan Dean",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Ryan Gunst",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Ryan Mills",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Ryan Quinn",
+			"roles": ["Lead Quality Controller"]
+		},
+		{
+			"name": "Ryan Reddick",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Ryan Schenk",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Ryan Vance",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Ryan Zapanta",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Sam Carne",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Sam Fung",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Sam Lantinga",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Samuel Schrimsher",
+			"roles": ["Facilities Management"]
+		},
+		{
+			"name": "Samwise Didier",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Sang Kwon",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Sarah Boulian",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Sarah Doebler",
+			"roles": ["Senior Quality Controllers"]
+		},
+		{
+			"name": "Sarah Frembling",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Sarah Tucker",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Satoru Hamada",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Scott Abeyta",
+			"roles": ["Cinematics Producers"]
+		},
+		{
+			"name": "Scott Army",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Scott Busbea",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Scott Goffman",
+			"roles": ["Cinematic Technical Artists"]
+		},
+		{
+			"name": "Scott Harrison",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Scott Hartin",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Scott Mercer",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Sean Copeland",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Sean Greenroyd",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Sean Laverty",
+			"roles": ["Cinematic Studio Technical Engineers", "Cinematic Technical Artists"]
+		},
+		{
+			"name": "Sean Reyes",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Sean Wang",
+			"roles": ["QA Assistant Leads (Live)"]
+		},
+		{
+			"name": "Serban Mihai Oprescu",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Seth Thompson",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Shane Dabiri",
+			"roles": ["Lead Producer"]
+		},
+		{
+			"name": "Shane S Cargilo",
+			"roles": ["QA Automation Lead"]
+		},
+		{
+			"name": "Shawn Carnes",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Shawn No",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Shawn Su",
+			"roles": ["QA Lead Tester (Expansion)"]
+		},
+		{
+			"name": "Sheng Jin",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Shien Chang",
+			"roles": ["Financial Research Analysts"]
+		},
+		{
+			"name": "Shimon Cohen",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Shon Damron",
+			"roles": ["Global Public Relations and Events Team"]
+		},
+		{
+			"name": "Simon Berriochoa",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Simon Thai",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Soui Ho",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Stan Wang",
+			"roles": ["Project Coordinator, Greater China"]
+		},
+		{
+			"name": "Stanley Fu",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Steeg Haskell",
+			"roles": ["Cinematic Technical Artists"]
+		},
+		{
+			"name": "Stefan Ward",
+			"roles": ["Network Operations Engineering"]
+		},
+		{
+			"name": "Stephen Chang",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Stephen Crow",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Stephen Gagnon",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Stephen T. Wong",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Steve Aguilar",
+			"roles": ["Animators"]
+		},
+		{
+			"name": "Steve Burke",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Steve Ketterer",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Steve McClory",
+			"roles": ["QA Technologies Test Team"]
+		},
+		{
+			"name": "Steve McGarrity",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Steve Parker",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Steve Voorma",
+			"roles": ["Manufacturing"]
+		},
+		{
+			"name": "Steven Chow",
+			"roles": ["QA Localization Testers"]
+		},
+		{
+			"name": "Steven Pierce",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Steven Price",
+			"roles": ["Business Development and Licensing"]
+		},
+		{
+			"name": "Stuart Massie",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Sunshine Saint Onge",
+			"roles": ["Recruiting"]
+		},
+		{
+			"name": "Taka Yasuda",
+			"roles": ["Cinematics Producers"]
+		},
+		{
+			"name": "Taylor Russ",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Taylor Westfall",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Ted Park",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Ted Wang",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Teddy Pao",
+			"roles": ["Online Technologies Software Engineers"]
+		},
+		{
+			"name": "Tengying Yu",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Terence Lindsey",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Terran Gregory",
+			"roles": ["Video Production Team"]
+		},
+		{
+			"name": "Terri Durham",
+			"roles": ["Legal Counsel"]
+		},
+		{
+			"name": "Terrie Denman",
+			"roles": ["Exterior Environment Artists"]
+		},
+		{
+			"name": "Thierry Sudan",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Thomas Blue",
+			"roles": ["Technical Artists"]
+		},
+		{
+			"name": "Thomas Pieracci",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Thomas Watson",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Thor Biafore",
+			"roles": ["Director of Global Customer Service"]
+		},
+		{
+			"name": "Tiffany Sirignano",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Tim Daniels",
+			"roles": ["QA Content Specialists"]
+		},
+		{
+			"name": "Tim Evans",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Tim Garfin",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Tim Maggio",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "Timothy Ismay",
+			"roles": ["QA Assistant Leads (Expansion)"]
+		},
+		{
+			"name": "Ting Lo",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Tom Brewer (Source sound)",
+			"roles": ["Cinematic Intro Audio Mixer"]
+		},
+		{
+			"name": "Tom Chilton",
+			"roles": ["Lead Designers"]
+		},
+		{
+			"name": "Tom Hicks",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Tom Thompson",
+			"roles": ["Additional Programming"]
+		},
+		{
+			"name": "Tom Twedell",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Tomas Melian",
+			"roles": ["Global Marketing"]
+		},
+		{
+			"name": "Tommy Newcomer",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Tony Garcia",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "Tony Tribelli",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Travis Chen",
+			"roles": ["Install/Patch/Distribution Programming"]
+		},
+		{
+			"name": "Travis Day",
+			"roles": ["Game Designers"]
+		},
+		{
+			"name": "Travis Hall",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Trent Kaniuga",
+			"roles": ["Concept Artist"]
+		},
+		{
+			"name": "Trevor Jacobs",
+			"roles": ["Additional Art"]
+		},
+		{
+			"name": "Trevor Rothman",
+			"roles": ["In-Game Support"]
+		},
+		{
+			"name": "Tristan Pope",
+			"roles": ["Video Production Team"]
+		},
+		{
+			"name": "Tuan Ngo",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Ty Williams",
+			"roles": ["Network Operations Administration"]
+		},
+		{
+			"name": "Tyler Hunter",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Victor Chong",
+			"roles": ["Level Designers"]
+		},
+		{
+			"name": "Victor Esquivias",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Victor Gonzalez, Jr.",
+			"roles": ["Web Team"]
+		},
+		{
+			"name": "Victoria Rayno",
+			"roles": ["Quality Controllers"]
+		},
+		{
+			"name": "Wang Wei",
+			"roles": ["Creative Development Illustrators"]
+		},
+		{
+			"name": "Wei Qiao",
+			"roles": ["Cinematic Technical Artists"]
+		},
+		{
+			"name": "Wendy Davis",
+			"roles": ["Dungeon/City Artists"]
+		},
+		{
+			"name": "Weonseok Choi",
+			"roles": ["Information Technologies Managers"]
+		},
+		{
+			"name": "Wes Bigelow",
+			"roles": ["Programming"]
+		},
+		{
+			"name": "William Edward Smith IV",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "William Harber",
+			"roles": ["Billing Representatives"]
+		},
+		{
+			"name": "William Kielar",
+			"roles": ["Community Management"]
+		},
+		{
+			"name": "William Roseman",
+			"roles": ["QA Compatibility Testers"]
+		},
+		{
+			"name": "Wyatt Cheng",
+			"roles": ["Additional Design"]
+		},
+		{
+			"name": "Xin Wang",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Xing Jin",
+			"roles": ["Game Testers"]
+		},
+		{
+			"name": "Yan Kahlé",
+			"roles": ["Information Technologies"]
+		},
+		{
+			"name": "Yong Yoon",
+			"roles": ["Information Technologies Managers"]
+		},
+		{
+			"name": "Yonghyun Kim",
+			"roles": ["Cinematic Artists"]
+		},
+		{
+			"name": "Youngmok Park",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Yun Ho Rhee",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Yungjoo Ko",
+			"roles": ["Management Team, Korea"]
+		},
+		{
+			"name": "Zach Bogatz",
+			"roles": ["Technical Support Representatives"]
+		},
+		{
+			"name": "Zachary Hubert",
+			"roles": ["Marketing Creative Services"]
+		},
+		{
+			"name": "Zak Meekins",
+			"roles": ["Information Technologies"]
+		}
+	]
+}
