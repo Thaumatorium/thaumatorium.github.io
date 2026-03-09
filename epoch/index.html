@@ -381,7 +381,18 @@
 					tokens.forEach((tok, idx) => {
 						try {
 							const r = convertSingle(tok);
-							rows += `<tr>` + `<td>${idx + 1}</td>` + `<td>${tok}</td>` + `<td>${r.unit}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.isoUTC}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.isoLocal}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.unixS}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.unixMs}</td>` + `<td class="copyable" onclick="copyToClipboard(this)">${r.unixNs}</td>` + `<td></td>` + `</tr>`;
+							rows +=
+								`<tr>` +
+								`<td>${idx + 1}</td>` +
+								`<td>${tok}</td>` +
+								`<td>${r.unit}</td>` +
+								`<td class="copyable" onclick="copyToClipboard(this)">${r.isoUTC}</td>` +
+								`<td class="copyable" onclick="copyToClipboard(this)">${r.isoLocal}</td>` +
+								`<td class="copyable" onclick="copyToClipboard(this)">${r.unixS}</td>` +
+								`<td class="copyable" onclick="copyToClipboard(this)">${r.unixMs}</td>` +
+								`<td class="copyable" onclick="copyToClipboard(this)">${r.unixNs}</td>` +
+								`<td></td>` +
+								`</tr>`;
 						} catch (err) {
 							rows += `<tr>` + `<td>${idx + 1}</td>` + `<td>${tok}</td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td></td>` + `<td class="error">${err.message}</td>` + `</tr>`;
 						}

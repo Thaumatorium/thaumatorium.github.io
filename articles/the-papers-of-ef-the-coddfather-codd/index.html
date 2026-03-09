@@ -49,9 +49,18 @@
 		<main>
 			<h1>The Papers of E.F. &#34;The Coddfather&#34; Codd</h1>
 			<p>Edgar Frank &ldquo;Ted&rdquo; Codd, also known as &ldquo;The Coddfather&rdquo;, or more generally as &ldquo;The Father of the Relational Model&rdquo;.</p>
-			<p>I&rsquo;ve gathered these papers here, as a) they were very hard to find, and b) there was no central place where all his Relational papers were gathered together. Some places had some papers, other places mentioned others. It was time this man got the respect he deserves and make his famous papers easier to find.</p>
-			<p>While reading these, do keep in mind that they are <em>old</em>. For example: The first paper writes about using an <em>index</em> to select the needed domains/columns, a concept Codd changed his mind on around 1990 - Codd switched to using &ldquo;column names&rdquo; - as he found out some people were creating tables of 100s of columns wide, something not forseen by him when he invented the Relational Model, which would make it completely infeasable to using indices. Ain&rsquo;t no one going to refer to columns by their index number.</p>
-			<p>Then also, in his 1988 &ldquo;Fatal Flaws in SQL&rdquo; articles, Codd writes about the lack of uniqueness in SQL. This has been mitigated (though not fixed) by the use of DISTINCT (introduced in SQL-86) and using PRIMARY KEYs (introduced in SQL-92). Little things like that make some of the papers a little outdated, even if they&rsquo;re still not wrong.</p>
+			<p>
+				I&rsquo;ve gathered these papers here, as a) they were very hard to find, and b) there was no central place where all his Relational papers were gathered together. Some places had some papers, other places mentioned others. It was time this man got the respect he deserves and make his famous papers easier to
+				find.
+			</p>
+			<p>
+				While reading these, do keep in mind that they are <em>old</em>. For example: The first paper writes about using an <em>index</em> to select the needed domains/columns, a concept Codd changed his mind on around 1990 - Codd switched to using &ldquo;column names&rdquo; - as he found out some people were creating
+				tables of 100s of columns wide, something not forseen by him when he invented the Relational Model, which would make it completely infeasable to using indices. Ain&rsquo;t no one going to refer to columns by their index number.
+			</p>
+			<p>
+				Then also, in his 1988 &ldquo;Fatal Flaws in SQL&rdquo; articles, Codd writes about the lack of uniqueness in SQL. This has been mitigated (though not fixed) by the use of DISTINCT (introduced in SQL-86) and using PRIMARY KEYs (introduced in SQL-92). Little things like that make some of the papers a little
+				outdated, even if they&rsquo;re still not wrong.
+			</p>
 			<h3 id="notes">
 				<a class="self-link" href="#notes"> Notes </a>
 			</h3>
@@ -89,7 +98,10 @@
 						<td><a href="https://dl.acm.org/doi/pdf/10.1145/1734714.1734718">ALPHA: A Data Base Sublanguage Founded on the Relational Calculus</a></td>
 						<td></td>
 						<td></td>
-						<td>ALPHA is Codd&rsquo;s not-implemented version of a potential query language. He did not want to lord over how a query language should look like, but he did want to give some handles for people to hold on to, which they promptly ignored when they created SQL 😑 - SQL can return things that are not a Relation (a <em>set</em> of <em>tuples</em>), like a table with duplciate rows, or a column, or a single cell&hellip;</td>
+						<td>
+							ALPHA is Codd&rsquo;s not-implemented version of a potential query language. He did not want to lord over how a query language should look like, but he did want to give some handles for people to hold on to, which they promptly ignored when they created SQL 😑 - SQL can return things that are not a
+							Relation (a <em>set</em> of <em>tuples</em>), like a table with duplciate rows, or a column, or a single cell&hellip;
+						</td>
 					</tr>
 					<tr>
 						<td>(1971b)</td>
@@ -264,7 +276,10 @@
 						<td><a href="https://dl.acm.org/doi/pdf/10.1145/16301.16303">Missing Information (Applicable and Inapplicable) in Relational Databases</a></td>
 						<td></td>
 						<td></td>
-						<td>Here&rsquo;s a wild idea that <em>still</em> hasn&rsquo;t been implemented: Instead of using 2-valued (binary) logic (2VL; <code>true</code> and <code>false</code>) or 3-valued (trinary) logic (3VL; <code>true</code>, <code>maybe</code> and <code>false</code>), lets use 4-valued (quaterny) logic (4VL; <code>T</code> for true, <code>F</code> for false, <code>M</code> for missing-but-applicable and <code>I</code> for missing-but-inapplicable). Tony Hoare did nothing wrong. In fact, he did not go far enough! 😤</td>
+						<td>
+							Here&rsquo;s a wild idea that <em>still</em> hasn&rsquo;t been implemented: Instead of using 2-valued (binary) logic (2VL; <code>true</code> and <code>false</code>) or 3-valued (trinary) logic (3VL; <code>true</code>, <code>maybe</code> and <code>false</code>), lets use 4-valued (quaterny) logic (4VL;
+							<code>T</code> for true, <code>F</code> for false, <code>M</code> for missing-but-applicable and <code>I</code> for missing-but-inapplicable). Tony Hoare did nothing wrong. In fact, he did not go far enough! 😤
+						</td>
 					</tr>
 					<tr>
 						<td>(1986b)</td>
@@ -317,7 +332,10 @@
 					</tr>
 					<tr>
 						<td>(1988b)</td>
-						<td><a href="./1988-fatal-flaws-in-sql/">Fatal Flaws in SQL (this HTML version is combined from the two PDFs)</a> (<a href="http://www.bitsavers.org/magazines/Datamation/19880815.pdf">original source, part 1</a> <a href="http://www.bitsavers.org/magazines/Datamation/Datamation_V34_N17_19880901.pdf">original source, part 2</a>)</td>
+						<td>
+							<a href="./1988-fatal-flaws-in-sql/">Fatal Flaws in SQL (this HTML version is combined from the two PDFs)</a> (<a href="http://www.bitsavers.org/magazines/Datamation/19880815.pdf">original source, part 1</a>
+							<a href="http://www.bitsavers.org/magazines/Datamation/Datamation_V34_N17_19880901.pdf">original source, part 2</a>)
+						</td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -341,7 +359,10 @@
 			<h3 id="sources">
 				<a class="self-link" href="#sources"> Sources </a>
 			</h3>
-			<p>To find these papers, this page was very helpful: <a href="https://dblp.org/pid/c/EFCodd.html">dblp computer science bibliography about Edgar F. Codd</a> (DBLP - indirectly ACM), as was this one: <a href="https://dl.acm.org/profile/81100425534/publications?Role=author&amp;startPage=0&amp;sortBy=EpubDate_asc">Edgar Frank &ldquo;Ted&rdquo; Codd &gt; Publications</a> (ACM), as was this one: <a href="https://dominoweb.draco.res.ibm.com/">Technical Paper Archive - Research Reports</a> (IBM)</p>
+			<p>
+				To find these papers, this page was very helpful: <a href="https://dblp.org/pid/c/EFCodd.html">dblp computer science bibliography about Edgar F. Codd</a> (DBLP - indirectly ACM), as was this one:
+				<a href="https://dl.acm.org/profile/81100425534/publications?Role=author&amp;startPage=0&amp;sortBy=EpubDate_asc">Edgar Frank &ldquo;Ted&rdquo; Codd &gt; Publications</a> (ACM), as was this one: <a href="https://dominoweb.draco.res.ibm.com/">Technical Paper Archive - Research Reports</a> (IBM)
+			</p>
 			<h3 id="bonus">
 				<a class="self-link" href="#bonus"> Bonus </a>
 			</h3>

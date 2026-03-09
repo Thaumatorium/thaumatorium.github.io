@@ -82,20 +82,23 @@ function createForceDirectedGraph(graph) {
 
 	const node = svg.append("g").attr("class", "nodes").selectAll("g").data(graph.nodes).enter().append("g").call(d3.drag().on("start", dragstarted).on("drag", dragged).on("end", dragended));
 
-	node.append("circle")
+	node
+		.append("circle")
 		.attr("r", config.circleRadius)
 		.attr("fill", (d) => (d.group === "game" ? config.collapsedCircleColor : d.group === "role" ? config.expandedCircleColor : "#fff"))
 		.attr("stroke", "#000")
 		.attr("stroke-width", 1.5);
 
-	node.append("text")
+	node
+		.append("text")
 		.attr("dy", 3)
 		.attr("x", (d) => (d.group === "person" ? 12 : 6))
 		.style("text-anchor", "start")
 		.text((d) => d.id);
 
 	simulation.on("tick", () => {
-		link.attr("x1", (d) => d.source.x)
+		link
+			.attr("x1", (d) => d.source.x)
 			.attr("y1", (d) => d.source.y)
 			.attr("x2", (d) => d.target.x)
 			.attr("y2", (d) => d.target.y);

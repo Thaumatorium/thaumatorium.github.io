@@ -159,7 +159,8 @@
 					.on("zoom", (event) => g.attr("transform", event.transform));
 				svg.call(zoom);
 				const defs = svg.append("defs");
-				defs.append("marker")
+				defs
+					.append("marker")
 					.attr("id", "arrow")
 					.attr("viewBox", "0 -5 10 10")
 					.attr("refX", 20) // keep arrowhead visible above target node
@@ -187,16 +188,19 @@
 					.attr("stroke-width", (d) => strokeWidth(d.weight));
 				// --- Nodes
 				const node = g.append("g").selectAll("g").data(nodes).join("g").attr("class", "node").call(drag(simulation()));
-				node.append("circle")
+				node
+					.append("circle")
 					.attr("r", 18)
 					.attr("fill", (d) => color(d.group));
-				node.append("text")
+				node
+					.append("text")
 					.attr("class", "label")
 					.attr("text-anchor", "middle")
 					.attr("dy", ".35em")
 					.text((d) => d.id);
 				// Long labels below
-				node.append("text")
+				node
+					.append("text")
 					.attr("class", "label")
 					.attr("text-anchor", "middle")
 					.attr("dy", "1.9em")
@@ -205,18 +209,24 @@
 					.text((d) => d.name);
 				// --- Tooltips
 				const tip = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
-				node.on("mousemove", (event, d) => {
-					tip.style("opacity", 1)
-						.html(`<b>${d.name}</b><br>${d.desc}`)
-						.style("left", event.clientX + 12 + "px")
-						.style("top", event.clientY + 12 + "px");
-				}).on("mouseleave", () => tip.style("opacity", 0));
-				link.on("mousemove", (event, d) => {
-					tip.style("opacity", 1)
-						.html(`<b>${idToName(d.source)} → ${idToName(d.target)}</b><br>${d.note}<br>weight ${d.weight}`)
-						.style("left", event.clientX + 12 + "px")
-						.style("top", event.clientY + 12 + "px");
-				}).on("mouseleave", () => tip.style("opacity", 0));
+				node
+					.on("mousemove", (event, d) => {
+						tip
+							.style("opacity", 1)
+							.html(`<b>${d.name}</b><br>${d.desc}`)
+							.style("left", event.clientX + 12 + "px")
+							.style("top", event.clientY + 12 + "px");
+					})
+					.on("mouseleave", () => tip.style("opacity", 0));
+				link
+					.on("mousemove", (event, d) => {
+						tip
+							.style("opacity", 1)
+							.html(`<b>${idToName(d.source)} → ${idToName(d.target)}</b><br>${d.note}<br>weight ${d.weight}`)
+							.style("left", event.clientX + 12 + "px")
+							.style("top", event.clientY + 12 + "px");
+					})
+					.on("mouseleave", () => tip.style("opacity", 0));
 				// --- Simulation
 				function simulation() {
 					const id = (d) => d.id;

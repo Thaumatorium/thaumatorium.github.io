@@ -1,8 +1,28 @@
 <p>For now (2020-07-16) it&rsquo;s just snippets of JS and regex that I use every now and then</p>
 <p>I&rsquo;d use GitHub for that, but I have a tendency to forget <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
 <div>
-	<button class="button" type="button" onclick="document.querySelectorAll(`details`).forEach(el => {el.open = true});">Open all chapters</button>
-	<button class="button" type="button" onclick="document.querySelectorAll(`details`).forEach(el => {el.open = false});">Close all chapters</button>
+	<button
+		class="button"
+		type="button"
+		onclick="
+			document.querySelectorAll(`details`).forEach((el) => {
+				el.open = true;
+			})
+		"
+	>
+		Open all chapters
+	</button>
+	<button
+		class="button"
+		type="button"
+		onclick="
+			document.querySelectorAll(`details`).forEach((el) => {
+				el.open = false;
+			})
+		"
+	>
+		Close all chapters
+	</button>
 </div>
 <details>
 	<summary>
@@ -101,7 +121,9 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Make console.log use colors</td>
 				<td>
 					<div class="highlight">
-						<pre style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONSOLE_STYLE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;background: #800; color: #fff; padding: 2px&#34;</span>;
+						<pre
+							style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+						><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">CONSOLE_STYLE</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;background: #800; color: #fff; padding: 2px&#34;</span>;
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;%cService worker installing&#39;</span>, <span style="color:#a6e22e">CONSOLE_STYLE</span>);
 </code></pre>
 					</div>
@@ -111,7 +133,9 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>This opens all <samp>are you sure?</samp> dialogs for comments, on a profile page of Reddit</td>
 				<td>
 					<div class="highlight">
-						<pre style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ys</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;score likes&#34;</span>))
+						<pre
+							style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+						><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">ys</span> <span style="color:#f92672">=</span> Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;score likes&#34;</span>))
 							.<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">e</span> =&gt; parseInt(<span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">title</span>) <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>)
 							.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">e</span> =&gt; <span style="color:#a6e22e">e</span>.<span style="color:#a6e22e">parentElement</span>.<span style="color:#a6e22e">parentElement</span>.<span style="color:#a6e22e">parentElement</span>)
 							.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">el</span> =&gt; <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">`[data-event-action*=&#34;delete&#34;]`</span>));
@@ -126,7 +150,9 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Removing duplicates</td>
 				<td>
 					<div class="highlight">
-						<pre style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Den Haag&#34;</span>,<span style="color:#e6db74">&#34;Den Haag&#34;</span>,
+						<pre
+							style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+						><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cities</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Den Haag&#34;</span>,<span style="color:#e6db74">&#34;Den Haag&#34;</span>,
 								<span style="color:#e6db74">&#34;Utrecht&#34;</span>, <span style="color:#e6db74">&#34;Utrecht&#34;</span>,
 								<span style="color:#e6db74">&#34;Arnhem&#34;</span>, <span style="color:#e6db74">&#34;Arnhem&#34;</span>,
 								<span style="color:#e6db74">&#34;MiddelBurg&#34;</span>, <span style="color:#e6db74">&#34;MiddelBurg&#34;</span>,
@@ -141,7 +167,9 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)</td>
 				<td>
 					<div class="highlight">
-						<pre style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[query goes here]&#34;</span>);
+						<pre
+							style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+						><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">xs</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[query goes here]&#34;</span>);
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">setInterval</span>(() =&gt; {<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">i</span>); <span style="color:#a6e22e">xs</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">click</span>(); <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>;}, <span style="color:#ae81ff">1100</span>);
 <span style="color:#a6e22e">clearInterval</span>(<span style="color:#a6e22e">id</span>);
@@ -153,7 +181,9 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
 				<td>
 					<div class="highlight">
-						<pre style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js">Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;subreddit hover&#34;</span>))
+						<pre
+							style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+						><code class="language-js" data-lang="js">Array.<span style="color:#a6e22e">from</span>(document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;subreddit hover&#34;</span>))
 									 .<span style="color:#a6e22e">filter</span>(<span style="color:#a6e22e">el</span> =&gt; <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;TheLastOfUs2&#34;</span>)
 									 .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">el</span> =&gt; <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">parentElement</span>.<span style="color:#a6e22e">parentElement</span>)
 									 .<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">el</span> =&gt; {
@@ -169,7 +199,9 @@ Array.from(&quot;𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢
 				<td>Use on Twitch to track the amount of currently used emotes</td>
 				<td>
 					<div class="highlight">
-						<pre style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">groupBy</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">xs</span>, <span style="color:#a6e22e">key</span>) =&gt; <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">x</span>) =&gt; {
+						<pre
+							style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+						><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">groupBy</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">xs</span>, <span style="color:#a6e22e">key</span>) =&gt; <span style="color:#a6e22e">xs</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">x</span>) =&gt; {
 	(<span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">x</span>[<span style="color:#a6e22e">key</span>]] <span style="color:#f92672">=</span> <span style="color:#a6e22e">acc</span>[<span style="color:#a6e22e">x</span>[<span style="color:#a6e22e">key</span>]] <span style="color:#f92672">||</span> []).<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">x</span>);
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">acc</span>;
 }, {});

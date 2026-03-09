@@ -28,7 +28,8 @@
 		</header>
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
-			<a href="/">Frontpage</a><span> - </span> <a href="/articles">Articles</a><span> - </span> <a href="/projects">Projects</a><span> - </span> <a href="/experimentations">Experimentations</a><span> - </span> <a href="/code-of-conduct">Code of Conduct</a><span> - </span> <a href="/random-video">Random video</a><span> - </span> <a href="/hardware">Hardware</a><span> - </span> <a href="/knowledge-base">Knowledge Base</a><span> - </span>
+			<a href="/">Frontpage</a><span> - </span> <a href="/articles">Articles</a><span> - </span> <a href="/projects">Projects</a><span> - </span> <a href="/experimentations">Experimentations</a><span> - </span> <a href="/code-of-conduct">Code of Conduct</a><span> - </span> <a href="/random-video">Random video</a
+			><span> - </span> <a href="/hardware">Hardware</a><span> - </span> <a href="/knowledge-base">Knowledge Base</a><span> - </span>
 			<a href="/about">About</a>
 		</nav>
 		<main>
@@ -40,7 +41,10 @@
 				</div>
 			</hgroup>
 			<div class="disclaimer">
-				<p>This article contains affiliate links to amazon - that is how I can keep this site afloat. If you have a better idea, or an alternative where I can still make money but not support giant corporations, please open up an <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Issue</a> on Github and let me know!</p>
+				<p>
+					This article contains affiliate links to amazon - that is how I can keep this site afloat. If you have a better idea, or an alternative where I can still make money but not support giant corporations, please open up an <a href="https://github.com/Thaumatorium/thaumatorium.github.io/issues">Issue</a> on Github
+					and let me know!
+				</p>
 			</div>
 			<p>It started in 2018 with creating a file containing all subreddit names from the site's sitemap (which has been made unavailable for unknown reasons)</p>
 			<p>I downloaded all XML files and wrote a "throw-away-script" to pull out the important bits (the names) and throw the rest of the information away, which left me with a file of about a million subreddit names.</p>
@@ -53,10 +57,16 @@
 			<p>Now, where to find a list of names? <em>Books</em>, of course!</p>
 			<p>After a short search I found <a>Bruce Lansky's "100,000+ baby names"</a>, so I bought the Kindle version, converted it to text and got to work in my text editor to filter out most (if not all) names.</p>
 			<p>After fiddling with regex for a bit, I got left with a list of 95477 names. Not really 100k, but close enough.</p>
-			<p>While thinking about how to filter the subreddit list, I remembered that Excel had such a functionality! Quickly throwing those two lists in an Excel sheet and using <samp>Conditional Formatting</samp> on both lists to mark the names that were in both was a breeze, but to then <em>filter</em> those lists took quite a bit longer. This is mostly because Excel isn't made to filter lists of at least a 100k items!</p>
+			<p>
+				While thinking about how to filter the subreddit list, I remembered that Excel had such a functionality! Quickly throwing those two lists in an Excel sheet and using <samp>Conditional Formatting</samp> on both lists to mark the names that were in both was a breeze, but to then <em>filter</em> those lists took
+				quite a bit longer. This is mostly because Excel isn't made to filter lists of at least a 100k items!
+			</p>
 			<p>At first I tried to filter the subreddit list (which was about a million items long), but after two hours of waiting for the list to filter out all unmarked items, I force-quit Excel and tried to do the same on the names list instead. Success!</p>
 			<p>I was left with a neat list of just a "measly" 8221 items it was time to turn to reddit to extract some information.</p>
-			<p>Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding <samp>.json</samp> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <samp>/r/[SUBREDDIT]/about/.json</samp>, instead of the normal <samp>/r/[SUBREDDIT]/.json</samp>, but eh, it's not the worst.</p>
+			<p>
+				Lucky for me, Reddit has public information on each subreddit! Even better: You can access such information by adding <samp>.json</samp> after each URL. Annoying, but understandable: information about a subreddit was somewhat hidden in <samp>/r/[SUBREDDIT]/about/.json</samp>, instead of the normal
+				<samp>/r/[SUBREDDIT]/.json</samp>, but eh, it's not the worst.
+			</p>
 			<p>Now I was ready to extract the information I needed, but how? Well, this <em>is</em> the web, so it seems reasonable to use Javascript (even though I don't like the language for several reasons) for the task at hand, which I did.</p>
 			<p>I turned the list of name-subreddits into a list of URLs, through arcane magic called <samp>regex</samp>, after which I threw the list into a <samp>.js</samp> file.</p>
 			<pre><code>
@@ -79,7 +89,11 @@
 				</p>
 			</div>
 			<nav id="profiles">
-				<a href="https://twitter.com/NostraDavid2"><img loading="lazy" src="/images/social-media/twitter.svg" alt="Twitter's logo" width="32" height="32" /></a><span> - </span> <a href="https://www.twitch.tv/nostradavid"><img loading="lazy" src="/images/social-media/twitch.svg" alt="Twitch's logo" width="32" height="32" /></a><span> - </span> <a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA"><img loading="lazy" src="/images/social-media/youtube.svg" alt="Youtube's logo" width="32" height="32" /></a><span> - </span> <a href="https://www.reddit.com/user/nostradavid"><img loading="lazy" src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width="32" height="32" /></a><span> - </span> <a href="https://github.com/NostraDavid"><img loading="lazy" src="/images/social-media/github.svg" alt="Github's logo" width="32" height="32" />(me)</a><span> - </span>
+				<a href="https://twitter.com/NostraDavid2"><img loading="lazy" src="/images/social-media/twitter.svg" alt="Twitter's logo" width="32" height="32" /></a><span> - </span>
+				<a href="https://www.twitch.tv/nostradavid"><img loading="lazy" src="/images/social-media/twitch.svg" alt="Twitch's logo" width="32" height="32" /></a><span> - </span>
+				<a href="https://www.youtube.com/channel/UCkyJNAlG_at0jgflXPP4aKA"><img loading="lazy" src="/images/social-media/youtube.svg" alt="Youtube's logo" width="32" height="32" /></a><span> - </span>
+				<a href="https://www.reddit.com/user/nostradavid"><img loading="lazy" src="/images/social-media/reddit.svg" alt="Snoo, Reddit's logo" width="32" height="32" /></a><span> - </span>
+				<a href="https://github.com/NostraDavid"><img loading="lazy" src="/images/social-media/github.svg" alt="Github's logo" width="32" height="32" />(me)</a><span> - </span>
 				<a href="https://github.com/Thaumatorium"><img loading="lazy" src="/images/social-media/github.svg" alt="Github's logo" width="32" height="32" />(pro)</a><span> - </span>
 			</nav>
 			<!-- Sssh - don't tell anyone! -->

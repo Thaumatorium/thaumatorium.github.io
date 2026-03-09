@@ -56,7 +56,10 @@
 			<blockquote>
 				<p><a href="https://en.wiktionary.org/wiki/quaternary">How to pronounce &ldquo;Quaternary&rdquo;?</a> (I prefer the &ldquo;Audio (General Australian)&rdquo; version)</p>
 			</blockquote>
-			<p>I&rsquo;ve been programming since 2009, professionally since 2021, and I&rsquo;ve written programs in Python (my current go-to due to professional reasons), C (my first language - can highly recommend as beginner language), C++, C#, Java, Haskell (my first FP language - <a href="https://learnyouahaskell.github.io/chapters.html">can also highly recommend (Primeagen pls read)</a>), Typescript (ew), Javascript (ew), PowerShell, Bash, and have dipped my toes in Rust, Go, Elm, Lisp, Visual Basic (ew), and last but not least Lua.</p>
+			<p>
+				I&rsquo;ve been programming since 2009, professionally since 2021, and I&rsquo;ve written programs in Python (my current go-to due to professional reasons), C (my first language - can highly recommend as beginner language), C++, C#, Java, Haskell (my first FP language -
+				<a href="https://learnyouahaskell.github.io/chapters.html">can also highly recommend (Primeagen pls read)</a>), Typescript (ew), Javascript (ew), PowerShell, Bash, and have dipped my toes in Rust, Go, Elm, Lisp, Visual Basic (ew), and last but not least Lua.
+			</p>
 			<p>I&rsquo;m telling you this to explain that I have a very <em>broad</em> knowledge of programming, with a <em>deep</em> one in Python - I won&rsquo;t claim to be an expert in any other language besides Python, and even in Python there&rsquo;s plenty I&rsquo;ve barely touched due to a lack of necessity.</p>
 			<p>In all this time the only two languages that broke my brain out of learned paradigms were Haskell and SQL.</p>
 			<p>Haskell for its Functional Programming paradigm, clearly, but SQL I did not expect.</p>
@@ -64,7 +67,10 @@
 			<p>In 1990 The Coddfather released a book called &ldquo;The Relational Model for Database Management: Version 2&rdquo; (RM/V2 after this), where he introduced the idea of &ldquo;Four-Valued Logic&rdquo; - that is, a logic system with four truth values, instead of the typical two (True and False).</p>
 			<p>This idea initially broke my brain, because <em>computers are binary, right?</em> <em>So how does having four truth values make sense?</em></p>
 			<p>Well, through my experience I&rsquo;ve noticed that we&rsquo;ve been using quaternary logic all this time, without even realizing it!</p>
-			<p>Take the previously mentioned Python, for example. Lets say I have a function that returns a boolean. This same function could also return None, if it doesn&rsquo;t know the answer because returning True or False doesn&rsquo;t make sense. So now we have three possible return values: True, False, and None. But what if the function fails to execute due to exceptional sitation? Now we have a fourth possible return value: an exception. Yes, the mechanisms are different, but it&rsquo;s still a value you as a programmer will have to handle.</p>
+			<p>
+				Take the previously mentioned Python, for example. Lets say I have a function that returns a boolean. This same function could also return None, if it doesn&rsquo;t know the answer because returning True or False doesn&rsquo;t make sense. So now we have three possible return values: True, False, and None. But
+				what if the function fails to execute due to exceptional sitation? Now we have a fourth possible return value: an exception. Yes, the mechanisms are different, but it&rsquo;s still a value you as a programmer will have to handle.
+			</p>
 			<p>Again, now we have four possible return values that can be returned from a single function:</p>
 			<ul>
 				<li><code>True</code></li>
@@ -73,13 +79,20 @@
 				<li><code>Exception</code> (any kind).</li>
 			</ul>
 			<p>This is a perfect example of quaternary logic in action in a super common programming language.</p>
-			<p>So, how does this relate to SQL? Well, in <a href="https://codeblab.com/wp-content/uploads/2009/12/rmdb-codd.pdf">RM/V2</a> (Relational Model, version 2 - yes, Codd numbered his models like a programming language) Codd introduces <code>TRUE</code> (<code>t</code>), <code>FALSE</code> (<code>f</code>), <code>MAYBE BUT APPLICABLE</code> (<code>a</code>), and <code>MAYBE BUT INAPPLICABLE</code> (<code>i</code>) - Everything is shouted, because all language did so back in the 1960s. Anyway, <code>t</code> and <code>f</code> are named <em>&ldquo;values&rdquo;</em>, and <code>i</code> and <code>a</code> are named <em>&ldquo;markers&rdquo;</em>.</p>
+			<p>
+				So, how does this relate to SQL? Well, in <a href="https://codeblab.com/wp-content/uploads/2009/12/rmdb-codd.pdf">RM/V2</a> (Relational Model, version 2 - yes, Codd numbered his models like a programming language) Codd introduces <code>TRUE</code> (<code>t</code>), <code>FALSE</code> (<code>f</code>),
+				<code>MAYBE BUT APPLICABLE</code> (<code>a</code>), and <code>MAYBE BUT INAPPLICABLE</code> (<code>i</code>) - Everything is shouted, because all language did so back in the 1960s. Anyway, <code>t</code> and <code>f</code> are named <em>&ldquo;values&rdquo;</em>, and <code>i</code> and <code>a</code> are named
+				<em>&ldquo;markers&rdquo;</em>.
+			</p>
 			<h3 id="a-code-example">
 				<a class="self-link" href="#a-code-example"> A code example </a>
 			</h3>
 			<p>See <a href="./example.py">example.py</a> for a full example that you can run locally, but here&rsquo;s the relevant code snippet:</p>
 			<div class="highlight">
-				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_email_verified</span>(user: User) <span style="color:#f92672">-&gt;</span> bool <span style="color:#f92672">|</span> <span style="color:#66d9ef">None</span>:
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+				><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_email_verified</span>(user: User) <span style="color:#f92672">-&gt;</span> bool <span style="color:#f92672">|</span> <span style="color:#66d9ef">None</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Yes, this code is contrived, for the sake of example, such that beginners can follow the logic as well.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>verified <span style="color:#f92672">is</span> <span style="color:#66d9ef">True</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>  <span style="color:#75715e"># TRUE</span>
@@ -93,11 +106,17 @@
 			</div>
 			<p>You may argue that you&rsquo;d never write code like this, and I&rsquo;d agree - it&rsquo;s a little messy, but you can&rsquo;t tell me that you&rsquo;ve never seen code like this in production.</p>
 			<p>My frustration is that the <code>bool | None</code> doesn&rsquo;t properly expresses the fourth possible return value.</p>
-			<p>Luckily, Haskell and Rust already have a solution for this - Monadic types! I&rsquo;m not going to explain monads in detail, but think of them as a coloured box that holds a value, and the colour of the box will tell you something about the type of content it holds - for example, if it&rsquo;s a success or a failure, regardless of whether that value is <code>t</code>, <code>f</code>, <code>a</code>, or <code>i</code>.</p>
+			<p>
+				Luckily, Haskell and Rust already have a solution for this - Monadic types! I&rsquo;m not going to explain monads in detail, but think of them as a coloured box that holds a value, and the colour of the box will tell you something about the type of content it holds - for example, if it&rsquo;s a success or a
+				failure, regardless of whether that value is <code>t</code>, <code>f</code>, <code>a</code>, or <code>i</code>.
+			</p>
 			<p>Haskell and Rust have this built-in, but using the <code>returns</code> library in Python, we can express this idea like so:</p>
 			<p>Again, see <a href="./monadic_example.py">monadic_example.py</a> for a full example that you can run locally, but here&rsquo;s the relevant code snippet:</p>
 			<div class="highlight">
-				<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_email_verified</span>(user: User) <span style="color:#f92672">-&gt;</span> Result[Maybe[bool], <span style="color:#a6e22e">Exception</span>]:
+				<pre
+					tabindex="0"
+					style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4"
+				><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">is_email_verified</span>(user: User) <span style="color:#f92672">-&gt;</span> Result[Maybe[bool], <span style="color:#a6e22e">Exception</span>]:
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Yes, this code is contrived, for the sake of example, such that beginners can follow the logic as well.&#34;&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> user<span style="color:#f92672">.</span>verified <span style="color:#f92672">is</span> <span style="color:#66d9ef">True</span>:
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Success(Some(<span style="color:#66d9ef">True</span>))  <span style="color:#75715e"># TRUE</span>
