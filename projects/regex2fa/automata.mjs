@@ -210,10 +210,7 @@ export function buildDfa(nfa, epsilonSymbol) {
 				targetDfaId = subsets.get(targetKey).dfaId;
 			} else {
 				targetDfaId = dfa.addState();
-				subsets.set(targetKey, {
-					dfaId: targetDfaId,
-					nfaStates: targetClosure,
-				});
+				subsets.set(targetKey, { dfaId: targetDfaId, nfaStates: targetClosure });
 				queue.push(targetKey);
 				if ([...targetClosure].some((id) => nfa.acceptStateIds.has(id))) {
 					dfa.setAcceptState(targetDfaId, true);
@@ -290,11 +287,7 @@ export function minimizeDfa(dfa, epsilonSymbol) {
 	partitions.forEach((partition, index) => {
 		const representative = partition[0];
 		const newStateId = minimized.addState(partition.some((stateId) => dfa.acceptStateIds.has(stateId)));
-		partitionToState.set(index, {
-			newStateId,
-			representative,
-			members: partition,
-		});
+		partitionToState.set(index, { newStateId, representative, members: partition });
 		if (partition.includes(dfa.startStateId)) {
 			minimized.setStartState(newStateId);
 		}

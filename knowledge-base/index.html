@@ -47,10 +47,7 @@
 		<main>
 			<h1>NostraDavid&#39;s Knowledge Base</h1>
 			<p>Javascript code snippets and regex, and the likes</p>
-			<p>
-				Note to self:
-				<a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…
-			</p>
+			<p>Note to self: <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
 			<h2>Regular Expressions</h2>
 			<p>Use in combination with $0/$1/$2... to find and replace text.</p>
 			<table>
@@ -63,8 +60,7 @@
 				<tbody>
 					<tr>
 						<td>
-							Find the nth comma, via
-							<a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br />
+							Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br />
 							Edit the number in between {} to find the nth comma.
 						</td>
 						<td><code class="lang-regex">,(?=(?:[^,]*,){3}[^,]*$)</code></td>
@@ -91,15 +87,11 @@
 					</tr>
 					<tr>
 						<td>Find main content of HTML page</td>
-						<td>
-							<code class="lang-regex">&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code>
-						</td>
+						<td><code class="lang-regex">&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code></td>
 					</tr>
 					<tr>
 						<td>find paragraph tags that aren't closed</td>
-						<td>
-							<code class="lang-regex">\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code>
-						</td>
+						<td><code class="lang-regex">\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
 					</tr>
 					<tr>
 						<td>find all lines that do not contain <q>hede</q></td>
@@ -116,9 +108,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>
-							<a href="https://jakearchibald.github.io/svgomg/">SVGOMG!</a>
-						</td>
+						<td><a href="https://jakearchibald.github.io/svgomg/">SVGOMG!</a></td>
 						<td>
 							"<a href="https://github.com/svg/svgo"><b>SVG O</b>ptimizer</a>'s <b>M</b>issing <b>G</b>UI", an online SVG optimizer
 						</td>
@@ -129,17 +119,11 @@
 					</tr>
 					<tr>
 						<td><a href="https://squoosh.app/">Squoosh</a></td>
-						<td>
-							Google Chrome Labs created this site so you can customize the compression of your image (and compare it with the original).
-							<a href="https://squoosh-desktop.now.sh/">Desktop version</a> is also available.
-						</td>
+						<td>Google Chrome Labs created this site so you can customize the compression of your image (and compare it with the original). <a href="https://squoosh-desktop.now.sh/">Desktop version</a> is also available.</td>
 					</tr>
 					<tr>
 						<td><a href="https://app.diagrams.net/">Diagrams.net</a> (previously Draw.io)</td>
-						<td>
-							Used for diagrams. If you save a file as PNG you can open it as PNG with an image viewer <em>and</em> and with the website or
-							<a href="https://github.com/jgraph/drawio-desktop/releases/tag/v13.6.2">Desktop version</a>
-						</td>
+						<td>Used for diagrams. If you save a file as PNG you can open it as PNG with an image viewer <em>and</em> and with the website or <a href="https://github.com/jgraph/drawio-desktop/releases/tag/v13.6.2">Desktop version</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -163,13 +147,8 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
-							Manipulating Unicode strings per code point, not per byte.
-							<code class="lang-javascript">"".split()</code> gives you bytes, not codepoints
-						</td>
-						<td>
-							<code class="lang-javascript">Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code>
-						</td>
+						<td>Manipulating Unicode strings per code point, not per byte. <code class="lang-javascript">"".split()</code> gives you bytes, not codepoints</td>
+						<td><code class="lang-javascript">Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
 					</tr>
 					<tr>
 						<td>Remove all <code class="lang-css">.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
@@ -261,9 +240,7 @@ listedEmoticons.sort((a, b) => b.length - a.length)
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
-				–
-				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2020-08-17</time></sub>

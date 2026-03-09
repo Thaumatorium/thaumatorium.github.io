@@ -12,10 +12,7 @@ export const shuffle = (items) => {
 export const choice = (items) => items[randomInt(items.length)];
 
 export const indexOf = (grid, x, y) => y * grid.width + x;
-export const coordsOf = (grid, index) => ({
-	x: index % grid.width,
-	y: Math.floor(index / grid.width),
-});
+export const coordsOf = (grid, index) => ({ x: index % grid.width, y: Math.floor(index / grid.width) });
 
 export const createGrid = (width, height, blocked = new Set()) => ({
 	topology: "square",

@@ -112,6 +112,12 @@
 					box-sizing: border-box;
 					flex-shrink: 0;
 				}
+				.game-selection-list {
+					display: flex;
+					flex-direction: column;
+					gap: 12px;
+					width: 100%;
+				}
 				.game-selection-row {
 					display: flex;
 					align-items: center;
@@ -139,6 +145,29 @@
 					background-color: #fff;
 					font-size: 1rem;
 					color: #333;
+				}
+				.row-action-button {
+					padding: 8px 15px;
+					border: 1px solid #ccc;
+					border-radius: 4px;
+					background-color: #eee;
+					color: #333;
+					cursor: pointer;
+					font-size: 0.9rem;
+					font-family: inherit;
+				}
+				.row-action-button:hover:not(:disabled) {
+					background-color: #ddd;
+					color: #000;
+				}
+				.row-action-button:disabled {
+					cursor: not-allowed;
+					opacity: 0.6;
+				}
+				.game-selection-actions {
+					display: flex;
+					justify-content: center;
+					width: 100%;
 				}
 				.stats-box {
 					border: 1px solid #e0e0e0;
@@ -300,10 +329,11 @@
 					opacity: 1;
 					transition: opacity 0.2s ease-in-out;
 				}
-				.nodes g.node circle,
+				.nodes g.node path.person-slice,
 				.nodes g.node rect.game-rect {
 					stroke: #fff;
 					stroke-width: 1.5px;
+					stroke-linejoin: round;
 					transition:
 						stroke 0.2s ease-in-out,
 						stroke-width 0.2s ease-in-out;
@@ -345,12 +375,12 @@
 				.nodes g.node:hover {
 					opacity: 0.9;
 				}
-				.nodes g.node:hover circle,
+				.nodes g.node:hover path.person-slice,
 				.nodes g.node:hover rect.game-rect {
 					stroke: #555;
 					stroke-width: 2.5px;
 				}
-				.nodes g.node.tooltip-active circle,
+				.nodes g.node.tooltip-active path.person-slice,
 				.nodes g.node.tooltip-active rect.game-rect {
 					stroke: #000;
 					stroke-width: 3px;
@@ -358,7 +388,7 @@
 				.nodes g.node.highlighted-department {
 					opacity: 1;
 				}
-				.nodes g.node.highlighted-department circle,
+				.nodes g.node.highlighted-department path.person-slice,
 				.nodes g.node.highlighted-department rect.game-rect {
 					stroke: #e74c3c;
 					stroke-width: 3.5px;
@@ -460,9 +490,11 @@
 				#tooltip .tooltip-section-shared .tooltip-section-label {
 					color: #c8f0d2;
 				}
-				#tooltip .tooltip-section-game1 .tooltip-section-label,
-				#tooltip .tooltip-section-game2 .tooltip-section-label {
+				#tooltip .tooltip-section-game .tooltip-section-label {
 					color: #c8d8f0;
+				}
+				#tooltip .tooltip-section-repeated .tooltip-section-label {
+					color: #f0d3c8;
 				}
 				#tooltip .tooltip-list {
 					margin: 0;
@@ -529,7 +561,7 @@
 			<details class="instructions-collapsible" id="control-instructions-details">
 				<summary>Instructions & Controls</summary>
 				<ul class="instructions-content" aria-labelledby="control-instructions-details">
-					<li><strong>Select Games:</strong> Use the dropdowns below to choose one or two games. Stats appear on the right.</li>
+					<li><strong>Select Games:</strong> Use the dropdowns below to choose one or more games. The tool starts with two selectors, and you can add more.</li>
 					<li><strong>Filter People:</strong> Use the filter inputs (comma-separate multiple terms). Filtering applies shortly after you stop typing.</li>
 					<li><strong>Zoom/Pan:</strong> Use the mouse wheel to zoom in/out. Click and drag the background to pan the view.</li>
 					<li><strong>Node Info:</strong> Hover over any node (person circle or game rectangle) to see details in a tooltip.</li>
@@ -540,23 +572,11 @@
 			</details>
 			<!-- === MODIFIED CONTROLS SECTION START === -->
 			<div class="controls">
-				<div class="game-selection-row">
-					<label for="fileSelect1">Select Game 1:</label>
-					<select id="fileSelect1" aria-label="Select first game file"></select>
-					<div class="stats-box" id="statsBox1" aria-live="polite" aria-atomic="true">
-						<span class="stat-item"><span class="stat-label">People:</span> <span id="personCount1" class="stat-value">--</span></span>
-						<span class="stat-item"><span class="stat-label">Unique Roles:</span> <span id="roleCount1" class="stat-value">--</span></span>
-					</div>
+				<div id="gameSelectionList" class="game-selection-list" aria-live="polite"></div>
+				<div class="game-selection-actions">
+					<button id="addGameButton" type="button" class="row-action-button add-game-button" aria-label="Add another game selector">Add Game</button>
 				</div>
-				<div class="game-selection-row">
-					<label for="fileSelect2">Select Game 2:</label>
-					<select id="fileSelect2" aria-label="Select second game file"></select>
-					<div class="stats-box" id="statsBox2" aria-live="polite" aria-atomic="true">
-						<span class="stat-item"><span class="stat-label">People:</span> <span id="personCount2" class="stat-value">--</span></span>
-						<span class="stat-item"><span class="stat-label">Unique Roles:</span> <span id="roleCount2" class="stat-value">--</span></span>
-					</div>
-				</div>
-				<div class="shared-stats" id="sharedStats" style="display: none" aria-live="polite">🤝 <strong id="sharedCount">0</strong> people worked on both games</div>
+				<div class="shared-stats" id="sharedStats" style="display: none" aria-live="polite">🤝 <strong id="sharedCount">0</strong> people worked on at least 2 of <strong id="selectedGameCount">0</strong> selected games</div>
 				<div class="filter-controls">
 					<div class="filter-group">
 						<label for="nameFilterInput">Name Filter:</label>
@@ -669,9 +689,7 @@
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
-				–
-				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2026-03-08</time></sub>

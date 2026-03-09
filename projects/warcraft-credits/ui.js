@@ -1,13 +1,33 @@
+function createStatValue() {
+	const value = document.createElement("span");
+	value.className = "stat-value";
+	value.textContent = "--";
+	return value;
+}
+
+function createStatItem(labelText, valueElement) {
+	const item = document.createElement("span");
+	item.className = "stat-item";
+
+	const label = document.createElement("span");
+	label.className = "stat-label";
+	label.textContent = `${labelText}:`;
+
+	item.append(label, valueElement);
+	return item;
+}
+
 /*
  * Populates a <select> dropdown element with game options.
  * @param {HTMLSelectElement} selectElement - The dropdown element to populate.
  * @param {Object<string, string>} titleMap - An object mapping filenames (values) to display titles (text).
+ * @param {string} [selectedValue] - Optional value to preserve after repopulating.
  */
-export function populateDropdown(selectElement, titleMap) {
+export function populateDropdown(selectElement, titleMap, selectedValue = "") {
 	if (!selectElement) return;
-	selectElement.innerHTML = ""; // Clear existing options
 
-	const filenames = Object.keys(titleMap).sort(); // Get and sort filenames
+	selectElement.innerHTML = "";
+	const filenames = Object.keys(titleMap).sort();
 
 	if (filenames.length === 0) {
 		const option = document.createElement("option");
@@ -18,62 +38,110 @@ export function populateDropdown(selectElement, titleMap) {
 		selectElement.disabled = true;
 		return;
 	}
+
 	const placeholder = document.createElement("option");
 	placeholder.value = "";
 	placeholder.textContent = "-- Select a Game --";
-	placeholder.disabled = true;
-	placeholder.selected = true; // Make it the default display
 	selectElement.appendChild(placeholder);
+
 	filenames.forEach((filename) => {
 		const option = document.createElement("option");
-		option.value = filename; // The value is the filename
-		option.textContent = titleMap[filename]; // The text is the friendly title
+		option.value = filename;
+		option.textContent = titleMap[filename];
 		selectElement.appendChild(option);
 	});
 
-	selectElement.disabled = false; // Enable the dropdown
+	selectElement.value = filenames.includes(selectedValue) ? selectedValue : "";
+	selectElement.disabled = false;
 }
 
-/**
- * Sets initial default selections for the dropdowns and triggers the initial data load.
- * @param {Object} elements - Object containing required DOM elements { fileSelect1, fileSelect2, errorMessage, ... }.
- * @param {Function} handleSelectionChangeCallback - The event handler function.
- */
-export function setDefaultSelections(elements, handleSelectionChangeCallback) {
-	const { fileSelect1, fileSelect2, errorMessage } = elements;
-	if (fileSelect1.options.length <= 1 || fileSelect2.options.length <= 1) {
-		if (errorMessage) {
-			errorMessage.textContent = "Cannot set default games: No game data found or UI not ready.";
-			errorMessage.style.display = "block";
-			errorMessage.classList.add("error-message");
-		}
-		fileSelect1.disabled = true;
-		fileSelect2.disabled = true;
-		return;
-	}
-	const availableFiles = Array.from(fileSelect1.options)
-		.map((opt) => opt.value)
-		.filter((val) => val !== ""); // Filter out empty value from placeholder
+export function createGameSelectionRow(rowId, rowIndex, titleMap, onChange, onRemove) {
+	const row = document.createElement("div");
+	row.className = "game-selection-row";
+	row.dataset.rowId = String(rowId);
 
-	if (availableFiles.length >= 2) {
-		fileSelect1.value = availableFiles[0];
-		fileSelect2.value = availableFiles[1];
-	} else if (availableFiles.length === 1) {
-		fileSelect1.value = availableFiles[0];
-		fileSelect2.value = availableFiles[0];
-	} else {
-		if (errorMessage) {
-			errorMessage.textContent = "No game data available to select.";
-			errorMessage.style.display = "block";
-			errorMessage.classList.add("error-message");
-		}
-		fileSelect1.disabled = true;
-		fileSelect2.disabled = true;
-		return;
-	}
-	if (fileSelect1.options.length > 0) fileSelect1.options[0].disabled = true;
-	if (fileSelect2.options.length > 0) fileSelect2.options[0].disabled = true;
-	requestAnimationFrame(() => {
-		handleSelectionChangeCallback();
+	const label = document.createElement("label");
+	const select = document.createElement("select");
+	select.id = `game-select-${rowId}`;
+	select.setAttribute("aria-label", `Select game ${rowIndex}`);
+	label.htmlFor = select.id;
+	label.textContent = `Select Game ${rowIndex}:`;
+
+	populateDropdown(select, titleMap);
+
+	const personCount = createStatValue();
+	const roleCount = createStatValue();
+
+	const statsBox = document.createElement("div");
+	statsBox.className = "stats-box";
+	statsBox.setAttribute("aria-live", "polite");
+	statsBox.setAttribute("aria-atomic", "true");
+	statsBox.append(createStatItem("People", personCount), createStatItem("Unique Roles", roleCount));
+
+	const removeButton = document.createElement("button");
+	removeButton.type = "button";
+	removeButton.className = "row-action-button remove-game-button";
+	removeButton.textContent = "Remove";
+	removeButton.setAttribute("aria-label", `Remove game ${rowIndex}`);
+
+	select.addEventListener("change", () => onChange(rowId));
+	removeButton.addEventListener("click", () => onRemove(rowId));
+
+	row.append(label, select, statsBox, removeButton);
+
+	return {
+		rowId,
+		row,
+		label,
+		select,
+		personCount,
+		roleCount,
+		removeButton,
+	};
+}
+
+export function updateGameSelectionRow(rowController, rowIndex) {
+	if (!rowController) return;
+	rowController.label.textContent = `Select Game ${rowIndex}:`;
+	rowController.label.htmlFor = rowController.select.id;
+	rowController.select.setAttribute("aria-label", `Select game ${rowIndex}`);
+	rowController.removeButton.setAttribute("aria-label", `Remove game ${rowIndex}`);
+}
+
+export function updateRemoveButtons(rowControllers, minimumRows = 1) {
+	const disableRemove = rowControllers.length <= minimumRows;
+	rowControllers.forEach((rowController) => {
+		rowController.removeButton.disabled = disableRemove;
+	});
+}
+
+export function updateStatsForRows(rowControllers, statsByFilename) {
+	rowControllers.forEach((rowController) => {
+		const stats = statsByFilename.get(rowController.select.value);
+		rowController.personCount.textContent = stats ? stats.personCount.toLocaleString() : "--";
+		rowController.roleCount.textContent = stats ? stats.uniqueRoleCount.toLocaleString() : "--";
+	});
+}
+
+export function syncDisabledGameOptions(rowControllers) {
+	const selectedValues = rowControllers.map((rowController) => rowController.select.value).filter(Boolean);
+	const selectedSet = new Set(selectedValues);
+
+	rowControllers.forEach((rowController) => {
+		Array.from(rowController.select.options).forEach((option) => {
+			if (!option.value) {
+				option.disabled = false;
+				return;
+			}
+			option.disabled = option.value !== rowController.select.value && selectedSet.has(option.value);
+		});
+	});
+}
+
+export function setDefaultSelections(rowControllers, titleMap) {
+	const availableFiles = Object.keys(titleMap).sort();
+
+	rowControllers.forEach((rowController, index) => {
+		rowController.select.value = availableFiles[index] ?? availableFiles[0] ?? "";
 	});
 }

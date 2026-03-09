@@ -21,12 +21,7 @@ const solveWallFollower = (grid, handedness) => {
 		searchOrder.push(current);
 	}
 
-	return buildSolveResult({
-		searchOrder,
-		path,
-		deadEndOrder,
-		steps: searchOrder.length,
-	});
+	return buildSolveResult({ searchOrder, path, deadEndOrder, steps: searchOrder.length });
 };
 
 export const strategy = {

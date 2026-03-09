@@ -49,14 +49,8 @@
 			<hgroup>
 				<div class="article-meta">
 					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">
-						Published:
-						<time class="published" datetime="2018-10-15T00:00:00&#43;02:00">2018-10-15</time>
-					</div>
-					<div class="published-box">
-						Updated:
-						<time class="published" datetime="2026-03-07T20:41:00&#43;01:00">2026-03-07</time>
-					</div>
+					<div class="published-box">Published: <time class="published" datetime="2018-10-15T00:00:00&#43;02:00">2018-10-15</time></div>
+					<div class="published-box">Updated: <time class="published" datetime="2026-03-07T20:41:00&#43;01:00">2026-03-07</time></div>
 				</div>
 			</hgroup>
 			<p>
@@ -269,10 +263,7 @@
 			<h4 id="applicative">
 				<a class="self-link" href="#applicative"> Applicative </a>
 			</h4>
-			<p>
-				Can take a variable amount of inputs and return an output. Uses the
-				<code>pure</code> function and the <code>&lt;*&gt;</code> operator.
-			</p>
+			<p>Can take a variable amount of inputs and return an output. Uses the <code>pure</code> function and the <code>&lt;*&gt;</code> operator.</p>
 			<p>
 				<code>pure</code> lifts a function into a wrapped type, and <code>&lt;*&gt;</code> accepts a wrapped type and a variable, also wrapped. A &ldquo;wrapped type&rdquo; means a value inside some context, such as <code>Maybe Int</code>, <code>[Int]</code>, or <code>IO Int</code>. Here, &ldquo;context&rdquo; means
 				extra meaning around the value: <code>Maybe Int</code> means &ldquo;an Int that may be missing&rdquo;, <code>[Int]</code> means &ldquo;many Int values&rdquo;, and <code>IO Int</code> means &ldquo;an Int produced by interacting with the outside world&rdquo;.
@@ -285,10 +276,7 @@
 				Just like with applicatives, a monad works with values inside a context. Here, &ldquo;context&rdquo; again means that the value comes with some extra meaning or computational setting around it, such as optionality (<code>Maybe</code>), multiple results (<code>[]</code>), or I/O (<code>IO</code>). The bind
 				operator <code>&gt;&gt;=</code> takes a wrapped value, passes its inner value to the next function, and keeps the whole computation inside that same context.
 			</p>
-			<p>
-				From:
-				<a href="https://wiki.haskell.org/All_About_Monads">Haskell Wiki: All About Monads</a>
-			</p>
+			<p>From: <a href="https://wiki.haskell.org/All_About_Monads">Haskell Wiki: All About Monads</a></p>
 			<div class="highlight">
 				<pre
 					tabindex="0"
@@ -307,10 +295,7 @@
 				<a class="self-link" href="#parser-combinator"> Parser Combinator </a>
 			</h4>
 			<p>Accepts several parsers as input and returns a new parser as output.</p>
-			<p>
-				From:
-				<a href="https://en.wikipedia.org/wiki/Parser_combinator">Wikipedia: Parser Combinator</a>
-			</p>
+			<p>From: <a href="https://en.wikipedia.org/wiki/Parser_combinator">Wikipedia: Parser Combinator</a></p>
 			<p>A parser is a function that reads input text and tries to turn it into structured data. That output is often a parse tree, a syntax tree, or simply a result plus the remaining unparsed input.</p>
 			<p>For example:</p>
 			<p>A number parser accepts text that should represent a number and turns it into an actual numeric value.</p>
@@ -358,9 +343,7 @@
 		</main>
 		<footer>
 			<div class="copyright">
-				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a>
-				–
-				<a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
 					<sub>Last updated: <time id="updated">2026-03-07</time></sub>
