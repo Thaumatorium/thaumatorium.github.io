@@ -64,8 +64,14 @@ body {
 }
 
 body > main {
-	margin: 0;
-	padding: 3vw;
+	max-width: 75rem;
+	margin: 0 auto;
+	padding: 1.5rem;
+}
+
+body > main.projects {
+	max-width: none;
+	padding: 1.5rem 3rem;
 }
 
 body > main h1,
@@ -238,18 +244,6 @@ h6 > a.self-link::before {
 ul,
 ol {
 	padding: 10px 0 10px 30px;
-}
-
-@media (min-width: 720px) {
-	body > main {
-		margin: 0 10%;
-	}
-}
-
-@media (min-width: 1200px) {
-	body > main {
-		margin: 0 20%;
-	}
 }
 
 .crypto {

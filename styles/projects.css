@@ -54,10 +54,10 @@ textarea {
 
 .playground-page details {
 	border: 1px solid #cda9a9;
-	border-radius: 6px;
+	border-radius: 4px;
 	padding: 0.8rem 1rem 1rem;
 	background: #fff;
-	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+	box-shadow: 3px 3px 5px #555;
 }
 
 .playground-page summary {
@@ -89,7 +89,7 @@ textarea {
 	gap: 0.75rem;
 	padding: 0.75rem;
 	border: 1px solid #ead6d6;
-	border-radius: 6px;
+	border-radius: 4px;
 	background: #fffaf9;
 }
 

@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Optimizing your site by splitting JS/CSS into layers on Thaumatorium</title>
-    <link>http://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files/</link>
+    <link>http://localhost:1314/articles/splitting-js-css-into-2-or-3-files/</link>
     <description>Recent content in Optimizing your site by splitting JS/CSS into layers on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://thaumatorium.com/articles/splitting-js-css-into-2-or-3-files/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1314/articles/splitting-js-css-into-2-or-3-files/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

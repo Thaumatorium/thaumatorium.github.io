@@ -44,51 +44,64 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<main>
-			<h1>Configuring JMeter for Neo4j</h1>
-			<hgroup>
-				<div class="article-meta">
-					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2017-12-05T18:45:15&#43;01:00">2017-12-05</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T18:30:00&#43;02:00">2024-07-24</time></div>
-				</div>
-			</hgroup>
-			<p>
-				Watch <a href="https://www.youtube.com/watch?v=8loLHbhfyh0&list=PLhW3qG5bs-L-zox1h3eIL7CZh5zJmci4c&index=2" target="_blank" rel="noopener">these videos</a> to get a feel for JMeter if you don't know it yet (set speed to 2x and use the arrow keys to skip boring parts). YES, I KNOW IT'S FOR HTTP ONLY! It's just
-				so you get familiar fast with the UI 🙂
-			</p>
-			<h2>Steps to Configure JMeter for Neo4j</h2>
-			<ol>
-				<li>Create a Thread Group</li>
-				<li>Create a JDBC Connection Configuration via Add &gt; Config Element</li>
-				<li>Create a JDBC Request via Add &gt; Sampler</li>
-				<li>Create a View Results Tree (this shows the response data in a tab) via Add &gt; Listener</li>
-			</ol>
-			<p>You should have something like this:</p>
-			<img loading="lazy" src="u8Ppb0k.png" width="344" height="278" alt="JMeter Setup Example" />
-			<h3>Set the JDBC Connection Configuration:</h3>
-			<img loading="lazy" src="PlvrYhP.png" width="554" height="694" alt="JDBC Connection Configuration" />
-			<ul>
-				<li>jdbc:neo4j:bolt://localhost:7687</li>
-				<li>lass: org.neo4j.jdbc.Driver</li>
-				<li>neo4j</li>
-				<li>neo4j</li>
-			</ul>
-			<h3>Set the JDBC Request:</h3>
-			<p>(I can't tell you what to <em>exactly</em> put in the "SQL Query" part, because I don't know your data structures)</p>
-			<img loading="lazy" src="NQD3BAL.png" width="884" height="469" alt="JDBC Request Example" />
-			<h3>Download the JDBC Driver for Neo4j:</h3>
-			<p>Get <strong>neo4j-jdbc-driver-3.1.0.jar</strong> or a similar version:</p>
-			<ul>
-				<li><a href="https://github.com/neo4j-contrib/neo4j-jdbc/releases" target="_blank" rel="noopener">Neo4j JDBC Driver Releases</a></li>
-			</ul>
-			<h3>Add the JDBC Driver to the Library:</h3>
-			<p>Add the file to the <em>Library</em> in your <strong>Test Plan</strong>:</p>
-			<img loading="lazy" src="6QM6dtC.png" width="660" height="739" alt="Add JDBC Driver to Library" />
-			<h3>Run the Test:</h3>
-			<p>Press the Green Play button to run the test. You should see results. However, note that JMeter may have trouble with setting up multiple connections, which can cause errors (indicated by a red shield with a cross).</p>
-			<img loading="lazy" src="u9gjzi0.png" width="711" height="458" alt="JMeter Test Results" />
-			<p>This process should not have been this hard to find. It took me 3 frustrating hours to figure this out on my own. I suffered so you don't have to. 😒</p>
+		<main class="articles">
+			<article class="article-page">
+				<h1>Configuring JMeter for Neo4j</h1>
+				<p class="article-page-meta">
+					<span>NostraDavid</span>
+					<span aria-hidden="true">·</span>
+					<time datetime="2017-12-05T18:45:15&#43;01:00">2017-12-05</time>
+					<span aria-hidden="true">·</span>
+					<span>Updated <time datetime="2024-07-24T18:30:00&#43;02:00">2024-07-24</time></span>
+					<span aria-hidden="true">·</span>
+					<span>235 words</span>
+				</p>
+				<p>
+					Watch <a href="https://www.youtube.com/watch?v=8loLHbhfyh0&list=PLhW3qG5bs-L-zox1h3eIL7CZh5zJmci4c&index=2" target="_blank" rel="noopener">these videos</a> to get a feel for JMeter if you don't know it yet (set speed to 2x and use the arrow keys to skip boring parts). YES, I KNOW IT'S FOR HTTP ONLY! It's just
+					so you get familiar fast with the UI 🙂
+				</p>
+				<h2>Steps to Configure JMeter for Neo4j</h2>
+				<ol>
+					<li>Create a Thread Group</li>
+					<li>Create a JDBC Connection Configuration via Add &gt; Config Element</li>
+					<li>Create a JDBC Request via Add &gt; Sampler</li>
+					<li>Create a View Results Tree (this shows the response data in a tab) via Add &gt; Listener</li>
+				</ol>
+				<p>You should have something like this:</p>
+				<img loading="lazy" src="u8Ppb0k.png" width="344" height="278" alt="JMeter Setup Example" />
+				<h3>Set the JDBC Connection Configuration:</h3>
+				<img loading="lazy" src="PlvrYhP.png" width="554" height="694" alt="JDBC Connection Configuration" />
+				<ul>
+					<li>jdbc:neo4j:bolt://localhost:7687</li>
+					<li>lass: org.neo4j.jdbc.Driver</li>
+					<li>neo4j</li>
+					<li>neo4j</li>
+				</ul>
+				<h3>Set the JDBC Request:</h3>
+				<p>(I can't tell you what to <em>exactly</em> put in the "SQL Query" part, because I don't know your data structures)</p>
+				<img loading="lazy" src="NQD3BAL.png" width="884" height="469" alt="JDBC Request Example" />
+				<h3>Download the JDBC Driver for Neo4j:</h3>
+				<p>Get <strong>neo4j-jdbc-driver-3.1.0.jar</strong> or a similar version:</p>
+				<ul>
+					<li><a href="https://github.com/neo4j-contrib/neo4j-jdbc/releases" target="_blank" rel="noopener">Neo4j JDBC Driver Releases</a></li>
+				</ul>
+				<h3>Add the JDBC Driver to the Library:</h3>
+				<p>Add the file to the <em>Library</em> in your <strong>Test Plan</strong>:</p>
+				<img loading="lazy" src="6QM6dtC.png" width="660" height="739" alt="Add JDBC Driver to Library" />
+				<h3>Run the Test:</h3>
+				<p>Press the Green Play button to run the test. You should see results. However, note that JMeter may have trouble with setting up multiple connections, which can cause errors (indicated by a red shield with a cross).</p>
+				<img loading="lazy" src="u9gjzi0.png" width="711" height="458" alt="JMeter Test Results" />
+				<p>This process should not have been this hard to find. It took me 3 frustrating hours to figure this out on my own. I suffered so you don't have to. 😒</p>
+			</article>
+			<style>
+				.article-page-meta {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.88em;
+					margin-top: -0.5em;
+					margin-bottom: 1.5em;
+				}
+			</style>
 		</main>
 		<footer>
 			<div class="copyright">

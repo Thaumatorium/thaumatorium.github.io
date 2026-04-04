@@ -44,33 +44,20 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<main>
-			<section class="queue-sim-page">
+		<main class="projects">
+			<div class="queue-sim-page">
 				<style>
 					.queue-sim-page {
-						--bg: #f4efe5;
-						--panel: rgba(255, 251, 244, 0.92);
-						--panel-strong: #fffdf9;
-						--ink: #20150d;
-						--muted: #5c4636;
-						--border: #d6c3af;
-						--accent: #0f766e;
-						--accent-soft: rgba(15, 118, 110, 0.16);
-						--warn: #d97706;
-						--danger: #dc2626;
 						display: grid;
 						gap: 1rem;
-						margin-left: calc(50% - 50vw + 1rem);
-						margin-right: calc(50% - 50vw + 1rem);
-						padding: 0 0 1rem;
-						color: var(--ink);
+						color: #333;
 					}
 					.queue-sim-shell,
 					.queue-sim-panel {
-						border: 1px solid var(--border);
-						border-radius: 16px;
-						background: linear-gradient(180deg, var(--panel-strong), var(--panel));
-						box-shadow: 0 18px 36px rgba(58, 36, 18, 0.1);
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
+						background: #fffaf9;
+						box-shadow: 3px 3px 5px #555;
 					}
 					.queue-sim-shell {
 						display: grid;
@@ -93,17 +80,12 @@
 						margin: 0;
 						padding: 0;
 					}
-					.queue-sim-kicker {
-						color: var(--muted);
-						font-size: 0.88rem;
-						line-height: 1.5;
-					}
 					.queue-sim-title {
 						display: grid;
 						gap: 0.35rem;
 					}
 					.queue-sim-subtitle {
-						color: var(--muted);
+						color: #555;
 						font-size: 0.95rem;
 						line-height: 1.45;
 						max-width: 72ch;
@@ -116,21 +98,21 @@
 					.queue-sim-range {
 						display: grid;
 						gap: 0.35rem;
-						color: var(--muted);
+						color: #555;
 						font-size: 0.83rem;
 					}
 					.queue-sim-form input,
 					.queue-sim-form select {
-						border: 1px solid var(--border);
-						border-radius: 10px;
-						padding: 0.6rem 0.7rem;
-						background: #fffdfa;
-						color: var(--ink);
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						padding: 0.55rem 0.7rem;
+						background: #fff;
+						color: #333;
 						font: inherit;
 					}
 					.queue-sim-form input[type="range"] {
 						padding: 0;
-						accent-color: var(--accent);
+						accent-color: #800;
 					}
 					.queue-sim-inline {
 						display: grid;
@@ -150,7 +132,7 @@
 						align-items: end;
 					}
 					.queue-sim-note {
-						color: var(--muted);
+						color: #555;
 						font-size: 0.82rem;
 						line-height: 1.45;
 					}
@@ -163,9 +145,9 @@
 						overflow: hidden;
 						min-height: 24rem;
 						padding: 1.2rem 1.4rem;
-						border: 1px solid var(--border);
-						border-radius: 16px;
-						background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.09), transparent 32%), linear-gradient(180deg, #fffcf7, #f5eee2);
+						border: 1px solid #800;
+						border-radius: 4px;
+						background: #fff;
 					}
 					.queue-sim-flow {
 						display: flex;
@@ -178,7 +160,7 @@
 						display: grid;
 						justify-items: center;
 						gap: 0.55rem;
-						color: var(--muted);
+						color: #555;
 						font-size: 0.8rem;
 						text-transform: uppercase;
 						letter-spacing: 0.08em;
@@ -188,7 +170,7 @@
 						width: 72px;
 						height: 44px;
 						border-radius: 999px;
-						border: 2px dashed #b8a48f;
+						border: 2px dashed #cda9a9;
 						background: rgba(255, 255, 255, 0.7);
 					}
 					.queue-sim-exit::before {
@@ -196,13 +178,13 @@
 						width: 14px;
 						height: 14px;
 						border-radius: 999px;
-						background: var(--accent);
-						box-shadow: 0 0 16px rgba(15, 118, 110, 0.35);
+						background: #800;
+						box-shadow: 0 0 10px rgba(136, 0, 0, 0.35);
 					}
 					.queue-sim-arrow {
 						width: 38px;
 						height: 4px;
-						background: #b5a08c;
+						background: #cda9a9;
 						position: relative;
 					}
 					.queue-sim-arrow::after {
@@ -210,7 +192,7 @@
 						position: absolute;
 						right: -2px;
 						top: -5px;
-						border-left: 9px solid #8d7661;
+						border-left: 9px solid #800;
 						border-top: 7px solid transparent;
 						border-bottom: 7px solid transparent;
 					}
@@ -224,9 +206,9 @@
 					.queue-sim-queue,
 					.queue-sim-server {
 						min-height: 10rem;
-						border: 2px solid var(--border);
-						border-radius: 16px;
-						background: rgba(255, 255, 255, 0.7);
+						border: 1px solid #800;
+						border-radius: 4px;
+						background: #fffaf9;
 						padding: 0.85rem;
 						position: relative;
 					}
@@ -234,7 +216,8 @@
 						font-size: 0.75rem;
 						letter-spacing: 0.1em;
 						text-transform: uppercase;
-						color: var(--muted);
+						color: #800;
+						font-family: Tahoma, sans-serif;
 					}
 					.queue-area {
 						position: relative;
@@ -247,13 +230,13 @@
 					.queue-sim-server .slot {
 						min-height: 3rem;
 						margin-top: 0.8rem;
-						border: 1px dashed #baa894;
-						border-radius: 12px;
-						background: rgba(244, 239, 229, 0.8);
+						border: 1px dashed #cda9a9;
+						border-radius: 4px;
+						background: #fff;
 					}
 					.queue-sim-server.busy .slot {
-						border-color: var(--accent);
-						box-shadow: inset 0 0 0 2px var(--accent-soft);
+						border-color: #800;
+						box-shadow: inset 0 0 0 2px rgba(136, 0, 0, 0.15);
 					}
 					.customer-layer {
 						position: absolute;
@@ -264,9 +247,9 @@
 						position: absolute;
 						width: 36px;
 						height: 36px;
-						border-radius: 12px;
-						background: linear-gradient(135deg, #22c55e, #0ea5e9);
-						color: #0b1414;
+						border-radius: 4px;
+						background: #940000;
+						color: #fff;
 						display: flex;
 						align-items: center;
 						justify-content: center;
@@ -276,26 +259,26 @@
 						transition:
 							transform 0.65s cubic-bezier(0.22, 0.61, 0.36, 1),
 							opacity 0.35s ease;
-						box-shadow: 0 14px 18px rgba(15, 23, 42, 0.12);
+						box-shadow: 3px 3px 5px #555;
 					}
 					.customer.visible {
 						opacity: 1;
 					}
 					.customer.rejected {
-						background: linear-gradient(135deg, #fb923c, #f43f5e);
+						background: #d40000;
 					}
 					.queue-sim-strip {
 						display: flex;
 						flex-wrap: wrap;
 						gap: 0.75rem;
 						font-size: 0.84rem;
-						color: var(--muted);
+						color: #555;
 					}
 					.queue-sim-strip span {
 						padding: 0.45rem 0.75rem;
-						border: 1px solid var(--border);
-						border-radius: 999px;
-						background: rgba(255, 255, 255, 0.65);
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
+						background: #fffaf9;
 						font-variant-numeric: tabular-nums;
 					}
 					.queue-sim-stats {
@@ -304,19 +287,20 @@
 						gap: 0.75rem;
 					}
 					.queue-sim-stat {
-						border: 1px solid var(--border);
-						border-radius: 12px;
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
 						padding: 0.75rem;
-						background: rgba(255, 255, 255, 0.65);
+						background: #fffaf9;
 						display: grid;
 						gap: 0.25rem;
 						font-variant-numeric: tabular-nums;
 					}
 					.queue-sim-stat small {
-						color: var(--muted);
+						color: #800;
 						text-transform: uppercase;
 						letter-spacing: 0.08em;
 						font-size: 0.68rem;
+						font-family: Tahoma, sans-serif;
 					}
 					.queue-sim-stat strong {
 						font-size: 1rem;
@@ -328,15 +312,15 @@
 					.queue-sim-chart {
 						width: 100%;
 						height: 220px;
-						border: 1px solid var(--border);
-						border-radius: 14px;
-						background: linear-gradient(180deg, rgba(15, 118, 110, 0.05), rgba(255, 255, 255, 0.55)), repeating-linear-gradient(to top, rgba(92, 70, 54, 0.08), rgba(92, 70, 54, 0.08) 1px, transparent 1px, transparent 44px);
+						border: 1px solid #800;
+						border-radius: 4px;
+						background: #fff repeating-linear-gradient(to top, rgba(136, 0, 0, 0.06), rgba(136, 0, 0, 0.06) 1px, transparent 1px, transparent 44px);
 					}
 					.queue-sim-chart-legend {
 						display: flex;
 						flex-wrap: wrap;
 						gap: 1rem;
-						color: var(--muted);
+						color: #555;
 						font-size: 0.82rem;
 					}
 					.queue-sim-chart-key {
@@ -347,15 +331,11 @@
 					.queue-sim-chart-swatch {
 						width: 1.4rem;
 						height: 0.2rem;
-						border-radius: 999px;
+						border-radius: 4px;
 					}
 					@media (max-width: 980px) {
 						.queue-sim-shell {
 							grid-template-columns: 1fr;
-						}
-						.queue-sim-page {
-							margin-left: 0;
-							margin-right: 0;
 						}
 						.queue-sim-pipe {
 							grid-template-columns: 1fr;
@@ -535,15 +515,15 @@
 							<h3>History</h3>
 							<svg class="queue-sim-chart" id="historyChart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Queue history chart"></svg>
 							<div class="queue-sim-chart-legend">
-								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #0f766e"></span>Queue length</span>
-								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #2563eb"></span>System size</span>
-								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #dc2626"></span>Drops</span>
+								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #800"></span>Queue length</span>
+								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #470000"></span>System size</span>
+								<span class="queue-sim-chart-key"><span class="queue-sim-chart-swatch" style="background: #d40000"></span>Drops</span>
 							</div>
 						</section>
 					</section>
 				</section>
 				<script type="module" src="/projects/queueing-simulation/queueing-simulation.mjs"></script>
-			</section>
+			</div>
 		</main>
 		<footer>
 			<div class="copyright">

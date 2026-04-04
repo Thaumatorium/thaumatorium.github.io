@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming Logic Is Quaternary Not Binary (Tony Hoare did nothing wrong) on Thaumatorium</title>
-    <link>http://thaumatorium.com/articles/programming-logic-is-quaternary-not-binary/</link>
+    <link>http://thaum.localhost:1313/articles/programming-logic-is-quaternary-not-binary/</link>
     <description>Recent content in Programming Logic Is Quaternary Not Binary (Tony Hoare did nothing wrong) on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://thaumatorium.com/articles/programming-logic-is-quaternary-not-binary/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://thaum.localhost:1313/articles/programming-logic-is-quaternary-not-binary/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

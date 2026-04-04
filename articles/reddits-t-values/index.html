@@ -44,59 +44,72 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<main>
-			<h1>Understanding Reddit&#39;s T Values</h1>
-			<hgroup>
-				<div class="article-meta">
-					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2020-07-01T00:00:00&#43;01:00">2020-07-01</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T19:09:00&#43;02:00">2024-07-24</time></div>
-				</div>
-			</hgroup>
-			<p>If you have ever inspected Reddit's HTML structure, you might have come across various <var>t1_[ALPHANUMERIC]</var> values. These values, commonly referred to as "<strong>t values</strong>," are identifiers used by Reddit to categorize different types of content and user interactions on the platform.</p>
-			<p>Below is a comprehensive list of these <strong>t values</strong> and their corresponding explanations:</p>
-			<table>
-				<thead>
-					<tr>
-						<th>T Value</th>
-						<th>Explanation</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>t1</td>
-						<td>Comment: Represents a comment made by a user on a post.</td>
-					</tr>
-					<tr>
-						<td>t2</td>
-						<td>Account: Represents a user's account.</td>
-					</tr>
-					<tr>
-						<td>t3</td>
-						<td>Link: Represents a post that contains a link.</td>
-					</tr>
-					<tr>
-						<td>t4</td>
-						<td>Message: Represents a private message sent between users.</td>
-					</tr>
-					<tr>
-						<td>t5</td>
-						<td>Subreddit: Represents a subreddit, which is a community dedicated to a specific topic.</td>
-					</tr>
-					<tr>
-						<td>t6</td>
-						<td>Award: Represents an award given to a user or content.</td>
-					</tr>
-					<tr>
-						<td>t7</td>
-						<td>Not Used: There is no known t7 value.</td>
-					</tr>
-					<tr>
-						<td>t8</td>
-						<td>PromoCampaign: Represents a promotional campaign.</td>
-					</tr>
-				</tbody>
-			</table>
+		<main class="articles">
+			<article class="article-page">
+				<h1>Understanding Reddit&#39;s T Values</h1>
+				<p class="article-page-meta">
+					<span>NostraDavid</span>
+					<span aria-hidden="true">·</span>
+					<time datetime="2020-07-01T00:00:00&#43;01:00">2020-07-01</time>
+					<span aria-hidden="true">·</span>
+					<span>Updated <time datetime="2024-07-24T19:09:00&#43;02:00">2024-07-24</time></span>
+					<span aria-hidden="true">·</span>
+					<span>133 words</span>
+				</p>
+				<p>If you have ever inspected Reddit's HTML structure, you might have come across various <var>t1_[ALPHANUMERIC]</var> values. These values, commonly referred to as "<strong>t values</strong>," are identifiers used by Reddit to categorize different types of content and user interactions on the platform.</p>
+				<p>Below is a comprehensive list of these <strong>t values</strong> and their corresponding explanations:</p>
+				<table>
+					<thead>
+						<tr>
+							<th>T Value</th>
+							<th>Explanation</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>t1</td>
+							<td>Comment: Represents a comment made by a user on a post.</td>
+						</tr>
+						<tr>
+							<td>t2</td>
+							<td>Account: Represents a user's account.</td>
+						</tr>
+						<tr>
+							<td>t3</td>
+							<td>Link: Represents a post that contains a link.</td>
+						</tr>
+						<tr>
+							<td>t4</td>
+							<td>Message: Represents a private message sent between users.</td>
+						</tr>
+						<tr>
+							<td>t5</td>
+							<td>Subreddit: Represents a subreddit, which is a community dedicated to a specific topic.</td>
+						</tr>
+						<tr>
+							<td>t6</td>
+							<td>Award: Represents an award given to a user or content.</td>
+						</tr>
+						<tr>
+							<td>t7</td>
+							<td>Not Used: There is no known t7 value.</td>
+						</tr>
+						<tr>
+							<td>t8</td>
+							<td>PromoCampaign: Represents a promotional campaign.</td>
+						</tr>
+					</tbody>
+				</table>
+			</article>
+			<style>
+				.article-page-meta {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.88em;
+					margin-top: -0.5em;
+					margin-bottom: 1.5em;
+				}
+			</style>
 		</main>
 		<footer>
 			<div class="copyright">

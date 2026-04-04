@@ -44,13 +44,10 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<main>
+		<main class="projects">
 			<h1>Epoch Time Converter</h1>
-			<section class="epoch-page">
+			<div class="epoch-page">
 				<style>
-					body > main {
-						max-width: 100%;
-					}
 					.epoch-page {
 						display: grid;
 						gap: 1rem;
@@ -62,9 +59,9 @@
 						gap: 0.9rem;
 						padding: 1rem;
 						border: 1px solid #cda9a9;
-						border-radius: 8px;
+						border-radius: 4px;
 						background: #fffaf9;
-						box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+						box-shadow: 3px 3px 5px #555;
 					}
 					.epoch-toc {
 						display: flex;
@@ -78,8 +75,8 @@
 					.epoch-toc a {
 						display: inline-block;
 						padding: 0.2rem 0.55rem;
-						border: 1px solid #d8b3b3;
-						border-radius: 999px;
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
 						background: #fff;
 						text-decoration: none;
 					}
@@ -87,8 +84,8 @@
 						text-decoration: underline;
 					}
 					.epoch-current {
-						background: #edf8ee;
-						border-color: #bdd8c1;
+						background: #fff0f0;
+						border-color: #cda9a9;
 					}
 					.epoch-current-lines,
 					.epoch-output-grid,
@@ -131,10 +128,10 @@
 					}
 					.epoch-output {
 						padding: 0.75rem 0.85rem;
-						border: 1px solid #d8d8d8;
-						border-left: 4px solid #007bff;
-						border-radius: 6px;
-						background: #f7f9fb;
+						border: 1px solid #cda9a9;
+						border-left: 4px solid #800;
+						border-radius: 4px;
+						background: #fffaf9;
 					}
 					.epoch-output-label,
 					.epoch-copy-label {
@@ -146,7 +143,7 @@
 					.epoch-current-value {
 						margin: 0;
 						padding: 0.55rem 0.65rem;
-						border: 1px solid #ced4da;
+						border: 1px solid #cda9a9;
 						border-radius: 4px;
 						background: #fff;
 						cursor: pointer;
@@ -154,7 +151,7 @@
 					}
 					.epoch-output-value:hover,
 					.epoch-current-value:hover {
-						background: #f8f9fa;
+						background: #fff0f0;
 					}
 					.epoch-status {
 						margin: 0;
@@ -162,7 +159,7 @@
 						color: #6e0000;
 					}
 					.epoch-status[data-tone="error"] {
-						color: #a31717;
+						color: #800;
 					}
 					.epoch-hint {
 						margin: 0;
@@ -174,8 +171,8 @@
 					}
 					.epoch-table-wrap {
 						overflow-x: auto;
-						border: 1px solid #ddd;
-						border-radius: 8px;
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
 						background: #fff;
 					}
 					.epoch-table {
@@ -186,7 +183,7 @@
 					}
 					.epoch-table th,
 					.epoch-table td {
-						border: 1px solid #dee2e6;
+						border: 1px solid #800;
 						padding: 0.55rem 0.7rem;
 						text-align: left;
 						vertical-align: top;
@@ -194,14 +191,15 @@
 					.epoch-table thead th {
 						position: sticky;
 						top: 0;
-						background: #f1f3f5;
+						background: #800;
+						color: #fff;
 						z-index: 1;
 					}
 					.epoch-table td.copyable {
 						cursor: pointer;
 					}
 					.epoch-table td.copyable:hover {
-						background: #f8f9fa;
+						background: #fff0f0;
 					}
 					@media (max-width: 768px) {
 						.epoch-page {
@@ -212,20 +210,20 @@
 						}
 					}
 				</style>
-				<section class="epoch-panel epoch-current">
+				<div class="epoch-panel epoch-current">
 					<nav class="epoch-toc" aria-label="Page contents">
 						<span class="epoch-toc-label">On this page:</span>
 						<a href="#current-time">Current Time</a>
 						<a href="#single-converter">Single Converter</a>
 						<a href="#batch-converter">Batch Converter</a>
 					</nav>
-				</section>
-				<section class="epoch-panel epoch-current" id="current-time">
+				</div>
+				<div class="epoch-panel epoch-current" id="current-time">
 					<h2>Current Time</h2>
 					<div class="epoch-current-lines" id="currentTime"></div>
 					<p class="epoch-hint">Click any value to copy it.</p>
-				</section>
-				<section class="epoch-panel" id="single-converter">
+				</div>
+				<div class="epoch-panel" id="single-converter">
 					<h2>Single Converter</h2>
 					<div class="epoch-toolbar">
 						<div class="epoch-field grow">
@@ -274,8 +272,8 @@
 							<div class="epoch-output-value" id="singleNanoseconds">-</div>
 						</div>
 					</div>
-				</section>
-				<section class="epoch-panel" id="batch-converter">
+				</div>
+				<div class="epoch-panel" id="batch-converter">
 					<h2>Batch Converter</h2>
 					<div class="epoch-inline-fields">
 						<div class="epoch-field">
@@ -319,9 +317,9 @@
 							</table>
 						</div>
 					</div>
-				</section>
+				</div>
 				<script type="module" src="/projects/epoch/epoch.mjs"></script>
-			</section>
+			</div>
 			<style>
 				.project-index {
 					margin-top: 1.5em;
