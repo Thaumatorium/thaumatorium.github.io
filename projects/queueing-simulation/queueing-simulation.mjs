@@ -739,11 +739,11 @@ class QueueSimulation {
 		const line = (key) => data.map((point, index) => `${index === 0 ? "M" : "L"}${x(index)},${y(point[key])}`).join(" ");
 		const dropSegments = data
 			.filter((point) => point.drop)
-			.map((point, index) => `<circle cx="${x(data.indexOf(point))}" cy="${y(0.3)}" r="3.5" fill="#dc2626"></circle>`)
+			.map((point, index) => `<circle cx="${x(data.indexOf(point))}" cy="${y(0.3)}" r="3.5" fill="#d40000"></circle>`)
 			.join("");
 		svg.innerHTML = `
-      <path d="${line("system")}" fill="none" stroke="#2563eb" stroke-width="2.5"></path>
-      <path d="${line("queue")}" fill="none" stroke="#0f766e" stroke-width="2.5"></path>
+      <path d="${line("system")}" fill="none" stroke="#470000" stroke-width="2.5"></path>
+      <path d="${line("queue")}" fill="none" stroke="#800" stroke-width="2.5"></path>
       ${dropSegments}
     `;
 	}

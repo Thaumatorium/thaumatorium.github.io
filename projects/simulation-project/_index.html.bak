@@ -1,0 +1,1123 @@
+---
+title: "Summer / Winter Time Simulation"
+description: "Template project for simulating summer time and winter time behaviour."
+publishDate: 2026-04-01T12:00:00+02:00
+lastmod: 2026-04-01T12:00:00+02:00
+---
+
+<style>
+  .simulation-project-page {
+    color-scheme: dark;
+    --bg: #09111f;
+    --panel: #101a2b;
+    --panel-2: #0c1523;
+    --text: #e8eef9;
+    --muted: #96a3bb;
+    --border: #243248;
+    --accent: #7dd3fc;
+    --accent-2: #86efac;
+    --warn: #fca5a5;
+    --shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+  }
+
+  .simulation-project-page,
+  .simulation-project-page * {
+    box-sizing: border-box;
+  }
+
+  .simulation-project-page {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background:
+      radial-gradient(circle at top, rgba(125, 211, 252, 0.08), transparent 32%),
+      linear-gradient(180deg, #07101b 0%, #0b1423 100%);
+    color: var(--text);
+    min-height: 100%;
+    padding: 24px;
+  }
+
+  .simulation-project-page .app {
+    width: min(1400px, 100%);
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+  }
+
+  .simulation-project-page .panel {
+    background: linear-gradient(180deg, rgba(16, 26, 43, 0.96) 0%, rgba(12, 21, 35, 0.96) 100%);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+
+  .simulation-project-page .hero {
+    padding: 26px;
+    display: grid;
+    gap: 14px;
+  }
+
+  .simulation-project-page h1,
+  .simulation-project-page h2,
+  .simulation-project-page h3 {
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+
+  .simulation-project-page h1 {
+    font-size: clamp(1.9rem, 2.4vw, 3rem);
+    line-height: 1.05;
+  }
+
+  .simulation-project-page h2 {
+    font-size: 1.2rem;
+    padding: 22px 24px 0;
+  }
+
+  .simulation-project-page h3 {
+    font-size: 1rem;
+  }
+
+  .simulation-project-page p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .simulation-project-page .grid-2 {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .simulation-project-page .controls {
+    padding: 22px;
+    display: grid;
+    gap: 16px;
+    position: sticky;
+    top: 24px;
+  }
+
+  .simulation-project-page .control-group {
+    display: grid;
+    gap: 10px;
+    padding: 14px;
+    background: rgba(9, 17, 31, 0.52);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+
+  .simulation-project-page label {
+    font-size: 0.94rem;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .simulation-project-page .hint,
+  .simulation-project-page .mini {
+    font-size: 0.86rem;
+    color: var(--muted);
+  }
+
+  .simulation-project-page .mini code,
+  .simulation-project-page .hint code,
+  .simulation-project-page .legend code {
+    color: var(--text);
+    background: rgba(125, 211, 252, 0.08);
+    padding: 2px 6px;
+    border-radius: 8px;
+    border: 1px solid rgba(125, 211, 252, 0.12);
+  }
+
+  .simulation-project-page input,
+  .simulation-project-page select,
+  .simulation-project-page button {
+    width: 100%;
+    border: 1px solid var(--border);
+    background: rgba(6, 12, 22, 0.8);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font: inherit;
+  }
+
+  .simulation-project-page input[type='range'] {
+    padding: 0;
+    accent-color: #7dd3fc;
+  }
+
+  .simulation-project-page .inline-2,
+  .simulation-project-page .inline-3 {
+    display: grid;
+    gap: 10px;
+  }
+
+  .simulation-project-page .inline-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .simulation-project-page .inline-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .simulation-project-page .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .simulation-project-page .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    background: rgba(125, 211, 252, 0.08);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .simulation-project-page .content {
+    display: grid;
+    gap: 18px;
+  }
+
+  .simulation-project-page .section-body {
+    padding: 0 24px 24px;
+  }
+
+  .simulation-project-page .cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .simulation-project-page .card {
+    border: 1px solid var(--border);
+    background: rgba(8, 15, 27, 0.78);
+    border-radius: 18px;
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+  }
+
+  .simulation-project-page .scenario-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .simulation-project-page .scenario-title .offset {
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .simulation-project-page .metric-list {
+    display: grid;
+    gap: 8px;
+  }
+
+  .simulation-project-page .metric {
+    display: grid;
+    gap: 4px;
+  }
+
+  .simulation-project-page .metric-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+
+  .simulation-project-page .metric-head span:last-child {
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .simulation-project-page .bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(150, 163, 187, 0.12);
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(150, 163, 187, 0.1);
+  }
+
+  .simulation-project-page .bar > i {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(125, 211, 252, 0.6), rgba(134, 239, 172, 0.8));
+  }
+
+  .simulation-project-page .score {
+    display: grid;
+    gap: 8px;
+    padding-top: 4px;
+    border-top: 1px solid rgba(150, 163, 187, 0.12);
+  }
+
+  .simulation-project-page .score-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent-2);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .simulation-project-page .timeline-wrap {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .simulation-project-page .timeline {
+    min-width: 980px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: rgba(7, 13, 24, 0.92);
+    overflow: hidden;
+  }
+
+  .simulation-project-page svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .simulation-project-page .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+
+  .simulation-project-page .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .simulation-project-page .swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .simulation-project-page .swatch.sun {
+    background: rgba(250, 204, 21, 0.82);
+  }
+
+  .simulation-project-page .swatch.wake {
+    background: rgba(125, 211, 252, 0.2);
+  }
+
+  .simulation-project-page .swatch.noon {
+    background: rgba(244, 114, 182, 0.86);
+  }
+
+  .simulation-project-page .swatch.dst {
+    background: rgba(134, 239, 172, 0.24);
+  }
+
+  .simulation-project-page .summary-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 18px;
+  }
+
+  .simulation-project-page .findings,
+  .simulation-project-page .table-wrap,
+  .simulation-project-page .notes {
+    padding: 22px 24px 24px;
+  }
+
+  .simulation-project-page .findings {
+    display: grid;
+    gap: 14px;
+  }
+
+  .simulation-project-page .finding {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 14px;
+    background: rgba(9, 17, 31, 0.55);
+  }
+
+  .simulation-project-page .finding strong {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .simulation-project-page table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  .simulation-project-page th,
+  .simulation-project-page td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(150, 163, 187, 0.1);
+    vertical-align: top;
+  }
+
+  .simulation-project-page th {
+    color: var(--text);
+    font-size: 0.84rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  .simulation-project-page td {
+    color: var(--muted);
+  }
+
+  .simulation-project-page td strong {
+    color: var(--text);
+  }
+
+  .simulation-project-page .winner {
+    color: var(--accent-2);
+    font-weight: 700;
+  }
+
+  .simulation-project-page .small-note {
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1200px) {
+    .simulation-project-page .grid-2,
+    .simulation-project-page .summary-grid,
+    .simulation-project-page .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .simulation-project-page .controls {
+      position: static;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .simulation-project-page {
+      padding: 14px;
+    }
+
+    .simulation-project-page .hero,
+    .simulation-project-page .controls,
+    .simulation-project-page .section-body,
+    .simulation-project-page .findings,
+    .simulation-project-page .table-wrap,
+    .simulation-project-page .notes {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .simulation-project-page .inline-2,
+    .simulation-project-page .inline-3 {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<div class="simulation-project-page">
+  <div class="app">
+  <section class="panel hero">
+    <div class="badge-row">
+      <span class="badge">Nederland · tijdzone-simulatie</span>
+      <span class="badge">UTC versus CET</span>
+      <span class="badge">Met en zonder zomertijd</span>
+    </div>
+    <h1>Welke tijdzone past Nederland het best?</h1>
+    <p>
+      Deze simulatie vergelijkt vier regimes voor Nederland: <strong>UTC</strong>, <strong>UTC met zomertijd</strong>,
+      <strong>CET</strong> en <strong>CET met zomertijd</strong>. De vergelijking gebeurt op basis van
+      <strong>zonne-noen</strong>, <strong>zonsopkomst</strong>, <strong>zonsondergang</strong> en hoeveel daglicht binnen jouw wakkere uren valt.
+    </p>
+    <p class="mini">
+      Werkhypothese: de zonneposities worden benaderd met een standaard astronomische benadering. Deze pagina laat dus vooral de
+      <em>structurele trade-offs</em> zien: astronomische correctheid tegenover latere avonden en donkerdere ochtenden.
+    </p>
+  </section>
+
+  <div class="grid-2">
+    <aside class="panel controls">
+      <div class="control-group">
+        <label for="preset">Referentiepunt</label>
+        <select id="preset">
+          <option value="amsterdam">Amsterdam</option>
+          <option value="utrecht">Utrecht</option>
+          <option value="groningen">Groningen</option>
+          <option value="maastricht">Maastricht</option>
+          <option value="nlmid">Midden van Nederland</option>
+          <option value="custom">Aangepast</option>
+        </select>
+        <div class="inline-2">
+          <div>
+            <label for="lat">Breedtegraad</label>
+            <input id="lat" type="number" step="0.0001" min="50" max="54" value="52.3676" />
+          </div>
+          <div>
+            <label for="lon">Lengtegraad</label>
+            <input id="lon" type="number" step="0.0001" min="3" max="8" value="4.9041" />
+          </div>
+        </div>
+        <p class="hint">Voor Nederland is vooral de lengtegraad belangrijk: hoe verder oostelijk, hoe later UTC minder logisch wordt.</p>
+      </div>
+
+      <div class="control-group">
+        <label for="date">Dagvergelijking</label>
+        <input id="date" type="date" />
+        <div class="inline-3">
+          <button type="button" data-date="winter">Winter</button>
+          <button type="button" data-date="equinox">Lente/herfst</button>
+          <button type="button" data-date="summer">Zomer</button>
+        </div>
+        <p class="hint">De daggrafiek toont per scenario hoe dezelfde astronomische dag op de klok valt.</p>
+      </div>
+
+      <div class="control-group">
+        <label for="year">Jaar</label>
+        <input id="year" type="number" min="2020" max="2035" step="1" value="2026" />
+        <p class="hint">De jaarsamenvatting loopt over alle dagen van dit jaar. Voor de scenario’s met zomertijd wordt de Europese regel toegepast.</p>
+      </div>
+
+      <div class="control-group">
+        <label for="wakeStart">Wakker vanaf: <span id="wakeStartLabel">07:00</span></label>
+        <input id="wakeStart" type="range" min="240" max="720" step="15" value="420" />
+        <label for="wakeEnd">Naar bed om: <span id="wakeEndLabel">23:00</span></label>
+        <input id="wakeEnd" type="range" min="960" max="1560" step="15" value="1380" />
+        <p class="hint">Dit beïnvloedt de maatschappelijke score: welk regime schuift daglicht het best in jouw actieve uren?</p>
+      </div>
+
+      <div class="control-group">
+        <label for="morningWindow">Ochtend-venster: <span id="morningWindowLabel">3 uur</span></label>
+        <input id="morningWindow" type="range" min="60" max="300" step="30" value="180" />
+        <label for="eveningWindow">Avond-venster: <span id="eveningWindowLabel">4 uur</span></label>
+        <input id="eveningWindow" type="range" min="60" max="360" step="30" value="240" />
+        <p class="hint">Hiermee kun je de waarde van lichte ochtenden en lichte avonden zichtbaar maken.</p>
+      </div>
+    </aside>
+
+    <div class="content">
+      <section class="panel">
+        <h2>Daggrafiek</h2>
+        <div class="section-body">
+          <p id="dailySummary"></p>
+          <div class="timeline-wrap">
+            <div class="timeline" id="timeline"></div>
+          </div>
+          <div class="legend">
+            <span class="legend-item"><i class="swatch wake"></i> wakkere uren</span>
+            <span class="legend-item"><i class="swatch sun"></i> daglicht</span>
+            <span class="legend-item"><i class="swatch noon"></i> zonne-noen</span>
+            <span class="legend-item"><i class="swatch dst"></i> zomertijd actief</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Jaarsamenvatting</h2>
+        <div class="section-body">
+          <p id="annualSummary"></p>
+          <div class="cards" id="scenarioCards"></div>
+        </div>
+      </section>
+
+      <section class="summary-grid">
+        <section class="panel">
+          <h2>Conclusies uit deze simulatie</h2>
+          <div class="findings" id="findings"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Vergelijkingstabel</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Beste</th>
+                  <th>Waarom</th>
+                </tr>
+              </thead>
+              <tbody id="winnerTable"></tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <h2>Leeswijzer</h2>
+        <div class="notes">
+          <p class="small-note">
+            <strong>Astronomisch beste</strong> betekent: zonne-noen ligt het dichtst bij 12:00 op de klok.
+            <strong>Maatschappelijk beste</strong> betekent hier: het meeste daglicht valt binnen de ingestelde wakkere uren.
+            Een systeem met zomertijd wint vaak op avondlicht, maar verliest meestal op ochtendlicht en astronomische zuiverheid.
+          </p>
+          <p class="small-note" style="margin-top: 12px;">
+            De simulatie beweert niet dat één antwoord normatief verplicht is. Zij laat de onderliggende ruil zien:
+            <strong>UTC</strong> sluit beter aan op de zon; <strong>CET</strong> en vooral <strong>CET + zomertijd</strong>
+            verschuiven het daglicht later op de klok, wat vaak prettiger is voor avondgebruik maar ongunstiger voor ochtendlicht.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+  </div>
+</div>
+
+<script>
+  const presets = {
+    amsterdam: { label: 'Amsterdam', lat: 52.3676, lon: 4.9041 },
+    utrecht: { label: 'Utrecht', lat: 52.0907, lon: 5.1214 },
+    groningen: { label: 'Groningen', lat: 53.2194, lon: 6.5665 },
+    maastricht: { label: 'Maastricht', lat: 50.8514, lon: 5.6900 },
+    nlmid: { label: 'Midden van Nederland', lat: 52.1326, lon: 5.2913 },
+    custom: { label: 'Aangepast' }
+  };
+
+  const scenarios = [
+    {
+      key: 'utc',
+      name: 'UTC',
+      subtitle: 'geen zomertijd',
+      offsetMinutes: (date) => 0,
+      baseOffset: 'UTC+0'
+    },
+    {
+      key: 'utc_dst',
+      name: 'UTC + zomertijd',
+      subtitle: 'UTC in winter, UTC+1 in zomer',
+      offsetMinutes: (date) => isDstEu(date) ? 60 : 0,
+      baseOffset: 'UTC+0 / UTC+1'
+    },
+    {
+      key: 'cet',
+      name: 'CET',
+      subtitle: 'vaste wintertijd',
+      offsetMinutes: (date) => 60,
+      baseOffset: 'UTC+1'
+    },
+    {
+      key: 'cet_dst',
+      name: 'CET + zomertijd',
+      subtitle: 'huidig Nederlands systeem',
+      offsetMinutes: (date) => isDstEu(date) ? 120 : 60,
+      baseOffset: 'UTC+1 / UTC+2'
+    }
+  ];
+
+  const els = {
+    preset: document.getElementById('preset'),
+    lat: document.getElementById('lat'),
+    lon: document.getElementById('lon'),
+    date: document.getElementById('date'),
+    year: document.getElementById('year'),
+    wakeStart: document.getElementById('wakeStart'),
+    wakeEnd: document.getElementById('wakeEnd'),
+    morningWindow: document.getElementById('morningWindow'),
+    eveningWindow: document.getElementById('eveningWindow'),
+    wakeStartLabel: document.getElementById('wakeStartLabel'),
+    wakeEndLabel: document.getElementById('wakeEndLabel'),
+    morningWindowLabel: document.getElementById('morningWindowLabel'),
+    eveningWindowLabel: document.getElementById('eveningWindowLabel'),
+    dailySummary: document.getElementById('dailySummary'),
+    annualSummary: document.getElementById('annualSummary'),
+    timeline: document.getElementById('timeline'),
+    scenarioCards: document.getElementById('scenarioCards'),
+    findings: document.getElementById('findings'),
+    winnerTable: document.getElementById('winnerTable')
+  };
+
+  function todayIso() {
+    const now = new Date();
+    const y = now.getFullYear();
+    const m = String(now.getMonth() + 1).padStart(2, '0');
+    const d = String(now.getDate()).padStart(2, '0');
+    return `${y}-${m}-${d}`;
+  }
+
+  if (!els.date.value) {
+    els.date.value = todayIso();
+  }
+
+  document.querySelectorAll('[data-date]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const year = Number(els.year.value) || 2026;
+      if (button.dataset.date === 'winter') {
+        els.date.value = `${year}-12-21`;
+      } else if (button.dataset.date === 'equinox') {
+        els.date.value = `${year}-03-20`;
+      } else {
+        els.date.value = `${year}-06-21`;
+      }
+      update();
+    });
+  });
+
+  els.preset.addEventListener('change', () => {
+    const preset = presets[els.preset.value];
+    if (preset && els.preset.value !== 'custom') {
+      els.lat.value = preset.lat;
+      els.lon.value = preset.lon;
+    }
+    update();
+  });
+
+  [els.lat, els.lon, els.date, els.year, els.wakeStart, els.wakeEnd, els.morningWindow, els.eveningWindow]
+    .forEach((el) => el.addEventListener('input', update));
+
+  function clamp(value, min, max) {
+    return Math.min(max, Math.max(min, value));
+  }
+
+  function pad2(value) {
+    return String(value).padStart(2, '0');
+  }
+
+  function formatMinutes(totalMinutes) {
+    let minutes = totalMinutes;
+    while (minutes < 0) minutes += 1440;
+    while (minutes >= 1440) minutes -= 1440;
+    const h = Math.floor(minutes / 60);
+    const m = Math.round(minutes % 60);
+    return `${pad2(h)}:${pad2(m)}`;
+  }
+
+  function formatDurationMinutes(value) {
+    const sign = value < 0 ? '-' : '';
+    const abs = Math.abs(Math.round(value));
+    const h = Math.floor(abs / 60);
+    const m = abs % 60;
+    if (h > 0) {
+      return `${sign}${h}u ${m}m`;
+    }
+    return `${sign}${m}m`;
+  }
+
+  function formatDurationHours(value) {
+    const hours = value / 60;
+    return `${hours.toFixed(1).replace('.', ',')} u`;
+  }
+
+  function dayOfYear(date) {
+    const start = new Date(Date.UTC(date.getUTCFullYear(), 0, 0));
+    const diff = date - start;
+    return Math.floor(diff / 86400000);
+  }
+
+  function lastSundayUtc(year, monthIndex) {
+    const date = new Date(Date.UTC(year, monthIndex + 1, 0, 1, 0, 0));
+    const day = date.getUTCDay();
+    date.setUTCDate(date.getUTCDate() - day);
+    return date;
+  }
+
+  function isDstEu(date) {
+    const year = date.getUTCFullYear();
+    const start = lastSundayUtc(year, 2);
+    const end = lastSundayUtc(year, 9);
+    return date >= start && date < end;
+  }
+
+  function solarEvents(date, lat, lon) {
+    const n = dayOfYear(date);
+    const gamma = 2 * Math.PI / 365 * (n - 1);
+    const eqTime = 229.18 * (
+      0.000075
+      + 0.001868 * Math.cos(gamma)
+      - 0.032077 * Math.sin(gamma)
+      - 0.014615 * Math.cos(2 * gamma)
+      - 0.040849 * Math.sin(2 * gamma)
+    );
+    const decl =
+      0.006918
+      - 0.399912 * Math.cos(gamma)
+      + 0.070257 * Math.sin(gamma)
+      - 0.006758 * Math.cos(2 * gamma)
+      + 0.000907 * Math.sin(2 * gamma)
+      - 0.002697 * Math.cos(3 * gamma)
+      + 0.00148 * Math.sin(3 * gamma);
+
+    const latRad = lat * Math.PI / 180;
+    const zenith = 90.833 * Math.PI / 180;
+    const cosH = (Math.cos(zenith) / (Math.cos(latRad) * Math.cos(decl))) - Math.tan(latRad) * Math.tan(decl);
+    const safeCosH = clamp(cosH, -1, 1);
+    const ha = Math.acos(safeCosH);
+    const haDeg = ha * 180 / Math.PI;
+    const solarNoonUtc = 720 - (4 * lon) - eqTime;
+    const sunriseUtc = solarNoonUtc - haDeg * 4;
+    const sunsetUtc = solarNoonUtc + haDeg * 4;
+
+    return {
+      eqTime,
+      decl,
+      solarNoonUtc,
+      sunriseUtc,
+      sunsetUtc,
+      dayLength: sunsetUtc - sunriseUtc
+    };
+  }
+
+  function overlap(aStart, aEnd, bStart, bEnd) {
+    const start = Math.max(aStart, bStart);
+    const end = Math.min(aEnd, bEnd);
+    return Math.max(0, end - start);
+  }
+
+  function scenarioDay(date, lat, lon, scenario) {
+    const solar = solarEvents(date, lat, lon);
+    const offset = scenario.offsetMinutes(date);
+    return {
+      offset,
+      dst: isDstEu(date) && (scenario.key === 'utc_dst' || scenario.key === 'cet_dst'),
+      solarNoonLocal: solar.solarNoonUtc + offset,
+      sunriseLocal: solar.sunriseUtc + offset,
+      sunsetLocal: solar.sunsetUtc + offset,
+      dayLength: solar.dayLength,
+      solarNoonUtc: solar.solarNoonUtc,
+      sunriseUtc: solar.sunriseUtc,
+      sunsetUtc: solar.sunsetUtc
+    };
+  }
+
+  function getInputs() {
+    let lat = Number(els.lat.value);
+    let lon = Number(els.lon.value);
+    lat = clamp(isFinite(lat) ? lat : 52.3676, 50, 54);
+    lon = clamp(isFinite(lon) ? lon : 4.9041, 3, 8);
+    els.lat.value = lat;
+    els.lon.value = lon;
+
+    const wakeStart = Number(els.wakeStart.value);
+    let wakeEnd = Number(els.wakeEnd.value);
+    if (wakeEnd <= wakeStart + 60) {
+      wakeEnd = wakeStart + 60;
+      els.wakeEnd.value = wakeEnd;
+    }
+
+    const morningWindow = Number(els.morningWindow.value);
+    const eveningWindow = Number(els.eveningWindow.value);
+    const date = new Date(`${els.date.value}T12:00:00Z`);
+    const year = Number(els.year.value) || 2026;
+
+    return { lat, lon, wakeStart, wakeEnd, morningWindow, eveningWindow, date, year };
+  }
+
+  function updateLabels(state) {
+    els.wakeStartLabel.textContent = formatMinutes(state.wakeStart);
+    els.wakeEndLabel.textContent = formatMinutes(state.wakeEnd);
+    els.morningWindowLabel.textContent = `${Math.round(state.morningWindow / 60)} uur`;
+    els.eveningWindowLabel.textContent = `${Math.round(state.eveningWindow / 60)} uur`;
+  }
+
+  function renderTimeline(state, daily) {
+    const width = 1120;
+    const left = 160;
+    const right = 28;
+    const top = 28;
+    const rowH = 68;
+    const bottom = 42;
+    const innerWidth = width - left - right;
+    const height = top + scenarios.length * rowH + bottom;
+    const xForMinutes = (minutes) => left + (minutes / 1440) * innerWidth;
+
+    let svg = `
+      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Daggrafiek voor vier tijdregimes">
+        <rect x="0" y="0" width="${width}" height="${height}" fill="rgba(7,13,24,0.92)" />
+    `;
+
+    for (let hour = 0; hour <= 24; hour++) {
+      const x = xForMinutes(hour * 60);
+      svg += `
+        <line x1="${x}" y1="${top - 8}" x2="${x}" y2="${height - bottom + 8}" stroke="rgba(150,163,187,${hour % 6 === 0 ? 0.24 : 0.12})" stroke-width="1" />
+      `;
+      if (hour < 24) {
+        svg += `<text x="${x + 2}" y="20" fill="rgba(232,238,249,0.75)" font-size="12">${pad2(hour)}:00</text>`;
+      }
+    }
+
+    daily.forEach((row, index) => {
+      const y = top + index * rowH;
+      const barY = y + 22;
+      const wakeX = xForMinutes(state.wakeStart);
+      const wakeW = xForMinutes(state.wakeEnd) - wakeX;
+      const sunX = xForMinutes(row.sunriseLocal);
+      const sunW = xForMinutes(row.sunsetLocal) - sunX;
+      const noonX = xForMinutes(row.solarNoonLocal);
+      const dstFill = row.dst ? 'rgba(134,239,172,0.08)' : 'transparent';
+
+      svg += `
+        <rect x="${left}" y="${y + 8}" width="${innerWidth}" height="42" rx="12" fill="${dstFill}" stroke="rgba(150,163,187,0.08)" />
+        <text x="16" y="${y + 24}" fill="#e8eef9" font-size="14" font-weight="700">${row.name}</text>
+        <text x="16" y="${y + 42}" fill="#96a3bb" font-size="12">${row.subtitle}</text>
+        <rect x="${wakeX}" y="${barY}" width="${wakeW}" height="14" rx="7" fill="rgba(125,211,252,0.18)" stroke="rgba(125,211,252,0.18)" />
+        <rect x="${sunX}" y="${barY}" width="${sunW}" height="14" rx="7" fill="rgba(250,204,21,0.84)" />
+        <line x1="${noonX}" y1="${barY - 6}" x2="${noonX}" y2="${barY + 20}" stroke="rgba(244,114,182,0.9)" stroke-width="2" />
+        <text x="${xForMinutes(1440) - 150}" y="${y + 24}" fill="#e8eef9" font-size="13">${formatMinutes(row.sunriseLocal)} · ${formatMinutes(row.solarNoonLocal)} · ${formatMinutes(row.sunsetLocal)}</text>
+      `;
+    });
+
+    svg += '</svg>';
+    els.timeline.innerHTML = svg;
+  }
+
+  function rankScenarios(annual) {
+    const sortedBy = (selector, direction = 'desc') => {
+      return [...annual].sort((a, b) => direction === 'desc' ? selector(b) - selector(a) : selector(a) - selector(b));
+    };
+
+    return {
+      astronomy: sortedBy((row) => row.noonDeviation, 'asc')[0],
+      wakeLight: sortedBy((row) => row.daylightInWake)[0],
+      morning: sortedBy((row) => row.morningLight)[0],
+      evening: sortedBy((row) => row.eveningLight)[0],
+      fewestLateSunrises: sortedBy((row) => row.lateSunriseDays, 'asc')[0]
+    };
+  }
+
+  function renderCards(state, annual) {
+    const maxWake = Math.max(...annual.map((row) => row.daylightInWake));
+    const maxMorning = Math.max(...annual.map((row) => row.morningLight));
+    const maxEvening = Math.max(...annual.map((row) => row.eveningLight));
+    const maxNoonDeviation = Math.max(...annual.map((row) => row.noonDeviation));
+    const maxLate = Math.max(...annual.map((row) => row.lateSunriseDays));
+
+    els.scenarioCards.innerHTML = annual.map((row) => {
+      const score = row.compositeScore;
+      return `
+        <article class="card">
+          <div class="scenario-title">
+            <div>
+              <h3>${row.name}</h3>
+              <p class="mini">${row.subtitle}</p>
+            </div>
+            <div class="offset">${row.baseOffset}</div>
+          </div>
+
+          <div class="metric-list">
+            <div class="metric">
+              <div class="metric-head"><span>Zonne-noen t.o.v. 12:00</span><span>${formatDurationMinutes(row.noonDeviation)}</span></div>
+              <div class="bar"><i style="width:${100 * (1 - row.noonDeviation / Math.max(maxNoonDeviation, 1))}%"></i></div>
+            </div>
+            <div class="metric">
+              <div class="metric-head"><span>Daglicht in wakkere uren</span><span>${formatDurationHours(row.daylightInWake)}</span></div>
+              <div class="bar"><i style="width:${100 * row.daylightInWake / Math.max(maxWake, 1)}%"></i></div>
+            </div>
+            <div class="metric">
+              <div class="metric-head"><span>Ochtendlicht</span><span>${formatDurationHours(row.morningLight)}</span></div>
+              <div class="bar"><i style="width:${100 * row.morningLight / Math.max(maxMorning, 1)}%"></i></div>
+            </div>
+            <div class="metric">
+              <div class="metric-head"><span>Avondlicht</span><span>${formatDurationHours(row.eveningLight)}</span></div>
+              <div class="bar"><i style="width:${100 * row.eveningLight / Math.max(maxEvening, 1)}%"></i></div>
+            </div>
+            <div class="metric">
+              <div class="metric-head"><span>Late zonsopkomsten</span><span>${row.lateSunriseDays} dagen</span></div>
+              <div class="bar"><i style="width:${100 * (1 - row.lateSunriseDays / Math.max(maxLate, 1 || 1))}%"></i></div>
+            </div>
+          </div>
+
+          <div class="score">
+            <span class="mini">Gebalanceerde indicatiescore</span>
+            <span class="score-value">${score.toFixed(1)}</span>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  function winnerRows(annual) {
+    const winners = rankScenarios(annual);
+    return [
+      {
+        label: 'Astronomische juistheid',
+        winner: winners.astronomy,
+        why: 'Minste afwijking tussen zonne-noen en 12:00 op de klok.'
+      },
+      {
+        label: 'Meeste daglicht tijdens wakker zijn',
+        winner: winners.wakeLight,
+        why: 'Maximaliseert daglicht binnen het ingestelde dagritme.'
+      },
+      {
+        label: 'Lichtste ochtenden',
+        winner: winners.morning,
+        why: 'Meeste daglicht in het ochtend-venster direct na opstaan.'
+      },
+      {
+        label: 'Lichtste avonden',
+        winner: winners.evening,
+        why: 'Meeste daglicht in het avond-venster voor bedtijd.'
+      },
+      {
+        label: 'Weinigste donkere starts',
+        winner: winners.fewestLateSunrises,
+        why: 'Minst aantal dagen waarop de zon pas ná het opstaan opkomt.'
+      }
+    ];
+  }
+
+  function renderWinners(annual) {
+    const rows = winnerRows(annual);
+    els.winnerTable.innerHTML = rows.map((row) => `
+      <tr>
+        <td><strong>${row.label}</strong></td>
+        <td class="winner">${row.winner.name}</td>
+        <td>${row.why}</td>
+      </tr>
+    `).join('');
+  }
+
+  function renderFindings(state, annual) {
+    const winners = rankScenarios(annual);
+    const current = annual.find((row) => row.key === 'cet_dst');
+    const fixedCet = annual.find((row) => row.key === 'cet');
+    const fixedUtc = annual.find((row) => row.key === 'utc');
+    const utcDst = annual.find((row) => row.key === 'utc_dst');
+    const city = currentPresetLabel();
+
+    const findings = [
+      {
+        title: 'Astronomisch uitgangspunt',
+        body: `${winners.astronomy.name} ligt het dichtst bij zonne-noen rond 12:00. Voor ${city} is dat typisch het regime dat het minst van de natuurlijke zonnetijd afwijkt.`
+      },
+      {
+        title: 'Wat zomertijd koopt',
+        body: `${current.name} en ${utcDst.name} schuiven licht systematisch later op de klok. Dat levert meer avondlicht op, maar ook meer donkere of halfdonkere ochtenden.`
+      },
+      {
+        title: 'Huidige Nederlandse keuze',
+        body: `${current.name} maximaliseert in veel ritmes het gevoel van lange avonden, maar doet dat door Nederland nog verder van de zonnetijd te plaatsen dan vaste CET of vaste UTC.`
+      },
+      {
+        title: 'Vaste CET versus vaste UTC',
+        body: `${fixedCet.name} biedt later licht dan ${fixedUtc.name}, maar ${fixedUtc.name} is meestal strakker uitgelijnd met de zon. De keuze tussen die twee is dus vooral: sociale klok later zetten of astronomisch netter blijven.`
+      },
+      {
+        title: 'Praktisch leesresultaat',
+        body: `Als jouw prioriteit zonne-logica en vroege ochtenden is, wijst deze simulatie meestal naar ${winners.astronomy.name}. Als jouw prioriteit avondlicht is, wint doorgaans ${winners.evening.name}.`
+      }
+    ];
+
+    els.findings.innerHTML = findings.map((item) => `
+      <div class="finding">
+        <strong>${item.title}</strong>
+        <p>${item.body}</p>
+      </div>
+    `).join('');
+  }
+
+  function currentPresetLabel() {
+    const preset = els.preset.value;
+    if (preset === 'custom') {
+      return `de gekozen locatie (${Number(els.lat.value).toFixed(2)}°, ${Number(els.lon.value).toFixed(2)}°)`;
+    }
+    return presets[preset].label;
+  }
+
+  function compositeScore(row, annual) {
+    const maxNoon = Math.max(...annual.map((it) => it.noonDeviation));
+    const maxWake = Math.max(...annual.map((it) => it.daylightInWake));
+    const maxMorning = Math.max(...annual.map((it) => it.morningLight));
+    const maxEvening = Math.max(...annual.map((it) => it.eveningLight));
+    const maxLate = Math.max(...annual.map((it) => it.lateSunriseDays));
+
+    const astronomyScore = 1 - (row.noonDeviation / Math.max(maxNoon, 1));
+    const wakeScore = row.daylightInWake / Math.max(maxWake, 1);
+    const morningScore = row.morningLight / Math.max(maxMorning, 1);
+    const eveningScore = row.eveningLight / Math.max(maxEvening, 1);
+    const lateScore = 1 - (row.lateSunriseDays / Math.max(maxLate, 1));
+
+    return 100 * (0.30 * astronomyScore + 0.30 * wakeScore + 0.15 * morningScore + 0.15 * eveningScore + 0.10 * lateScore);
+  }
+
+  function annualMetrics(state) {
+    const morningEnd = state.wakeStart + state.morningWindow;
+    const eveningStart = state.wakeEnd - state.eveningWindow;
+    const rows = scenarios.map((scenario) => ({
+      key: scenario.key,
+      name: scenario.name,
+      subtitle: scenario.subtitle,
+      baseOffset: scenario.baseOffset,
+      noonDeviation: 0,
+      daylightInWake: 0,
+      morningLight: 0,
+      eveningLight: 0,
+      lateSunriseDays: 0
+    }));
+
+    for (let month = 0; month < 12; month++) {
+      const daysInMonth = new Date(Date.UTC(state.year, month + 1, 0)).getUTCDate();
+      for (let day = 1; day <= daysInMonth; day++) {
+        const date = new Date(Date.UTC(state.year, month, day, 12, 0, 0));
+        rows.forEach((row, index) => {
+          const info = scenarioDay(date, state.lat, state.lon, scenarios[index]);
+          row.noonDeviation += Math.abs(info.solarNoonLocal - 720);
+          row.daylightInWake += overlap(info.sunriseLocal, info.sunsetLocal, state.wakeStart, state.wakeEnd);
+          row.morningLight += overlap(info.sunriseLocal, info.sunsetLocal, state.wakeStart, morningEnd);
+          row.eveningLight += overlap(info.sunriseLocal, info.sunsetLocal, eveningStart, state.wakeEnd);
+          if (info.sunriseLocal > state.wakeStart) {
+            row.lateSunriseDays += 1;
+          }
+        });
+      }
+    }
+
+    rows.forEach((row) => {
+      row.noonDeviation = row.noonDeviation / 365;
+    });
+
+    rows.forEach((row) => {
+      row.compositeScore = compositeScore(row, rows);
+    });
+
+    return rows;
+  }
+
+  function renderSummaries(state, daily, annual) {
+    const presetLabel = currentPresetLabel();
+    const selectedDate = state.date.toLocaleDateString('nl-NL', { timeZone: 'UTC', year: 'numeric', month: 'long', day: 'numeric' });
+    const bestAstronomy = rankScenarios(annual).astronomy;
+    const bestWake = rankScenarios(annual).wakeLight;
+    const current = annual.find((row) => row.key === 'cet_dst');
+
+    els.dailySummary.innerHTML = `Voor <strong>${selectedDate}</strong> op <strong>${presetLabel}</strong> zie je exact dezelfde zon, maar een andere klok. Daardoor verschuiven zonsopkomst, zonne-noen en zonsondergang zichtbaar tussen de vier regimes.`;
+    els.annualSummary.innerHTML = `Over heel <strong>${state.year}</strong> blijkt in deze simulatie dat <strong>${bestAstronomy.name}</strong> het best met de zon uitlijnt, terwijl <strong>${bestWake.name}</strong> het meeste daglicht in de ingestelde wakkere uren stopt. Het huidige systeem <strong>${current.name}</strong> is dus geen puur astronomische keuze, maar een bewuste verschuiving richting latere avonden.`;
+  }
+
+  function update() {
+    const state = getInputs();
+    updateLabels(state);
+
+    const daily = scenarios.map((scenario) => {
+      const info = scenarioDay(state.date, state.lat, state.lon, scenario);
+      return {
+        ...info,
+        name: scenario.name,
+        subtitle: scenario.subtitle,
+        baseOffset: scenario.baseOffset
+      };
+    });
+
+    const annual = annualMetrics(state);
+
+    renderSummaries(state, daily, annual);
+    renderTimeline(state, daily);
+    renderCards(state, annual);
+    renderWinners(annual);
+    renderFindings(state, annual);
+  }
+
+  update();
+</script>

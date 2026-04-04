@@ -92,7 +92,7 @@ const root = svg.append("g");
 const defs = svg.append("defs");
 const NODE_RADIUS = 22;
 
-defs.append("marker").attr("id", "warcraft-loop-arrow").attr("viewBox", "0 -5 10 10").attr("refX", 8).attr("refY", 0).attr("markerWidth", 6).attr("markerHeight", 6).attr("orient", "auto").append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#111");
+defs.append("marker").attr("id", "warcraft-loop-arrow").attr("viewBox", "0 -5 10 10").attr("refX", 8).attr("refY", 0).attr("markerWidth", 6).attr("markerHeight", 6).attr("orient", "auto").append("path").attr("d", "M0,-5L10,0L0,5").attr("fill", "#800");
 
 const linkLayer = root.append("g");
 const nodeLayer = root.append("g");
@@ -259,13 +259,13 @@ function updateHighlighting() {
 	linkSelection
 		.attr("stroke-opacity", (datum) => (isLinkHighlighted(datum) ? 0.95 : 0.12))
 		.attr("stroke", (datum) => {
-			if (datum.type === "cost" && isLinkHighlighted(datum)) return "#ff8f6b";
-			if (datum.type === "friction" && isLinkHighlighted(datum)) return "#f0c674";
-			if (datum.type === "intra-phase" && isLinkHighlighted(datum)) return "#2f5d50";
-			if (datum.type === "support" && isLinkHighlighted(datum)) return "#5b6b7f";
+			if (datum.type === "cost" && isLinkHighlighted(datum)) return "#d40000";
+			if (datum.type === "friction" && isLinkHighlighted(datum)) return "#cda9a9";
+			if (datum.type === "intra-phase" && isLinkHighlighted(datum)) return "#6e0000";
+			if (datum.type === "support" && isLinkHighlighted(datum)) return "#b98f8f";
 			if (activeGroup && isLinkHighlighted(datum)) return color(activeGroup);
-			if (activeNodeId && isLinkHighlighted(datum)) return "#111";
-			return datum.type === "primary" ? "#222" : datum.type === "intra-phase" ? "#6d8b7f" : "#807261";
+			if (activeNodeId && isLinkHighlighted(datum)) return "#800";
+			return datum.type === "primary" ? "#800" : datum.type === "intra-phase" ? "#6e0000" : "#b98f8f";
 		})
 		.attr("stroke-width", (datum) => (datum.type === "primary" ? 2.8 : datum.type === "intra-phase" ? 2.2 : 2))
 		.attr("stroke-dasharray", (datum) => {
@@ -349,12 +349,12 @@ nodeSelection
 	.append("circle")
 	.attr("r", NODE_RADIUS)
 	.attr("fill", (datum) => color(datum.group))
-	.attr("stroke", "#f5ede1")
+	.attr("stroke", "#fffaf9")
 	.attr("stroke-width", 2.4);
 
 nodeSelection
 	.append("text")
-	.attr("fill", "#1b120a")
+	.attr("fill", "#333")
 	.attr("font-size", 12)
 	.attr("text-anchor", "middle")
 	.attr("dy", ".35em")
@@ -362,7 +362,7 @@ nodeSelection
 
 nodeSelection
 	.append("text")
-	.attr("fill", "#4d3a2a")
+	.attr("fill", "#555")
 	.attr("font-size", 10)
 	.attr("text-anchor", "middle")
 	.attr("dy", "2.1em")

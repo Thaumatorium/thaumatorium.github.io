@@ -180,7 +180,7 @@ function handleBatchConvert() {
 					td.addEventListener("click", () => copyText(value, td));
 				}
 				if (cellIndex === 8 && value) {
-					td.style.color = "#a31717";
+					td.style.color = "#800";
 				}
 				tr.appendChild(td);
 			});

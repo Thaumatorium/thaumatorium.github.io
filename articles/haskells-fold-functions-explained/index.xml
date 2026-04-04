@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Haskell&#39;s fold functions explained on Thaumatorium</title>
-    <link>http://thaumatorium.com/articles/haskells-fold-functions-explained/</link>
+    <link>http://thaum.localhost:1313/articles/haskells-fold-functions-explained/</link>
     <description>Recent content in Haskell&#39;s fold functions explained on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://thaumatorium.com/articles/haskells-fold-functions-explained/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://thaum.localhost:1313/articles/haskells-fold-functions-explained/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

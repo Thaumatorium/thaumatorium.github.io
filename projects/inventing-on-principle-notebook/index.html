@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Inventing on Principle Notebook | The Thaumatorium</title>
+		<meta name="description" content="A live visual notebook inspired by Bret Victor: edit code, drag numeric literals, pick hex colors, and inspect the link between code and drawing." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Inventing on Principle Notebook" />
+		<meta property="og:description" content="A live visual notebook inspired by Bret Victor: edit code, drag numeric literals, pick hex colors, and inspect the link between code and drawing." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Inventing on Principle Notebook" />
+		<meta name="twitter:description" content="A live visual notebook inspired by Bret Victor: edit code, drag numeric literals, pick hex colors, and inspect the link between code and drawing." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<div class="iop-page">
+				<link rel="stylesheet" href="notebook.css" />
+				<div class="iop-hero">
+					<p class="iop-eyebrow">Live visual notebook</p>
+					<p class="iop-intro">A code-and-canvas notebook in the spirit of Bret Victor: the scene redraws live while you type, numeric literals show a slider on hover, hex colors pop a picker on hover, and <kbd>Ctrl</kbd> turns the notebook into an inspector that links code lines to visible shapes.</p>
+					<div class="iop-shortcuts" aria-label="Keyboard shortcuts">
+						<span>Hover a number for a slider</span>
+						<span>Hover a hex color for a picker</span>
+						<span><kbd>Ctrl</kbd> inspect code to visual output</span>
+						<span>Hover the preview to spotlight its source line</span>
+					</div>
+				</div>
+				<div class="iop-book" id="iop-book">
+					<section class="iop-preview-page" id="iop-preview-page" aria-labelledby="iop-preview-title">
+						<div class="iop-page-header">
+							<p class="iop-page-label" id="iop-preview-title">Preview</p>
+							<p class="iop-page-meta" id="iop-preview-meta">Live SVG scene</p>
+						</div>
+						<div class="iop-preview-stage" id="iop-preview-stage">
+							<svg id="iop-scene" viewBox="0 0 760 920" aria-label="Live notebook scene"></svg>
+							<div class="iop-preview-overlay">
+								<p id="iop-scene-caption">Hover branches or blossoms to reveal their code.</p>
+							</div>
+						</div>
+					</section>
+					<section class="iop-code-page" id="iop-code-page" aria-labelledby="iop-code-title">
+						<div class="iop-page-header">
+							<p class="iop-page-label" id="iop-code-title">Code</p>
+							<p class="iop-page-meta" id="iop-code-meta">JavaScript notebook API</p>
+						</div>
+						<div class="iop-editor-shell">
+							<div class="iop-editor-loading" id="iop-editor-loading">Loading editor...</div>
+							<div class="iop-editor" id="iop-editor" aria-label="Notebook editor"></div>
+							<div class="iop-widget iop-slider-widget" id="iop-slider-widget" hidden>
+								<input id="iop-slider-input" type="range" aria-label="Adjust numeric literal" />
+							</div>
+						</div>
+					</section>
+				</div>
+				<footer class="iop-statusbar">
+					<p id="iop-status">Preparing the notebook...</p>
+					<p id="iop-error" role="status" aria-live="polite"></p>
+				</footer>
+				<noscript>
+					<p>This notebook needs JavaScript enabled.</p>
+				</noscript>
+				<script type="module" src="notebook.mjs"></script>
+			</div>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2025-11-02</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

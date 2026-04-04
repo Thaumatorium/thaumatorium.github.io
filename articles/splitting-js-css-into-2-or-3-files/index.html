@@ -44,52 +44,65 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<main>
-			<h1>Optimizing your site by splitting JS/CSS into layers</h1>
-			<hgroup>
-				<div class="article-meta">
-					<div class="author-box">Author: <span class="author">NostraDavid</span></div>
-					<div class="published-box">Published: <time class="published" datetime="2019-11-29T00:00:00&#43;02:00">2019-11-29</time></div>
-					<div class="published-box">Updated: <time class="published" datetime="2024-07-24T19:54:00&#43;02:00">2024-07-24</time></div>
-				</div>
-			</hgroup>
-			<p>My idea is to split CSS into 3 parts (layers), where each outer part effectively builds on top of the inner part. The same applies to JS. This idea came from analyzing coverage using <a href="https://developers.google.com/web/tools/chrome-devtools/coverage">Chrome DevTools</a>.</p>
-			<h3 id="steps-to-optimize">
-				<a class="self-link" href="#steps-to-optimize"> Steps to Optimize </a>
-			</h3>
-			<ol>
-				<li>
-					<p><strong>Check Coverage with Chrome DevTools:</strong> Use the coverage tool in Chrome DevTools to identify which parts of your JS/CSS are actually used by your site.</p>
-				</li>
-				<li>
-					<p><strong>Split the Files Programmatically:</strong> After analyzing coverage, split the JS/CSS files into three categories:</p>
-					<ul>
-						<li><strong>InnerCore:</strong> Inline JS/CSS that is essential for when JS/CSS files fail to load, particularly on very slow connections.</li>
-						<li><strong>OuterCore:</strong> JS/CSS that is actively covered (used) as identified by DevTools.</li>
-						<li><strong>Mantle:</strong> JS/CSS that is not currently covered but may be used by the site under certain conditions.</li>
-					</ul>
-				</li>
-			</ol>
-			<h3 id="why-split-files">
-				<a class="self-link" href="#why-split-files"> Why Split Files? </a>
-			</h3>
-			<p>Splitting JS/CSS files helps in optimizing load times and improving the overall performance of your website. By ensuring that only essential code is loaded initially, you can enhance the user experience, especially for users with slower internet connections.</p>
-			<h3 id="how-to-implement">
-				<a class="self-link" href="#how-to-implement"> How to Implement </a>
-			</h3>
-			<p>Do this programmatically, as manually splitting files can be error-prone and time-consuming. Use scripts or build tools that automate the process based on the coverage data from DevTools.</p>
-			<h3 id="naming-convention">
-				<a class="self-link" href="#naming-convention"> Naming Convention </a>
-			</h3>
-			<p>The naming convention for these splits is inspired by Earth&rsquo;s structure:</p>
-			<ul>
-				<li><strong>InnerCore:</strong> Essential inline code</li>
-				<li><strong>OuterCore:</strong> Covered code</li>
-				<li><strong>Mantle:</strong> Uncovered but potentially useful code</li>
-			</ul>
-			<p>For a visual reference, see the <a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Earth poster on Wikipedia</a>:</p>
-			<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Earth_poster.svg/2880px-Earth_poster.svg.png" alt="Earth poster on Wikipedia" /></p>
-			<p>By following these steps, you can ensure that your website is both efficient and effective, providing a better experience for your users.</p>
+		<main class="articles">
+			<article class="article-page">
+				<h1>Optimizing your site by splitting JS/CSS into layers</h1>
+				<p class="article-page-meta">
+					<span>NostraDavid</span>
+					<span aria-hidden="true">·</span>
+					<time datetime="2019-11-29T00:00:00&#43;02:00">2019-11-29</time>
+					<span aria-hidden="true">·</span>
+					<span>Updated <time datetime="2024-07-24T19:54:00&#43;02:00">2024-07-24</time></span>
+					<span aria-hidden="true">·</span>
+					<span>254 words</span>
+				</p>
+				<p>My idea is to split CSS into 3 parts (layers), where each outer part effectively builds on top of the inner part. The same applies to JS. This idea came from analyzing coverage using <a href="https://developers.google.com/web/tools/chrome-devtools/coverage">Chrome DevTools</a>.</p>
+				<h3 id="steps-to-optimize">
+					<a class="self-link" href="#steps-to-optimize"> Steps to Optimize </a>
+				</h3>
+				<ol>
+					<li>
+						<p><strong>Check Coverage with Chrome DevTools:</strong> Use the coverage tool in Chrome DevTools to identify which parts of your JS/CSS are actually used by your site.</p>
+					</li>
+					<li>
+						<p><strong>Split the Files Programmatically:</strong> After analyzing coverage, split the JS/CSS files into three categories:</p>
+						<ul>
+							<li><strong>InnerCore:</strong> Inline JS/CSS that is essential for when JS/CSS files fail to load, particularly on very slow connections.</li>
+							<li><strong>OuterCore:</strong> JS/CSS that is actively covered (used) as identified by DevTools.</li>
+							<li><strong>Mantle:</strong> JS/CSS that is not currently covered but may be used by the site under certain conditions.</li>
+						</ul>
+					</li>
+				</ol>
+				<h3 id="why-split-files">
+					<a class="self-link" href="#why-split-files"> Why Split Files? </a>
+				</h3>
+				<p>Splitting JS/CSS files helps in optimizing load times and improving the overall performance of your website. By ensuring that only essential code is loaded initially, you can enhance the user experience, especially for users with slower internet connections.</p>
+				<h3 id="how-to-implement">
+					<a class="self-link" href="#how-to-implement"> How to Implement </a>
+				</h3>
+				<p>Do this programmatically, as manually splitting files can be error-prone and time-consuming. Use scripts or build tools that automate the process based on the coverage data from DevTools.</p>
+				<h3 id="naming-convention">
+					<a class="self-link" href="#naming-convention"> Naming Convention </a>
+				</h3>
+				<p>The naming convention for these splits is inspired by Earth&rsquo;s structure:</p>
+				<ul>
+					<li><strong>InnerCore:</strong> Essential inline code</li>
+					<li><strong>OuterCore:</strong> Covered code</li>
+					<li><strong>Mantle:</strong> Uncovered but potentially useful code</li>
+				</ul>
+				<p>For a visual reference, see the <a href="https://en.wikipedia.org/wiki/Earth%27s_inner_core#/media/File:Earth_poster.svg">Earth poster on Wikipedia</a>:</p>
+				<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Earth_poster.svg/2880px-Earth_poster.svg.png" alt="Earth poster on Wikipedia" /></p>
+				<p>By following these steps, you can ensure that your website is both efficient and effective, providing a better experience for your users.</p>
+			</article>
+			<style>
+				.article-page-meta {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.88em;
+					margin-top: -0.5em;
+					margin-bottom: 1.5em;
+				}
+			</style>
 		</main>
 		<footer>
 			<div class="copyright">

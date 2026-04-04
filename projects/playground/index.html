@@ -44,17 +44,17 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-		<main>
+		<main class="projects">
 			<h1>Playground</h1>
 			<link rel="stylesheet" href="/styles/projects.css" />
-			<section class="playground-page">
-				<header class="playground-header">
+			<div class="playground-page">
+				<div class="playground-header">
 					<p class="playground-intro">A drawer full of small text transformers and browser experiments. Most of these started as one-off jokes or utility snippets and then earned a permanent place here.</p>
 					<div class="playground-toolbar">
 						<button class="button" type="button" data-details-action="open">Open all chapters</button>
 						<button class="button" type="button" data-details-action="close">Close all chapters</button>
 					</div>
-				</header>
+				</div>
 				<details open>
 					<summary>
 						<h3>Runifier</h3>
@@ -318,7 +318,7 @@ console.log(`${Math.round(performance.now() - startedAt)}ms\t${text.length} byte
 					<script type="module" src="/projects/playground/germanizer.mjs"></script>
 				</details>
 				<script type="module" src="/projects/playground/playground.mjs"></script>
-			</section>
+			</div>
 			<style>
 				.project-index {
 					margin-top: 1.5em;
