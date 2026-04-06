@@ -2,14 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://thaumatorium.com/projects/world-population/</loc>
+    <lastmod>2026-04-06T21:57:18+02:00</lastmod>
+  </url><url>
     <loc>http://thaumatorium.com/projects/simulation-project/</loc>
-    <lastmod>2026-04-04T15:54:43+02:00</lastmod>
+    <lastmod>2026-04-04T16:42:13+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/articles/real-ascii-table/</loc>
     <lastmod>2026-04-04T15:54:43+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/inventing-on-principle-notebook/</loc>
-    <lastmod>2026-04-04T15:54:43+02:00</lastmod>
+    <lastmod>2026-04-04T16:42:13+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/queueing-simulation/</loc>
     <lastmod>2026-04-04T15:54:43+02:00</lastmod>
@@ -72,7 +75,7 @@
     <lastmod>2026-04-04T15:54:43+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/fenetres/</loc>
-    <lastmod>2026-04-04T15:54:43+02:00</lastmod>
+    <lastmod>2026-04-04T16:42:13+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/</loc>
     <lastmod>2026-03-07T21:36:21+01:00</lastmod>
