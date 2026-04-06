@@ -329,6 +329,17 @@ function getContinentColor(continent) {
 	return palette[(((index >= 0 ? index : 0) % palette.length) + palette.length) % palette.length];
 }
 
+function mixHexColors(color, amount, base = "#fffaf9") {
+	const normalized = color.replace("#", "");
+	const normalizedBase = base.replace("#", "");
+	const channels = [0, 2, 4].map((offset) => {
+		const source = Number.parseInt(normalized.slice(offset, offset + 2), 16);
+		const target = Number.parseInt(normalizedBase.slice(offset, offset + 2), 16);
+		return Math.round(source * amount + target * (1 - amount));
+	});
+	return `#${channels.map((value) => value.toString(16).padStart(2, "0")).join("")}`;
+}
+
 function updateContinentButtons() {
 	if (!continentButtonsNode || !state.data) {
 		return;
@@ -345,7 +356,10 @@ function updateContinentButtons() {
 			button.classList.add("is-active");
 		}
 		button.textContent = continent;
-		button.style.borderColor = getContinentColor(continent);
+		const color = getContinentColor(continent);
+		button.style.borderColor = color;
+		button.style.setProperty("--continent-button-bg", mixHexColors(color, 0.18));
+		button.style.setProperty("--continent-button-fg", mixHexColors(color, 0.72, "#1f1414"));
 		button.addEventListener("click", () => {
 			if (state.continentHighlights.has(continent)) {
 				state.continentHighlights.delete(continent);
