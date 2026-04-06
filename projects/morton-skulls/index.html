@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Morton Skulls | The Thaumatorium</title>
+		<meta name="description" content="A world map of Morton&#39;s skull groups using geocoded locations from the PLOS Biology supplementary tables." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Morton Skulls" />
+		<meta property="og:description" content="A world map of Morton&#39;s skull groups using geocoded locations from the PLOS Biology supplementary tables." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Morton Skulls" />
+		<meta name="twitter:description" content="A world map of Morton&#39;s skull groups using geocoded locations from the PLOS Biology supplementary tables." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<div class="morton-skulls-page">
+				<style>
+					.morton-skulls-page {
+						display: grid;
+						gap: 1rem;
+						color: #241818;
+					}
+					.morton-skulls-panel,
+					.morton-skulls-stage,
+					.morton-skulls-notes {
+						border: 1px solid #cda9a9;
+						border-radius: 6px;
+						background: linear-gradient(180deg, #fffaf9 0%, #fff2ef 100%);
+						box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.18);
+					}
+					.morton-skulls-panel,
+					.morton-skulls-notes {
+						display: grid;
+						gap: 0.9rem;
+						padding: 1rem;
+					}
+					.morton-skulls-panel h2,
+					.morton-skulls-panel p,
+					.morton-skulls-notes h3,
+					.morton-skulls-notes p {
+						margin: 0;
+					}
+					.morton-skulls-lead,
+					.morton-skulls-status,
+					.morton-skulls-footnote,
+					.morton-skulls-notes li {
+						color: #5f4646;
+						line-height: 1.5;
+					}
+					.morton-skulls-toolbar,
+					.morton-skulls-metrics,
+					.morton-skulls-legend {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						align-items: center;
+					}
+					.morton-skulls-field {
+						display: grid;
+						gap: 0.35rem;
+						flex: 1 1 14rem;
+						min-width: 12rem;
+					}
+					.morton-skulls-field span,
+					.morton-skulls-metric-label {
+						font-size: 0.84rem;
+						color: #6d4c4c;
+					}
+					.morton-skulls-field select,
+					.morton-skulls-field input[type="range"] {
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						padding: 0.55rem 0.7rem;
+						background: #fff;
+						color: #241818;
+						font: inherit;
+					}
+					.morton-skulls-field input[type="range"] {
+						padding: 0;
+						accent-color: #7f1d1d;
+					}
+					.morton-skulls-metric {
+						display: grid;
+						gap: 0.15rem;
+						min-width: 10rem;
+						padding: 0.55rem 0.75rem;
+						border: 1px solid #ead6d6;
+						border-radius: 4px;
+						background: rgba(255, 255, 255, 0.78);
+					}
+					.morton-skulls-metric strong {
+						color: #7f1d1d;
+						font-size: 1rem;
+					}
+					.morton-skulls-stage {
+						position: relative;
+						display: grid;
+						gap: 0.75rem;
+						padding: 0.85rem;
+					}
+					#morton-skulls-map {
+						width: 100%;
+						min-height: 38rem;
+						display: block;
+						border-radius: 4px;
+						overflow: hidden;
+					}
+					.morton-skulls-tooltip {
+						position: absolute;
+						display: none;
+						pointer-events: none;
+						max-width: 20rem;
+						padding: 0.7rem 0.8rem;
+						border: 1px solid #7f1d1d;
+						border-radius: 4px;
+						background: rgba(255, 250, 249, 0.97);
+						color: #241818;
+						box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+						font-size: 0.9rem;
+						line-height: 1.45;
+						z-index: 2;
+					}
+					.morton-skulls-tooltip strong {
+						display: block;
+						margin-bottom: 0.2rem;
+						color: #7f1d1d;
+					}
+					.morton-skulls-tooltip code {
+						font-size: 0.88rem;
+					}
+					.morton-skulls-legend {
+						row-gap: 0.5rem;
+					}
+					.morton-skulls-legend-item {
+						display: inline-flex;
+						align-items: center;
+						gap: 0.45rem;
+						padding: 0.25rem 0.6rem;
+						border: 1px solid #ead6d6;
+						border-radius: 999px;
+						background: rgba(255, 255, 255, 0.78);
+						color: #5f4646;
+						font-size: 0.9rem;
+					}
+					.morton-skulls-legend-swatch {
+						width: 0.9rem;
+						height: 0.9rem;
+						border-radius: 50%;
+						border: 1px solid rgba(36, 24, 24, 0.45);
+					}
+					.morton-skulls-stage .leaflet-container {
+						width: 100%;
+						min-height: 38rem;
+						border-radius: 4px;
+						background: linear-gradient(180deg, #fefcfc 0%, #fff5f1 100%);
+						font: inherit;
+					}
+					.morton-skulls-stage .leaflet-popup-content-wrapper,
+					.morton-skulls-stage .leaflet-popup-tip {
+						background: rgba(255, 250, 249, 0.97);
+						color: #241818;
+					}
+					.morton-skulls-stage .leaflet-popup-content {
+						margin: 0.7rem 0.8rem;
+						line-height: 1.45;
+					}
+					.morton-skulls-stage .leaflet-control-attribution {
+						background: rgba(255, 250, 249, 0.9);
+						color: #5f4646;
+					}
+					.morton-skulls-notes ul {
+						margin: 0;
+						padding-left: 1.2rem;
+					}
+					@media (max-width: 720px) {
+						#morton-skulls-map {
+							min-height: 28rem;
+						}
+					}
+				</style>
+				<section class="morton-skulls-panel">
+					<h2>Morton Skulls</h2>
+					<p class="morton-skulls-lead">This map plots the geocoded skull groups from the PLOS Biology supplementary tables. Each dot uses the provided plotting coordinates, scales its size by cranial volume, and shifts color with volume so larger means stand out visually.</p>
+					<p class="morton-skulls-lead">The mapped locations are approximate editorial placements for visualization only. They are not original specimen coordinates or exact recovery/provenance data from Morton's collection.</p>
+					<div class="morton-skulls-toolbar">
+						<label class="morton-skulls-field" for="morton-skulls-source">
+							<span>Source filter</span>
+							<select id="morton-skulls-source">
+								<option value="all" selected>All sources</option>
+							</select>
+						</label>
+						<label class="morton-skulls-field" for="morton-skulls-size">
+							<span>Dot scale: <strong id="morton-skulls-size-value">100%</strong></span>
+							<input id="morton-skulls-size" type="range" min="60" max="180" step="5" value="100" />
+						</label>
+						<label class="morton-skulls-field" for="morton-skulls-min-n">
+							<span>Minimum sample size: <strong id="morton-skulls-min-n-value">1</strong></span>
+							<input id="morton-skulls-min-n" type="range" min="1" max="72" step="1" value="1" />
+						</label>
+					</div>
+					<div class="morton-skulls-metrics">
+						<div class="morton-skulls-metric">
+							<span class="morton-skulls-metric-label">Visible points</span>
+							<strong id="morton-skulls-count-metric">0</strong>
+						</div>
+						<div class="morton-skulls-metric">
+							<span class="morton-skulls-metric-label">Volume range</span>
+							<strong id="morton-skulls-range-metric">n/a</strong>
+						</div>
+						<div class="morton-skulls-metric">
+							<span class="morton-skulls-metric-label">Sources in view</span>
+							<strong id="morton-skulls-source-metric">0</strong>
+						</div>
+					</div>
+				</section>
+				<section class="morton-skulls-stage">
+					<div id="morton-skulls-map" aria-label="World map of Morton skull locations"></div>
+					<div class="morton-skulls-legend">
+						<span class="morton-skulls-legend-item"><span class="morton-skulls-legend-swatch" style="background: hsl(6 72% 50%)"></span>smaller mean volume</span>
+						<span class="morton-skulls-legend-item"><span class="morton-skulls-legend-swatch" style="background: hsl(220 72% 64%)"></span>larger mean volume</span>
+					</div>
+					<p class="morton-skulls-status" id="morton-skulls-status">Loading data…</p>
+				</section>
+				<section class="morton-skulls-notes">
+					<h3>Notes</h3>
+					<ul>
+						<li>Hover a dot to see the group name, source, location label, sample size, mean cranial volume, and location-confidence label.</li>
+						<li>The plotted positions use the `plot_lat` and `plot_lon` fields from your CSV so overlapping points can be nudged apart without changing the underlying reference location.</li>
+						<li>Historical labels in the dataset are preserved as source labels. They should not be read as modern biological categories.</li>
+					</ul>
+					<p class="morton-skulls-footnote">Data file: <code>/projects/morton-skulls/data/pbio_s1_all_groups_with_locations.csv</code>.</p>
+				</section>
+				<script type="module" src="/projects/morton-skulls/morton-skulls.mjs"></script>
+			</div>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-04-07</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

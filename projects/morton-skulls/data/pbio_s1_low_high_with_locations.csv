@@ -1,0 +1,31 @@
+Source,Group,n,mean_cm3,location_label,lat,lon,location_confidence,plot_lat,plot_lon
+Catalogue of Skulls,German dwarf,1,761.998476,Germany,51.2,10.4,low,51.2,11.3
+Catalogue of Skulls,Peruvian (Chorillos),1,1081.546224,"Chorrillos, Peru",-12.17,-77.02,high,-12.17,-77.02
+Catalogue of Skulls,Native African (Macua),1,1097.933288,Northern Mozambique,-13.3,39.3,high,-13.3,39.3
+Crania Americana,Chimuyan,1,1106.12682,Northern Peru,-8.5,-78.5,medium,-8.5,-77.6
+Catalogue of Skulls,Tagelos Malay,1,1114.320352,Philippines,14.6,121.0,low,14.6,121.0
+Catalogue of Skulls,European,1,1147.09448,Europe (general),50.0,10.0,low,50.0,10.9
+Catalogue of Skulls,Mound (Florida),1,1147.09448,Florida,28.5,-82.5,high,28.5,-82.5
+Catalogue of Skulls,Yamassee? Indian,1,1147.09448,South Carolina / Georgia coast,32.2,-80.8,low,32.2,-80.8
+Catalogue of Skulls,Ancient Chimuyan,1,1163.481544,Northern Peru,-8.5,-78.5,medium,-8.5,-79.48
+Catalogue of Skulls,Eboe,1,1163.481544,"Igboland, Nigeria",6.0,7.3,medium,6.0,7.3
+Crania Americana,Algonquin-Lenape (Western Lenapé),1,1163.481544,Pennsylvania / Delaware Valley,40.0,-75.2,high,40.0,-74.3
+Catalogue of Skulls,Chinouk,1,1179.868608,Lower Columbia,46.3,-123.8,medium,46.3,-122.89999999999999
+Catalogue of Skulls,Mexican (Otomie),4,1192.158906,Hidalgo / central Mexico,20.4,-99.2,high,20.4,-99.2
+Catalogue of Skulls,Chayenne,1,1196.255672,"Plains, Wyoming/Colorado",41.0,-104.0,medium,41.0,-104.0
+Catalogue of Skulls,Micco-Sukie (Seminole),1,1196.255672,Florida,26.0,-81.0,high,26.0,-81.0
+Catalogue of Skulls,Dutchman,1,1868.125296,Netherlands,52.1,5.3,medium,52.1,4.32
+Catalogue of Skulls,English soldier?,1,1720.64172,England,52.5,-1.5,low,51.5820130719885,-2.0300000000000002
+Catalogue of Skulls,Anglo-Saxon,1,1622.3193359999998,England,52.5,-1.5,medium,53.34870489570875,-1.9899999999999998
+Catalogue of Skulls,Bedouin,1,1605.9322719999998,Sinai / Arabian Desert,29.5,34.0,medium,29.5,34.0
+Catalogue of Skulls,Athla-Ficksa (Muskogee-Creek),1,1589.5452079999998,Alabama / Georgia,32.5,-85.0,high,32.5,-85.98
+Catalogue of Skulls,Native African (Grabbo),1,1589.5452079999998,Liberia / Côte d’Ivoire,5.2,-7.5,medium,5.2,-7.5
+Catalogue of Skulls,Dutch,1,1581.3516759999998,Netherlands,52.1,5.3,high,52.1,6.2
+Catalogue of Skulls,Iroquois?,2,1573.158144,Upstate New York,43.0,-75.0,low,43.0,-75.98
+Catalogue of Skulls,Malayan,1,1573.158144,Malay Peninsula,4.0,102.0,medium,4.0,102.0
+Catalogue of Skulls,Cholo or Hispano-Peruvian?,1,1556.77108,Peru,-12.0,-77.0,low,-13.078927445805881,-76.13958407343495
+Catalogue of Skulls,Oneida,1,1556.77108,Central New York,43.2,-75.6,high,43.2,-75.6
+Catalogue of Skulls,Upsarooka,1,1556.77108,"Crow country, Montana/Wyoming",45.5,-107.5,high,45.5,-108.48
+Catalogue of Skulls,Cayuga,1,1540.384016,"Finger Lakes, New York",42.8,-76.7,high,42.8,-76.7
+Catalogue of Skulls,German?,1,1540.384016,Germany,51.2,10.4,low,50.2820130719885,9.87
+Catalogue of Skulls,Laplander,1,1540.384016,Sápmi,68.5,23.5,medium,68.5,23.5

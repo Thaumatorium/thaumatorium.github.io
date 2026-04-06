@@ -1,0 +1,239 @@
+Source,Group,n,mean_cm3,location_label,lat,lon,location_confidence,plot_lat,plot_lon
+Catalogue of Skulls,German dwarf,1,761.998476,Germany,51.2,10.4,low,51.2,11.3
+Catalogue of Skulls,Peruvian (Chorillos),1,1081.546224,"Chorrillos, Peru",-12.17,-77.02,high,-12.17,-77.02
+Catalogue of Skulls,Native African (Macua),1,1097.933288,Northern Mozambique,-13.3,39.3,high,-13.3,39.3
+Crania Americana,Chimuyan,1,1106.12682,Northern Peru,-8.5,-78.5,medium,-8.5,-77.6
+Catalogue of Skulls,Tagelos Malay,1,1114.320352,Philippines,14.6,121.0,low,14.6,121.0
+Catalogue of Skulls,European,1,1147.09448,Europe (general),50.0,10.0,low,50.0,10.9
+Catalogue of Skulls,Mound (Florida),1,1147.09448,Florida,28.5,-82.5,high,28.5,-82.5
+Catalogue of Skulls,Yamassee? Indian,1,1147.09448,South Carolina / Georgia coast,32.2,-80.8,low,32.2,-80.8
+Catalogue of Skulls,Ancient Chimuyan,1,1163.481544,Northern Peru,-8.5,-78.5,medium,-8.5,-79.48
+Catalogue of Skulls,Eboe,1,1163.481544,"Igboland, Nigeria",6.0,7.3,medium,6.0,7.3
+Crania Americana,Algonquin-Lenape (Western Lenapé),1,1163.481544,Pennsylvania / Delaware Valley,40.0,-75.2,high,40.0,-74.3
+Catalogue of Skulls,Chinouk,1,1179.868608,Lower Columbia,46.3,-123.8,medium,46.3,-122.89999999999999
+Catalogue of Skulls,Mexican (Otomie),4,1192.158906,Hidalgo / central Mexico,20.4,-99.2,high,20.4,-99.2
+Catalogue of Skulls,Chayenne,1,1196.255672,"Plains, Wyoming/Colorado",41.0,-104.0,medium,41.0,-104.0
+Catalogue of Skulls,Micco-Sukie (Seminole),1,1196.255672,Florida,26.0,-81.0,high,26.0,-81.0
+Catalogue of Skulls,Negress (US),1,1196.255672,United States,34.8,-86.8,low,34.8,-85.89999999999999
+Crania Aegyptiaca,Negro,1,1196.255672,West Africa,7.5,-1.0,low,7.5,-0.09999999999999998
+Catalogue of Skulls,Peruvian from Mound,2,1204.449204,Peru,-12.0,-77.0,low,-12.0,-76.1
+Catalogue of Skulls,Shoshone,2,1204.449204,Great Basin,42.0,-114.0,high,42.0,-114.0
+Catalogue of Skulls,New Hollander,3,1207.1803813333331,Australia,-25.0,133.0,medium,-25.0,133.9
+Catalogue of Skulls,Peruvian (Pisco),41,1208.2462066341463,"Pisco, Peru",-13.71,-76.2,high,-13.71,-75.3
+Catalogue of Skulls,Arickaree,2,1212.6427359999998,North Dakota,47.2,-101.4,high,47.2,-100.5
+Catalogue of Skulls,Negroid,2,1212.6427359999998,Northeast Africa,12.0,31.0,low,12.0,31.9
+Catalogue of Skulls,Peruvian (Guamay),1,1212.642736,Peru coast,-11.0,-77.5,low,-11.0,-77.5
+Catalogue of Skulls,Peruvian (Pachacamac),72,1220.3810717777776,"Pachacamac, Peru",-12.25,-76.9,high,-12.25,-76.0
+Crania Americana,Peruvian,34,1220.715774882353,Peru coast/Andes,-12.0,-77.0,medium,-11.23380514718133,-76.38897999417844
+Catalogue of Skulls,Australian,4,1220.836268,Australia,-25.0,133.0,high,-24.15129510429125,132.51
+Catalogue of Skulls,Pawnee,2,1220.836268,Nebraska,41.0,-98.0,high,41.0,-98.0
+Catalogue of Skulls,Peruvian (Callao),2,1220.836268,"Callao, Peru",-12.06,-77.15,high,-12.06,-77.15
+Catalogue of Skulls,Ancient Peruvian (Pachacamac),2,1229.0297999999998,"Pachacamac, Peru",-12.25,-76.9,high,-12.25,-77.88000000000001
+Catalogue of Skulls,Chinese (Canton),1,1229.0297999999998,"Guangzhou, China",23.129,113.264,high,23.129,113.264
+Catalogue of Skulls,Egyptian Negroid?,1,1229.0297999999998,Egypt / Nubia,23.0,32.5,low,23.0,33.4
+Catalogue of Skulls,Egyptian-Coptic,1,1229.0297999999998,Egypt,26.8,30.8,medium,26.8,31.7
+Catalogue of Skulls,Klatstoni,1,1229.0297999999998,"Lower Columbia, Oregon",46.1,-123.3,medium,46.1,-123.3
+Catalogue of Skulls,Manta?,1,1229.0297999999998,"Manta, Ecuador",-0.95,-80.73,low,-0.95,-80.73
+Catalogue of Skulls,Naumkeag,1,1229.0297999999998,"Salem, Massachusetts",42.52,-70.89,medium,42.52,-70.89
+Crania Aegyptiaca,Egyptian+Negroid?,1,1229.0297999999998,Egypt,26.8,30.8,low,27.42993185749281,31.5507235542566
+Catalogue of Skulls,Hottentot,3,1234.4921546666665,Namaqualand,-29.0,17.0,medium,-29.0,17.0
+Catalogue of Skulls,Egpytian,3,1239.9545093333334,Egypt,26.8,30.8,low,27.843896218192942,30.984067068326947
+Catalogue of Skulls,Hindu of Bengal,11,1240.9476647272727,Bengal,23.7,90.4,high,23.7,91.30000000000001
+Catalogue of Skulls,"Tasmanian, Oceanic Negro",1,1245.4168639999998,Tasmania,-42.0,146.8,low,-42.0,146.8
+Crania Americana,"Morton lists one Atacama under Ancient Peruvian, but these are separate.",3,1250.8792186666667,Atacama Desert,-23.5,-69.0,low,-23.5,-69.0
+Catalogue of Skulls,Mulatto,2,1253.6103959999998,Atlantic Americas,18.0,-75.0,low,18.0,-75.0
+Catalogue of Skulls,Eunuch?,1,1261.8039279999998,Ottoman Empire / eastern Mediterranean,41.0,29.0,unknown,41.0,29.0
+Catalogue of Skulls,Malay (Malacca),1,1261.8039279999998,"Malacca, Malaysia",2.19,102.25,high,2.19,102.25
+Catalogue of Skulls,Oceanic Negro,1,1261.8039279999998,Melanesia / Papua,-6.0,147.0,low,-6.0,147.0
+Crania Americana,Flathead tribes of Columbia River,2,1261.8039279999998,Columbia Plateau,47.0,-120.0,low,47.0,-119.1
+Catalogue of Skulls,Bengalee,6,1263.1695166666666,Bengal,23.7,90.4,high,24.54870489570875,89.91000000000001
+Catalogue of Skulls,Araucanian,7,1268.8269554285712,"Araucanía, Chile",-38.7,-72.6,high,-38.7,-71.69999999999999
+Catalogue of Skulls,Native African Negress,3,1272.7286373333334,West Africa,7.5,-1.0,low,8.129931857492808,-0.24927644574340158
+Catalogue of Skulls,Semitic,3,1272.7286373333334,Levant,33.5,36.0,low,33.5,36.9
+Crania Americana,Morton seemingly did not classify this one with any larger grouping,3,1272.7286373333334,Unknown / unclassified,0.0,0.0,unknown,0.0,0.0
+Catalogue of Skulls,Mixed Negro and Indian?,1,1278.1909919999998,West / Central Africa,7.5,-1.0,low,8.543896218192941,-0.8159329316730537
+Crania Americana,Cherokee,4,1282.287758,Southern Appalachians,35.5,-83.5,high,35.5,-82.6
+Crania Americana,"aka Delaware, Algonquin-Lenapé (Eastern or Atlantic Lenapé)",1,1286.3845239999998,New Jersey coast,39.8,-74.5,high,39.8,-73.6
+Crania Aegyptiaca,Egyptian+Negro?,2,1286.384524,Egypt,26.8,30.8,low,27.78726896031426,30.23
+Catalogue of Skulls,Negress,3,1289.1157013333332,West Africa,7.5,-1.0,low,8.48726896031426,-1.5699999999999998
+Crania Aegyptiaca,Semitic,5,1291.3006431999995,Levant,33.5,36.0,low,34.34870489570875,35.51
+Crania Americana,Algonquin-Lenapé (Eastern or Atlantic Lenapé),3,1291.8468786666665,New Jersey coast,39.8,-74.5,high,39.8,-75.48
+Crania Americana,Araucanian,3,1291.8468786666665,"Araucanía, Chile",-38.7,-72.6,high,-38.7,-73.58
+Catalogue of Skulls,Choctaw and Negro?,1,1294.5780559999998,Mississippi / Alabama,32.7,-88.0,low,32.7,-88.0
+Catalogue of Skulls,Huron,2,1294.5780559999998,Georgian Bay,45.0,-80.0,high,45.0,-79.1
+Catalogue of Skulls,Kowalitsk,1,1294.5780559999998,"Cowlitz, Washington",46.1,-122.9,medium,46.1,-122.9
+Catalogue of Skulls,Peruvian,5,1294.5780559999998,Peru coast/Andes,-12.0,-77.0,medium,-10.966576413087267,-77.2358721899937
+Catalogue of Skulls,from battlefield of San Jacinto,1,1294.5780559999998,"San Jacinto, Texas",29.75,-95.08,high,29.75,-95.08
+Crania Americana,"Morton didn't explicitly classify, but notes similarity to Natchez",1,1294.5780559999998,Lower Mississippi Valley,31.0,-91.4,low,31.0,-91.4
+Catalogue of Skulls,Peruvian (Arica),12,1295.9436446666666,Arica,-18.48,-70.31,high,-18.48,-69.41
+Catalogue of Skulls,Fellah,18,1296.3988408888888,Lower Egypt,30.8,31.2,medium,30.8,31.2
+Catalogue of Skulls,Peruvian (Santa),4,1298.674822,"Santa Valley, Peru",-8.98,-78.61,high,-8.98,-78.61
+Crania Americana,Flatheads of Columbia River,8,1298.674822,Columbia Plateau,47.0,-120.0,low,47.0,-120.98
+Catalogue of Skulls,Ottawa,3,1300.0404106666665,Michigan / Ontario,45.0,-84.0,high,45.0,-83.1
+Catalogue of Skulls,Chetimaches,2,1302.7715879999998,Louisiana,29.9,-91.7,high,29.9,-90.8
+Catalogue of Skulls,Mexican,1,1302.7715879999998,Central Mexico,19.4,-99.1,high,19.4,-98.19999999999999
+Crania Aegyptiaca,Negroid,6,1302.7715879999998,Northeast Africa,12.0,31.0,low,12.0,30.02
+Catalogue of Skulls,Nubian?,2,1302.771588,Nubia,22.5,31.9,low,22.5,32.8
+Crania Aegyptiaca,Egyptian,35,1303.0056889142857,Egypt,26.8,30.8,high,27.217264574857317,29.653575002641194
+Crania Americana,Natick,9,1305.5027653333332,"Natick, Massachusetts",42.28,-71.35,high,42.28,-71.35
+Catalogue of Skulls,Negro,4,1306.868354,West Africa,7.5,-1.0,low,7.917264574857316,-2.146424997358808
+Catalogue of Skulls,Ancient Peruvian,4,1310.9651199999998,Peru coast/Andes,-12.0,-77.0,medium,-11.505372537405984,-78.02710450940876
+Catalogue of Skulls,Arikaree,1,1310.9651199999998,North Dakota,47.2,-101.4,high,47.2,-102.38000000000001
+Catalogue of Skulls,Gepepscot,1,1310.9651199999998,"Casco Bay, Maine",43.8,-69.8,low,43.8,-69.8
+Catalogue of Skulls,Kaffer,1,1310.9651199999998,Eastern South Africa,-32.0,28.0,medium,-32.0,28.0
+Catalogue of Skulls,Malay (Sambawa),1,1310.9651199999998,"Sumbawa, Indonesia",-8.65,117.5,high,-8.65,117.5
+Catalogue of Skulls,Massasauga,1,1310.9651199999998,Great Lakes,45.0,-82.0,low,45.0,-82.0
+Catalogue of Skulls,Modern Nubian?,1,1310.9651199999998,Nubia,22.5,31.9,low,22.5,30.919999999999998
+Catalogue of Skulls,Mozambique Negro,1,1310.9651199999998,Mozambique,-18.5,35.0,high,-18.5,35.9
+Catalogue of Skulls,Native African (Mina),1,1310.9651199999998,Elmina / Ghana,5.1,-1.35,medium,5.1,-1.35
+Catalogue of Skulls,Quinnipack (Mohegan),1,1310.9651199999998,Connecticut,41.3,-72.9,medium,41.3,-72.9
+Crania Americana,Mexican,11,1314.6894527272727,Central Mexico,19.4,-99.1,high,20.33203538596925,-98.79716334551254
+Catalogue of Skulls,Ancient Mexican (Azteck?),2,1319.1586519999998,Valley of Mexico,19.4,-99.1,medium,20.02305236743002,-99.95755801403745
+Catalogue of Skulls,Lenape or Delaware,2,1319.1586519999998,Delaware Valley,40.0,-75.2,high,40.98,-75.2
+Catalogue of Skulls,Malay (Amboyna),4,1323.255418,"Ambon, Indonesia",-3.7,128.2,high,-3.7,128.2
+Catalogue of Skulls,Copt,2,1327.352184,Egypt,26.8,30.8,high,26.355373813676632,29.578399592978318
+Catalogue of Skulls,Egyptian-Nilotic,1,1327.352184,Upper Nile / Sudan,14.5,32.5,medium,14.5,32.5
+Catalogue of Skulls,Indian,2,1327.352184,North America,39.0,-98.0,low,39.0,-98.0
+Catalogue of Skulls,Narraganset,10,1327.352184,Rhode Island,41.7,-71.4,high,41.7,-71.4
+Catalogue of Skulls,Pames Mexican,1,1327.352184,"San Luis Potosí, Mexico",22.2,-100.9,medium,22.2,-100.9
+Catalogue of Skulls,Sambo,1,1327.352184,Caribbean / northern South America,12.0,-70.0,low,12.0,-70.0
+Catalogue of Skulls,White woman,1,1327.352184,Europe (general),50.0,10.0,low,50.0,9.02
+Catalogue of Skulls,Egyptian,51,1333.778483607843,Egypt,26.8,30.8,high,25.604884942777474,30.11
+Crania Americana,Ancient Peruvians,1,1335.545716,Peru coast/Andes,-12.0,-77.0,medium,-12.529338161723421,-78.09918201884095
+Catalogue of Skulls,Ancient Mexican (Tacuba),3,1338.2768933333332,"Tacuba, Mexico City",19.46,-99.19,high,19.46,-99.19
+Catalogue of Skulls,Chenouk,3,1338.2768933333332,Lower Columbia,46.3,-123.8,low,46.3,-124.78
+Catalogue of Skulls,Negro (US),3,1338.2768933333332,United States,34.8,-86.8,low,35.64870489570875,-87.28999999999999
+Crania Americana,Skulls from the Mounds,6,1342.3736593333333,Eastern Woodlands / Ohio Valley,39.9,-82.9,low,39.9,-82.0
+Catalogue of Skulls,Clatsap,1,1343.739248,"Mouth of Columbia, Oregon",46.2,-123.9,high,46.2,-123.9
+Catalogue of Skulls,Irishman (Celt),1,1343.739248,Ireland,53.3,-8.0,high,53.3,-7.1
+Catalogue of Skulls,Kanaka (Sandwich Islands),1,1343.739248,Hawaiʻi,21.3,-157.8,high,21.3,-156.9
+Catalogue of Skulls,Lenape,1,1343.739248,Delaware Valley,40.0,-75.2,high,40.0,-76.26
+Catalogue of Skulls,Malay (Javanese),2,1343.739248,"Java, Indonesia",-7.5,110.0,medium,-7.5,110.9
+Catalogue of Skulls,Native Australian,1,1343.739248,Australia,-25.0,133.0,high,-25.917986928011505,132.47
+Catalogue of Skulls,Parsee,2,1343.739248,Gujarat / western India,21.17,72.83,high,21.17,72.83
+Catalogue of Skulls,Quichua,1,1343.739248,"Andean highlands, Peru/Ecuador",-13.5,-72.0,high,-13.5,-72.0
+Catalogue of Skulls,Armenian,4,1347.836014,Armenian Highlands,40.2,44.5,high,40.2,44.5
+Catalogue of Skulls,Negroid Egyptian,4,1347.836014,Egypt / Nubia,23.0,32.5,medium,23.84870489570875,32.01
+Crania Americana,"Osage, but broader grouping is Dacota",7,1350.7622754285712,Missouri / Arkansas,37.0,-92.5,medium,37.0,-91.6
+Catalogue of Skulls,Hovah? of Madagascar,2,1351.93278,Madagascar highlands,-19.0,47.0,low,-19.0,47.0
+Catalogue of Skulls,Kanaka of Oahu,2,1351.93278,"Oʻahu, Hawaiʻi",21.48,-157.99,high,21.48,-157.99
+Catalogue of Skulls,Osage,2,1351.93278,Missouri / Arkansas,37.0,-92.5,high,37.0,-93.48
+Crania Americana,"Chetimaches, though notes social affinity with Natchez",2,1351.93278,Louisiana,29.9,-91.7,medium,29.9,-92.68
+Catalogue of Skulls,Mexican (Otumba),3,1354.6639573333332,"Otumba, Mexico",19.7,-98.75,high,19.7,-98.75
+Catalogue of Skulls,Native African,27,1358.305527111111,West Africa,7.5,-1.0,low,7.05537381367663,-2.221600407021681
+Catalogue of Skulls,Ancient Peruvian (Pisco),1,1360.126312,"Pisco, Peru",-13.71,-76.2,high,-13.71,-77.18
+Catalogue of Skulls,Egyptian-Negro?,1,1360.126312,Egypt / Nubia,23.0,32.5,low,22.082013071988495,31.97
+Catalogue of Skulls,Hindu,13,1360.126312,India,22.5,78.9,medium,22.5,78.9
+Catalogue of Skulls,Mexican (Chechemecan),1,1360.126312,North-central Mexico,22.0,-102.0,medium,22.0,-102.0
+Catalogue of Skulls,Negro born in the US,2,1360.126312,United States,34.8,-86.8,low,33.882013071988496,-87.33
+Catalogue of Skulls,Circassian,3,1365.5886666666663,"Circassia, NW Caucasus",44.5,39.5,high,44.5,40.4
+Catalogue of Skulls,Peruvian from Tumulus,3,1365.5886666666663,Peru,-12.0,-77.0,low,-13.26740628583637,-77.28927721414321
+Catalogue of Skulls,Prussian (Berlin),4,1368.319844,"Berlin, Prussia",52.52,13.405,high,52.52,13.405
+Catalogue of Skulls,Mandan,7,1369.4903485714285,North Dakota,46.8,-100.9,high,46.8,-100.9
+Catalogue of Skulls,Clickitat,1,1376.513376,"Columbia Plateau, Washington",45.8,-121.2,high,45.8,-121.2
+Catalogue of Skulls,Euchee,1,1376.513376,Tennessee / Georgia,35.0,-85.0,medium,35.0,-85.0
+Catalogue of Skulls,Huron?,2,1376.513376,Georgian Bay,45.0,-80.0,low,45.0,-80.98
+Catalogue of Skulls,Kanaka of Sandwich Islands,1,1376.513376,Hawaiʻi,21.3,-157.8,high,21.3,-158.78
+Catalogue of Skulls,Malayo-Chinese (Java),1,1376.513376,"Java, Indonesia",-7.5,110.0,medium,-6.52,110.0
+Catalogue of Skulls,Mexican (Tlascala),1,1376.513376,"Tlaxcala, Mexico",19.32,-98.24,high,19.32,-98.24
+Catalogue of Skulls,Mound on Upper Mississippi,1,1376.513376,Upper Mississippi Valley,43.8,-91.2,high,43.8,-91.2
+Catalogue of Skulls,Nanticoke,1,1376.513376,Delmarva Peninsula,38.5,-75.8,high,38.5,-75.8
+Catalogue of Skulls,Swedish,2,1376.513376,Sweden,59.3,18.1,high,59.3,18.1
+Catalogue of Skulls,Menominee,7,1376.513376,Wisconsin / Upper Michigan,45.0,-88.0,high,45.0,-88.0
+Catalogue of Skulls,Mohawk,3,1381.9757306666663,"Mohawk Valley, New York",43.0,-74.5,high,43.0,-74.5
+Catalogue of Skulls,Pessah (Negro),3,1381.9757306666663,West Africa,7.5,-1.0,low,6.304884942777475,-1.6900000000000006
+Crania Americana,Algonquin-Lenapé (Western Lenapé),14,1382.3658988571428,Pennsylvania / Delaware Valley,40.0,-75.2,high,38.86,-75.2
+Catalogue of Skulls,Indian (Illinois Mound),2,1384.706908,Illinois,40.0,-89.0,high,40.0,-89.0
+Catalogue of Skulls,Thugg of India,2,1384.706908,Central India,23.5,79.0,medium,23.5,79.0
+Catalogue of Skulls,Baramka,2,1392.90044,Australia / Oceania,-15.0,130.0,unknown,-15.0,130.0
+Catalogue of Skulls,Golah Negro (Liberia),1,1392.90044,Liberia,6.4,-10.8,high,6.4,-9.9
+Catalogue of Skulls,Guanche,1,1392.90044,Canary Islands,28.3,-16.5,medium,28.3,-16.5
+Catalogue of Skulls,Malay (Ceylon),1,1392.90044,Sri Lanka,7.9,80.7,low,7.9,80.7
+Catalogue of Skulls,Native African (Mozambique),1,1392.90044,Mozambique,-18.5,35.0,high,-18.5,34.02
+Catalogue of Skulls,Trucky (Shoshoné),1,1392.90044,"Truckee area, Nevada/California",39.5,-120.0,high,39.5,-120.0
+Crania Aegyptiaca,Egyptian+Negro/Malay?,1,1392.90044,Egypt,26.8,30.8,low,25.362180680602176,31.05352633939372
+Crania Americana,Dacota,1,1392.90044,Dakotas,44.5,-100.0,high,44.5,-99.1
+Catalogue of Skulls,Native African Negro,14,1394.0709445714283,West Africa,7.5,-1.0,low,6.062180680602176,-0.7464736606062823
+Catalogue of Skulls,Seminole,12,1395.6316173333332,Florida,28.0,-81.7,high,28.0,-81.7
+Catalogue of Skulls,Anglo-American,9,1398.3627946666666,Northeastern United States,40.7,-74.0,low,40.7,-74.0
+Catalogue of Skulls,"Cave at Stuebenville, Ohio",6,1398.3627946666666,"Steubenville, Ohio",40.37,-80.63,medium,40.37,-80.63
+Crania Americana,Skulls from Caves in the Valley of Ohio,8,1399.0455889999998,Ohio Valley,39.9,-82.9,medium,40.74870489570875,-83.39
+Catalogue of Skulls,Chinese,6,1403.825149333333,China,35.9,104.2,high,35.9,104.2
+Catalogue of Skulls,Cotonay,3,1403.825149333333,Kootenai / Idaho-Montana-BC,48.5,-116.0,low,48.5,-116.0
+Catalogue of Skulls,Mexican,6,1403.825149333333,Central Mexico,19.4,-99.1,high,18.729924812386578,-100.02227937358744
+Catalogue of Skulls,Otoe,3,1403.825149333333,Nebraska / Kansas,40.5,-96.0,high,40.5,-96.0
+Catalogue of Skulls,Ancient Mexican,1,1409.287504,Central Mexico,19.4,-99.1,high,18.23971105011991,-98.72299926686256
+Catalogue of Skulls,Ancient Peruvian (Arica),1,1409.287504,Arica,-18.48,-70.31,high,-18.48,-71.29
+Catalogue of Skulls,Creek,2,1409.287504,Alabama / Georgia,32.5,-85.0,high,32.5,-84.1
+Catalogue of Skulls,Native African,1,1409.287504,West Africa,7.5,-1.0,low,6.5101070810827295,0.1797084424032258
+Catalogue of Skulls,Negro of St. Domingo,1,1409.287504,Saint-Domingue / Haiti,18.9,-72.3,high,18.9,-72.3
+Catalogue of Skulls,Sepoy (Hindu),1,1409.287504,North India,26.8,80.9,medium,26.8,80.9
+Catalogue of Skulls,Miami,5,1412.5649168,Indiana / western Ohio,40.0,-84.5,high,40.0,-84.5
+Catalogue of Skulls,Minetari,4,1417.481036,Upper Missouri,47.0,-102.0,medium,47.0,-102.0
+Crania Aegyptiaca,Egypto-Pelasgic,3,1420.2122133333332,Egypt,26.8,30.8,low,25.81010708108273,31.979708442403226
+Catalogue of Skulls,Shawnee?,3,1425.6745679999997,Ohio Valley,39.5,-83.0,low,39.5,-82.1
+Catalogue of Skulls,Malay (Makassar),2,1425.674568,"Makassar, Indonesia",-5.15,119.43,high,-5.15,120.33000000000001
+Catalogue of Skulls,Pelasgic,17,1426.6385129411765,Aegean / eastern Mediterranean,39.0,24.0,low,39.0,24.9
+Catalogue of Skulls,Celtic Irish,4,1433.8681,Ireland,53.3,-8.0,high,54.14870489570875,-8.49
+Catalogue of Skulls,Native African (Bassa),3,1436.599277333333,Liberia,6.4,-10.8,high,7.24870489570875,-11.290000000000001
+Catalogue of Skulls,German,10,1440.4229256,Germany,51.2,10.4,high,52.04870489570875,9.91
+Crania Aegyptiaca,Pelasgic,18,1441.1512395555555,Aegean / eastern Mediterranean,39.0,24.0,low,39.98,24.0
+Catalogue of Skulls,Cherokee,3,1442.061632,Southern Appalachians,35.5,-83.5,high,36.34870489570875,-83.99
+Catalogue of Skulls,Javanese,1,1442.061632,"Java, Indonesia",-7.5,110.0,high,-7.5,108.94
+Catalogue of Skulls,Malay (Madura),2,1442.061632,"Madura, Indonesia",-7.0,113.2,high,-7.0,113.2
+Catalogue of Skulls,"Mound (Chilicothe, Ohio)",2,1442.061632,"Chillicothe, Ohio",39.33,-82.98,high,39.33,-82.98
+Catalogue of Skulls,Native African (Benguella),1,1442.061632,"Benguela, Angola",-12.6,13.4,high,-12.6,13.4
+Catalogue of Skulls,Pelasgic?,1,1442.061632,Aegean / eastern Mediterranean,39.0,24.0,low,39.0,22.94
+Catalogue of Skulls,Sac? Indian,1,1442.061632,Iowa / Wisconsin,43.0,-91.0,low,43.0,-91.0
+Catalogue of Skulls,Shawnee?,1,1442.061632,Ohio Valley,39.5,-83.0,low,39.5,-83.98
+Crania Aegyptiaca,Pelasgic?,1,1442.061632,Aegean / eastern Mediterranean,39.0,24.0,low,37.86,24.0
+Crania Americana,Iroquois,5,1442.061632,Upstate New York,43.0,-75.0,high,43.0,-74.1
+Crania Americana,Algonquin-Lenapé (Northern Lenapé),4,1454.3519299999998,Hudson Valley,41.5,-74.0,high,41.5,-74.0
+Catalogue of Skulls,Charib,1,1458.448696,Lesser Antilles,14.0,-61.0,medium,14.0,-61.0
+Catalogue of Skulls,Dey,1,1458.448696,Bengal,23.7,90.4,low,22.782013071988494,89.87
+Catalogue of Skulls,Ottawa,1,1458.448696,Michigan / Ontario,45.0,-84.0,high,45.0,-84.98
+Catalogue of Skulls,Winnebago,2,1458.448696,Wisconsin,43.7,-88.7,high,43.7,-88.7
+Crania Americana,Seminole-Muskogee,7,1463.7159665714285,Florida / Georgia,29.0,-83.0,high,29.0,-83.0
+Catalogue of Skulls,Malay,3,1469.373405333333,Malay world,3.0,102.0,low,3.0,102.0
+Catalogue of Skulls,Cherokee?,1,1474.83576,Southern Appalachians,35.5,-83.5,low,34.5820130719885,-84.03
+Catalogue of Skulls,Dacota or Sioux,1,1474.83576,Dakotas,44.5,-100.0,medium,44.5,-100.98
+Catalogue of Skulls,Golah,1,1474.83576,Liberia,6.4,-10.8,medium,5.482013071988495,-11.330000000000002
+Catalogue of Skulls,Indian (Ohio Mound),1,1474.83576,Ohio,39.9,-82.9,high,38.9820130719885,-83.43
+Catalogue of Skulls,Malay (Borneo),2,1474.83576,Borneo,0.5,114.0,high,0.5,114.0
+Catalogue of Skulls,"Mound at Circleville, Ohio",1,1474.83576,"Circleville, Ohio",39.6,-82.95,high,39.6,-82.95
+Catalogue of Skulls,Mound in Tennessee,1,1474.83576,Tennessee,35.8,-86.4,high,35.8,-86.4
+Catalogue of Skulls,Potawatomie,2,1474.83576,Southern Michigan,42.5,-86.5,high,42.5,-85.6
+Catalogue of Skulls,Semitic?,2,1474.83576,Levant,33.5,36.0,low,32.5820130719885,35.47
+Catalogue of Skulls,Assinaboin,3,1480.2981146666664,Saskatchewan / Montana,49.0,-106.0,high,49.0,-106.0
+Catalogue of Skulls,Sauk,2,1487.1260579999998,Wisconsin / Illinois,42.3,-89.5,high,42.3,-89.5
+Catalogue of Skulls,Calapooyah,1,1491.222824,"Willamette Valley, Oregon",44.9,-123.0,high,44.9,-123.0
+Catalogue of Skulls,Chippeway,2,1491.222824,Great Lakes / Ojibwe country,47.0,-89.0,high,47.0,-89.0
+Catalogue of Skulls,Maya,1,1491.222824,Yucatán / Maya region,19.3,-89.0,high,19.3,-89.0
+Catalogue of Skulls,Sierra Nevada,1,1491.222824,"Sierra Nevada, California",37.0,-119.5,high,37.0,-119.5
+Catalogue of Skulls,Lipan,2,1499.4163559999995,South Texas,29.5,-99.0,high,29.5,-99.0
+Catalogue of Skulls,Englishman,3,1502.1475333333335,England,52.5,-1.5,high,52.5,-0.6
+Catalogue of Skulls,Malay (Macassar),1,1507.609888,"Makassar, Indonesia",-5.15,119.43,high,-5.15,118.45
+Catalogue of Skulls,Mexican (mound near Ajacuba),1,1507.609888,"Ajacuba, Hidalgo, Mexico",20.09,-99.12,high,20.09,-99.12
+Catalogue of Skulls,Celt,1,1523.996952,Ireland,53.3,-8.0,low,52.382013071988496,-8.530000000000001
+Catalogue of Skulls,Chemesyan Indian,1,1523.996952,"Tsimshian country, British Columbia",54.0,-130.0,low,54.0,-130.0
+Catalogue of Skulls,Javanese Malay,1,1523.996952,"Java, Indonesia",-7.5,110.0,medium,-8.64,110.0
+Catalogue of Skulls,Potowatomie,1,1523.996952,Southern Michigan,42.5,-86.5,high,42.5,-87.48
+Catalogue of Skulls,Upsarooka or Crow,1,1523.996952,"Crow country, Montana/Wyoming",45.5,-107.5,high,45.5,-106.6
+Catalogue of Skulls,Krooman,2,1532.190484,Liberia,5.0,-9.0,medium,5.0,-9.0
+Catalogue of Skulls,Ottigamie,2,1532.190484,Wisconsin,44.3,-88.0,medium,44.3,-88.0
+Catalogue of Skulls,Cayuga,1,1540.384016,"Finger Lakes, New York",42.8,-76.7,high,42.8,-76.7
+Catalogue of Skulls,German?,1,1540.384016,Germany,51.2,10.4,low,50.2820130719885,9.87
+Catalogue of Skulls,Laplander,1,1540.384016,Sápmi,68.5,23.5,medium,68.5,23.5
+Catalogue of Skulls,Saraska (Circassian),1,1540.384016,"Circassia, NW Caucasus",44.5,39.5,medium,44.5,38.52
+Catalogue of Skulls,Cholo or Hispano-Peruvian?,1,1556.77108,Peru,-12.0,-77.0,low,-13.078927445805881,-76.13958407343495
+Catalogue of Skulls,Oneida,1,1556.77108,Central New York,43.2,-75.6,high,43.2,-75.6
+Catalogue of Skulls,Upsarooka,1,1556.77108,"Crow country, Montana/Wyoming",45.5,-107.5,high,45.5,-108.48
+Catalogue of Skulls,Iroquois?,2,1573.158144,Upstate New York,43.0,-75.0,low,43.0,-75.98
+Catalogue of Skulls,Malayan,1,1573.158144,Malay Peninsula,4.0,102.0,medium,4.0,102.0
+Catalogue of Skulls,Dutch,1,1581.3516759999998,Netherlands,52.1,5.3,high,52.1,6.2
+Catalogue of Skulls,Athla-Ficksa (Muskogee-Creek),1,1589.5452079999998,Alabama / Georgia,32.5,-85.0,high,32.5,-85.98
+Catalogue of Skulls,Native African (Grabbo),1,1589.5452079999998,Liberia / Côte d’Ivoire,5.2,-7.5,medium,5.2,-7.5
+Catalogue of Skulls,Bedouin,1,1605.9322719999998,Sinai / Arabian Desert,29.5,34.0,medium,29.5,34.0
+Catalogue of Skulls,Anglo-Saxon,1,1622.3193359999998,England,52.5,-1.5,medium,53.34870489570875,-1.9899999999999998
+Catalogue of Skulls,English soldier?,1,1720.64172,England,52.5,-1.5,low,51.5820130719885,-2.0300000000000002
+Catalogue of Skulls,Dutchman,1,1868.125296,Netherlands,52.1,5.3,medium,52.1,4.32
