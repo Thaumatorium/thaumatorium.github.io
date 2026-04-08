@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Jargon Files | The Thaumatorium</title>
+		<meta name="description" content="Search and browse the Jargon File 4.4.7 online, with random entries and a scrollable lexicon." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Jargon Files" />
+		<meta property="og:description" content="Search and browse the Jargon File 4.4.7 online, with random entries and a scrollable lexicon." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Jargon Files" />
+		<meta name="twitter:description" content="Search and browse the Jargon File 4.4.7 online, with random entries and a scrollable lexicon." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<div class="jargon-page">
+				<style>
+					.jargon-page {
+						display: grid;
+						gap: 1rem;
+						color: #333;
+					}
+					.jargon-card {
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
+						background: #fffaf9;
+						box-shadow: 3px 3px 5px #555;
+					}
+					.jargon-hero,
+					.jargon-browser,
+					.jargon-notes {
+						padding: 1rem;
+					}
+					.jargon-hero {
+						display: grid;
+						gap: 0.85rem;
+						background: linear-gradient(135deg, rgba(136, 0, 0, 0.06), rgba(136, 0, 0, 0) 42%), #fffaf9;
+					}
+					.jargon-hero h2,
+					.jargon-detail-head h3,
+					.jargon-notes h3,
+					.jargon-results-head h3 {
+						margin: 0;
+						color: #800;
+						font-family: Times, serif;
+						text-transform: uppercase;
+					}
+					.jargon-hero p,
+					.jargon-notes p {
+						margin: 0;
+						color: #555;
+					}
+					.jargon-toolbar,
+					.jargon-toolbar-main,
+					.jargon-toolbar-meta {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.75rem;
+						align-items: center;
+					}
+					.jargon-toolbar-main {
+						flex: 1 1 30rem;
+					}
+					.jargon-toolbar-meta {
+						justify-content: flex-end;
+					}
+					.jargon-search-field {
+						display: grid;
+						gap: 0.35rem;
+						flex: 1 1 24rem;
+					}
+					.jargon-search-field input {
+						width: 100%;
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						padding: 0.7rem 0.8rem;
+						font: inherit;
+						background: #fff;
+						color: #333;
+					}
+					.jargon-search-field input:focus,
+					.jargon-result-button:focus,
+					.jargon-button:focus {
+						outline: 2px solid #800;
+						outline-offset: 2px;
+					}
+					.jargon-toolbar-note,
+					.jargon-status,
+					.jargon-empty,
+					.jargon-result-snippet,
+					.jargon-detail-meta {
+						color: #555;
+					}
+					.jargon-button {
+						border: 2px solid #6e0000;
+						border-radius: 4px;
+						padding: 0.55rem 0.9rem;
+						background: #800;
+						color: #fff;
+						font: inherit;
+						cursor: pointer;
+					}
+					.jargon-button:hover {
+						background: #940000;
+					}
+					.jargon-browser {
+						display: grid;
+						grid-template-columns: minmax(18rem, 24rem) minmax(0, 1fr);
+						gap: 1rem;
+						align-items: start;
+					}
+					.jargon-results,
+					.jargon-detail {
+						display: grid;
+						gap: 0.85rem;
+					}
+					.jargon-results-list {
+						display: grid;
+						gap: 0.45rem;
+						max-height: 70vh;
+						padding-right: 0.2rem;
+						overflow: auto;
+					}
+					.jargon-results-head {
+						display: grid;
+						gap: 0.3rem;
+					}
+					.jargon-result-button {
+						display: grid;
+						gap: 0.35rem;
+						width: 100%;
+						padding: 0.85rem;
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
+						background: #fff;
+						color: inherit;
+						text-align: left;
+						font: inherit;
+						cursor: pointer;
+					}
+					.jargon-result-button.is-active {
+						border-color: #800;
+						background: #fff0f0;
+						box-shadow: inset 0 0 0 1px #800;
+					}
+					.jargon-result-button:hover {
+						background: #fff0f0;
+					}
+					.jargon-result-title {
+						font-weight: 700;
+						color: #800;
+					}
+					.jargon-result-snippet {
+						font-size: 0.94rem;
+						line-height: 1.45;
+					}
+					.jargon-detail {
+						min-height: 32rem;
+					}
+					.jargon-detail-card {
+						display: grid;
+						gap: 0.9rem;
+						padding: 1rem;
+						border: 1px solid #cda9a9;
+						border-radius: 4px;
+						background: #fffaf9;
+					}
+					.jargon-detail-head {
+						display: grid;
+						gap: 0.25rem;
+					}
+					.jargon-detail-head h3 {
+						font-size: clamp(1.45rem, 2vw, 2rem);
+					}
+					.jargon-detail-body {
+						display: grid;
+						gap: 0.9rem;
+						line-height: 1.7;
+					}
+					.jargon-detail-body p {
+						margin: 0;
+					}
+					.jargon-detail-body code,
+					.jargon-notes code,
+					.jargon-toolbar-note code {
+						padding: 0.1rem 0.3rem;
+						border-radius: 2px;
+						background: rgba(136, 0, 0, 0.08);
+						font-size: 0.95em;
+					}
+					.jargon-loading {
+						padding: 1rem;
+						border: 1px dashed #cda9a9;
+						border-radius: 4px;
+						background: #fffaf9;
+					}
+					@media (max-width: 959px) {
+						.jargon-browser {
+							grid-template-columns: 1fr;
+						}
+						.jargon-results-list {
+							max-height: 24rem;
+						}
+					}
+				</style>
+				<div class="jargon-card jargon-hero">
+					<h2>The Jargon File, browseable</h2>
+					<p>Search the parsed 4.4.7 lexicon, jump to a random entry, and scroll through the whole glossary without opening the raw text file.</p>
+					<div class="jargon-toolbar">
+						<div class="jargon-toolbar-main">
+							<label class="jargon-search-field">
+								<span>Search headwords and entry text</span>
+								<input id="jargon-search" type="search" placeholder="automagically, angle brackets, zork…" autocomplete="off" />
+							</label>
+							<button class="jargon-button" id="jargon-random" type="button">Random jargon</button>
+							<button class="jargon-button" id="jargon-clear" type="button">Clear search</button>
+						</div>
+						<div class="jargon-toolbar-meta">
+							<span class="jargon-toolbar-note">Dataset: <code>4.4.7</code></span>
+						</div>
+					</div>
+					<p class="jargon-status" id="jargon-status">Loading lexicon…</p>
+				</div>
+				<div class="jargon-card jargon-browser">
+					<div class="jargon-results" aria-labelledby="jargon-results-heading">
+						<div class="jargon-results-head">
+							<h3 id="jargon-results-heading">Results</h3>
+							<p class="jargon-status" id="jargon-results-meta">Waiting for data…</p>
+						</div>
+						<div class="jargon-results-list" id="jargon-results-list">
+							<p class="jargon-loading">Loading entries…</p>
+						</div>
+					</div>
+					<div class="jargon-detail" aria-labelledby="jargon-detail-heading">
+						<div class="jargon-detail-card" id="jargon-detail-card">
+							<div class="jargon-loading">Choose an entry from the list or hit Random jargon.</div>
+						</div>
+					</div>
+				</div>
+				<div class="jargon-card jargon-notes">
+					<h3>Source and scope</h3>
+					<p>
+						This page reads from the JSON generated by <a href="./jargon_447.py"><code>jargon_447.py</code></a
+						>. Right now it only covers the 4.4.7 edition, which is the cleanest one to parse consistently. The original Jargon File is maintained at <a href="http://www.catb.org/jargon/" rel="noopener">catb.org/jargon</a>; raw text versions of all editions are archived in
+						<a href="./jargon-file.org/">jargon-file.org/</a>.
+					</p>
+				</div>
+				<script type="module" src="./jargon-files.mjs"></script>
+			</div>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-04-09</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

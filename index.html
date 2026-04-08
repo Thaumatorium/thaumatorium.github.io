@@ -105,6 +105,10 @@
 			</h2>
 			<ul>
 				<li>
+					<a href="/projects/jargon-files/">Jargon Files</a>
+					<small>(2026-04-08)</small>
+				</li>
+				<li>
 					<a href="/projects/morton-skulls/">Morton Skulls</a>
 					<small>(2026-04-07)</small>
 				</li>
@@ -140,11 +144,21 @@
 					<a href="/projects/warcraft-credits/">NostraDavid&#39;s Warcraft Credit Visualizer</a>
 					<small>(2021-11-08)</small>
 				</li>
-				<li>
-					<a href="/projects/playground/">Playground</a>
-					<small>(2020-07-14)</small>
-				</li>
 			</ul>
+			<section class="home-jargon">
+				<div class="home-jargon-head">
+					<h2>3 random jargons</h2>
+					<div class="home-jargon-actions">
+						<a class="button" href="/projects/jargon-files/">Browse the full lexicon</a>
+						<button class="button" id="home-jargon-refresh" type="button">Pick three more</button>
+					</div>
+				</div>
+				<p class="home-jargon-intro">A small rotating taste of the Jargon File. Each card links through to the full searchable project page.</p>
+				<div class="home-jargon-grid" id="home-jargon-grid">
+					<p class="home-jargon-status" id="home-jargon-status">Loading jargon cards…</p>
+				</div>
+			</section>
+			<script type="module" src="/scripts/home-jargon.mjs"></script>
 		</main>
 		<footer>
 			<div class="copyright">
