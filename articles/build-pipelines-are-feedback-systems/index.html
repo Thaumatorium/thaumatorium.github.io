@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Build Pipelines Are Feedback Systems | The Thaumatorium</title>
+		<meta name="description" content="A practical way to think about build pipelines: fast feedback, deterministic builds, and fewer broken releases." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Build Pipelines Are Feedback Systems" />
+		<meta property="og:description" content="A practical way to think about build pipelines: fast feedback, deterministic builds, and fewer broken releases." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Build Pipelines Are Feedback Systems" />
+		<meta name="twitter:description" content="A practical way to think about build pipelines: fast feedback, deterministic builds, and fewer broken releases." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="articles">
+			<article class="article-page">
+				<h1>Build Pipelines Are Feedback Systems</h1>
+				<p class="article-page-meta">
+					<span>NostraDavid</span>
+					<span aria-hidden="true">·</span>
+					<time datetime="2026-04-09T20:00:00&#43;02:00">2026-04-09</time>
+					<span aria-hidden="true">·</span>
+					<span>Updated <time datetime="2026-05-06T20:26:38&#43;02:00">2026-05-06</time></span>
+					<span aria-hidden="true">·</span>
+					<span>1233 words</span>
+				</p>
+				<p>When people say &ldquo;build pipeline&rdquo;, they often mean a YAML file in CI.</p>
+				<p>That is too narrow.</p>
+				<p>A build pipeline is really a <em>feedback system</em> that turns a code change into confidence. The pipeline takes source code, runs a sequence of checks and transformations, and answers a simple question:</p>
+				<blockquote>
+					<p>&ldquo;Is this change safe enough to move forward?&rdquo;</p>
+				</blockquote>
+				<p>That framing matters, because it changes how you design the pipeline. If you treat it as ceremony, you get a slow, fragile pile of jobs that everyone resents. If you treat it as a feedback system, you start optimizing for signal, speed, and trust.</p>
+				<h2 id="what-a-build-pipeline-actually-does">
+					<a class="self-link" href="#what-a-build-pipeline-actually-does"> What a Build Pipeline Actually Does </a>
+				</h2>
+				<p>At a high level, a pipeline usually does some mix of the following:</p>
+				<ol>
+					<li>Validate the source code.</li>
+					<li>Build the application or artifact.</li>
+					<li>Run automated checks.</li>
+					<li>Package the result.</li>
+					<li>Publish or deploy it somewhere.</li>
+				</ol>
+				<p>That sounds obvious, but the important point is that each stage should reduce uncertainty.</p>
+				<p>For example:</p>
+				<ul>
+					<li>A formatter reduces style noise.</li>
+					<li>A linter catches suspicious code before review.</li>
+					<li>Unit tests verify local behavior.</li>
+					<li>Integration tests verify system behavior.</li>
+					<li>A production build proves the artifact can actually be created.</li>
+					<li>A deployment step proves the build is not just valid, but usable.</li>
+				</ul>
+				<p>If a stage does not reduce uncertainty, it is probably cargo cult.</p>
+				<h2 id="the-four-properties-of-a-good-pipeline">
+					<a class="self-link" href="#the-four-properties-of-a-good-pipeline"> The Four Properties of a Good Pipeline </a>
+				</h2>
+				<h3 id="1-it-is-fast">
+					<a class="self-link" href="#1-it-is-fast"> 1. It is fast </a>
+				</h3>
+				<p>Fast feedback changes behavior. If developers get results in 2 minutes, they stay in flow. If they get results in 25 minutes, they context-switch, stack up branches, and stop trusting CI as part of their normal loop.</p>
+				<p>Speed is not cosmetic. It is a design requirement.</p>
+				<p>Good ways to improve speed:</p>
+				<ul>
+					<li>run cheap checks early</li>
+					<li>fail fast</li>
+					<li>parallelize independent jobs</li>
+					<li>cache dependencies carefully</li>
+					<li>avoid rebuilding the same artifact multiple times</li>
+					<li>run the smallest useful test set for pull requests, and the broader suite later</li>
+				</ul>
+				<h3 id="2-it-is-deterministic">
+					<a class="self-link" href="#2-it-is-deterministic"> 2. It is deterministic </a>
+				</h3>
+				<p>A pipeline should produce the same result from the same input.</p>
+				<p>If the same commit passes on Monday and fails on Tuesday because a dependency floated, a remote service timed out, or a test depends on the current clock, the pipeline stops being a source of truth.</p>
+				<p>Determinism usually means:</p>
+				<ul>
+					<li>pinned dependencies</li>
+					<li>isolated environments</li>
+					<li>reproducible build steps</li>
+					<li>controlled test data</li>
+					<li>minimized reliance on external systems</li>
+				</ul>
+				<p>Flaky pipelines are worse than no pipeline, because they train people to ignore red builds.</p>
+				<h3 id="3-it-is-scoped">
+					<a class="self-link" href="#3-it-is-scoped"> 3. It is scoped </a>
+				</h3>
+				<p>Not every change deserves the same amount of scrutiny.</p>
+				<p>A typo in documentation should not trigger a full end-to-end matrix across five operating systems. A change in a shared core library probably should trigger much more.</p>
+				<p>A good pipeline understands scope:</p>
+				<ul>
+					<li>docs-only changes run docs checks</li>
+					<li>frontend-only changes skip unrelated backend work</li>
+					<li>pull requests run fast confidence checks</li>
+					<li>merges to main run broader verification</li>
+					<li>releases run the full packaging and publishing flow</li>
+				</ul>
+				<p>Scope is how you keep confidence high without making development miserable.</p>
+				<h3 id="4-it-is-trustworthy">
+					<a class="self-link" href="#4-it-is-trustworthy"> 4. It is trustworthy </a>
+				</h3>
+				<p>The output of the pipeline has to mean something.</p>
+				<p>If developers regularly merge with failing checks, rerun jobs until green without understanding the cause, or maintain a huge list of &ldquo;expected failures&rdquo;, then the pipeline no longer communicates confidence. It becomes background noise.</p>
+				<p>Trust usually comes from:</p>
+				<ul>
+					<li>clear failure messages</li>
+					<li>stable tests</li>
+					<li>explicit ownership</li>
+					<li>visible artifacts</li>
+					<li>a small number of meaningful gates</li>
+				</ul>
+				<p>The pipeline should be opinionated enough that a green build is boring, and a red build is actionable.</p>
+				<h2 id="a-simple-mental-model">
+					<a class="self-link" href="#a-simple-mental-model"> A Simple Mental Model </a>
+				</h2>
+				<p>You can think of the pipeline as three layers:</p>
+				<h3 id="1-cheap-local-feedback">
+					<a class="self-link" href="#1-cheap-local-feedback"> 1. Cheap local feedback </a>
+				</h3>
+				<p>This is what should happen before code even leaves a developer machine:</p>
+				<ul>
+					<li>formatting</li>
+					<li>linting</li>
+					<li>type-checking</li>
+					<li>fast unit tests</li>
+				</ul>
+				<p>These checks should ideally run in seconds.</p>
+				<h3 id="2-pull-request-feedback">
+					<a class="self-link" href="#2-pull-request-feedback"> 2. Pull request feedback </a>
+				</h3>
+				<p>This is where CI answers: &ldquo;Should another human spend time reviewing this?&rdquo;</p>
+				<p>Typical examples:</p>
+				<ul>
+					<li>clean install</li>
+					<li>build verification</li>
+					<li>test suite for touched areas</li>
+					<li>static analysis</li>
+					<li>security scanning for obvious issues</li>
+				</ul>
+				<p>This layer should still be fast enough to preserve momentum.</p>
+				<h3 id="3-release-confidence">
+					<a class="self-link" href="#3-release-confidence"> 3. Release confidence </a>
+				</h3>
+				<p>This is where the question changes from &ldquo;Does this look okay?&rdquo; to &ldquo;Can we ship it safely?&rdquo;</p>
+				<p>Typical examples:</p>
+				<ul>
+					<li>full integration suite</li>
+					<li>end-to-end tests</li>
+					<li>artifact signing</li>
+					<li>versioning</li>
+					<li>publishing containers or packages</li>
+					<li>staged deployments</li>
+				</ul>
+				<p>Not every commit needs the heaviest possible checks. That is why separating these layers helps.</p>
+				<h2 id="a-minimal-example">
+					<a class="self-link" href="#a-minimal-example"> A Minimal Example </a>
+				</h2>
+				<p>Here is a deliberately boring pipeline:</p>
+				<div class="highlight">
+					<pre tabindex="0" style="color: #f8f8f2; background-color: #272822; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; -webkit-text-size-adjust: none"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">ci</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull_request</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>: [<span style="color:#ae81ff">main]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">validate</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/install-deps.sh</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/check-format.sh</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/lint.sh</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/test-unit.sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">build</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">validate</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/install-deps.sh</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/build.sh</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">release</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">if</span>: <span style="color:#ae81ff">github.ref == &#39;refs/heads/main&#39;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">needs</span>: <span style="color:#ae81ff">build</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v4</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/install-deps.sh</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/package.sh</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">run</span>: <span style="color:#ae81ff">./scripts/deploy-staging.sh</span>
+</span></span></code></pre>
+				</div>
+				<p>The exact syntax is not important. The structure is.</p>
+				<ul>
+					<li><code>validate</code> gives quick signal.</li>
+					<li><code>build</code> proves the artifact can be created.</li>
+					<li><code>release</code> only runs on the branch that matters.</li>
+				</ul>
+				<p>Most teams do not need a cleverer starting point than this.</p>
+				<h2 id="common-pipeline-mistakes">
+					<a class="self-link" href="#common-pipeline-mistakes"> Common Pipeline Mistakes </a>
+				</h2>
+				<h3 id="doing-everything-in-ci">
+					<a class="self-link" href="#doing-everything-in-ci"> Doing everything in CI </a>
+				</h3>
+				<p>If every tiny check depends on a remote runner, your team waits on the network for feedback that should have happened locally.</p>
+				<p>CI should confirm things, not replace basic discipline on the developer machine.</p>
+				<h3 id="treating-pipeline-length-as-maturity">
+					<a class="self-link" href="#treating-pipeline-length-as-maturity"> Treating pipeline length as maturity </a>
+				</h3>
+				<p>More steps do not automatically mean better engineering. Many pipelines are bloated because each past incident added a new check, but nothing was ever removed.</p>
+				<p>Pipelines need refactoring too.</p>
+				<h3 id="rebuilding-the-same-thing-over-and-over">
+					<a class="self-link" href="#rebuilding-the-same-thing-over-and-over"> Rebuilding the same thing over and over </a>
+				</h3>
+				<p>One of the most common wastes in CI is rebuilding dependencies, recompiling the same target in multiple jobs, or creating slightly different artifacts in each environment.</p>
+				<p>Build once when possible. Promote the same artifact forward.</p>
+				<h3 id="hiding-deployment-logic-in-ad-hoc-scripts">
+					<a class="self-link" href="#hiding-deployment-logic-in-ad-hoc-scripts"> Hiding deployment logic in ad hoc scripts </a>
+				</h3>
+				<p>Some teams have a tidy CI workflow that eventually shells out into a mysterious deploy script nobody understands.</p>
+				<p>That is still pipeline complexity. You did not remove it; you just moved it.</p>
+				<h3 id="accepting-flaky-tests-as-normal">
+					<a class="self-link" href="#accepting-flaky-tests-as-normal"> Accepting flaky tests as normal </a>
+				</h3>
+				<p>This is the silent killer.</p>
+				<p>A flaky test does not just waste runner time. It corrupts the meaning of a passing build. Once people start thinking &ldquo;just rerun it&rdquo;, your pipeline is no longer providing signal.</p>
+				<h2 id="build-pipelines-and-organizational-design">
+					<a class="self-link" href="#build-pipelines-and-organizational-design"> Build Pipelines and Organizational Design </a>
+				</h2>
+				<p>Pipelines are not only technical systems. They mirror how a team works.</p>
+				<p>If releases require manual heroics, the pipeline will show it. If nobody owns test stability, the pipeline will show it. If the architecture forces every change to touch everything else, the pipeline will show that too.</p>
+				<p>That is why pipeline pain is often an architectural smell:</p>
+				<ul>
+					<li>slow builds may point to poor boundaries</li>
+					<li>huge test matrices may point to excessive coupling</li>
+					<li>frequent merge breakage may point to weak trunk discipline</li>
+					<li>manual release steps may point to missing operational maturity</li>
+				</ul>
+				<p>In other words, a bad pipeline is often an honest measurement of a deeper problem.</p>
+				<h2 id="what-to-optimize-first">
+					<a class="self-link" href="#what-to-optimize-first"> What to Optimize First </a>
+				</h2>
+				<p>If your current pipeline is painful, I would optimize in this order:</p>
+				<ol>
+					<li>Remove flakiness.</li>
+					<li>Cut feedback time for pull requests.</li>
+					<li>Make the build reproducible.</li>
+					<li>Reuse artifacts instead of rebuilding.</li>
+					<li>Separate PR checks from release checks.</li>
+					<li>Improve failure messages and observability.</li>
+				</ol>
+				<p>That order matters because a fast pipeline you cannot trust is still bad, and a trustworthy pipeline that takes forever will still be bypassed.</p>
+				<h2 id="closing-thought">
+					<a class="self-link" href="#closing-thought"> Closing Thought </a>
+				</h2>
+				<p>The best build pipelines are rarely impressive.</p>
+				<p>They are quiet, predictable, and boring. They give fast feedback, they fail for real reasons, and they let a team move without gambling on whether the release will explode.</p>
+				<p>That is the goal.</p>
+				<p>Not pipeline cleverness. Confidence.</p>
+				<section class="article-page-changelog" aria-labelledby="recent-changes-title">
+					<h2 id="recent-changes-title">Recent changes</h2>
+					<ol>
+						<li>
+							<time datetime="2026-05-06">2026-05-06</time>
+							<code>b542df1</code>
+							<span>Add draft article on build pipelines as feedback systems</span>
+						</li>
+					</ol>
+				</section>
+			</article>
+			<style>
+				.article-page-meta {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 0.88em;
+					margin-top: -0.5em;
+					margin-bottom: 1.5em;
+				}
+				.article-page-changelog {
+					border-top: 1px solid #b48c8c;
+					margin-top: 2.5rem;
+					padding-top: 1rem;
+				}
+				.article-page-changelog h2 {
+					color: #6e0000;
+					font-family: Tahoma, sans-serif;
+					font-size: 1rem;
+					margin-bottom: 0.75rem;
+				}
+				.article-page-changelog ol {
+					margin: 0;
+					padding-left: 1.25rem;
+				}
+				.article-page-changelog li {
+					margin-bottom: 0.5rem;
+				}
+				.article-page-changelog code {
+					background: #f4e8e8;
+					border-radius: 0.2rem;
+					padding: 0.05rem 0.25rem;
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-05-06</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>| The Thaumatorium</title>
+		<meta name="description" content="" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main>
+			<!doctype html>
+			<html lang="nl">
+				<head>
+					<meta charset="utf-8" />
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
+					<title>Huizenprijs heatmap POC</title>
+					<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+					<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+					<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+					<style>
+						:root {
+							font-family:
+								Inter,
+								ui-sans-serif,
+								system-ui,
+								-apple-system,
+								BlinkMacSystemFont,
+								"Segoe UI",
+								sans-serif;
+							--bg: #f3f6f8;
+							--panel: #ffffff;
+							--text: #132231;
+							--muted: #5b6c7d;
+							--line: #d7e0e7;
+							--accent: #132231;
+						}
+						* {
+							box-sizing: border-box;
+						}
+						html,
+						body {
+							margin: 0;
+							width: 100%;
+							height: 100%;
+							background: var(--bg);
+							color: var(--text);
+						}
+						body {
+							overflow: hidden;
+						}
+						.app {
+							display: grid;
+							grid-template-columns: 360px minmax(0, 1fr);
+							height: 100vh;
+						}
+						aside {
+							background: var(--panel);
+							border-right: 1px solid var(--line);
+							padding: 20px;
+							overflow: auto;
+							box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+							z-index: 2;
+						}
+						h1 {
+							margin: 0 0 8px;
+							font-size: 22px;
+							line-height: 1.2;
+						}
+						p {
+							margin: 0 0 14px;
+							color: var(--muted);
+							font-size: 14px;
+							line-height: 1.45;
+						}
+						.field {
+							margin-top: 14px;
+						}
+						label {
+							display: block;
+							font-size: 13px;
+							font-weight: 700;
+							margin-bottom: 6px;
+						}
+						input[type="text"],
+						input[type="number"],
+						select,
+						button {
+							width: 100%;
+							border: 1px solid #c9d4dc;
+							border-radius: 10px;
+							padding: 10px 12px;
+							font: inherit;
+							background: white;
+							color: var(--text);
+						}
+						input[type="range"] {
+							width: 100%;
+						}
+						button {
+							border: 0;
+							background: var(--accent);
+							color: white;
+							font-weight: 800;
+							cursor: pointer;
+							margin-top: 16px;
+						}
+						button:hover {
+							filter: brightness(1.07);
+						}
+						.providers {
+							display: grid;
+							gap: 8px;
+							margin-top: 8px;
+						}
+						.provider {
+							display: flex;
+							gap: 10px;
+							align-items: flex-start;
+							padding: 9px 10px;
+							border: 1px solid var(--line);
+							border-radius: 10px;
+							background: #fbfcfd;
+						}
+						.provider input {
+							margin-top: 3px;
+						}
+						.provider strong {
+							display: block;
+							font-size: 14px;
+						}
+						.provider span {
+							display: block;
+							color: var(--muted);
+							font-size: 12px;
+							margin-top: 2px;
+						}
+						.stats {
+							display: grid;
+							grid-template-columns: 1fr 1fr;
+							gap: 10px;
+							margin-top: 14px;
+						}
+						.stat {
+							border: 1px solid var(--line);
+							border-radius: 10px;
+							background: #fbfcfd;
+							padding: 10px 12px;
+						}
+						.stat .label {
+							color: var(--muted);
+							font-size: 12px;
+						}
+						.stat .value {
+							margin-top: 3px;
+							font-size: 20px;
+							font-weight: 850;
+						}
+						.status {
+							margin-top: 14px;
+							padding: 10px 12px;
+							white-space: pre-wrap;
+							border-radius: 10px;
+							background: #edf4f8;
+							color: #33485b;
+							font-size: 13px;
+							line-height: 1.45;
+						}
+						.map-wrap {
+							position: relative;
+							min-width: 0;
+							height: 100vh;
+							overflow: hidden;
+						}
+						#map {
+							width: 100%;
+							height: 100%;
+							background: #eaf3fa;
+						}
+						.badge,
+						.legend {
+							position: absolute;
+							border: 1px solid rgba(0, 0, 0, 0.08);
+							background: rgba(255, 255, 255, 0.92);
+							backdrop-filter: blur(8px);
+							border-radius: 12px;
+							box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+							z-index: 600;
+						}
+						.badge {
+							top: 16px;
+							right: 16px;
+							padding: 9px 11px;
+							color: var(--muted);
+							font-size: 12px;
+						}
+						.legend {
+							right: 16px;
+							bottom: 26px;
+							width: 230px;
+							padding: 12px;
+							font-size: 12px;
+							color: var(--muted);
+						}
+						.legend strong {
+							color: var(--text);
+						}
+						.bar {
+							height: 14px;
+							border-radius: 999px;
+							margin: 8px 0 6px;
+							background: linear-gradient(90deg, rgba(0, 128, 255, 0.2), rgba(0, 190, 120, 0.42), rgba(255, 184, 0, 0.62), rgba(255, 68, 0, 0.82), rgba(160, 0, 0, 0.95));
+							border: 1px solid rgba(0, 0, 0, 0.08);
+						}
+						.scale {
+							display: flex;
+							justify-content: space-between;
+						}
+						.leaflet-popup-content {
+							font:
+								13px/1.45 Inter,
+								ui-sans-serif,
+								system-ui,
+								-apple-system,
+								BlinkMacSystemFont,
+								"Segoe UI",
+								sans-serif;
+						}
+						.leaflet-popup-content strong {
+							font-size: 14px;
+						}
+						@media (max-width: 920px) {
+							body {
+								overflow: auto;
+							}
+							.app {
+								grid-template-columns: 1fr;
+								height: auto;
+							}
+							aside {
+								border-right: 0;
+								border-bottom: 1px solid var(--line);
+							}
+							.map-wrap {
+								height: 70vh;
+							}
+						}
+					</style>
+				</head>
+				<body>
+					<main class="app">
+						<aside>
+							<h1>Huizenprijs heatmap</h1>
+							<p>POC met een echte kaartlaag van Nederland. De vijf bronadapters gebruiken demo-data met dezelfde genormaliseerde shape als echte API-adapters.</p>
+							<div class="field">
+								<label for="city">Stadfilter</label>
+								<input id="city" type="text" placeholder="Amsterdam, Utrecht, Amersfoort of leeg" />
+							</div>
+							<div class="field">
+								<label for="metric">Metric</label>
+								<select id="metric">
+									<option value="price_per_m2">Prijs per m²</option>
+									<option value="price">Vraagprijs</option>
+									<option value="density">Aanboddichtheid</option>
+								</select>
+							</div>
+							<div class="field">
+								<label for="limit">Aantal listings</label>
+								<input id="limit" type="number" min="50" max="5000" value="1000" step="50" />
+							</div>
+							<div class="field">
+								<label for="radius">Heat radius</label>
+								<input id="radius" type="range" min="10" max="60" value="28" />
+							</div>
+							<div class="field">
+								<label>Weergave</label>
+								<label class="provider"
+									><input id="showPoints" type="checkbox" checked />
+									<div><strong>Toon listing-punten</strong><span>Voor popups en sanity checks.</span></div></label
+								>
+							</div>
+							<div class="field">
+								<label>Bronnen</label>
+								<div id="providers" class="providers"></div>
+							</div>
+							<button id="refresh">Ververs heatmap</button>
+							<div class="stats">
+								<div class="stat">
+									<div class="label">Listings</div>
+									<div id="statCount" class="value">0</div>
+								</div>
+								<div class="stat">
+									<div class="label">Gem. prijs/m²</div>
+									<div id="statPpm" class="value">–</div>
+								</div>
+							</div>
+							<div id="status" class="status">Initialiseren…</div>
+						</aside>
+						<section class="map-wrap">
+							<div id="map"></div>
+							<div class="badge">Leaflet · OpenStreetMap · Nederland</div>
+							<div class="legend">
+								<strong>Heat-intensiteit</strong>
+								<div class="bar"></div>
+								<div class="scale"><span>laag</span><span>hoog</span></div>
+								<div id="legendMetric" style="margin-top: 8px">Metric: prijs per m²</div>
+							</div>
+						</section>
+					</main>
+					<script>
+						const cityCenters = {
+							Amsterdam: [52.3676, 4.9041],
+							Rotterdam: [51.9244, 4.4777],
+							Utrecht: [52.0907, 5.1214],
+							DenHaag: [52.0705, 4.3007],
+							Eindhoven: [51.4416, 5.4697],
+							Groningen: [53.2194, 6.5665],
+							Haarlem: [52.3874, 4.6462],
+							Leiden: [52.1601, 4.497],
+							Delft: [52.0116, 4.3571],
+							Breda: [51.5719, 4.7683],
+							Arnhem: [51.9851, 5.8987],
+							Nijmegen: [51.8426, 5.8528],
+							Zwolle: [52.5168, 6.083],
+							Maastricht: [50.8514, 5.69],
+							Almere: [52.3508, 5.2647],
+							Amersfoort: [52.1561, 5.3878],
+							Tilburg: [51.5555, 5.0913],
+							Apeldoorn: [52.2112, 5.9699],
+							Enschede: [52.2215, 6.8937],
+							Leeuwarden: [53.2012, 5.7999],
+						};
+						const providerDefs = [
+							{ id: "funda_apify", label: "Funda", sub: "Apify-backed adapter", checked: true, shift: 1.1 },
+							{ id: "pararius_apify", label: "Pararius", sub: "Apify-backed adapter", checked: true, shift: 1.03 },
+							{ id: "huispedia", label: "Huispedia", sub: "Woningdata-adapter", checked: true, shift: 0.97 },
+							{ id: "huislijn", label: "Huislijn", sub: "Listing-adapter", checked: true, shift: 0.94 },
+							{ id: "vastgoed_nl", label: "Vastgoed Nederland", sub: "Partnerfeed-adapter", checked: true, shift: 1.01 },
+						];
+						const cityBase = {
+							Amsterdam: [720000, 8400],
+							Rotterdam: [470000, 5200],
+							Utrecht: [560000, 6100],
+							DenHaag: [500000, 5400],
+							Eindhoven: [430000, 4600],
+							Groningen: [390000, 4100],
+							Haarlem: [610000, 6500],
+							Leiden: [530000, 5700],
+							Delft: [520000, 5600],
+							Breda: [440000, 4300],
+							Arnhem: [400000, 3900],
+							Nijmegen: [420000, 4000],
+							Zwolle: [410000, 4000],
+							Maastricht: [380000, 3700],
+							Almere: [450000, 4200],
+							Amersfoort: [490000, 4800],
+							Tilburg: [390000, 3800],
+							Apeldoorn: [410000, 3900],
+							Enschede: [360000, 3400],
+							Leeuwarden: [330000, 3000],
+						};
+						const providersEl = document.getElementById("providers");
+						const cityEl = document.getElementById("city");
+						const metricEl = document.getElementById("metric");
+						const limitEl = document.getElementById("limit");
+						const radiusEl = document.getElementById("radius");
+						const showPointsEl = document.getElementById("showPoints");
+						const statusEl = document.getElementById("status");
+						const statCount = document.getElementById("statCount");
+						const statPpm = document.getElementById("statPpm");
+						const legendMetric = document.getElementById("legendMetric");
+						let listings = [];
+						let heatRows = [];
+						let heatLayer = null;
+						let markerLayer = null;
+						const map = L.map("map", {
+							preferCanvas: true,
+							zoomControl: true,
+							minZoom: 6,
+							maxZoom: 18,
+						}).setView([52.15, 5.25], 8);
+						L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+							maxZoom: 19,
+							attribution: "&copy; OpenStreetMap contributors",
+						}).addTo(map);
+						const nlBounds = L.latLngBounds([50.72, 3.35], [53.65, 7.23]);
+						map.fitBounds(nlBounds.pad(0.04));
+						function fmt(v) {
+							return Math.round(v).toLocaleString("nl-NL");
+						}
+						function euro(v) {
+							return v == null ? "–" : "€ " + fmt(v);
+						}
+						function hash(str) {
+							let h = 2166136261;
+							for (let i = 0; i < str.length; i++) h = Math.imul(h ^ str.charCodeAt(i), 16777619);
+							return h >>> 0;
+						}
+						function rand(seed) {
+							let s = seed;
+							return () => {
+								s += 0x6d2b79f5;
+								let t = s;
+								t = Math.imul(t ^ (t >>> 15), t | 1);
+								t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+								return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+							};
+						}
+						function selectedProviders() {
+							return [...providersEl.querySelectorAll("input:checked")].map((input) => input.value);
+						}
+						function renderProviders() {
+							providersEl.innerHTML = providerDefs
+								.map(
+									(p) => `
+        <label class="provider">
+          <input type="checkbox" value="${p.id}" ${p.checked ? "checked" : ""} />
+          <div><strong>${p.label}</strong><span>${p.sub}</span></div>
+        </label>`
+								)
+								.join("");
+						}
+						function makeListings(providerId, city, limit) {
+							const provider = providerDefs.find((p) => p.id === providerId);
+							const names = Object.keys(cityCenters);
+							const exactCity = names.find((name) => name.toLowerCase() === city.toLowerCase() || name.replace("DenHaag", "Den Haag").toLowerCase() === city.toLowerCase());
+							const selectedCities = exactCity ? [exactCity] : names;
+							const r = rand(hash(providerId + ":" + city + ":" + limit));
+							const rows = [];
+							const perCity = Math.max(10, Math.ceil(limit / selectedCities.length));
+							let id = 1;
+							for (const name of selectedCities) {
+								const [lat0, lon0] = cityCenters[name];
+								const [, basePpm] = cityBase[name];
+								for (let i = 0; i < perCity; i++) {
+									const area = 45 + Math.round(r() * 180);
+									const ppm = Math.max(1800, basePpm * provider.shift * (0.74 + r() * 0.56));
+									const price = Math.max(150000, ppm * area * (0.96 + r() * 0.09));
+									const lat = lat0 + (r() - 0.5) * 0.22;
+									const lon = lon0 + (r() - 0.5) * 0.3;
+									rows.push({
+										id: providerId + "-" + id++,
+										source: providerId,
+										city: name,
+										title: name.replace("DenHaag", "Den Haag") + " · woning " + id,
+										latitude: lat,
+										longitude: lon,
+										area_m2: area,
+										price,
+										price_per_m2: price / area,
+									});
+								}
+							}
+							return rows.slice(0, limit);
+						}
+						const providerAdapters = {
+							async funda_apify(params) {
+								return makeListings("funda_apify", params.city, params.limit);
+							},
+							async pararius_apify(params) {
+								return makeListings("pararius_apify", params.city, params.limit);
+							},
+							async huispedia(params) {
+								return makeListings("huispedia", params.city, params.limit);
+							},
+							async huislijn(params) {
+								return makeListings("huislijn", params.city, params.limit);
+							},
+							async vastgoed_nl(params) {
+								return makeListings("vastgoed_nl", params.city, params.limit);
+							},
+						};
+						async function fetchListings() {
+							const providerIds = selectedProviders();
+							const city = cityEl.value.trim();
+							const limit = Math.max(50, Math.min(5000, Number(limitEl.value) || 1000));
+							if (!providerIds.length) throw new Error("Selecteer minimaal één bron.");
+							const per = Math.ceil(limit / providerIds.length);
+							const result = await Promise.all(providerIds.map((id) => providerAdapters[id]({ city, limit: per })));
+							return result.flat().slice(0, limit);
+						}
+						function normalize(rows, metric) {
+							if (!rows.length) return [];
+							if (metric === "density") {
+								const bins = new Map();
+								for (const l of rows) {
+									const key = l.latitude.toFixed(2) + ":" + l.longitude.toFixed(2);
+									bins.set(key, (bins.get(key) || 0) + 1);
+								}
+								const max = Math.max(...bins.values());
+								return rows.map((l) => ({ ...l, heatValue: (bins.get(l.latitude.toFixed(2) + ":" + l.longitude.toFixed(2)) || 1) / max }));
+							}
+							const vals = rows.map((l) => (metric === "price" ? l.price : l.price_per_m2));
+							const min = Math.min(...vals);
+							const max = Math.max(...vals);
+							const span = Math.max(1, max - min);
+							return rows.map((l) => {
+								const v = metric === "price" ? l.price : l.price_per_m2;
+								return { ...l, heatValue: 0.15 + ((v - min) / span) * 0.85 };
+							});
+						}
+						function popupHtml(l) {
+							return "<strong>" + l.title + "</strong><br>" + "Bron: " + l.source + "<br>" + "Stad: " + l.city.replace("DenHaag", "Den Haag") + "<br>" + "Vraagprijs: " + euro(l.price) + "<br>" + "Oppervlakte: " + fmt(l.area_m2) + " m²<br>" + "Prijs per m²: " + euro(l.price_per_m2);
+						}
+						function renderMapLayers() {
+							if (heatLayer) map.removeLayer(heatLayer);
+							if (markerLayer) map.removeLayer(markerLayer);
+							const radius = Number(radiusEl.value) || 28;
+							const heatPoints = heatRows.map((l) => [l.latitude, l.longitude, l.heatValue]);
+							heatLayer = L.heatLayer(heatPoints, {
+								radius,
+								blur: Math.max(12, Math.round(radius * 0.75)),
+								minOpacity: 0.22,
+								maxZoom: 17,
+								gradient: {
+									0.2: "rgba(0, 128, 255, .35)",
+									0.42: "rgba(0, 190, 120, .55)",
+									0.62: "rgba(255, 184, 0, .72)",
+									0.82: "rgba(255, 68, 0, .85)",
+									1.0: "rgba(160, 0, 0, .95)",
+								},
+							}).addTo(map);
+							markerLayer = L.layerGroup();
+							if (showPointsEl.checked) {
+								for (const l of heatRows) {
+									L.circleMarker([l.latitude, l.longitude], {
+										radius: 4,
+										color: "rgba(255,255,255,.88)",
+										weight: 1,
+										fillColor: "#132231",
+										fillOpacity: 0.72,
+									})
+										.bindPopup(popupHtml(l))
+										.addTo(markerLayer);
+								}
+							}
+							markerLayer.addTo(map);
+							if (heatRows.length) {
+								const bounds = L.latLngBounds(heatRows.map((l) => [l.latitude, l.longitude]));
+								map.fitBounds(bounds.pad(0.15), { animate: false, maxZoom: 12 });
+							}
+						}
+						function updateStats() {
+							statCount.textContent = fmt(listings.length);
+							const vals = listings.map((l) => l.price_per_m2).filter(Boolean);
+							const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : null;
+							statPpm.textContent = avg ? euro(avg) : "–";
+						}
+						async function refresh() {
+							try {
+								statusEl.textContent = "Provider-adapters laden…";
+								listings = await fetchListings();
+								heatRows = normalize(listings, metricEl.value);
+								updateStats();
+								legendMetric.textContent = "Metric: " + (metricEl.value === "price_per_m2" ? "prijs per m²" : metricEl.value === "price" ? "vraagprijs" : "aanboddichtheid");
+								renderMapLayers();
+								statusEl.textContent = fmt(listings.length) + " listings geladen uit " + selectedProviders().length + " bron(nen).\n" + legendMetric.textContent + ".\nKaartlaag: OpenStreetMap via Leaflet.\nDe listingdata is mock-data met dezelfde genormaliseerde shape als de API-adapters.";
+							} catch (err) {
+								listings = [];
+								heatRows = [];
+								updateStats();
+								renderMapLayers();
+								statusEl.textContent = "Fout: " + (err.message || err);
+							}
+						}
+						document.getElementById("refresh").addEventListener("click", refresh);
+						metricEl.addEventListener("change", refresh);
+						radiusEl.addEventListener("input", renderMapLayers);
+						showPointsEl.addEventListener("change", renderMapLayers);
+						window.addEventListener("resize", () => map.invalidateSize());
+						renderProviders();
+						refresh();
+					</script>
+				</body>
+			</html>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-05-03</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

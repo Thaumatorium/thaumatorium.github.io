@@ -6,6 +6,7 @@ const statusNode = document.getElementById("world-population-status");
 const highlightInput = document.getElementById("world-population-highlight");
 const highlightButton = document.getElementById("world-population-add-highlight");
 const resetButton = document.getElementById("world-population-reset");
+const metricButtons = Array.from(document.querySelectorAll("[data-world-population-metric]"));
 const scaleButtons = Array.from(document.querySelectorAll("[data-world-population-scale]"));
 const backgroundToggle = document.getElementById("world-population-show-background");
 const noMigrationToggle = document.getElementById("world-population-show-no-migration");
@@ -21,6 +22,7 @@ const continentOrder = ["Africa", "Asia", "Europe", "North America", "Latin Amer
 
 const state = {
 	data: null,
+	metricMode: "population",
 	scaleMode: "log",
 	highlightedSlugs: new Set(),
 	neighborCount: Number(neighborRange?.value || 0),
@@ -61,17 +63,38 @@ function formatPercent(value) {
 	return value == null ? "n/a" : `${value.toFixed(1)}%`;
 }
 
+function getNetMigrationShare(point) {
+	if (point?.population == null || point.population === 0 || point.migrantsNet == null) {
+		return null;
+	}
+	return (point.migrantsNet / point.population) * 100;
+}
+
+function getMetricValue(point) {
+	if (state.metricMode === "net-migration-share") {
+		return getNetMigrationShare(point);
+	}
+	return point?.population ?? null;
+}
+
+function hasMetricValue(point) {
+	const value = getMetricValue(point);
+	return Number.isFinite(value) && (state.metricMode !== "population" || value > 0);
+}
+
 function showTooltip(event, country, point, color, label = null) {
 	if (!tooltipNode) {
 		return;
 	}
 
+	const netMigrationShare = getNetMigrationShare(point);
 	tooltipNode.innerHTML = `
 		<strong style="color:${color}">${label ? `${country.name} (${label})` : country.name}</strong>
 		<div>Year: ${point.year}</div>
 		<div>Population: ${formatPopulation(point.population)}</div>
 		<div>Growth: ${formatSignedPercent(point.yearlyPercentChange)} (${formatSignedInteger(point.yearlyChange)})</div>
 		<div>Net migration: ${formatSignedInteger(point.migrantsNet)}</div>
+		<div>Net migration share: ${formatSignedPercent(netMigrationShare)}</div>
 		<div>Fertility rate: ${formatFertilityRate(point.fertilityRate)}</div>
 		<div>Median age: ${point.medianAge == null ? "n/a" : point.medianAge.toFixed(1)}</div>
 		<div>Urban pop: ${formatPercent(point.urbanPopulationPercent)}</div>
@@ -198,14 +221,15 @@ function buildEndLabels(countries, y, top, bottom, gap) {
 	const labels = countries
 		.map((country) => {
 			const point = country.points.at(-1);
-			if (!point) {
+			const value = getMetricValue(point);
+			if (!point || !Number.isFinite(value)) {
 				return null;
 			}
 			return {
 				country,
 				point,
-				targetY: y(point.population),
-				y: y(point.population),
+				targetY: y(value),
+				y: y(value),
 			};
 		})
 		.filter(Boolean)
@@ -284,6 +308,13 @@ function updateLegend() {
 function updateScaleButtons() {
 	for (const button of scaleButtons) {
 		button.classList.toggle("is-active", button.dataset.worldPopulationScale === state.scaleMode);
+		button.disabled = false;
+	}
+}
+
+function updateMetricButtons() {
+	for (const button of metricButtons) {
+		button.classList.toggle("is-active", button.dataset.worldPopulationMetric === state.metricMode);
 	}
 }
 
@@ -295,8 +326,8 @@ function updateBackgroundToggle() {
 
 function updateNoMigrationToggle() {
 	if (noMigrationToggle) {
-		noMigrationToggle.checked = state.showNoMigrationComparison;
-		noMigrationToggle.disabled = state.selectionWindows.size === 0;
+		noMigrationToggle.checked = state.showNoMigrationComparison && state.metricMode === "population";
+		noMigrationToggle.disabled = state.selectionWindows.size === 0 || state.metricMode !== "population";
 	}
 }
 
@@ -402,10 +433,13 @@ function syncUrl() {
 	if (state.scaleMode !== "log") {
 		params.set("scale", state.scaleMode);
 	}
+	if (state.metricMode !== "population") {
+		params.set("metric", state.metricMode);
+	}
 	if (!state.showBackgroundCountries) {
 		params.set("background", "hidden");
 	}
-	if (state.showNoMigrationComparison) {
+	if (state.showNoMigrationComparison && state.metricMode === "population") {
 		params.set("migration", "compare");
 	}
 	if (state.continentHighlights.size > 0) {
@@ -429,6 +463,11 @@ function applyUrlState() {
 	const scale = params.get("scale");
 	if (scale === "linear" || scale === "log") {
 		state.scaleMode = scale;
+	}
+
+	const metric = params.get("metric");
+	if (metric === "population" || metric === "net-migration-share") {
+		state.metricMode = metric;
 	}
 
 	const background = params.get("background");
@@ -522,6 +561,7 @@ function render() {
 		return;
 	}
 
+	updateMetricButtons();
 	updateScaleButtons();
 	updateBackgroundToggle();
 	updateNoMigrationToggle();
@@ -538,51 +578,63 @@ function render() {
 
 	chartRoot.replaceChildren();
 
-	const svg = d3.select(chartRoot).append("svg").attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", "Population by country over time");
+	const isPopulationMetric = state.metricMode === "population";
+	const metricLabel = isPopulationMetric ? "Population" : "Net migration % of population";
+	const svg = d3.select(chartRoot).append("svg").attr("viewBox", `0 0 ${width} ${height}`).attr("role", "img").attr("aria-label", `${metricLabel} by country over time`);
 
 	const allPoints = state.data.countries.flatMap((country) => country.points);
 	const highlightedCountries = getHighlightedCountries();
 	const anchorCountries = getSelectedCountries();
 	const selectedCountry = state.selectedCountrySlug ? findCountryBySlug(state.selectedCountrySlug) : null;
 	const selectionNeighborGroups = buildSelectionNeighborGroups(anchorCountries);
-	const noMigrationComparisons = state.showNoMigrationComparison
-		? anchorCountries.map((country) => ({
-				country,
-				color: getAnchorColor(country.slug),
-				points: buildNoMigrationPoints(country),
-			}))
-		: [];
+	const noMigrationComparisons =
+		state.showNoMigrationComparison && isPopulationMetric
+			? anchorCountries.map((country) => ({
+					country,
+					color: getAnchorColor(country.slug),
+					points: buildNoMigrationPoints(country),
+				}))
+			: [];
 	const anchorSlugs = new Set(anchorCountries.map((country) => country.slug));
 	const selectionNeighborSlugs = new Set(selectionNeighborGroups.flatMap((group) => group.countries.map((country) => country.slug)));
 	const neighborCountries = highlightedCountries.filter((country) => !anchorSlugs.has(country.slug) && !selectionNeighborSlugs.has(country.slug));
 	const backgroundCountries = state.showBackgroundCountries ? state.data.countries.filter((country) => !state.highlightedSlugs.has(country.slug)) : [];
-	const scaleCountries = !state.showBackgroundCountries && highlightedCountries.length > 0 ? highlightedCountries : state.scaleMode === "log" || highlightedCountries.length === 0 ? state.data.countries : highlightedCountries;
+	const scaleCountries = !state.showBackgroundCountries && highlightedCountries.length > 0 ? highlightedCountries : state.scaleMode === "log" || highlightedCountries.length === 0 || !isPopulationMetric ? state.data.countries : highlightedCountries;
 	const scalePoints = scaleCountries.flatMap((country) => country.points).concat(noMigrationComparisons.flatMap((comparison) => comparison.points));
 	const years = d3.extent(allPoints, (point) => point.year);
-	const populations = scalePoints.map((point) => point.population).filter((population) => population > 0);
+	const metricValues = scalePoints.map((point) => getMetricValue(point)).filter(Number.isFinite);
 
 	const x = d3
 		.scaleLinear()
 		.domain(years)
 		.range([margin.left, margin.left + plotWidth]);
-	const y =
-		state.scaleMode === "log"
-			? d3
-					.scaleLog()
-					.domain([d3.min(populations), d3.max(populations)])
-					.range([margin.top + plotHeight, margin.top])
-					.nice()
-			: d3
-					.scaleLinear()
-					.domain([0, d3.max(populations)])
-					.range([margin.top + plotHeight, margin.top])
-					.nice();
+	let y;
+	if (isPopulationMetric && state.scaleMode === "log") {
+		y = d3
+			.scaleLog()
+			.domain([d3.min(metricValues), d3.max(metricValues)])
+			.range([margin.top + plotHeight, margin.top])
+			.nice();
+	} else if (!isPopulationMetric && state.scaleMode === "log") {
+		y = d3
+			.scaleSymlog()
+			.constant(0.1)
+			.domain(d3.extent(metricValues.concat(0)))
+			.range([margin.top + plotHeight, margin.top])
+			.nice();
+	} else {
+		y = d3
+			.scaleLinear()
+			.domain(isPopulationMetric ? [0, d3.max(metricValues)] : d3.extent(metricValues.concat(0)))
+			.range([margin.top + plotHeight, margin.top])
+			.nice();
+	}
 
 	const line = d3
 		.line()
-		.defined((point) => point.population > 0)
+		.defined(hasMetricValue)
 		.x((point) => x(point.year))
-		.y((point) => y(point.population));
+		.y((point) => y(getMetricValue(point)));
 
 	svg
 		.append("g")
@@ -616,9 +668,31 @@ function render() {
 	svg
 		.append("g")
 		.attr("transform", `translate(${margin.left}, 0)`)
-		.call(state.scaleMode === "log" ? d3.axisLeft(y).ticks(8, "~s") : d3.axisLeft(y).ticks(8).tickFormat(d3.format("~s")))
+		.call(
+			isPopulationMetric
+				? state.scaleMode === "log"
+					? d3.axisLeft(y).ticks(8, "~s")
+					: d3.axisLeft(y).ticks(8).tickFormat(d3.format("~s"))
+				: d3
+						.axisLeft(y)
+						.ticks(8)
+						.tickFormat((value) => `${d3.format("~g")(value)}%`)
+		)
 		.call((axis) => axis.selectAll("text").attr("fill", "#555"))
 		.call((axis) => axis.selectAll("line,path").attr("stroke", "#b98f8f"));
+
+	if (!isPopulationMetric) {
+		const zeroY = y(0);
+		svg
+			.append("line")
+			.attr("x1", margin.left)
+			.attr("x2", margin.left + plotWidth)
+			.attr("y1", zeroY)
+			.attr("y2", zeroY)
+			.attr("stroke", "#800")
+			.attr("stroke-width", 1.2)
+			.attr("stroke-opacity", 0.6);
+	}
 
 	if (currentYear >= years[0] && currentYear <= years[1]) {
 		const yearX = x(currentYear);
@@ -651,7 +725,7 @@ function render() {
 		.attr("fill", "none")
 		.attr("stroke", "#c8b6b6")
 		.attr("stroke-width", 1.1)
-		.attr("stroke-opacity", state.scaleMode === "log" ? 0.22 : 0.1)
+		.attr("stroke-opacity", isPopulationMetric && state.scaleMode === "log" ? 0.22 : 0.1)
 		.attr("d", (country) => line(country.points));
 
 	svg
@@ -688,7 +762,7 @@ function render() {
 				.data(group.countries.flatMap((country) => country.points.map((point) => ({ country, point, color }))))
 				.join("circle")
 				.attr("cx", ({ point }) => x(point.year))
-				.attr("cy", ({ point }) => y(point.population))
+				.attr("cy", ({ point }) => y(getMetricValue(point)))
 				.attr("r", baseRadius)
 				.attr("fill", color)
 				.attr("fill-opacity", 0.9)
@@ -736,7 +810,7 @@ function render() {
 				.data(country.points.map((point) => ({ country, point, color })))
 				.join("circle")
 				.attr("cx", ({ point }) => x(point.year))
-				.attr("cy", ({ point }) => y(point.population))
+				.attr("cy", ({ point }) => y(getMetricValue(point)))
 				.attr("r", baseRadius)
 				.attr("fill", color)
 				.attr("fill-opacity", 0.9)
@@ -799,7 +873,7 @@ function render() {
 			)
 			.join("circle")
 			.attr("cx", ({ point }) => x(point.year))
-			.attr("cy", ({ point }) => y(point.population))
+			.attr("cy", ({ point }) => y(getMetricValue(point)))
 			.attr("r", 3.6)
 			.attr("fill", "#fffaf9")
 			.attr("stroke", ({ color }) => color)
@@ -834,7 +908,7 @@ function render() {
 				.data(country.points.map((point) => ({ country, point, color })))
 				.join("circle")
 				.attr("cx", ({ point }) => x(point.year))
-				.attr("cy", ({ point }) => y(point.population))
+				.attr("cy", ({ point }) => y(getMetricValue(point)))
 				.attr("r", baseRadius)
 				.attr("fill", color)
 				.attr("fill-opacity", 1)
@@ -855,7 +929,7 @@ function render() {
 				});
 		});
 
-	svg.append("text").attr("x", margin.left).attr("y", 14).attr("fill", "#800").attr("font-size", 13).attr("font-weight", 700).text("Population");
+	svg.append("text").attr("x", margin.left).attr("y", 14).attr("fill", "#800").attr("font-size", 13).attr("font-weight", 700).text(metricLabel);
 
 	svg
 		.append("text")
@@ -866,7 +940,7 @@ function render() {
 		.attr("text-anchor", "end")
 		.text("Year");
 
-	const endLabelCountries = state.showBackgroundCountries ? state.data.countries : highlightedCountries;
+	const endLabelCountries = isPopulationMetric && state.showBackgroundCountries ? state.data.countries : highlightedCountries;
 	const endLabels = buildEndLabels(endLabelCountries, y, margin.top + 8, margin.top + plotHeight - 8, 11);
 	const labelAnchorX = x(years[1]);
 	const labelTextX = labelAnchorX + 10;
@@ -918,7 +992,7 @@ function render() {
 			continue;
 		}
 
-		const labelY = y(finalPoint.population);
+		const labelY = y(getMetricValue(finalPoint));
 
 		svg
 			.append("line")
@@ -935,9 +1009,9 @@ function render() {
 	}
 
 	setStatus(
-		`Showing ${state.data.countries.length} countries. ${getHighlightedCountries().length} highlighted. ${state.selectionWindows.size} selected anchor countries. Active anchor uses ${state.neighborCount} neighbors each side. ${
-			state.scaleMode === "log" ? "Log scale" : "Linear scale"
-		}. ${state.showBackgroundCountries ? "Unselected countries visible." : "Unselected countries hidden."} ${state.showNoMigrationComparison && anchorCountries.length > 0 ? `Comparing ${anchorCountries.length} selected countries with no-net-migration estimates.` : ""}`
+		`Showing ${state.data.countries.length} countries. ${getHighlightedCountries().length} highlighted. ${state.selectionWindows.size} selected anchor countries. Active anchor uses ${state.neighborCount} neighbors each side. ${metricLabel}. ${
+			isPopulationMetric ? (state.scaleMode === "log" ? "Log scale" : "Linear scale") : state.scaleMode === "log" ? "Symlog percentage scale" : "Linear percentage scale"
+		}. ${state.showBackgroundCountries ? "Unselected countries visible." : "Unselected countries hidden."} ${state.showNoMigrationComparison && anchorCountries.length > 0 && isPopulationMetric ? `Comparing ${anchorCountries.length} selected countries with no-net-migration estimates.` : ""}`
 	);
 	syncUrl();
 }
@@ -1014,6 +1088,14 @@ neighborRange?.addEventListener("input", () => {
 for (const button of scaleButtons) {
 	button.addEventListener("click", () => {
 		state.scaleMode = button.dataset.worldPopulationScale;
+		hideTooltip();
+		render();
+	});
+}
+
+for (const button of metricButtons) {
+	button.addEventListener("click", () => {
+		state.metricMode = button.dataset.worldPopulationMetric;
 		hideTooltip();
 		render();
 	});
