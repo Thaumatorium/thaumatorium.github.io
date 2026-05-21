@@ -1,0 +1,604 @@
+{
+	"updated_at": "2026-05-03T21:13:13.322841+00:00",
+	"source": "huislijn",
+	"listings": [
+		{
+			"id": "huislijn-919f8b77c950ea2b",
+			"source": "huislijn",
+			"city": "Amerongen",
+			"title": "Holleweg 19",
+			"latitude": 52.00162161,
+			"longitude": 5.4652434,
+			"area_m2": 163,
+			"price": 72500000,
+			"price_per_m2": 444785.2760736196,
+			"rooms": 3,
+			"home_type": "appartement",
+			"energy_label": "D",
+			"postal_code": "3958EA",
+			"house_number": "19",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/utrecht/4368179/holleweg-19-amerongen",
+			"scraped_at": "2026-05-03T21:12:12.551144+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/utrecht/4368179/holleweg-19-amerongen"
+				}
+			}
+		},
+		{
+			"id": "huislijn-f5d9e14b2ecf7296",
+			"source": "huislijn",
+			"city": "Philippine",
+			"title": "Spuikompark 13",
+			"latitude": 51.28250594,
+			"longitude": 3.76445731,
+			"area_m2": 673,
+			"price": 48500000,
+			"price_per_m2": 72065.37890044576,
+			"rooms": 5,
+			"home_type": "appartement",
+			"energy_label": "D",
+			"postal_code": "4553BC",
+			"house_number": "13",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/zeeland/4361043/spuikompark-13-philippine",
+			"scraped_at": "2026-05-03T21:12:14.975640+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/zeeland/4361043/spuikompark-13-philippine"
+				}
+			}
+		},
+		{
+			"id": "huislijn-d61517b67d6262fa",
+			"source": "huislijn",
+			"city": "Vriescheloo",
+			"title": "Dorpsstraat 139",
+			"latitude": 53.07189279,
+			"longitude": 7.11472204,
+			"area_m2": 372,
+			"price": 69950000,
+			"price_per_m2": 188037.63440860214,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "C",
+			"postal_code": "9699PG",
+			"house_number": "139",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/groningen/4362517/dorpsstraat-139-vriescheloo",
+			"scraped_at": "2026-05-03T21:12:17.392515+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/groningen/4362517/dorpsstraat-139-vriescheloo"
+				}
+			}
+		},
+		{
+			"id": "huislijn-49cd8cb2c94954d2",
+			"source": "huislijn",
+			"city": "Middelburg",
+			"title": "Nieuwe Vlissingseweg 692",
+			"latitude": 51.47592913,
+			"longitude": 3.59850158,
+			"area_m2": 84,
+			"price": 24900000,
+			"price_per_m2": 296428.5714285714,
+			"rooms": 5,
+			"home_type": "appartement",
+			"energy_label": "E",
+			"postal_code": "4335JZ",
+			"house_number": "692",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/zeeland/4372502/nieuwe-vlissingseweg-692-middelburg",
+			"scraped_at": "2026-05-03T21:12:24.836738+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/zeeland/4372502/nieuwe-vlissingseweg-692-middelburg"
+				}
+			}
+		},
+		{
+			"id": "huislijn-c3be1044d07c7589",
+			"source": "huislijn",
+			"city": "Hoogvliet Rotterdam",
+			"title": "Bijster 9",
+			"latitude": 51.86269995,
+			"longitude": 4.3656434,
+			"area_m2": 36,
+			"price": 32500000,
+			"price_per_m2": 902777.7777777778,
+			"rooms": 6,
+			"home_type": "appartement",
+			"energy_label": "B",
+			"postal_code": "3191SB",
+			"house_number": "9",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372498/bijster-9-hoogvliet-rotterdam",
+			"scraped_at": "2026-05-03T21:12:29.768988+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372498/bijster-9-hoogvliet-rotterdam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-dd3e7a68fd3c1ae9",
+			"source": "huislijn",
+			"city": "Hoogvliet Rotterdam",
+			"title": "Tormentil 16",
+			"latitude": 51.86122076,
+			"longitude": 4.36788081,
+			"area_m2": 25,
+			"price": 40950000,
+			"price_per_m2": 1638000.0,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "A",
+			"postal_code": "3191KD",
+			"house_number": "16",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372497/tormentil-16-hoogvliet-rotterdam",
+			"scraped_at": "2026-05-03T21:12:32.228379+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372497/tormentil-16-hoogvliet-rotterdam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-250b826dde44510b",
+			"source": "huislijn",
+			"city": "Uden",
+			"title": "Jonkerveld 432",
+			"latitude": 51.66059178,
+			"longitude": 5.63276896,
+			"area_m2": 129,
+			"price": 42500000,
+			"price_per_m2": 329457.36434108525,
+			"rooms": 6,
+			"home_type": "appartement",
+			"energy_label": "B",
+			"postal_code": "5403BP",
+			"house_number": "432",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/noord-brabant/4372499/jonkerveld-432-uden",
+			"scraped_at": "2026-05-03T21:12:34.694194+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/noord-brabant/4372499/jonkerveld-432-uden"
+				}
+			}
+		},
+		{
+			"id": "huislijn-eb7f61008881dc41",
+			"source": "huislijn",
+			"city": "Vlaardingen",
+			"title": "Rozenlaan 93",
+			"latitude": 51.91858349,
+			"longitude": 4.35439115,
+			"area_m2": 93,
+			"price": 42500000,
+			"price_per_m2": 456989.24731182796,
+			"rooms": 5,
+			"home_type": "appartement",
+			"energy_label": "C",
+			"postal_code": "3135XN",
+			"house_number": "93",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372501/rozenlaan-93-vlaardingen",
+			"scraped_at": "2026-05-03T21:12:37.103199+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372501/rozenlaan-93-vlaardingen"
+				}
+			}
+		},
+		{
+			"id": "huislijn-967fa94b3ee2c412",
+			"source": "huislijn",
+			"city": "'s-gravenhage",
+			"title": "Wagenstraat 113 A",
+			"latitude": 52.07504022,
+			"longitude": 4.31396827,
+			"area_m2": 141,
+			"price": 52900000,
+			"price_per_m2": 375177.304964539,
+			"rooms": 3,
+			"home_type": "appartement",
+			"energy_label": "G",
+			"postal_code": "2512AS",
+			"house_number": "113",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372494/wagenstraat-113-a-s-gravenhage",
+			"scraped_at": "2026-05-03T21:12:39.642366+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/zuid-holland/4372494/wagenstraat-113-a-s-gravenhage"
+				}
+			}
+		},
+		{
+			"id": "huislijn-83eda879e4d8ae34",
+			"source": "huislijn",
+			"city": "Almere",
+			"title": "Prinsenpad 32",
+			"latitude": 52.37588064,
+			"longitude": 5.2106308,
+			"area_m2": 118,
+			"price": 46500000,
+			"price_per_m2": 394067.7966101695,
+			"rooms": 3,
+			"home_type": "appartement",
+			"energy_label": "A",
+			"postal_code": "1312AM",
+			"house_number": "32",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/koopwoning/nederland/flevoland/4372496/prinsenpad-32-almere",
+			"scraped_at": "2026-05-03T21:12:42.086576+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/koopwoning/nederland/flevoland/4372496/prinsenpad-32-almere"
+				}
+			}
+		},
+		{
+			"id": "huislijn-cae2d1e105f008e8",
+			"source": "huislijn",
+			"city": "Amsterdam",
+			"title": "Daniël Stalpertstraat",
+			"latitude": 52.35639248,
+			"longitude": 4.88876819,
+			"area_m2": 102,
+			"price": 325000,
+			"price_per_m2": 3186.274509803922,
+			"rooms": 3,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "1072XA",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372528/daniel-stalpertstraat-amsterdam",
+			"scraped_at": "2026-05-03T21:12:44.457457+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372528/daniel-stalpertstraat-amsterdam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-3c2b59b5c25d7a9a",
+			"source": "huislijn",
+			"city": "Groningen",
+			"title": "Friesestraatweg",
+			"latitude": 53.21644809,
+			"longitude": 6.54763243,
+			"area_m2": 20,
+			"price": 65000,
+			"price_per_m2": 3250.0,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "9718NB",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/groningen/4372529/friesestraatweg-groningen",
+			"scraped_at": "2026-05-03T21:12:46.836311+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/groningen/4372529/friesestraatweg-groningen"
+				}
+			}
+		},
+		{
+			"id": "huislijn-740c7e0cb25017f0",
+			"source": "huislijn",
+			"city": "Amsterdam",
+			"title": "Carillonstraat",
+			"latitude": 52.35068314,
+			"longitude": 4.90416668,
+			"area_m2": 66,
+			"price": 110000,
+			"price_per_m2": 1666.6666666666667,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "1074BD",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372531/carillonstraat-amsterdam",
+			"scraped_at": "2026-05-03T21:12:49.191714+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372531/carillonstraat-amsterdam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-e2cbf48807625393",
+			"source": "huislijn",
+			"city": "Haarlem",
+			"title": "Ruychaverstraat",
+			"latitude": 52.38310328,
+			"longitude": 4.62815116,
+			"area_m2": 82,
+			"price": 249500,
+			"price_per_m2": 3042.682926829268,
+			"rooms": 9,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "2013GE",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372526/ruychaverstraat-haarlem",
+			"scraped_at": "2026-05-03T21:12:51.561109+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372526/ruychaverstraat-haarlem"
+				}
+			}
+		},
+		{
+			"id": "huislijn-5f733065f762890a",
+			"source": "huislijn",
+			"city": "Halfweg",
+			"title": "Zijkanaal F Oost",
+			"latitude": 52.38838781,
+			"longitude": 4.75332386,
+			"area_m2": 96,
+			"price": 249500,
+			"price_per_m2": 2598.9583333333335,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "1165LX",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372525/zijkanaal-f-oost-halfweg",
+			"scraped_at": "2026-05-03T21:12:53.920796+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372525/zijkanaal-f-oost-halfweg"
+				}
+			}
+		},
+		{
+			"id": "huislijn-10bb48d43ac23280",
+			"source": "huislijn",
+			"city": "Weert",
+			"title": "Beekstraat",
+			"latitude": 51.25565363,
+			"longitude": 5.70581702,
+			"area_m2": 60,
+			"price": 119800,
+			"price_per_m2": 1996.6666666666667,
+			"rooms": 9,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "6001GJ",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/limburg/4372523/beekstraat-weert",
+			"scraped_at": "2026-05-03T21:12:56.296222+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/limburg/4372523/beekstraat-weert"
+				}
+			}
+		},
+		{
+			"id": "huislijn-9e5ffc6c3adb1ec7",
+			"source": "huislijn",
+			"city": "Arnhem",
+			"title": "Spijkerstraat",
+			"latitude": 51.98317218,
+			"longitude": 5.92095274,
+			"area_m2": 72,
+			"price": 235000,
+			"price_per_m2": 3263.8888888888887,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "A+",
+			"postal_code": "6828DG",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/gelderland/4372524/spijkerstraat-arnhem",
+			"scraped_at": "2026-05-03T21:12:58.622654+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/gelderland/4372524/spijkerstraat-arnhem"
+				}
+			}
+		},
+		{
+			"id": "huislijn-07f0f464da6a30cf",
+			"source": "huislijn",
+			"city": "Amsterdam",
+			"title": "Hekla",
+			"latitude": 52.35402533,
+			"longitude": 4.77291612,
+			"area_m2": 116,
+			"price": 195000,
+			"price_per_m2": 1681.0344827586207,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "1060NB",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372527/hekla-amsterdam",
+			"scraped_at": "2026-05-03T21:13:00.987462+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372527/hekla-amsterdam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-255b43ddc349ed6b",
+			"source": "huislijn",
+			"city": "Amsterdam",
+			"title": "Kreeftstraat",
+			"latitude": 52.41257781,
+			"longitude": 4.89212621,
+			"area_m2": 72,
+			"price": 122800,
+			"price_per_m2": 1705.5555555555557,
+			"rooms": 2,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "1033EL",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372530/kreeftstraat-amsterdam",
+			"scraped_at": "2026-05-03T21:13:03.594476+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-holland/4372530/kreeftstraat-amsterdam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-f07c186bc8ba0737",
+			"source": "huislijn",
+			"city": "Schiedam",
+			"title": "Korte Kerkstraat",
+			"latitude": 51.91783748,
+			"longitude": 4.39808616,
+			"area_m2": 85,
+			"price": 215000,
+			"price_per_m2": 2529.4117647058824,
+			"rooms": 11,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "3111JE",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/zuid-holland/4372522/korte-kerkstraat-schiedam",
+			"scraped_at": "2026-05-03T21:13:05.970130+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/zuid-holland/4372522/korte-kerkstraat-schiedam"
+				}
+			}
+		},
+		{
+			"id": "huislijn-96716d4c51a06d8f",
+			"source": "huislijn",
+			"city": "Waalre",
+			"title": "Heistraat",
+			"latitude": 51.39447864,
+			"longitude": 5.44596358,
+			"area_m2": 107,
+			"price": 195000,
+			"price_per_m2": 1822.4299065420562,
+			"rooms": 5,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "5581VW",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/noord-brabant/4372511/heistraat-waalre",
+			"scraped_at": "2026-05-03T21:13:08.367403+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/noord-brabant/4372511/heistraat-waalre"
+				}
+			}
+		},
+		{
+			"id": "huislijn-dc40e140d958dd5f",
+			"source": "huislijn",
+			"city": "Den Haag",
+			"title": "Zeesluisweg",
+			"latitude": 52.10133994,
+			"longitude": 4.2728832,
+			"area_m2": 30,
+			"price": 115000,
+			"price_per_m2": 3833.3333333333335,
+			"rooms": 4,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "2583DR",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/zuid-holland/4372516/zeesluisweg-den-haag",
+			"scraped_at": "2026-05-03T21:13:10.937144+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/zuid-holland/4372516/zeesluisweg-den-haag"
+				}
+			}
+		},
+		{
+			"id": "huislijn-6b434649b59a55c0",
+			"source": "huislijn",
+			"city": "Zoetermeer",
+			"title": "Bijdorplaan",
+			"latitude": 52.05677882,
+			"longitude": 4.49095047,
+			"area_m2": 89,
+			"price": 189500,
+			"price_per_m2": 2129.2134831460676,
+			"rooms": 4,
+			"home_type": "appartement",
+			"energy_label": "?",
+			"postal_code": "2713RZ",
+			"house_number": "",
+			"bag_id": "",
+			"pand_id": "",
+			"verblijfsobject_id": "",
+			"url": "https://www.huislijn.nl/huurwoning/nederland/zuid-holland/4372517/bijdorplaan-zoetermeer",
+			"scraped_at": "2026-05-03T21:13:13.322594+00:00",
+			"enrichment": {
+				"scraped": {
+					"url": "https://www.huislijn.nl/huurwoning/nederland/zuid-holland/4372517/bijdorplaan-zoetermeer"
+				}
+			}
+		}
+	]
+}

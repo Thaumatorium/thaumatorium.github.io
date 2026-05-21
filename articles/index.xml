@@ -6,8 +6,15 @@
     <description>Recent content in NostraDavid&#39;s Articles on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 04 Apr 2026 15:54:43 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 06 May 2026 20:26:38 +0200</lastBuildDate>
     <atom:link href="http://thaumatorium.com/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build Pipelines Are Feedback Systems</title>
+      <link>http://thaumatorium.com/articles/build-pipelines-are-feedback-systems/</link>
+      <pubDate>Thu, 09 Apr 2026 20:00:00 +0200</pubDate>
+      <guid>http://thaumatorium.com/articles/build-pipelines-are-feedback-systems/</guid>
+      <description>&lt;p&gt;When people say &amp;ldquo;build pipeline&amp;rdquo;, they often mean a YAML file in CI.&lt;/p&gt;&#xA;&lt;p&gt;That is too narrow.&lt;/p&gt;&#xA;&lt;p&gt;A build pipeline is really a &lt;em&gt;feedback system&lt;/em&gt; that turns a code change into confidence. The pipeline takes source code,&#xA;runs a sequence of checks and transformations, and answers a simple question:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Is this change safe enough to move forward?&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;p&gt;That framing matters, because it changes how you design the pipeline. If you treat it as ceremony, you get a slow,&#xA;fragile pile of jobs that everyone resents. If you treat it as a feedback system, you start optimizing for signal,&#xA;speed, and trust.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Will the Real Ascii Table please stand up?</title>
       <link>http://thaumatorium.com/articles/real-ascii-table/</link>

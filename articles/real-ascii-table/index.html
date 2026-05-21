@@ -52,7 +52,7 @@
 					<span aria-hidden="true">·</span>
 					<time datetime="2026-03-08T14:54:40&#43;01:00">2026-03-08</time>
 					<span aria-hidden="true">·</span>
-					<span>Updated <time datetime="2026-04-04T15:54:43&#43;02:00">2026-04-04</time></span>
+					<span>Updated <time datetime="2026-04-16T20:54:39&#43;02:00">2026-04-16</time></span>
 					<span aria-hidden="true">·</span>
 					<span>1418 words</span>
 				</p>
@@ -66,239 +66,263 @@
 				</ul>
 				<p>So instead of a long boring table, you get something that shows why ASCII was laid out this way.</p>
 				<p>The columns below are the top 2 bits. The rightmost column is the lower 5 bits.</p>
+				<style>
+					abbr[title] {
+						cursor: help;
+						position: relative;
+						text-decoration: underline dotted;
+					}
+					abbr[title]:hover::after,
+					abbr[title]:focus::after {
+						content: attr(title);
+						position: absolute;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: 100%;
+						margin-bottom: 4px;
+						background: #333;
+						color: #fff;
+						padding: 4px 8px;
+						border-radius: 4px;
+						font-size: 0.85em;
+						white-space: nowrap;
+						z-index: 10;
+						pointer-events: none;
+					}
+				</style>
 				<table>
 					<thead>
 						<tr>
 							<th style="text-align: left">00</th>
 							<th style="text-align: center">01</th>
 							<th style="text-align: center">10</th>
-							<th style="text-align: center">11</th>
+							<th style="text-align: right">11</th>
 							<th style="text-align: center">low 5 bits</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td style="text-align: left"><code>NUL</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Null – zero byte">NUL</abbr></td>
 							<td style="text-align: center"><code>Spc</code></td>
 							<td style="text-align: center"><code>@</code></td>
-							<td style="text-align: center"><code>`</code></td>
+							<td style="text-align: right"><code>`</code></td>
 							<td style="text-align: center"><code>00000</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>SOH</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Start of Heading">SOH</abbr></td>
 							<td style="text-align: center"><code>!</code></td>
 							<td style="text-align: center"><code>A</code></td>
-							<td style="text-align: center"><code>a</code></td>
+							<td style="text-align: right"><code>a</code></td>
 							<td style="text-align: center"><code>00001</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>STX</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Start of Text">STX</abbr></td>
 							<td style="text-align: center"><code>&quot;</code></td>
 							<td style="text-align: center"><code>B</code></td>
-							<td style="text-align: center"><code>b</code></td>
+							<td style="text-align: right"><code>b</code></td>
 							<td style="text-align: center"><code>00010</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>ETX</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="End of Text">ETX</abbr></td>
 							<td style="text-align: center"><code>#</code></td>
 							<td style="text-align: center"><code>C</code></td>
-							<td style="text-align: center"><code>c</code></td>
+							<td style="text-align: right"><code>c</code></td>
 							<td style="text-align: center"><code>00011</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>EOT</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="End of Transmission">EOT</abbr></td>
 							<td style="text-align: center"><code>$</code></td>
 							<td style="text-align: center"><code>D</code></td>
-							<td style="text-align: center"><code>d</code></td>
+							<td style="text-align: right"><code>d</code></td>
 							<td style="text-align: center"><code>00100</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>ENQ</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Enquiry – request a response">ENQ</abbr></td>
 							<td style="text-align: center"><code>%</code></td>
 							<td style="text-align: center"><code>E</code></td>
-							<td style="text-align: center"><code>e</code></td>
+							<td style="text-align: right"><code>e</code></td>
 							<td style="text-align: center"><code>00101</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>ACK</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Acknowledge – positive response">ACK</abbr></td>
 							<td style="text-align: center"><code>&amp;</code></td>
 							<td style="text-align: center"><code>F</code></td>
-							<td style="text-align: center"><code>f</code></td>
+							<td style="text-align: right"><code>f</code></td>
 							<td style="text-align: center"><code>00110</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>BEL</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Bell – beep or flash">BEL</abbr></td>
 							<td style="text-align: center"><code>'</code></td>
 							<td style="text-align: center"><code>G</code></td>
-							<td style="text-align: center"><code>g</code></td>
+							<td style="text-align: right"><code>g</code></td>
 							<td style="text-align: center"><code>00111</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>BS</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Backspace">BS</abbr></td>
 							<td style="text-align: center"><code>(</code></td>
 							<td style="text-align: center"><code>H</code></td>
-							<td style="text-align: center"><code>h</code></td>
+							<td style="text-align: right"><code>h</code></td>
 							<td style="text-align: center"><code>01000</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>TAB</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Horizontal Tab">TAB</abbr></td>
 							<td style="text-align: center"><code>)</code></td>
 							<td style="text-align: center"><code>I</code></td>
-							<td style="text-align: center"><code>i</code></td>
+							<td style="text-align: right"><code>i</code></td>
 							<td style="text-align: center"><code>01001</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>LF</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Line Feed – move down one line">LF</abbr></td>
 							<td style="text-align: center"><code>\*</code></td>
 							<td style="text-align: center"><code>J</code></td>
-							<td style="text-align: center"><code>j</code></td>
+							<td style="text-align: right"><code>j</code></td>
 							<td style="text-align: center"><code>01010</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>VT</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Vertical Tab">VT</abbr></td>
 							<td style="text-align: center"><code>+</code></td>
 							<td style="text-align: center"><code>K</code></td>
-							<td style="text-align: center"><code>k</code></td>
+							<td style="text-align: right"><code>k</code></td>
 							<td style="text-align: center"><code>01011</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>FF</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Form Feed – next page">FF</abbr></td>
 							<td style="text-align: center"><code>,</code></td>
 							<td style="text-align: center"><code>L</code></td>
-							<td style="text-align: center"><code>l</code></td>
+							<td style="text-align: right"><code>l</code></td>
 							<td style="text-align: center"><code>01100</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>CR</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Carriage Return – start of line">CR</abbr></td>
 							<td style="text-align: center"><code>-</code></td>
 							<td style="text-align: center"><code>M</code></td>
-							<td style="text-align: center"><code>m</code></td>
+							<td style="text-align: right"><code>m</code></td>
 							<td style="text-align: center"><code>01101</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>SO</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Shift Out – alternate character set">SO</abbr></td>
 							<td style="text-align: center"><code>.</code></td>
 							<td style="text-align: center"><code>N</code></td>
-							<td style="text-align: center"><code>n</code></td>
+							<td style="text-align: right"><code>n</code></td>
 							<td style="text-align: center"><code>01110</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>SI</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Shift In – default character set">SI</abbr></td>
 							<td style="text-align: center"><code>/</code></td>
 							<td style="text-align: center"><code>O</code></td>
-							<td style="text-align: center"><code>o</code></td>
+							<td style="text-align: right"><code>o</code></td>
 							<td style="text-align: center"><code>01111</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>DLE</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Data Link Escape">DLE</abbr></td>
 							<td style="text-align: center"><code>0</code></td>
 							<td style="text-align: center"><code>P</code></td>
-							<td style="text-align: center"><code>p</code></td>
+							<td style="text-align: right"><code>p</code></td>
 							<td style="text-align: center"><code>10000</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>DC1</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Device Control 1 (XON)">DC1</abbr></td>
 							<td style="text-align: center"><code>1</code></td>
 							<td style="text-align: center"><code>Q</code></td>
-							<td style="text-align: center"><code>q</code></td>
+							<td style="text-align: right"><code>q</code></td>
 							<td style="text-align: center"><code>10001</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>DC2</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Device Control 2">DC2</abbr></td>
 							<td style="text-align: center"><code>2</code></td>
 							<td style="text-align: center"><code>R</code></td>
-							<td style="text-align: center"><code>r</code></td>
+							<td style="text-align: right"><code>r</code></td>
 							<td style="text-align: center"><code>10010</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>DC3</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Device Control 3 (XOFF)">DC3</abbr></td>
 							<td style="text-align: center"><code>3</code></td>
 							<td style="text-align: center"><code>S</code></td>
-							<td style="text-align: center"><code>s</code></td>
+							<td style="text-align: right"><code>s</code></td>
 							<td style="text-align: center"><code>10011</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>DC4</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Device Control 4">DC4</abbr></td>
 							<td style="text-align: center"><code>4</code></td>
 							<td style="text-align: center"><code>T</code></td>
-							<td style="text-align: center"><code>t</code></td>
+							<td style="text-align: right"><code>t</code></td>
 							<td style="text-align: center"><code>10100</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>NAK</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Negative Acknowledge">NAK</abbr></td>
 							<td style="text-align: center"><code>5</code></td>
 							<td style="text-align: center"><code>U</code></td>
-							<td style="text-align: center"><code>u</code></td>
+							<td style="text-align: right"><code>u</code></td>
 							<td style="text-align: center"><code>10101</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>SYN</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Synchronous Idle">SYN</abbr></td>
 							<td style="text-align: center"><code>6</code></td>
 							<td style="text-align: center"><code>V</code></td>
-							<td style="text-align: center"><code>v</code></td>
+							<td style="text-align: right"><code>v</code></td>
 							<td style="text-align: center"><code>10110</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>ETB</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="End of Transmission Block">ETB</abbr></td>
 							<td style="text-align: center"><code>7</code></td>
 							<td style="text-align: center"><code>W</code></td>
-							<td style="text-align: center"><code>w</code></td>
+							<td style="text-align: right"><code>w</code></td>
 							<td style="text-align: center"><code>10111</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>CAN</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Cancel">CAN</abbr></td>
 							<td style="text-align: center"><code>8</code></td>
 							<td style="text-align: center"><code>X</code></td>
-							<td style="text-align: center"><code>x</code></td>
+							<td style="text-align: right"><code>x</code></td>
 							<td style="text-align: center"><code>11000</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>EM</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="End of Medium">EM</abbr></td>
 							<td style="text-align: center"><code>9</code></td>
 							<td style="text-align: center"><code>Y</code></td>
-							<td style="text-align: center"><code>y</code></td>
+							<td style="text-align: right"><code>y</code></td>
 							<td style="text-align: center"><code>11001</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>SUB</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Substitute – replacement marker">SUB</abbr></td>
 							<td style="text-align: center"><code>:</code></td>
 							<td style="text-align: center"><code>Z</code></td>
-							<td style="text-align: center"><code>z</code></td>
+							<td style="text-align: right"><code>z</code></td>
 							<td style="text-align: center"><code>11010</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>ESC</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Escape – start escape sequence">ESC</abbr></td>
 							<td style="text-align: center"><code>;</code></td>
 							<td style="text-align: center"><code>[</code></td>
-							<td style="text-align: center"><code>{</code></td>
+							<td style="text-align: right"><code>{</code></td>
 							<td style="text-align: center"><code>11011</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>FS</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="File Separator">FS</abbr></td>
 							<td style="text-align: center"><code>&lt;</code></td>
 							<td style="text-align: center"><code>\</code></td>
-							<td style="text-align: center"><code>|</code></td>
+							<td style="text-align: right"><code>|</code></td>
 							<td style="text-align: center"><code>11100</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>GS</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Group Separator">GS</abbr></td>
 							<td style="text-align: center"><code>=</code></td>
 							<td style="text-align: center"><code>]</code></td>
-							<td style="text-align: center"><code>}</code></td>
+							<td style="text-align: right"><code>}</code></td>
 							<td style="text-align: center"><code>11101</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>RS</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Record Separator">RS</abbr></td>
 							<td style="text-align: center"><code>&gt;</code></td>
 							<td style="text-align: center"><code>^</code></td>
-							<td style="text-align: center"><code>~</code></td>
+							<td style="text-align: right"><code>~</code></td>
 							<td style="text-align: center"><code>11110</code></td>
 						</tr>
 						<tr>
-							<td style="text-align: left"><code>US</code></td>
+							<td style="text-align: left"><abbr tabindex="0" title="Unit Separator">US</abbr></td>
 							<td style="text-align: center"><code>?</code></td>
 							<td style="text-align: center"><code>_</code></td>
-							<td style="text-align: center"><code>DEL</code></td>
+							<td style="text-align: right"><abbr tabindex="0" title="Delete – all 1 bits (0x7F)">DEL</abbr></td>
 							<td style="text-align: center"><code>11111</code></td>
 						</tr>
 					</tbody>
@@ -483,6 +507,11 @@
 					<h2 id="recent-changes-title">Recent changes</h2>
 					<ol>
 						<li>
+							<time datetime="2026-04-16">2026-04-16</time>
+							<code>3530888</code>
+							<span>Geef de ASCII table wat hoverables, en verwijder `_index.md` waar duplicaat met `index.md`.</span>
+						</li>
+						<li>
 							<time datetime="2026-04-04">2026-04-04</time>
 							<code>fdbda6b</code>
 							<span>Do a major frontend update - let Opus 4.6 fix the card-mess of GPT 5.4 ;)</span>
@@ -538,7 +567,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2026-04-04</time></sub>
+					<sub>Last updated: <time id="updated">2026-04-16</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>
