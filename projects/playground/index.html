@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
+		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
 		<meta charset="utf-8" />
+
 		<title>Playground | The Thaumatorium</title>
+
 		<meta name="description" content="Context and small interactive demos collected from the projects archive." />
+
 		<link rel="canonical" href="https://thaumatorium.com/" />
+
 		<meta name="theme-color" content="#800" />
+
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
+
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Playground" />
@@ -19,6 +30,7 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
+
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -28,11 +40,13 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
+
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
+
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -44,9 +58,12 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
+
 		<main class="projects">
 			<h1>Playground</h1>
+
 			<link rel="stylesheet" href="/styles/projects.css" />
+
 			<div class="playground-page">
 				<div class="playground-header">
 					<p class="playground-intro">A drawer full of small text transformers and browser experiments. Most of these started as one-off jokes or utility snippets and then earned a permanent place here.</p>
@@ -55,6 +72,7 @@
 						<button class="button" type="button" data-details-action="close">Close all chapters</button>
 					</div>
 				</div>
+
 				<details open>
 					<summary>
 						<h3>Runifier</h3>
@@ -96,6 +114,7 @@
 						</section>
 					</div>
 				</details>
+
 				<details>
 					<summary>
 						<h3>Starfield</h3>
@@ -105,6 +124,7 @@
 					<canvas id="starfield"></canvas>
 					<script type="module" src="/projects/playground/starfield.mjs"></script>
 				</details>
+
 				<details>
 					<summary>
 						<h3>Mocking Spongebob Text Generator</h3>
@@ -126,6 +146,7 @@
 						</div>
 					</div>
 				</details>
+
 				<details>
 					<summary>
 						<h3>ROT13</h3>
@@ -147,6 +168,7 @@
 						</div>
 					</div>
 				</details>
+
 				<details>
 					<summary>
 						<h3>Slugify</h3>
@@ -168,6 +190,7 @@
 						</div>
 					</div>
 				</details>
+
 				<details>
 					<summary>
 						<h3>Base64</h3>
@@ -209,6 +232,7 @@
 						</section>
 					</div>
 				</details>
+
 				<details>
 					<summary>
 						<h3>Timing fetch</h3>
@@ -239,6 +263,7 @@ console.log(`${Math.round(performance.now() - startedAt)}ms\t${text.length} byte
 					<p>Payload size: <output id="fetch-length">?</output></p>
 					<p>HTTP status: <output id="fetch-http-status">?</output></p>
 				</details>
+
 				<details>
 					<summary>
 						<h3>Text to Emoji</h3>
@@ -278,6 +303,7 @@ console.log(`${Math.round(performance.now() - startedAt)}ms\t${text.length} byte
 					</div>
 					<script type="module" src="/projects/playground/t2e.mjs"></script>
 				</details>
+
 				<details>
 					<summary>
 						<h3>𝔊𝔢𝔯𝔪𝔞𝔫𝔦𝔷𝔢𝔯</h3>
@@ -317,77 +343,149 @@ console.log(`${Math.round(performance.now() - startedAt)}ms\t${text.length} byte
 					</div>
 					<script type="module" src="/projects/playground/germanizer.mjs"></script>
 				</details>
+
 				<script type="module" src="/projects/playground/playground.mjs"></script>
 			</div>
+
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://www.unicode.org/charts/" rel="noopener noreferrer" target="_blank">Unicode code charts</a>
+						<span>Reference material for text and character experiments.</span>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/" rel="noopener noreferrer" target="_blank">MDN Web Docs</a>
+						<span>Browser API reference for the small interactive demos.</span>
+					</li>
+				</ul>
+			</aside>
+
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+
+				.project-sources a {
+					font-weight: 700;
+				}
+
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
+
 			<style>
 				.project-index {
 					margin-top: 1.5em;
 				}
+
 				.project-index-summary {
 					color: #5f1d1d;
 					font-family: Tahoma, sans-serif;
 					font-size: 0.95em;
 					margin-bottom: 2em;
 				}
+
 				.project-list {
 					list-style: none;
 					margin: 0;
 					padding: 0;
 				}
+
 				.project-year-group {
 					margin-bottom: 2.5em;
 				}
+
 				.project-year-group > h2 {
 					border-bottom: 1px solid #d8b3b3;
 					margin-bottom: 0.8em;
 					padding-bottom: 0.2em;
 				}
+
 				.project-entry {
 					border-bottom: 1px solid #ead6d6;
 					list-style: none;
 					margin: 0;
 					padding: 1em 0 1.15em;
 				}
+
 				.project-entry:first-child {
 					padding-top: 0.2em;
 				}
+
 				.project-entry:last-child {
 					border-bottom: 0;
 					padding-bottom: 0;
 				}
+
 				.project-entry article {
 					display: grid;
 					gap: 0.35em;
 				}
+
 				.project-entry h3 {
 					font-size: 1.05em;
 					margin: 0;
 					padding: 0;
 					text-transform: none;
 				}
+
 				.project-entry h3 a {
 					text-decoration: none;
 				}
+
 				.project-entry h3 a:hover {
 					text-decoration: underline;
 				}
+
 				.project-entry-meta,
 				.project-entry-summary {
 					margin: 0;
 					padding: 0;
 					text-align: left;
 				}
+
 				.project-entry-meta {
 					color: #6e0000;
 					font-family: Tahoma, sans-serif;
 					font-size: 0.88em;
 				}
+
 				.project-entry-summary {
 					color: #2b2b2b;
 					font-size: 0.98em;
 					line-height: 1.45;
 					max-width: 70ch;
 				}
+
 				@media (min-width: 900px) {
 					body > main {
 						margin-left: 12%;
@@ -400,11 +498,14 @@ console.log(`${Math.round(performance.now() - startedAt)}ms\t${text.length} byte
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+
 				<p>
 					<sub>Last updated: <time id="updated">2026-04-04</time></sub>
 				</p>
 			</div>
+
 			<nav id="profiles"></nav>
+
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {

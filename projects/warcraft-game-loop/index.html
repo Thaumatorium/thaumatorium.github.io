@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
+		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
 		<meta charset="utf-8" />
+
 		<title>Warcraft Game Loop | The Thaumatorium</title>
+
 		<meta name="description" content="An interactive graph view of Warcraft-style gameplay loops such as leveling, economy, social play, and exploration." />
+
 		<link rel="canonical" href="https://thaumatorium.com/" />
+
 		<meta name="theme-color" content="#800" />
+
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
+
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Warcraft Game Loop" />
@@ -19,6 +30,7 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
+
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -28,11 +40,13 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
+
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
+
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -44,6 +58,7 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
+
 		<main class="projects">
 			<div class="warcraft-loop-page">
 				<style>
@@ -52,6 +67,7 @@
 						gap: 1rem;
 						color: #333;
 					}
+
 					.warcraft-loop-shell,
 					.warcraft-loop-stage {
 						border: 1px solid #cda9a9;
@@ -59,21 +75,25 @@
 						background: #fffaf9;
 						box-shadow: 3px 3px 5px #555;
 					}
+
 					.warcraft-loop-shell {
 						display: grid;
 						gap: 1rem;
 						padding: 1rem;
 					}
+
 					.warcraft-loop-shell p,
 					.warcraft-loop-shell h2,
 					.warcraft-loop-shell h3 {
 						margin: 0;
 						padding: 0;
 					}
+
 					.warcraft-loop-shell p {
 						color: #555;
 						text-align: left;
 					}
+
 					.warcraft-loop-toolbar,
 					.warcraft-loop-legend,
 					.warcraft-loop-edge-legend,
@@ -83,6 +103,7 @@
 						gap: 0.75rem;
 						align-items: center;
 					}
+
 					.warcraft-loop-chip {
 						display: inline-flex;
 						align-items: center;
@@ -95,18 +116,22 @@
 						cursor: pointer;
 						font: inherit;
 					}
+
 					.warcraft-loop-chip.is-active {
 						box-shadow: inset 0 0 0 1px #800;
 						background: #fff;
 					}
+
 					.warcraft-loop-chip.is-dimmed {
 						opacity: 0.45;
 					}
+
 					.warcraft-loop-dot {
 						width: 0.8rem;
 						height: 0.8rem;
 						border-radius: 50%;
 					}
+
 					.warcraft-loop-edge-key {
 						display: inline-flex;
 						align-items: center;
@@ -118,20 +143,24 @@
 						color: #333;
 						font-size: 0.95rem;
 					}
+
 					.warcraft-loop-edge-swatch {
 						width: 2.6rem;
 						height: 0.8rem;
 						flex: 0 0 auto;
 					}
+
 					.warcraft-loop-stage {
 						position: relative;
 						overflow: hidden;
 						min-height: 78vh;
 					}
+
 					#warcraft-loop-chart {
 						width: 100%;
 						height: 78vh;
 					}
+
 					.warcraft-loop-tooltip {
 						position: absolute;
 						pointer-events: none;
@@ -145,20 +174,24 @@
 						font-size: 0.9rem;
 						box-shadow: 3px 3px 5px #555;
 					}
+
 					.warcraft-loop-tooltip strong {
 						display: block;
 						margin-bottom: 0.25rem;
 						color: #800;
 					}
+
 					@media (max-width: 719px) {
 						.warcraft-loop-stage {
 							min-height: 66vh;
 						}
+
 						#warcraft-loop-chart {
 							height: 66vh;
 						}
 					}
 				</style>
+
 				<div class="warcraft-loop-shell">
 					<h2>Warcraft Game Loop</h2>
 					<p>
@@ -173,22 +206,82 @@
 					<div class="warcraft-loop-legend" id="warcraft-loop-legend"></div>
 					<div class="warcraft-loop-edge-legend" id="warcraft-loop-edge-legend" aria-label="Arrow legend"></div>
 				</div>
+
 				<div class="warcraft-loop-stage">
 					<div id="warcraft-loop-chart" aria-label="Warcraft gameplay loop graph"></div>
 					<div class="warcraft-loop-tooltip" id="warcraft-loop-tooltip" aria-hidden="true"></div>
 				</div>
+
 				<script type="module" src="/projects/warcraft-game-loop/warcraft-game-loop.mjs"></script>
 			</div>
+
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://gameprogrammingpatterns.com/game-loop.html" rel="noopener noreferrer" target="_blank">Game Programming Patterns: Game Loop</a>
+						<span>Reference for thinking about gameplay loops and simulation cycles.</span>
+					</li>
+					<li>
+						<a href="https://wowpedia.fandom.com/wiki/Gameplay" rel="noopener noreferrer" target="_blank">World of Warcraft gameplay</a>
+						<span>General reference for WoW gameplay systems and player activities.</span>
+					</li>
+				</ul>
+			</aside>
+
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+
+				.project-sources a {
+					font-weight: 700;
+				}
+
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
 		</main>
 		<footer>
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+
 				<p>
 					<sub>Last updated: <time id="updated">2026-04-04</time></sub>
 				</p>
 			</div>
+
 			<nav id="profiles"></nav>
+
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {
