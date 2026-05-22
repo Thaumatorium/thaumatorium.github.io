@@ -293,7 +293,7 @@
 
 	.eu-budget-flow-page canvas {
 		height: 62vh;
-		min-height: 520px;
+		min-height: 420px;
 	}
 
 	.eu-budget-flow-page .controls {

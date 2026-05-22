@@ -48,6 +48,9 @@ const countryAliases = new Map([
 
 let data;
 let world;
+let renderFeatures = [];
+let euFeatures = [];
+let metricExtents = {};
 let metric = "net_balance_pct_gni";
 let year = 2000;
 let playing = true;
@@ -60,9 +63,14 @@ let projection;
 let path;
 let zoomBehavior;
 let animationSpeed = 1;
+let lastAnimationDraw = 0;
 const baseHoldMs = 650;
 const baseTransitionMs = 1050;
 const baseResetMs = 850;
+
+function isSmallScreen() {
+	return window.matchMedia("(max-width: 880px)").matches;
+}
 
 const formatters = {
 	net_balance_pct_gni: (value) => `${value > 0 ? "+" : ""}${value.toFixed(2)}%`,
@@ -80,7 +88,7 @@ function currentRowForCode(code) {
 }
 
 function resize() {
-	const ratio = window.devicePixelRatio || 1;
+	const ratio = Math.min(window.devicePixelRatio || 1, window.matchMedia("(max-width: 880px)").matches ? 1.25 : 1.75);
 	const { width, height } = canvas.getBoundingClientRect();
 	canvas.width = Math.floor(width * ratio);
 	canvas.height = Math.floor(height * ratio);
@@ -94,10 +102,7 @@ function resize() {
 		);
 
 	projection = d3.geoConicConformal().parallels([35, 65]).rotate([-15, 0]);
-	const euArea = {
-		type: "FeatureCollection",
-		features: world.features.filter((feature) => euCodes.has(countryCode(feature))),
-	};
+	const euArea = { type: "FeatureCollection", features: euFeatures };
 	projection.fitExtent(
 		[
 			[24, 92],
@@ -145,8 +150,27 @@ function countryCode(feature) {
 	return countryAliases.get(feature.properties.name) || feature.id;
 }
 
+function isEuropeFeature(feature) {
+	const [lon, lat] = d3.geoCentroid(feature);
+	return lon > -26 && lon < 45 && lat > 34 && lat < 72;
+}
+
+function cacheFeatures() {
+	euFeatures = world.features.filter((feature) => euCodes.has(countryCode(feature)));
+	renderFeatures = world.features.filter((feature) => euCodes.has(countryCode(feature)) || isEuropeFeature(feature));
+}
+
+function cacheMetricExtents() {
+	const rows = Object.values(data.byYear).flat();
+	metricExtents = {
+		net_balance_pct_gni: data.extent.maxAbsPctGni,
+		net_balance_m_eur: d3.max(rows, (row) => Math.abs(row.net_balance_m_eur)),
+		net_balance_per_capita_eur: d3.max(rows, (row) => Math.abs(row.net_balance_per_capita_eur)),
+	};
+}
+
 function colorFor(value, opacity = 1) {
-	const max = metric === "net_balance_pct_gni" ? data.extent.maxAbsPctGni : d3.max(Object.values(data.byYear).flat(), (row) => Math.abs(row[metric]));
+	const max = metricExtents[metric] || 1;
 	const scale = Math.min(1, Math.abs(value) / max);
 	const color = value < 0 ? d3.interpolateRgb("#383238", "#d54d43")(scale) : value > 0 ? d3.interpolateRgb("#273833", "#2fb47c")(scale) : "#263039";
 	return d3.color(color).copy({ opacity }).formatRgb();
@@ -257,10 +281,7 @@ function findFeatureAtPoint(event) {
 	const mapPoint = pointerOnMap(event);
 	const lonLat = projection.invert(mapPoint);
 	if (!lonLat) return null;
-	return world.features.find((feature) => {
-		const code = countryCode(feature);
-		return euCodes.has(code) && d3.geoContains(feature, lonLat);
-	});
+	return euFeatures.find((feature) => d3.geoContains(feature, lonLat));
 }
 
 function tooltipHtml(row) {
@@ -352,7 +373,7 @@ function draw(timestamp = performance.now()) {
 	context.translate(mapTransform.x, mapTransform.y);
 	context.scale(mapTransform.k, mapTransform.k);
 
-	world.features.forEach((feature) => {
+	renderFeatures.forEach((feature) => {
 		const code = countryCode(feature);
 		const row = rowsByCode.get(code);
 		context.beginPath();
@@ -407,7 +428,11 @@ function updateSidePanel({ redraw = true } = {}) {
 
 function tick(timestamp) {
 	if (transition) {
-		draw(timestamp);
+		const targetFrameMs = isSmallScreen() ? 33 : 16;
+		if (timestamp - lastAnimationDraw >= targetFrameMs) {
+			draw(timestamp);
+			lastAnimationDraw = timestamp;
+		}
 		completeTransition(timestamp);
 	} else if (playing && timestamp - lastAdvance > scaledDuration(baseHoldMs)) {
 		startNextTransition(timestamp);
@@ -440,10 +465,13 @@ metricButtons.forEach((button) => {
 
 window.addEventListener("resize", resize);
 
-const [budgetData, topology] = await Promise.all([fetch("budget-flows.json").then((response) => response.json()), fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json").then((response) => response.json())]);
+const topologyUrl = isSmallScreen() ? "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json" : "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json";
+const [budgetData, topology] = await Promise.all([fetch("budget-flows.json").then((response) => response.json()), fetch(topologyUrl).then((response) => response.json())]);
 
 data = budgetData;
 world = topojson.feature(topology, topology.objects.countries);
+cacheFeatures();
+cacheMetricExtents();
 mapTransform = d3.zoomIdentity;
 updateAnimationSpeed(speedInput.value);
 setupMapControls();
