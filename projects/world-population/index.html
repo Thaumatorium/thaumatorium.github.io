@@ -1,17 +1,28 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
+		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+
 		<meta charset="utf-8" />
+
 		<title>World Population | The Thaumatorium</title>
+
 		<meta name="description" content="Country-by-country population data scraped from Worldometer into a chart-ready JSON file." />
+
 		<link rel="canonical" href="https://thaumatorium.com/" />
+
 		<meta name="theme-color" content="#800" />
+
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
+
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="World Population" />
@@ -19,6 +30,7 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
+
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -28,11 +40,13 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
+
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
+
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -44,6 +58,7 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
+
 		<main class="projects">
 			<div class="world-population-page">
 				<style>
@@ -52,6 +67,7 @@
 						gap: 1rem;
 						color: #333;
 					}
+
 					.world-population-panel,
 					.world-population-stage {
 						border: 1px solid #cda9a9;
@@ -59,19 +75,23 @@
 						background: #fffaf9;
 						box-shadow: 3px 3px 5px #555;
 					}
+
 					.world-population-panel {
 						display: grid;
 						gap: 0.9rem;
 						padding: 1rem;
 					}
+
 					.world-population-panel h2,
 					.world-population-panel p {
 						margin: 0;
 					}
+
 					.world-population-panel p,
 					.world-population-status {
 						color: #555;
 					}
+
 					.world-population-toolbar,
 					.world-population-metric,
 					.world-population-scale,
@@ -85,16 +105,19 @@
 						gap: 0.75rem;
 						align-items: center;
 					}
+
 					.world-population-field {
 						display: grid;
 						gap: 0.35rem;
 						flex: 1 1 18rem;
 					}
+
 					.world-population-slider {
 						display: grid;
 						gap: 0.35rem;
 						flex: 1 1 14rem;
 					}
+
 					.world-population-field input {
 						border: 1px solid #b98f8f;
 						border-radius: 4px;
@@ -103,9 +126,11 @@
 						background: #fff;
 						color: #333;
 					}
+
 					.world-population-slider input[type="range"] {
 						accent-color: #800;
 					}
+
 					.world-population-chip {
 						display: inline-flex;
 						align-items: stretch;
@@ -115,18 +140,21 @@
 						color: #333;
 						overflow: hidden;
 					}
+
 					.world-population-chip.is-selected {
 						border-color: #800;
 						background: #fff0f0;
 						box-shadow: inset 0 0 0 1px #800;
 						font-weight: 700;
 					}
+
 					.world-population-chip-swatch {
 						width: 0.8rem;
 						height: 0.8rem;
 						border-radius: 999px;
 						flex: 0 0 auto;
 					}
+
 					.world-population-chip-label,
 					.world-population-chip-remove {
 						border: 0;
@@ -134,6 +162,7 @@
 						color: inherit;
 						font: inherit;
 					}
+
 					.world-population-chip-label {
 						display: inline-flex;
 						align-items: center;
@@ -141,6 +170,7 @@
 						padding: 0.35rem 0.35rem 0.35rem 0.7rem;
 						cursor: pointer;
 					}
+
 					.world-population-chip-remove {
 						display: inline-flex;
 						align-items: center;
@@ -152,33 +182,40 @@
 						font-size: 0.95rem;
 						line-height: 1;
 					}
+
 					.world-population-chip-remove:hover,
 					.world-population-chip-label:hover {
 						background: rgba(128, 0, 0, 0.06);
 					}
+
 					.world-population-metric button.is-active,
 					.world-population-scale button.is-active {
 						box-shadow: inset 0 0 0 1px #800;
 						background: #fff;
 						color: #800;
 					}
+
 					.world-population-scale button:disabled {
 						opacity: 0.55;
 						cursor: not-allowed;
 					}
+
 					.world-population-continents button.is-active {
 						box-shadow: inset 0 0 0 1px #800;
 						background: var(--continent-button-bg, #fff0f0);
 						color: var(--continent-button-fg, #5a1717);
 					}
+
 					.world-population-stage {
 						position: relative;
 						padding: 0.75rem;
 					}
+
 					#world-population-chart {
 						width: 100%;
 						min-height: 34rem;
 					}
+
 					.world-population-tooltip {
 						position: absolute;
 						display: none;
@@ -194,20 +231,24 @@
 						line-height: 1.4;
 						z-index: 2;
 					}
+
 					.world-population-tooltip strong {
 						display: block;
 						margin-bottom: 0.2rem;
 						color: #800;
 					}
+
 					.world-population-note {
 						font-size: 0.92rem;
 					}
+
 					@media (max-width: 719px) {
 						#world-population-chart {
 							min-height: 26rem;
 						}
 					}
 				</style>
+
 				<div class="world-population-panel">
 					<h2>All Countries Over Time</h2>
 					<p>This chart draws every country and dependency in the dataset across the full historical-plus-forecast timeline. All series are visible in the background; highlighted countries are drawn on top so the chart stays readable.</p>
@@ -247,10 +288,12 @@
 					<p class="world-population-status" id="world-population-status">Loading chart data…</p>
 					<p class="world-population-note">The default population view uses a logarithmic y-axis because a single linear axis flattens nearly every small and medium-sized country. Net migration % is calculated from net migrants divided by population.</p>
 				</div>
+
 				<div class="world-population-stage">
 					<div id="world-population-chart" aria-label="Population chart for all countries"></div>
 					<div class="world-population-tooltip" id="world-population-tooltip" aria-hidden="true"></div>
 				</div>
+
 				<div class="world-population-panel">
 					<p>
 						This project generates one aggregated JSON file via <a href="./fetch_population.py"><code>fetch_population.py</code></a
@@ -258,18 +301,77 @@
 					</p>
 					<p>The scraper merges the historical and forecast tables per country, sorts them by year, normalizes text values, and writes the chart-ready dataset used by this page.</p>
 				</div>
+
 				<script type="module" src="/projects/world-population/world-population.mjs"></script>
 			</div>
+
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://www.worldometers.info/world-population/population-by-country/" rel="noopener noreferrer" target="_blank">Worldometer: Countries in the world by population</a>
+						<span>Source table scraped into the chart-ready project data.</span>
+					</li>
+					<li>
+						<a href="https://population.un.org/wpp/" rel="noopener noreferrer" target="_blank">United Nations World Population Prospects</a>
+						<span>Authoritative population-data background and methodology.</span>
+					</li>
+				</ul>
+			</aside>
+
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+
+				.project-sources a {
+					font-weight: 700;
+				}
+
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
 		</main>
 		<footer>
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+
 				<p>
 					<sub>Last updated: <time id="updated">2026-05-02</time></sub>
 				</p>
 			</div>
+
 			<nav id="profiles"></nav>
+
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {
