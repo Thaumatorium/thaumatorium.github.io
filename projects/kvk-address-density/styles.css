@@ -1,0 +1,340 @@
+.kvk-density-page {
+	--bg: #f6f7f4;
+	--surface: #ffffff;
+	--surface-alt: #eef3ef;
+	--ink: #1d2523;
+	--muted: #5b6763;
+	--line: #cdd7d1;
+	--accent: #006b5b;
+	--accent-dark: #034b42;
+	--warn: #a16000;
+	--high: #b3261e;
+	--shadow: 0 18px 48px rgba(24, 39, 35, 0.12);
+	box-sizing: border-box;
+	display: grid;
+	gap: 1.25rem;
+	margin: 0;
+	padding: 0 0 1.5rem;
+	color: var(--ink);
+	font-family:
+		Inter,
+		ui-sans-serif,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		sans-serif;
+}
+
+.kvk-density-page * {
+	box-sizing: border-box;
+}
+
+.kvk-density-page .project-hero {
+	display: grid;
+	gap: 0.65rem;
+	padding: 1.25rem;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: linear-gradient(135deg, #ffffff 0%, #eef3ef 100%);
+	box-shadow: var(--shadow);
+}
+
+.kvk-density-page .eyebrow {
+	margin: 0;
+	color: var(--accent-dark);
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.kvk-density-page h1,
+.kvk-density-page h2 {
+	margin: 0;
+	padding: 0;
+	color: var(--ink);
+	font-family: inherit;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.kvk-density-page h1 {
+	max-width: 13ch;
+	font-size: clamp(2.1rem, 6vw, 4.25rem);
+	line-height: 0.95;
+}
+
+.kvk-density-page h2 {
+	font-size: 1.15rem;
+	line-height: 1.2;
+}
+
+.kvk-density-page .lede {
+	max-width: 74ch;
+	margin: 0;
+	color: var(--muted);
+	font-size: 1.04rem;
+	line-height: 1.55;
+	text-align: left;
+}
+
+.kvk-density-page .notice {
+	padding: 0.95rem 1rem;
+	border: 1px solid #e4c78f;
+	border-left: 5px solid var(--warn);
+	border-radius: 6px;
+	background: #fff8e7;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.kvk-density-page .dashboard {
+	display: grid;
+	gap: 1rem;
+}
+
+.kvk-density-page .kpis {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 0.8rem;
+}
+
+.kvk-density-page .kpis article {
+	display: grid;
+	gap: 0.35rem;
+	min-height: 7.2rem;
+	padding: 1rem;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface);
+	box-shadow: 0 8px 20px rgba(24, 39, 35, 0.07);
+}
+
+.kvk-density-page .kpis span,
+.kvk-density-page label,
+.kvk-density-page .result-count {
+	color: var(--muted);
+	font-size: 0.82rem;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.kvk-density-page .kpis strong {
+	align-self: end;
+	font-size: 2rem;
+	line-height: 1;
+}
+
+.kvk-density-page .controls {
+	display: grid;
+	grid-template-columns: minmax(12rem, 1fr) 14rem 14rem;
+	gap: 0.85rem;
+	align-items: end;
+	padding: 1rem;
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface-alt);
+}
+
+.kvk-density-page label {
+	display: grid;
+	gap: 0.45rem;
+}
+
+.kvk-density-page input,
+.kvk-density-page select {
+	width: 100%;
+	min-height: 2.55rem;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: #fff;
+	color: var(--ink);
+	font: inherit;
+	font-size: 0.95rem;
+	letter-spacing: 0;
+	padding: 0.55rem 0.7rem;
+}
+
+.kvk-density-page input[type="range"] {
+	min-height: auto;
+	padding: 0;
+	accent-color: var(--accent);
+}
+
+.kvk-density-page .analysis-grid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 320px;
+	gap: 1rem;
+	align-items: start;
+}
+
+.kvk-density-page .table-panel,
+.kvk-density-page .method-panel {
+	border: 1px solid var(--line);
+	border-radius: 8px;
+	background: var(--surface);
+	box-shadow: var(--shadow);
+	overflow: hidden;
+}
+
+.kvk-density-page .panel-heading,
+.kvk-density-page .method-panel {
+	padding: 1rem;
+}
+
+.kvk-density-page .panel-heading {
+	display: flex;
+	gap: 1rem;
+	align-items: start;
+	justify-content: space-between;
+	border-bottom: 1px solid var(--line);
+	background: #fbfcfb;
+}
+
+.kvk-density-page .result-count {
+	white-space: nowrap;
+}
+
+.kvk-density-page .table-wrap {
+	overflow-x: auto;
+}
+
+.kvk-density-page table {
+	width: 100%;
+	min-width: 920px;
+	border-collapse: collapse;
+	font-size: 0.92rem;
+}
+
+.kvk-density-page th,
+.kvk-density-page td {
+	padding: 0.72rem 0.75rem;
+	border-bottom: 1px solid var(--line);
+	text-align: left;
+	vertical-align: top;
+}
+
+.kvk-density-page th {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: #f4f7f5;
+}
+
+.kvk-density-page th button {
+	border: 0;
+	background: transparent;
+	color: var(--accent-dark);
+	font: inherit;
+	font-weight: 800;
+	cursor: pointer;
+	padding: 0;
+	text-align: left;
+}
+
+.kvk-density-page tbody tr:hover {
+	background: #f7faf8;
+}
+
+.kvk-density-page .risk-pill {
+	display: inline-block;
+	min-width: 5.4rem;
+	padding: 0.25rem 0.5rem;
+	border-radius: 999px;
+	color: #fff;
+	font-size: 0.76rem;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.kvk-density-page .risk-pill.hoog {
+	background: var(--high);
+}
+
+.kvk-density-page .risk-pill.verhoogd {
+	background: var(--warn);
+}
+
+.kvk-density-page .risk-pill.normaal {
+	background: var(--accent);
+}
+
+.kvk-density-page details {
+	max-width: 28rem;
+}
+
+.kvk-density-page summary {
+	color: var(--accent-dark);
+	cursor: pointer;
+	font-weight: 800;
+}
+
+.kvk-density-page details p {
+	margin: 0.5rem 0 0;
+	color: var(--muted);
+	line-height: 1.45;
+	text-align: left;
+}
+
+.kvk-density-page .method-panel {
+	display: grid;
+	gap: 0.85rem;
+	position: sticky;
+	top: 1rem;
+}
+
+.kvk-density-page .method-panel p,
+.kvk-density-page .method-panel li,
+.kvk-density-page .source-note {
+	margin: 0;
+	color: var(--muted);
+	line-height: 1.5;
+	text-align: left;
+}
+
+.kvk-density-page .method-panel ol {
+	display: grid;
+	gap: 0.45rem;
+	margin: 0;
+	padding-left: 1.2rem;
+}
+
+.kvk-density-page .source-note {
+	padding: 0.8rem;
+	border: 1px solid var(--line);
+	border-radius: 6px;
+	background: var(--surface-alt);
+}
+
+@media (max-width: 980px) {
+	.kvk-density-page .kpis,
+	.kvk-density-page .controls,
+	.kvk-density-page .analysis-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.kvk-density-page .method-panel {
+		position: static;
+	}
+}
+
+@media (max-width: 640px) {
+	.kvk-density-page .project-hero,
+	.kvk-density-page .notice,
+	.kvk-density-page .controls,
+	.kvk-density-page .panel-heading,
+	.kvk-density-page .method-panel {
+		padding: 0.85rem;
+	}
+
+	.kvk-density-page .kpis {
+		gap: 0.65rem;
+	}
+
+	.kvk-density-page .kpis article {
+		min-height: 6rem;
+	}
+}

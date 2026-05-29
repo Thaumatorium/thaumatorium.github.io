@@ -1,28 +1,17 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
-		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
 		<meta charset="utf-8" />
-
 		<title>Epoch Time Converter | The Thaumatorium</title>
-
 		<meta name="description" content="Convert epoch seconds, milliseconds, and nanoseconds to RFC3339 and ISO8601 timestamps." />
-
 		<link rel="canonical" href="https://thaumatorium.com/" />
-
 		<meta name="theme-color" content="#800" />
-
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
-
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Epoch Time Converter" />
@@ -30,7 +19,6 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
-
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -40,13 +28,11 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
-
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
-
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -58,10 +44,8 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-
 		<main class="projects">
 			<h1>Epoch Time Converter</h1>
-
 			<div class="epoch-page">
 				<style>
 					.epoch-page {
@@ -70,7 +54,6 @@
 						padding: 1rem 0;
 						font-family: Consolas, Monaco, "Courier New", monospace;
 					}
-
 					.epoch-panel {
 						display: grid;
 						gap: 0.9rem;
@@ -80,18 +63,15 @@
 						background: #fffaf9;
 						box-shadow: 3px 3px 5px #555;
 					}
-
 					.epoch-toc {
 						display: flex;
 						flex-wrap: wrap;
 						gap: 0.6rem;
 						align-items: center;
 					}
-
 					.epoch-toc-label {
 						font-weight: 700;
 					}
-
 					.epoch-toc a {
 						display: inline-block;
 						padding: 0.2rem 0.55rem;
@@ -100,23 +80,19 @@
 						background: #fff;
 						text-decoration: none;
 					}
-
 					.epoch-toc a:hover {
 						text-decoration: underline;
 					}
-
 					.epoch-current {
 						background: #fff0f0;
 						border-color: #cda9a9;
 					}
-
 					.epoch-current-lines,
 					.epoch-output-grid,
 					.epoch-batch-results {
 						display: grid;
 						gap: 0.55rem;
 					}
-
 					.epoch-toolbar,
 					.epoch-inline-fields,
 					.epoch-actions {
@@ -125,21 +101,17 @@
 						gap: 0.75rem;
 						align-items: end;
 					}
-
 					.epoch-field {
 						display: grid;
 						gap: 0.35rem;
 						min-width: 10rem;
 					}
-
 					.epoch-field.grow {
 						flex: 1 1 24rem;
 					}
-
 					.epoch-field label {
 						font-weight: 700;
 					}
-
 					.epoch-input,
 					.epoch-textarea,
 					.epoch-select {
@@ -150,12 +122,10 @@
 						background: #fff;
 						box-sizing: border-box;
 					}
-
 					.epoch-textarea {
 						min-height: 12rem;
 						resize: vertical;
 					}
-
 					.epoch-output {
 						padding: 0.75rem 0.85rem;
 						border: 1px solid #cda9a9;
@@ -163,14 +133,12 @@
 						border-radius: 4px;
 						background: #fffaf9;
 					}
-
 					.epoch-output-label,
 					.epoch-copy-label {
 						display: block;
 						font-weight: 700;
 						margin-bottom: 0.25rem;
 					}
-
 					.epoch-output-value,
 					.epoch-current-value {
 						margin: 0;
@@ -181,46 +149,38 @@
 						cursor: pointer;
 						word-break: break-word;
 					}
-
 					.epoch-output-value:hover,
 					.epoch-current-value:hover {
 						background: #fff0f0;
 					}
-
 					.epoch-status {
 						margin: 0;
 						min-height: 1.25rem;
 						color: #6e0000;
 					}
-
 					.epoch-status[data-tone="error"] {
 						color: #800;
 					}
-
 					.epoch-hint {
 						margin: 0;
 						font-size: 0.92rem;
 						color: #555;
 					}
-
 					.epoch-batch-results[hidden] {
 						display: none;
 					}
-
 					.epoch-table-wrap {
 						overflow-x: auto;
 						border: 1px solid #cda9a9;
 						border-radius: 4px;
 						background: #fff;
 					}
-
 					.epoch-table {
 						width: 100%;
 						min-width: 820px;
 						border-collapse: collapse;
 						font-size: 0.9rem;
 					}
-
 					.epoch-table th,
 					.epoch-table td {
 						border: 1px solid #800;
@@ -228,7 +188,6 @@
 						text-align: left;
 						vertical-align: top;
 					}
-
 					.epoch-table thead th {
 						position: sticky;
 						top: 0;
@@ -236,26 +195,21 @@
 						color: #fff;
 						z-index: 1;
 					}
-
 					.epoch-table td.copyable {
 						cursor: pointer;
 					}
-
 					.epoch-table td.copyable:hover {
 						background: #fff0f0;
 					}
-
 					@media (max-width: 768px) {
 						.epoch-page {
 							padding: 0.25rem 0;
 						}
-
 						.epoch-panel {
 							padding: 0.85rem;
 						}
 					}
 				</style>
-
 				<div class="epoch-panel epoch-current">
 					<nav class="epoch-toc" aria-label="Page contents">
 						<span class="epoch-toc-label">On this page:</span>
@@ -264,13 +218,11 @@
 						<a href="#batch-converter">Batch Converter</a>
 					</nav>
 				</div>
-
 				<div class="epoch-panel epoch-current" id="current-time">
 					<h2>Current Time</h2>
 					<div class="epoch-current-lines" id="currentTime"></div>
 					<p class="epoch-hint">Click any value to copy it.</p>
 				</div>
-
 				<div class="epoch-panel" id="single-converter">
 					<h2>Single Converter</h2>
 					<div class="epoch-toolbar">
@@ -288,15 +240,12 @@
 							</select>
 						</div>
 					</div>
-
 					<div class="epoch-actions">
 						<button class="button" id="convertSingleBtn" type="button">Convert</button>
 						<button class="button" id="useNowBtn" type="button">Use current time</button>
 						<button class="button" id="clearSingleBtn" type="button">Clear</button>
 					</div>
-
 					<p class="epoch-status" id="singleStatus" aria-live="polite"></p>
-
 					<div class="epoch-output-grid">
 						<div class="epoch-output">
 							<span class="epoch-output-label">Detected unit</span>
@@ -324,7 +273,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="epoch-panel" id="batch-converter">
 					<h2>Batch Converter</h2>
 					<div class="epoch-inline-fields">
@@ -349,7 +297,6 @@
 						<button class="button" id="downloadBatchBtn" type="button">Download CSV</button>
 					</div>
 					<p class="epoch-status" id="batchStatus" aria-live="polite"></p>
-
 					<div class="epoch-batch-results" id="batchResults" hidden>
 						<div class="epoch-table-wrap">
 							<table class="epoch-table">
@@ -371,10 +318,8 @@
 						</div>
 					</div>
 				</div>
-
 				<script type="module" src="/projects/epoch/epoch.mjs"></script>
 			</div>
-
 			<aside class="project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
@@ -392,7 +337,6 @@
 					</li>
 				</ul>
 			</aside>
-
 			<style>
 				.project-sources {
 					border: 1px solid #cda9a9;
@@ -402,14 +346,12 @@
 					margin-top: 2rem;
 					padding: 1rem;
 				}
-
 				.project-sources h2 {
 					color: #800;
 					font-size: 1rem;
 					margin: 0 0 0.75rem;
 					padding: 0;
 				}
-
 				.project-sources ul {
 					display: grid;
 					gap: 0.65rem;
@@ -417,107 +359,88 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-sources li {
 					display: grid;
 					gap: 0.15rem;
 				}
-
 				.project-sources a {
 					font-weight: 700;
 				}
-
 				.project-sources span {
 					color: #4f3b3b;
 					font-size: 0.92rem;
 					line-height: 1.35;
 				}
 			</style>
-
 			<style>
 				.project-index {
 					margin-top: 1.5em;
 				}
-
 				.project-index-summary {
 					color: #5f1d1d;
 					font-family: Tahoma, sans-serif;
 					font-size: 0.95em;
 					margin-bottom: 2em;
 				}
-
 				.project-list {
 					list-style: none;
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-year-group {
 					margin-bottom: 2.5em;
 				}
-
 				.project-year-group > h2 {
 					border-bottom: 1px solid #d8b3b3;
 					margin-bottom: 0.8em;
 					padding-bottom: 0.2em;
 				}
-
 				.project-entry {
 					border-bottom: 1px solid #ead6d6;
 					list-style: none;
 					margin: 0;
 					padding: 1em 0 1.15em;
 				}
-
 				.project-entry:first-child {
 					padding-top: 0.2em;
 				}
-
 				.project-entry:last-child {
 					border-bottom: 0;
 					padding-bottom: 0;
 				}
-
 				.project-entry article {
 					display: grid;
 					gap: 0.35em;
 				}
-
 				.project-entry h3 {
 					font-size: 1.05em;
 					margin: 0;
 					padding: 0;
 					text-transform: none;
 				}
-
 				.project-entry h3 a {
 					text-decoration: none;
 				}
-
 				.project-entry h3 a:hover {
 					text-decoration: underline;
 				}
-
 				.project-entry-meta,
 				.project-entry-summary {
 					margin: 0;
 					padding: 0;
 					text-align: left;
 				}
-
 				.project-entry-meta {
 					color: #6e0000;
 					font-family: Tahoma, sans-serif;
 					font-size: 0.88em;
 				}
-
 				.project-entry-summary {
 					color: #2b2b2b;
 					font-size: 0.98em;
 					line-height: 1.45;
 					max-width: 70ch;
 				}
-
 				@media (min-width: 900px) {
 					body > main {
 						margin-left: 12%;
@@ -530,14 +453,11 @@
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-
 				<p>
-					<sub>Last updated: <time id="updated">2026-04-04</time></sub>
+					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
 				</p>
 			</div>
-
 			<nav id="profiles"></nav>
-
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {

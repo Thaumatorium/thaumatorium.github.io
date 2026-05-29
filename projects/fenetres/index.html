@@ -1,28 +1,17 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
-		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
 		<meta charset="utf-8" />
-
 		<title>Fenêtres | The Thaumatorium</title>
-
 		<meta name="description" content="Interactive cube simulation inspired by Bali Balo&#39;s Fenêtres CodePen." />
-
 		<link rel="canonical" href="https://thaumatorium.com/" />
-
 		<meta name="theme-color" content="#800" />
-
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
-
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Fenêtres" />
@@ -30,7 +19,6 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
-
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -40,13 +28,11 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
-
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
-
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -58,7 +44,6 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-
 		<main class="projects">
 			<div class="fenetres-page">
 				<style>
@@ -75,7 +60,6 @@
 						border-radius: 4px;
 						box-shadow: 3px 3px 5px #555;
 					}
-
 					#draw {
 						position: absolute;
 						left: 0;
@@ -83,12 +67,10 @@
 						width: 100%;
 						height: 100%;
 					}
-
 					.fenetres-page label,
 					.fenetres-page input {
 						vertical-align: middle;
 					}
-
 					.fenetres-page label {
 						position: relative;
 						display: inline-block;
@@ -105,7 +87,6 @@
 						font-size: 0.9rem;
 						box-shadow: 2px 2px 5px #555;
 					}
-
 					#debug {
 						position: absolute;
 						bottom: 0;
@@ -120,21 +101,17 @@
 				<label><input checked id="autoRotate" type="checkbox" /> Auto rotation</label>
 				<div id="debug"></div>
 				<canvas id="draw"></canvas>
-
 				<script>
 					let _debug = document.getElementById("debug");
 					const debug = () => (_debug.textContent = [].join.call(arguments, "\n"));
-
 					let c = document.getElementById("draw"),
 						ctx = c.getContext("2d");
-
 					const onResize = () => {
 						c.width = c.clientWidth;
 						c.height = c.clientHeight;
 					};
 					window.addEventListener("resize", onResize);
 					onResize();
-
 					// Utils
 					const clip = (n, m, M) => (n < M ? (n > m ? n : m) : M);
 					function comeCloser(n, goal, factor, limit) {
@@ -191,7 +168,6 @@
 							m7 = m[6],
 							m8 = m[7],
 							m9 = m[8];
-
 						let n1 = n[0],
 							n2 = n[1],
 							n3 = n[2],
@@ -201,7 +177,6 @@
 							n7 = n[6],
 							n8 = n[7],
 							n9 = n[8];
-
 						return [m1 * n1 + m4 * n2 + m7 * n3, m2 * n1 + m5 * n2 + m8 * n3, m3 * n1 + m6 * n2 + m9 * n3, m1 * n4 + m4 * n5 + m7 * n6, m2 * n4 + m5 * n5 + m8 * n6, m3 * n4 + m6 * n5 + m9 * n6, m1 * n7 + m4 * n8 + m7 * n9, m2 * n7 + m5 * n8 + m8 * n9, m3 * n7 + m6 * n8 + m9 * n9];
 					}
 					function chainMul33(base) {
@@ -217,7 +192,6 @@
 					function sub(a, b) {
 						return [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
 					}
-
 					// Big chunk of code incoming !
 					// These are the drawing functions
 					// You should probably fold these functions and only open one at a time
@@ -503,18 +477,15 @@
 							object.push(addTriangle(p3, p8, p7));
 							object.push(addTriangle(p5, p6, p7, 0x001));
 							object.push(addTriangle(p5, p7, p8));
-
 							// Reinforce by adding sticks (could also add every face other diagonal)
 							addStick(p1, p7, null);
 							addStick(p2, p8, null);
 							addStick(p3, p5, null);
 							addStick(p4, p6, null);
-
 							// Init spin
 							// p1[3] += (Math.random()-.5)*.3;
 							// p1[4] += (Math.random()-.5)*.3;
 							// p1[5] += (Math.random()-.5)*.3;
-
 							return objects.push(object) - 1;
 						}
 						function addTetrahedron(s, x, y, z, style, parent) {
@@ -532,13 +503,11 @@
 							object.push(addTriangle(p1, p4, p3));
 							object.push(addTriangle(p1, p3, p2));
 							object.push(addTriangle(p2, p3, p4));
-
 							return objects.push(object) - 1;
 						}
 						addBox(0.5, 0, 0, 0, "#e74c3c");
 						addBox(0.25, 0, 0, 0, "#2ecc71", 0);
 						addTetrahedron(0.125, 0, 0, 0, "#f1c40f", 1);
-
 						let accuracy = 3;
 						let stiffness = 1,
 							bounce = 0; // Adjust accordingly with accuracy
@@ -687,7 +656,6 @@
 							// 	let size = .04 * (p[2] + 1);
 							// 	ctx.fillRect(p[0] - size * .5, p[1] - size * .5, size, size);
 							// }
-
 							ctx.lineWidth = 2 / cubeSize;
 							// ctx.strokeStyle = 'white';
 							// ctx.beginPath();
@@ -774,7 +742,6 @@
 							if (pT) dt = Math.min((now - pT) * 0.001, dtMax);
 							pT = now;
 							ctx.scale(cubeSize * 0.5, cubeSize * 0.5);
-
 							ball[0] += ballVel[0] * dt;
 							ball[1] += ballVel[1] * dt;
 							ball[2] += ballVel[2] * dt;
@@ -820,14 +787,12 @@
 							hitSq(ctx, p2, 0.2, [1, 0, 0], [0, 1, 0]);
 							ctx.fill();
 							hits = hits.filter(updateDrawHit.bind(this, ctx, dt));
-
 							let bPos = transformed(ball);
 							let s = ballSize / (1 - bPos[2] / perspective);
 							ctx.fillStyle = "white";
 							ctx.beginPath();
 							ctx.arc(bPos[0], bPos[1], s, 0, 2 * Math.PI);
 							ctx.fill();
-
 							// hitsFront = hitsFront.filter(updateDrawHit.bind(this, ctx, dt));
 						};
 					})();
@@ -893,7 +858,6 @@
 							ctx.stroke();
 						};
 					})();
-
 					// Now the cube logic
 					let baseCorners = [
 						[-1, -1, 1],
@@ -945,13 +909,11 @@
 							draw: drawCubes,
 						},
 					];
-
 					// Style things
 					let faceBg = "rgba(4,13,24,.65)",
 						border = "rgb(40,130,240)";
 					let cubeSize = 160,
 						perspective = 15;
-
 					// Change rot to change the initial rotation (radians)
 					// rotVel is the angular velocity in rad/sec around every axis
 					let rot = [0, 0, 0],
@@ -965,7 +927,6 @@
 					}
 					let autoRot = document.getElementById("autoRotate");
 					autoRot.addEventListener("change", setBase);
-
 					// Actual drawing loop
 					function loop() {
 						if (autoRot.checked) {
@@ -978,7 +939,6 @@
 							my = rotate3dMatrix(0, 1, 0, rot[1]),
 							mz = rotate3dMatrix(0, 0, 1, rot[2]);
 						rotMatrix = chainMul33(mx, my, mz, rotBase);
-
 						let w = c.width,
 							h = c.height;
 						let corners = baseCorners.map(function (c) {
@@ -1025,11 +985,9 @@
 							}
 							// if(drawBg === undefined) drawBg = true;
 							ctx.restore();
-
 							ctx.fillStyle = faceBg;
 							ctx.strokeStyle = border;
 							ctx.lineWidth = 0.5;
-
 							// Always draw the background if facing back
 							ctx.save();
 							ctx.beginPath();
@@ -1040,7 +998,6 @@
 							drawPath(ctx, faceCorners);
 							ctx.fill();
 							ctx.restore();
-
 							ctx.beginPath();
 							drawPath(ctx, faceCorners);
 							if (drawBg) ctx.fill();
@@ -1049,14 +1006,12 @@
 						requestAnimationFrame(loop);
 					}
 					requestAnimationFrame(loop);
-
 					function drawPath(ctx, corners) {
 						if (!corners.length) return;
 						ctx.moveTo(corners[0][0], corners[0][1]);
 						for (let i = 0, l = corners.length; i < l; i++) ctx.lineTo(corners[i][0], corners[i][1]);
 						ctx.lineTo(corners[0][0], corners[0][1]);
 					}
-
 					// Handle mouse/touch events
 					(function () {
 						let grabbed = false,
@@ -1133,7 +1088,6 @@
 					})();
 				</script>
 			</div>
-
 			<aside class="project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
@@ -1147,7 +1101,6 @@
 					</li>
 				</ul>
 			</aside>
-
 			<style>
 				.project-sources {
 					border: 1px solid #cda9a9;
@@ -1157,14 +1110,12 @@
 					margin-top: 2rem;
 					padding: 1rem;
 				}
-
 				.project-sources h2 {
 					color: #800;
 					font-size: 1rem;
 					margin: 0 0 0.75rem;
 					padding: 0;
 				}
-
 				.project-sources ul {
 					display: grid;
 					gap: 0.65rem;
@@ -1172,16 +1123,13 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-sources li {
 					display: grid;
 					gap: 0.15rem;
 				}
-
 				.project-sources a {
 					font-weight: 700;
 				}
-
 				.project-sources span {
 					color: #4f3b3b;
 					font-size: 0.92rem;
@@ -1193,14 +1141,11 @@
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-
 				<p>
-					<sub>Last updated: <time id="updated">2026-04-04</time></sub>
+					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
 				</p>
 			</div>
-
 			<nav id="profiles"></nav>
-
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {

@@ -1,28 +1,17 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
-		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
 		<meta charset="utf-8" />
-
 		<title>Queueing System Simulation | The Thaumatorium</title>
-
 		<meta name="description" content="Interactive finite-capacity queue simulation with configurable servers, warm-up, measurement windows, and live history." />
-
 		<link rel="canonical" href="https://thaumatorium.com/" />
-
 		<meta name="theme-color" content="#800" />
-
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
-
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Queueing System Simulation" />
@@ -30,7 +19,6 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
-
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -40,13 +28,11 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
-
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
-
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -58,7 +44,6 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-
 		<main class="projects">
 			<div class="queue-sim-page">
 				<style>
@@ -67,7 +52,6 @@
 						gap: 1rem;
 						color: #333;
 					}
-
 					.queue-sim-shell,
 					.queue-sim-panel {
 						border: 1px solid #cda9a9;
@@ -75,49 +59,41 @@
 						background: #fffaf9;
 						box-shadow: 3px 3px 5px #555;
 					}
-
 					.queue-sim-shell {
 						display: grid;
 						grid-template-columns: 320px 1fr;
 						gap: 1rem;
 						padding: 1rem;
 					}
-
 					.queue-sim-controls,
 					.queue-sim-sidebar {
 						display: grid;
 						gap: 1rem;
 						align-content: start;
 					}
-
 					.queue-sim-panel {
 						padding: 1rem;
 					}
-
 					.queue-sim-shell h2,
 					.queue-sim-shell h3,
 					.queue-sim-shell p {
 						margin: 0;
 						padding: 0;
 					}
-
 					.queue-sim-title {
 						display: grid;
 						gap: 0.35rem;
 					}
-
 					.queue-sim-subtitle {
 						color: #555;
 						font-size: 0.95rem;
 						line-height: 1.45;
 						max-width: 72ch;
 					}
-
 					.queue-sim-form {
 						display: grid;
 						gap: 0.85rem;
 					}
-
 					.queue-sim-form label,
 					.queue-sim-range {
 						display: grid;
@@ -125,7 +101,6 @@
 						color: #555;
 						font-size: 0.83rem;
 					}
-
 					.queue-sim-form input,
 					.queue-sim-form select {
 						border: 1px solid #b98f8f;
@@ -135,43 +110,36 @@
 						color: #333;
 						font: inherit;
 					}
-
 					.queue-sim-form input[type="range"] {
 						padding: 0;
 						accent-color: #800;
 					}
-
 					.queue-sim-inline {
 						display: grid;
 						grid-template-columns: 1fr auto;
 						align-items: center;
 						gap: 0.75rem;
 					}
-
 					.queue-sim-actions {
 						display: flex;
 						flex-wrap: wrap;
 						gap: 0.75rem;
 					}
-
 					.queue-sim-repl-grid {
 						display: grid;
 						grid-template-columns: 1fr auto;
 						gap: 0.75rem;
 						align-items: end;
 					}
-
 					.queue-sim-note {
 						color: #555;
 						font-size: 0.82rem;
 						line-height: 1.45;
 					}
-
 					.queue-sim-stage {
 						display: grid;
 						gap: 1rem;
 					}
-
 					.queue-sim-canvas {
 						position: relative;
 						overflow: hidden;
@@ -181,14 +149,12 @@
 						border-radius: 4px;
 						background: #fff;
 					}
-
 					.queue-sim-flow {
 						display: flex;
 						align-items: center;
 						gap: 1.2rem;
 						min-height: 18rem;
 					}
-
 					.queue-sim-cloud,
 					.queue-sim-exit {
 						display: grid;
@@ -199,7 +165,6 @@
 						text-transform: uppercase;
 						letter-spacing: 0.08em;
 					}
-
 					.queue-sim-cloud::before {
 						content: "";
 						width: 72px;
@@ -208,7 +173,6 @@
 						border: 2px dashed #cda9a9;
 						background: rgba(255, 255, 255, 0.7);
 					}
-
 					.queue-sim-exit::before {
 						content: "";
 						width: 14px;
@@ -217,14 +181,12 @@
 						background: #800;
 						box-shadow: 0 0 10px rgba(136, 0, 0, 0.35);
 					}
-
 					.queue-sim-arrow {
 						width: 38px;
 						height: 4px;
 						background: #cda9a9;
 						position: relative;
 					}
-
 					.queue-sim-arrow::after {
 						content: "";
 						position: absolute;
@@ -234,7 +196,6 @@
 						border-top: 7px solid transparent;
 						border-bottom: 7px solid transparent;
 					}
-
 					.queue-sim-pipe {
 						flex: 1;
 						display: grid;
@@ -242,7 +203,6 @@
 						gap: 1rem;
 						align-items: center;
 					}
-
 					.queue-sim-queue,
 					.queue-sim-server {
 						min-height: 10rem;
@@ -252,7 +212,6 @@
 						padding: 0.85rem;
 						position: relative;
 					}
-
 					.queue-sim-label {
 						font-size: 0.75rem;
 						letter-spacing: 0.1em;
@@ -260,17 +219,14 @@
 						color: #800;
 						font-family: Tahoma, sans-serif;
 					}
-
 					.queue-area {
 						position: relative;
 						min-height: 8rem;
 					}
-
 					.queue-sim-server-bank {
 						display: grid;
 						gap: 0.8rem;
 					}
-
 					.queue-sim-server .slot {
 						min-height: 3rem;
 						margin-top: 0.8rem;
@@ -278,18 +234,15 @@
 						border-radius: 4px;
 						background: #fff;
 					}
-
 					.queue-sim-server.busy .slot {
 						border-color: #800;
 						box-shadow: inset 0 0 0 2px rgba(136, 0, 0, 0.15);
 					}
-
 					.customer-layer {
 						position: absolute;
 						inset: 0;
 						pointer-events: none;
 					}
-
 					.customer {
 						position: absolute;
 						width: 36px;
@@ -308,15 +261,12 @@
 							opacity 0.35s ease;
 						box-shadow: 3px 3px 5px #555;
 					}
-
 					.customer.visible {
 						opacity: 1;
 					}
-
 					.customer.rejected {
 						background: #d40000;
 					}
-
 					.queue-sim-strip {
 						display: flex;
 						flex-wrap: wrap;
@@ -324,7 +274,6 @@
 						font-size: 0.84rem;
 						color: #555;
 					}
-
 					.queue-sim-strip span {
 						padding: 0.45rem 0.75rem;
 						border: 1px solid #cda9a9;
@@ -332,13 +281,11 @@
 						background: #fffaf9;
 						font-variant-numeric: tabular-nums;
 					}
-
 					.queue-sim-stats {
 						display: grid;
 						grid-template-columns: repeat(3, minmax(0, 1fr));
 						gap: 0.75rem;
 					}
-
 					.queue-sim-stat {
 						border: 1px solid #cda9a9;
 						border-radius: 4px;
@@ -348,7 +295,6 @@
 						gap: 0.25rem;
 						font-variant-numeric: tabular-nums;
 					}
-
 					.queue-sim-stat small {
 						color: #800;
 						text-transform: uppercase;
@@ -356,16 +302,13 @@
 						font-size: 0.68rem;
 						font-family: Tahoma, sans-serif;
 					}
-
 					.queue-sim-stat strong {
 						font-size: 1rem;
 					}
-
 					.queue-sim-chart-shell {
 						display: grid;
 						gap: 0.5rem;
 					}
-
 					.queue-sim-chart {
 						width: 100%;
 						height: 220px;
@@ -373,7 +316,6 @@
 						border-radius: 4px;
 						background: #fff repeating-linear-gradient(to top, rgba(136, 0, 0, 0.06), rgba(136, 0, 0, 0.06) 1px, transparent 1px, transparent 44px);
 					}
-
 					.queue-sim-chart-legend {
 						display: flex;
 						flex-wrap: wrap;
@@ -381,45 +323,37 @@
 						color: #555;
 						font-size: 0.82rem;
 					}
-
 					.queue-sim-chart-key {
 						display: inline-flex;
 						align-items: center;
 						gap: 0.45rem;
 					}
-
 					.queue-sim-chart-swatch {
 						width: 1.4rem;
 						height: 0.2rem;
 						border-radius: 4px;
 					}
-
 					@media (max-width: 980px) {
 						.queue-sim-shell {
 							grid-template-columns: 1fr;
 						}
-
 						.queue-sim-pipe {
 							grid-template-columns: 1fr;
 						}
-
 						.queue-sim-flow {
 							flex-direction: column;
 						}
-
 						.queue-sim-stats {
 							grid-template-columns: repeat(2, minmax(0, 1fr));
 						}
 					}
 				</style>
-
 				<section class="queue-sim-shell">
 					<aside class="queue-sim-controls">
 						<section class="queue-sim-panel queue-sim-title">
 							<h2>Queueing System Simulation</h2>
 							<p class="queue-sim-subtitle">Poisson arrivals, configurable server pool <code>c</code>, finite total system capacity <code>K</code>, and switchable service-time distributions.</p>
 						</section>
-
 						<section class="queue-sim-panel">
 							<h3>Controls</h3>
 							<div class="queue-sim-form">
@@ -476,13 +410,11 @@
 								<button class="button" id="resetBtn" type="button">Reset</button>
 							</div>
 						</section>
-
 						<section class="queue-sim-panel">
 							<h3>Model Notes</h3>
 							<p class="queue-sim-note"><code>K</code> is total system capacity, including the 2 customers in service. If the system already has <code>K</code> customers, a new arrival is dropped.</p>
 							<p class="queue-sim-note">The reported averages are based only on the measurement window after warm-up. Wait/system times are conditional on served customers, not dropped arrivals.</p>
 						</section>
-
 						<section class="queue-sim-panel">
 							<h3>Replications</h3>
 							<div class="queue-sim-form">
@@ -501,7 +433,6 @@
 							<p class="queue-sim-note">Batch mode re-runs the same scenario with deterministic seeds <code>seed, seed+1, ...</code> and reports 95% confidence intervals.</p>
 						</section>
 					</aside>
-
 					<section class="queue-sim-sidebar">
 						<section class="queue-sim-panel queue-sim-stage">
 							<div class="queue-sim-canvas">
@@ -524,7 +455,6 @@
 								</div>
 								<div class="customer-layer" id="customerLayer"></div>
 							</div>
-
 							<div class="queue-sim-strip">
 								<span>Sim time: <strong id="simTime">0.0s</strong></span>
 								<span>Phase: <strong id="simPhase">Warm-up</strong></span>
@@ -535,7 +465,6 @@
 								<span title="Traffic intensity lambda * E[S] / c">ρ: <strong id="rho">0.00</strong></span>
 							</div>
 						</section>
-
 						<section class="queue-sim-panel">
 							<h3>Measured Metrics</h3>
 							<div class="queue-sim-stats">
@@ -553,7 +482,6 @@
 								<div class="queue-sim-stat"><small>Distribution</small><strong id="distributionLabel">Gamma</strong></div>
 							</div>
 						</section>
-
 						<section class="queue-sim-panel">
 							<h3>Theoretical Reference</h3>
 							<p class="queue-sim-note">Only available for exponential service, i.e. <code>M/M/c/K</code>.</p>
@@ -566,7 +494,6 @@
 								<div class="queue-sim-stat"><small>Expected sojourn E[T]</small><strong id="theorySystemTime">-</strong></div>
 							</div>
 						</section>
-
 						<section class="queue-sim-panel">
 							<h3>Replication Summary</h3>
 							<div class="queue-sim-stats">
@@ -584,7 +511,6 @@
 								<div class="queue-sim-stat"><small>Mean util</small><strong id="batchMeanUtil">-</strong></div>
 							</div>
 						</section>
-
 						<section class="queue-sim-panel queue-sim-chart-shell">
 							<h3>History</h3>
 							<svg class="queue-sim-chart" id="historyChart" viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Queue history chart"></svg>
@@ -596,10 +522,8 @@
 						</section>
 					</section>
 				</section>
-
 				<script type="module" src="/projects/queueing-simulation/queueing-simulation.mjs"></script>
 			</div>
-
 			<aside class="project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
@@ -613,7 +537,6 @@
 					</li>
 				</ul>
 			</aside>
-
 			<style>
 				.project-sources {
 					border: 1px solid #cda9a9;
@@ -623,14 +546,12 @@
 					margin-top: 2rem;
 					padding: 1rem;
 				}
-
 				.project-sources h2 {
 					color: #800;
 					font-size: 1rem;
 					margin: 0 0 0.75rem;
 					padding: 0;
 				}
-
 				.project-sources ul {
 					display: grid;
 					gap: 0.65rem;
@@ -638,16 +559,13 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-sources li {
 					display: grid;
 					gap: 0.15rem;
 				}
-
 				.project-sources a {
 					font-weight: 700;
 				}
-
 				.project-sources span {
 					color: #4f3b3b;
 					font-size: 0.92rem;
@@ -659,14 +577,11 @@
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-
 				<p>
-					<sub>Last updated: <time id="updated">2026-04-04</time></sub>
+					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
 				</p>
 			</div>
-
 			<nav id="profiles"></nav>
-
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {
