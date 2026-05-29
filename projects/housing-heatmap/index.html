@@ -1,28 +1,17 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
-		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
 		<meta charset="utf-8" />
-
 		<title>Housing Heatmap | The Thaumatorium</title>
-
 		<meta name="description" content="Explore Dutch housing listings by price, price per square meter, budget, size, and province on an interactive map." />
-
 		<link rel="canonical" href="https://thaumatorium.com/" />
-
 		<meta name="theme-color" content="#800" />
-
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
-
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Housing Heatmap" />
@@ -30,7 +19,6 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
-
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -40,13 +28,11 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
-
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
-
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -58,11 +44,9 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-
 		<main class="projects">
 			<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 			<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 			<div class="housing-heatmap-page">
 				<style>
 					.housing-heatmap-page {
@@ -88,18 +72,15 @@
 						background: var(--bg);
 						color: var(--text);
 					}
-
 					.housing-heatmap-page * {
 						box-sizing: border-box;
 					}
-
 					.housing-heatmap-app {
 						display: grid;
 						grid-template-columns: 360px minmax(0, 1fr);
 						width: 100%;
 						min-height: calc(100vh - 14rem);
 					}
-
 					.housing-heatmap-page aside {
 						background: var(--panel);
 						border-right: 1px solid var(--line);
@@ -108,7 +89,6 @@
 						box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 						z-index: 2;
 					}
-
 					.housing-heatmap-page h1 {
 						padding: 0;
 						color: var(--text);
@@ -118,7 +98,6 @@
 						font-size: 22px;
 						line-height: 1.2;
 					}
-
 					.housing-heatmap-page p {
 						padding: 0;
 						text-align: left;
@@ -127,22 +106,18 @@
 						font-size: 14px;
 						line-height: 1.45;
 					}
-
 					.housing-heatmap-page .field {
 						margin-top: 14px;
 					}
-
 					.housing-heatmap-page .is-hidden {
 						display: none;
 					}
-
 					.housing-heatmap-page label {
 						display: block;
 						font-size: 13px;
 						font-weight: 700;
 						margin-bottom: 6px;
 					}
-
 					.housing-heatmap-page input[type="text"],
 					.housing-heatmap-page input[type="number"],
 					.housing-heatmap-page select,
@@ -155,17 +130,14 @@
 						background: white;
 						color: var(--text);
 					}
-
 					.housing-heatmap-page input[type="range"] {
 						width: 100%;
 					}
-
 					.housing-heatmap-page .field-row {
 						display: grid;
 						grid-template-columns: 1fr 1fr;
 						gap: 10px;
 					}
-
 					.housing-heatmap-page button {
 						border: 0;
 						background: var(--accent);
@@ -174,11 +146,9 @@
 						cursor: pointer;
 						margin-top: 16px;
 					}
-
 					.housing-heatmap-page button:hover {
 						filter: brightness(1.07);
 					}
-
 					.housing-heatmap-page .provider {
 						display: flex;
 						gap: 10px;
@@ -188,7 +158,6 @@
 						border-radius: 10px;
 						background: #fbfcfd;
 					}
-
 					.housing-heatmap-page .provider input {
 						margin-top: 3px;
 					}
@@ -202,21 +171,18 @@
 						font-size: 12px;
 						margin-top: 2px;
 					}
-
 					.housing-heatmap-page .stats {
 						display: grid;
 						grid-template-columns: 1fr 1fr;
 						gap: 10px;
 						margin-top: 14px;
 					}
-
 					.housing-heatmap-page .stat {
 						border: 1px solid var(--line);
 						border-radius: 10px;
 						background: #fbfcfd;
 						padding: 10px 12px;
 					}
-
 					.housing-heatmap-page .stat .label {
 						color: var(--muted);
 						font-size: 12px;
@@ -226,7 +192,6 @@
 						font-size: 20px;
 						font-weight: 850;
 					}
-
 					.housing-heatmap-page .status {
 						margin-top: 14px;
 						padding: 10px 12px;
@@ -237,13 +202,11 @@
 						font-size: 13px;
 						line-height: 1.45;
 					}
-
 					.housing-heatmap-page .results {
 						display: grid;
 						gap: 8px;
 						margin-top: 14px;
 					}
-
 					.housing-heatmap-page .result {
 						width: 100%;
 						margin: 0;
@@ -256,18 +219,15 @@
 						text-align: left;
 						cursor: pointer;
 					}
-
 					.housing-heatmap-page .result:hover {
 						background: #f4f8fb;
 						filter: none;
 					}
-
 					.housing-heatmap-page .result strong {
 						display: block;
 						font-size: 14px;
 						line-height: 1.25;
 					}
-
 					.housing-heatmap-page .result span {
 						display: block;
 						margin-top: 3px;
@@ -275,21 +235,18 @@
 						font-size: 12px;
 						line-height: 1.35;
 					}
-
 					.housing-heatmap-page .map-wrap {
 						position: relative;
 						min-width: 0;
 						min-height: calc(100vh - 14rem);
 						overflow: hidden;
 					}
-
 					.housing-heatmap-page #map {
 						width: 100%;
 						height: 100%;
 						min-height: calc(100vh - 14rem);
 						background: #eaf3fa;
 					}
-
 					.housing-heatmap-page .badge,
 					.housing-heatmap-page .legend {
 						position: absolute;
@@ -300,7 +257,6 @@
 						box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
 						z-index: 600;
 					}
-
 					.housing-heatmap-page .badge {
 						top: 16px;
 						right: 16px;
@@ -308,7 +264,6 @@
 						color: var(--muted);
 						font-size: 12px;
 					}
-
 					.housing-heatmap-page .legend {
 						right: 16px;
 						bottom: 26px;
@@ -317,11 +272,9 @@
 						font-size: 12px;
 						color: var(--muted);
 					}
-
 					.housing-heatmap-page .legend strong {
 						color: var(--text);
 					}
-
 					.housing-heatmap-page .bar {
 						height: 14px;
 						border-radius: 999px;
@@ -329,12 +282,10 @@
 						background: linear-gradient(90deg, rgba(0, 128, 255, 0.2), rgba(0, 190, 120, 0.42), rgba(255, 184, 0, 0.62), rgba(255, 68, 0, 0.82), rgba(160, 0, 0, 0.95));
 						border: 1px solid rgba(0, 0, 0, 0.08);
 					}
-
 					.housing-heatmap-page .scale {
 						display: flex;
 						justify-content: space-between;
 					}
-
 					.housing-heatmap-page .leaflet-popup-content {
 						font:
 							13px/1.45 Inter,
@@ -345,11 +296,9 @@
 							"Segoe UI",
 							sans-serif;
 					}
-
 					.housing-heatmap-page .leaflet-popup-content strong {
 						font-size: 14px;
 					}
-
 					@media (max-width: 920px) {
 						.housing-heatmap-app {
 							grid-template-columns: 1fr;
@@ -368,7 +317,6 @@
 					<aside>
 						<h1>Huizenprijs heatmap</h1>
 						<p>Verken woningen op prijs, prijs per m², budget en oppervlak. De kaart kleurt individuele woningen, zodat clusters niet automatisch heet worden.</p>
-
 						<div class="field">
 							<label for="province">Provinciefilter</label>
 							<select id="province">
@@ -387,7 +335,6 @@
 								<option value="Zuid-Holland">Zuid-Holland</option>
 							</select>
 						</div>
-
 						<div class="field">
 							<label for="metric">Prijskleur</label>
 							<select id="metric">
@@ -395,7 +342,6 @@
 								<option value="price_per_m2">Prijs per m²</option>
 							</select>
 						</div>
-
 						<div class="field">
 							<label for="offerType">Aanbod</label>
 							<select id="offerType">
@@ -404,12 +350,10 @@
 								<option value="all">Koop en huur</option>
 							</select>
 						</div>
-
 						<div class="field">
 							<label for="limit">Aantal listings</label>
 							<input id="limit" type="number" min="50" max="5000" value="1000" step="50" />
 						</div>
-
 						<div class="field-row">
 							<div class="field">
 								<label for="maxPrice">Max. vraagprijs</label>
@@ -420,7 +364,6 @@
 								<input id="maxPpm" type="number" min="0" step="250" placeholder="Geen limiet" />
 							</div>
 						</div>
-
 						<div class="field-row">
 							<div class="field">
 								<label for="minArea">Min. m²</label>
@@ -436,12 +379,10 @@
 								</select>
 							</div>
 						</div>
-
 						<div class="field">
 							<label for="radius">Prijs-radius</label>
 							<input id="radius" type="range" min="10" max="60" value="28" />
 						</div>
-
 						<div class="field">
 							<label>Weergave</label>
 							<label class="provider"
@@ -449,9 +390,7 @@
 								<div><strong>Toon listing-punten</strong><span>Voor popups en sanity checks.</span></div></label
 							>
 						</div>
-
 						<button id="refresh">Ververs heatmap</button>
-
 						<div class="stats">
 							<div class="stat">
 								<div class="label">Zichtbaar</div>
@@ -470,14 +409,12 @@
 								<div id="statBestPpm" class="value">–</div>
 							</div>
 						</div>
-
 						<div id="status" class="status">Initialiseren…</div>
 						<div class="field">
 							<label>Goedkope kansen</label>
 							<div id="results" class="results"></div>
 						</div>
 					</aside>
-
 					<section class="map-wrap">
 						<div id="map"></div>
 						<div class="badge">Leaflet · OpenStreetMap · Nederland</div>
@@ -490,7 +427,6 @@
 						</div>
 					</section>
 				</div>
-
 				<script>
 					const provinceEl = document.getElementById("province");
 					const metricEl = document.getElementById("metric");
@@ -512,7 +448,6 @@
 					const legendHigh = document.getElementById("legendHigh");
 					const legendHint = document.getElementById("legendHint");
 					const resultsEl = document.getElementById("results");
-
 					let listings = [];
 					let visibleListings = [];
 					let heatRows = [];
@@ -542,22 +477,18 @@
 						{ name: "Noord-Brabant", boxes: [[51.2, 51.9, 4.25, 6.05]] },
 						{ name: "Limburg", boxes: [[50.72, 51.8, 5.6, 6.35]] },
 					];
-
 					const map = L.map("map", {
 						preferCanvas: true,
 						zoomControl: true,
 						minZoom: 6,
 						maxZoom: 18,
 					}).setView([52.15, 5.25], 8);
-
 					L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 						maxZoom: 19,
 						attribution: "&copy; OpenStreetMap contributors",
 					}).addTo(map);
-
 					const nlBounds = L.latLngBounds([50.72, 3.35], [53.65, 7.23]);
 					map.fitBounds(nlBounds.pad(0.04));
-
 					function fmt(v) {
 						return Math.round(v).toLocaleString("nl-NL");
 					}
@@ -572,18 +503,15 @@
 							.toLowerCase()
 							.replace(/\s+/g, "-");
 					}
-
 					function offerTypeLabel(value) {
 						if (value === "sale") return "koop";
 						if (value === "rent") return "huur";
 						return "onbekend";
 					}
-
 					async function fetchListings() {
 						const province = provinceEl.value;
 						return fetchStaticListings({ province });
 					}
-
 					async function fetchStaticListings({ province }) {
 						const payloads = await Promise.all(listingSources.map(fetchSourcePayload));
 						let rows = payloads.flatMap((payload) => payload.listings);
@@ -596,7 +524,6 @@
 							.filter(Boolean)
 							.filter((row) => !province || sameProvince(row.province, province));
 					}
-
 					async function fetchSourcePayload(source) {
 						const payload = await fetchJsonPayload(source.url, false);
 						return {
@@ -604,7 +531,6 @@
 							listings: payload.listings.map((row) => ({ ...row, source: row.source || source.id })),
 						};
 					}
-
 					async function fetchJsonPayload(url, required) {
 						const response = await fetch(url, { headers: { Accept: "application/json" } });
 						if (response.status === 404 && !required) return { listings: [] };
@@ -612,7 +538,6 @@
 						const payload = await response.json();
 						return { listings: Array.isArray(payload) ? payload : payload.listings || [] };
 					}
-
 					function dedupeListings(rows) {
 						const seen = new Set();
 						return rows.filter((row) => {
@@ -622,7 +547,6 @@
 							return true;
 						});
 					}
-
 					function normalizeApiListing(row, index) {
 						const lat = Number(row.latitude ?? row.lat ?? row.location?.lat ?? row.coordinates?.lat);
 						const lon = Number(row.longitude ?? row.lon ?? row.lng ?? row.location?.lon ?? row.location?.lng ?? row.coordinates?.lon ?? row.coordinates?.lng);
@@ -653,12 +577,10 @@
 							enrichment,
 						};
 					}
-
 					function inferOfferType(row, enrichment) {
 						const source = String(row.source ?? row.provider ?? "").toLowerCase();
 						const url = String(row.url ?? enrichment?.scraped?.url ?? "").toLowerCase();
 						const statusTexts = [row.status, row.offer_type, row.transaction_type, row.listing_type, row.market_label, enrichment?.huispedia?.status, enrichment?.huispedia?.market_label].filter(Boolean).map((value) => String(value).toLowerCase());
-
 						if (["huurwoningen", "thuispoort", "room"].includes(source)) return "rent";
 						if (["huispedia"].includes(source)) return "sale";
 						if (url.includes("/huur") || url.includes("te-huur") || url.includes("rent")) return "rent";
@@ -667,7 +589,6 @@
 						if (statusTexts.some((text) => text.includes("koop"))) return "sale";
 						return "unknown";
 					}
-
 					function provinceFromListing(row, enrichment, lat, lon) {
 						const direct = row.province ?? row.provincie ?? row.address?.province ?? row.address?.provincie;
 						if (direct) return String(direct);
@@ -675,7 +596,6 @@
 						if (enriched) return enriched;
 						return provinceFromCoordinates(lat, lon) || "Onbekend";
 					}
-
 					function provinceFromEnrichment(enrichment) {
 						for (const value of Object.values(enrichment || {})) {
 							if (!value || typeof value !== "object") continue;
@@ -685,7 +605,6 @@
 						}
 						return "";
 					}
-
 					function provinceFromCoordinates(lat, lon) {
 						for (const zone of provinceZones) {
 							if (zone.boxes.some(([minLat, maxLat, minLon, maxLon]) => lat >= minLat && lat <= maxLat && lon >= minLon && lon <= maxLon)) {
@@ -694,10 +613,8 @@
 						}
 						return "";
 					}
-
 					function normalize(rows, metric) {
 						if (!rows.length) return [];
-
 						const vals = rows.map((l) => (metric === "price" ? l.price : l.price_per_m2)).sort((a, b) => a - b);
 						const low = percentile(vals, 0.05);
 						const high = percentile(vals, 0.95);
@@ -708,7 +625,6 @@
 							return { ...l, heatValue };
 						});
 					}
-
 					function applyFilters(rows) {
 						const offerType = offerTypeEl.value;
 						const maxPrice = Number(maxPriceEl.value) || Infinity;
@@ -716,7 +632,6 @@
 						const minArea = Number(minAreaEl.value) || 0;
 						return rows.filter((l) => (offerType === "all" || l.offer_type === offerType) && l.price <= maxPrice && l.price_per_m2 <= maxPpm && l.area_m2 >= minArea);
 					}
-
 					function sortRows(rows) {
 						const sorted = [...rows];
 						const mode = sortModeEl.value;
@@ -726,30 +641,24 @@
 						else sorted.sort((a, b) => a.price_per_m2 - b.price_per_m2);
 						return sorted;
 					}
-
 					function valueScore(l) {
 						return (l.area_m2 / Math.max(1, l.price_per_m2)) * 1000;
 					}
-
 					function percentile(sortedVals, p) {
 						if (!sortedVals.length) return 0;
 						const index = Math.min(sortedVals.length - 1, Math.max(0, Math.floor((sortedVals.length - 1) * p)));
 						return sortedVals[index];
 					}
-
 					function metricValue(listing, metric) {
 						return metric === "price" ? listing.price : listing.price_per_m2;
 					}
-
 					function metricLabel(metric) {
 						return metric === "price_per_m2" ? "prijs per m²" : "vraagprijs";
 					}
-
 					function metricDisplayValue(value, metric) {
 						if (value == null || !Number.isFinite(value)) return "–";
 						return metric === "price_per_m2" ? euro(value) + "/m²" : euro(value);
 					}
-
 					function updateLegend(rows, metric) {
 						legendMetric.textContent = "Kleur: " + metricLabel(metric);
 						if (!rows.length) {
@@ -758,7 +667,6 @@
 							legendHint.textContent = "Blauw is relatief goedkoop binnen de huidige selectie; rood is relatief duur.";
 							return;
 						}
-
 						const values = rows
 							.map((listing) => metricValue(listing, metric))
 							.filter(Number.isFinite)
@@ -769,7 +677,6 @@
 						legendHigh.textContent = metricDisplayValue(high, metric);
 						legendHint.textContent = "Blauw valt rond of onder de 5e percentielgrens; rood rond of boven de 95e percentielgrens van de huidige selectie.";
 					}
-
 					function colorForValue(v) {
 						if (v < 0.2) return "#1683d8";
 						if (v < 0.4) return "#18a978";
@@ -777,11 +684,9 @@
 						if (v < 0.8) return "#e8642a";
 						return "#b00020";
 					}
-
 					function providerLabel(id) {
 						return listingSources.find((source) => source.id === id)?.label || String(id || "onbekend").replace(/_/g, " ");
 					}
-
 					function popupHtml(l) {
 						return (
 							"<strong>" +
@@ -819,7 +724,6 @@
 							"<small>Hover toont tijdelijk · klik zet vast</small>"
 						);
 					}
-
 					function enrichmentHtml(l) {
 						const entries = Object.entries(l.enrichment || {}).filter(([key]) => key !== "_errors");
 						if (!entries.length) return "";
@@ -834,7 +738,6 @@
 							"<br>"
 						);
 					}
-
 					function enrichmentSummary(value) {
 						if (!value || typeof value !== "object") return String(value);
 						if (value.energy_label) return "label " + value.energy_label;
@@ -846,7 +749,6 @@
 							.map((key) => key + "=" + props[key]);
 						return parts.length ? parts.join(", ") : Object.keys(props).slice(0, 4).join(", ");
 					}
-
 					function attachListingPopup(layer, listing) {
 						layer.bindPopup(popupHtml(listing), {
 							autoClose: false,
@@ -869,17 +771,14 @@
 						});
 						return layer;
 					}
-
 					function closeUnpinnedPopups() {
 						for (const [id, marker] of markerById) {
 							if (id !== pinnedListingId) marker.closePopup();
 						}
 					}
-
 					function renderMapLayers() {
 						if (heatLayer) map.removeLayer(heatLayer);
 						if (markerLayer) map.removeLayer(markerLayer);
-
 						const radius = Number(radiusEl.value) || 28;
 						heatLayer = L.layerGroup();
 						markerById = new Map();
@@ -895,7 +794,6 @@
 							markerById.set(l.id, halo);
 						}
 						heatLayer.addTo(map);
-
 						markerLayer = L.layerGroup();
 						if (showPointsEl.checked) {
 							for (const l of heatRows) {
@@ -911,13 +809,11 @@
 							}
 						}
 						markerLayer.addTo(map);
-
 						if (heatRows.length) {
 							const bounds = L.latLngBounds(heatRows.map((l) => [l.latitude, l.longitude]));
 							map.fitBounds(bounds.pad(0.15), { animate: false, maxZoom: 12 });
 						}
 					}
-
 					function updateStats() {
 						statCount.textContent = fmt(visibleListings.length);
 						const vals = visibleListings.map((l) => l.price_per_m2).filter(Boolean);
@@ -928,7 +824,6 @@
 						statCheapest.textContent = cheapest ? euro(cheapest) : "–";
 						statBestPpm.textContent = bestPpm ? euro(bestPpm) : "–";
 					}
-
 					function renderResults() {
 						const rows = sortRows(visibleListings).slice(0, 8);
 						if (!rows.length) {
@@ -945,7 +840,6 @@
 							)
 							.join("");
 					}
-
 					function focusListing(id) {
 						const listing = heatRows.find((l) => l.id === id);
 						if (!listing) return;
@@ -957,7 +851,6 @@
 							marker.openPopup();
 						}
 					}
-
 					async function refresh() {
 						try {
 							statusEl.textContent = "Lokale listings laden…";
@@ -991,7 +884,6 @@
 							statusEl.textContent = "Fout: " + (err.message || err);
 						}
 					}
-
 					document.getElementById("refresh").addEventListener("click", refresh);
 					metricEl.addEventListener("change", refresh);
 					offerTypeEl.addEventListener("change", refresh);
@@ -1009,11 +901,9 @@
 						if (button) focusListing(button.dataset.listingId);
 					});
 					window.addEventListener("resize", () => map.invalidateSize());
-
 					refresh();
 				</script>
 			</div>
-
 			<aside class="project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
@@ -1031,7 +921,6 @@
 					</li>
 				</ul>
 			</aside>
-
 			<style>
 				.project-sources {
 					border: 1px solid #cda9a9;
@@ -1041,14 +930,12 @@
 					margin-top: 2rem;
 					padding: 1rem;
 				}
-
 				.project-sources h2 {
 					color: #800;
 					font-size: 1rem;
 					margin: 0 0 0.75rem;
 					padding: 0;
 				}
-
 				.project-sources ul {
 					display: grid;
 					gap: 0.65rem;
@@ -1056,16 +943,13 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-sources li {
 					display: grid;
 					gap: 0.15rem;
 				}
-
 				.project-sources a {
 					font-weight: 700;
 				}
-
 				.project-sources span {
 					color: #4f3b3b;
 					font-size: 0.92rem;
@@ -1077,14 +961,11 @@
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-
 				<p>
-					<sub>Last updated: <time id="updated">2026-05-06</time></sub>
+					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
 				</p>
 			</div>
-
 			<nav id="profiles"></nav>
-
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {

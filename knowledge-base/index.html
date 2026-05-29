@@ -1,237 +1,209 @@
 <!doctype html>
 <html lang="en-GB">
-	<head prefix="og: http://ogp.me/ns#"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-	
-	
-	
-	<meta charset="utf-8" />
-	
-	<title>NostraDavid&#39;s Knowledge Base | The Thaumatorium</title>
-	
-	<meta name="description" content="Handy snippets that I use every now and then" />
-	
-	<link rel="canonical" href="https://thaumatorium.com/" />
-	
-	<meta name="theme-color" content="#800" />
-	
-	<link rel="apple-touch-icon" href="/images/icons-192.png" />
-	
-	
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	
-	<link rel="webmanifest" href="/manifest.json" />
-	<link rel="icon" href="/images/favicon.svg" />
-
-	
-	<link rel="stylesheet" href="/styles/main.css?v=3" />
-	<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
-	
-	<meta property="og:url" content="https://thaumatorium.com/" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="NostraDavid&#39;s Knowledge Base" />
-	<meta property="og:description" content="Handy snippets that I use every now and then" />
-	<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
-	<meta property="og:image:width" content="1280" />
-	<meta property="og:image:height" content="668" />
-
-	
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@NostraDavid2" />
-	<meta name="twitter:creator" content="@NostraDavid2" />
-	<meta name="twitter:title" content="NostraDavid&#39;s Knowledge Base" />
-	<meta name="twitter:description" content="Handy snippets that I use every now and then" />
-	<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
-	<meta name="twitter:image:width" content="1280" />
-	<meta name="twitter:image:height" content="668" />
-</head>
-
-
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>NostraDavid&#39;s Knowledge Base | The Thaumatorium</title>
+		<meta name="description" content="Handy snippets that I use every now and then" />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="NostraDavid&#39;s Knowledge Base" />
+		<meta property="og:description" content="Handy snippets that I use every now and then" />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="NostraDavid&#39;s Knowledge Base" />
+		<meta name="twitter:description" content="Handy snippets that I use every now and then" />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
 	<body>
 		<header>
-	<div class="title">The Thaumatorium:</div>
-	<div class="subtitle">Where the magic happens</div>
-</header>
-
- 
-<nav>
-	<h5 style="display: none">Main nav menu</h5>
-	<ul>
-		<li><a href="/">Frontpage</a><span> - </span></li>
-		<li><a href="/articles">Articles</a><span> - </span></li>
-		<li><a href="/projects">Projects</a><span> - </span></li>
-		<li><a href="/random-video">Random video</a><span> - </span></li>
-		<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
-		<li><a href="/about">About</a></li>
-	</ul>
-</nav>
-
-
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
 		<main class="knowledge-base">
-
-<h1>NostraDavid&#39;s Knowledge Base</h1>
-
-
-<p>Javascript code snippets and regex, and the likes</p>
-<p>Note to self: <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
-<h2>Regular Expressions</h2>
-<p>Use in combination with $0/$1/$2... to find and replace text.</p>
-<table>
-	<thead>
-		<tr>
-			<th>note</th>
-			<th>regex</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br />
-				Edit the number in between {} to find the nth comma.
-			</td>
-			<td><code class="lang-regex">,(?=(?:[^,]*,){3}[^,]*$)</code></td>
-		</tr>
-		<tr>
-			<td>Every line that doesn't start with a <samp>.</samp> via regex;<br />I was trying to filter bootstrap.css from all non-classes</td>
-			<td><code class="lang-regex">^((?!^\.).)*$</code></td>
-		</tr>
-		<tr>
-			<td>Filter everything from a : till the end of the line</td>
-			<td><code class="lang-regex">[:].*$</code></td>
-		</tr>
-		<tr>
-			<td>Find non-ASCII letters in vscode;<br />Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your comments...</td>
-			<td><code class="lang-regex">([^\x00-\x7F])</code></td>
-		</tr>
-		<tr>
-			<td>hit him up when you pay for WoW</td>
-			<td>Craizler-TarrenMill</td>
-		</tr>
-		<tr>
-			<td>WoW BattleTag</td>
-			<td>Cyrstad#2776</td>
-		</tr>
-		<tr>
-			<td>Find main content of HTML page</td>
-			<td><code class="lang-regex">&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code></td>
-		</tr>
-		<tr>
-			<td>find paragraph tags that aren't closed</td>
-			<td><code class="lang-regex">\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
-		</tr>
-		<tr>
-			<td>find all lines that do not contain <q>hede</q></td>
-			<td><code class="lang-regex">^((?!hede).)*$</code></td>
-		</tr>
-	</tbody>
-</table>
-
-<h2>Online Tools</h2>
-<p>These are websites/webpages that I use to optimize this site.</p>
-<table>
-	<thead>
-		<th>Tool name</th>
-		<th>What to use it for</th>
-	</thead>
-	<tbody>
-		<tr>
-			<td><a href="https://jakearchibald.github.io/svgomg/">SVGOMG!</a></td>
-			<td>
-				"<a href="https://github.com/svg/svgo"><b>SVG O</b>ptimizer</a>'s <b>M</b>issing <b>G</b>UI", an online SVG optimizer
-			</td>
-		</tr>
-		<tr>
-			<td><a href="https://boxy-svg.com/app/">Boxy SVG editor</a></td>
-			<td>Usually I edit my SVG files by hand, but sometimes I need some basic shapes placed.</td>
-		</tr>
-		<tr>
-			<td><a href="https://squoosh.app/">Squoosh</a></td>
-			<td>Google Chrome Labs created this site so you can customize the compression of your image (and compare it with the original). <a href="https://squoosh-desktop.now.sh/">Desktop version</a> is also available.</td>
-		</tr>
-		<tr>
-			<td><a href="https://app.diagrams.net/">Diagrams.net</a> (previously Draw.io)</td>
-			<td>Used for diagrams. If you save a file as PNG you can open it as PNG with an image viewer <em>and</em> and with the website or <a href="https://github.com/jgraph/drawio-desktop/releases/tag/v13.6.2">Desktop version</a></td>
-		</tr>
-	</tbody>
-</table>
-
-<h2>Javascript oneliners</h2>
-<p>Small scripts that I run in the browser to manipulate a website (like remove my reddit comments from a specific subreddit, for example)</p>
-<table>
-	<tbody>
-		<tr>
-			<th>note</th>
-			<th>code</th>
-		</tr>
-		<tr>
-			<td>Open all collapsed comments on a reddit comment page</td>
-			<td>
-				<pre><code class=lang-javascript>document.querySelectorAll(".expand")
+			<h1>NostraDavid&#39;s Knowledge Base</h1>
+			<p>Javascript code snippets and regex, and the likes</p>
+			<p>Note to self: <a href="https://gist.github.com/NostraDavid">GitHub Gist</a> exists…</p>
+			<h2>Regular Expressions</h2>
+			<p>Use in combination with $0/$1/$2... to find and replace text.</p>
+			<table>
+				<thead>
+					<tr>
+						<th>note</th>
+						<th>regex</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							Find the nth comma, via <a href="https://stackoverflow.com/a/9194889/1102369">stackoverflow</a>;<br />
+							Edit the number in between {} to find the nth comma.
+						</td>
+						<td><code class="lang-regex">,(?=(?:[^,]*,){3}[^,]*$)</code></td>
+					</tr>
+					<tr>
+						<td>Every line that doesn't start with a <samp>.</samp> via regex;<br />I was trying to filter bootstrap.css from all non-classes</td>
+						<td><code class="lang-regex">^((?!^\.).)*$</code></td>
+					</tr>
+					<tr>
+						<td>Filter everything from a : till the end of the line</td>
+						<td><code class="lang-regex">[:].*$</code></td>
+					</tr>
+					<tr>
+						<td>Find non-ASCII letters in vscode;<br />Great for finding unicode characters in copied code, because Haskell can't handle Unicode in your comments...</td>
+						<td><code class="lang-regex">([^\x00-\x7F])</code></td>
+					</tr>
+					<tr>
+						<td>hit him up when you pay for WoW</td>
+						<td>Craizler-TarrenMill</td>
+					</tr>
+					<tr>
+						<td>WoW BattleTag</td>
+						<td>Cyrstad#2776</td>
+					</tr>
+					<tr>
+						<td>Find main content of HTML page</td>
+						<td><code class="lang-regex">&lt;main&gt;\n\t+&lt;section&gt;((\n.*?)*)&lt;/section&gt;(\n\t+)&lt;/main&gt;</code></td>
+					</tr>
+					<tr>
+						<td>find paragraph tags that aren't closed</td>
+						<td><code class="lang-regex">\t+&lt;p&gt;.*(?&lt;!&lt;/p&gt;)$</code></td>
+					</tr>
+					<tr>
+						<td>find all lines that do not contain <q>hede</q></td>
+						<td><code class="lang-regex">^((?!hede).)*$</code></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Online Tools</h2>
+			<p>These are websites/webpages that I use to optimize this site.</p>
+			<table>
+				<thead>
+					<th>Tool name</th>
+					<th>What to use it for</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="https://jakearchibald.github.io/svgomg/">SVGOMG!</a></td>
+						<td>
+							"<a href="https://github.com/svg/svgo"><b>SVG O</b>ptimizer</a>'s <b>M</b>issing <b>G</b>UI", an online SVG optimizer
+						</td>
+					</tr>
+					<tr>
+						<td><a href="https://boxy-svg.com/app/">Boxy SVG editor</a></td>
+						<td>Usually I edit my SVG files by hand, but sometimes I need some basic shapes placed.</td>
+					</tr>
+					<tr>
+						<td><a href="https://squoosh.app/">Squoosh</a></td>
+						<td>Google Chrome Labs created this site so you can customize the compression of your image (and compare it with the original). <a href="https://squoosh-desktop.now.sh/">Desktop version</a> is also available.</td>
+					</tr>
+					<tr>
+						<td><a href="https://app.diagrams.net/">Diagrams.net</a> (previously Draw.io)</td>
+						<td>Used for diagrams. If you save a file as PNG you can open it as PNG with an image viewer <em>and</em> and with the website or <a href="https://github.com/jgraph/drawio-desktop/releases/tag/v13.6.2">Desktop version</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Javascript oneliners</h2>
+			<p>Small scripts that I run in the browser to manipulate a website (like remove my reddit comments from a specific subreddit, for example)</p>
+			<table>
+				<tbody>
+					<tr>
+						<th>note</th>
+						<th>code</th>
+					</tr>
+					<tr>
+						<td>Open all collapsed comments on a reddit comment page</td>
+						<td>
+							<pre><code class=lang-javascript>document.querySelectorAll(".expand")
 		.forEach(el => {
 			if (el.innerText == "[+]") {
 				el.click();
 			}
 		});</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>Manipulating Unicode strings per code point, not per byte. <code class="lang-javascript">"".split()</code> gives you bytes, not codepoints</td>
-			<td><code class="lang-javascript">Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
-		</tr>
-		<tr>
-			<td>Remove all <code class="lang-css">.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
-			<td>
-				<pre><code class=lang-javascript>document.querySelectorAll(".bighead")
+						</td>
+					</tr>
+					<tr>
+						<td>Manipulating Unicode strings per code point, not per byte. <code class="lang-javascript">"".split()</code> gives you bytes, not codepoints</td>
+						<td><code class="lang-javascript">Array.from("𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗 #@$%#^$% 𝔱𝔢𝔰𝔱𝔦𝔫𝔤 𝔗𝔈𝔖𝔗");</code></td>
+					</tr>
+					<tr>
+						<td>Remove all <code class="lang-css">.bighead</code> classed elements (no Array.from() needed, which is what I used before, so I could use map() instead of a for loop)</td>
+						<td>
+							<pre><code class=lang-javascript>document.querySelectorAll(".bighead")
 		.forEach(el => {
 			el.parentElement
 				.removeChild(el)
 			});</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>Make console.log use colors</td>
-			<td>
-				<pre><code class=lang-javascript>const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
+						</td>
+					</tr>
+					<tr>
+						<td>Make console.log use colors</td>
+						<td>
+							<pre><code class=lang-javascript>const CONSOLE_STYLE = "background: #800; color: #fff; padding: 2px";
 console.log('%cService worker installing', CONSOLE_STYLE);</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>This opens all <samp>are you sure?</samp> dialogs for comments, on a profile page of Reddit</td>
-			<td>
-				<pre><code class=lang-javascript>let ys = Array.from(document.getElementsByClassName("score likes"))
+						</td>
+					</tr>
+					<tr>
+						<td>This opens all <samp>are you sure?</samp> dialogs for comments, on a profile page of Reddit</td>
+						<td>
+							<pre><code class=lang-javascript>let ys = Array.from(document.getElementsByClassName("score likes"))
 					.filter(e => parseInt(e.title) < 3)
 					.map(e => e.parentElement.parentElement.parentElement)
 					.map(el => el.querySelector(`[data-event-action*="delete"]`));
 // pick everything after the 77th comment
 ys = ys.slice(77, ys.length - 1);
 ys.map(e => e.click());</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>Removing duplicates</td>
-			<td>
-				<pre><code class=lang-javascript>const cities = ["Den Haag","Den Haag",
+						</td>
+					</tr>
+					<tr>
+						<td>Removing duplicates</td>
+						<td>
+							<pre><code class=lang-javascript>const cities = ["Den Haag","Den Haag",
 						"Utrecht", "Utrecht",
 						"Arnhem", "Arnhem",
 						"MiddelBurg", "MiddelBurg",
 						"MiddelBurg"];
 const uniqueCities = [...new Set(cities)];
 // ["Den Haag", "Utrecht", "Arnhem", "MiddelBurg"]</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)</td>
-			<td>
-				<pre><code class=lang-javascript>let xs = document.querySelectorAll("[query goes here]");
+						</td>
+					</tr>
+					<tr>
+						<td>Run a timed loop (handy for interacting with Reddit, because Reddit has a rate limit of 30 requests per minute)</td>
+						<td>
+							<pre><code class=lang-javascript>let xs = document.querySelectorAll("[query goes here]");
 let i = 0;
 let id = setInterval(() => {console.log(i); xs[i].click(); i++;}, 1100);
 clearInterval(id);</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
-			<td>
-				<pre><code class=lang-javascript>Array.from(document.getElementsByClassName("subreddit hover"))
+						</td>
+					</tr>
+					<tr>
+						<td>Remove all comments from a specific subreddit (TheLastOfUs2, in this case)</td>
+						<td>
+							<pre><code class=lang-javascript>Array.from(document.getElementsByClassName("subreddit hover"))
 							 .filter(el => el.innerHTML == "TheLastOfUs2")
 							 .map(el => el.parentElement.parentElement)
 							 .map(el => {
@@ -239,61 +211,48 @@ clearInterval(id);</code></pre>
 								 el.querySelector(`[data-event-action*="delete"]`)
 							 })
 							 .map(el => el.click());</code></pre>
-			</td>
-		</tr>
-		<tr>
-			<td>Use on Twitch to track the amount of currently used emotes</td>
-			<td>
-				<pre><code class=lang-javascript>const groupBy = (xs, key) => xs.reduce((acc, x) => {
+						</td>
+					</tr>
+					<tr>
+						<td>Use on Twitch to track the amount of currently used emotes</td>
+						<td>
+							<pre><code class=lang-javascript>const groupBy = (xs, key) => xs.reduce((acc, x) => {
 (acc[x[key]] = acc[x[key]] || []).push(x);
 return acc;
 }, {});
-
 let emoticons = Array.from(document.querySelectorAll(`.chat-line__message--emote[alt]`));
 let groupedEmoticons = groupBy(emoticons, 'alt');
 let listedEmoticons = [];
-
 for (const key in groupedEmoticons) {
 if (groupedEmoticons.hasOwnProperty(key)) {
 const el = groupedEmoticons[key];
 listedEmoticons.push({key: key, length: el.length});
 }
 }
-
 listedEmoticons.sort((a, b) => b.length - a.length)
 					 .slice(0,6)
 					 .sort((a, b) => a.length - b.length)
 					 .reduce((acc, el) => `${el.length}x ${el.key} ` + acc);</code></pre>
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
-
-</main>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
 		<footer>
-	<div class="copyright">
-		©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
-		<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-		
-		<p>
-			<sub>Last updated: <time id="updated">2026-03-09</time></sub>
-		</p>
-	</div>
-	
-	<nav id="profiles">
-		
-	</nav>
-	
-	<a class="secret" onclick="specialGoto(event)">π</a>
-	<script>
-		
-		const specialGoto = (event) => {
-			if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
-		};
-	</script>
-</footer>
-
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-03-09</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
 	</body>
 </html>

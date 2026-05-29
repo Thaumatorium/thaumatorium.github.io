@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>KvK Adresdichtheid Risicosignalen | The Thaumatorium</title>
+		<meta name="description" content="Analyse-dashboard voor geaggregeerde signalen van onwaarschijnlijk hoge bedrijfsdichtheid in Nederlandse gebieden." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="KvK Adresdichtheid Risicosignalen" />
+		<meta property="og:description" content="Analyse-dashboard voor geaggregeerde signalen van onwaarschijnlijk hoge bedrijfsdichtheid in Nederlandse gebieden." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="KvK Adresdichtheid Risicosignalen" />
+		<meta name="twitter:description" content="Analyse-dashboard voor geaggregeerde signalen van onwaarschijnlijk hoge bedrijfsdichtheid in Nederlandse gebieden." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<link rel="stylesheet" href="styles.css" />
+			<div class="kvk-density-page">
+				<header class="project-hero">
+					<p class="eyebrow">Onderzoeksprototype</p>
+					<h1>KvK Adresdichtheid Risicosignalen</h1>
+					<p class="lede">Deze methode kan locaties of gebieden prioriteren voor nader onderzoek wanneer rechtmatig verkregen vestigingsdata beschikbaar is. De publieke demo toont alleen geaggregeerde voorbeeldindicatoren.</p>
+				</header>
+				<section class="notice" aria-label="Status en beperkingen van de demo">
+					<strong>Werk in uitvoering: demo zonder daadwerkelijke data.</strong>
+					Deze pagina gebruikt fictieve, geaggregeerde voorbeeldgegevens en bevat geen echte KvK-, adres- of bedrijfsdata. Hoge dichtheid is alleen een risicosignaal dat context, databronnen en juridische grondslag vereist voordat conclusies worden getrokken.
+				</section>
+				<div class="dashboard" role="main" aria-label="Adresdichtheid analyse-dashboard">
+					<section class="kpis" aria-label="Samenvatting">
+						<article>
+							<span>Onderzochte gebieden</span>
+							<strong id="areaCount">-</strong>
+						</article>
+						<article>
+							<span>Hoogste score</span>
+							<strong id="maxScore">-</strong>
+						</article>
+						<article>
+							<span>Risicosignalen</span>
+							<strong id="signalCount">-</strong>
+						</article>
+						<article>
+							<span>Mediaan dichtheid</span>
+							<strong id="medianDensity">-</strong>
+						</article>
+					</section>
+					<section class="controls" aria-label="Filters">
+						<label>
+							Zoeken
+							<input id="searchInput" type="search" placeholder="Gebied, gemeente of type" autocomplete="off" />
+						</label>
+						<label>
+							Signaalniveau
+							<select id="riskFilter">
+								<option value="all">Alle niveaus</option>
+								<option value="hoog">Hoog</option>
+								<option value="verhoogd">Verhoogd</option>
+								<option value="normaal">Normaal</option>
+							</select>
+						</label>
+						<label>
+							Minimale score
+							<input id="scoreInput" type="range" min="0" max="100" value="0" step="5" />
+							<span id="scoreLabel">0</span>
+						</label>
+					</section>
+					<section class="analysis-grid">
+						<div class="table-panel">
+							<div class="panel-heading">
+								<div>
+									<p class="eyebrow">Geaggregeerde sampledata</p>
+									<h2>Gebieden met dichtheidsscore</h2>
+								</div>
+								<p id="resultCount" class="result-count" aria-live="polite">-</p>
+							</div>
+							<div class="table-wrap">
+								<table>
+									<thead>
+										<tr>
+											<th><button type="button" data-sort="area">Gebied</button></th>
+											<th><button type="button" data-sort="municipality">Gemeente</button></th>
+											<th><button type="button" data-sort="riskScore">Score</button></th>
+											<th><button type="button" data-sort="companiesPerUsableM2">Bedrijven / 100 m2</button></th>
+											<th><button type="button" data-sort="companiesPerObject">Bedrijven / object</button></th>
+											<th><button type="button" data-sort="peerDeviation">Afwijking</button></th>
+											<th>Uitleg</th>
+										</tr>
+									</thead>
+									<tbody id="resultsBody"></tbody>
+								</table>
+							</div>
+						</div>
+						<aside class="method-panel" aria-label="Methode">
+							<p class="eyebrow">Methode</p>
+							<h2>Wat de score meet</h2>
+							<p>Het model vergelijkt bedrijfsdichtheid met gebouwcapaciteit en vergelijkbare gebieden. In een echte toepassing zou de invoer alleen bestaan uit rechtmatig verkregen vestigingsdata en open gebieds- of gebouwregistraties.</p>
+							<ol>
+								<li>Normaliseer vestigingen naar een gekozen aggregatieniveau.</li>
+								<li>Koppel BAG-indicatoren zoals bruikbare oppervlakte en verblijfsobjecten.</li>
+								<li>Vergelijk dichtheid en branchemix met vergelijkbare gebieden.</li>
+								<li>Markeer uitschieters als prioriteit voor nader onderzoek.</li>
+							</ol>
+							<div class="source-note">
+								<strong>Datagrens:</strong>
+								de open KvK-dataset bevat geen volledige adressen of bedrijfsidentificatoren voor publieke herpublicatie. Deze demo simuleert daarom alleen geaggregeerde indicatoren.
+							</div>
+						</aside>
+					</section>
+				</div>
+			</div>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://developers.kvk.nl/nl/documentation/open-dataset-basis-bedrijfsgegevens-api" rel="noopener noreferrer" target="_blank">KVK Handelsregister Open Dataset Basis Bedrijfsgegevens</a>
+						<span>Documentatie voor de open dataset; deze bevat geen bedrijfsnaam, KvK-nummer of volledig vestigingsadres.</span>
+					</li>
+					<li>
+						<a href="https://developers.kvk.nl/nl/documentation" rel="noopener noreferrer" target="_blank">KVK Handelsregister API-documentatie</a>
+						<span>Overzicht van Handelsregister-API&#39;s zoals Zoeken, Basisprofiel en Vestigingsprofiel.</span>
+					</li>
+					<li>
+						<a href="https://opendata.cbs.nl/" rel="noopener noreferrer" target="_blank">CBS StatLine</a>
+						<span>Open statistieken voor regionale context en bedrijfs-/gebiedsaggregaten.</span>
+					</li>
+					<li>
+						<a href="https://api.pdok.nl/kadaster/bag/ogc/v2" rel="noopener noreferrer" target="_blank">PDOK BAG API</a>
+						<span>BAG-gegevens voor panden, verblijfsobjecten, gebruiksdoel en oppervlakte.</span>
+					</li>
+				</ul>
+			</aside>
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+				.project-sources a {
+					font-weight: 700;
+				}
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-05-29</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

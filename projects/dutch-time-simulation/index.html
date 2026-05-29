@@ -1,28 +1,17 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
-		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
 		<meta charset="utf-8" />
-
 		<title>Dutch Summer/Winter Time Simulation | The Thaumatorium</title>
-
 		<meta name="description" content="Interactive simulation of Dutch time-zone choices: UTC, permanent winter time, and daylight saving time." />
-
 		<link rel="canonical" href="https://thaumatorium.com/" />
-
 		<meta name="theme-color" content="#800" />
-
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
-
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Dutch Summer/Winter Time Simulation" />
@@ -30,7 +19,6 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
-
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -40,13 +28,11 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
-
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
-
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -58,21 +44,17 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-
 		<main class="projects">
 			<h1>Dutch Summer/Winter Time Simulation</h1>
-
 			<style>
 				.sim,
 				.sim * {
 					box-sizing: border-box;
 				}
-
 				.sim {
 					display: grid;
 					gap: 1.2rem;
 				}
-
 				.sim h2,
 				.sim h3 {
 					color: #800;
@@ -81,34 +63,28 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.sim h2 {
 					font-size: 1.3rem;
 					padding-bottom: 0.4rem;
 					border-bottom: 2px solid #800;
 				}
-
 				.sim h3 {
 					font-size: 1rem;
 				}
-
 				.sim p {
 					margin: 0;
 					line-height: 1.55;
 					text-align: left;
 				}
-
 				.sim .hero {
 					display: grid;
 					gap: 0.6rem;
 				}
-
 				.sim .badge-row {
 					display: flex;
 					flex-wrap: wrap;
 					gap: 0.5rem;
 				}
-
 				.sim .badge {
 					display: inline-block;
 					background: #6e0000;
@@ -117,27 +93,23 @@
 					padding: 2px 10px;
 					border: 1px solid #800;
 				}
-
 				.sim .hint,
 				.sim .mini {
 					font-size: 0.88rem;
 					color: #555;
 				}
-
 				.sim .grid-2 {
 					display: grid;
 					grid-template-columns: 340px 1fr;
 					gap: 1.2rem;
 					align-items: start;
 				}
-
 				.sim .controls {
 					display: grid;
 					gap: 1rem;
 					position: sticky;
 					top: 1rem;
 				}
-
 				.sim .control-group {
 					display: grid;
 					gap: 0.5rem;
@@ -146,19 +118,16 @@
 					border-radius: 4px;
 					background: #fffaf9;
 				}
-
 				.sim label {
 					font-size: 0.92rem;
 					font-weight: 600;
 					color: #333;
 				}
-
 				.sim .hint,
 				.sim .mini {
 					font-size: 0.88rem;
 					color: #555;
 				}
-
 				.sim input,
 				.sim select,
 				.sim button {
@@ -171,44 +140,36 @@
 					font: inherit;
 					font-size: 0.92rem;
 				}
-
 				.sim button {
 					background: #800;
 					color: #fff;
 					cursor: pointer;
 					font-weight: 600;
 				}
-
 				.sim button:hover {
 					background: #940000;
 				}
-
 				.sim input[type="range"] {
 					padding: 0;
 					border: none;
 					accent-color: #800;
 				}
-
 				.sim .inline-2,
 				.sim .inline-3 {
 					display: grid;
 					gap: 0.5rem;
 				}
-
 				.sim .inline-2 {
 					grid-template-columns: repeat(2, 1fr);
 				}
-
 				.sim .inline-3 {
 					grid-template-columns: repeat(3, 1fr);
 				}
-
 				.sim .badge-row {
 					display: flex;
 					flex-wrap: wrap;
 					gap: 0.5rem;
 				}
-
 				.sim .badge {
 					display: inline-block;
 					background: #6e0000;
@@ -217,12 +178,10 @@
 					padding: 2px 10px;
 					border: 1px solid #800;
 				}
-
 				.sim .content {
 					display: grid;
 					gap: 1.2rem;
 				}
-
 				.sim .panel {
 					border: 1px solid #800;
 					border-radius: 4px;
@@ -230,7 +189,6 @@
 					box-shadow: 3px 3px 5px #555;
 					overflow: hidden;
 				}
-
 				.sim .panel > h2 {
 					background: #800;
 					color: #fff;
@@ -239,19 +197,16 @@
 					border-bottom: none;
 					font-size: 1.1rem;
 				}
-
 				.sim .section-body {
 					padding: 0.8rem;
 					display: grid;
 					gap: 0.8rem;
 				}
-
 				.sim .cards {
 					display: grid;
 					grid-template-columns: repeat(4, 1fr);
 					gap: 0.8rem;
 				}
-
 				.sim .card {
 					border: 1px solid #cda9a9;
 					background: #fffaf9;
@@ -260,30 +215,25 @@
 					display: grid;
 					gap: 0.6rem;
 				}
-
 				.sim .scenario-title {
 					display: flex;
 					justify-content: space-between;
 					align-items: start;
 					gap: 0.5rem;
 				}
-
 				.sim .scenario-title .offset {
 					color: #800;
 					font-weight: 700;
 					font-size: 0.88rem;
 				}
-
 				.sim .metric-list {
 					display: grid;
 					gap: 0.5rem;
 				}
-
 				.sim .metric {
 					display: grid;
 					gap: 3px;
 				}
-
 				.sim .metric-head {
 					display: flex;
 					justify-content: space-between;
@@ -291,13 +241,11 @@
 					font-size: 0.85rem;
 					color: #555;
 				}
-
 				.sim .metric-head span:last-child {
 					color: #333;
 					font-variant-numeric: tabular-nums;
 					font-weight: 600;
 				}
-
 				.sim .bar {
 					width: 100%;
 					height: 8px;
@@ -305,7 +253,6 @@
 					border-radius: 4px;
 					overflow: hidden;
 				}
-
 				.sim .bar > i {
 					display: block;
 					height: 100%;
@@ -313,25 +260,21 @@
 					border-radius: inherit;
 					background: linear-gradient(90deg, #d40000, #800);
 				}
-
 				.sim .score {
 					display: grid;
 					gap: 4px;
 					padding-top: 0.4rem;
 					border-top: 1px solid #cda9a9;
 				}
-
 				.sim .score-value {
 					font-size: 1.4rem;
 					font-weight: 800;
 					color: #6e0000;
 					font-variant-numeric: tabular-nums;
 				}
-
 				.sim .timeline-wrap {
 					overflow-x: auto;
 				}
-
 				.sim .timeline {
 					min-width: 980px;
 					border: 1px solid #cda9a9;
@@ -339,13 +282,11 @@
 					background: #fffaf9;
 					overflow: hidden;
 				}
-
 				.sim svg {
 					display: block;
 					width: 100%;
 					height: auto;
 				}
-
 				.sim .legend {
 					display: flex;
 					flex-wrap: wrap;
@@ -353,20 +294,17 @@
 					font-size: 0.88rem;
 					color: #555;
 				}
-
 				.sim .legend-item {
 					display: inline-flex;
 					align-items: center;
 					gap: 6px;
 				}
-
 				.sim .swatch {
 					width: 14px;
 					height: 14px;
 					border-radius: 3px;
 					border: 1px solid #999;
 				}
-
 				.sim .swatch.sun {
 					background: rgba(250, 204, 21, 0.85);
 				}
@@ -379,42 +317,35 @@
 				.sim .swatch.dst {
 					background: rgba(100, 180, 100, 0.3);
 				}
-
 				.sim .summary-grid {
 					display: grid;
 					grid-template-columns: 1.2fr 1fr;
 					gap: 1.2rem;
 				}
-
 				.sim .findings {
 					padding: 0.8rem;
 					display: grid;
 					gap: 0.6rem;
 				}
-
 				.sim .table-wrap,
 				.sim .notes {
 					padding: 0.8rem;
 				}
-
 				.sim .finding {
 					border: 1px solid #cda9a9;
 					border-radius: 4px;
 					padding: 0.7rem;
 					background: #fffaf9;
 				}
-
 				.sim .finding strong {
 					display: block;
 					margin-bottom: 4px;
 					color: #800;
 				}
-
 				.sim .finding p {
 					color: #555;
 					font-size: 0.92rem;
 				}
-
 				.sim table {
 					width: 100%;
 					border-collapse: collapse;
@@ -423,7 +354,6 @@
 					box-shadow: 3px 3px 5px #555;
 					font-family: Tahoma, sans-serif;
 				}
-
 				.sim th {
 					background-color: #800;
 					border: 1px solid #800;
@@ -433,7 +363,6 @@
 					font-size: 0.88rem;
 					letter-spacing: 0.02em;
 				}
-
 				.sim td {
 					border: 1px solid #800;
 					padding: 0.25em;
@@ -441,34 +370,28 @@
 					vertical-align: top;
 					color: #333;
 				}
-
 				.sim .winner {
 					color: #6e0000;
 					font-weight: 700;
 				}
-
 				.sim .small-note {
 					color: #555;
 					font-size: 0.88rem;
 					line-height: 1.55;
 				}
-
 				.sim .small-note strong {
 					color: #800;
 				}
-
 				@media (max-width: 1200px) {
 					.sim .grid-2,
 					.sim .summary-grid,
 					.sim .cards {
 						grid-template-columns: 1fr;
 					}
-
 					.sim .controls {
 						position: static;
 					}
 				}
-
 				@media (max-width: 720px) {
 					.sim .inline-2,
 					.sim .inline-3 {
@@ -492,7 +415,6 @@
 						<em>structurele trade-offs</em> zien: astronomische correctheid tegenover latere avonden en donkerdere ochtenden.
 					</p>
 				</section>
-
 				<div class="grid-2">
 					<aside class="controls">
 						<div class="control-group">
@@ -517,7 +439,6 @@
 							</div>
 							<p class="hint">Voor Nederland is vooral de lengtegraad belangrijk: hoe verder oostelijk, hoe later UTC minder logisch wordt.</p>
 						</div>
-
 						<div class="control-group">
 							<label for="date">Dagvergelijking</label>
 							<input id="date" type="date" />
@@ -528,13 +449,11 @@
 							</div>
 							<p class="hint">De daggrafiek toont per scenario hoe dezelfde astronomische dag op de klok valt.</p>
 						</div>
-
 						<div class="control-group">
 							<label for="year">Jaar</label>
 							<input id="year" type="number" min="2020" max="2035" step="1" value="2026" />
 							<p class="hint">De jaarsamenvatting loopt over alle dagen van dit jaar. Voor de scenario’s met zomertijd wordt de Europese regel toegepast.</p>
 						</div>
-
 						<div class="control-group">
 							<label for="scheduleProfile">Ritme-profiel</label>
 							<select id="scheduleProfile">
@@ -555,7 +474,6 @@
 								<a href="https://www.smulderstextiel.nl/c/nationale-bedtijden-onderzoek/" target="_blank" rel="noreferrer">Smulders 2025</a>
 							</p>
 						</div>
-
 						<div class="control-group">
 							<label for="wakeStart">Wakker vanaf: <span id="wakeStartLabel">07:00</span></label>
 							<input id="wakeStart" type="range" min="240" max="720" step="15" value="420" />
@@ -563,7 +481,6 @@
 							<input id="wakeEnd" type="range" min="960" max="1560" step="15" value="1380" />
 							<p class="hint">Dit beïnvloedt de maatschappelijke score: welk regime schuift daglicht het best in jouw actieve uren? Pas deze sliders gerust aan als jouw ritme afwijkt van het onderzoek-profiel.</p>
 						</div>
-
 						<div class="control-group">
 							<label for="morningWindow">Ochtend-venster: <span id="morningWindowLabel">3 uur</span></label>
 							<input id="morningWindow" type="range" min="60" max="300" step="30" value="180" />
@@ -572,7 +489,6 @@
 							<p class="hint">Hiermee kun je de waarde van lichte ochtenden en lichte avonden zichtbaar maken.</p>
 						</div>
 					</aside>
-
 					<div class="content">
 						<section class="panel">
 							<h2>Daggrafiek</h2>
@@ -589,7 +505,6 @@
 								</div>
 							</div>
 						</section>
-
 						<section class="panel">
 							<h2>Jaarsamenvatting</h2>
 							<div class="section-body">
@@ -597,13 +512,11 @@
 								<div class="cards" id="scenarioCards"></div>
 							</div>
 						</section>
-
 						<section class="summary-grid">
 							<section class="panel">
 								<h2>Conclusies uit deze simulatie</h2>
 								<div class="findings" id="findings"></div>
 							</section>
-
 							<section class="panel">
 								<h2>Vergelijkingstabel</h2>
 								<div class="table-wrap">
@@ -620,7 +533,6 @@
 								</div>
 							</section>
 						</section>
-
 						<section class="panel">
 							<h2>Leeswijzer</h2>
 							<div class="notes">
@@ -643,7 +555,6 @@
 					</div>
 				</div>
 			</div>
-
 			<script>
 				const presets = {
 					amsterdam: { label: "Amsterdam", lat: 52.3676, lon: 4.9041 },
@@ -653,7 +564,6 @@
 					nlmid: { label: "Midden van Nederland", lat: 52.1326, lon: 5.2913 },
 					custom: { label: "Aangepast" },
 				};
-
 				const scheduleProfiles = {
 					adult_nl_2025: {
 						label: "Volwassenen totaal",
@@ -700,7 +610,6 @@
 						hint: "Handmatig ritme. Gebruik de sliders om jouw eigen dagindeling te modelleren of om andere groepen door te rekenen.",
 					},
 				};
-
 				const scenarios = [
 					{
 						key: "utc",
@@ -731,7 +640,6 @@
 						baseOffset: "UTC+1 / UTC+2",
 					},
 				];
-
 				const els = {
 					preset: document.getElementById("preset"),
 					lat: document.getElementById("lat"),
@@ -755,7 +663,6 @@
 					findings: document.getElementById("findings"),
 					winnerTable: document.getElementById("winnerTable"),
 				};
-
 				function todayIso() {
 					const now = new Date();
 					const y = now.getFullYear();
@@ -763,46 +670,37 @@
 					const d = String(now.getDate()).padStart(2, "0");
 					return `${y}-${m}-${d}`;
 				}
-
 				if (!els.date.value) {
 					els.date.value = todayIso();
 				}
-
 				function applyScheduleProfile(profileKey) {
 					const profile = scheduleProfiles[profileKey];
 					if (!profile || profileKey === "manual") {
 						return;
 					}
-
 					els.wakeStart.value = profile.wakeStart;
 					els.wakeEnd.value = profile.wakeEnd;
 					els.morningWindow.value = profile.morningWindow;
 					els.eveningWindow.value = profile.eveningWindow;
 				}
-
 				function selectedScheduleProfile() {
 					return scheduleProfiles[els.scheduleProfile.value] || scheduleProfiles.manual;
 				}
-
 				function matchesSelectedScheduleProfile() {
 					const profile = scheduleProfiles[els.scheduleProfile.value];
 					if (!profile || els.scheduleProfile.value === "manual") {
 						return false;
 					}
-
 					return Number(els.wakeStart.value) === profile.wakeStart && Number(els.wakeEnd.value) === profile.wakeEnd && Number(els.morningWindow.value) === profile.morningWindow && Number(els.eveningWindow.value) === profile.eveningWindow;
 				}
-
 				function syncScheduleProfileMode() {
 					if (!matchesSelectedScheduleProfile()) {
 						els.scheduleProfile.value = "manual";
 					}
 				}
-
 				function updateScheduleProfileHint() {
 					els.scheduleProfileHint.textContent = selectedScheduleProfile().hint;
 				}
-
 				document.querySelectorAll("[data-date]").forEach((button) => {
 					button.addEventListener("click", () => {
 						const year = Number(els.year.value) || 2026;
@@ -816,7 +714,6 @@
 						update();
 					});
 				});
-
 				els.preset.addEventListener("change", () => {
 					const preset = presets[els.preset.value];
 					if (preset && els.preset.value !== "custom") {
@@ -825,12 +722,10 @@
 					}
 					update();
 				});
-
 				els.scheduleProfile.addEventListener("change", () => {
 					applyScheduleProfile(els.scheduleProfile.value);
 					update();
 				});
-
 				[els.lat, els.lon, els.date, els.year].forEach((el) => el.addEventListener("input", update));
 				[els.wakeStart, els.wakeEnd, els.morningWindow, els.eveningWindow].forEach((el) =>
 					el.addEventListener("input", () => {
@@ -838,15 +733,12 @@
 						update();
 					})
 				);
-
 				function clamp(value, min, max) {
 					return Math.min(max, Math.max(min, value));
 				}
-
 				function pad2(value) {
 					return String(value).padStart(2, "0");
 				}
-
 				function formatMinutes(totalMinutes) {
 					let minutes = totalMinutes;
 					while (minutes < 0) minutes += 1440;
@@ -855,7 +747,6 @@
 					const m = Math.round(minutes % 60);
 					return `${pad2(h)}:${pad2(m)}`;
 				}
-
 				function formatDurationMinutes(value) {
 					const sign = value < 0 ? "-" : "";
 					const abs = Math.abs(Math.round(value));
@@ -866,38 +757,32 @@
 					}
 					return `${sign}${m}m`;
 				}
-
 				function formatDurationHours(value) {
 					const hours = value / 60;
 					return `${hours.toFixed(1).replace(".", ",")} u`;
 				}
-
 				function dayOfYear(date) {
 					const start = new Date(Date.UTC(date.getUTCFullYear(), 0, 0));
 					const diff = date - start;
 					return Math.floor(diff / 86400000);
 				}
-
 				function lastSundayUtc(year, monthIndex) {
 					const date = new Date(Date.UTC(year, monthIndex + 1, 0, 1, 0, 0));
 					const day = date.getUTCDay();
 					date.setUTCDate(date.getUTCDate() - day);
 					return date;
 				}
-
 				function isDstEu(date) {
 					const year = date.getUTCFullYear();
 					const start = lastSundayUtc(year, 2);
 					const end = lastSundayUtc(year, 9);
 					return date >= start && date < end;
 				}
-
 				function solarEvents(date, lat, lon) {
 					const n = dayOfYear(date);
 					const gamma = ((2 * Math.PI) / 365) * (n - 1);
 					const eqTime = 229.18 * (0.000075 + 0.001868 * Math.cos(gamma) - 0.032077 * Math.sin(gamma) - 0.014615 * Math.cos(2 * gamma) - 0.040849 * Math.sin(2 * gamma));
 					const decl = 0.006918 - 0.399912 * Math.cos(gamma) + 0.070257 * Math.sin(gamma) - 0.006758 * Math.cos(2 * gamma) + 0.000907 * Math.sin(2 * gamma) - 0.002697 * Math.cos(3 * gamma) + 0.00148 * Math.sin(3 * gamma);
-
 					const latRad = (lat * Math.PI) / 180;
 					const zenith = (90.833 * Math.PI) / 180;
 					const cosH = Math.cos(zenith) / (Math.cos(latRad) * Math.cos(decl)) - Math.tan(latRad) * Math.tan(decl);
@@ -907,7 +792,6 @@
 					const solarNoonUtc = 720 - 4 * lon - eqTime;
 					const sunriseUtc = solarNoonUtc - haDeg * 4;
 					const sunsetUtc = solarNoonUtc + haDeg * 4;
-
 					return {
 						eqTime,
 						decl,
@@ -917,13 +801,11 @@
 						dayLength: sunsetUtc - sunriseUtc,
 					};
 				}
-
 				function overlap(aStart, aEnd, bStart, bEnd) {
 					const start = Math.max(aStart, bStart);
 					const end = Math.min(aEnd, bEnd);
 					return Math.max(0, end - start);
 				}
-
 				function scenarioDay(date, lat, lon, scenario) {
 					const solar = solarEvents(date, lat, lon);
 					const offset = scenario.offsetMinutes(date);
@@ -939,7 +821,6 @@
 						sunsetUtc: solar.sunsetUtc,
 					};
 				}
-
 				function getInputs() {
 					let lat = Number(els.lat.value);
 					let lon = Number(els.lon.value);
@@ -947,22 +828,18 @@
 					lon = clamp(isFinite(lon) ? lon : 4.9041, 3, 8);
 					els.lat.value = lat;
 					els.lon.value = lon;
-
 					const wakeStart = Number(els.wakeStart.value);
 					let wakeEnd = Number(els.wakeEnd.value);
 					if (wakeEnd <= wakeStart + 60) {
 						wakeEnd = wakeStart + 60;
 						els.wakeEnd.value = wakeEnd;
 					}
-
 					const morningWindow = Number(els.morningWindow.value);
 					const eveningWindow = Number(els.eveningWindow.value);
 					const date = new Date(`${els.date.value}T12:00:00Z`);
 					const year = Number(els.year.value) || 2026;
-
 					return { lat, lon, wakeStart, wakeEnd, morningWindow, eveningWindow, date, year };
 				}
-
 				function updateLabels(state) {
 					els.wakeStartLabel.textContent = formatMinutes(state.wakeStart);
 					els.wakeEndLabel.textContent = formatMinutes(state.wakeEnd);
@@ -970,7 +847,6 @@
 					els.eveningWindowLabel.textContent = `${Math.round(state.eveningWindow / 60)} uur`;
 					updateScheduleProfileHint();
 				}
-
 				function renderTimeline(state, daily) {
 					const width = 1120;
 					const left = 160;
@@ -981,12 +857,10 @@
 					const innerWidth = width - left - right;
 					const height = top + scenarios.length * rowH + bottom;
 					const xForMinutes = (minutes) => left + (minutes / 1440) * innerWidth;
-
 					let svg = `
       <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Daggrafiek voor vier tijdregimes">
         <rect x="0" y="0" width="${width}" height="${height}" fill="#fffaf9" />
     `;
-
 					for (let hour = 0; hour <= 24; hour++) {
 						const x = xForMinutes(hour * 60);
 						svg += `
@@ -996,7 +870,6 @@
 							svg += `<text x="${x + 2}" y="20" fill="#555" font-size="12" font-family="Tahoma, sans-serif">${pad2(hour)}:00</text>`;
 						}
 					}
-
 					daily.forEach((row, index) => {
 						const y = top + index * rowH;
 						const barY = y + 22;
@@ -1006,7 +879,6 @@
 						const sunW = xForMinutes(row.sunsetLocal) - sunX;
 						const noonX = xForMinutes(row.solarNoonLocal);
 						const dstFill = row.dst ? "rgba(100,180,100,0.08)" : "transparent";
-
 						svg += `
         <rect x="${left}" y="${y + 8}" width="${innerWidth}" height="42" rx="4" fill="${dstFill}" stroke="rgba(136,0,0,0.08)" />
         <text x="16" y="${y + 24}" fill="#333" font-size="14" font-weight="700" font-family="Tahoma, sans-serif">${row.name}</text>
@@ -1017,16 +889,13 @@
         <text x="${xForMinutes(1440) - 150}" y="${y + 24}" fill="#333" font-size="13" font-family="Tahoma, sans-serif">${formatMinutes(row.sunriseLocal)} · ${formatMinutes(row.solarNoonLocal)} · ${formatMinutes(row.sunsetLocal)}</text>
       `;
 					});
-
 					svg += "</svg>";
 					els.timeline.innerHTML = svg;
 				}
-
 				function rankScenarios(annual) {
 					const sortedBy = (selector, direction = "desc") => {
 						return [...annual].sort((a, b) => (direction === "desc" ? selector(b) - selector(a) : selector(a) - selector(b)));
 					};
-
 					return {
 						astronomy: sortedBy((row) => row.noonDeviation, "asc")[0],
 						wakeLight: sortedBy((row) => row.daylightInWake)[0],
@@ -1035,14 +904,12 @@
 						fewestLateSunrises: sortedBy((row) => row.lateSunriseDays, "asc")[0],
 					};
 				}
-
 				function renderCards(state, annual) {
 					const maxWake = Math.max(...annual.map((row) => row.daylightInWake));
 					const maxMorning = Math.max(...annual.map((row) => row.morningLight));
 					const maxEvening = Math.max(...annual.map((row) => row.eveningLight));
 					const maxNoonDeviation = Math.max(...annual.map((row) => row.noonDeviation));
 					const maxLate = Math.max(...annual.map((row) => row.lateSunriseDays));
-
 					els.scenarioCards.innerHTML = annual
 						.map((row) => {
 							const score = row.compositeScore;
@@ -1055,7 +922,6 @@
             </div>
             <div class="offset">${row.baseOffset}</div>
           </div>
-
           <div class="metric-list">
             <div class="metric">
               <div class="metric-head"><span>Zonne-noen t.o.v. 12:00</span><span>${formatDurationMinutes(row.noonDeviation)}</span></div>
@@ -1078,7 +944,6 @@
               <div class="bar"><i style="width:${100 * (1 - row.lateSunriseDays / Math.max(maxLate, 1 || 1))}%"></i></div>
             </div>
           </div>
-
           <div class="score">
             <span class="mini">Gebalanceerde indicatiescore</span>
             <span class="score-value">${score.toFixed(1)}</span>
@@ -1088,7 +953,6 @@
 						})
 						.join("");
 				}
-
 				function winnerRows(annual) {
 					const winners = rankScenarios(annual);
 					return [
@@ -1119,7 +983,6 @@
 						},
 					];
 				}
-
 				function renderWinners(annual) {
 					const rows = winnerRows(annual);
 					els.winnerTable.innerHTML = rows
@@ -1134,7 +997,6 @@
 						)
 						.join("");
 				}
-
 				function renderFindings(state, annual) {
 					const winners = rankScenarios(annual);
 					const current = annual.find((row) => row.key === "cet_dst");
@@ -1142,7 +1004,6 @@
 					const fixedUtc = annual.find((row) => row.key === "utc");
 					const utcDst = annual.find((row) => row.key === "utc_dst");
 					const city = currentPresetLabel();
-
 					const findings = [
 						{
 							title: "Astronomisch uitgangspunt",
@@ -1165,7 +1026,6 @@
 							body: `Als jouw prioriteit zonne-logica en vroege ochtenden is, wijst deze simulatie meestal naar ${winners.astronomy.name}. Als jouw prioriteit avondlicht is, wint doorgaans ${winners.evening.name}.`,
 						},
 					];
-
 					els.findings.innerHTML = findings
 						.map(
 							(item) => `
@@ -1177,7 +1037,6 @@
 						)
 						.join("");
 				}
-
 				function currentPresetLabel() {
 					const preset = els.preset.value;
 					if (preset === "custom") {
@@ -1185,27 +1044,22 @@
 					}
 					return presets[preset].label;
 				}
-
 				function currentScheduleLabel() {
 					return selectedScheduleProfile().label;
 				}
-
 				function compositeScore(row, annual) {
 					const maxNoon = Math.max(...annual.map((it) => it.noonDeviation));
 					const maxWake = Math.max(...annual.map((it) => it.daylightInWake));
 					const maxMorning = Math.max(...annual.map((it) => it.morningLight));
 					const maxEvening = Math.max(...annual.map((it) => it.eveningLight));
 					const maxLate = Math.max(...annual.map((it) => it.lateSunriseDays));
-
 					const astronomyScore = 1 - row.noonDeviation / Math.max(maxNoon, 1);
 					const wakeScore = row.daylightInWake / Math.max(maxWake, 1);
 					const morningScore = row.morningLight / Math.max(maxMorning, 1);
 					const eveningScore = row.eveningLight / Math.max(maxEvening, 1);
 					const lateScore = 1 - row.lateSunriseDays / Math.max(maxLate, 1);
-
 					return 100 * (0.3 * astronomyScore + 0.3 * wakeScore + 0.15 * morningScore + 0.15 * eveningScore + 0.1 * lateScore);
 				}
-
 				function annualMetrics(state) {
 					const morningEnd = state.wakeStart + state.morningWindow;
 					const eveningStart = state.wakeEnd - state.eveningWindow;
@@ -1220,7 +1074,6 @@
 						eveningLight: 0,
 						lateSunriseDays: 0,
 					}));
-
 					for (let month = 0; month < 12; month++) {
 						const daysInMonth = new Date(Date.UTC(state.year, month + 1, 0)).getUTCDate();
 						for (let day = 1; day <= daysInMonth; day++) {
@@ -1237,18 +1090,14 @@
 							});
 						}
 					}
-
 					rows.forEach((row) => {
 						row.noonDeviation = row.noonDeviation / 365;
 					});
-
 					rows.forEach((row) => {
 						row.compositeScore = compositeScore(row, rows);
 					});
-
 					return rows;
 				}
-
 				function renderSummaries(state, daily, annual) {
 					const presetLabel = currentPresetLabel();
 					const scheduleLabel = currentScheduleLabel();
@@ -1256,15 +1105,12 @@
 					const bestAstronomy = rankScenarios(annual).astronomy;
 					const bestWake = rankScenarios(annual).wakeLight;
 					const current = annual.find((row) => row.key === "cet_dst");
-
 					els.dailySummary.innerHTML = `Voor <strong>${selectedDate}</strong> op <strong>${presetLabel}</strong> en binnen het ritme <strong>${scheduleLabel}</strong> zie je exact dezelfde zon, maar een andere klok. Daardoor verschuiven zonsopkomst, zonne-noen en zonsondergang zichtbaar tussen de vier regimes.`;
 					els.annualSummary.innerHTML = `Over heel <strong>${state.year}</strong> blijkt in deze simulatie met <strong>${scheduleLabel}</strong> dat <strong>${bestAstronomy.name}</strong> het best met de zon uitlijnt, terwijl <strong>${bestWake.name}</strong> het meeste daglicht in de ingestelde wakkere uren stopt. Het huidige systeem <strong>${current.name}</strong> is dus geen puur astronomische keuze, maar een bewuste verschuiving richting latere avonden.`;
 				}
-
 				function update() {
 					const state = getInputs();
 					updateLabels(state);
-
 					const daily = scenarios.map((scenario) => {
 						const info = scenarioDay(state.date, state.lat, state.lon, scenario);
 						return {
@@ -1274,20 +1120,16 @@
 							baseOffset: scenario.baseOffset,
 						};
 					});
-
 					const annual = annualMetrics(state);
-
 					renderSummaries(state, daily, annual);
 					renderTimeline(state, daily);
 					renderCards(state, annual);
 					renderWinners(annual);
 					renderFindings(state, annual);
 				}
-
 				applyScheduleProfile(els.scheduleProfile.value);
 				update();
 			</script>
-
 			<aside class="project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
@@ -1301,7 +1143,6 @@
 					</li>
 				</ul>
 			</aside>
-
 			<style>
 				.project-sources {
 					border: 1px solid #cda9a9;
@@ -1311,14 +1152,12 @@
 					margin-top: 2rem;
 					padding: 1rem;
 				}
-
 				.project-sources h2 {
 					color: #800;
 					font-size: 1rem;
 					margin: 0 0 0.75rem;
 					padding: 0;
 				}
-
 				.project-sources ul {
 					display: grid;
 					gap: 0.65rem;
@@ -1326,107 +1165,88 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-sources li {
 					display: grid;
 					gap: 0.15rem;
 				}
-
 				.project-sources a {
 					font-weight: 700;
 				}
-
 				.project-sources span {
 					color: #4f3b3b;
 					font-size: 0.92rem;
 					line-height: 1.35;
 				}
 			</style>
-
 			<style>
 				.project-index {
 					margin-top: 1.5em;
 				}
-
 				.project-index-summary {
 					color: #5f1d1d;
 					font-family: Tahoma, sans-serif;
 					font-size: 0.95em;
 					margin-bottom: 2em;
 				}
-
 				.project-list {
 					list-style: none;
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-year-group {
 					margin-bottom: 2.5em;
 				}
-
 				.project-year-group > h2 {
 					border-bottom: 1px solid #d8b3b3;
 					margin-bottom: 0.8em;
 					padding-bottom: 0.2em;
 				}
-
 				.project-entry {
 					border-bottom: 1px solid #ead6d6;
 					list-style: none;
 					margin: 0;
 					padding: 1em 0 1.15em;
 				}
-
 				.project-entry:first-child {
 					padding-top: 0.2em;
 				}
-
 				.project-entry:last-child {
 					border-bottom: 0;
 					padding-bottom: 0;
 				}
-
 				.project-entry article {
 					display: grid;
 					gap: 0.35em;
 				}
-
 				.project-entry h3 {
 					font-size: 1.05em;
 					margin: 0;
 					padding: 0;
 					text-transform: none;
 				}
-
 				.project-entry h3 a {
 					text-decoration: none;
 				}
-
 				.project-entry h3 a:hover {
 					text-decoration: underline;
 				}
-
 				.project-entry-meta,
 				.project-entry-summary {
 					margin: 0;
 					padding: 0;
 					text-align: left;
 				}
-
 				.project-entry-meta {
 					color: #6e0000;
 					font-family: Tahoma, sans-serif;
 					font-size: 0.88em;
 				}
-
 				.project-entry-summary {
 					color: #2b2b2b;
 					font-size: 0.98em;
 					line-height: 1.45;
 					max-width: 70ch;
 				}
-
 				@media (min-width: 900px) {
 					body > main {
 						margin-left: 12%;
@@ -1439,14 +1259,11 @@
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-
 				<p>
-					<sub>Last updated: <time id="updated">2026-04-09</time></sub>
+					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
 				</p>
 			</div>
-
 			<nav id="profiles"></nav>
-
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {

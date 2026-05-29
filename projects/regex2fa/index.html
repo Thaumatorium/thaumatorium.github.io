@@ -1,28 +1,17 @@
 <!doctype html>
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
-		<script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-
 		<meta charset="utf-8" />
-
 		<title>Regex to NFA/DFA Visualizer | The Thaumatorium</title>
-
 		<meta name="description" content="A tool for visualizing the conversion from regular expressions to NFA and DFA automata." />
-
 		<link rel="canonical" href="https://thaumatorium.com/" />
-
 		<meta name="theme-color" content="#800" />
-
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<link rel="webmanifest" href="/manifest.json" />
 		<link rel="icon" href="/images/favicon.svg" />
-
 		<link rel="stylesheet" href="/styles/main.css?v=3" />
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
-
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content="Regex to NFA/DFA Visualizer" />
@@ -30,7 +19,6 @@
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
-
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
@@ -40,13 +28,11 @@
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
 	</head>
-
 	<body>
 		<header>
 			<div class="title">The Thaumatorium:</div>
 			<div class="subtitle">Where the magic happens</div>
 		</header>
-
 		<nav>
 			<h5 style="display: none">Main nav menu</h5>
 			<ul>
@@ -58,7 +44,6 @@
 				<li><a href="/about">About</a></li>
 			</ul>
 		</nav>
-
 		<main class="projects">
 			<section class="regex2fa-page">
 				<style>
@@ -66,7 +51,6 @@
 						display: grid;
 						gap: 1.25rem;
 					}
-
 					.regex2fa-shell {
 						display: grid;
 						gap: 1rem;
@@ -76,13 +60,11 @@
 						background: #fffaf9;
 						box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
 					}
-
 					.regex2fa-lead,
 					.regex2fa-help,
 					.regex2fa-status {
 						margin: 0;
 					}
-
 					.regex2fa-form,
 					.regex2fa-actions,
 					.regex2fa-switches,
@@ -92,19 +74,16 @@
 						gap: 0.75rem;
 						align-items: center;
 					}
-
 					.regex2fa-form {
 						display: grid;
 						gap: 0.5rem;
 					}
-
 					.regex2fa-form label,
 					.regex2fa-switches label {
 						display: grid;
 						gap: 0.35rem;
 						font-weight: 600;
 					}
-
 					.regex2fa-input,
 					.regex2fa-epsilon {
 						border: 1px solid #b98f8f;
@@ -113,23 +92,19 @@
 						font: inherit;
 						background: #fff;
 					}
-
 					.regex2fa-input {
 						min-height: 5.5rem;
 						font-family: monospace;
 						resize: vertical;
 					}
-
 					.regex2fa-epsilon {
 						width: 4rem;
 						font-family: monospace;
 					}
-
 					.regex2fa-stage {
 						display: grid;
 						gap: 0.75rem;
 					}
-
 					#automatonCanvas {
 						display: block;
 						width: 100%;
@@ -138,22 +113,18 @@
 						border-radius: 8px;
 						background: #fff;
 					}
-
 					.regex2fa-status {
 						min-height: 1.4rem;
 						font-family: Tahoma, sans-serif;
 						font-size: 0.95rem;
 						color: #6e0000;
 					}
-
 					.regex2fa-status[data-tone="error"] {
 						color: #a31717;
 					}
-
 					.regex2fa-legend {
 						font-size: 0.95rem;
 					}
-
 					.regex2fa-chip {
 						display: inline-flex;
 						align-items: center;
@@ -163,7 +134,6 @@
 						border-radius: 999px;
 						background: #fff;
 					}
-
 					.regex2fa-chip-swatch {
 						width: 0.8rem;
 						height: 0.8rem;
@@ -171,11 +141,9 @@
 						border-radius: 50%;
 						background: #d9ecff;
 					}
-
 					.regex2fa-chip-swatch.accept {
 						background: #dcf5d7;
 					}
-
 					.regex2fa-internals {
 						display: grid;
 						gap: 0.6rem;
@@ -184,7 +152,6 @@
 						border-radius: 6px;
 						background: #fff;
 					}
-
 					.regex2fa-debug {
 						margin: 0;
 						padding: 0.65rem 0.8rem;
@@ -196,12 +163,10 @@
 						overflow-x: auto;
 						white-space: pre-wrap;
 					}
-
 					.regex2fa-steps {
 						display: grid;
 						gap: 0.75rem;
 					}
-
 					.regex2fa-step-list {
 						display: grid;
 						gap: 0.7rem;
@@ -209,43 +174,36 @@
 						padding: 0;
 						list-style: none;
 					}
-
 					.regex2fa-step {
 						padding: 0.8rem 0.9rem;
 						border: 1px solid #ead6d6;
 						border-radius: 6px;
 						background: #fff;
 					}
-
 					.regex2fa-step.is-active {
 						border-color: #8b2d2d;
 						box-shadow: inset 0 0 0 1px #8b2d2d;
 						background: #fff8f5;
 					}
-
 					.regex2fa-step-title,
 					.regex2fa-step-body {
 						margin: 0;
 					}
-
 					.regex2fa-step-title {
 						font-weight: 700;
 					}
-
 					.regex2fa-step-body {
 						margin-top: 0.3rem;
 						font-family: monospace;
 						white-space: pre-wrap;
 						word-break: break-word;
 					}
-
 					@media (max-width: 720px) {
 						#automatonCanvas {
 							height: 26rem;
 						}
 					}
 				</style>
-
 				<header class="regex2fa-shell">
 					<h2>Regex to NFA/DFA Visualizer</h2>
 					<p class="regex2fa-lead">Parse a small regular-expression subset, build a Thompson NFA, and derive the DFA from it. The graph is deterministic per input, so the same regex always redraws the same way.</p>
@@ -254,19 +212,16 @@
 						syntax.
 					</p>
 				</header>
-
 				<section class="regex2fa-shell">
 					<div class="regex2fa-form">
 						<label for="regexInput">Regex</label>
 						<textarea class="regex2fa-input" id="regexInput" placeholder="e.g. (a|b)*cde+f? or [Gg]ood"></textarea>
 					</div>
-
 					<div class="regex2fa-actions">
 						<button class="button" id="renderRegexBtn" type="button">Render automaton</button>
 						<button class="button" id="loadExampleBtn" type="button">Load example</button>
 						<button class="button" id="clearRegexBtn" type="button">Clear</button>
 					</div>
-
 					<div class="regex2fa-switches">
 						<label for="viewMode">
 							View
@@ -285,9 +240,7 @@
 							Show internals
 						</label>
 					</div>
-
 					<p class="regex2fa-status" id="regex2faStatus" aria-live="polite"></p>
-
 					<div class="regex2fa-stage">
 						<canvas id="automatonCanvas" aria-label="Automaton visualization"></canvas>
 						<div class="regex2fa-legend">
@@ -296,7 +249,6 @@
 							<span class="regex2fa-chip">Start arrow points into the start state</span>
 						</div>
 					</div>
-
 					<section class="regex2fa-steps" aria-labelledby="regex2fa-steps-title">
 						<h3 id="regex2fa-steps-title">Step By Step</h3>
 						<ol class="regex2fa-step-list">
@@ -322,7 +274,6 @@
 							</li>
 						</ol>
 					</section>
-
 					<div class="regex2fa-internals" id="regex2faInternals" hidden>
 						<div>
 							<strong>Raw tokens</strong>
@@ -338,10 +289,8 @@
 						</div>
 					</div>
 				</section>
-
 				<script type="module" src="/projects/regex2fa/app.mjs"></script>
 			</section>
-
 			<aside class="project-sources" aria-labelledby="project-sources-title">
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
@@ -355,7 +304,6 @@
 					</li>
 				</ul>
 			</aside>
-
 			<style>
 				.project-sources {
 					border: 1px solid #cda9a9;
@@ -365,14 +313,12 @@
 					margin-top: 2rem;
 					padding: 1rem;
 				}
-
 				.project-sources h2 {
 					color: #800;
 					font-size: 1rem;
 					margin: 0 0 0.75rem;
 					padding: 0;
 				}
-
 				.project-sources ul {
 					display: grid;
 					gap: 0.65rem;
@@ -380,16 +326,13 @@
 					margin: 0;
 					padding: 0;
 				}
-
 				.project-sources li {
 					display: grid;
 					gap: 0.15rem;
 				}
-
 				.project-sources a {
 					font-weight: 700;
 				}
-
 				.project-sources span {
 					color: #4f3b3b;
 					font-size: 0.92rem;
@@ -401,14 +344,11 @@
 			<div class="copyright">
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
-
 				<p>
-					<sub>Last updated: <time id="updated">2026-03-09</time></sub>
+					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
 				</p>
 			</div>
-
 			<nav id="profiles"></nav>
-
 			<a class="secret" onclick="specialGoto(event)">π</a>
 			<script>
 				const specialGoto = (event) => {
