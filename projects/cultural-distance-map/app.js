@@ -8,6 +8,7 @@ const yearLabel = document.querySelector("#yearLabel");
 const modeButtons = document.querySelectorAll("[data-mode]");
 const trailToggle = document.querySelector("#trailToggle");
 const trendToggle = document.querySelector("#trendToggle");
+const groupToggle = document.querySelector("#groupToggle");
 const resetZoomButton = document.querySelector("#resetZoom");
 const countrySelect = document.querySelector("#countrySelect");
 const selectedCountry = document.querySelector("#selectedCountry");
@@ -59,6 +60,99 @@ const regionCountries = new Map([
 	["Sub-Sahara Afrika", ["Burkina Faso", "Ethiopia", "Ghana", "Kenya", "Mali", "Nigeria", "Rwanda", "South Africa", "Tanzania", "Uganda", "Zambia", "Zimbabwe"]],
 ]);
 
+const culturalGroups = [
+	{
+		id: "protestant-europe",
+		label: "Protestant Europa",
+		color: "#ece63a",
+		radius: 22,
+		countries: ["Denmark", "Finland", "Germany", "Germany West", "Iceland", "Netherlands", "Norway", "Sweden", "Switzerland"],
+	},
+	{
+		id: "english-speaking",
+		label: "Engelstalig",
+		color: "#c9c22a",
+		radius: 22,
+		countries: ["Australia", "Canada", "Great Britain", "Ireland", "New Zealand", "Northern Ireland", "United States"],
+	},
+	{
+		id: "catholic-europe",
+		label: "Katholiek Europa",
+		color: "#9bc719",
+		radius: 24,
+		countries: ["Andorra", "Austria", "Belgium", "Croatia", "Czechia", "Estonia", "France", "Hungary", "Italy", "Latvia", "Lithuania", "Luxembourg", "Malta", "Poland", "Portugal", "Slovakia", "Slovenia", "Spain"],
+	},
+	{
+		id: "confucian",
+		label: "Confuciaans",
+		color: "#ee9638",
+		radius: 26,
+		countries: ["China", "Hong Kong SAR", "Japan", "Macau SAR", "Mongolia", "South Korea", "Taiwan ROC"],
+	},
+	{
+		id: "west-south-asia",
+		label: "West- & Zuid-Azie",
+		color: "#f2c95d",
+		radius: 24,
+		countries: ["Albania", "Bangladesh", "India", "Indonesia", "Israel", "Malaysia", "Singapore", "South Africa", "Thailand", "Vietnam"],
+	},
+	{
+		id: "orthodox-europe",
+		label: "Orthodox Europa",
+		color: "#df4b35",
+		radius: 25,
+		countries: ["Armenia", "Belarus", "Bosnia and Herzegovina", "Bulgaria", "Cyprus", "Georgia", "Greece", "Kazakhstan", "Kosovo", "Moldova", "Montenegro", "North Macedonia", "Romania", "Russia", "Serbia", "Ukraine"],
+	},
+	{
+		id: "african-islamic",
+		label: "Afrikaans-Islamitisch",
+		color: "#b7b1bc",
+		radius: 26,
+		countries: [
+			"Algeria",
+			"Azerbaijan",
+			"Burkina Faso",
+			"Egypt",
+			"Ethiopia",
+			"Ghana",
+			"Iran",
+			"Iraq",
+			"Jordan",
+			"Kenya",
+			"Kuwait",
+			"Kyrgyzstan",
+			"Lebanon",
+			"Libya",
+			"Maldives",
+			"Mali",
+			"Morocco",
+			"Myanmar",
+			"Nigeria",
+			"Pakistan",
+			"Palestine",
+			"Qatar",
+			"Rwanda",
+			"Saudi Arabia",
+			"Tajikistan",
+			"Tanzania",
+			"Tunisia",
+			"Turkey",
+			"Uganda",
+			"Uzbekistan",
+			"Yemen",
+			"Zambia",
+			"Zimbabwe",
+		],
+	},
+	{
+		id: "latin-america",
+		label: "Latijns-Amerika",
+		color: "#9fb9bb",
+		radius: 25,
+		countries: ["Argentina", "Bolivia", "Brazil", "Chile", "Colombia", "Dominican Republic", "Ecuador", "El Salvador", "Guatemala", "Haiti", "Mexico", "Nicaragua", "Peru", "Philippines", "Puerto Rico", "Trinidad and Tobago", "Uruguay", "Venezuela"],
+	},
+];
+
 let data = [];
 let metadata = {};
 let state = {
@@ -67,6 +161,7 @@ let state = {
 	selectedCode: "528",
 	showTrail: true,
 	showTrends: true,
+	showGroups: true,
 	zoomTransform: d3.zoomIdentity,
 };
 
@@ -195,6 +290,133 @@ function trendArrowFor(record, x, y, dimension) {
 		x2: startX + dx * 0.62,
 		y2: startY + dy * 0.62,
 	};
+}
+
+function contourPath(contour, cellSize, originX, originY) {
+	const line = d3.line().curve(d3.curveLinearClosed);
+	return contour.coordinates
+		.map((polygon) =>
+			polygon
+				.map((ring) => {
+					const points = ring.map(([gridX, gridY]) => [originX + gridX * cellSize, originY + gridY * cellSize]);
+					return line(points);
+				})
+				.join("")
+		)
+		.join("");
+}
+
+function contourArea(contour, cellSize) {
+	return d3.sum(contour.coordinates, (polygon) =>
+		d3.sum(polygon, (ring, index) => {
+			const area = Math.abs(d3.polygonArea(ring)) * cellSize * cellSize;
+			return index === 0 ? area : -area;
+		})
+	);
+}
+
+function cellPath(values, cols, cellSize, originX, originY) {
+	return values
+		.map((value, index) => {
+			if (!value) return "";
+			const col = index % cols;
+			const row = Math.floor(index / cols);
+			const x = originX + col * cellSize;
+			const y = originY + row * cellSize;
+			return `M${x},${y}h${cellSize}v${cellSize}h${-cellSize}Z`;
+		})
+		.join("");
+}
+
+function groupAreasFor(records, x, y, dimension, plot) {
+	const cellSize = 2;
+	const cols = Math.ceil(plot.width / cellSize) + 1;
+	const rows = Math.ceil(plot.height / cellSize) + 1;
+	const threshold = 0.48;
+	const anchorRadiusSquared = 28 * 28;
+	const groupInputs = culturalGroups
+		.map((group) => ({
+			...group,
+			points: records
+				.filter((record) => group.countries.includes(record.country))
+				.map((record) => ({
+					groupId: group.id,
+					x: x(record[dimension.x]),
+					y: y(record[dimension.y]),
+				}))
+				.filter((point) => Number.isFinite(point.x) && Number.isFinite(point.y)),
+			values: new Array(cols * rows).fill(0),
+			labelXSum: 0,
+			labelYSum: 0,
+			assignedCells: 0,
+		}))
+		.filter((group) => group.points.length >= 3);
+	const groupById = new Map(groupInputs.map((group) => [group.id, group]));
+	const anchorPoints = groupInputs.flatMap((group) => group.points);
+
+	for (let row = 0; row < rows; row++) {
+		const py = plot.top + (row + 0.5) * cellSize;
+		for (let col = 0; col < cols; col++) {
+			const px = plot.left + (col + 0.5) * cellSize;
+			let bestGroup = null;
+			let bestScore = 0;
+			let nearestAnchor = null;
+			let nearestAnchorDistance = Infinity;
+
+			for (const point of anchorPoints) {
+				const distanceSquared = (px - point.x) ** 2 + (py - point.y) ** 2;
+				if (distanceSquared < nearestAnchorDistance) {
+					nearestAnchorDistance = distanceSquared;
+					nearestAnchor = point;
+				}
+			}
+
+			if (nearestAnchor && nearestAnchorDistance <= anchorRadiusSquared) {
+				bestGroup = groupById.get(nearestAnchor.groupId);
+				bestScore = threshold;
+			}
+
+			if (!bestGroup) {
+				for (const group of groupInputs) {
+					const radiusSquared = group.radius * group.radius;
+					let score = 0;
+					for (const point of group.points) {
+						const distanceSquared = (px - point.x) ** 2 + (py - point.y) ** 2;
+						if (distanceSquared > radiusSquared * 5.5) continue;
+						score += Math.exp(-distanceSquared / (2 * radiusSquared));
+					}
+					if (score > bestScore) {
+						bestScore = score;
+						bestGroup = group;
+					}
+				}
+			}
+
+			if (bestGroup && bestScore >= threshold) {
+				const index = row * cols + col;
+				bestGroup.values[index] = 1;
+				bestGroup.labelXSum += px;
+				bestGroup.labelYSum += py;
+				bestGroup.assignedCells += 1;
+			}
+		}
+	}
+
+	return groupInputs
+		.map((group) => {
+			if (!group.assignedCells) return null;
+			const contour = d3.contours().size([cols, rows]).thresholds([0.5])(group.values)[0];
+			if (!contour || !contour.coordinates.length) return null;
+			return {
+				...group,
+				area: contourArea(contour, cellSize),
+				fillPath: cellPath(group.values, cols, cellSize, plot.left, plot.top),
+				path: contourPath(contour, cellSize, plot.left + cellSize / 2, plot.top + cellSize / 2),
+				labelX: group.labelXSum / group.assignedCells,
+				labelY: group.labelYSum / group.assignedCells,
+			};
+		})
+		.filter(Boolean);
 }
 
 function fullExtent(key, fallback) {
@@ -377,6 +599,37 @@ function renderChart() {
 		.attr("transform", "rotate(-90)")
 		.text(dimension.yLabel);
 
+	if (state.showGroups) {
+		const plot = {
+			left: margin.left,
+			top: margin.top,
+			width: innerWidth,
+			height: innerHeight,
+		};
+		const groupAreas = groupAreasFor(records, baseX, baseY, dimension, plot).sort((a, b) => b.area - a.area);
+
+		const groupLayer = svg.append("g").attr("clip-path", "url(#plotClip)");
+		groupLayer
+			.selectAll("path.group-fill")
+			.data(groupAreas, (group) => group.id)
+			.join("path")
+			.attr("class", "group-fill")
+			.attr("transform", state.zoomTransform.toString())
+			.attr("data-group-id", (group) => group.id)
+			.attr("data-group-label", (group) => group.label)
+			.attr("d", (group) => group.fillPath)
+			.attr("fill", (group) => group.color);
+
+		groupLayer
+			.selectAll("text")
+			.data(groupAreas, (group) => group.id)
+			.join("text")
+			.attr("class", "group-label")
+			.attr("x", (group) => state.zoomTransform.applyX(group.labelX))
+			.attr("y", (group) => state.zoomTransform.applyY(group.labelY))
+			.text((group) => group.label);
+	}
+
 	const selectedTrail = data.filter((record) => record.countryCode === selected?.countryCode && record.year <= state.year && hasPoint(record)).sort((a, b) => a.year - b.year);
 	const line = d3
 		.line()
@@ -420,6 +673,7 @@ function renderChart() {
 		.data(records, (record) => record.countryCode)
 		.join("circle")
 		.attr("class", (record) => ["country-point", nearCodes.has(record.countryCode) ? "is-near" : "", record.countryCode === selected?.countryCode ? "is-selected" : ""].filter(Boolean).join(" "))
+		.attr("data-country", (record) => record.country)
 		.attr("cx", (record) => x(record[dimension.x]))
 		.attr("cy", (record) => y(record[dimension.y]))
 		.attr("r", (record) => (record.countryCode === selected?.countryCode ? 7 : nearCodes.has(record.countryCode) ? 5.8 : 4.6))
@@ -457,6 +711,7 @@ function render() {
 	yearLabel.textContent = state.year;
 	trailToggle.checked = state.showTrail;
 	trendToggle.checked = state.showTrends;
+	groupToggle.checked = state.showGroups;
 	modeButtons.forEach((button) => button.classList.toggle("active", button.dataset.mode === state.mode));
 	populateCountries();
 	renderChart();
@@ -499,6 +754,11 @@ trailToggle.addEventListener("change", () => {
 
 trendToggle.addEventListener("change", () => {
 	state.showTrends = trendToggle.checked;
+	renderChart();
+});
+
+groupToggle.addEventListener("change", () => {
+	state.showGroups = groupToggle.checked;
 	renderChart();
 });
 

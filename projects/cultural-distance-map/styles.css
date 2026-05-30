@@ -155,7 +155,8 @@ body:has(.cultural-distance-page) {
 }
 
 .trail-toggle,
-.trend-toggle {
+.trend-toggle,
+.group-toggle {
 	display: inline-flex;
 	grid-column: 1 / -1;
 	gap: 8px;
@@ -170,7 +171,8 @@ body:has(.cultural-distance-page) {
 }
 
 .trail-toggle input,
-.trend-toggle input {
+.trend-toggle input,
+.group-toggle input {
 	width: 16px;
 	height: 16px;
 	margin: 0;
@@ -234,7 +236,8 @@ body:has(.cultural-distance-page) {
 }
 
 .chart-toolbar .trail-toggle,
-.chart-toolbar .trend-toggle {
+.chart-toolbar .trend-toggle,
+.chart-toolbar .group-toggle {
 	display: inline-flex;
 	gap: 8px;
 	align-items: center;
@@ -242,7 +245,8 @@ body:has(.cultural-distance-page) {
 }
 
 .chart-toolbar .trail-toggle span,
-.chart-toolbar .trend-toggle span {
+.chart-toolbar .trend-toggle span,
+.chart-toolbar .group-toggle span {
 	display: inline;
 }
 
@@ -303,6 +307,25 @@ input[type="range"] {
 	stroke: rgba(36, 34, 29, 0.42);
 	stroke-width: 1.25;
 	stroke-dasharray: 4 5;
+}
+
+.group-fill {
+	opacity: 0.72;
+	pointer-events: none;
+	shape-rendering: geometricPrecision;
+}
+
+.group-label {
+	fill: rgba(20, 18, 16, 0.86);
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 850;
+	paint-order: stroke;
+	pointer-events: none;
+	stroke: rgba(255, 253, 248, 0.58);
+	stroke-linejoin: round;
+	stroke-width: 4px;
+	text-anchor: middle;
 }
 
 .country-trail {
