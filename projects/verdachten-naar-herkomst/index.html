@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>Relatie totaal verdachten vs. verdachten per 10.000 | The Thaumatorium</title>
+		<meta name="description" content="Interactieve scatterplot met CBS-cijfers over geregistreerde verdachten van misdrijven naar migratieachtergrond en herkomst." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Relatie totaal verdachten vs. verdachten per 10.000" />
+		<meta property="og:description" content="Interactieve scatterplot met CBS-cijfers over geregistreerde verdachten van misdrijven naar migratieachtergrond en herkomst." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="Relatie totaal verdachten vs. verdachten per 10.000" />
+		<meta name="twitter:description" content="Interactieve scatterplot met CBS-cijfers over geregistreerde verdachten van misdrijven naar migratieachtergrond en herkomst." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<link rel="stylesheet" href="styles.css" />
+			<div class="suspects-page">
+				<header class="suspects-header">
+					<div>
+						<p class="eyebrow">CBS StatLine 81959NED + 85658NED</p>
+						<h1>Relatie totaal verdachten vs. verdachten per 10.000</h1>
+					</div>
+					<p>Geregistreerde verdachten van misdrijven, niet veroordeelden. Hoofdscatter: CBS 81959NED, 2022.</p>
+				</header>
+				<main class="suspects-dashboard">
+					<section class="chart-panel" aria-labelledby="chartTitle">
+						<div class="toolbar">
+							<label class="search-field">
+								<span>Zoek herkomst</span>
+								<input id="searchInput" type="search" placeholder="Bijv. Marokko, Duitsland, totaal" autocomplete="off" />
+							</label>
+							<div class="toggle-row" role="group" aria-label="Grafiekopties">
+								<label><input id="labelToggle" type="checkbox" checked /> Labels</label>
+								<label><input id="aggregateToggle" type="checkbox" checked /> Aggregaten</label>
+								<fieldset class="axis-scale-toggle">
+									<legend>X-as</legend>
+									<label><input type="radio" name="xScale" value="log" checked /> Log</label>
+									<label><input type="radio" name="xScale" value="linear" /> Lineair</label>
+								</fieldset>
+								<button id="resetZoom" type="button" disabled>Reset zoom</button>
+								<button id="exportCsv" type="button">CSV</button>
+							</div>
+						</div>
+						<div class="chart-head">
+							<div>
+								<p class="eyebrow">2022, algemene misdrijven totaal</p>
+								<h2 id="chartTitle">Totaal verdachten tegenover verdachten per 10.000 inwoners</h2>
+							</div>
+							<p id="pointCount" class="point-count"></p>
+						</div>
+						<div class="chart-wrap">
+							<svg id="scatterChart" role="img" aria-labelledby="chartTitle chartDescription"></svg>
+							<p id="chartDescription" class="sr-only">Scatterplot met totaal verdachten op de x-as en verdachten per 10.000 inwoners op de y-as. De x-as kan tussen logaritmisch en lineair worden gewisseld.</p>
+							<div id="tooltip" class="tooltip" role="status" hidden></div>
+						</div>
+						<div class="legend" aria-label="Legenda">
+							<span><i class="point-country"></i> landen / herkomsten</span>
+							<span><i class="point-aggregate"></i> aggregaten</span>
+							<span>scroll/pinch om te zoomen, sleep om te pannen, dubbelklik om te resetten</span>
+							<span>rechter y-as: Nederlandse achtergrond = 1,00x</span>
+							<span id="quartileLabel">y-kwartielen</span>
+						</div>
+					</section>
+					<aside class="side-panel">
+						<section aria-labelledby="selectedTitle">
+							<p class="eyebrow">Geselecteerd punt</p>
+							<h2 id="selectedTitle">Geen selectie</h2>
+							<div id="selectedStats" class="stat-list"></div>
+						</section>
+						<section aria-labelledby="currentTitle">
+							<p class="eyebrow">Nieuwe CBS-indeling</p>
+							<h2 id="currentTitle">Actuele context</h2>
+							<div id="currentSummary" class="current-summary"></div>
+						</section>
+					</aside>
+				</main>
+				<section class="notes" aria-label="Datatoelichting">
+					<article>
+						<h2>Datatoelichting</h2>
+						<p>Een persoon telt per verslagjaar maximaal een keer mee in het totaal aantal unieke verdachten.</p>
+						<p>
+							"Nederlandse achtergrond" volgt hier de oude CBS-definitie uit 81959NED: een persoon van wie beide ouders in Nederland zijn geboren. In de nieuwe, hier niet voor de hoofdscatter gebruikte CBS-indeling uit 85658NED heet de vergelijkbare groep "Nederland": personen die zelf in Nederland zijn geboren en van
+							wie beide ouders ook in Nederland zijn geboren.
+						</p>
+						<p>De rechter y-as zet dezelfde relatieve maat om naar een ratio ten opzichte van "Nederlandse achtergrond": 1,00x is het 2022-niveau van Nederlandse achtergrond, namelijk 61 verdachten per 10.000 inwoners.</p>
+						<p>"Aandeel alle verdachten" is het percentage van het totaal aantal geregistreerde verdachten in 2022. "Verdachten/bevolking" deelt dat percentage door het aandeel van dezelfde groep in de afgeleide bevolkingsnoemer.</p>
+						<p>De hover en het selectiepanel tonen ook hetzelfde relatieve cijfer als aandeel binnen de groep. Bijvoorbeeld: 61 verdachten per 10.000 inwoners is 0,61 procent, ongeveer 1 op 164 personen in die groep in dat verslagjaar.</p>
+						<p>De bevolking per groep wordt hier afgeleid uit dezelfde CBS-tabel: verdachten met woonadres in Nederland gedeeld door verdachten per 10.000 inwoners, maal 10.000. Dat is de noemer achter het relatieve cijfer en kan door afronding licht afwijken van aparte CBS-bevolkingstabellen.</p>
+						<p>De kleurbanden zijn relatieve kwartielen binnen de getoonde 2022-punten op de y-as. Ze verdelen de herkomstpunten in vier groepen op basis van verdachten per 10.000 inwoners. Het zijn dus geen absolute risicocategorieen of CBS-normen.</p>
+						<p>Relatieve cijfers tellen alleen personen die in de BRP voorkomen. BRP staat voor Basisregistratie Personen: het bevolkingsregister van gemeenten in Nederland. Personen zonder BRP-registratie zitten wel in absolute aantallen maar niet in verdachten per 10.000 inwoners.</p>
+						<p>De nieuwe CBS-tabel 85658NED loopt tot 2025, maar gebruikt een andere herkomstindeling met minder detailpunten.</p>
+					</article>
+				</section>
+			</div>
+			<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/81959NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Verdachten; geslacht, leeftijd, migratieachtergrond en generatie 1999-2022</a>
+						<span>Hoofdscatter voor 2022. Deze oude CBS-tabel bevat de volledige landenlijst naar migratieachtergrond.</span>
+					</li>
+					<li>
+						<a href="https://www.cbs.nl/nl-nl/cijfers/detail/85658NED" rel="noopener noreferrer" target="_blank">CBS StatLine: Verdachten; geslacht, leeftijd, herkomst, opleiding, huishoudensinkomen</a>
+						<span>Actuele contexttabel tot en met 2025 met de nieuwe CBS-indeling naar herkomst.</span>
+					</li>
+				</ul>
+			</aside>
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+				.project-sources a {
+					font-weight: 700;
+				}
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-06-02</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
