@@ -291,7 +291,7 @@ export const viewSourceNotes = {
 	origin: "CBS StatLine 85671NED, 85468NED en 85848NED; definities verschillen.",
 	emigration: "Bestemming: CBS 85671NED excl. administratieve correcties; overige reeksen incl. correcties.",
 	motives: "CBS 84808ned gebruikt afgeleid migratiedoel voor EU/EFTA; CBS 84809NED gebruikt IND-migratiemotief voor niet-EU/EFTA.",
-	housing: "CBS StatLine voor woningbouw; ABF/Primos voor woningtekort.",
+	housing: "CBS StatLine voor woningbouw; CBS/WBO/WoON en ABF/Primos voor woningtekort.",
 	grid: "Netbeheer Nederland wachtrijreeksen.",
 };
 

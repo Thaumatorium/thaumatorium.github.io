@@ -1,5 +1,5 @@
 {
-	"fetchedAt": "2026-06-01T09:49:52.508Z",
+	"fetchedAt": "2026-06-03T16:50:52.907Z",
 	"note": "CBS StatLine is gebruikt voor bevolking, migratie en woningbouw. Woningtekort komt uit ABF/Primos-publicaties via overheidspublicaties. Stroomnetdata komt uit Netbeheer Nederland publicaties en de actuele capaciteitskaart.",
 	"units": {
 		"population": "personen",
@@ -337,21 +337,21 @@
 			"ShortTitle": "Bevolking; herkomst en geboorteland",
 			"Identifier": "85384NED",
 			"Summary": "Bevolking\nleeftijd, herkomstland, geboorteland (ouders)",
-			"Modified": "2025-05-14T02:00:00",
+			"Modified": "2026-06-03T02:00:00",
 			"ReasonDelivery": "Actualisering",
 			"ExplanatoryText": "",
 			"Language": "nl",
 			"Catalog": "CBS",
 			"Frequency": "Perjaar",
-			"Period": "2022 - 2025",
-			"ShortDescription": "\nBevolking van Nederland op 1 januari naar geslacht, leeftijd, burgerlijke staat, herkomstland, geboorteland en geboorteland ouders.\n\nHet CBS gaat over op een nieuwe indeling van de bevolking naar herkomst. Voortaan is meer bepalend waar iemand zelf geboren is, naast waar iemands ouders geboren zijn. Daarbij wordt het woord migratieachtergrond niet meer gebruikt. De hoofdindeling westers/niet-westers wordt vervangen door een indeling op basis van werelddelen en veelvoorkomende immigratielanden. Deze indeling wordt geleidelijk ingevoerd in tabellen en publicaties met bevolking naar herkomst.\n\nGegevens beschikbaar vanaf: 2022\n\nStatus van de cijfers:\nAlle cijfers in de tabel zijn definitief.\n\nWijzigingen per 14 mei 2025:\nDe definitieve cijfers per 1 januari 2025 zijn toegevoegd.\n\nWanneer komen er nieuwe cijfers?\nVooralsnog is alleen data vanaf 2022 beschikbaar in de tabel. De perioden 1996 tot en met 2021 zullen op een later moment aan de tabel worden toegevoegd.\nIn het 3e kwartaal van 2026 worden de cijfers van de bevolking per 1 januari 2026 aan deze publicatie toegevoegd.\n",
-			"Description": "INHOUDSOPGAVE\r\n\r\n1. Toelichting\r\n2. Definities en verklaring van symbolen\r\n3. Koppelingen naar relevante tabellen en artikelen\r\n4. Bronnen en methoden\r\n5. Meer informatie\r\n\r\n1. TOELICHTING\r\n\r\nBevolking van Nederland op 1 januari naar geslacht, leeftijd, burgerlijke staat, herkomstland, geboorteland en geboorteland ouders.\r\n\r\nHet CBS gaat over op een nieuwe indeling van de bevolking naar herkomst. Voortaan is meer bepalend waar iemand zelf geboren is, naast waar iemands ouders geboren zijn. Daarbij wordt het woord migratieachtergrond niet meer gebruikt. De hoofdindeling westers/niet-westers wordt vervangen door een indeling op basis van werelddelen en veelvoorkomende immigratielanden. Deze indeling wordt geleidelijk ingevoerd in tabellen en publicaties met bevolking naar herkomst.\r\n\r\nGegevens beschikbaar vanaf: 2022\r\n\r\nStatus van de cijfers:\r\nAlle cijfers in de tabel zijn definitief.\r\n\r\nWijzigingen per 14 mei 2025:\r\nDe definitieve cijfers per 1 januari 2025 zijn toegevoegd.\r\n\r\nWanneer komen er nieuwe cijfers?\r\nVooralsnog is alleen data vanaf 2022 beschikbaar in de tabel. De perioden 1996 tot en met 2021 zullen op een later moment aan de tabel worden toegevoegd.\r\nIn het 3e kwartaal van 2026 worden de cijfers van de bevolking per 1 januari 2026 aan deze publicatie toegevoegd.\r\n\r\n2. DEFINITIES EN VERKLARING VAN SYMBOLEN\r\n\r\nDefinities:\r\n\r\nBevolking\r\nDe inwoners van Nederland.\r\nIn de bevolkingsaantallen zijn uitsluitend personen begrepen die zijn opgenomen in het bevolkingsregister van een Nederlandse gemeente. In principe wordt iedereen die voor onbepaalde tijd in Nederland woont, opgenomen in het bevolkingsregister van de woongemeente. Personen die tot de bevolking van Nederland behoren, maar voor wie geen vaste woonplaats valt aan te wijzen, zijn opgenomen in het bevolkingsregister van de gemeente 's-Gravenhage. In de bevolkingsregisters zijn niet opgenomen de in Nederland wonende personen waarvoor uitzonderingsregels gelden met betrekking tot opneming in de bevolkingsregisters (bijvoorbeeld diplomaten en NAVO militairen) en personen die niet legaal in Nederland verblijven.\r\n\r\nBurgerlijke staat\r\nFormele positie van een persoon waarbij wordt verwezen naar het huwelijk en het geregistreerd partnerschap.\r\nPer 1 januari 1998 is het geregistreerd partnerschap ingevoerd. Doorgaans worden het geregistreerd partnerschap en het huwelijk op dezelfde wijze behandeld.\r\n\r\nHerkomstland\r\nKenmerk dat weergeeft in welk land iemand geboren is of waar diens ouders geboren zijn.\r\nDe herkomst van personen die in het buitenland zijn geboren wordt bepaald door hun eigen geboorteland. Bij personen die in Nederland geboren zijn, wordt de \r\nherkomst bepaald door het geboorteland van de ouders. Wanneer beide ouders in het buitenland zijn geboren, is het geboorteland van de moeder leidend in het \r\nbepalen van de herkomst. De geboortegegevens van de moeder zijn vaker bekend dan die van de vader. Wanneer de moeder in Nederland is geboren of het \r\ngeboorteland van de moeder onbekend is, dan wordt het geboorteland van de vader gebruikt. \r\n\r\nLeeftijd\r\nHet aantal gehele jaren dat op 1 januari van het jaar van waarneming is verstreken sinds de geboortedatum van de persoon.\r\nTe berekenen als jaar van waarneming minus één, min het geboortejaar van de persoon.\r\n\r\nVerklaring van symbolen:\r\n\r\nniets (blanco) : het cijfer kan op logische gronden niet voorkomen\r\n. : het cijfer is onbekend, onvoldoende betrouwbaar of geheim\r\n* : voorlopige cijfers\r\n** : nader voorlopige cijfers\r\n\r\n3. KOPPELINGEN NAAR RELEVANTE TABELLEN EN ARTIKELEN\r\n\r\nRelevante tabellen:\r\n<a href='https://opendata.cbs.nl/statline/#/CBS/nl/dataset/85378ned'>Bevolking; positie in het huishouden, herkomstland, 1 januari</a>\r\n<a href='https://opendata.cbs.nl/#/CBS/nl/dataset/85458NED'>Bevolking; herkomstland, geboorteland, leeftijd, regio, 1 januari</a>\r\n\r\nRelevant artikel:\r\n<a href='https://www.cbs.nl/nl-nl/longread/statistische-trends/2022/nieuwe-indeling-bevolking-naar-herkomst'>Nieuwe indeling bevolking naar herkomst</a>\r\n\r\nAlgemene informatie over de bevolking is te vinden op de themapagina <a href='https://www.cbs.nl/nl-nl/maatschappij/bevolking'>Bevolking</a>.\r\n\r\n4. BRONNEN EN METHODEN\r\n\r\nDe gegevens in de tabel zijn samengesteld met behulp van het <a href='https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksbeschrijvingen/stelsel-van-sociaal-statistische-bestanden--ssb--'>Stelsel van Sociaal-statistische Bestanden (SSB)</a>.\r\n\r\nDe beschrijving van het onderzoek is te vinden bij de korte onderzoeksbeschrijving <a href='https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksbeschrijvingen/bevolkingsstatistiek'>Bevolkingsstatistiek</a>.\r\n\r\n5. MEER INFORMATIE\r\n\r\n<a href='https://www.cbs.nl/nl-nl/over-ons/contact/infoservice'>Infoservice</a>\r\n\r\nCopyright (c) Centraal Bureau voor de Statistiek, Den Haag/Heerlen\r\nVerveelvoudiging is toegestaan, mits het CBS als bron wordt vermeld.",
-			"DefaultPresentation": "ts=1745909830645&graphtype=Table&r=Herkomstland&k=Topics,Geboorteland&t=Geslacht,Leeftijd,BurgerlijkeStaat,GeboortelandOuders,Perioden",
-			"DefaultSelection": "$filter=((Geslacht eq 'T001038')) and ((Leeftijd eq '10000')) and ((BurgerlijkeStaat eq 'T001019')) and ((Herkomstland eq '1012600') or (Herkomstland eq 'T001040') or (Herkomstland eq 'H007933') or (Herkomstland eq 'H008632') or (Herkomstland eq 'H008673') or (Herkomstland eq 'H007119') or (Herkomstland eq 'H008751') or (Herkomstland eq 'H008766') or (Herkomstland eq 'H008860') or (Herkomstland eq 'H008861') or (Herkomstland eq 'H008862')) and ((Geboorteland eq 'A051735') or (Geboorteland eq 'A051736')) and ((GeboortelandOuders eq 'T001638')) and ((Perioden eq '2025JJ00'))&$select=Geslacht, Leeftijd, BurgerlijkeStaat, Herkomstland, Geboorteland, GeboortelandOuders, Perioden, Bevolking_1",
+			"Period": "2022 - 2026",
+			"ShortDescription": "\nBevolking van Nederland op 1 januari naar geslacht, leeftijd, burgerlijke staat, herkomstland, geboorteland en geboorteland ouders.\n\nHet CBS gaat over op een nieuwe indeling van de bevolking naar herkomst. Voortaan is meer bepalend waar iemand zelf geboren is, naast waar iemands ouders geboren zijn. Daarbij wordt het woord migratieachtergrond niet meer gebruikt. De hoofdindeling westers/niet-westers wordt vervangen door een indeling op basis van werelddelen en veelvoorkomende immigratielanden. Deze indeling wordt geleidelijk ingevoerd in tabellen en publicaties met bevolking naar herkomst.\n\nGegevens beschikbaar vanaf: 2022\n\nStatus van de cijfers:\nAlle cijfers in de tabel zijn definitief.\n\nWijzigingen per 3 juni 2026:\nDe definitieve cijfers per 1 januari 2026 zijn toegevoegd.\n\nWanneer komen er nieuwe cijfers?\nVooralsnog is alleen data vanaf 2022 beschikbaar in de tabel. De perioden 1996 tot en met 2021 zullen op een later moment aan de tabel worden toegevoegd.\nIn het 3e kwartaal van 2027 worden de cijfers van de bevolking per 1 januari 2027 aan deze publicatie toegevoegd.\n",
+			"Description": "INHOUDSOPGAVE\r\n\r\n1. Toelichting\r\n2. Definities en verklaring van symbolen\r\n3. Koppelingen naar relevante tabellen en artikelen\r\n4. Bronnen en methoden\r\n5. Meer informatie\r\n\r\n1. TOELICHTING\r\n\r\nBevolking van Nederland op 1 januari naar geslacht, leeftijd, burgerlijke staat, herkomstland, geboorteland en geboorteland ouders.\r\n\r\nHet CBS gaat over op een nieuwe indeling van de bevolking naar herkomst. Voortaan is meer bepalend waar iemand zelf geboren is, naast waar iemands ouders geboren zijn. Daarbij wordt het woord migratieachtergrond niet meer gebruikt. De hoofdindeling westers/niet-westers wordt vervangen door een indeling op basis van werelddelen en veelvoorkomende immigratielanden. Deze indeling wordt geleidelijk ingevoerd in tabellen en publicaties met bevolking naar herkomst.\r\n\r\nGegevens beschikbaar vanaf: 2022\r\n\r\nStatus van de cijfers:\r\nAlle cijfers in de tabel zijn definitief.\r\n\r\nWijzigingen per 3 juni 2026:\r\nDe definitieve cijfers per 1 januari 2026 zijn toegevoegd.\r\n\r\nWanneer komen er nieuwe cijfers?\r\nVooralsnog is alleen data vanaf 2022 beschikbaar in de tabel. De perioden 1996 tot en met 2021 zullen op een later moment aan de tabel worden toegevoegd.\r\nIn het 3e kwartaal van 2027 worden de cijfers van de bevolking per 1 januari 2027 aan deze publicatie toegevoegd.\r\n\r\n2. DEFINITIES EN VERKLARING VAN SYMBOLEN\r\n\r\nDefinities:\r\n\r\nBevolking\r\nDe inwoners van Nederland.\r\nIn de bevolkingsaantallen zijn uitsluitend personen begrepen die zijn opgenomen in het bevolkingsregister van een Nederlandse gemeente. In principe wordt iedereen die voor onbepaalde tijd in Nederland woont, opgenomen in het bevolkingsregister van de woongemeente. Personen die tot de bevolking van Nederland behoren, maar voor wie geen vaste woonplaats valt aan te wijzen, zijn opgenomen in het bevolkingsregister van de gemeente 's-Gravenhage. In de bevolkingsregisters zijn niet opgenomen de in Nederland wonende personen waarvoor uitzonderingsregels gelden met betrekking tot opneming in de bevolkingsregisters (bijvoorbeeld diplomaten en NAVO militairen) en personen die niet legaal in Nederland verblijven.\r\n\r\nBurgerlijke staat\r\nFormele positie van een persoon waarbij wordt verwezen naar het huwelijk en het geregistreerd partnerschap.\r\nPer 1 januari 1998 is het geregistreerd partnerschap ingevoerd. Doorgaans worden het geregistreerd partnerschap en het huwelijk op dezelfde wijze behandeld.\r\n\r\nHerkomstland\r\nKenmerk dat weergeeft in welk land iemand geboren is of waar diens ouders geboren zijn.\r\nDe herkomst van personen die in het buitenland zijn geboren wordt bepaald door hun eigen geboorteland. Bij personen die in Nederland geboren zijn, wordt de \r\nherkomst bepaald door het geboorteland van de ouders. Wanneer beide ouders in het buitenland zijn geboren, is het geboorteland van de moeder leidend in het \r\nbepalen van de herkomst. De geboortegegevens van de moeder zijn vaker bekend dan die van de vader. Wanneer de moeder in Nederland is geboren of het \r\ngeboorteland van de moeder onbekend is, dan wordt het geboorteland van de vader gebruikt. \r\n\r\nLeeftijd\r\nHet aantal gehele jaren dat op 1 januari van het jaar van waarneming is verstreken sinds de geboortedatum van de persoon.\r\nTe berekenen als jaar van waarneming minus één, min het geboortejaar van de persoon.\r\n\r\nVerklaring van symbolen:\r\n\r\nniets (blanco) : het cijfer kan op logische gronden niet voorkomen\r\n. : het cijfer is onbekend, onvoldoende betrouwbaar of geheim\r\n* : voorlopige cijfers\r\n** : nader voorlopige cijfers\r\n\r\n3. KOPPELINGEN NAAR RELEVANTE TABELLEN EN ARTIKELEN\r\n\r\nRelevante tabellen:\r\n<a href='https://opendata.cbs.nl/statline/#/CBS/nl/dataset/85378ned'>Bevolking; positie in het huishouden, herkomstland, 1 januari</a>\r\n<a href='https://opendata.cbs.nl/#/CBS/nl/dataset/85458NED'>Bevolking; herkomstland, geboorteland, leeftijd, regio, 1 januari</a>\r\n\r\nRelevant artikel:\r\n<a href='https://www.cbs.nl/nl-nl/longread/statistische-trends/2022/nieuwe-indeling-bevolking-naar-herkomst'>Nieuwe indeling bevolking naar herkomst</a>\r\n\r\nAlgemene informatie over de bevolking is te vinden op de themapagina <a href='https://www.cbs.nl/nl-nl/maatschappij/bevolking'>Bevolking</a>.\r\n\r\n4. BRONNEN EN METHODEN\r\n\r\nDe gegevens in de tabel zijn samengesteld met behulp van het <a href='https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksbeschrijvingen/stelsel-van-sociaal-statistische-bestanden--ssb--'>Stelsel van Sociaal-statistische Bestanden (SSB)</a>.\r\n\r\nDe beschrijving van het onderzoek is te vinden bij de korte onderzoeksbeschrijving <a href='https://www.cbs.nl/nl-nl/onze-diensten/methoden/onderzoeksomschrijvingen/korte-onderzoeksbeschrijvingen/bevolkingsstatistiek'>Bevolkingsstatistiek</a>.\r\n\r\n5. MEER INFORMATIE\r\n\r\n<a href='https://www.cbs.nl/nl-nl/over-ons/contact/infoservice'>Infoservice</a>\r\n\r\nCopyright (c) Centraal Bureau voor de Statistiek, Den Haag/Heerlen\r\nVerveelvoudiging is toegestaan, mits het CBS als bron wordt vermeld.",
+			"DefaultPresentation": "ts=1779871179392&graphtype=Table&r=Herkomstland&k=Topics,Geboorteland&t=Geslacht,Leeftijd,BurgerlijkeStaat,GeboortelandOuders,Perioden",
+			"DefaultSelection": "$filter=((Geslacht eq 'T001038')) and ((Leeftijd eq '10000')) and ((BurgerlijkeStaat eq 'T001019')) and ((Herkomstland eq '1012600') or (Herkomstland eq 'T001040') or (Herkomstland eq 'H007933') or (Herkomstland eq 'H008632') or (Herkomstland eq 'H008673') or (Herkomstland eq 'H007119') or (Herkomstland eq 'H008751') or (Herkomstland eq 'H008766') or (Herkomstland eq 'H008860') or (Herkomstland eq 'H008861') or (Herkomstland eq 'H008862')) and ((Geboorteland eq 'A051735') or (Geboorteland eq 'A051736')) and ((GeboortelandOuders eq 'T001638')) and ((Perioden eq '2026JJ00'))&$select=Geslacht, Leeftijd, BurgerlijkeStaat, Herkomstland, Geboorteland, GeboortelandOuders, Perioden, Bevolking_1",
 			"GraphTypes": "Table,Bar",
 			"OutputStatus": "Regulier",
 			"Source": "CBS.",
-			"MetaDataModified": "2025-05-14T02:00:00",
+			"MetaDataModified": "2026-06-03T02:00:00",
 			"SearchPriority": "2"
 		},
 		"compositionFlows": {
@@ -403,6 +403,132 @@
 	},
 	"derivedSources": {
 		"housingShortage": [
+			{
+				"year": 1947,
+				"shortage": 272000,
+				"percentage": 12.8,
+				"source": "ABF Evaluatie woningtekort / CBS Woningtelling 1947"
+			},
+			{
+				"year": 1948,
+				"shortage": 313000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1949,
+				"shortage": 308000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1950,
+				"shortage": 308000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1951,
+				"shortage": 295000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1952,
+				"shortage": 283000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1953,
+				"shortage": 270000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1954,
+				"shortage": 256000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1955,
+				"shortage": 251000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1956,
+				"shortage": 247000,
+				"percentage": 9.7,
+				"source": "ABF Evaluatie woningtekort / Woningtelling 1956"
+			},
+			{
+				"year": 1964,
+				"shortage": 185100,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / CBS Woningbehoefteonderzoek 1965"
+			},
+			{
+				"year": 1967,
+				"shortage": 101700,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Tweede Kamer 1972"
+			},
+			{
+				"year": 1970,
+				"shortage": 77100,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Tweede Kamer 1972"
+			},
+			{
+				"year": 1977,
+				"shortage": 82000,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / Tweede Kamer 1984"
+			},
+			{
+				"year": 1981,
+				"shortage": 130000,
+				"percentage": 2.6,
+				"source": "ABF Evaluatie woningtekort / Tweede Kamer 1984"
+			},
+			{
+				"year": 1985,
+				"shortage": 127000,
+				"percentage": 2.4,
+				"source": "ABF Evaluatie woningtekort / Tweede Kamer 1984"
+			},
+			{
+				"year": 1989,
+				"shortage": 127000,
+				"percentage": 2.2,
+				"source": "ABF Evaluatie woningtekort / Tweede Kamer 1991"
+			},
+			{
+				"year": 1998,
+				"shortage": 95600,
+				"percentage": null,
+				"source": "ABF Evaluatie woningtekort / WBO 1998"
+			},
+			{
+				"year": 2002,
+				"shortage": 166000,
+				"percentage": 2.5,
+				"source": "ABF Evaluatie woningtekort / VROM 2003"
+			},
+			{
+				"year": 2006,
+				"shortage": 167000,
+				"percentage": 2.4,
+				"source": "Primos Prognose 2011, ABF Research / BZK"
+			},
+			{
+				"year": 2010,
+				"shortage": 139000,
+				"percentage": 1.9,
+				"source": "Primos Prognose 2011, ABF Research / BZK"
+			},
 			{
 				"year": 2012,
 				"shortage": 162000,
@@ -472,8 +598,184 @@
 		],
 		"housingShortageInterpolation": {
 			"method": "Lineaire interpolatie tussen opeenvolgende bekende ABF/Primos-punten; geen extrapolatie buiten de bekende reeks.",
-			"observedYears": [2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+			"observedYears": [1947, 1948, 1949, 1950, 1951, 1952, 1953, 1954, 1955, 1956, 1964, 1967, 1970, 1977, 1981, 1985, 1989, 1998, 2002, 2006, 2010, 2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
 			"interpolatedYears": [
+				{
+					"year": 1957,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1958,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1959,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1960,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1961,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1962,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1963,
+					"basis": [1956, 1964]
+				},
+				{
+					"year": 1965,
+					"basis": [1964, 1967]
+				},
+				{
+					"year": 1966,
+					"basis": [1964, 1967]
+				},
+				{
+					"year": 1968,
+					"basis": [1967, 1970]
+				},
+				{
+					"year": 1969,
+					"basis": [1967, 1970]
+				},
+				{
+					"year": 1971,
+					"basis": [1970, 1977]
+				},
+				{
+					"year": 1972,
+					"basis": [1970, 1977]
+				},
+				{
+					"year": 1973,
+					"basis": [1970, 1977]
+				},
+				{
+					"year": 1974,
+					"basis": [1970, 1977]
+				},
+				{
+					"year": 1975,
+					"basis": [1970, 1977]
+				},
+				{
+					"year": 1976,
+					"basis": [1970, 1977]
+				},
+				{
+					"year": 1978,
+					"basis": [1977, 1981]
+				},
+				{
+					"year": 1979,
+					"basis": [1977, 1981]
+				},
+				{
+					"year": 1980,
+					"basis": [1977, 1981]
+				},
+				{
+					"year": 1982,
+					"basis": [1981, 1985]
+				},
+				{
+					"year": 1983,
+					"basis": [1981, 1985]
+				},
+				{
+					"year": 1984,
+					"basis": [1981, 1985]
+				},
+				{
+					"year": 1986,
+					"basis": [1985, 1989]
+				},
+				{
+					"year": 1987,
+					"basis": [1985, 1989]
+				},
+				{
+					"year": 1988,
+					"basis": [1985, 1989]
+				},
+				{
+					"year": 1990,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1991,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1992,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1993,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1994,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1995,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1996,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1997,
+					"basis": [1989, 1998]
+				},
+				{
+					"year": 1999,
+					"basis": [1998, 2002]
+				},
+				{
+					"year": 2000,
+					"basis": [1998, 2002]
+				},
+				{
+					"year": 2001,
+					"basis": [1998, 2002]
+				},
+				{
+					"year": 2003,
+					"basis": [2002, 2006]
+				},
+				{
+					"year": 2004,
+					"basis": [2002, 2006]
+				},
+				{
+					"year": 2005,
+					"basis": [2002, 2006]
+				},
+				{
+					"year": 2007,
+					"basis": [2006, 2010]
+				},
+				{
+					"year": 2008,
+					"basis": [2006, 2010]
+				},
+				{
+					"year": 2009,
+					"basis": [2006, 2010]
+				},
+				{
+					"year": 2011,
+					"basis": [2010, 2012]
+				},
 				{
 					"year": 2013,
 					"basis": [2012, 2015]
@@ -490,7 +792,7 @@
 		},
 		"bornAbroadPopulationBackcast": {
 			"method": "Voor jaren zonder directe CBS-voorraad geboren buiten Nederland wordt 1e generatie migratieachtergrond vermeerderd met een vaste offset voor buiten Nederland geboren personen met twee in Nederland geboren ouders. Voor 1972-1995 gebruikt de 1e generatie-reeks de CBS-reconstructie uit 70787NED.",
-			"offsetPersons": 138147,
+			"offsetPersons": 137982,
 			"directYears": [2022, 2023, 2024, 2025]
 		},
 		"nativeBackgroundProxyBackcast": {
@@ -505,7 +807,7 @@
 		"populationMinusNetMigrationCalibration": {
 			"method": "De lijn 'bevolking min cum. nettomigratie' sluit vanaf het eerste overlapjaar aan op de voorraad geboren buiten Nederland; voor eerdere jaren wordt een niet-nul basisvoorraad gebruikt bovenop de cumulatieve nettomigratie zodat de reeks niet impliciet op nul migranten start.",
 			"anchorYear": 1972,
-			"baseStockPersons": 746053
+			"baseStockPersons": 745888
 		},
 		"gridQueue": [
 			{
@@ -735,7 +1037,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4354947
+			"populationMinusNetMigration": 4355112
 		},
 		{
 			"year": 1901,
@@ -819,7 +1121,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4410947
+			"populationMinusNetMigration": 4411112
 		},
 		{
 			"year": 1902,
@@ -903,7 +1205,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4480947
+			"populationMinusNetMigration": 4481112
 		},
 		{
 			"year": 1903,
@@ -987,7 +1289,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4561947
+			"populationMinusNetMigration": 4562112
 		},
 		{
 			"year": 1904,
@@ -1071,7 +1373,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4645947
+			"populationMinusNetMigration": 4646112
 		},
 		{
 			"year": 1905,
@@ -1155,7 +1457,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4726947
+			"populationMinusNetMigration": 4727112
 		},
 		{
 			"year": 1906,
@@ -1239,7 +1541,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4811947
+			"populationMinusNetMigration": 4812112
 		},
 		{
 			"year": 1907,
@@ -1323,7 +1625,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4904947
+			"populationMinusNetMigration": 4905112
 		},
 		{
 			"year": 1908,
@@ -1407,7 +1709,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 4992947
+			"populationMinusNetMigration": 4993112
 		},
 		{
 			"year": 1909,
@@ -1491,7 +1793,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5085947
+			"populationMinusNetMigration": 5086112
 		},
 		{
 			"year": 1910,
@@ -1575,7 +1877,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5171947
+			"populationMinusNetMigration": 5172112
 		},
 		{
 			"year": 1911,
@@ -1659,7 +1961,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5267947
+			"populationMinusNetMigration": 5268112
 		},
 		{
 			"year": 1912,
@@ -1743,7 +2045,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5353947
+			"populationMinusNetMigration": 5354112
 		},
 		{
 			"year": 1913,
@@ -1827,7 +2129,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5453947
+			"populationMinusNetMigration": 5454112
 		},
 		{
 			"year": 1914,
@@ -1911,7 +2213,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5529947
+			"populationMinusNetMigration": 5530112
 		},
 		{
 			"year": 1915,
@@ -1995,7 +2297,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5613947
+			"populationMinusNetMigration": 5614112
 		},
 		{
 			"year": 1916,
@@ -2079,7 +2381,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5661947
+			"populationMinusNetMigration": 5662112
 		},
 		{
 			"year": 1917,
@@ -2163,7 +2465,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5704947
+			"populationMinusNetMigration": 5705112
 		},
 		{
 			"year": 1918,
@@ -2247,7 +2549,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5797947
+			"populationMinusNetMigration": 5798112
 		},
 		{
 			"year": 1919,
@@ -2331,7 +2633,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5876947
+			"populationMinusNetMigration": 5877112
 		},
 		{
 			"year": 1920,
@@ -2415,7 +2717,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 5976947
+			"populationMinusNetMigration": 5977112
 		},
 		{
 			"year": 1921,
@@ -2499,7 +2801,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6092947
+			"populationMinusNetMigration": 6093112
 		},
 		{
 			"year": 1922,
@@ -2583,7 +2885,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6196947
+			"populationMinusNetMigration": 6197112
 		},
 		{
 			"year": 1923,
@@ -2667,7 +2969,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6288947
+			"populationMinusNetMigration": 6289112
 		},
 		{
 			"year": 1924,
@@ -2751,7 +3053,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6412947
+			"populationMinusNetMigration": 6413112
 		},
 		{
 			"year": 1925,
@@ -2835,7 +3137,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6529947
+			"populationMinusNetMigration": 6530112
 		},
 		{
 			"year": 1926,
@@ -2919,7 +3221,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6631947
+			"populationMinusNetMigration": 6632112
 		},
 		{
 			"year": 1927,
@@ -3003,7 +3305,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6735947
+			"populationMinusNetMigration": 6736112
 		},
 		{
 			"year": 1928,
@@ -3087,7 +3389,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6834947
+			"populationMinusNetMigration": 6835112
 		},
 		{
 			"year": 1929,
@@ -3171,7 +3473,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 6933947
+			"populationMinusNetMigration": 6934112
 		},
 		{
 			"year": 1930,
@@ -3255,7 +3557,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7020947
+			"populationMinusNetMigration": 7021112
 		},
 		{
 			"year": 1931,
@@ -3339,7 +3641,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7103947
+			"populationMinusNetMigration": 7104112
 		},
 		{
 			"year": 1932,
@@ -3423,7 +3725,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7212947
+			"populationMinusNetMigration": 7213112
 		},
 		{
 			"year": 1933,
@@ -3507,7 +3809,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7325947
+			"populationMinusNetMigration": 7326112
 		},
 		{
 			"year": 1934,
@@ -3591,7 +3893,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7433947
+			"populationMinusNetMigration": 7434112
 		},
 		{
 			"year": 1935,
@@ -3675,7 +3977,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7549947
+			"populationMinusNetMigration": 7550112
 		},
 		{
 			"year": 1936,
@@ -3759,7 +4061,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7648947
+			"populationMinusNetMigration": 7649112
 		},
 		{
 			"year": 1937,
@@ -3843,7 +4145,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7742947
+			"populationMinusNetMigration": 7743112
 		},
 		{
 			"year": 1938,
@@ -3927,7 +4229,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7840947
+			"populationMinusNetMigration": 7841112
 		},
 		{
 			"year": 1939,
@@ -4011,7 +4313,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 7930947
+			"populationMinusNetMigration": 7931112
 		},
 		{
 			"year": 1940,
@@ -4095,7 +4397,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8042947
+			"populationMinusNetMigration": 8043112
 		},
 		{
 			"year": 1941,
@@ -4179,7 +4481,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8138947
+			"populationMinusNetMigration": 8139112
 		},
 		{
 			"year": 1942,
@@ -4263,7 +4565,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8257947
+			"populationMinusNetMigration": 8258112
 		},
 		{
 			"year": 1943,
@@ -4347,7 +4649,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8387947
+			"populationMinusNetMigration": 8388112
 		},
 		{
 			"year": 1944,
@@ -4431,7 +4733,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8459947
+			"populationMinusNetMigration": 8460112
 		},
 		{
 			"year": 1945,
@@ -4515,7 +4817,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8537947
+			"populationMinusNetMigration": 8538112
 		},
 		{
 			"year": 1946,
@@ -4599,7 +4901,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8580947
+			"populationMinusNetMigration": 8581112
 		},
 		{
 			"year": 1947,
@@ -4672,8 +4974,8 @@
 			"totalHomeBuilding": 9770,
 			"netHousingStockGrowth": -52595,
 			"housingStock": 2095000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 272000,
+			"housingShortagePct": 12.8,
 			"personsPerHome": 4.555131264916468,
 			"populationGrowthPerNetHome": -3.289286053807396,
 			"netHousingStockGrowthPer1000Residents": -5.511369590275594,
@@ -4683,7 +4985,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 8830947
+			"populationMinusNetMigration": 8831112
 		},
 		{
 			"year": 1948,
@@ -4756,7 +5058,7 @@
 			"totalHomeBuilding": 38224,
 			"netHousingStockGrowth": 36891,
 			"housingStock": 2132000,
-			"housingShortage": null,
+			"housingShortage": 313000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.557223264540338,
 			"populationGrowthPerNetHome": 4.581063131929197,
@@ -4767,7 +5069,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9023947
+			"populationMinusNetMigration": 9024112
 		},
 		{
 			"year": 1949,
@@ -4840,7 +5142,7 @@
 			"totalHomeBuilding": 46269,
 			"netHousingStockGrowth": 46211,
 			"housingStock": 2178000,
-			"housingShortage": null,
+			"housingShortage": 308000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.5381083562901745,
 			"populationGrowthPerNetHome": 3.072861439916903,
@@ -4851,7 +5153,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9213947
+			"populationMinusNetMigration": 9214112
 		},
 		{
 			"year": 1950,
@@ -4924,7 +5226,7 @@
 			"totalHomeBuilding": 54406,
 			"netHousingStockGrowth": 51693,
 			"housingStock": 2230000,
-			"housingShortage": null,
+			"housingShortage": 308000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.496310762331839,
 			"populationGrowthPerNetHome": 3.3564892732091387,
@@ -4935,7 +5237,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9336720
+			"populationMinusNetMigration": 9336885
 		},
 		{
 			"year": 1951,
@@ -5008,7 +5310,7 @@
 			"totalHomeBuilding": 64179,
 			"netHousingStockGrowth": 61513,
 			"housingStock": 2291000,
-			"housingShortage": null,
+			"housingShortage": 295000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.452326494980358,
 			"populationGrowthPerNetHome": 2.0818851299725263,
@@ -5019,7 +5321,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9532227
+			"populationMinusNetMigration": 9532392
 		},
 		{
 			"year": 1952,
@@ -5092,7 +5394,7 @@
 			"totalHomeBuilding": 56697,
 			"netHousingStockGrowth": 54024,
 			"housingStock": 2345000,
-			"housingShortage": null,
+			"housingShortage": 283000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.40441066098081,
 			"populationGrowthPerNetHome": 1.98593217829113,
@@ -5103,7 +5405,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9708290
+			"populationMinusNetMigration": 9708455
 		},
 		{
 			"year": 1953,
@@ -5176,7 +5478,7 @@
 			"totalHomeBuilding": 62133,
 			"netHousingStockGrowth": 54240,
 			"housingStock": 2399000,
-			"housingShortage": null,
+			"housingShortage": 270000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.349992080033347,
 			"populationGrowthPerNetHome": 2.122160766961652,
@@ -5187,7 +5489,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9847578
+			"populationMinusNetMigration": 9847743
 		},
 		{
 			"year": 1954,
@@ -5260,7 +5562,7 @@
 			"totalHomeBuilding": 69490,
 			"netHousingStockGrowth": 60528,
 			"housingStock": 2460000,
-			"housingShortage": null,
+			"housingShortage": 256000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.288917479674796,
 			"populationGrowthPerNetHome": 2.1359701295268305,
@@ -5271,7 +5573,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 9981684
+			"populationMinusNetMigration": 9981849
 		},
 		{
 			"year": 1955,
@@ -5344,7 +5646,7 @@
 			"totalHomeBuilding": 60544,
 			"netHousingStockGrowth": 52370,
 			"housingStock": 2512000,
-			"housingShortage": null,
+			"housingShortage": 251000,
 			"housingShortagePct": null,
 			"personsPerHome": 4.251601512738853,
 			"populationGrowthPerNetHome": 2.7045636814970404,
@@ -5355,7 +5657,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 10115970
+			"populationMinusNetMigration": 10116135
 		},
 		{
 			"year": 1956,
@@ -5428,8 +5730,8 @@
 			"totalHomeBuilding": 67092,
 			"netHousingStockGrowth": 70441,
 			"housingStock": 2583000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 247000,
+			"housingShortagePct": 9.7,
 			"personsPerHome": 4.189570654277971,
 			"populationGrowthPerNetHome": 1.9218778836189152,
 			"netHousingStockGrowthPer1000Residents": 6.5092595304916685,
@@ -5439,7 +5741,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 10268608
+			"populationMinusNetMigration": 10268773
 		},
 		{
 			"year": 1957,
@@ -5512,18 +5814,18 @@
 			"totalHomeBuilding": 86778,
 			"netHousingStockGrowth": 81137,
 			"housingStock": 2664000,
-			"housingShortage": null,
+			"housingShortage": 239263,
 			"housingShortagePct": null,
 			"personsPerHome": 4.113003003003003,
 			"populationGrowthPerNetHome": 1.7092818319632226,
 			"netHousingStockGrowthPer1000Residents": 7.405010842344283,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 10416987
+			"populationMinusNetMigration": 10417152
 		},
 		{
 			"year": 1958,
@@ -5596,18 +5898,18 @@
 			"totalHomeBuilding": 87307,
 			"netHousingStockGrowth": 80484,
 			"housingStock": 2744000,
-			"housingShortage": null,
+			"housingShortage": 231525,
 			"housingShortagePct": null,
 			"personsPerHome": 4.043631924198251,
 			"populationGrowthPerNetHome": 2.265021619203817,
 			"netHousingStockGrowthPer1000Residents": 7.2536037750030955,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 10543673
+			"populationMinusNetMigration": 10543838
 		},
 		{
 			"year": 1959,
@@ -5680,18 +5982,18 @@
 			"totalHomeBuilding": 81091,
 			"netHousingStockGrowth": 73970,
 			"housingStock": 2818000,
-			"housingShortage": null,
+			"housingShortage": 223788,
 			"housingShortagePct": null,
 			"personsPerHome": 4.002137686302342,
 			"populationGrowthPerNetHome": 1.882249560632689,
 			"netHousingStockGrowthPer1000Residents": 6.558773061663993,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 10742971
+			"populationMinusNetMigration": 10743136
 		},
 		{
 			"year": 1960,
@@ -5764,18 +6066,18 @@
 			"totalHomeBuilding": 80895,
 			"netHousingStockGrowth": 53282,
 			"housingStock": 2872000,
-			"housingShortage": null,
+			"housingShortage": 216050,
 			"housingShortagePct": null,
 			"personsPerHome": 3.975366991643454,
 			"populationGrowthPerNetHome": 2.604143988589017,
 			"netHousingStockGrowthPer1000Residents": 4.666796411816712,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 10895201
+			"populationMinusNetMigration": 10895366
 		},
 		{
 			"year": 1961,
@@ -5848,18 +6150,18 @@
 			"totalHomeBuilding": 79385,
 			"netHousingStockGrowth": 70537,
 			"housingStock": 2942000,
-			"housingShortage": null,
+			"housingShortage": 208313,
 			"housingShortagePct": null,
 			"personsPerHome": 3.927942895989123,
 			"populationGrowthPerNetHome": 2.3449820661496803,
 			"netHousingStockGrowthPer1000Residents": 6.1039244694188515,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11027955
+			"populationMinusNetMigration": 11028120
 		},
 		{
 			"year": 1962,
@@ -5932,18 +6234,18 @@
 			"totalHomeBuilding": 74683,
 			"netHousingStockGrowth": 65713,
 			"housingStock": 3008000,
-			"housingShortage": null,
+			"housingShortage": 200575,
 			"housingShortagePct": null,
 			"personsPerHome": 3.8967473404255317,
 			"populationGrowthPerNetHome": 2.5648806172294676,
 			"netHousingStockGrowthPer1000Residents": 5.606233922590922,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11176363
+			"populationMinusNetMigration": 11176528
 		},
 		{
 			"year": 1963,
@@ -6016,18 +6318,18 @@
 			"totalHomeBuilding": 76314,
 			"netHousingStockGrowth": 64204,
 			"housingStock": 3072000,
-			"housingShortage": null,
+			"housingShortage": 192838,
 			"housingShortagePct": null,
 			"personsPerHome": 3.8704303385416665,
 			"populationGrowthPerNetHome": 2.3675783440284093,
 			"netHousingStockGrowthPer1000Residents": 5.399849049139097,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1956, 1964],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11336909
+			"populationMinusNetMigration": 11337074
 		},
 		{
 			"year": 1964,
@@ -6100,7 +6402,7 @@
 			"totalHomeBuilding": 97610,
 			"netHousingStockGrowth": 87692,
 			"housingStock": 3160000,
-			"housingShortage": null,
+			"housingShortage": 185100,
 			"housingShortagePct": null,
 			"personsPerHome": 3.81075,
 			"populationGrowthPerNetHome": 1.942012954431419,
@@ -6111,7 +6413,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11474917
+			"populationMinusNetMigration": 11475082
 		},
 		{
 			"year": 1965,
@@ -6184,18 +6486,18 @@
 			"totalHomeBuilding": 111522,
 			"netHousingStockGrowth": 101278,
 			"housingStock": 3261000,
-			"housingShortage": null,
+			"housingShortage": 157300,
 			"housingShortagePct": null,
 			"personsPerHome": 3.7449460288255136,
 			"populationGrowthPerNetHome": 1.6284385552637295,
 			"netHousingStockGrowthPer1000Residents": 8.29313537066699,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1964, 1967],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11626216
+			"populationMinusNetMigration": 11626381
 		},
 		{
 			"year": 1966,
@@ -6268,18 +6570,18 @@
 			"totalHomeBuilding": 115685,
 			"netHousingStockGrowth": 104970,
 			"housingStock": 3366000,
-			"housingShortage": null,
+			"housingShortage": 129500,
 			"housingShortagePct": null,
 			"personsPerHome": 3.6771224004753416,
 			"populationGrowthPerNetHome": 1.506268457654568,
 			"netHousingStockGrowthPer1000Residents": 8.480920635161734,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1964, 1967],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11771141
+			"populationMinusNetMigration": 11771306
 		},
 		{
 			"year": 1967,
@@ -6352,7 +6654,7 @@
 			"totalHomeBuilding": 121650,
 			"netHousingStockGrowth": 110934,
 			"housingStock": 3477000,
-			"housingShortage": null,
+			"housingShortage": 101700,
 			"housingShortagePct": null,
 			"personsPerHome": 3.605207650273224,
 			"populationGrowthPerNetHome": 1.1338994357005066,
@@ -6363,7 +6665,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 11941254
+			"populationMinusNetMigration": 11941419
 		},
 		{
 			"year": 1968,
@@ -6436,18 +6738,18 @@
 			"totalHomeBuilding": 116691,
 			"netHousingStockGrowth": 105094,
 			"housingStock": 3582000,
-			"housingShortage": null,
+			"housingShortage": 93500,
 			"housingShortagePct": null,
 			"personsPerHome": 3.53464405360134,
 			"populationGrowthPerNetHome": 1.3059832150265476,
 			"netHousingStockGrowthPer1000Residents": 8.300545884854351,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1967, 1970],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12061042
+			"populationMinusNetMigration": 12061207
 		},
 		{
 			"year": 1969,
@@ -6520,18 +6822,18 @@
 			"totalHomeBuilding": 116908,
 			"netHousingStockGrowth": 105317,
 			"housingStock": 3687000,
-			"housingShortage": null,
+			"housingShortage": 85300,
 			"housingShortagePct": null,
 			"personsPerHome": 3.4712085706536477,
 			"populationGrowthPerNetHome": 1.5123389386328894,
 			"netHousingStockGrowthPer1000Residents": 8.228953960144537,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1967, 1970],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12178293
+			"populationMinusNetMigration": 12178458
 		},
 		{
 			"year": 1970,
@@ -6604,7 +6906,7 @@
 			"totalHomeBuilding": 111064,
 			"netHousingStockGrowth": 99201,
 			"housingStock": 3787000,
-			"housingShortage": null,
+			"housingShortage": 77100,
 			"housingShortagePct": null,
 			"personsPerHome": 3.421605756535516,
 			"populationGrowthPerNetHome": 1.6311226701343737,
@@ -6615,7 +6917,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12304568
+			"populationMinusNetMigration": 12304733
 		},
 		{
 			"year": 1971,
@@ -6688,18 +6990,18 @@
 			"totalHomeBuilding": 129478,
 			"netHousingStockGrowth": 119155,
 			"housingStock": 3906000,
-			"housingShortage": null,
+			"housingShortage": 77800,
 			"housingShortagePct": null,
 			"personsPerHome": 3.35878904249872,
 			"populationGrowthPerNetHome": 1.2599806974109353,
 			"netHousingStockGrowthPer1000Residents": 9.082330558568474,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1970, 1977],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12433377
+			"populationMinusNetMigration": 12433542
 		},
 		{
 			"year": 1972,
@@ -6719,8 +7021,8 @@
 			"netMigrationPctPopulation": 0.14318482078121186,
 			"cumulativeImmigration": 3316000,
 			"cumulativeNetMigration": -41000,
-			"bornAbroadPopulation": 705053,
-			"bornAbroadPopulationPctPopulation": 5.313309865592409,
+			"bornAbroadPopulation": 704888,
+			"bornAbroadPopulationPctPopulation": 5.312066418464572,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12044403,
 			"nativeBackgroundProxyPctPopulation": 90.76714131429951,
@@ -6732,7 +7034,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 4.960630579921886,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -6772,18 +7074,18 @@
 			"totalHomeBuilding": 147963,
 			"netHousingStockGrowth": 137784,
 			"housingStock": 4043000,
-			"housingShortage": null,
+			"housingShortage": 78500,
 			"housingShortagePct": null,
 			"personsPerHome": 3.2821080880534255,
 			"populationGrowthPerNetHome": 0.8568484003948209,
 			"netHousingStockGrowthPer1000Residents": 10.383461761325524,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1970, 1977],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12564510
+			"populationMinusNetMigration": 12564675
 		},
 		{
 			"year": 1973,
@@ -6803,8 +7105,8 @@
 			"netMigrationPctPopulation": 0.15686130390734784,
 			"cumulativeImmigration": 3401000,
 			"cumulativeNetMigration": -20000,
-			"bornAbroadPopulation": 724800,
-			"bornAbroadPopulationPctPopulation": 5.413955860573606,
+			"bornAbroadPopulation": 724635,
+			"bornAbroadPopulationPctPopulation": 5.412723378900048,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12126867,
 			"nativeBackgroundProxyPctPopulation": 90.58267475861847,
@@ -6816,7 +7118,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.035270264183567,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -6856,18 +7158,18 @@
 			"totalHomeBuilding": 151891,
 			"netHousingStockGrowth": 142867,
 			"housingStock": 4186000,
-			"housingShortage": null,
+			"housingShortage": 79200,
 			"housingShortagePct": null,
 			"personsPerHome": 3.198189918776875,
 			"populationGrowthPerNetHome": 0.7237290626946741,
 			"netHousingStockGrowthPer1000Residents": 10.671573288252889,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1970, 1977],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12662823
+			"populationMinusNetMigration": 12662988
 		},
 		{
 			"year": 1974,
@@ -6887,8 +7189,8 @@
 			"netMigrationPctPopulation": 0.24460715349914236,
 			"cumulativeImmigration": 3495000,
 			"cumulativeNetMigration": 13000,
-			"bornAbroadPopulation": 748596,
-			"bornAbroadPopulationPctPopulation": 5.548846566086182,
+			"bornAbroadPopulation": 748431,
+			"bornAbroadPopulationPctPopulation": 5.5476235303186865,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12192307,
 			"nativeBackgroundProxyPctPopulation": 90.37350029871722,
@@ -6900,7 +7202,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.101645390785871,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -6940,18 +7242,18 @@
 			"totalHomeBuilding": 141726,
 			"netHousingStockGrowth": 132133,
 			"housingStock": 4318000,
-			"housingShortage": null,
+			"housingShortage": 79900,
 			"housingShortagePct": null,
 			"personsPerHome": 3.124367762853173,
 			"populationGrowthPerNetHome": 0.8179031733177934,
 			"netHousingStockGrowthPer1000Residents": 9.79414454948551,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1970, 1977],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12742424
+			"populationMinusNetMigration": 12742589
 		},
 		{
 			"year": 1975,
@@ -6971,8 +7273,8 @@
 			"netMigrationPctPopulation": 0.5294471130866679,
 			"cumulativeImmigration": 3622000,
 			"cumulativeNetMigration": 85000,
-			"bornAbroadPopulation": 783094,
-			"bornAbroadPopulationPctPopulation": 5.758428577437376,
+			"bornAbroadPopulation": 782929,
+			"bornAbroadPopulationPctPopulation": 5.757215261136552,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12251409,
 			"nativeBackgroundProxyPctPopulation": 90.0899045318614,
@@ -6984,7 +7286,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.167521478639898,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7024,18 +7326,18 @@
 			"totalHomeBuilding": 117953,
 			"netHousingStockGrowth": 77086,
 			"housingStock": 4396000,
-			"housingShortage": null,
+			"housingShortage": 80600,
 			"housingShortagePct": null,
 			"personsPerHome": 3.0935150136487715,
 			"populationGrowthPerNetHome": 1.7446228887216875,
 			"netHousingStockGrowthPer1000Residents": 5.6684666888054,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1970, 1977],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12815998
+			"populationMinusNetMigration": 12816163
 		},
 		{
 			"year": 1976,
@@ -7055,8 +7357,8 @@
 			"netMigrationPctPopulation": 0.152909897187754,
 			"cumulativeImmigration": 3705000,
 			"cumulativeNetMigration": 106000,
-			"bornAbroadPopulation": 850522,
-			"bornAbroadPopulationPctPopulation": 6.1930110274249,
+			"bornAbroadPopulation": 850357,
+			"bornAbroadPopulationPctPopulation": 6.191809592518425,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12303541,
 			"nativeBackgroundProxyPctPopulation": 89.58729473120552,
@@ -7068,7 +7370,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.225601077883709,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7108,18 +7410,18 @@
 			"totalHomeBuilding": 102783,
 			"netHousingStockGrowth": 94006,
 			"housingStock": 4490000,
-			"housingShortage": null,
+			"housingShortage": 81300,
 			"housingShortagePct": null,
 			"personsPerHome": 3.0587033407572384,
 			"populationGrowthPerNetHome": 0.8607642065400081,
 			"netHousingStockGrowthPer1000Residents": 6.844975140491429,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1970, 1977],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12883056
+			"populationMinusNetMigration": 12883221
 		},
 		{
 			"year": 1977,
@@ -7139,8 +7441,8 @@
 			"netMigrationPctPopulation": 0.1447754695339931,
 			"cumulativeImmigration": 3789000,
 			"cumulativeNetMigration": 126000,
-			"bornAbroadPopulation": 869348,
-			"bornAbroadPopulationPctPopulation": 6.293013244421891,
+			"bornAbroadPopulation": 869183,
+			"bornAbroadPopulationPctPopulation": 6.291818846798236,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12349636,
 			"nativeBackgroundProxyPctPopulation": 89.39621752369521,
@@ -7152,7 +7454,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.3107840713685155,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7192,7 +7494,7 @@
 			"totalHomeBuilding": 107077,
 			"netHousingStockGrowth": 99960,
 			"housingStock": 4590000,
-			"housingShortage": null,
+			"housingShortage": 82000,
 			"housingShortagePct": null,
 			"personsPerHome": 3.009693899782135,
 			"populationGrowthPerNetHome": 0.8341236494597839,
@@ -7203,7 +7505,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 12945147
+			"populationMinusNetMigration": 12945312
 		},
 		{
 			"year": 1978,
@@ -7223,8 +7525,8 @@
 			"netMigrationPctPopulation": 0.19427431850367907,
 			"cumulativeImmigration": 3878000,
 			"cumulativeNetMigration": 153000,
-			"bornAbroadPopulation": 890942,
-			"bornAbroadPopulationPctPopulation": 6.410635180603882,
+			"bornAbroadPopulation": 890777,
+			"bornAbroadPopulationPctPopulation": 6.409447948657471,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12394177,
 			"nativeBackgroundProxyPctPopulation": 89.18038111440642,
@@ -7236,7 +7538,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.402999048631467,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7276,18 +7578,18 @@
 			"totalHomeBuilding": 102681,
 			"netHousingStockGrowth": 96152,
 			"housingStock": 4686000,
-			"housingShortage": null,
+			"housingShortage": 94000,
 			"housingShortagePct": null,
 			"personsPerHome": 2.9658288518992744,
 			"populationGrowthPerNetHome": 0.9115983026874116,
 			"netHousingStockGrowthPer1000Residents": 6.918468249172499,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1977, 1981],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13006932
+			"populationMinusNetMigration": 13007097
 		},
 		{
 			"year": 1979,
@@ -7307,8 +7609,8 @@
 			"netMigrationPctPopulation": 0.30746072761224713,
 			"cumulativeImmigration": 3983000,
 			"cumulativeNetMigration": 196000,
-			"bornAbroadPopulation": 920276,
-			"bornAbroadPopulationPctPopulation": 6.580202989862519,
+			"bornAbroadPopulation": 920111,
+			"bornAbroadPopulationPctPopulation": 6.579023198698426,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12433617,
 			"nativeBackgroundProxyPctPopulation": 88.9034634807443,
@@ -7320,7 +7622,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.504119044217572,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7360,18 +7662,18 @@
 			"totalHomeBuilding": 84749,
 			"netHousingStockGrowth": 77748,
 			"housingStock": 4763000,
-			"housingShortage": null,
+			"housingShortage": 106000,
 			"housingShortagePct": null,
 			"personsPerHome": 2.9362851144236823,
 			"populationGrowthPerNetHome": 1.356793743890518,
 			"netHousingStockGrowthPer1000Residents": 5.559175965208602,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1977, 1981],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13065250
+			"populationMinusNetMigration": 13065415
 		},
 		{
 			"year": 1980,
@@ -7391,8 +7693,8 @@
 			"netMigrationPctPopulation": 0.3619327892229757,
 			"cumulativeImmigration": 4096000,
 			"cumulativeNetMigration": 247000,
-			"bornAbroadPopulation": 965508,
-			"bornAbroadPopulationPctPopulation": 6.8519412442568015,
+			"bornAbroadPopulation": 965343,
+			"bornAbroadPopulationPctPopulation": 6.850770285232845,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12473795,
 			"nativeBackgroundProxyPctPopulation": 88.52304738324722,
@@ -7404,7 +7706,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.605402137844728,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7444,18 +7746,18 @@
 			"totalHomeBuilding": 111423,
 			"netHousingStockGrowth": 105069,
 			"housingStock": 4868000,
-			"housingShortage": null,
+			"housingShortage": 118000,
 			"housingShortagePct": null,
 			"personsPerHome": 2.8946207888249793,
 			"populationGrowthPerNetHome": 1.1189979917958675,
 			"netHousingStockGrowthPer1000Residents": 7.456454162915459,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1977, 1981],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13125506
+			"populationMinusNetMigration": 13125671
 		},
 		{
 			"year": 1981,
@@ -7475,8 +7777,8 @@
 			"netMigrationPctPopulation": 0.0985319721469821,
 			"cumulativeImmigration": 4176000,
 			"cumulativeNetMigration": 261000,
-			"bornAbroadPopulation": 1018913,
-			"bornAbroadPopulationPctPopulation": 7.1711076668712845,
+			"bornAbroadPopulation": 1018748,
+			"bornAbroadPopulationPctPopulation": 7.169946397199553,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12515323,
 			"nativeBackgroundProxyPctPopulation": 88.08281837474891,
@@ -7488,7 +7790,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.71835226953618,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7528,8 +7830,8 @@
 			"totalHomeBuilding": 117654,
 			"netHousingStockGrowth": 110034,
 			"housingStock": 4979000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 130000,
+			"housingShortagePct": 2.6,
 			"personsPerHome": 2.8537027515565376,
 			"populationGrowthPerNetHome": 0.7019921115291637,
 			"netHousingStockGrowthPer1000Residents": 7.744190730872164,
@@ -7539,7 +7841,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13189673
+			"populationMinusNetMigration": 13189838
 		},
 		{
 			"year": 1982,
@@ -7559,8 +7861,8 @@
 			"netMigrationPctPopulation": -0.006999943790451363,
 			"cumulativeImmigration": 4247000,
 			"cumulativeNetMigration": 260000,
-			"bornAbroadPopulation": 1038478,
-			"bornAbroadPopulationPctPopulation": 7.269287627620351,
+			"bornAbroadPopulation": 1038313,
+			"bornAbroadPopulationPctPopulation": 7.268132636894925,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12550016,
 			"nativeBackgroundProxyPctPopulation": 87.84940656926526,
@@ -7572,7 +7874,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.848327037933886,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7612,18 +7914,18 @@
 			"totalHomeBuilding": 124197,
 			"netHousingStockGrowth": 117346,
 			"housingStock": 5096000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 129250,
+			"housingShortagePct": 2.6,
 			"personsPerHome": 2.803341640502355,
 			"populationGrowthPerNetHome": 0.45780853203347366,
 			"netHousingStockGrowthPer1000Residents": 8.214154040343056,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1981, 1985],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13247351
+			"populationMinusNetMigration": 13247516
 		},
 		{
 			"year": 1983,
@@ -7643,8 +7945,8 @@
 			"netMigrationPctPopulation": 0.01394743810318747,
 			"cumulativeImmigration": 4314000,
 			"cumulativeNetMigration": 262000,
-			"bornAbroadPopulation": 1045134,
-			"bornAbroadPopulationPctPopulation": 7.288470887268367,
+			"bornAbroadPopulation": 1044969,
+			"bornAbroadPopulationPctPopulation": 7.287320223624855,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12575181,
 			"nativeBackgroundProxyPctPopulation": 87.69577931693956,
@@ -7656,7 +7958,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 5.979148161612591,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7696,18 +7998,18 @@
 			"totalHomeBuilding": 112087,
 			"netHousingStockGrowth": 108887,
 			"housingStock": 5205000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 128500,
+			"housingShortagePct": 2.5,
 			"personsPerHome": 2.7549569644572527,
 			"populationGrowthPerNetHome": 0.5054597885881694,
 			"netHousingStockGrowthPer1000Residents": 7.593473463708871,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1981, 1985],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13294417
+			"populationMinusNetMigration": 13294582
 		},
 		{
 			"year": 1984,
@@ -7727,8 +8029,8 @@
 			"netMigrationPctPopulation": 0.03473527448404397,
 			"cumulativeImmigration": 4381000,
 			"cumulativeNetMigration": 267000,
-			"bornAbroadPopulation": 1048592,
-			"bornAbroadPopulationPctPopulation": 7.284626188354528,
+			"bornAbroadPopulation": 1048427,
+			"bornAbroadPopulationPctPopulation": 7.283479924296553,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12603927,
 			"nativeBackgroundProxyPctPopulation": 87.56017278437056,
@@ -7740,7 +8042,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.114915820104346,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7780,18 +8082,18 @@
 			"totalHomeBuilding": 114679,
 			"netHousingStockGrowth": 114115,
 			"housingStock": 5319000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 127750,
+			"housingShortagePct": 2.5,
 			"personsPerHome": 2.7062585072382026,
 			"populationGrowthPerNetHome": 0.5191604959908864,
 			"netHousingStockGrowthPer1000Residents": 7.927631695493355,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1981, 1985],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13345997
+			"populationMinusNetMigration": 13346162
 		},
 		{
 			"year": 1985,
@@ -7811,8 +8113,8 @@
 			"netMigrationPctPopulation": 0.1383716001146547,
 			"cumulativeImmigration": 4460000,
 			"cumulativeNetMigration": 287000,
-			"bornAbroadPopulation": 1054277,
-			"bornAbroadPopulationPctPopulation": 7.294099772703891,
+			"bornAbroadPopulation": 1054112,
+			"bornAbroadPopulationPctPopulation": 7.292958207002945,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12634302,
 			"nativeBackgroundProxyPctPopulation": 87.41142920358911,
@@ -7824,7 +8126,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.250252095758959,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7864,8 +8166,8 @@
 			"totalHomeBuilding": 101101,
 			"netHousingStockGrowth": 97590,
 			"housingStock": 5416000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 127000,
+			"housingShortagePct": 2.4,
 			"personsPerHome": 2.6687283973412113,
 			"populationGrowthPerNetHome": 0.7746387949584999,
 			"netHousingStockGrowthPer1000Residents": 6.751842227594576,
@@ -7875,7 +8177,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13399556
+			"populationMinusNetMigration": 13399721
 		},
 		{
 			"year": 1986,
@@ -7895,8 +8197,8 @@
 			"netMigrationPctPopulation": 0.18582972628657835,
 			"cumulativeImmigration": 4547000,
 			"cumulativeNetMigration": 314000,
-			"bornAbroadPopulation": 1073165,
-			"bornAbroadPopulationPctPopulation": 7.386146600382809,
+			"bornAbroadPopulation": 1073000,
+			"bornAbroadPopulationPctPopulation": 7.385010974277724,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12667029,
 			"nativeBackgroundProxyPctPopulation": 87.18187155311668,
@@ -7908,7 +8210,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.3827899649194775,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -7948,18 +8250,18 @@
 			"totalHomeBuilding": 107168,
 			"netHousingStockGrowth": 101905,
 			"housingStock": 5518000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 127000,
+			"housingShortagePct": 2.4,
 			"personsPerHome": 2.6330971366437117,
 			"populationGrowthPerNetHome": 0.8409302782002845,
 			"netHousingStockGrowthPer1000Residents": 7.013695650827321,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1985, 1989],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13456265
+			"populationMinusNetMigration": 13456430
 		},
 		{
 			"year": 1987,
@@ -7979,8 +8281,8 @@
 			"netMigrationPctPopulation": 0.239477938094953,
 			"cumulativeImmigration": 4643000,
 			"cumulativeNetMigration": 349000,
-			"bornAbroadPopulation": 1097784,
-			"bornAbroadPopulationPctPopulation": 7.511287108389425,
+			"bornAbroadPopulation": 1097619,
+			"bornAbroadPopulationPctPopulation": 7.510158140966977,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12703018,
 			"nativeBackgroundProxyPctPopulation": 86.91693023494497,
@@ -7992,7 +8294,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.517015762779997,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8032,18 +8334,18 @@
 			"totalHomeBuilding": 112200,
 			"netHousingStockGrowth": 108551,
 			"housingStock": 5627000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 127000,
+			"housingShortagePct": 2.3,
 			"personsPerHome": 2.5973209525502043,
 			"populationGrowthPerNetHome": 0.9195953975550663,
 			"netHousingStockGrowthPer1000Residents": 7.4273056166129265,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1985, 1989],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13517341
+			"populationMinusNetMigration": 13517506
 		},
 		{
 			"year": 1988,
@@ -8063,8 +8365,8 @@
 			"netMigrationPctPopulation": 0.1834868869397296,
 			"cumulativeImmigration": 4734000,
 			"cumulativeNetMigration": 376000,
-			"bornAbroadPopulation": 1132364,
-			"bornAbroadPopulationPctPopulation": 7.69533130528222,
+			"bornAbroadPopulation": 1132199,
+			"bornAbroadPopulationPctPopulation": 7.6942099965287,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12743003,
 			"nativeBackgroundProxyPctPopulation": 86.59903521235684,
@@ -8076,7 +8378,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.6444543331039965,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8116,18 +8418,18 @@
 			"totalHomeBuilding": 121654,
 			"netHousingStockGrowth": 114036,
 			"housingStock": 5741000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 127000,
+			"housingShortagePct": 2.3,
 			"personsPerHome": 2.563133252046682,
 			"populationGrowthPerNetHome": 0.7917850503349819,
 			"netHousingStockGrowthPer1000Residents": 7.74967060705889,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1985, 1989],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13582584
+			"populationMinusNetMigration": 13582749
 		},
 		{
 			"year": 1989,
@@ -8147,8 +8449,8 @@
 			"netMigrationPctPopulation": 0.18236786435072988,
 			"cumulativeImmigration": 4833000,
 			"cumulativeNetMigration": 403000,
-			"bornAbroadPopulation": 1161918,
-			"bornAbroadPopulationPctPopulation": 7.8480186744693095,
+			"bornAbroadPopulation": 1161753,
+			"bornAbroadPopulationPctPopulation": 7.846904204187166,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12777119,
 			"nativeBackgroundProxyPctPopulation": 86.30132979944939,
@@ -8160,7 +8462,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.7837468355798345,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8200,8 +8502,8 @@
 			"totalHomeBuilding": 115580,
 			"netHousingStockGrowth": 106268,
 			"housingStock": 5847000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 127000,
+			"housingShortagePct": 2.2,
 			"personsPerHome": 2.5321087737301182,
 			"populationGrowthPerNetHome": 0.8218278315203071,
 			"netHousingStockGrowthPer1000Residents": 7.177728966230875,
@@ -8211,7 +8513,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13643322
+			"populationMinusNetMigration": 13643487
 		},
 		{
 			"year": 1990,
@@ -8231,8 +8533,8 @@
 			"netMigrationPctPopulation": 0.322308285995423,
 			"cumulativeImmigration": 4950000,
 			"cumulativeNetMigration": 451000,
-			"bornAbroadPopulation": 1192328,
-			"bornAbroadPopulationPctPopulation": 8.006191542173973,
+			"bornAbroadPopulation": 1192163,
+			"bornAbroadPopulationPctPopulation": 8.005083607440863,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12805650,
 			"nativeBackgroundProxyPctPopulation": 85.98681463661016,
@@ -8244,7 +8546,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 6.934617212578564,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8284,18 +8586,18 @@
 			"totalHomeBuilding": 101914,
 			"netHousingStockGrowth": 93113,
 			"housingStock": 5940000,
-			"housingShortage": null,
+			"housingShortage": 123511,
 			"housingShortagePct": null,
 			"personsPerHome": 2.50716734006734,
 			"populationGrowthPerNetHome": 1.2658919807116085,
 			"netHousingStockGrowthPer1000Residents": 6.252310715394129,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13700246
+			"populationMinusNetMigration": 13700411
 		},
 		{
 			"year": 1991,
@@ -8315,8 +8617,8 @@
 			"netMigrationPctPopulation": 0.33310138373645815,
 			"cumulativeImmigration": 5070000,
 			"cumulativeNetMigration": 501000,
-			"bornAbroadPopulation": 1241489,
-			"bornAbroadPopulationPctPopulation": 8.270834075871834,
+			"bornAbroadPopulation": 1241324,
+			"bornAbroadPopulationPctPopulation": 8.269734841305503,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12844595,
 			"nativeBackgroundProxyPctPopulation": 85.57104736068784,
@@ -8328,7 +8630,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.078457700621134,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8368,18 +8670,18 @@
 			"totalHomeBuilding": 86570,
 			"netHousingStockGrowth": 76776,
 			"housingStock": 6017000,
-			"housingShortage": null,
+			"housingShortage": 120022,
 			"housingShortagePct": null,
 			"personsPerHome": 2.4946725943161043,
 			"populationGrowthPerNetHome": 1.5461211837032407,
 			"netHousingStockGrowthPer1000Residents": 5.114838367550062,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13768956
+			"populationMinusNetMigration": 13769121
 		},
 		{
 			"year": 1992,
@@ -8399,8 +8701,8 @@
 			"netMigrationPctPopulation": 0.2842195364577653,
 			"cumulativeImmigration": 5187000,
 			"cumulativeNetMigration": 544000,
-			"bornAbroadPopulation": 1290877,
-			"bornAbroadPopulationPctPopulation": 8.532382850325366,
+			"bornAbroadPopulation": 1290712,
+			"bornAbroadPopulationPctPopulation": 8.531292240476168,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12883669,
 			"nativeBackgroundProxyPctPopulation": 85.1579170012856,
@@ -8412,7 +8714,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.222818201947895,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8452,18 +8754,18 @@
 			"totalHomeBuilding": 90399,
 			"netHousingStockGrowth": 80394,
 			"housingStock": 6097000,
-			"housingShortage": null,
+			"housingShortage": 116533,
 			"housingShortagePct": null,
 			"personsPerHome": 2.481408889617845,
 			"populationGrowthPerNetHome": 1.3686593526880115,
 			"netHousingStockGrowthPer1000Residents": 5.313847770694322,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13838273
+			"populationMinusNetMigration": 13838438
 		},
 		{
 			"year": 1993,
@@ -8483,8 +8785,8 @@
 			"netMigrationPctPopulation": 0.2887294081795204,
 			"cumulativeImmigration": 5306000,
 			"cumulativeNetMigration": 588000,
-			"bornAbroadPopulation": 1333933,
-			"bornAbroadPopulationPctPopulation": 8.753311037298458,
+			"bornAbroadPopulation": 1333768,
+			"bornAbroadPopulationPctPopulation": 8.752228302017786,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12920136,
 			"nativeBackgroundProxyPctPopulation": 84.78234592906627,
@@ -8496,7 +8798,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.370868068902911,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8536,18 +8838,18 @@
 			"totalHomeBuilding": 87863,
 			"netHousingStockGrowth": 76328,
 			"housingStock": 6174000,
-			"housingShortage": null,
+			"housingShortage": 113044,
 			"housingShortagePct": null,
 			"personsPerHome": 2.468283446712018,
 			"populationGrowthPerNetHome": 1.341198511686406,
 			"netHousingStockGrowthPer1000Residents": 5.008667788074189,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13905249
+			"populationMinusNetMigration": 13905414
 		},
 		{
 			"year": 1994,
@@ -8567,8 +8869,8 @@
 			"netMigrationPctPopulation": 0.13036489852102978,
 			"cumulativeImmigration": 5405000,
 			"cumulativeNetMigration": 608000,
-			"bornAbroadPopulation": 1379039,
-			"bornAbroadPopulationPctPopulation": 8.988913964577119,
+			"bornAbroadPopulation": 1378874,
+			"bornAbroadPopulationPctPopulation": 8.98783845416432,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12946919,
 			"nativeBackgroundProxyPctPopulation": 84.39118907974962,
@@ -8580,7 +8882,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.520372937472497,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8620,18 +8922,18 @@
 			"totalHomeBuilding": 93337,
 			"netHousingStockGrowth": 79302,
 			"housingStock": 6253000,
-			"housingShortage": null,
+			"housingShortage": 109556,
 			"housingShortagePct": null,
 			"personsPerHome": 2.4534708140092754,
 			"populationGrowthPerNetHome": 1.0411969433305592,
 			"netHousingStockGrowthPer1000Residents": 5.1690985912573515,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 13962514
+			"populationMinusNetMigration": 13962679
 		},
 		{
 			"year": 1995,
@@ -8651,8 +8953,8 @@
 			"netMigrationPctPopulation": 0.0907669169110566,
 			"cumulativeImmigration": 5501000,
 			"cumulativeNetMigration": 622000,
-			"bornAbroadPopulation": 1402547,
-			"bornAbroadPopulationPctPopulation": 9.093204786632263,
+			"bornAbroadPopulation": 1402382,
+			"bornAbroadPopulationPctPopulation": 9.092135033682954,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12974938,
 			"nativeBackgroundProxyPctPopulation": 84.12107995515076,
@@ -8664,7 +8966,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.681370777539234,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_reconstructie",
@@ -8704,18 +9006,18 @@
 			"totalHomeBuilding": 99407,
 			"netHousingStockGrowth": 87649,
 			"housingStock": 6341000,
-			"housingShortage": null,
+			"housingShortage": 106067,
 			"housingShortagePct": null,
 			"personsPerHome": 2.432443147768491,
 			"populationGrowthPerNetHome": 0.795981699734167,
 			"netHousingStockGrowthPer1000Residents": 5.682592500240856,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14021575
+			"populationMinusNetMigration": 14021740
 		},
 		{
 			"year": 1996,
@@ -8735,8 +9037,8 @@
 			"netMigrationPctPopulation": 0.10972067761683332,
 			"cumulativeImmigration": 5610000,
 			"cumulativeNetMigration": 639000,
-			"bornAbroadPopulation": 1422253,
-			"bornAbroadPopulationPctPopulation": 9.179444876622002,
+			"bornAbroadPopulation": 1422088,
+			"bornAbroadPopulationPctPopulation": 9.178379940633368,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 12995174,
 			"nativeBackgroundProxyPctPopulation": 83.87289982521496,
@@ -8748,7 +9050,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.83927779526496,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -8788,18 +9090,18 @@
 			"totalHomeBuilding": 95226,
 			"netHousingStockGrowth": 85106,
 			"housingStock": 6426000,
-			"housingShortage": null,
+			"housingShortage": 102578,
 			"housingShortagePct": null,
 			"personsPerHome": 2.4111249610955494,
 			"populationGrowthPerNetHome": 0.8603153714191714,
 			"netHousingStockGrowthPer1000Residents": 5.492875287798951,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14071636
+			"populationMinusNetMigration": 14071801
 		},
 		{
 			"year": 1997,
@@ -8819,8 +9121,8 @@
 			"netMigrationPctPopulation": 0.1798664324720065,
 			"cumulativeImmigration": 5720000,
 			"cumulativeNetMigration": 667000,
-			"bornAbroadPopulation": 1448852,
-			"bornAbroadPopulationPctPopulation": 9.3071371578547,
+			"bornAbroadPopulation": 1448687,
+			"bornAbroadPopulationPctPopulation": 9.306077230663346,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13012818,
 			"nativeBackgroundProxyPctPopulation": 83.59175535955397,
@@ -8832,7 +9134,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 7.988536341402421,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -8872,18 +9174,18 @@
 			"totalHomeBuilding": 98639,
 			"netHousingStockGrowth": 86621,
 			"housingStock": 6513000,
-			"housingShortage": null,
+			"housingShortage": 99089,
 			"housingShortagePct": null,
 			"personsPerHome": 2.3901592200214954,
 			"populationGrowthPerNetHome": 1.005356668706203,
 			"netHousingStockGrowthPer1000Residents": 5.564360802556313,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1989, 1998],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14118255
+			"populationMinusNetMigration": 14118420
 		},
 		{
 			"year": 1998,
@@ -8903,8 +9205,8 @@
 			"netMigrationPctPopulation": 0.27468680593671013,
 			"cumulativeImmigration": 5842000,
 			"cumulativeNetMigration": 710000,
-			"bornAbroadPopulation": 1483866,
-			"bornAbroadPopulationPctPopulation": 9.479032836699588,
+			"bornAbroadPopulation": 1483701,
+			"bornAbroadPopulationPctPopulation": 9.477978805932622,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13033792,
 			"nativeBackgroundProxyPctPopulation": 83.26071380752197,
@@ -8916,7 +9218,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 8.142745406470036,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -8956,7 +9258,7 @@
 			"totalHomeBuilding": 96425,
 			"netHousingStockGrowth": 85548,
 			"housingStock": 6598000,
-			"housingShortage": null,
+			"housingShortage": 95600,
 			"housingShortagePct": null,
 			"personsPerHome": 2.372566232191573,
 			"populationGrowthPerNetHome": 1.2394562117173984,
@@ -8967,7 +9269,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14170326
+			"populationMinusNetMigration": 14170491
 		},
 		{
 			"year": 1999,
@@ -8987,8 +9289,8 @@
 			"netMigrationPctPopulation": 0.2538034831355517,
 			"cumulativeImmigration": 5961000,
 			"cumulativeNetMigration": 750000,
-			"bornAbroadPopulation": 1528288,
-			"bornAbroadPopulationPctPopulation": 9.69712044085665,
+			"bornAbroadPopulation": 1528123,
+			"bornAbroadPopulationPctPopulation": 9.696073501488717,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13060991,
 			"nativeBackgroundProxyPctPopulation": 82.8731252250523,
@@ -9000,7 +9302,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 8.30630907870922,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9040,18 +9342,18 @@
 			"totalHomeBuilding": 84266,
 			"netHousingStockGrowth": 70907,
 			"housingStock": 6669000,
-			"housingShortage": null,
+			"housingShortage": 113200,
 			"housingShortagePct": null,
 			"personsPerHome": 2.363206627680312,
 			"populationGrowthPerNetHome": 1.4628315963163017,
 			"netHousingStockGrowthPer1000Residents": 4.499110894673141,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1998, 2002],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14231937
+			"populationMinusNetMigration": 14232102
 		},
 		{
 			"year": 2000,
@@ -9071,8 +9373,8 @@
 			"netMigrationPctPopulation": 0.3403944162708531,
 			"cumulativeImmigration": 6094000,
 			"cumulativeNetMigration": 804000,
-			"bornAbroadPopulation": 1569269,
-			"bornAbroadPopulationPctPopulation": 9.892044541239729,
+			"bornAbroadPopulation": 1569104,
+			"bornAbroadPopulationPctPopulation": 9.891004447190014,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13088648,
 			"nativeBackgroundProxyPctPopulation": 82.50560547656795,
@@ -9084,7 +9386,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 8.47317345301769,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9124,18 +9426,18 @@
 			"totalHomeBuilding": 75671,
 			"netHousingStockGrowth": 64824,
 			"housingStock": 6734000,
-			"housingShortage": null,
+			"housingShortage": 130800,
 			"housingShortagePct": null,
 			"personsPerHome": 2.355798930798931,
 			"populationGrowthPerNetHome": 1.8993736887572503,
 			"netHousingStockGrowthPer1000Residents": 4.086245859322552,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1998, 2002],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14294681
+			"populationMinusNetMigration": 14294846
 		},
 		{
 			"year": 2001,
@@ -9155,8 +9457,8 @@
 			"netMigrationPctPopulation": 0.3190076984063689,
 			"cumulativeImmigration": 6227000,
 			"cumulativeNetMigration": 855000,
-			"bornAbroadPopulation": 1627107,
-			"bornAbroadPopulationPctPopulation": 10.177640375115523,
+			"bornAbroadPopulation": 1626942,
+			"bornAbroadPopulationPctPopulation": 10.176608291385385,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13116851,
 			"nativeBackgroundProxyPctPopulation": 82.04659701665251,
@@ -9168,7 +9470,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 8.639879402579895,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9208,18 +9510,18 @@
 			"totalHomeBuilding": 78300,
 			"netHousingStockGrowth": 62413,
 			"housingStock": 6796000,
-			"housingShortage": null,
+			"housingShortage": 148400,
 			"housingShortagePct": null,
 			"personsPerHome": 2.352424220129488,
 			"populationGrowthPerNetHome": 1.8939964430487237,
 			"netHousingStockGrowthPer1000Residents": 3.9039661726738633,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [1998, 2002],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14359968
+			"populationMinusNetMigration": 14360133
 		},
 		{
 			"year": 2002,
@@ -9239,8 +9541,8 @@
 			"netMigrationPctPopulation": 0.14901940574165562,
 			"cumulativeImmigration": 6348000,
 			"cumulativeNetMigration": 879000,
-			"bornAbroadPopulation": 1685226,
-			"bornAbroadPopulationPctPopulation": 10.463807377516138,
+			"bornAbroadPopulation": 1685061,
+			"bornAbroadPopulationPctPopulation": 10.462782869101664,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13140336,
 			"nativeBackgroundProxyPctPopulation": 81.59021091523682,
@@ -9252,7 +9554,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 8.803756034121719,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9292,8 +9594,8 @@
 			"totalHomeBuilding": 72106,
 			"netHousingStockGrowth": 57986,
 			"housingStock": 6854000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 166000,
+			"housingShortagePct": 2.5,
 			"personsPerHome": 2.3497643711701195,
 			"populationGrowthPerNetHome": 1.5053116269444349,
 			"netHousingStockGrowthPer1000Residents": 3.6004330255565176,
@@ -9303,7 +9605,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14420059
+			"populationMinusNetMigration": 14420224
 		},
 		{
 			"year": 2003,
@@ -9323,8 +9625,8 @@
 			"netMigrationPctPopulation": 0,
 			"cumulativeImmigration": 6453000,
 			"cumulativeNetMigration": 879000,
-			"bornAbroadPopulation": 1724074,
-			"bornAbroadPopulationPctPopulation": 10.647314089447928,
+			"bornAbroadPopulation": 1723909,
+			"bornAbroadPopulationPctPopulation": 10.646295103705576,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13153814,
 			"nativeBackgroundProxyPctPopulation": 81.23362983965734,
@@ -9336,7 +9638,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 8.97220651543189,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9376,18 +9678,18 @@
 			"totalHomeBuilding": 64186,
 			"netHousingStockGrowth": 49046,
 			"housingStock": 6903000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 166250,
+			"housingShortagePct": 2.5,
 			"personsPerHome": 2.345729682746632,
 			"populationGrowthPerNetHome": 1.3346654161399503,
 			"netHousingStockGrowthPer1000Residents": 3.0289196799618985,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2002, 2006],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14468498
+			"populationMinusNetMigration": 14468663
 		},
 		{
 			"year": 2004,
@@ -9407,8 +9709,8 @@
 			"netMigrationPctPopulation": -0.0984128952384889,
 			"cumulativeImmigration": 6547000,
 			"cumulativeNetMigration": 863000,
-			"bornAbroadPopulation": 1740877,
-			"bornAbroadPopulationPctPopulation": 10.707796614005927,
+			"bornAbroadPopulation": 1740712,
+			"bornAbroadPopulationPctPopulation": 10.70678173102378,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13169880,
 			"nativeBackgroundProxyPctPopulation": 81.00537629646688,
@@ -9420,7 +9722,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 9.136542479434166,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9460,18 +9762,18 @@
 			"totalHomeBuilding": 72924,
 			"netHousingStockGrowth": 52756,
 			"housingStock": 6956000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 166500,
+			"housingShortagePct": 2.5,
 			"personsPerHome": 2.337267395054629,
 			"populationGrowthPerNetHome": 0.9002577905830617,
 			"netHousingStockGrowthPer1000Residents": 3.244919188251075,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2002, 2006],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14517155
+			"populationMinusNetMigration": 14517320
 		},
 		{
 			"year": 2005,
@@ -9491,8 +9793,8 @@
 			"netMigrationPctPopulation": -0.16558803438785108,
 			"cumulativeImmigration": 6639000,
 			"cumulativeNetMigration": 836000,
-			"bornAbroadPopulation": 1744811,
-			"bornAbroadPopulationPctPopulation": 10.700734217344475,
+			"bornAbroadPopulation": 1744646,
+			"bornAbroadPopulationPctPopulation": 10.699722290467662,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13182809,
 			"nativeBackgroundProxyPctPopulation": 80.84871963038788,
@@ -9504,7 +9806,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 9.297786529548326,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9544,18 +9846,18 @@
 			"totalHomeBuilding": 73894,
 			"netHousingStockGrowth": 57421,
 			"housingStock": 7013000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 166750,
+			"housingShortagePct": 2.4,
 			"personsPerHome": 2.325042920290888,
 			"populationGrowthPerNetHome": 0.4995384963689243,
 			"netHousingStockGrowthPer1000Residents": 3.5215668602165917,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2002, 2006],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14560715
+			"populationMinusNetMigration": 14560880
 		},
 		{
 			"year": 2006,
@@ -9575,8 +9877,8 @@
 			"netMigrationPctPopulation": -0.18978573190867512,
 			"cumulativeImmigration": 6740000,
 			"cumulativeNetMigration": 805000,
-			"bornAbroadPopulation": 1742406,
-			"bornAbroadPopulationPctPopulation": 10.667219290066676,
+			"bornAbroadPopulation": 1742241,
+			"bornAbroadPopulationPctPopulation": 10.666209140203291,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13186595,
 			"nativeBackgroundProxyPctPopulation": 80.72992204704114,
@@ -9588,7 +9890,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 9.448611227601457,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9628,8 +9930,8 @@
 			"totalHomeBuilding": 79656,
 			"netHousingStockGrowth": 58425,
 			"housingStock": 7072000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 167000,
+			"housingShortagePct": 2.4,
 			"personsPerHome": 2.309701640271493,
 			"populationGrowthPerNetHome": 0.4070517757809157,
 			"netHousingStockGrowthPer1000Residents": 3.576848834440111,
@@ -9639,7 +9941,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14591804
+			"populationMinusNetMigration": 14591969
 		},
 		{
 			"year": 2007,
@@ -9659,8 +9961,8 @@
 			"netMigrationPctPopulation": -0.03667931858629103,
 			"cumulativeImmigration": 6857000,
 			"cumulativeNetMigration": 799000,
-			"bornAbroadPopulation": 1739341,
-			"bornAbroadPopulationPctPopulation": 10.632973778199672,
+			"bornAbroadPopulation": 1739176,
+			"bornAbroadPopulationPctPopulation": 10.631965096938549,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13187586,
 			"nativeBackgroundProxyPctPopulation": 80.61861137968523,
@@ -9672,7 +9974,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 9.592937812905154,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9712,18 +10014,18 @@
 			"totalHomeBuilding": 88339,
 			"netHousingStockGrowth": 65538,
 			"housingStock": 7137000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 160000,
+			"housingShortagePct": 2.3,
 			"personsPerHome": 2.2919983186212693,
 			"populationGrowthPerNetHome": 0.7233513381549636,
 			"netHousingStockGrowthPer1000Residents": 4.0064819691805695,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2006, 2010],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14618651
+			"populationMinusNetMigration": 14618816
 		},
 		{
 			"year": 2008,
@@ -9743,8 +10045,8 @@
 			"netMigrationPctPopulation": 0.15848441113806497,
 			"cumulativeImmigration": 7001000,
 			"cumulativeNetMigration": 825000,
-			"bornAbroadPopulation": 1757461,
-			"bornAbroadPopulationPctPopulation": 10.712698910889031,
+			"bornAbroadPopulation": 1757296,
+			"bornAbroadPopulationPctPopulation": 10.711693144433731,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13189983,
 			"nativeBackgroundProxyPctPopulation": 80.4002572567726,
@@ -9756,7 +10058,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 9.729126368703376,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9796,18 +10098,18 @@
 			"totalHomeBuilding": 87723,
 			"netHousingStockGrowth": 80187,
 			"housingStock": 7218000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 153000,
+			"housingShortagePct": 2.2,
 			"personsPerHome": 2.2728455250761983,
 			"populationGrowthPerNetHome": 1.0025066407273,
 			"netHousingStockGrowthPer1000Residents": 4.887842106126159,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2006, 2010],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14647938
+			"populationMinusNetMigration": 14648103
 		},
 		{
 			"year": 2009,
@@ -9827,8 +10129,8 @@
 			"netMigrationPctPopulation": 0.20623825844650304,
 			"cumulativeImmigration": 7147000,
 			"cumulativeNetMigration": 859000,
-			"bornAbroadPopulation": 1799652,
-			"bornAbroadPopulationPctPopulation": 10.91638512616959,
+			"bornAbroadPopulation": 1799487,
+			"bornAbroadPopulationPctPopulation": 10.915384264033012,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13198081,
 			"nativeBackgroundProxyPctPopulation": 80.05733059634946,
@@ -9840,7 +10142,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 9.864260650704756,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9880,18 +10182,18 @@
 			"totalHomeBuilding": 90140,
 			"netHousingStockGrowth": 72109,
 			"housingStock": 7290000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 146000,
+			"housingShortagePct": 2,
 			"personsPerHome": 2.261424828532236,
 			"populationGrowthPerNetHome": 1.2370439196216838,
 			"netHousingStockGrowthPer1000Residents": 4.374010170093791,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2006, 2010],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14686135
+			"populationMinusNetMigration": 14686300
 		},
 		{
 			"year": 2010,
@@ -9911,8 +10213,8 @@
 			"netMigrationPctPopulation": 0.19958384286107217,
 			"cumulativeImmigration": 7301432,
 			"cumulativeNetMigration": 892081,
-			"bornAbroadPopulation": 1837898,
-			"bornAbroadPopulationPctPopulation": 11.088381416120397,
+			"bornAbroadPopulation": 1837733,
+			"bornAbroadPopulationPctPopulation": 11.087385940346627,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13215386,
 			"nativeBackgroundProxyPctPopulation": 79.73088850918695,
@@ -9924,7 +10226,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.014196691171257,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -9964,8 +10266,8 @@
 			"totalHomeBuilding": 63277,
 			"netHousingStockGrowth": 49183,
 			"housingStock": 7339000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 139000,
+			"housingShortagePct": 1.9,
 			"personsPerHome": 2.25848058318572,
 			"populationGrowthPerNetHome": 1.6430473944249029,
 			"netHousingStockGrowthPer1000Residents": 2.967302120079838,
@@ -9975,7 +10277,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14737091
+			"populationMinusNetMigration": 14737256
 		},
 		{
 			"year": 2011,
@@ -9995,8 +10297,8 @@
 			"netMigrationPctPopulation": 0.17872453912298053,
 			"cumulativeImmigration": 7464394,
 			"cumulativeNetMigration": 921849,
-			"bornAbroadPopulation": 1873364,
-			"bornAbroadPopulationPctPopulation": 11.247518056624003,
+			"bornAbroadPopulation": 1873199,
+			"bornAbroadPopulationPctPopulation": 11.246527410663397,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13228780,
 			"nativeBackgroundProxyPctPopulation": 79.42446951959494,
@@ -10008,7 +10310,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.157435257233832,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10048,18 +10350,18 @@
 			"totalHomeBuilding": 66068,
 			"netHousingStockGrowth": 47895,
 			"housingStock": 7387000,
-			"housingShortage": null,
-			"housingShortagePct": null,
+			"housingShortage": 150500,
+			"housingShortagePct": 2.1,
 			"personsPerHome": 2.254744686611615,
 			"populationGrowthPerNetHome": 1.5565090301701638,
 			"netHousingStockGrowthPer1000Residents": 2.8755750474654502,
-			"housingShortageInterpolated": false,
-			"housingShortageInterpolationBasis": null,
+			"housingShortageInterpolated": true,
+			"housingShortageInterpolationBasis": [2010, 2012],
 			"gridAfnameRequests": null,
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14782435
+			"populationMinusNetMigration": 14782600
 		},
 		{
 			"year": 2012,
@@ -10079,8 +10381,8 @@
 			"netMigrationPctPopulation": 0.08298093978678746,
 			"cumulativeImmigration": 7622768,
 			"cumulativeNetMigration": 935732,
-			"bornAbroadPopulation": 1910351,
-			"bornAbroadPopulationPctPopulation": 11.418477368193416,
+			"bornAbroadPopulation": 1910186,
+			"bornAbroadPopulationPctPopulation": 11.417491136466499,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13236155,
 			"nativeBackgroundProxyPctPopulation": 79.11464244497485,
@@ -10092,7 +10394,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.292607183066366,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10143,7 +10445,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14819997
+			"populationMinusNetMigration": 14820162
 		},
 		{
 			"year": 2013,
@@ -10163,8 +10465,8 @@
 			"netMigrationPctPopulation": 0.11384674522447678,
 			"cumulativeImmigration": 7787540,
 			"cumulativeNetMigration": 954835,
-			"bornAbroadPopulation": 1931336,
-			"bornAbroadPopulationPctPopulation": 11.510041225716385,
+			"bornAbroadPopulation": 1931171,
+			"bornAbroadPopulationPctPopulation": 11.5090578873422,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13236494,
 			"nativeBackgroundProxyPctPopulation": 78.88456054459067,
@@ -10176,7 +10478,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.428702753198458,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10227,7 +10529,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14848239
+			"populationMinusNetMigration": 14848404
 		},
 		{
 			"year": 2014,
@@ -10247,8 +10549,8 @@
 			"netMigrationPctPopulation": 0.20848771448395712,
 			"cumulativeImmigration": 7970489,
 			"cumulativeNetMigration": 989922,
-			"bornAbroadPopulation": 1956644,
-			"bornAbroadPopulationPctPopulation": 11.626421056765974,
+			"bornAbroadPopulation": 1956479,
+			"bornAbroadPopulationPctPopulation": 11.625440623189725,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13234545,
 			"nativeBackgroundProxyPctPopulation": 78.63995323866622,
@@ -10260,7 +10562,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.554498172798626,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10311,7 +10613,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14872645
+			"populationMinusNetMigration": 14872810
 		},
 		{
 			"year": 2015,
@@ -10331,8 +10633,8 @@
 			"netMigrationPctPopulation": 0.32605699897152346,
 			"cumulativeImmigration": 8175104,
 			"cumulativeNetMigration": 1045028,
-			"bornAbroadPopulation": 1999124,
-			"bornAbroadPopulationPctPopulation": 11.82862795361572,
+			"bornAbroadPopulation": 1998959,
+			"bornAbroadPopulationPctPopulation": 11.82765166419478,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13235405,
 			"nativeBackgroundProxyPctPopulation": 78.3126417172848,
@@ -10344,7 +10646,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.676133084460396,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10395,7 +10697,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14901602
+			"populationMinusNetMigration": 14901767
 		},
 		{
 			"year": 2016,
@@ -10415,8 +10717,8 @@
 			"netMigrationPctPopulation": 0.46641993224619416,
 			"cumulativeImmigration": 8405843,
 			"cumulativeNetMigration": 1124222,
-			"bornAbroadPopulation": 2059024,
-			"bornAbroadPopulationPctPopulation": 12.126800446666259,
+			"bornAbroadPopulation": 2058859,
+			"bornAbroadPopulationPctPopulation": 12.125828664854245,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13226829,
 			"nativeBackgroundProxyPctPopulation": 77.90055668373861,
@@ -10428,7 +10730,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.786271608893747,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10479,7 +10781,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14920096
+			"populationMinusNetMigration": 14920261
 		},
 		{
 			"year": 2017,
@@ -10499,8 +10801,8 @@
 			"netMigrationPctPopulation": 0.4722358513215491,
 			"cumulativeImmigration": 8640800,
 			"cumulativeNetMigration": 1204887,
-			"bornAbroadPopulation": 2139322,
-			"bornAbroadPopulationPctPopulation": 12.524199416362972,
+			"bornAbroadPopulation": 2139157,
+			"bornAbroadPopulationPctPopulation": 12.52323345943657,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13218754,
 			"nativeBackgroundProxyPctPopulation": 77.38634536168266,
@@ -10512,7 +10814,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 10.89820704929606,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10563,7 +10865,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14942185
+			"populationMinusNetMigration": 14942350
 		},
 		{
 			"year": 2018,
@@ -10583,8 +10885,8 @@
 			"netMigrationPctPopulation": 0.5027098406596464,
 			"cumulativeImmigration": 8884537,
 			"cumulativeNetMigration": 1291258,
-			"bornAbroadPopulation": 2217476,
-			"bornAbroadPopulationPctPopulation": 12.906496470187795,
+			"bornAbroadPopulation": 2217311,
+			"bornAbroadPopulationPctPopulation": 12.905536111691207,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13209225,
 			"nativeBackgroundProxyPctPopulation": 76.88237249756767,
@@ -10596,7 +10898,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 11.015195548779111,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10647,7 +10949,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14963608
+			"populationMinusNetMigration": 14963773
 		},
 		{
 			"year": 2019,
@@ -10667,8 +10969,8 @@
 			"netMigrationPctPopulation": 0.6251242972306187,
 			"cumulativeImmigration": 9153601,
 			"cumulativeNetMigration": 1399293,
-			"bornAbroadPopulation": 2299831,
-			"bornAbroadPopulationPctPopulation": 13.30754142291101,
+			"bornAbroadPopulation": 2299666,
+			"bornAbroadPopulationPctPopulation": 13.306586681308353,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13196025,
 			"nativeBackgroundProxyPctPopulation": 76.35632761940737,
@@ -10680,7 +10982,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 11.135492704240784,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10731,7 +11033,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 14982332
+			"populationMinusNetMigration": 14982497
 		},
 		{
 			"year": 2020,
@@ -10751,8 +11053,8 @@
 			"netMigrationPctPopulation": 0.3926966319567017,
 			"cumulativeImmigration": 9374454,
 			"cumulativeNetMigration": 1467652,
-			"bornAbroadPopulation": 2400403,
-			"bornAbroadPopulationPctPopulation": 13.789408467630635,
+			"bornAbroadPopulation": 2400238,
+			"bornAbroadPopulationPctPopulation": 13.788460604960424,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13186880,
 			"nativeBackgroundProxyPctPopulation": 75.75364417292806,
@@ -10764,7 +11066,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 11.250549688540943,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10815,7 +11117,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 15007182
+			"populationMinusNetMigration": 15007347
 		},
 		{
 			"year": 2021,
@@ -10835,8 +11137,8 @@
 			"netMigrationPctPopulation": 0.6134217699551056,
 			"cumulativeImmigration": 9626982,
 			"cumulativeNetMigration": 1574850,
-			"bornAbroadPopulation": 2451068,
-			"bornAbroadPopulationPctPopulation": 14.025807112449119,
+			"bornAbroadPopulation": 2450903,
+			"bornAbroadPopulationPctPopulation": 14.024862928863206,
 			"bornAbroadPopulationEstimated": true,
 			"nativeBackgroundProxy": 13169507,
 			"nativeBackgroundProxyPctPopulation": 75.36019602395709,
@@ -10848,7 +11150,7 @@
 			"secondGenerationMigrationBackgroundPctPopulation": 11.404518862642176,
 			"secondGenerationOneParentAbroad": null,
 			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": 138147,
+			"bornAbroadDutchParents": 137982,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
 			"compositionMethod": "migratieachtergrond_en_generatie",
@@ -10899,7 +11201,7 @@
 			"gridAfnameMw": null,
 			"gridInvoedingRequests": null,
 			"gridInvoedingMw": null,
-			"populationMinusNetMigration": 15024347
+			"populationMinusNetMigration": 15024512
 		},
 		{
 			"year": 2022,
@@ -11255,24 +11557,24 @@
 			"netMigrationPctPopulation": null,
 			"cumulativeImmigration": 10682063,
 			"cumulativeNetMigration": 2043782,
-			"bornAbroadPopulation": null,
+			"bornAbroadPopulation": 3124728,
 			"bornAbroadPopulationPctPopulation": null,
 			"bornAbroadPopulationEstimated": false,
-			"nativeBackgroundProxy": null,
+			"nativeBackgroundProxy": 12996461,
 			"nativeBackgroundProxyPctPopulation": null,
-			"migrationBackgroundTotal": null,
+			"migrationBackgroundTotal": 5133747,
 			"migrationBackgroundTotalPctPopulation": null,
-			"firstGenerationMigrationBackground": null,
+			"firstGenerationMigrationBackground": 2987408,
 			"firstGenerationMigrationBackgroundPctPopulation": null,
-			"secondGenerationMigrationBackground": null,
+			"secondGenerationMigrationBackground": 2146339,
 			"secondGenerationMigrationBackgroundPctPopulation": null,
-			"secondGenerationOneParentAbroad": null,
-			"secondGenerationBothParentsAbroad": null,
-			"bornAbroadDutchParents": null,
+			"secondGenerationOneParentAbroad": 1158917,
+			"secondGenerationBothParentsAbroad": 987422,
+			"bornAbroadDutchParents": 137320,
 			"nativeProxyBirths": null,
 			"nativeProxyBirthsPctLiveBirths": null,
-			"compositionMethod": null,
-			"qualityMethod": null,
+			"compositionMethod": "geboorteland_en_ouders",
+			"qualityMethod": "derived_bridge",
 			"migrationPurposeEuTotal": null,
 			"migrationPurposeEuWork": null,
 			"migrationPurposeEuFamily": null,
@@ -13534,6 +13836,47 @@
 					"migrationBackgroundTotal": 566359,
 					"firstGenerationMigrationBackground": 362658,
 					"secondGenerationMigrationBackground": 203701
+				}
+			]
+		},
+		{
+			"year": 2026,
+			"buckets": [
+				{
+					"key": "0-20",
+					"label": "0 tot 20 jaar",
+					"population": 3712117,
+					"nativeBackgroundProxy": 2559750,
+					"migrationBackgroundTotal": 1152367,
+					"firstGenerationMigrationBackground": 330589,
+					"secondGenerationMigrationBackground": 821778
+				},
+				{
+					"key": "20-40",
+					"label": "20 tot 40 jaar",
+					"population": 4778309,
+					"nativeBackgroundProxy": 3005508,
+					"migrationBackgroundTotal": 1772801,
+					"firstGenerationMigrationBackground": 1089316,
+					"secondGenerationMigrationBackground": 683485
+				},
+				{
+					"key": "40-65",
+					"label": "40 tot 65 jaar",
+					"population": 5806274,
+					"nativeBackgroundProxy": 4186905,
+					"migrationBackgroundTotal": 1619369,
+					"firstGenerationMigrationBackground": 1185210,
+					"secondGenerationMigrationBackground": 434159
+				},
+				{
+					"key": "65+",
+					"label": "65 jaar of ouder",
+					"population": 3833508,
+					"nativeBackgroundProxy": 3244298,
+					"migrationBackgroundTotal": 589210,
+					"firstGenerationMigrationBackground": 382293,
+					"secondGenerationMigrationBackground": 206917
 				}
 			]
 		}
@@ -16957,19 +17300,19 @@
 		"source": "Netbeheer Nederland capaciteitskaart, brondata per RNB voedingsgebied",
 		"afname": {
 			"availableMw": 25712.6,
-			"requiredMw": 18689.1,
-			"headroomMw": 7023.6,
-			"waitlistMw": 7400.3,
-			"requests": 13743,
+			"requiredMw": 17384,
+			"headroomMw": 8328.6,
+			"waitlistMw": 7594.7,
+			"requests": 14041,
 			"knownAreas": 356,
 			"areasWithWaitlist": 396
 		},
 		"invoeding": {
 			"availableMw": 27573.1,
-			"requiredMw": 12812.8,
-			"headroomMw": 14760.3,
-			"waitlistMw": 5353.5,
-			"requests": 8185,
+			"requiredMw": 12514.7,
+			"headroomMw": 15058.5,
+			"waitlistMw": 5399.1,
+			"requests": 8229,
 			"knownAreas": 338,
 			"areasWithWaitlist": 284
 		},
@@ -16978,19 +17321,19 @@
 				"province": "Noord-Brabant",
 				"afname": {
 					"availableMw": 4480.8,
-					"requiredMw": 3387.8,
-					"headroomMw": 1093,
-					"waitlistMw": 1661.8,
-					"requests": 3564,
+					"requiredMw": 3113.1,
+					"headroomMw": 1367.8,
+					"waitlistMw": 1846.9,
+					"requests": 3698,
 					"knownAreas": 33,
 					"areasWithWaitlist": 33
 				},
 				"invoeding": {
 					"availableMw": 4182.3,
-					"requiredMw": 2070.5,
-					"headroomMw": 2111.7,
-					"waitlistMw": 1235.4,
-					"requests": 2082,
+					"requiredMw": 1976.9,
+					"headroomMw": 2205.4,
+					"waitlistMw": 1244.3,
+					"requests": 2091,
 					"knownAreas": 33,
 					"areasWithWaitlist": 33
 				}
@@ -17020,21 +17363,42 @@
 				"province": "Limburg",
 				"afname": {
 					"availableMw": 2552.3,
-					"requiredMw": 1480.7,
-					"headroomMw": 1071.7,
-					"waitlistMw": 700.7,
-					"requests": 1145,
+					"requiredMw": 1305.1,
+					"headroomMw": 1247.3,
+					"waitlistMw": 762,
+					"requests": 1178,
 					"knownAreas": 25,
 					"areasWithWaitlist": 25
 				},
 				"invoeding": {
 					"availableMw": 2498.3,
-					"requiredMw": 1010.6,
-					"headroomMw": 1487.6,
-					"waitlistMw": 498.3,
-					"requests": 767,
+					"requiredMw": 944.6,
+					"headroomMw": 1553.7,
+					"waitlistMw": 504.1,
+					"requests": 776,
 					"knownAreas": 25,
 					"areasWithWaitlist": 25
+				}
+			},
+			{
+				"province": "Overijssel",
+				"afname": {
+					"availableMw": 1487.5,
+					"requiredMw": 1012.6,
+					"headroomMw": 474.9,
+					"waitlistMw": 310,
+					"requests": 815,
+					"knownAreas": 23,
+					"areasWithWaitlist": 23
+				},
+				"invoeding": {
+					"availableMw": 1459.6,
+					"requiredMw": 833.5,
+					"headroomMw": 626.1,
+					"waitlistMw": 517.5,
+					"requests": 662,
+					"knownAreas": 23,
+					"areasWithWaitlist": 22
 				}
 			},
 			{
@@ -17043,8 +17407,8 @@
 					"availableMw": 2474.2,
 					"requiredMw": 1938,
 					"headroomMw": 536.2,
-					"waitlistMw": 696.1,
-					"requests": 896,
+					"waitlistMw": 656.2,
+					"requests": 905,
 					"knownAreas": 40,
 					"areasWithWaitlist": 50
 				},
@@ -17052,31 +17416,10 @@
 					"availableMw": 1944.9,
 					"requiredMw": 1305.2,
 					"headroomMw": 639.7,
-					"waitlistMw": 159.8,
-					"requests": 279,
+					"waitlistMw": 160.4,
+					"requests": 283,
 					"knownAreas": 32,
 					"areasWithWaitlist": 10
-				}
-			},
-			{
-				"province": "Overijssel",
-				"afname": {
-					"availableMw": 1487.5,
-					"requiredMw": 1104.3,
-					"headroomMw": 383.2,
-					"waitlistMw": 310.5,
-					"requests": 792,
-					"knownAreas": 23,
-					"areasWithWaitlist": 23
-				},
-				"invoeding": {
-					"availableMw": 1459.6,
-					"requiredMw": 878.1,
-					"headroomMw": 581.5,
-					"waitlistMw": 509.3,
-					"requests": 655,
-					"knownAreas": 23,
-					"areasWithWaitlist": 22
 				}
 			},
 			{
@@ -17104,19 +17447,19 @@
 				"province": "Limburg, Noord-Brabant",
 				"afname": {
 					"availableMw": 383.1,
-					"requiredMw": 234.8,
-					"headroomMw": 148.3,
-					"waitlistMw": 135.7,
-					"requests": 320,
+					"requiredMw": 207.3,
+					"headroomMw": 175.8,
+					"waitlistMw": 152.7,
+					"requests": 334,
 					"knownAreas": 3,
 					"areasWithWaitlist": 3
 				},
 				"invoeding": {
 					"availableMw": 364.1,
-					"requiredMw": 282.5,
-					"headroomMw": 81.6,
-					"waitlistMw": 503.8,
-					"requests": 224,
+					"requiredMw": 281.5,
+					"headroomMw": 82.6,
+					"waitlistMw": 504.1,
+					"requests": 225,
 					"knownAreas": 3,
 					"areasWithWaitlist": 3
 				}
@@ -17127,8 +17470,8 @@
 					"availableMw": 118,
 					"requiredMw": 122.9,
 					"headroomMw": -4.9,
-					"waitlistMw": 561.9,
-					"requests": 310,
+					"waitlistMw": 571.2,
+					"requests": 320,
 					"knownAreas": 2,
 					"areasWithWaitlist": 18
 				},
@@ -17136,8 +17479,8 @@
 					"availableMw": 213,
 					"requiredMw": 384.7,
 					"headroomMw": -171.7,
-					"waitlistMw": 23.9,
-					"requests": 57,
+					"waitlistMw": 24,
+					"requests": 58,
 					"knownAreas": 3,
 					"areasWithWaitlist": 4
 				}
@@ -17167,18 +17510,18 @@
 				"province": "Drenthe, Overijssel",
 				"afname": {
 					"availableMw": 656.2,
-					"requiredMw": 404.8,
-					"headroomMw": 251.3,
-					"waitlistMw": 143.2,
-					"requests": 268,
+					"requiredMw": 373.3,
+					"headroomMw": 282.8,
+					"waitlistMw": 146.6,
+					"requests": 283,
 					"knownAreas": 7,
 					"areasWithWaitlist": 7
 				},
 				"invoeding": {
 					"availableMw": 639.3,
-					"requiredMw": 412.8,
-					"headroomMw": 226.5,
-					"waitlistMw": 231.6,
+					"requiredMw": 401.4,
+					"headroomMw": 237.8,
+					"waitlistMw": 229.8,
 					"requests": 214,
 					"knownAreas": 7,
 					"areasWithWaitlist": 7
@@ -17190,8 +17533,8 @@
 					"availableMw": 692.2,
 					"requiredMw": 627.3,
 					"headroomMw": 64.9,
-					"waitlistMw": 198.4,
-					"requests": 913,
+					"waitlistMw": 201.7,
+					"requests": 932,
 					"knownAreas": 10,
 					"areasWithWaitlist": 25
 				},
@@ -17199,8 +17542,8 @@
 					"availableMw": 315,
 					"requiredMw": 348.3,
 					"headroomMw": -33.3,
-					"waitlistMw": 154.2,
-					"requests": 362,
+					"waitlistMw": 155.3,
+					"requests": 366,
 					"knownAreas": 3,
 					"areasWithWaitlist": 24
 				}
@@ -17227,13 +17570,34 @@
 				}
 			},
 			{
+				"province": "Drenthe, Groningen",
+				"afname": {
+					"availableMw": 540.2,
+					"requiredMw": 238,
+					"headroomMw": 302.2,
+					"waitlistMw": 72,
+					"requests": 102,
+					"knownAreas": 5,
+					"areasWithWaitlist": 6
+				},
+				"invoeding": {
+					"availableMw": 537.7,
+					"requiredMw": 299.1,
+					"headroomMw": 238.6,
+					"waitlistMw": 177.2,
+					"requests": 170,
+					"knownAreas": 5,
+					"areasWithWaitlist": 6
+				}
+			},
+			{
 				"province": "Onbekend",
 				"afname": {
 					"availableMw": 0,
 					"requiredMw": 0,
 					"headroomMw": 0,
-					"waitlistMw": 267.3,
-					"requests": 102,
+					"waitlistMw": 230,
+					"requests": 103,
 					"knownAreas": 0,
 					"areasWithWaitlist": 6
 				},
@@ -17248,45 +17612,24 @@
 				}
 			},
 			{
-				"province": "Drenthe, Groningen",
+				"province": "Drenthe",
 				"afname": {
-					"availableMw": 540.2,
-					"requiredMw": 284.8,
-					"headroomMw": 255.4,
-					"waitlistMw": 63.5,
-					"requests": 93,
+					"availableMw": 485.1,
+					"requiredMw": 211.9,
+					"headroomMw": 273.3,
+					"waitlistMw": 70.6,
+					"requests": 162,
 					"knownAreas": 5,
 					"areasWithWaitlist": 6
 				},
 				"invoeding": {
-					"availableMw": 537.7,
-					"requiredMw": 302.1,
-					"headroomMw": 235.6,
-					"waitlistMw": 176.7,
-					"requests": 167,
+					"availableMw": 468.3,
+					"requiredMw": 307.9,
+					"headroomMw": 160.5,
+					"waitlistMw": 159.3,
+					"requests": 160,
 					"knownAreas": 5,
 					"areasWithWaitlist": 6
-				}
-			},
-			{
-				"province": "Groningen",
-				"afname": {
-					"availableMw": 1598.2,
-					"requiredMw": 1222.6,
-					"headroomMw": 375.6,
-					"waitlistMw": 140.9,
-					"requests": 128,
-					"knownAreas": 7,
-					"areasWithWaitlist": 8
-				},
-				"invoeding": {
-					"availableMw": 1644.4,
-					"requiredMw": 928.4,
-					"headroomMw": 716,
-					"waitlistMw": 95.8,
-					"requests": 141,
-					"knownAreas": 8,
-					"areasWithWaitlist": 7
 				}
 			},
 			{
@@ -17295,8 +17638,8 @@
 					"availableMw": 225,
 					"requiredMw": 203,
 					"headroomMw": 22,
-					"waitlistMw": 129.8,
-					"requests": 289,
+					"waitlistMw": 130.2,
+					"requests": 292,
 					"knownAreas": 4,
 					"areasWithWaitlist": 6
 				},
@@ -17304,48 +17647,48 @@
 					"availableMw": 279,
 					"requiredMw": 149,
 					"headroomMw": 130,
-					"waitlistMw": 94.7,
-					"requests": 167,
+					"waitlistMw": 94.8,
+					"requests": 168,
 					"knownAreas": 4,
 					"areasWithWaitlist": 6
 				}
 			},
 			{
-				"province": "Drenthe",
+				"province": "Groningen",
 				"afname": {
-					"availableMw": 485.1,
-					"requiredMw": 270,
-					"headroomMw": 215.1,
-					"waitlistMw": 65,
-					"requests": 156,
-					"knownAreas": 5,
-					"areasWithWaitlist": 6
+					"availableMw": 1598.2,
+					"requiredMw": 753.8,
+					"headroomMw": 844.4,
+					"waitlistMw": 107.8,
+					"requests": 131,
+					"knownAreas": 7,
+					"areasWithWaitlist": 8
 				},
 				"invoeding": {
-					"availableMw": 468.3,
-					"requiredMw": 317.1,
-					"headroomMw": 151.2,
-					"waitlistMw": 159.2,
-					"requests": 159,
-					"knownAreas": 5,
-					"areasWithWaitlist": 6
+					"availableMw": 1644.4,
+					"requiredMw": 870.9,
+					"headroomMw": 773.5,
+					"waitlistMw": 115.8,
+					"requests": 144,
+					"knownAreas": 8,
+					"areasWithWaitlist": 7
 				}
 			},
 			{
 				"province": "Gelderland, Overijssel",
 				"afname": {
 					"availableMw": 383.6,
-					"requiredMw": 277.6,
-					"headroomMw": 106,
+					"requiredMw": 254.4,
+					"headroomMw": 129.2,
 					"waitlistMw": 86.8,
-					"requests": 217,
+					"requests": 224,
 					"knownAreas": 7,
 					"areasWithWaitlist": 7
 				},
 				"invoeding": {
 					"availableMw": 464.5,
-					"requiredMw": 208.8,
-					"headroomMw": 255.7,
+					"requiredMw": 208,
+					"headroomMw": 256.5,
 					"waitlistMw": 52.1,
 					"requests": 200,
 					"knownAreas": 7,
@@ -17356,19 +17699,19 @@
 				"province": "Drenthe, Friesland, Groningen",
 				"afname": {
 					"availableMw": 210.3,
-					"requiredMw": 236,
-					"headroomMw": -25.7,
-					"waitlistMw": 46.1,
-					"requests": 71,
+					"requiredMw": 139.3,
+					"headroomMw": 71,
+					"waitlistMw": 46.4,
+					"requests": 72,
 					"knownAreas": 2,
 					"areasWithWaitlist": 2
 				},
 				"invoeding": {
 					"availableMw": 210.3,
-					"requiredMw": 94.7,
-					"headroomMw": 115.6,
-					"waitlistMw": 23.1,
-					"requests": 70,
+					"requiredMw": 88.8,
+					"headroomMw": 121.5,
+					"waitlistMw": 24.8,
+					"requests": 71,
 					"knownAreas": 2,
 					"areasWithWaitlist": 2
 				}
@@ -17377,17 +17720,17 @@
 				"province": "Friesland, Groningen",
 				"afname": {
 					"availableMw": 266.8,
-					"requiredMw": 141,
-					"headroomMw": 125.8,
+					"requiredMw": 131.1,
+					"headroomMw": 135.8,
 					"waitlistMw": 31.4,
-					"requests": 58,
+					"requests": 61,
 					"knownAreas": 3,
 					"areasWithWaitlist": 3
 				},
 				"invoeding": {
 					"availableMw": 306.8,
-					"requiredMw": 132.2,
-					"headroomMw": 174.7,
+					"requiredMw": 127.1,
+					"headroomMw": 179.7,
 					"waitlistMw": 24.6,
 					"requests": 74,
 					"knownAreas": 3,
@@ -17398,8 +17741,8 @@
 				"province": "Drenthe, Friesland, Overijssel",
 				"afname": {
 					"availableMw": 141,
-					"requiredMw": 66.2,
-					"headroomMw": 74.8,
+					"requiredMw": 66,
+					"headroomMw": 75,
 					"waitlistMw": 11.8,
 					"requests": 24,
 					"knownAreas": 2,
@@ -17421,8 +17764,8 @@
 					"availableMw": 175,
 					"requiredMw": 153.1,
 					"headroomMw": 21.9,
-					"waitlistMw": 42.1,
-					"requests": 9,
+					"waitlistMw": 42.9,
+					"requests": 15,
 					"knownAreas": 1,
 					"areasWithWaitlist": 1
 				},
@@ -17505,8 +17848,8 @@
 					"availableMw": 55,
 					"requiredMw": 61.4,
 					"headroomMw": -6.4,
-					"waitlistMw": 17.8,
-					"requests": 63,
+					"waitlistMw": 17.9,
+					"requests": 64,
 					"knownAreas": 2,
 					"areasWithWaitlist": 2
 				},
@@ -17518,6 +17861,27 @@
 					"requests": 35,
 					"knownAreas": 0,
 					"areasWithWaitlist": 2
+				}
+			},
+			{
+				"province": "Flevoland, Overijssel",
+				"afname": {
+					"availableMw": 34,
+					"requiredMw": 20.7,
+					"headroomMw": 13.3,
+					"waitlistMw": 20.9,
+					"requests": 8,
+					"knownAreas": 1,
+					"areasWithWaitlist": 1
+				},
+				"invoeding": {
+					"availableMw": 33.7,
+					"requiredMw": 21.3,
+					"headroomMw": 12.4,
+					"waitlistMw": 0.1,
+					"requests": 3,
+					"knownAreas": 1,
+					"areasWithWaitlist": 1
 				}
 			},
 			{
@@ -17621,27 +17985,6 @@
 					"headroomMw": 81,
 					"waitlistMw": 8.7,
 					"requests": 19,
-					"knownAreas": 1,
-					"areasWithWaitlist": 1
-				}
-			},
-			{
-				"province": "Flevoland, Overijssel",
-				"afname": {
-					"availableMw": 34,
-					"requiredMw": 20.8,
-					"headroomMw": 13.2,
-					"waitlistMw": 10.9,
-					"requests": 7,
-					"knownAreas": 1,
-					"areasWithWaitlist": 1
-				},
-				"invoeding": {
-					"availableMw": 33.7,
-					"requiredMw": 21.3,
-					"headroomMw": 12.4,
-					"waitlistMw": 0.1,
-					"requests": 3,
 					"knownAreas": 1,
 					"areasWithWaitlist": 1
 				}
