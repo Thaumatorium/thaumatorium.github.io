@@ -1,6 +1,6 @@
 /* global d3 */
 
-import { formatMetric, formatNumber, homes, mw, people, percent, percentTick, requests, shortNumber } from "./formatters.js";
+import { formatMetric, formatNumber, formatOne, homes, mw, people, percent, percentTick, requests, shortNumber } from "./formatters.js";
 import { gridCardInfo, metricInfo, viewSourceNotes } from "./metadata.js";
 import { views } from "./views.js";
 
@@ -37,6 +37,7 @@ let state = {
 };
 const zoomDomains = new Map();
 let suppressNextClick = false;
+const decimalTick = (value) => formatOne.format(value);
 
 infoTooltip.className = "info-tooltip";
 infoTooltip.hidden = true;
@@ -351,7 +352,12 @@ function renderLegend(view) {
 		return;
 	}
 
-	for (const item of view.series) {
+	const legendItems =
+		state.view === "housing"
+			? [...view.series, { key: "netHousingStockGrowthPer1000Residents", label: "Netto groei per 1000 inwoners", color: "#8b443d", axis: "left", kind: "line", width: 2.4 }, { key: "personsPerHome", label: "Inwoners per woning", color: "#8167a9", axis: "left", kind: "line", width: 2.2, dash: "4 5" }]
+			: view.series;
+
+	for (const item of legendItems) {
 		const entry = document.createElement("span");
 		entry.className = "legend-item";
 		if (item.key === state.definition) entry.classList.add("is-highlighted");
@@ -1358,6 +1364,121 @@ function renderSplitPopulationChart(view, rows) {
 	});
 }
 
+function renderSplitHousingChart(view, rows) {
+	const rect = chartWrap.getBoundingClientRect();
+	const width = Math.max(320, Math.floor(rect.width));
+	const height = Math.max(620, Math.floor(rect.height));
+	const mainSeries = view.series;
+	const perResidentSeries = [{ key: "netHousingStockGrowthPer1000Residents", label: "Netto groei per 1000 inwoners", color: "#8b443d", axis: "left", kind: "line", width: 2.4 }];
+	const personsPerHomeSeries = [{ key: "personsPerHome", label: "Inwoners per woning", color: "#8167a9", axis: "left", kind: "line", width: 2.2, dash: "4 5" }];
+	const margin = {
+		top: 30,
+		right: mainSeries.some((series) => series.axis === "right") ? 64 : 22,
+		bottom: 52,
+		left: 72,
+	};
+	const gap = 30;
+	const innerWidth = width - margin.left - margin.right;
+	const availableHeight = height - margin.top - margin.bottom - gap * 2;
+	const topHeight = Math.round(availableHeight * 0.58);
+	const middleHeight = Math.round(availableHeight * 0.21);
+	const bottomHeight = availableHeight - topHeight - middleHeight;
+	const xDomain = zoomDomainForView(state.view, rows);
+	const visibleRows = rowsInsideDomain(rows, xDomain);
+	const x = d3
+		.scaleLinear()
+		.domain(xDomain)
+		.range([margin.left, margin.left + innerWidth]);
+
+	chart.attr("viewBox", `0 0 ${width} ${height}`);
+	chart.selectAll("*").remove();
+
+	const topPanel = drawChartPanel({
+		root: chart,
+		rows: visibleRows,
+		series: mainSeries,
+		x,
+		top: margin.top,
+		height: topHeight,
+		marginLeft: margin.left,
+		innerWidth,
+		leftLabel: view.leftLabel,
+		rightLabel: view.rightLabel,
+		showXAxis: false,
+		showSelectedYearLabel: true,
+	});
+
+	const middleTop = topPanel.bottom + gap;
+	const middlePanel = drawChartPanel({
+		root: chart,
+		rows: visibleRows,
+		series: perResidentSeries,
+		x,
+		top: middleTop,
+		height: middleHeight,
+		marginLeft: margin.left,
+		innerWidth,
+		leftLabel: "woningen per 1000 inwoners",
+		rightLabel: "",
+		leftTickFormat: decimalTick,
+		showXAxis: false,
+		showSelectedYearLabel: false,
+	});
+
+	const bottomTop = middlePanel.bottom + gap;
+	const bottomPanel = drawChartPanel({
+		root: chart,
+		rows: visibleRows,
+		series: personsPerHomeSeries,
+		x,
+		top: bottomTop,
+		height: bottomHeight,
+		marginLeft: margin.left,
+		innerWidth,
+		leftLabel: "inwoners per woning",
+		rightLabel: "",
+		leftTickFormat: decimalTick,
+		showXAxis: true,
+		showSelectedYearLabel: false,
+	});
+
+	attachYearOverlay({
+		rows: visibleRows,
+		zoomRows: rows,
+		x,
+		top: topPanel.top,
+		height: topHeight,
+		marginLeft: margin.left,
+		innerWidth,
+		view,
+		panelContext: topPanel,
+	});
+
+	attachYearOverlay({
+		rows: visibleRows,
+		zoomRows: rows,
+		x,
+		top: middleTop,
+		height: middleHeight,
+		marginLeft: margin.left,
+		innerWidth,
+		view,
+		panelContext: middlePanel,
+	});
+
+	attachYearOverlay({
+		rows: visibleRows,
+		zoomRows: rows,
+		x,
+		top: bottomTop,
+		height: bottomHeight,
+		marginLeft: margin.left,
+		innerWidth,
+		view,
+		panelContext: bottomPanel,
+	});
+}
+
 function renderAgeChart(view) {
 	const ageRow = ageRowForYear(state.year);
 	const buckets = ageRow?.buckets || [];
@@ -1428,10 +1549,16 @@ function renderAgeChart(view) {
 function renderChart() {
 	const view = activeView();
 	const rows = rowsForView(state.view);
-	chartWrap.classList.toggle("is-split", state.view === "population");
+	chartWrap.classList.toggle("is-split", ["population", "housing"].includes(state.view));
 
 	if (state.view === "population") {
 		renderSplitPopulationChart(view, rows);
+		updateZoomControls();
+		return;
+	}
+
+	if (state.view === "housing") {
+		renderSplitHousingChart(view, rows);
 		updateZoomControls();
 		return;
 	}
