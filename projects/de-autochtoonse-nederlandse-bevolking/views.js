@@ -188,8 +188,6 @@ export const views = {
 			{ key: "netHousingStockGrowth", label: "Netto voorraadgroei", color: "#e9c46a", axis: "left", kind: "bar" },
 			{ key: "housingShortage", label: "Woningtekort", color: "#d1495b", axis: "left", kind: "line", width: 3 },
 			{ key: "housingStock", label: "Woningvoorraad", color: "#235789", axis: "right", kind: "line", width: 2.2, dash: "5 5" },
-			{ key: "personsPerHome", label: "Inwoners per woning", color: "#8167a9", axis: "right", kind: "line", width: 2, dash: "4 5" },
-			{ key: "netHousingStockGrowthPer1000Residents", label: "Netto groei per 1000 inwoners", color: "#8b443d", axis: "right", kind: "line", width: 2, dash: "2 5" },
 		],
 		stats: [
 			{ key: "newHomes", label: "Nieuwbouw", format: homes },
