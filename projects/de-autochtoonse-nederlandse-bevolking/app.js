@@ -1180,7 +1180,7 @@ function attachYearOverlay({ rows, zoomRows = rows, x, top, height, marginLeft, 
 			const nearest = d3.least(rows, (row) => Math.abs(x(row.year) - mouseX));
 			if (!nearest) return;
 
-			const tooltipSeries = state.view === "population" && panelContext ? panelContext.series : view.series;
+			const tooltipSeries = panelContext?.series || view.series;
 
 			showTooltip(event, nearest, view, tooltipSeries);
 		})
@@ -1418,7 +1418,7 @@ function renderSplitHousingChart(view, rows) {
 		height: middleHeight,
 		marginLeft: margin.left,
 		innerWidth,
-		leftLabel: "woningen per 1000 inwoners",
+		leftLabel: "woningen per 1000 inwoners - hoger = meer netto woninggroei",
 		rightLabel: "",
 		leftTickFormat: decimalTick,
 		showXAxis: false,
@@ -1435,7 +1435,7 @@ function renderSplitHousingChart(view, rows) {
 		height: bottomHeight,
 		marginLeft: margin.left,
 		innerWidth,
-		leftLabel: "inwoners per woning",
+		leftLabel: "inwoners per woning - lager = meer woningen per inwoner",
 		rightLabel: "",
 		leftTickFormat: decimalTick,
 		showXAxis: true,
