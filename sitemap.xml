@@ -2,29 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://thaumatorium.com/projects/uitkeringen-naar-herkomst/</loc>
-    <lastmod>2026-06-01T23:37:51+02:00</lastmod>
-  </url><url>
-    <loc>http://thaumatorium.com/projects/migratieachtergrond-gemeenten/</loc>
-    <lastmod>2026-06-02T00:09:57+02:00</lastmod>
-  </url><url>
-    <loc>http://thaumatorium.com/projects/verdachten-naar-herkomst/</loc>
-    <lastmod>2026-06-02T00:24:13+02:00</lastmod>
-  </url><url>
-    <loc>http://thaumatorium.com/projects/de-autochtoonse-nederlandse-bevolking/</loc>
-    <lastmod>2026-06-03T19:07:54+02:00</lastmod>
-  </url><url>
-    <loc>http://thaumatorium.com/projects/cultural-distance-map/</loc>
-    <lastmod>2026-05-30T23:31:15+02:00</lastmod>
-  </url><url>
     <loc>http://thaumatorium.com/projects/eerlijke-pagina/</loc>
     <lastmod>2026-05-29T19:21:15+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/kvk-address-density/</loc>
     <lastmod>2026-05-29T18:57:20+02:00</lastmod>
-  </url><url>
-    <loc>http://thaumatorium.com/projects/eu-budget-flow-map/</loc>
-    <lastmod>2026-05-22T10:23:11+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/housing-heatmap/</loc>
     <lastmod>2026-05-22T10:23:11+02:00</lastmod>
@@ -33,9 +15,6 @@
     <lastmod>2026-05-06T20:26:38+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/jargon-files/</loc>
-    <lastmod>2026-05-22T10:23:11+02:00</lastmod>
-  </url><url>
-    <loc>http://thaumatorium.com/projects/world-population/</loc>
     <lastmod>2026-05-22T10:23:11+02:00</lastmod>
   </url><url>
     <loc>http://thaumatorium.com/projects/dutch-time-simulation/</loc>
