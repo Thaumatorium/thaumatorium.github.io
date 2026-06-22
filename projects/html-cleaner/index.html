@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>HTML Cleaner for LLMs | The Thaumatorium</title>
+		<meta name="description" content="Reduce HTML token usage while preserving the semantic content an LLM needs." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="HTML Cleaner for LLMs" />
+		<meta property="og:description" content="Reduce HTML token usage while preserving the semantic content an LLM needs." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="HTML Cleaner for LLMs" />
+		<meta name="twitter:description" content="Reduce HTML token usage while preserving the semantic content an LLM needs." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<section class="html-cleaner-page" aria-labelledby="html-cleaner-title">
+				<style>
+					.html-cleaner-page {
+						display: grid;
+						gap: 1rem;
+						color: #333;
+					}
+					.html-cleaner-header,
+					.html-cleaner-panel,
+					.html-cleaner-stats {
+						border: 1px solid #cda9a9;
+						border-radius: 6px;
+						background: #fffaf9;
+						box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					}
+					.html-cleaner-header,
+					.html-cleaner-panel {
+						padding: 1rem;
+					}
+					.html-cleaner-header {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						gap: 1rem;
+						padding-block: 0.35rem;
+					}
+					.html-cleaner-header h2,
+					.html-cleaner-header p,
+					.html-cleaner-panel h3,
+					.html-cleaner-panel p {
+						margin: 0;
+						padding: 0;
+					}
+					.html-cleaner-toolbar,
+					.html-cleaner-profile-row {
+						display: flex;
+						flex-wrap: wrap;
+						gap: 0.65rem;
+						align-items: end;
+					}
+					.html-cleaner-page label {
+						display: grid;
+						gap: 0.3rem;
+						font-weight: 600;
+					}
+					.html-cleaner-page input,
+					.html-cleaner-page select,
+					.html-cleaner-page textarea,
+					.html-cleaner-page button {
+						font: inherit;
+					}
+					.html-cleaner-page select,
+					.html-cleaner-page textarea {
+						box-sizing: border-box;
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						background: #fff;
+						padding: 0.6rem 0.7rem;
+					}
+					.html-cleaner-small-button {
+						border: 1px solid #6e0000;
+						border-radius: 4px;
+						background: #800;
+						color: #fff;
+						cursor: pointer;
+						padding: 0.62rem 0.9rem;
+					}
+					.html-cleaner-small-button:hover {
+						background: #b00;
+					}
+					.html-cleaner-small-button.secondary {
+						background: #fff;
+						color: #6e0000;
+					}
+					.html-cleaner-editors {
+						display: grid;
+						grid-template-columns: repeat(2, minmax(0, 1fr));
+						gap: 1rem;
+					}
+					.html-cleaner-panel {
+						display: grid;
+						gap: 0.75rem;
+						min-width: 0;
+					}
+					.html-cleaner-editor-label {
+						display: flex !important;
+						justify-content: space-between;
+						gap: 0.75rem;
+						align-items: center;
+					}
+					.html-cleaner-editor-label span:last-child {
+						color: #6e0000;
+						font-family: Tahoma, sans-serif;
+						font-size: 0.82rem;
+						font-weight: 400;
+					}
+					.html-cleaner-editor-label-controls {
+						display: flex;
+						align-items: center;
+						gap: 0.75rem;
+					}
+					.html-cleaner-wrap-label {
+						display: flex !important;
+						align-items: center;
+						gap: 0.35rem;
+						font-weight: 400 !important;
+					}
+					.html-cleaner-editor-stack {
+						display: grid;
+						height: 28rem;
+						min-height: 12rem;
+						overflow: hidden;
+						resize: vertical;
+					}
+					.html-cleaner-page textarea,
+					.html-cleaner-highlight {
+						grid-area: 1 / 1;
+						box-sizing: border-box;
+						width: 100%;
+						height: 100%;
+						min-height: 0;
+						font:
+							0.9rem/1.45 ui-monospace,
+							SFMono-Regular,
+							Consolas,
+							monospace;
+						tab-size: 2;
+						white-space: pre;
+					}
+					.html-cleaner-page textarea {
+						position: relative;
+						z-index: 1;
+						resize: none;
+						overflow: auto;
+						background: transparent;
+						color: transparent;
+						caret-color: #333;
+						-webkit-text-fill-color: transparent;
+					}
+					.html-cleaner-editor-stack.is-wrapped textarea,
+					.html-cleaner-editor-stack.is-wrapped .html-cleaner-highlight {
+						white-space: pre-wrap;
+						overflow-wrap: anywhere;
+					}
+					.html-cleaner-page textarea::selection {
+						background: rgba(128, 0, 0, 0.24);
+					}
+					.html-cleaner-highlight {
+						position: relative;
+						z-index: 0;
+						margin: 0;
+						padding: 0.6rem 0.7rem;
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						background: #fff;
+						color: #333;
+						overflow: hidden;
+						pointer-events: none;
+					}
+					.html-cleaner-highlight code {
+						font: inherit;
+					}
+					.html-cleaner-highlight .hljs-comment,
+					.html-cleaner-highlight .hljs-quote {
+						color: #777;
+						font-style: italic;
+					}
+					.html-cleaner-highlight .hljs-tag,
+					.html-cleaner-highlight .hljs-name,
+					.html-cleaner-highlight .hljs-meta {
+						color: #800;
+					}
+					.html-cleaner-highlight .hljs-attr {
+						color: #7a3e00;
+					}
+					.html-cleaner-highlight .hljs-string,
+					.html-cleaner-highlight .hljs-symbol {
+						color: #176b31;
+					}
+					.html-cleaner-editor-stack.is-example .html-cleaner-highlight,
+					.html-cleaner-editor-stack.is-example .html-cleaner-highlight * {
+						color: #999 !important;
+						font-style: normal;
+					}
+					.html-cleaner-options {
+						border: 1px dashed #cda9a9;
+						border-radius: 4px;
+						padding: 0.8rem 1rem 1rem;
+						background: #fff;
+					}
+					.html-cleaner-options summary {
+						border: 0;
+						font-weight: 700;
+					}
+					.html-cleaner-options-grid {
+						display: grid;
+						grid-template-columns: repeat(2, minmax(0, 1fr));
+						gap: 1rem;
+						margin-top: 0.8rem;
+					}
+					.html-cleaner-option-group {
+						min-width: 0;
+						margin: 0;
+						padding: 0.75rem;
+						border: 1px solid #ead6d6;
+						border-radius: 4px;
+					}
+					.html-cleaner-option-group legend {
+						padding: 0 0.35rem;
+						color: #6e0000;
+						font-weight: 700;
+					}
+					.html-cleaner-option-list {
+						display: grid;
+						gap: 0.55rem;
+						margin: 0;
+						padding: 0;
+						list-style: none;
+					}
+					.html-cleaner-option-list label {
+						display: flex;
+						align-items: center;
+						gap: 0.5rem;
+						font-weight: 400;
+					}
+					.html-cleaner-format-label {
+						display: flex !important;
+						align-items: center;
+						gap: 0.45rem;
+						font-weight: 400 !important;
+					}
+					.html-cleaner-validity {
+						display: inline-flex;
+						align-items: center;
+						border: 1px solid #b8c9b5;
+						border-radius: 999px;
+						padding: 0.18rem 0.5rem;
+						background: #edf7eb;
+						color: #285c22;
+						font:
+							0.78rem Tahoma,
+							sans-serif;
+					}
+					.html-cleaner-validity[data-valid="false"] {
+						border-color: #d9aaaa;
+						background: #fff0f0;
+						color: #8a1717;
+					}
+					.html-cleaner-inline-button {
+						border: 1px solid #b98f8f;
+						border-radius: 4px;
+						background: #fff;
+						color: #6e0000;
+						cursor: pointer;
+						font-size: 0.82rem !important;
+						padding: 0.28rem 0.5rem;
+					}
+					.html-cleaner-inline-button:hover {
+						background: #fff3f0;
+					}
+					.html-cleaner-stats {
+						display: grid;
+						grid-template-columns: repeat(3, minmax(0, 1fr));
+						overflow: hidden;
+					}
+					.html-cleaner-stat {
+						display: grid;
+						gap: 0.25rem;
+						padding: 0.8rem 1rem;
+						border-right: 1px solid #ead6d6;
+					}
+					.html-cleaner-stat:nth-child(3n) {
+						border-right: 0;
+					}
+					.html-cleaner-stat:nth-child(n + 4) {
+						border-top: 1px solid #ead6d6;
+					}
+					.html-cleaner-stat span {
+						color: #6e0000;
+						font:
+							0.8rem Tahoma,
+							sans-serif;
+						text-transform: uppercase;
+					}
+					.html-cleaner-stat strong {
+						font-size: 1.1rem;
+					}
+					.html-cleaner-status {
+						min-height: 1.4rem;
+						margin: 0;
+						color: #6e0000;
+						font-family: Tahoma, sans-serif;
+						font-size: 0.92rem;
+					}
+					.html-cleaner-status[data-tone="error"] {
+						color: #a31717;
+					}
+					@media (max-width: 850px) {
+						.html-cleaner-editors {
+							grid-template-columns: 1fr;
+						}
+						.html-cleaner-options-grid {
+							grid-template-columns: 1fr;
+						}
+						.html-cleaner-editor-stack {
+							height: 20rem;
+						}
+					}
+					@media (max-width: 560px) {
+						.html-cleaner-stats {
+							grid-template-columns: 1fr;
+						}
+						.html-cleaner-stat {
+							border-right: 0;
+							border-top: 0;
+							border-bottom: 1px solid #ead6d6;
+						}
+						.html-cleaner-stat:last-child {
+							border-bottom: 0;
+						}
+					}
+				</style>
+				<header class="html-cleaner-header">
+					<h2 id="html-cleaner-title">HTML Cleaner for LLMs</h2>
+					<button class="html-cleaner-small-button secondary" id="htmlCleanerReset" type="button">Reset</button>
+				</header>
+				<section class="html-cleaner-panel" aria-labelledby="html-cleaner-settings">
+					<div class="html-cleaner-profile-row">
+						<label for="htmlCleanerProfile"
+							>Cleaning profile
+							<select id="htmlCleanerProfile">
+								<option value="conservative">Conservative</option>
+								<option value="balanced" selected>LLM balanced</option>
+								<option value="compact">Maximum compression</option>
+							</select>
+						</label>
+						<button class="html-cleaner-small-button" id="htmlCleanerRun" type="button">Clean HTML</button>
+					</div>
+					<details class="html-cleaner-options">
+						<summary id="html-cleaner-settings">Advanced overrides</summary>
+						<div class="html-cleaner-options-grid">
+							<fieldset class="html-cleaner-option-group">
+								<legend>Preserve</legend>
+								<ul class="html-cleaner-option-list">
+									<li>
+										<label><input data-option="preserveLinks" type="checkbox" /> Safe link targets</label>
+									</li>
+									<li>
+										<label><input data-option="preserveImageAlt" type="checkbox" /> Image alt text</label>
+									</li>
+									<li>
+										<label><input data-option="preserveTables" type="checkbox" /> Table structure</label>
+									</li>
+								</ul>
+							</fieldset>
+							<fieldset class="html-cleaner-option-group">
+								<legend>Remove</legend>
+								<ul class="html-cleaner-option-list">
+									<li>
+										<label><input data-option="stripAttributes" type="checkbox" /> Presentation attributes</label>
+									</li>
+									<li>
+										<label><input data-option="removeBoilerplate" type="checkbox" /> Page boilerplate</label>
+									</li>
+									<li>
+										<label><input data-option="removeEmpty" type="checkbox" /> Empty elements</label>
+									</li>
+									<li>
+										<label><input data-option="removeComments" type="checkbox" /> Comments</label>
+									</li>
+									<li>
+										<label><input data-option="collapseWhitespace" type="checkbox" /> Excess whitespace</label>
+									</li>
+								</ul>
+							</fieldset>
+						</div>
+					</details>
+				</section>
+				<div class="html-cleaner-editors">
+					<section class="html-cleaner-panel">
+						<div class="html-cleaner-editor-label">
+							<label for="htmlCleanerInput">Source HTML</label>
+							<div class="html-cleaner-editor-label-controls">
+								<span>Paste HTML here</span>
+							</div>
+						</div>
+						<div class="html-cleaner-editor-stack is-example" id="htmlCleanerInputStack">
+							<pre class="html-cleaner-highlight" aria-hidden="true"><code id="htmlCleanerInputHighlight"></code></pre>
+							<textarea id="htmlCleanerInput" spellcheck="false" autocomplete="off" placeholder="Paste a full HTML document or fragment here..."></textarea>
+						</div>
+					</section>
+					<section class="html-cleaner-panel">
+						<div class="html-cleaner-editor-label">
+							<label for="htmlCleanerOutput">Cleaned HTML</label>
+							<div class="html-cleaner-editor-label-controls">
+								<span class="html-cleaner-validity" id="htmlCleanerValidity" data-valid="true">Valid fragment</span>
+								<label class="html-cleaner-wrap-label"><input id="htmlCleanerOutputWrap" type="checkbox" checked /> Wrap</label>
+								<label class="html-cleaner-format-label"><input id="htmlCleanerFormatted" type="checkbox" checked /> Formatted</label>
+								<button class="html-cleaner-inline-button" id="htmlCleanerW3cValidate" type="button" title="Sends the cleaned HTML to the external validator.w3.org website and opens the result in a new tab" aria-label="Validate externally with W3C; sends cleaned HTML to validator.w3.org">
+									External: W3C validate ↗
+								</button>
+							</div>
+						</div>
+						<div class="html-cleaner-editor-stack is-wrapped is-example" id="htmlCleanerOutputStack">
+							<pre class="html-cleaner-highlight" aria-hidden="true"><code id="htmlCleanerOutputHighlight"></code></pre>
+							<textarea id="htmlCleanerOutput" readonly spellcheck="false" aria-describedby="htmlCleanerStatus"></textarea>
+						</div>
+					</section>
+				</div>
+				<section class="html-cleaner-stats" aria-label="Reduction statistics">
+					<div class="html-cleaner-stat"><span>Characters</span><strong id="htmlCleanerCharacters">0 → 0</strong></div>
+					<div class="html-cleaner-stat"><span>GPT-5 tokens</span><strong id="htmlCleanerTokens">0 → 0</strong></div>
+					<div class="html-cleaner-stat"><span>Token reduction</span><strong id="htmlCleanerReduction">0%</strong></div>
+					<div class="html-cleaner-stat"><span>Tokens saved</span><strong id="htmlCleanerTokensSaved">0</strong></div>
+					<div class="html-cleaner-stat"><span>Compression ratio</span><strong id="htmlCleanerCompressionRatio">0×</strong></div>
+					<div class="html-cleaner-stat"><span>Elements removed</span><strong id="htmlCleanerElementsRemoved">0</strong></div>
+				</section>
+				<p class="html-cleaner-status" id="htmlCleanerStatus" role="status" aria-live="polite"></p>
+			</section>
+			<script src="/code/highlight.pack.js"></script>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://github.com/openai/tiktoken" rel="noopener noreferrer" target="_blank">OpenAI tiktoken</a>
+						<span>Tokenizer and model-to-encoding reference; GPT-5 uses o200k_base.</span>
+					</li>
+					<li>
+						<a href="https://highlightjs.org/" rel="noopener noreferrer" target="_blank">Highlight.js</a>
+						<span>Client-side HTML syntax highlighting for the source and cleaned output.</span>
+					</li>
+					<li>
+						<a href="https://validator.w3.org/nu/" rel="noopener noreferrer" target="_blank">Nu HTML Checker</a>
+						<span>Optional external standards validation for the cleaned HTML fragment.</span>
+					</li>
+					<li>
+						<a href="https://html-cleaner.com/" rel="noopener noreferrer" target="_blank">HTML Cleaner</a>
+						<span>Functional inspiration for the configurable HTML cleaning workflow.</span>
+					</li>
+				</ul>
+			</aside>
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+				.project-sources a {
+					font-weight: 700;
+				}
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-06-22</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>
