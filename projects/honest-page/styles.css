@@ -1,0 +1,175 @@
+.honest-page {
+	display: grid;
+	gap: 1rem;
+	color: #2b2b2b;
+}
+
+.honest-hero,
+.honest-actions,
+.honest-summary article,
+.honest-section {
+	border: 1px solid #cda9a9;
+	border-radius: 4px;
+	background: #fffaf9;
+	box-shadow: 3px 3px 5px #555;
+}
+
+.honest-link-button {
+	display: inline-block;
+	border: 1px solid #800;
+	border-radius: 4px;
+	background: #800;
+	color: #fff;
+	font-family: Tahoma, sans-serif;
+	font-weight: 700;
+	padding: 0.55rem 0.75rem;
+	text-decoration: none;
+	box-shadow: 2px 2px 4px #777;
+}
+
+.honest-link-button:hover {
+	background: #6e0000;
+	text-decoration: underline;
+}
+
+.honest-hero {
+	display: grid;
+	gap: 0.55rem;
+	padding: 1.1rem;
+}
+
+.honest-hero h1,
+.honest-hero p {
+	margin: 0;
+}
+
+.honest-eyebrow {
+	color: #6e0000;
+	font-family: Tahoma, sans-serif;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+
+.honest-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.7rem;
+	align-items: center;
+	padding: 0.8rem;
+}
+
+.honest-actions button {
+	border: 1px solid #800;
+	border-radius: 4px;
+	background: #800;
+	color: #fff;
+	cursor: pointer;
+	font: inherit;
+	padding: 0.55rem 0.75rem;
+}
+
+.honest-actions button:hover {
+	background: #6e0000;
+}
+
+#statusText {
+	color: #6e0000;
+	font-family: Tahoma, sans-serif;
+	font-size: 0.93rem;
+}
+
+.honest-summary {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	gap: 0.8rem;
+}
+
+.honest-summary article {
+	display: grid;
+	gap: 0.3rem;
+	padding: 0.9rem;
+}
+
+.honest-summary span,
+.honest-item dt,
+.honest-section-meta {
+	color: #6e5d51;
+	font-family: Tahoma, sans-serif;
+	font-size: 0.9rem;
+}
+
+.honest-summary strong {
+	font-size: 1.1rem;
+	overflow-wrap: anywhere;
+}
+
+.honest-sections {
+	display: grid;
+	gap: 1rem;
+}
+
+.honest-section {
+	display: grid;
+	gap: 0.9rem;
+	padding: 1rem;
+}
+
+.honest-section header {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1rem;
+	align-items: baseline;
+	justify-content: space-between;
+}
+
+.honest-section h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.honest-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+	gap: 0.75rem;
+}
+
+.honest-item {
+	display: grid;
+	gap: 0.35rem;
+	margin: 0;
+	padding: 0.75rem;
+	border: 1px solid #ead6d6;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.honest-item dt,
+.honest-item dd {
+	margin: 0;
+}
+
+.honest-item dd {
+	font-family: Consolas, Monaco, monospace;
+	font-size: 0.93rem;
+	overflow-wrap: anywhere;
+	white-space: pre-wrap;
+}
+
+.honest-yes {
+	color: #146b2a;
+}
+
+.honest-no,
+.honest-error {
+	color: #8a1f11;
+}
+
+@media (max-width: 640px) {
+	.honest-actions {
+		align-items: stretch;
+	}
+
+	.honest-actions button {
+		flex: 1 1 100%;
+	}
+}

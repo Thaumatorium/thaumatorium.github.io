@@ -315,12 +315,12 @@
 				</style>
 				<div class="housing-heatmap-app">
 					<aside>
-						<h1>Huizenprijs heatmap</h1>
-						<p>Verken woningen op prijs, prijs per m², budget en oppervlak. De kaart kleurt individuele woningen, zodat clusters niet automatisch heet worden.</p>
+						<h1>Housing Price Heatmap</h1>
+						<p>Explore homes by price, price per m², budget, and floor area. The map colours individual homes, so clusters do not automatically appear hot.</p>
 						<div class="field">
-							<label for="province">Provinciefilter</label>
+							<label for="province">Province filter</label>
 							<select id="province">
-								<option value="">Alle provincies</option>
+								<option value="">All provinces</option>
 								<option value="Drenthe">Drenthe</option>
 								<option value="Flevoland">Flevoland</option>
 								<option value="Friesland">Friesland</option>
@@ -336,94 +336,94 @@
 							</select>
 						</div>
 						<div class="field">
-							<label for="metric">Prijskleur</label>
+							<label for="metric">Price colour</label>
 							<select id="metric">
-								<option value="price">Vraagprijs</option>
-								<option value="price_per_m2">Prijs per m²</option>
+								<option value="price">Asking price</option>
+								<option value="price_per_m2">Price per m²</option>
 							</select>
 						</div>
 						<div class="field">
-							<label for="offerType">Aanbod</label>
+							<label for="offerType">Offer type</label>
 							<select id="offerType">
-								<option value="sale">Alleen koop</option>
-								<option value="rent">Alleen huur</option>
-								<option value="all">Koop en huur</option>
+								<option value="sale">For sale only</option>
+								<option value="rent">For rent only</option>
+								<option value="all">For sale and rent</option>
 							</select>
 						</div>
 						<div class="field">
-							<label for="limit">Aantal listings</label>
+							<label for="limit">Number of listings</label>
 							<input id="limit" type="number" min="50" max="5000" value="1000" step="50" />
 						</div>
 						<div class="field-row">
 							<div class="field">
-								<label for="maxPrice">Max. vraagprijs</label>
-								<input id="maxPrice" type="number" min="0" step="25000" placeholder="Geen limiet" />
+								<label for="maxPrice">Max. asking price</label>
+								<input id="maxPrice" type="number" min="0" step="25000" placeholder="No limit" />
 							</div>
 							<div class="field">
 								<label for="maxPpm">Max. €/m²</label>
-								<input id="maxPpm" type="number" min="0" step="250" placeholder="Geen limiet" />
+								<input id="maxPpm" type="number" min="0" step="250" placeholder="No limit" />
 							</div>
 						</div>
 						<div class="field-row">
 							<div class="field">
 								<label for="minArea">Min. m²</label>
-								<input id="minArea" type="number" min="0" step="5" placeholder="Geen limiet" />
+								<input id="minArea" type="number" min="0" step="5" placeholder="No limit" />
 							</div>
 							<div class="field">
-								<label for="sortMode">Sorteer kansen</label>
+								<label for="sortMode">Sort opportunities</label>
 								<select id="sortMode">
-									<option value="price_per_m2">Laagste €/m²</option>
-									<option value="price">Laagste vraagprijs</option>
-									<option value="area_m2">Meeste m²</option>
-									<option value="value_score">Beste waarde</option>
+									<option value="price_per_m2">Lowest €/m²</option>
+									<option value="price">Lowest asking price</option>
+									<option value="area_m2">Largest floor area</option>
+									<option value="value_score">Best value</option>
 								</select>
 							</div>
 						</div>
 						<div class="field">
-							<label for="radius">Prijs-radius</label>
+							<label for="radius">Price radius</label>
 							<input id="radius" type="range" min="10" max="60" value="28" />
 						</div>
 						<div class="field">
-							<label>Weergave</label>
+							<label>Display</label>
 							<label class="provider"
 								><input id="showPoints" type="checkbox" checked />
-								<div><strong>Toon listing-punten</strong><span>Voor popups en sanity checks.</span></div></label
+								<div><strong>Show listing points</strong><span>For pop-ups and sanity checks.</span></div></label
 							>
 						</div>
-						<button id="refresh">Ververs heatmap</button>
+						<button id="refresh">Refresh heatmap</button>
 						<div class="stats">
 							<div class="stat">
-								<div class="label">Zichtbaar</div>
+								<div class="label">Visible</div>
 								<div id="statCount" class="value">0</div>
 							</div>
 							<div class="stat">
-								<div class="label">Gem. prijs/m²</div>
+								<div class="label">Avg. price/m²</div>
 								<div id="statPpm" class="value">–</div>
 							</div>
 							<div class="stat">
-								<div class="label">Goedkoopste</div>
+								<div class="label">Cheapest</div>
 								<div id="statCheapest" class="value">–</div>
 							</div>
 							<div class="stat">
-								<div class="label">Beste €/m²</div>
+								<div class="label">Best €/m²</div>
 								<div id="statBestPpm" class="value">–</div>
 							</div>
 						</div>
-						<div id="status" class="status">Initialiseren…</div>
+						<div id="status" class="status">Initialising…</div>
 						<div class="field">
-							<label>Goedkope kansen</label>
+							<label>Affordable opportunities</label>
 							<div id="results" class="results"></div>
 						</div>
 					</aside>
 					<section class="map-wrap">
 						<div id="map"></div>
-						<div class="badge">Leaflet · OpenStreetMap · Nederland</div>
+						<div class="badge">Leaflet · OpenStreetMap · Netherlands</div>
 						<div class="legend">
-							<strong>Prijsintensiteit</strong>
+							<strong>Price intensity</strong>
 							<div class="bar"></div>
-							<div class="scale"><span id="legendLow">goedkoop</span><span id="legendHigh">duur</span></div>
-							<div id="legendMetric" style="margin-top: 8px">Kleur: vraagprijs</div>
-							<div id="legendHint" style="margin-top: 6px">Blauw is relatief goedkoop binnen de huidige selectie; rood is relatief duur.</div>
+							<div class="scale"><span id="legendLow">affordable</span><span id="legendHigh">expensive</span></div>
+							<div id="legendMetric" style="margin-top: 8px">Colour: asking price</div>
+							<div id="legendHint" style="margin-top: 6px">Blue is relatively affordable within the current selection; red is relatively expensive.</div>
 						</div>
 					</section>
 				</div>
@@ -504,9 +504,9 @@
 							.replace(/\s+/g, "-");
 					}
 					function offerTypeLabel(value) {
-						if (value === "sale") return "koop";
-						if (value === "rent") return "huur";
-						return "onbekend";
+						if (value === "sale") return "for sale";
+						if (value === "rent") return "for rent";
+						return "unknown";
 					}
 					async function fetchListings() {
 						const province = provinceEl.value;
@@ -534,7 +534,7 @@
 					async function fetchJsonPayload(url, required) {
 						const response = await fetch(url, { headers: { Accept: "application/json" } });
 						if (response.status === 404 && !required) return { listings: [] };
-						if (!response.ok) throw new Error(url + " gaf HTTP " + response.status + ". Run de scraper(s) eerst.");
+						if (!response.ok) throw new Error(url + " returned HTTP " + response.status + ". Run the scraper(s) first.");
 						const payload = await response.json();
 						return { listings: Array.isArray(payload) ? payload : payload.listings || [] };
 					}
@@ -557,9 +557,9 @@
 						return {
 							id: String(row.id ?? row.object_id ?? row.url ?? "api-" + index),
 							source: String(row.source ?? row.provider ?? "live_api"),
-							city: String(row.city ?? row.plaats ?? row.address?.city ?? "Onbekend"),
+							city: String(row.city ?? row.plaats ?? row.address?.city ?? "Unknown"),
 							province: provinceFromListing(row, enrichment, lat, lon),
-							title: String(row.title ?? row.address?.streetAddress ?? row.address ?? "Woning"),
+							title: String(row.title ?? row.address?.streetAddress ?? row.address ?? "Home"),
 							offer_type: inferOfferType(row, enrichment),
 							latitude: lat,
 							longitude: lon,
@@ -567,7 +567,7 @@
 							price,
 							price_per_m2: Number(row.price_per_m2 ?? row.pricePerM2 ?? row.ppm) || price / area,
 							rooms: Number(row.rooms ?? row.kamers) || "?",
-							home_type: String(row.home_type ?? row.type ?? row.object_type ?? "woning"),
+							home_type: String(row.home_type ?? row.type ?? row.object_type ?? "home"),
 							energy_label: String(row.energy_label ?? row.energyLabel ?? row.label ?? "?"),
 							postal_code: String(row.postal_code ?? row.postcode ?? row.address?.postalCode ?? ""),
 							house_number: String(row.house_number ?? row.huisnummer ?? row.address?.houseNumber ?? ""),
@@ -594,7 +594,7 @@
 						if (direct) return String(direct);
 						const enriched = provinceFromEnrichment(enrichment);
 						if (enriched) return enriched;
-						return provinceFromCoordinates(lat, lon) || "Onbekend";
+						return provinceFromCoordinates(lat, lon) || "Unknown";
 					}
 					function provinceFromEnrichment(enrichment) {
 						for (const value of Object.values(enrichment || {})) {
@@ -653,18 +653,18 @@
 						return metric === "price" ? listing.price : listing.price_per_m2;
 					}
 					function metricLabel(metric) {
-						return metric === "price_per_m2" ? "prijs per m²" : "vraagprijs";
+						return metric === "price_per_m2" ? "price per m²" : "asking price";
 					}
 					function metricDisplayValue(value, metric) {
 						if (value == null || !Number.isFinite(value)) return "–";
 						return metric === "price_per_m2" ? euro(value) + "/m²" : euro(value);
 					}
 					function updateLegend(rows, metric) {
-						legendMetric.textContent = "Kleur: " + metricLabel(metric);
+						legendMetric.textContent = "Colour: " + metricLabel(metric);
 						if (!rows.length) {
-							legendLow.textContent = "goedkoop";
-							legendHigh.textContent = "duur";
-							legendHint.textContent = "Blauw is relatief goedkoop binnen de huidige selectie; rood is relatief duur.";
+							legendLow.textContent = "affordable";
+							legendHigh.textContent = "expensive";
+							legendHint.textContent = "Blue is relatively affordable within the current selection; red is relatively expensive.";
 							return;
 						}
 						const values = rows
@@ -675,7 +675,7 @@
 						const high = percentile(values, 0.95);
 						legendLow.textContent = metricDisplayValue(low, metric);
 						legendHigh.textContent = metricDisplayValue(high, metric);
-						legendHint.textContent = "Blauw valt rond of onder de 5e percentielgrens; rood rond of boven de 95e percentielgrens van de huidige selectie.";
+						legendHint.textContent = "Blue is at or below approximately the 5th percentile; red is at or above the 95th percentile of the current selection.";
 					}
 					function colorForValue(v) {
 						if (v < 0.2) return "#1683d8";
@@ -685,50 +685,50 @@
 						return "#b00020";
 					}
 					function providerLabel(id) {
-						return listingSources.find((source) => source.id === id)?.label || String(id || "onbekend").replace(/_/g, " ");
+						return listingSources.find((source) => source.id === id)?.label || String(id || "unknown").replace(/_/g, " ");
 					}
 					function popupHtml(l) {
 						return (
 							"<strong>" +
 							l.title +
 							"</strong><br>" +
-							"Bron: " +
+							"Source: " +
 							providerLabel(l.source) +
 							"<br>" +
-							"Aanbod: " +
+							"Offer: " +
 							offerTypeLabel(l.offer_type) +
 							"<br>" +
-							"Stad: " +
+							"City: " +
 							l.city.replace("DenHaag", "Den Haag") +
 							"<br>" +
-							"Provincie: " +
+							"Province: " +
 							l.province +
 							"<br>" +
 							"Type: " +
 							l.home_type +
 							" · " +
 							l.rooms +
-							" kamers · label " +
+							" rooms · label " +
 							l.energy_label +
 							"<br>" +
-							"Vraagprijs: " +
+							"Asking price: " +
 							euro(l.price) +
 							"<br>" +
-							"Oppervlakte: " +
+							"Floor area: " +
 							fmt(l.area_m2) +
 							" m²<br>" +
-							"Prijs per m²: " +
+							"Price per m²: " +
 							euro(l.price_per_m2) +
 							"<br>" +
 							enrichmentHtml(l) +
-							"<small>Hover toont tijdelijk · klik zet vast</small>"
+							"<small>Hover to show temporarily · click to pin</small>"
 						);
 					}
 					function enrichmentHtml(l) {
 						const entries = Object.entries(l.enrichment || {}).filter(([key]) => key !== "_errors");
 						if (!entries.length) return "";
 						return (
-							"<hr><strong>Verrijking</strong><br>" +
+							"<hr><strong>Enrichment</strong><br>" +
 							entries
 								.map(([key, value]) => {
 									const summary = enrichmentSummary(value);
@@ -827,7 +827,7 @@
 					function renderResults() {
 						const rows = sortRows(visibleListings).slice(0, 8);
 						if (!rows.length) {
-							resultsEl.innerHTML = '<div class="status">Geen woningen binnen deze filters.</div>';
+							resultsEl.innerHTML = '<div class="status">No homes match these filters.</div>';
 							return;
 						}
 						resultsEl.innerHTML = rows
@@ -835,7 +835,7 @@
 								(l) => `
         <button class="result" data-listing-id="${l.id}" style="border-left-color:${colorForValue(l.heatValue)}" type="button">
           <strong>${l.title}, ${l.city.replace("DenHaag", "Den Haag")}</strong>
-          <span>${euro(l.price)} · ${euro(l.price_per_m2)}/m² · ${fmt(l.area_m2)} m² · ${l.rooms} kamers · ${offerTypeLabel(l.offer_type)} · ${providerLabel(l.source)}</span>
+          <span>${euro(l.price)} · ${euro(l.price_per_m2)}/m² · ${fmt(l.area_m2)} m² · ${l.rooms} rooms · ${offerTypeLabel(l.offer_type)} · ${providerLabel(l.source)}</span>
         </button>`
 							)
 							.join("");
@@ -853,7 +853,7 @@
 					}
 					async function refresh() {
 						try {
-							statusEl.textContent = "Lokale listings laden…";
+							statusEl.textContent = "Loading local listings…";
 							const limit = Math.max(50, Math.min(5000, Number(limitEl.value) || 1000));
 							listings = await fetchListings();
 							visibleListings = normalize(applyFilters(listings).slice(0, limit), metricEl.value);
@@ -864,15 +864,15 @@
 							renderMapLayers();
 							statusEl.textContent =
 								fmt(visibleListings.length) +
-								" van " +
+								" of " +
 								fmt(listings.length) +
-								" lokale listings zichtbaar.\nAanbod: " +
-								(offerTypeEl.value === "all" ? "koop en huur" : offerTypeLabel(offerTypeEl.value)) +
-								".\nLimiet toegepast na filteren: " +
+								" local listings visible.\nOffer type: " +
+								(offerTypeEl.value === "all" ? "for sale and rent" : offerTypeLabel(offerTypeEl.value)) +
+								".\nLimit applied after filtering: " +
 								fmt(limit) +
 								".\n" +
 								legendMetric.textContent +
-								".\nElke woning krijgt een eigen prijskleur; clusters tellen niet op.\nGebruik de kansenlijst om direct naar goedkope woningen te springen.";
+								".\nEach home gets its own price colour; clusters do not accumulate.\nUse the opportunities list to jump directly to affordable homes.";
 						} catch (err) {
 							listings = [];
 							visibleListings = [];
@@ -881,7 +881,7 @@
 							renderResults();
 							updateLegend([], metricEl.value);
 							renderMapLayers();
-							statusEl.textContent = "Fout: " + (err.message || err);
+							statusEl.textContent = "Error: " + (err.message || err);
 						}
 					}
 					document.getElementById("refresh").addEventListener("click", refresh);
@@ -912,11 +912,11 @@
 						<span>Building and address enrichment source for Dutch housing geography.</span>
 					</li>
 					<li>
-						<a href="https://api.pdok.nl/kadaster/kadastralekaart/ogc/v1" rel="noopener noreferrer" target="_blank">PDOK Kadastrale Kaart OGC API</a>
+						<a href="https://api.pdok.nl/kadaster/kadastralekaart/ogc/v1" rel="noopener noreferrer" target="_blank">PDOK Cadastral Map OGC API</a>
 						<span>Parcel and cadastral geography enrichment.</span>
 					</li>
 					<li>
-						<a href="https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/wijk-en-buurtkaart-2024" rel="noopener noreferrer" target="_blank">CBS Wijken en Buurten</a>
+						<a href="https://www.cbs.nl/nl-nl/dossier/nederland-regionaal/geografische-data/wijk-en-buurtkaart-2024" rel="noopener noreferrer" target="_blank">CBS Districts and Neighbourhoods</a>
 						<span>Dutch neighborhood and municipality context.</span>
 					</li>
 				</ul>
@@ -962,7 +962,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
+					<sub>Last updated: <time id="updated">2026-06-22</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>

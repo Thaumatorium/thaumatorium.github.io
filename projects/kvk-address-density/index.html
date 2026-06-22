@@ -2,8 +2,8 @@
 <html lang="en-GB">
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="utf-8" />
-		<title>KvK Adresdichtheid Risicosignalen | The Thaumatorium</title>
-		<meta name="description" content="Analyse-dashboard voor geaggregeerde signalen van onwaarschijnlijk hoge bedrijfsdichtheid in Nederlandse gebieden." />
+		<title>KVK Address Density Risk Signals | The Thaumatorium</title>
+		<meta name="description" content="Analytics dashboard for aggregated signals of unusually high business density in areas of the Netherlands." />
 		<link rel="canonical" href="https://thaumatorium.com/" />
 		<meta name="theme-color" content="#800" />
 		<link rel="apple-touch-icon" href="/images/icons-192.png" />
@@ -14,16 +14,16 @@
 		<link rel="stylesheet" href="/styles/projects.css?v=3" />
 		<meta property="og:url" content="https://thaumatorium.com/" />
 		<meta property="og:type" content="website" />
-		<meta property="og:title" content="KvK Adresdichtheid Risicosignalen" />
-		<meta property="og:description" content="Analyse-dashboard voor geaggregeerde signalen van onwaarschijnlijk hoge bedrijfsdichtheid in Nederlandse gebieden." />
+		<meta property="og:title" content="KVK Address Density Risk Signals" />
+		<meta property="og:description" content="Analytics dashboard for aggregated signals of unusually high business density in areas of the Netherlands." />
 		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta property="og:image:width" content="1280" />
 		<meta property="og:image:height" content="668" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:site" content="@NostraDavid2" />
 		<meta name="twitter:creator" content="@NostraDavid2" />
-		<meta name="twitter:title" content="KvK Adresdichtheid Risicosignalen" />
-		<meta name="twitter:description" content="Analyse-dashboard voor geaggregeerde signalen van onwaarschijnlijk hoge bedrijfsdichtheid in Nederlandse gebieden." />
+		<meta name="twitter:title" content="KVK Address Density Risk Signals" />
+		<meta name="twitter:description" content="Analytics dashboard for aggregated signals of unusually high business density in areas of the Netherlands." />
 		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
 		<meta name="twitter:image:width" content="1280" />
 		<meta name="twitter:image:height" content="668" />
@@ -48,49 +48,49 @@
 			<link rel="stylesheet" href="styles.css" />
 			<div class="kvk-density-page">
 				<header class="project-hero">
-					<p class="eyebrow">Onderzoeksprototype</p>
-					<h1>KvK Adresdichtheid Risicosignalen</h1>
-					<p class="lede">Deze methode kan locaties of gebieden prioriteren voor nader onderzoek wanneer rechtmatig verkregen vestigingsdata beschikbaar is. De publieke demo toont alleen geaggregeerde voorbeeldindicatoren.</p>
+					<p class="eyebrow">Research prototype</p>
+					<h1>KVK Address Density Risk Signals</h1>
+					<p class="lede">This method can prioritise locations or areas for further investigation when lawfully obtained establishment data is available. The public demo only shows aggregated sample indicators.</p>
 				</header>
-				<section class="notice" aria-label="Status en beperkingen van de demo">
-					<strong>Werk in uitvoering: demo zonder daadwerkelijke data.</strong>
-					Deze pagina gebruikt fictieve, geaggregeerde voorbeeldgegevens en bevat geen echte KvK-, adres- of bedrijfsdata. Hoge dichtheid is alleen een risicosignaal dat context, databronnen en juridische grondslag vereist voordat conclusies worden getrokken.
+				<section class="notice" aria-label="Demo status and limitations">
+					<strong>Work in progress: demo without real data.</strong>
+					This page uses fictional, aggregated sample data and contains no real KVK, address, or business data. High density is only a risk signal; context, data sources, and a legal basis are required before drawing conclusions.
 				</section>
-				<div class="dashboard" role="main" aria-label="Adresdichtheid analyse-dashboard">
-					<section class="kpis" aria-label="Samenvatting">
+				<div class="dashboard" role="main" aria-label="Address density analytics dashboard">
+					<section class="kpis" aria-label="Summary">
 						<article>
-							<span>Onderzochte gebieden</span>
+							<span>Areas analysed</span>
 							<strong id="areaCount">-</strong>
 						</article>
 						<article>
-							<span>Hoogste score</span>
+							<span>Highest score</span>
 							<strong id="maxScore">-</strong>
 						</article>
 						<article>
-							<span>Risicosignalen</span>
+							<span>Risk signals</span>
 							<strong id="signalCount">-</strong>
 						</article>
 						<article>
-							<span>Mediaan dichtheid</span>
+							<span>Median density</span>
 							<strong id="medianDensity">-</strong>
 						</article>
 					</section>
 					<section class="controls" aria-label="Filters">
 						<label>
-							Zoeken
-							<input id="searchInput" type="search" placeholder="Gebied, gemeente of type" autocomplete="off" />
+							Search
+							<input id="searchInput" type="search" placeholder="Area, municipality, or type" autocomplete="off" />
 						</label>
 						<label>
-							Signaalniveau
+							Signal level
 							<select id="riskFilter">
-								<option value="all">Alle niveaus</option>
-								<option value="hoog">Hoog</option>
-								<option value="verhoogd">Verhoogd</option>
-								<option value="normaal">Normaal</option>
+								<option value="all">All levels</option>
+								<option value="high">High</option>
+								<option value="elevated">Elevated</option>
+								<option value="normal">Normal</option>
 							</select>
 						</label>
 						<label>
-							Minimale score
+							Minimum score
 							<input id="scoreInput" type="range" min="0" max="100" value="0" step="5" />
 							<span id="scoreLabel">0</span>
 						</label>
@@ -99,8 +99,8 @@
 						<div class="table-panel">
 							<div class="panel-heading">
 								<div>
-									<p class="eyebrow">Geaggregeerde sampledata</p>
-									<h2>Gebieden met dichtheidsscore</h2>
+									<p class="eyebrow">Aggregated sample data</p>
+									<h2>Areas by density score</h2>
 								</div>
 								<p id="resultCount" class="result-count" aria-live="polite">-</p>
 							</div>
@@ -108,32 +108,32 @@
 								<table>
 									<thead>
 										<tr>
-											<th><button type="button" data-sort="area">Gebied</button></th>
-											<th><button type="button" data-sort="municipality">Gemeente</button></th>
+											<th><button type="button" data-sort="area">Area</button></th>
+											<th><button type="button" data-sort="municipality">Municipality</button></th>
 											<th><button type="button" data-sort="riskScore">Score</button></th>
-											<th><button type="button" data-sort="companiesPerUsableM2">Bedrijven / 100 m2</button></th>
-											<th><button type="button" data-sort="companiesPerObject">Bedrijven / object</button></th>
-											<th><button type="button" data-sort="peerDeviation">Afwijking</button></th>
-											<th>Uitleg</th>
+											<th><button type="button" data-sort="companiesPerUsableM2">Businesses / 100 m2</button></th>
+											<th><button type="button" data-sort="companiesPerObject">Businesses / object</button></th>
+											<th><button type="button" data-sort="peerDeviation">Deviation</button></th>
+											<th>Explanation</th>
 										</tr>
 									</thead>
 									<tbody id="resultsBody"></tbody>
 								</table>
 							</div>
 						</div>
-						<aside class="method-panel" aria-label="Methode">
-							<p class="eyebrow">Methode</p>
-							<h2>Wat de score meet</h2>
-							<p>Het model vergelijkt bedrijfsdichtheid met gebouwcapaciteit en vergelijkbare gebieden. In een echte toepassing zou de invoer alleen bestaan uit rechtmatig verkregen vestigingsdata en open gebieds- of gebouwregistraties.</p>
+						<aside class="method-panel" aria-label="Method">
+							<p class="eyebrow">Method</p>
+							<h2>What the score measures</h2>
+							<p>The model compares business density with building capacity and comparable areas. In a real application, its inputs would consist only of lawfully obtained establishment data and open area or building registers.</p>
 							<ol>
-								<li>Normaliseer vestigingen naar een gekozen aggregatieniveau.</li>
-								<li>Koppel BAG-indicatoren zoals bruikbare oppervlakte en verblijfsobjecten.</li>
-								<li>Vergelijk dichtheid en branchemix met vergelijkbare gebieden.</li>
-								<li>Markeer uitschieters als prioriteit voor nader onderzoek.</li>
+								<li>Normalise establishments to a chosen aggregation level.</li>
+								<li>Link BAG indicators such as usable floor area and occupancy units.</li>
+								<li>Compare density and industry mix with comparable areas.</li>
+								<li>Flag outliers as priorities for further investigation.</li>
 							</ol>
 							<div class="source-note">
-								<strong>Datagrens:</strong>
-								de open KvK-dataset bevat geen volledige adressen of bedrijfsidentificatoren voor publieke herpublicatie. Deze demo simuleert daarom alleen geaggregeerde indicatoren.
+								<strong>Data limitation:</strong>
+								the open KVK dataset does not contain complete addresses or business identifiers for public republication. This demo therefore only simulates aggregated indicators.
 							</div>
 						</aside>
 					</section>
@@ -144,20 +144,20 @@
 				<h2 id="project-sources-title">Sources</h2>
 				<ul>
 					<li>
-						<a href="https://developers.kvk.nl/nl/documentation/open-dataset-basis-bedrijfsgegevens-api" rel="noopener noreferrer" target="_blank">KVK Handelsregister Open Dataset Basis Bedrijfsgegevens</a>
-						<span>Documentatie voor de open dataset; deze bevat geen bedrijfsnaam, KvK-nummer of volledig vestigingsadres.</span>
+						<a href="https://developers.kvk.nl/nl/documentation/open-dataset-basis-bedrijfsgegevens-api" rel="noopener noreferrer" target="_blank">KVK Business Register Open Dataset: Basic Business Data</a>
+						<span>Documentation for the open dataset; it does not contain business names, KVK numbers, or complete establishment addresses.</span>
 					</li>
 					<li>
-						<a href="https://developers.kvk.nl/nl/documentation" rel="noopener noreferrer" target="_blank">KVK Handelsregister API-documentatie</a>
-						<span>Overzicht van Handelsregister-API&#39;s zoals Zoeken, Basisprofiel en Vestigingsprofiel.</span>
+						<a href="https://developers.kvk.nl/nl/documentation" rel="noopener noreferrer" target="_blank">KVK Business Register API documentation</a>
+						<span>Overview of Business Register APIs such as Search, Basic Profile, and Establishment Profile.</span>
 					</li>
 					<li>
 						<a href="https://opendata.cbs.nl/" rel="noopener noreferrer" target="_blank">CBS StatLine</a>
-						<span>Open statistieken voor regionale context en bedrijfs-/gebiedsaggregaten.</span>
+						<span>Open statistics for regional context and business and area aggregates.</span>
 					</li>
 					<li>
 						<a href="https://api.pdok.nl/kadaster/bag/ogc/v2" rel="noopener noreferrer" target="_blank">PDOK BAG API</a>
-						<span>BAG-gegevens voor panden, verblijfsobjecten, gebruiksdoel en oppervlakte.</span>
+						<span>BAG data for buildings, occupancy units, usage purposes, and floor area.</span>
 					</li>
 				</ul>
 			</aside>
@@ -202,7 +202,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2026-05-29</time></sub>
+					<sub>Last updated: <time id="updated">2026-06-22</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>
