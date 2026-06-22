@@ -10,7 +10,7 @@ const signalCount = document.querySelector("#signalCount");
 const medianDensity = document.querySelector("#medianDensity");
 const sortButtons = document.querySelectorAll("[data-sort]");
 
-const numberFormatter = new Intl.NumberFormat("nl-NL", { maximumFractionDigits: 2 });
+const numberFormatter = new Intl.NumberFormat("en-GB", { maximumFractionDigits: 2 });
 let rows = [];
 let sortKey = "riskScore";
 let sortDirection = "desc";
@@ -23,13 +23,13 @@ function median(values) {
 }
 
 function riskSignals(data) {
-	return data.filter((row) => row.riskLevel === "hoog" || row.riskLevel === "verhoogd");
+	return data.filter((row) => row.riskLevel === "high" || row.riskLevel === "elevated");
 }
 
 function updateKpis(data) {
-	areaCount.textContent = data.length.toLocaleString("nl-NL");
-	maxScore.textContent = Math.max(...data.map((row) => row.riskScore)).toLocaleString("nl-NL");
-	signalCount.textContent = riskSignals(data).length.toLocaleString("nl-NL");
+	areaCount.textContent = data.length.toLocaleString("en-GB");
+	maxScore.textContent = Math.max(...data.map((row) => row.riskScore)).toLocaleString("en-GB");
+	signalCount.textContent = riskSignals(data).length.toLocaleString("en-GB");
 	medianDensity.textContent = `${numberFormatter.format(median(data.map((row) => row.companiesPerUsableM2)))} / 100 m2`;
 }
 
@@ -56,7 +56,7 @@ function compareRows(a, b) {
 	if (typeof aValue === "number" && typeof bValue === "number") {
 		return (aValue - bValue) * direction;
 	}
-	return String(aValue).localeCompare(String(bValue), "nl-NL") * direction;
+	return String(aValue).localeCompare(String(bValue), "en-GB") * direction;
 }
 
 function rowTemplate(row) {
@@ -76,10 +76,10 @@ function rowTemplate(row) {
 			<td>${numberFormatter.format(row.peerDeviation)}x</td>
 			<td>
 				<details>
-					<summary>Waarom deze score?</summary>
+					<summary>Why this score?</summary>
 					<p>${row.explanation}</p>
-					<p><strong>Branchemix:</strong> ${row.branchMix}.</p>
-					<p><strong>Volume:</strong> ${row.companyCount.toLocaleString("nl-NL")} registraties op ${row.buildingObjects.toLocaleString("nl-NL")} objecten en ${row.usableM2.toLocaleString("nl-NL")} m2.</p>
+					<p><strong>Industry mix:</strong> ${row.branchMix}.</p>
+					<p><strong>Volume:</strong> ${row.companyCount.toLocaleString("en-GB")} registrations across ${row.buildingObjects.toLocaleString("en-GB")} objects and ${row.usableM2.toLocaleString("en-GB")} m2.</p>
 				</details>
 			</td>
 		</tr>
@@ -89,7 +89,7 @@ function rowTemplate(row) {
 function render() {
 	const visibleRows = filteredRows().sort(compareRows);
 	scoreLabel.textContent = scoreInput.value;
-	resultCount.textContent = `${visibleRows.length.toLocaleString("nl-NL")} van ${rows.length.toLocaleString("nl-NL")} gebieden`;
+	resultCount.textContent = `${visibleRows.length.toLocaleString("en-GB")} of ${rows.length.toLocaleString("en-GB")} areas`;
 	resultsBody.innerHTML = visibleRows.map(rowTemplate).join("");
 }
 
@@ -116,5 +116,5 @@ scoreInput.addEventListener("input", render);
 sortButtons.forEach((button) => button.addEventListener("click", () => setSort(button.dataset.sort)));
 
 init().catch((error) => {
-	resultsBody.innerHTML = `<tr><td colspan="7">De sampledata kon niet worden geladen: ${error.message}</td></tr>`;
+	resultsBody.innerHTML = `<tr><td colspan="7">The sample data could not be loaded: ${error.message}</td></tr>`;
 });

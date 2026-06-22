@@ -1,9 +1,9 @@
 [
 	{
-		"area": "Postcodecluster 10-A",
+		"area": "Postcode cluster 10-A",
 		"municipality": "Amsterdam",
-		"areaType": "centrumgebied",
-		"riskLevel": "hoog",
+		"areaType": "city centre",
+		"riskLevel": "high",
 		"riskScore": 92,
 		"companyCount": 438,
 		"usableM2": 9200,
@@ -11,14 +11,14 @@
 		"companiesPerUsableM2": 4.76,
 		"companiesPerObject": 11.5,
 		"peerDeviation": 3.8,
-		"branchMix": "zakelijke dienstverlening, holdings, webhandel",
-		"explanation": "De score is hoog door veel registraties per verblijfsobject en een sterke afwijking van vergelijkbare centrumgebieden."
+		"branchMix": "business services, holding companies, e-commerce",
+		"explanation": "The score is high because of the large number of registrations per occupancy unit and the strong deviation from comparable city-centre areas."
 	},
 	{
-		"area": "Postcodecluster 25-B",
-		"municipality": "Den Haag",
-		"areaType": "kantorengebied",
-		"riskLevel": "verhoogd",
+		"area": "Postcode cluster 25-B",
+		"municipality": "The Hague",
+		"areaType": "office district",
+		"riskLevel": "elevated",
 		"riskScore": 74,
 		"companyCount": 286,
 		"usableM2": 10800,
@@ -26,14 +26,14 @@
 		"companiesPerUsableM2": 2.65,
 		"companiesPerObject": 6.5,
 		"peerDeviation": 2.4,
-		"branchMix": "advies, juridische diensten, administratie",
-		"explanation": "Het gebied heeft een plausibel kantoorprofiel, maar de registratiegraad ligt ruim boven de vergelijkingsgroep."
+		"branchMix": "consulting, legal services, administration",
+		"explanation": "The area has a plausible office profile, but its registration rate is well above that of its peer group."
 	},
 	{
-		"area": "Postcodecluster 30-C",
+		"area": "Postcode cluster 30-C",
 		"municipality": "Rotterdam",
-		"areaType": "gemengd stedelijk",
-		"riskLevel": "hoog",
+		"areaType": "mixed urban",
+		"riskLevel": "high",
 		"riskScore": 86,
 		"companyCount": 352,
 		"usableM2": 7600,
@@ -41,14 +41,14 @@
 		"companiesPerUsableM2": 4.63,
 		"companiesPerObject": 11.35,
 		"peerDeviation": 3.3,
-		"branchMix": "logistiek, webhandel, zakelijke dienstverlening",
-		"explanation": "De combinatie van hoge dichtheid per object en brede branchemix vraagt om datakwaliteitscontrole en contextonderzoek."
+		"branchMix": "logistics, e-commerce, business services",
+		"explanation": "The combination of high density per object and a broad industry mix calls for data-quality checks and contextual investigation."
 	},
 	{
-		"area": "Postcodecluster 35-D",
+		"area": "Postcode cluster 35-D",
 		"municipality": "Utrecht",
-		"areaType": "woon-werkgebied",
-		"riskLevel": "verhoogd",
+		"areaType": "mixed residential and commercial",
+		"riskLevel": "elevated",
 		"riskScore": 68,
 		"companyCount": 221,
 		"usableM2": 9800,
@@ -56,14 +56,14 @@
 		"companiesPerUsableM2": 2.26,
 		"companiesPerObject": 3.95,
 		"peerDeviation": 2.1,
-		"branchMix": "zzp-diensten, zorg, creatieve diensten",
-		"explanation": "De dichtheid is verhoogd, maar het woon-werkprofiel kan een deel van het patroon verklaren."
+		"branchMix": "freelance services, healthcare, creative services",
+		"explanation": "The density is elevated, but the area's mixed residential and commercial profile may explain part of the pattern."
 	},
 	{
-		"area": "Postcodecluster 50-E",
+		"area": "Postcode cluster 50-E",
 		"municipality": "Tilburg",
-		"areaType": "bedrijventerrein",
-		"riskLevel": "normaal",
+		"areaType": "business park",
+		"riskLevel": "normal",
 		"riskScore": 41,
 		"companyCount": 128,
 		"usableM2": 18400,
@@ -71,14 +71,14 @@
 		"companiesPerUsableM2": 0.7,
 		"companiesPerObject": 2.61,
 		"peerDeviation": 0.8,
-		"branchMix": "industrie, groothandel, logistiek",
-		"explanation": "De dichtheid past bij een regulier bedrijventerrein met relatief veel bruikbare oppervlakte."
+		"branchMix": "manufacturing, wholesale, logistics",
+		"explanation": "The density is consistent with a typical business park with a relatively large usable floor area."
 	},
 	{
-		"area": "Postcodecluster 56-F",
+		"area": "Postcode cluster 56-F",
 		"municipality": "Eindhoven",
-		"areaType": "innovatiecampus",
-		"riskLevel": "normaal",
+		"areaType": "innovation campus",
+		"riskLevel": "normal",
 		"riskScore": 47,
 		"companyCount": 164,
 		"usableM2": 21600,
@@ -86,14 +86,14 @@
 		"companiesPerUsableM2": 0.76,
 		"companiesPerObject": 2.65,
 		"peerDeviation": 1.0,
-		"branchMix": "technologie, onderzoek, zakelijke dienstverlening",
-		"explanation": "Veel registraties zijn verklaarbaar door campusachtige huisvesting en gedeelde faciliteiten."
+		"branchMix": "technology, research, business services",
+		"explanation": "Many registrations can be explained by campus-style accommodation and shared facilities."
 	},
 	{
-		"area": "Postcodecluster 65-G",
+		"area": "Postcode cluster 65-G",
 		"municipality": "Nijmegen",
-		"areaType": "centrumrand",
-		"riskLevel": "verhoogd",
+		"areaType": "inner-city fringe",
+		"riskLevel": "elevated",
 		"riskScore": 63,
 		"companyCount": 173,
 		"usableM2": 6100,
@@ -101,14 +101,14 @@
 		"companiesPerUsableM2": 2.84,
 		"companiesPerObject": 4.12,
 		"peerDeviation": 1.9,
-		"branchMix": "persoonlijke diensten, webhandel, advies",
-		"explanation": "De dichtheid is verhoogd op oppervlakte, maar minder extreem op objectniveau."
+		"branchMix": "personal services, e-commerce, consulting",
+		"explanation": "Density by floor area is elevated, but less extreme at the object level."
 	},
 	{
-		"area": "Postcodecluster 97-H",
+		"area": "Postcode cluster 97-H",
 		"municipality": "Groningen",
-		"areaType": "studenten- en centrumgebied",
-		"riskLevel": "normaal",
+		"areaType": "student and city-centre area",
+		"riskLevel": "normal",
 		"riskScore": 38,
 		"companyCount": 119,
 		"usableM2": 8400,
@@ -116,7 +116,7 @@
 		"companiesPerUsableM2": 1.42,
 		"companiesPerObject": 1.68,
 		"peerDeviation": 0.6,
-		"branchMix": "horeca, creatieve diensten, onderwijs",
-		"explanation": "De signalen blijven onder de drempel wanneer oppervlakte en objectaantallen worden meegewogen."
+		"branchMix": "hospitality, creative services, education",
+		"explanation": "The signals remain below the threshold when floor area and object counts are taken into account."
 	}
 ]

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en-GB">
+	<head prefix="og: http://ogp.me/ns#">
+		<meta charset="utf-8" />
+		<title>The Honest Page | The Thaumatorium</title>
+		<meta name="description" content="A browser dashboard showing what information an ordinary web page can read about your browser, device, and session." />
+		<link rel="canonical" href="https://thaumatorium.com/" />
+		<meta name="theme-color" content="#800" />
+		<link rel="apple-touch-icon" href="/images/icons-192.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="webmanifest" href="/manifest.json" />
+		<link rel="icon" href="/images/favicon.svg" />
+		<link rel="stylesheet" href="/styles/main.css?v=3" />
+		<link rel="stylesheet" href="/styles/projects.css?v=3" />
+		<meta property="og:url" content="https://thaumatorium.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="The Honest Page" />
+		<meta property="og:description" content="A browser dashboard showing what information an ordinary web page can read about your browser, device, and session." />
+		<meta property="og:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta property="og:image:width" content="1280" />
+		<meta property="og:image:height" content="668" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@NostraDavid2" />
+		<meta name="twitter:creator" content="@NostraDavid2" />
+		<meta name="twitter:title" content="The Honest Page" />
+		<meta name="twitter:description" content="A browser dashboard showing what information an ordinary web page can read about your browser, device, and session." />
+		<meta name="twitter:image" content="https://thaumatorium.com/images/opengraph-cover.png?v=1" />
+		<meta name="twitter:image:width" content="1280" />
+		<meta name="twitter:image:height" content="668" />
+	</head>
+	<body>
+		<header>
+			<div class="title">The Thaumatorium:</div>
+			<div class="subtitle">Where the magic happens</div>
+		</header>
+		<nav>
+			<h5 style="display: none">Main nav menu</h5>
+			<ul>
+				<li><a href="/">Frontpage</a><span> - </span></li>
+				<li><a href="/articles">Articles</a><span> - </span></li>
+				<li><a href="/projects">Projects</a><span> - </span></li>
+				<li><a href="/random-video">Random video</a><span> - </span></li>
+				<li><a href="/knowledge-base">Knowledge Base</a><span> - </span></li>
+				<li><a href="/about">About</a></li>
+			</ul>
+		</nav>
+		<main class="projects">
+			<link rel="stylesheet" href="styles.css" />
+			<div class="honest-page">
+				<header class="honest-hero">
+					<p class="honest-eyebrow">Browser transparency</p>
+					<h1>The Honest Page</h1>
+					<p>This page shows as much information as possible that an ordinary web page can read locally in your browser. Nothing is sent to a server.</p>
+					<p>
+						<a class="honest-link-button" href="https://amiunique.org/" rel="noopener noreferrer"> More fingerprinting details on Am I Unique </a>
+					</p>
+				</header>
+				<section class="honest-actions" aria-label="Actions">
+					<button id="refreshButton" type="button">Measure again</button>
+					<button id="copyButton" type="button">Copy JSON</button>
+					<button id="locationButton" type="button">Request location</button>
+					<span id="statusText" role="status">Loading measurements...</span>
+				</section>
+				<section class="honest-summary" aria-label="Summary">
+					<article>
+						<span>Browser</span>
+						<strong id="summaryBrowser">-</strong>
+					</article>
+					<article>
+						<span>Screen</span>
+						<strong id="summaryScreen">-</strong>
+					</article>
+					<article>
+						<span>Language</span>
+						<strong id="summaryLanguage">-</strong>
+					</article>
+					<article>
+						<span>Time zone</span>
+						<strong id="summaryTimezone">-</strong>
+					</article>
+				</section>
+				<section id="sections" class="honest-sections" aria-label="Browser information"></section>
+			</div>
+			<script type="module" src="app.js"></script>
+			<aside class="project-sources" aria-labelledby="project-sources-title">
+				<h2 id="project-sources-title">Sources</h2>
+				<ul>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Navigator" rel="noopener noreferrer" target="_blank">MDN: Navigator</a>
+						<span>Reference for browser and device properties available through navigator.</span>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Permissions_API" rel="noopener noreferrer" target="_blank">MDN: Permissions API</a>
+						<span>Reference for permission states such as geolocation, camera, and microphone.</span>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/Screen" rel="noopener noreferrer" target="_blank">MDN: Screen</a>
+						<span>Reference for screen and viewport information.</span>
+					</li>
+				</ul>
+			</aside>
+			<style>
+				.project-sources {
+					border: 1px solid #cda9a9;
+					border-radius: 6px;
+					background: #fffaf9;
+					box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.12);
+					margin-top: 2rem;
+					padding: 1rem;
+				}
+				.project-sources h2 {
+					color: #800;
+					font-size: 1rem;
+					margin: 0 0 0.75rem;
+					padding: 0;
+				}
+				.project-sources ul {
+					display: grid;
+					gap: 0.65rem;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+				}
+				.project-sources li {
+					display: grid;
+					gap: 0.15rem;
+				}
+				.project-sources a {
+					font-weight: 700;
+				}
+				.project-sources span {
+					color: #4f3b3b;
+					font-size: 0.92rem;
+					line-height: 1.35;
+				}
+			</style>
+		</main>
+		<footer>
+			<div class="copyright">
+				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
+				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
+				<p>
+					<sub>Last updated: <time id="updated">2026-06-22</time></sub>
+				</p>
+			</div>
+			<nav id="profiles"></nav>
+			<a class="secret" onclick="specialGoto(event)">π</a>
+			<script>
+				const specialGoto = (event) => {
+					if (event.ctrlKey && event.shiftKey) window.location.href = "/praetorianpi/";
+				};
+			</script>
+		</footer>
+	</body>
+</html>

@@ -402,111 +402,111 @@
 			<div class="sim">
 				<section class="hero">
 					<div class="badge-row">
-						<span class="badge">Nederland · tijdzone-simulatie</span>
+						<span class="badge">Netherlands · time-zone simulation</span>
 						<span class="badge">UTC versus CET</span>
-						<span class="badge">Met en zonder zomertijd</span>
+						<span class="badge">With and without daylight saving time</span>
 					</div>
 					<p>
-						Deze simulatie vergelijkt vier regimes voor Nederland: <strong>UTC</strong>, <strong>UTC met zomertijd</strong>, <strong>CET</strong> en <strong>CET met zomertijd</strong>. De vergelijking gebeurt op basis van <strong>zonne-noen</strong>, <strong>zonsopkomst</strong>, <strong>zonsondergang</strong> en
-						hoeveel daglicht binnen jouw wakkere uren valt.
+						This simulation compares four time regimes for the Netherlands: <strong>UTC</strong>, <strong>UTC with daylight saving time</strong>, <strong>CET</strong>, and <strong>CET with daylight saving time</strong>. The comparison is based on <strong>solar noon</strong>, <strong>sunrise</strong>,
+						<strong>sunset</strong>, and how much daylight falls within your waking hours.
 					</p>
 					<p class="mini">
-						Werkhypothese: de zonneposities worden benaderd met een standaard astronomische benadering. Deze pagina laat dus vooral de
-						<em>structurele trade-offs</em> zien: astronomische correctheid tegenover latere avonden en donkerdere ochtenden.
+						Working assumption: solar positions are approximated using a standard astronomical method. This page therefore mainly shows the
+						<em>structural trade-offs</em>: astronomical accuracy versus later evenings and darker mornings.
 					</p>
 				</section>
 				<div class="grid-2">
 					<aside class="controls">
 						<div class="control-group">
-							<label for="preset">Referentiepunt</label>
+							<label for="preset">Reference point</label>
 							<select id="preset">
 								<option value="amsterdam">Amsterdam</option>
 								<option value="utrecht">Utrecht</option>
 								<option value="groningen">Groningen</option>
 								<option value="maastricht">Maastricht</option>
-								<option value="nlmid">Midden van Nederland</option>
-								<option value="custom">Aangepast</option>
+								<option value="nlmid">Central Netherlands</option>
+								<option value="custom">Custom</option>
 							</select>
 							<div class="inline-2">
 								<div>
-									<label for="lat">Breedtegraad</label>
+									<label for="lat">Latitude</label>
 									<input id="lat" type="number" step="0.0001" min="50" max="54" value="52.3676" />
 								</div>
 								<div>
-									<label for="lon">Lengtegraad</label>
+									<label for="lon">Longitude</label>
 									<input id="lon" type="number" step="0.0001" min="3" max="8" value="4.9041" />
 								</div>
 							</div>
-							<p class="hint">Voor Nederland is vooral de lengtegraad belangrijk: hoe verder oostelijk, hoe later UTC minder logisch wordt.</p>
+							<p class="hint">Longitude is particularly important in the Netherlands: the farther east you go, the less logical UTC becomes.</p>
 						</div>
 						<div class="control-group">
-							<label for="date">Dagvergelijking</label>
+							<label for="date">Daily comparison</label>
 							<input id="date" type="date" />
 							<div class="inline-3">
 								<button type="button" data-date="winter">Winter</button>
-								<button type="button" data-date="equinox">Lente/herfst</button>
-								<button type="button" data-date="summer">Zomer</button>
+								<button type="button" data-date="equinox">Spring/autumn</button>
+								<button type="button" data-date="summer">Summer</button>
 							</div>
-							<p class="hint">De daggrafiek toont per scenario hoe dezelfde astronomische dag op de klok valt.</p>
+							<p class="hint">The daily chart shows how the same astronomical day appears on the clock in each scenario.</p>
 						</div>
 						<div class="control-group">
-							<label for="year">Jaar</label>
+							<label for="year">Year</label>
 							<input id="year" type="number" min="2020" max="2035" step="1" value="2026" />
-							<p class="hint">De jaarsamenvatting loopt over alle dagen van dit jaar. Voor de scenario’s met zomertijd wordt de Europese regel toegepast.</p>
+							<p class="hint">The annual summary covers every day of this year. Scenarios with daylight saving time use the European rule.</p>
 						</div>
 						<div class="control-group">
-							<label for="scheduleProfile">Ritme-profiel</label>
+							<label for="scheduleProfile">Schedule profile</label>
 							<select id="scheduleProfile">
-								<option value="adult_nl_2025">Volwassenen totaal</option>
-								<option value="age_18_34">18-34 jaar</option>
-								<option value="age_35_49">35-49 jaar</option>
-								<option value="age_50_64">50-64 jaar</option>
-								<option value="age_65_plus">65+ jaar</option>
-								<option value="manual">Handmatig</option>
+								<option value="adult_nl_2025">All adults</option>
+								<option value="age_18_34">Ages 18–34</option>
+								<option value="age_35_49">Ages 35–49</option>
+								<option value="age_50_64">Ages 50–64</option>
+								<option value="age_65_plus">Ages 65+</option>
+								<option value="manual">Manual</option>
 							</select>
 							<p class="hint" id="scheduleProfileHint">
-								Gebaseerd op het
-								<a href="https://www.smulderstextiel.nl/c/nationale-bedtijden-onderzoek/" target="_blank" rel="noreferrer">Nationale Bedtijdenonderzoek 2025</a>. De leeftijdsprofielen combineren de bedtijdverdeling uit de volwassenen-scatter met de gerapporteerde slaapduur per leeftijdsgroep; de opstaantijd blijft dus
-								een modelafleiding en geen letterlijk gepubliceerd groepsgemiddelde.
+								Based on the
+								<a href="https://www.smulderstextiel.nl/c/nationale-bedtijden-onderzoek/" target="_blank" rel="noreferrer">2025 National Bedtime Study</a>. The age profiles combine the bedtime distribution from the adult scatter plot with the reported sleep duration for each age group; wake-up time therefore remains a
+								model-derived value rather than a published group average.
 							</p>
 							<p class="mini">
-								Bron:
+								Source:
 								<a href="https://www.smulderstextiel.nl/c/nationale-bedtijden-onderzoek/" target="_blank" rel="noreferrer">Smulders 2025</a>
 							</p>
 						</div>
 						<div class="control-group">
-							<label for="wakeStart">Wakker vanaf: <span id="wakeStartLabel">07:00</span></label>
+							<label for="wakeStart">Awake from: <span id="wakeStartLabel">07:00</span></label>
 							<input id="wakeStart" type="range" min="240" max="720" step="15" value="420" />
-							<label for="wakeEnd">Naar bed om: <span id="wakeEndLabel">23:00</span></label>
+							<label for="wakeEnd">Bedtime: <span id="wakeEndLabel">23:00</span></label>
 							<input id="wakeEnd" type="range" min="960" max="1560" step="15" value="1380" />
-							<p class="hint">Dit beïnvloedt de maatschappelijke score: welk regime schuift daglicht het best in jouw actieve uren? Pas deze sliders gerust aan als jouw ritme afwijkt van het onderzoek-profiel.</p>
+							<p class="hint">This affects the social score: which regime moves daylight into your active hours most effectively? Adjust these sliders if your schedule differs from the study profile.</p>
 						</div>
 						<div class="control-group">
-							<label for="morningWindow">Ochtend-venster: <span id="morningWindowLabel">3 uur</span></label>
+							<label for="morningWindow">Morning window: <span id="morningWindowLabel">3 hours</span></label>
 							<input id="morningWindow" type="range" min="60" max="300" step="30" value="180" />
-							<label for="eveningWindow">Avond-venster: <span id="eveningWindowLabel">4 uur</span></label>
+							<label for="eveningWindow">Evening window: <span id="eveningWindowLabel">4 hours</span></label>
 							<input id="eveningWindow" type="range" min="60" max="360" step="30" value="240" />
-							<p class="hint">Hiermee kun je de waarde van lichte ochtenden en lichte avonden zichtbaar maken.</p>
+							<p class="hint">These controls reveal the value of bright mornings and bright evenings.</p>
 						</div>
 					</aside>
 					<div class="content">
 						<section class="panel">
-							<h2>Daggrafiek</h2>
+							<h2>Daily chart</h2>
 							<div class="section-body">
 								<p id="dailySummary"></p>
 								<div class="timeline-wrap">
 									<div class="timeline" id="timeline"></div>
 								</div>
 								<div class="legend">
-									<span class="legend-item"><i class="swatch wake"></i> wakkere uren</span>
-									<span class="legend-item"><i class="swatch sun"></i> daglicht</span>
-									<span class="legend-item"><i class="swatch noon"></i> zonne-noen</span>
-									<span class="legend-item"><i class="swatch dst"></i> zomertijd actief</span>
+									<span class="legend-item"><i class="swatch wake"></i> waking hours</span>
+									<span class="legend-item"><i class="swatch sun"></i> daylight</span>
+									<span class="legend-item"><i class="swatch noon"></i> solar noon</span>
+									<span class="legend-item"><i class="swatch dst"></i> daylight saving time active</span>
 								</div>
 							</div>
 						</section>
 						<section class="panel">
-							<h2>Jaarsamenvatting</h2>
+							<h2>Annual summary</h2>
 							<div class="section-body">
 								<p id="annualSummary"></p>
 								<div class="cards" id="scenarioCards"></div>
@@ -514,18 +514,18 @@
 						</section>
 						<section class="summary-grid">
 							<section class="panel">
-								<h2>Conclusies uit deze simulatie</h2>
+								<h2>Conclusions from this simulation</h2>
 								<div class="findings" id="findings"></div>
 							</section>
 							<section class="panel">
-								<h2>Vergelijkingstabel</h2>
+								<h2>Comparison table</h2>
 								<div class="table-wrap">
 									<table>
 										<thead>
 											<tr>
 												<th>Criteria</th>
-												<th>Beste</th>
-												<th>Waarom</th>
+												<th>Best</th>
+												<th>Why</th>
 											</tr>
 										</thead>
 										<tbody id="winnerTable"></tbody>
@@ -534,21 +534,19 @@
 							</section>
 						</section>
 						<section class="panel">
-							<h2>Leeswijzer</h2>
+							<h2>How to read this</h2>
 							<div class="notes">
 								<p class="small-note">
-									<strong>Astronomisch beste</strong> betekent: zonne-noen ligt het dichtst bij 12:00 op de klok. <strong>Maatschappelijk beste</strong> betekent hier: het meeste daglicht valt binnen de ingestelde wakkere uren. Een systeem met zomertijd wint vaak op avondlicht, maar verliest meestal op ochtendlicht en
-									astronomische zuiverheid.
+									<strong>Astronomically best</strong> means that solar noon is closest to 12:00 on the clock. <strong>Socially best</strong> means that the most daylight falls within the configured waking hours. A system with daylight saving time often gains evening light, but usually loses morning light and
+									astronomical accuracy.
 								</p>
 								<p class="small-note" style="margin-top: 12px">
-									De simulatie beweert niet dat één antwoord normatief verplicht is. Zij laat de onderliggende ruil zien:
-									<strong>UTC</strong> sluit beter aan op de zon; <strong>CET</strong> en vooral <strong>CET + zomertijd</strong>
-									verschuiven het daglicht later op de klok, wat vaak prettiger is voor avondgebruik maar ongunstiger voor ochtendlicht.
+									The simulation does not claim that one answer is normatively required. It shows the underlying trade-off:
+									<strong>UTC</strong> aligns more closely with the sun; <strong>CET</strong>, and especially <strong>CET with daylight saving time</strong>, move daylight later on the clock, which is often more convenient in the evening but less favourable for morning light.
 								</p>
 								<p class="small-note" style="margin-top: 12px">
-									<strong>Onderzoek-invoer:</strong> het standaardritme is afgeleid uit het <a href="https://www.smulderstextiel.nl/c/nationale-bedtijden-onderzoek/" target="_blank" rel="noreferrer">Nationale Bedtijdenonderzoek 2025</a>. Dat onderzoek onder 2.400 volwassenen meldt een gemiddelde slaapduur van 6 uur en
-									56 minuten en splitst die ook uit naar 18-34, 35-49, 50-64 en 65+ jaar. Voor de leeftijdsprofielen gebruikt deze pagina de bedtijdverdeling uit de volwassenen-scatter; de opstaantijd is vervolgens een expliciete modelafleiding op basis van slaapduur en tijd in bed, geen letterlijk overgenomen
-									survey-gemiddelde.
+									<strong>Study input:</strong> the default schedule is derived from the <a href="https://www.smulderstextiel.nl/c/nationale-bedtijden-onderzoek/" target="_blank" rel="noreferrer">2025 National Bedtime Study</a>. This study of 2,400 adults reports an average sleep duration of 6 hours and 56 minutes,
+									with separate figures for ages 18–34, 35–49, 50–64, and 65+. For these age profiles, this page uses the bedtime distribution from the adult scatter plot; wake-up time is then explicitly derived from sleep duration and time in bed, rather than copied from a published survey average.
 								</p>
 							</div>
 						</section>
@@ -561,81 +559,81 @@
 					utrecht: { label: "Utrecht", lat: 52.0907, lon: 5.1214 },
 					groningen: { label: "Groningen", lat: 53.2194, lon: 6.5665 },
 					maastricht: { label: "Maastricht", lat: 50.8514, lon: 5.69 },
-					nlmid: { label: "Midden van Nederland", lat: 52.1326, lon: 5.2913 },
-					custom: { label: "Aangepast" },
+					nlmid: { label: "Central Netherlands", lat: 52.1326, lon: 5.2913 },
+					custom: { label: "Custom" },
 				};
 				const scheduleProfiles = {
 					adult_nl_2025: {
-						label: "Volwassenen totaal",
+						label: "All adults",
 						wakeStart: 450,
 						wakeEnd: 1380,
 						morningWindow: 180,
 						eveningWindow: 240,
-						hint: "Afgeleid uit de volwassenen-scatter en de totale slaapduur uit het onderzoek: ongeveer naar bed om 23:00 en wakker rond 07:30. Dit is een empirisch referentieprofiel, geen letterlijke survey-uitkomst voor exacte kloktijden.",
+						hint: "Derived from the adult scatter plot and total sleep duration in the study: bedtime around 23:00 and waking around 07:30. This is an empirical reference profile, not a published survey result for exact clock times.",
 					},
 					age_18_34: {
-						label: "18-34 jaar",
+						label: "Ages 18–34",
 						wakeStart: 450,
 						wakeEnd: 1380,
 						morningWindow: 180,
 						eveningWindow: 240,
-						hint: "Latere bedtijd uit de leeftijdsspecifieke scatter, gecombineerd met 7u slaap uit het onderzoek. Afgerond profiel: naar bed om 23:00, wakker rond 07:30.",
+						hint: "Later bedtime from the age-specific scatter plot, combined with seven hours of sleep from the study. Rounded profile: bedtime at 23:00, waking around 07:30.",
 					},
 					age_35_49: {
-						label: "35-49 jaar",
+						label: "Ages 35–49",
 						wakeStart: 435,
 						wakeEnd: 1365,
 						morningWindow: 180,
 						eveningWindow: 240,
-						hint: "Afgeleid uit de scatter voor 35-49 jaar en de gerapporteerde slaapduur van 6u50. Afgerond profiel: naar bed om 22:45, wakker rond 07:15.",
+						hint: "Derived from the scatter plot for ages 35–49 and the reported sleep duration of 6 hours 50 minutes. Rounded profile: bedtime at 22:45, waking around 07:15.",
 					},
 					age_50_64: {
-						label: "50-64 jaar",
+						label: "Ages 50–64",
 						wakeStart: 435,
 						wakeEnd: 1380,
 						morningWindow: 180,
 						eveningWindow: 240,
-						hint: "Afgeleid uit de scatter voor 50-64 jaar en de gerapporteerde slaapduur van 6u50. Afgerond profiel: naar bed om 23:00, wakker rond 07:15.",
+						hint: "Derived from the scatter plot for ages 50–64 and the reported sleep duration of 6 hours 50 minutes. Rounded profile: bedtime at 23:00, waking around 07:15.",
 					},
 					age_65_plus: {
-						label: "65+ jaar",
+						label: "Ages 65+",
 						wakeStart: 465,
 						wakeEnd: 1395,
 						morningWindow: 180,
 						eveningWindow: 240,
-						hint: "Afgeleid uit de scatter voor 65+ en de gerapporteerde slaapduur van 7u05. Afgerond profiel: naar bed om 23:15, wakker rond 07:45.",
+						hint: "Derived from the scatter plot for ages 65+ and the reported sleep duration of 7 hours 5 minutes. Rounded profile: bedtime at 23:15, waking around 07:45.",
 					},
 					manual: {
-						label: "Handmatig",
-						hint: "Handmatig ritme. Gebruik de sliders om jouw eigen dagindeling te modelleren of om andere groepen door te rekenen.",
+						label: "Manual",
+						hint: "Manual schedule. Use the sliders to model your own daily routine or calculate results for other groups.",
 					},
 				};
 				const scenarios = [
 					{
 						key: "utc",
 						name: "UTC",
-						subtitle: "geen zomertijd",
+						subtitle: "no daylight saving time",
 						offsetMinutes: (date) => 0,
 						baseOffset: "UTC+0",
 					},
 					{
 						key: "utc_dst",
-						name: "UTC + zomertijd",
-						subtitle: "UTC in winter, UTC+1 in zomer",
+						name: "UTC + daylight saving time",
+						subtitle: "UTC in winter, UTC+1 in summer",
 						offsetMinutes: (date) => (isDstEu(date) ? 60 : 0),
 						baseOffset: "UTC+0 / UTC+1",
 					},
 					{
 						key: "cet",
 						name: "CET",
-						subtitle: "vaste wintertijd",
+						subtitle: "permanent standard time",
 						offsetMinutes: (date) => 60,
 						baseOffset: "UTC+1",
 					},
 					{
 						key: "cet_dst",
-						name: "CET + zomertijd",
-						subtitle: "huidig Nederlands systeem",
+						name: "CET + daylight saving time",
+						subtitle: "current Dutch system",
 						offsetMinutes: (date) => (isDstEu(date) ? 120 : 60),
 						baseOffset: "UTC+1 / UTC+2",
 					},
@@ -843,8 +841,8 @@
 				function updateLabels(state) {
 					els.wakeStartLabel.textContent = formatMinutes(state.wakeStart);
 					els.wakeEndLabel.textContent = formatMinutes(state.wakeEnd);
-					els.morningWindowLabel.textContent = `${Math.round(state.morningWindow / 60)} uur`;
-					els.eveningWindowLabel.textContent = `${Math.round(state.eveningWindow / 60)} uur`;
+					els.morningWindowLabel.textContent = `${Math.round(state.morningWindow / 60)} hours`;
+					els.eveningWindowLabel.textContent = `${Math.round(state.eveningWindow / 60)} hours`;
 					updateScheduleProfileHint();
 				}
 				function renderTimeline(state, daily) {
@@ -858,7 +856,7 @@
 					const height = top + scenarios.length * rowH + bottom;
 					const xForMinutes = (minutes) => left + (minutes / 1440) * innerWidth;
 					let svg = `
-      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Daggrafiek voor vier tijdregimes">
+      <svg viewBox="0 0 ${width} ${height}" role="img" aria-label="Daily chart for four time regimes">
         <rect x="0" y="0" width="${width}" height="${height}" fill="#fffaf9" />
     `;
 					for (let hour = 0; hour <= 24; hour++) {
@@ -924,28 +922,28 @@
           </div>
           <div class="metric-list">
             <div class="metric">
-              <div class="metric-head"><span>Zonne-noen t.o.v. 12:00</span><span>${formatDurationMinutes(row.noonDeviation)}</span></div>
+              <div class="metric-head"><span>Solar noon relative to 12:00</span><span>${formatDurationMinutes(row.noonDeviation)}</span></div>
               <div class="bar"><i style="width:${100 * (1 - row.noonDeviation / Math.max(maxNoonDeviation, 1))}%"></i></div>
             </div>
             <div class="metric">
-              <div class="metric-head"><span>Daglicht in wakkere uren</span><span>${formatDurationHours(row.daylightInWake)}</span></div>
+              <div class="metric-head"><span>Daylight during waking hours</span><span>${formatDurationHours(row.daylightInWake)}</span></div>
               <div class="bar"><i style="width:${(100 * row.daylightInWake) / Math.max(maxWake, 1)}%"></i></div>
             </div>
             <div class="metric">
-              <div class="metric-head"><span>Ochtendlicht</span><span>${formatDurationHours(row.morningLight)}</span></div>
+              <div class="metric-head"><span>Morning light</span><span>${formatDurationHours(row.morningLight)}</span></div>
               <div class="bar"><i style="width:${(100 * row.morningLight) / Math.max(maxMorning, 1)}%"></i></div>
             </div>
             <div class="metric">
-              <div class="metric-head"><span>Avondlicht</span><span>${formatDurationHours(row.eveningLight)}</span></div>
+              <div class="metric-head"><span>Evening light</span><span>${formatDurationHours(row.eveningLight)}</span></div>
               <div class="bar"><i style="width:${(100 * row.eveningLight) / Math.max(maxEvening, 1)}%"></i></div>
             </div>
             <div class="metric">
-              <div class="metric-head"><span>Late zonsopkomsten</span><span>${row.lateSunriseDays} dagen</span></div>
+              <div class="metric-head"><span>Late sunrises</span><span>${row.lateSunriseDays} days</span></div>
               <div class="bar"><i style="width:${100 * (1 - row.lateSunriseDays / Math.max(maxLate, 1 || 1))}%"></i></div>
             </div>
           </div>
           <div class="score">
-            <span class="mini">Gebalanceerde indicatiescore</span>
+            <span class="mini">Balanced indicative score</span>
             <span class="score-value">${score.toFixed(1)}</span>
           </div>
         </article>
@@ -957,29 +955,29 @@
 					const winners = rankScenarios(annual);
 					return [
 						{
-							label: "Astronomische juistheid",
+							label: "Astronomical accuracy",
 							winner: winners.astronomy,
-							why: "Minste afwijking tussen zonne-noen en 12:00 op de klok.",
+							why: "Smallest difference between solar noon and 12:00 on the clock.",
 						},
 						{
-							label: "Meeste daglicht tijdens wakker zijn",
+							label: "Most daylight while awake",
 							winner: winners.wakeLight,
-							why: "Maximaliseert daglicht binnen het ingestelde dagritme.",
+							why: "Maximises daylight within the configured daily schedule.",
 						},
 						{
-							label: "Lichtste ochtenden",
+							label: "Brightest mornings",
 							winner: winners.morning,
-							why: "Meeste daglicht in het ochtend-venster direct na opstaan.",
+							why: "Most daylight in the morning window immediately after waking.",
 						},
 						{
-							label: "Lichtste avonden",
+							label: "Brightest evenings",
 							winner: winners.evening,
-							why: "Meeste daglicht in het avond-venster voor bedtijd.",
+							why: "Most daylight in the evening window before bedtime.",
 						},
 						{
-							label: "Weinigste donkere starts",
+							label: "Fewest dark starts",
 							winner: winners.fewestLateSunrises,
-							why: "Minst aantal dagen waarop de zon pas ná het opstaan opkomt.",
+							why: "Fewest days on which the sun rises after waking.",
 						},
 					];
 				}
@@ -1006,24 +1004,24 @@
 					const city = currentPresetLabel();
 					const findings = [
 						{
-							title: "Astronomisch uitgangspunt",
-							body: `${winners.astronomy.name} ligt het dichtst bij zonne-noen rond 12:00. Voor ${city} is dat typisch het regime dat het minst van de natuurlijke zonnetijd afwijkt.`,
+							title: "Astronomical baseline",
+							body: `${winners.astronomy.name} puts solar noon closest to 12:00. For ${city}, this is typically the regime that deviates least from natural solar time.`,
 						},
 						{
-							title: "Wat zomertijd koopt",
-							body: `${current.name} en ${utcDst.name} schuiven licht systematisch later op de klok. Dat levert meer avondlicht op, maar ook meer donkere of halfdonkere ochtenden.`,
+							title: "What daylight saving time buys",
+							body: `${current.name} and ${utcDst.name} systematically move daylight later on the clock. This provides more evening light, but also more dark or dim mornings.`,
 						},
 						{
-							title: "Huidige Nederlandse keuze",
-							body: `${current.name} maximaliseert in veel ritmes het gevoel van lange avonden, maar doet dat door Nederland nog verder van de zonnetijd te plaatsen dan vaste CET of vaste UTC.`,
+							title: "Current Dutch choice",
+							body: `${current.name} maximises the sense of long evenings for many schedules, but does so by placing the Netherlands even farther from solar time than permanent CET or permanent UTC.`,
 						},
 						{
-							title: "Vaste CET versus vaste UTC",
-							body: `${fixedCet.name} biedt later licht dan ${fixedUtc.name}, maar ${fixedUtc.name} is meestal strakker uitgelijnd met de zon. De keuze tussen die twee is dus vooral: sociale klok later zetten of astronomisch netter blijven.`,
+							title: "Permanent CET versus permanent UTC",
+							body: `${fixedCet.name} provides later light than ${fixedUtc.name}, but ${fixedUtc.name} is usually more closely aligned with the sun. The main choice between them is therefore whether to move the social clock later or remain more astronomically accurate.`,
 						},
 						{
-							title: "Praktisch leesresultaat",
-							body: `Als jouw prioriteit zonne-logica en vroege ochtenden is, wijst deze simulatie meestal naar ${winners.astronomy.name}. Als jouw prioriteit avondlicht is, wint doorgaans ${winners.evening.name}.`,
+							title: "Practical interpretation",
+							body: `If your priority is solar logic and early mornings, this simulation usually points to ${winners.astronomy.name}. If your priority is evening light, ${winners.evening.name} generally wins.`,
 						},
 					];
 					els.findings.innerHTML = findings
@@ -1040,7 +1038,7 @@
 				function currentPresetLabel() {
 					const preset = els.preset.value;
 					if (preset === "custom") {
-						return `de gekozen locatie (${Number(els.lat.value).toFixed(2)}°, ${Number(els.lon.value).toFixed(2)}°)`;
+						return `the selected location (${Number(els.lat.value).toFixed(2)}°, ${Number(els.lon.value).toFixed(2)}°)`;
 					}
 					return presets[preset].label;
 				}
@@ -1101,12 +1099,12 @@
 				function renderSummaries(state, daily, annual) {
 					const presetLabel = currentPresetLabel();
 					const scheduleLabel = currentScheduleLabel();
-					const selectedDate = state.date.toLocaleDateString("nl-NL", { timeZone: "UTC", year: "numeric", month: "long", day: "numeric" });
+					const selectedDate = state.date.toLocaleDateString("en-GB", { timeZone: "UTC", year: "numeric", month: "long", day: "numeric" });
 					const bestAstronomy = rankScenarios(annual).astronomy;
 					const bestWake = rankScenarios(annual).wakeLight;
 					const current = annual.find((row) => row.key === "cet_dst");
-					els.dailySummary.innerHTML = `Voor <strong>${selectedDate}</strong> op <strong>${presetLabel}</strong> en binnen het ritme <strong>${scheduleLabel}</strong> zie je exact dezelfde zon, maar een andere klok. Daardoor verschuiven zonsopkomst, zonne-noen en zonsondergang zichtbaar tussen de vier regimes.`;
-					els.annualSummary.innerHTML = `Over heel <strong>${state.year}</strong> blijkt in deze simulatie met <strong>${scheduleLabel}</strong> dat <strong>${bestAstronomy.name}</strong> het best met de zon uitlijnt, terwijl <strong>${bestWake.name}</strong> het meeste daglicht in de ingestelde wakkere uren stopt. Het huidige systeem <strong>${current.name}</strong> is dus geen puur astronomische keuze, maar een bewuste verschuiving richting latere avonden.`;
+					els.dailySummary.innerHTML = `On <strong>${selectedDate}</strong> at <strong>${presetLabel}</strong>, using the <strong>${scheduleLabel}</strong> schedule, you see exactly the same sun but a different clock. Sunrise, solar noon, and sunset therefore visibly shift between the four regimes.`;
+					els.annualSummary.innerHTML = `Across <strong>${state.year}</strong>, this simulation using the <strong>${scheduleLabel}</strong> schedule shows that <strong>${bestAstronomy.name}</strong> aligns best with the sun, while <strong>${bestWake.name}</strong> places the most daylight within the configured waking hours. The current system, <strong>${current.name}</strong>, is therefore not a purely astronomical choice but a deliberate shift towards later evenings.`;
 				}
 				function update() {
 					const state = getInputs();
@@ -1138,7 +1136,7 @@
 						<span>Policy context for daylight saving time in Europe.</span>
 					</li>
 					<li>
-						<a href="https://www.knmi.nl/nederland-nu/klimatologie/daggegevens/zon" rel="noopener noreferrer" target="_blank">KNMI: Zon op en onder</a>
+						<a href="https://www.knmi.nl/nederland-nu/klimatologie/daggegevens/zon" rel="noopener noreferrer" target="_blank">KNMI: Sunrise and sunset</a>
 						<span>Dutch solar-time and daylight context.</span>
 					</li>
 				</ul>
@@ -1260,7 +1258,7 @@
 				©<a href="https://www.youtube.com/watch?v=czgOWmtGVGs" style="text-decoration: none; color: #800">12019</a> – <a id="target-year" href="http://updateyourfooter.com/" style="text-decoration: none; color: #800">12026</a>,
 				<abbr title="Copyright is implicit, almost anywhere in the world! If you want to know more, wikipedia 'Berne Convention'" style="text-decoration: none; color: #800">Thaumatorium</abbr>
 				<p>
-					<sub>Last updated: <time id="updated">2026-05-22</time></sub>
+					<sub>Last updated: <time id="updated">2026-06-22</time></sub>
 				</p>
 			</div>
 			<nav id="profiles"></nav>
