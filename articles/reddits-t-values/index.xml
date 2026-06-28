@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>Understanding Reddit&#39;s T Values on Thaumatorium</title>
+    <title>Understanding Reddit's T Values on Thaumatorium</title>
     <link>http://thaumatorium.com/articles/reddits-t-values/</link>
-    <description>Recent content in Understanding Reddit&#39;s T Values on Thaumatorium</description>
+    <description>Recent content in Understanding Reddit's T Values on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://thaumatorium.com/articles/reddits-t-values/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate/>
+    <atom:link href="http://thaumatorium.com/articles/reddits-t-values/index.xml" rel="self" type="application/rss+xml"/>
   </channel>
 </rss>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
-    <title>4chan&#39;s programming projects for noobs on Thaumatorium</title>
+    <title>4chan's programming projects for noobs on Thaumatorium</title>
     <link>http://thaumatorium.com/articles/4chans-programming-projects-for-noobs/</link>
-    <description>Recent content in 4chan&#39;s programming projects for noobs on Thaumatorium</description>
+    <description>Recent content in 4chan's programming projects for noobs on Thaumatorium</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
-    <atom:link href="http://thaumatorium.com/articles/4chans-programming-projects-for-noobs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate/>
+    <atom:link href="http://thaumatorium.com/articles/4chans-programming-projects-for-noobs/index.xml" rel="self" type="application/rss+xml"/>
   </channel>
 </rss>
