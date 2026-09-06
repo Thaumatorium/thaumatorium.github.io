@@ -40,6 +40,44 @@ export const PROFILES = Object.freeze({
 	}),
 });
 
+// Include obsolete HTML names: uppercase HTML is still markup, not a placeholder.
+const HTML_TAGS = new Set(
+	`
+	a abbr acronym address applet area article aside audio b base basefont bdi bdo bgsound big blink blockquote body br button
+	canvas caption center cite code col colgroup command content data datalist dd del details dfn dialog dir div dl dt
+	em embed fencedframe fieldset figcaption figure font footer form frame frameset h1 h2 h3 h4 h5 h6 head header hgroup hr html
+	i iframe img input ins isindex kbd keygen label legend li link listing main map mark marquee math menu menuitem meta meter multicol nav nextid nobr noembed noframes noscript
+	object ol optgroup option output p param picture plaintext portal pre progress q rb rp rt rtc ruby
+	s samp script search section select selectedcontent shadow slot small source spacer span strike strong style sub summary sup svg
+	table tbody td template textarea tfoot th thead time title tr track tt u ul var video wbr xmp
+`
+		.trim()
+		.split(/\s+/)
+);
+
+function escapeText(text) {
+	return text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function preservePlaceholders(input) {
+	// Only infer bare, capitalized, non-HTML names without a closing tag.
+	// Consume quoted attributes, comments, raw text and foreign markup intact.
+	const markup = /<!--[\s\S]*?(?:-->|$)|<(?:svg|math)(?=[\s/>])(?:[^"'<>]|"[^"]*"|'[^']*')*\/>|<(script|style|textarea|title|xmp|iframe|noembed|noframes|plaintext|svg|math)(?=[\s/>])(?:[^"'<>]|"[^"]*"|'[^']*')*>[\s\S]*?(?:<\/\1\s*>|$)|<![^>]*>|<\/?[a-z][a-z0-9:._-]*(?:[^"'<>]|"[^"]*"|'[^']*')*>/gi;
+	const tokens = [...input.matchAll(markup)];
+	const closedNames = new Set(
+		tokens.flatMap(([token]) => {
+			const closing = /^<\/([a-z][a-z0-9_-]*)\s*>$/i.exec(token);
+			return closing ? [closing[1].toLowerCase()] : [];
+		})
+	);
+	return input.replace(markup, (token) => {
+		const placeholder = /^<([A-Z][A-Za-z0-9_-]*)>$/.exec(token);
+		if (!placeholder) return token;
+		const name = placeholder[1].toLowerCase();
+		return HTML_TAGS.has(name) || closedNames.has(name) ? token : escapeText(token);
+	});
+}
+
 function isFullDocument(input) {
 	return /<!doctype\s+html|<html(?:\s|>)/i.test(input) || (/<head(?:\s|>)/i.test(input) && /<body(?:\s|>)/i.test(input));
 }
@@ -221,7 +259,7 @@ const BLOCK_TAGS = new Set([
 const VOID_TAGS = new Set(["AREA", "BASE", "BR", "COL", "EMBED", "HR", "IMG", "INPUT", "LINK", "META", "PARAM", "SOURCE", "TRACK", "WBR"]);
 
 function serializeFormatted(node, depth) {
-	if (node.nodeType === 3) return node.data;
+	if (node.nodeType === 3) return escapeText(node.data);
 	if (node.nodeType !== 1) return "";
 	const indent = "\t".repeat(depth);
 	const opening = node.cloneNode(false).outerHTML;
@@ -264,7 +302,7 @@ export function cleanHtml(input, options = {}, baseUrl = null) {
 	if (!input.trim()) return { html: "", warnings, stats: { inputCharacters: input.length, outputCharacters: 0, characterReduction: 0, inputElements: 0, outputElements: 0, elementsRemoved: 0 } };
 
 	const parser = new DOMParser();
-	const document = parser.parseFromString(input, "text/html");
+	const document = parser.parseFromString(preservePlaceholders(input), "text/html");
 	const fullDocument = isFullDocument(input);
 	const inputElements = (fullDocument ? document : document.body).querySelectorAll("*").length;
 	const source = selectContent(document, fullDocument);
